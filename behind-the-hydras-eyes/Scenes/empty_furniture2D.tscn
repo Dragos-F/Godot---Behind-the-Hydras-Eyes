@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1fjm4h4o4v1d"]
+
+[ext_resource type="Texture2D" uid="uid://e1pvgi5n66qn" path="res://Visual Assets/Office Filing Cabinet.png" id="1_j2wod"]
+
+[node name="Empty Furniture" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_j2wod")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]

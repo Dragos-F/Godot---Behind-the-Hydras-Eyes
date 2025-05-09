@@ -14,7 +14,6 @@ config/name="Behind the Hydras Eyes"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[rendering]
+[editor_plugins]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+enabled=PackedStringArray("res://addons/sprite_mesh/plugin.cfg")
