@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxfinyhwaaad"]
+
+[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Office Background 200%.png" id="1_go16o"]
+
+[node name="Day1" type="Node3D"]
+
+[node name="background" type="Sprite3D" parent="."]
+texture = ExtResource("1_go16o")
+
+[node name="furniture" type="Node" parent="."]
