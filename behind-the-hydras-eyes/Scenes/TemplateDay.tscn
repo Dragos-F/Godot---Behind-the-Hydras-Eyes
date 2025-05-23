@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://66ekdsykq5r4"]
+
+[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Office Background 200%.png" id="1_6t1wt"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="3_0vra5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+z_index = -2
+texture = ExtResource("1_6t1wt")
+
+[node name="Furniture" type="Node" parent="."]
+
+[node name="DayBrain" type="Node" parent="."]
+script = ExtResource("2_mchty")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Fader" parent="." instance=ExtResource("3_0vra5")]
+duration = 2.0
