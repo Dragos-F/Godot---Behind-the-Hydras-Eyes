@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://clpiwenruvqub"]
 
 [ext_resource type="Script" uid="uid://ccvnmpi7rpdl" path="res://Scripts/fader.gd" id="1_sj7w7"]
-[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Office Background 200%.png" id="2_rlvyu"]
+[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Old assets/Office Background 200%.png" id="2_rlvyu"]
 [ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="3_rlvyu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pcksr"]

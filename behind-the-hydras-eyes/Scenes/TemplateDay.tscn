@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://66ekdsykq5r4"]
 
-[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Office Background 200%.png" id="1_6t1wt"]
+[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Old assets/Office Background 200%.png" id="1_6t1wt"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="3_0vra5"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_hbl6j"]
