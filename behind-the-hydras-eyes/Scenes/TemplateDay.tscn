@@ -1,12 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://66ekdsykq5r4"]
+[gd_scene load_steps=47 format=3 uid="uid://66ekdsykq5r4"]
 
-[ext_resource type="Texture2D" uid="uid://cgb4bmu0t8ccy" path="res://Visual Assets/Old assets/Office Background 200%.png" id="1_6t1wt"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
 [ext_resource type="Texture2D" uid="uid://b0f1vechlub3b" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Book Green.png" id="2_ttfkt"]
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="3_0vra5"]
 [ext_resource type="Texture2D" uid="uid://cn0paws28jne" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Cabinets.png" id="3_1120o"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_hbl6j"]
-[ext_resource type="Texture2D" uid="uid://clhwo20w05wvm" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Chair branded.png" id="4_od8ao"]
 [ext_resource type="Texture2D" uid="uid://qxlk7xh4hgws" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Chair side.png" id="5_5m7vl"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="5_5usxc"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="6_1apca"]
@@ -22,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://bt6dp73gnlxa0" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug trio empty.png" id="16_pr8cy"]
 [ext_resource type="Texture2D" uid="uid://d1d74uiys3cf4" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Corner Desk.png" id="17_7517s"]
 [ext_resource type="Texture2D" uid="uid://c6upse6doxf6v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 1.png" id="18_r70fk"]
-[ext_resource type="Texture2D" uid="uid://bqowgc01ind63" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 2.png" id="19_ubsv2"]
 [ext_resource type="Texture2D" uid="uid://ct6hpk7wmd8ty" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Double Desks.png" id="20_ra4d8"]
 [ext_resource type="Texture2D" uid="uid://b4asbei8d3f18" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper and stapler.png" id="21_cmrsf"]
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="22_2vklt"]
@@ -33,8 +31,20 @@
 [ext_resource type="Texture2D" uid="uid://biy1qsn5y22bf" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant plain.png" id="27_fsano"]
 [ext_resource type="Texture2D" uid="uid://b527pdgv56ug7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Printer.png" id="28_6ol8a"]
 [ext_resource type="Texture2D" uid="uid://bd8c2fkg30pb3" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Table round.png" id="29_mfps5"]
+[ext_resource type="Texture2D" uid="uid://cn7mu2mnsny2q" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Draft 4-export.png" id="30_5mb0h"]
 [ext_resource type="Texture2D" uid="uid://cxhv1h8rtcsuv" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Water bottle.png" id="30_23jyx"]
+[ext_resource type="Texture2D" uid="uid://stkel71ynx4q" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Coffee Machine.png" id="31_8nycw"]
 [ext_resource type="Texture2D" uid="uid://ckew58uku227t" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Watering can.png" id="31_c7lm7"]
+[ext_resource type="Texture2D" uid="uid://dy8xfxmcadbio" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Corkboard.png" id="32_pwojx"]
+[ext_resource type="Texture2D" uid="uid://bf3cmklyj415h" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair.png" id="33_pr8cy"]
+[ext_resource type="Texture2D" uid="uid://b2pf3ujomos4d" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Kettle.png" id="34_7517s"]
+[ext_resource type="Texture2D" uid="uid://b23cfqmvkstnh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Door.png" id="35_r70fk"]
+[ext_resource type="Texture2D" uid="uid://sj0mo1sjflsy" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Filing Cabinet.png" id="36_ubsv2"]
+[ext_resource type="Texture2D" uid="uid://drgrql0b2etfp" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster and leaflets.png" id="37_ra4d8"]
+[ext_resource type="Texture2D" uid="uid://dau6ehg47nb3a" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster group.png" id="38_cmrsf"]
+[ext_resource type="Texture2D" uid="uid://u7xovy252k3p" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Water cooler.png" id="39_2vklt"]
+[ext_resource type="Texture2D" uid="uid://bqs05u7laca0w" path="res://Visual Assets/Old assets/Alex.png" id="40_iv0qf"]
+[ext_resource type="Texture2D" uid="uid://xgfnd6e3wq4v" path="res://Visual Assets/Old assets/Jen 1.png" id="41_s7mcw"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_5usxc"]
 device = -1
@@ -46,189 +56,311 @@ keycode = 4194305
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 z_index = -2
-texture = ExtResource("1_6t1wt")
+texture_filter = 1
+texture = ExtResource("1_rgewn")
 
 [node name="Furniture" type="Node2D" parent="."]
 
 [node name="BookGreen" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-133, 311)
 scale = Vector2(2, 2)
 texture = ExtResource("2_ttfkt")
 
 [node name="Cabinets" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(854, 288)
 scale = Vector2(2, 2)
 texture = ExtResource("3_1120o")
 
-[node name="ChairBranded" type="Sprite2D" parent="Furniture"]
+[node name="Cabinets2" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(1056, -76)
 scale = Vector2(2, 2)
-texture = ExtResource("4_od8ao")
+texture = ExtResource("3_1120o")
 
 [node name="ChairSide" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-601, -92)
 scale = Vector2(2, 2)
 texture = ExtResource("5_5m7vl")
 
 [node name="Clock" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(588, -446)
 scale = Vector2(2, 2)
 texture = ExtResource("6_1apca")
 
 [node name="Computer1" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-174, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("7_tx447")
+
+[node name="Computer3" type="Sprite2D" parent="Furniture"]
+z_index = 1
+texture_filter = 1
+position = Vector2(37, -500)
 scale = Vector2(2, 2)
 texture = ExtResource("7_tx447")
 
 [node name="Computer2" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-495, -205)
 scale = Vector2(2, 2)
 texture = ExtResource("8_8n7d3")
 
 [node name="Drawer" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-163, -429)
 scale = Vector2(2, 2)
 texture = ExtResource("9_ta8rc")
 
 [node name="KitchenWall" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(623, 185)
 scale = Vector2(2, 2)
 texture = ExtResource("10_lef4h")
 
 [node name="Laptop" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-433, -181)
 scale = Vector2(2, 2)
 texture = ExtResource("11_rfl1x")
 
 [node name="LargePlant2" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(424, 293)
 scale = Vector2(2, 2)
 texture = ExtResource("12_rgewn")
 
 [node name="LargePlant" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-297, -365)
 scale = Vector2(2, 2)
 texture = ExtResource("13_5mb0h")
 
 [node name="MicrowaveBack" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(824, 264)
 scale = Vector2(2, 2)
 texture = ExtResource("14_8nycw")
 
 [node name="MugFull" type="Sprite2D" parent="Furniture"]
+z_index = 1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-452, -132)
 scale = Vector2(2, 2)
 texture = ExtResource("15_pwojx")
 
 [node name="MugTrioEmpty" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(740, 299)
 scale = Vector2(2, 2)
 texture = ExtResource("16_pr8cy")
 
 [node name="OfficeCornerDesk" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-119, 398)
 scale = Vector2(2, 2)
 texture = ExtResource("17_7517s")
 
 [node name="OfficeDesk1" type="Sprite2D" parent="Furniture"]
+z_index = -1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(65, -429)
 scale = Vector2(2, 2)
 texture = ExtResource("18_r70fk")
 
 [node name="OfficeDesk2" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(56, 596)
 scale = Vector2(2, 2)
-texture = ExtResource("19_ubsv2")
+texture = ExtResource("18_r70fk")
 
 [node name="OfficeDoubleDesks" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-478, -160)
+scale = Vector2(2, 2)
+texture = ExtResource("20_ra4d8")
+
+[node name="OfficeDoubleDesks2" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(-942, 100)
 scale = Vector2(2, 2)
 texture = ExtResource("20_ra4d8")
 
 [node name="PaperAndStapler" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-243, 237)
 scale = Vector2(2, 2)
 texture = ExtResource("21_cmrsf")
 
 [node name="Paper" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-574, -191)
 scale = Vector2(2, 2)
 texture = ExtResource("22_2vklt")
 
 [node name="PlantDrapingLeft" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-225, -411)
 scale = Vector2(2, 2)
 texture = ExtResource("23_iv0qf")
 
 [node name="PlantDrapingRight" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-187, -411)
 scale = Vector2(2, 2)
 texture = ExtResource("24_s7mcw")
 
 [node name="PlantFlowers1" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(198, -455)
+scale = Vector2(2, 2)
+texture = ExtResource("25_g3ncg")
+
+[node name="PlantFlowers2" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(495, 346)
 scale = Vector2(2, 2)
 texture = ExtResource("25_g3ncg")
 
 [node name="PlantPlain2" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(541, 347)
 scale = Vector2(2, 2)
 texture = ExtResource("26_0ctcj")
 
 [node name="PlantPlain" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(520, 370)
 scale = Vector2(2, 2)
 texture = ExtResource("27_fsano")
 
 [node name="Printer" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(132, -454)
 scale = Vector2(2, 2)
 texture = ExtResource("28_6ol8a")
 
 [node name="TableRound" type="Sprite2D" parent="Furniture"]
+z_index = -1
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(507, 422)
 scale = Vector2(2, 2)
 texture = ExtResource("29_mfps5")
 
 [node name="WaterBottle" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-78, 282)
 scale = Vector2(2, 2)
 texture = ExtResource("30_23jyx")
 
 [node name="WateringCan" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
-position = Vector2(-1585, 17)
+position = Vector2(-179, -502)
 scale = Vector2(2, 2)
 texture = ExtResource("31_c7lm7")
+
+[node name="OfficeDraft4-export" type="Sprite2D" parent="Furniture"]
+modulate = Color(1, 1, 1, 0.254902)
+texture = ExtResource("30_5mb0h")
+
+[node name="CoffeeMachine" type="Sprite2D" parent="Furniture"]
+z_index = 1
+texture_filter = 1
+position = Vector2(928, -72)
+scale = Vector2(2, 2)
+texture = ExtResource("31_8nycw")
+
+[node name="Corkboard" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(642, -255)
+scale = Vector2(2, 2)
+texture = ExtResource("32_pwojx")
+
+[node name="DeskChair" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(-326, 335)
+scale = Vector2(2, 2)
+texture = ExtResource("33_pr8cy")
+
+[node name="Kettle" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(685, 309)
+scale = Vector2(2, 2)
+texture = ExtResource("34_7517s")
+
+[node name="OfficeDoor boss" type="Sprite2D" parent="Furniture"]
+z_index = -1
+texture_filter = 1
+position = Vector2(786, -182)
+scale = Vector2(2, 2)
+texture = ExtResource("35_r70fk")
+
+[node name="OfficeDoor enter" type="Sprite2D" parent="Furniture"]
+z_index = -1
+texture_filter = 1
+position = Vector2(-812, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("35_r70fk")
+
+[node name="OfficeFilingCabinet" type="Sprite2D" parent="Furniture"]
+z_index = 1
+texture_filter = 1
+position = Vector2(520, -301)
+scale = Vector2(2, 2)
+texture = ExtResource("36_ubsv2")
+flip_h = true
+
+[node name="OfficeFilingCabinet2" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(448, -335)
+scale = Vector2(2, 2)
+texture = ExtResource("36_ubsv2")
+flip_h = true
+
+[node name="PosterAndLeaflets" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(5, 398)
+scale = Vector2(2, 2)
+texture = ExtResource("37_ra4d8")
+flip_h = true
+flip_v = true
+
+[node name="PosterGroup" type="Sprite2D" parent="Furniture"]
+z_index = -1
+texture_filter = 1
+position = Vector2(349, -460)
+scale = Vector2(2, 2)
+texture = ExtResource("38_cmrsf")
+
+[node name="WaterCooler" type="Sprite2D" parent="Furniture"]
+z_index = -1
+texture_filter = 1
+position = Vector2(296, 178)
+scale = Vector2(2, 2)
+texture = ExtResource("39_2vklt")
+
+[node name="Alex" type="Sprite2D" parent="Furniture"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-543, -110)
+scale = Vector2(2, 2)
+texture = ExtResource("40_iv0qf")
+
+[node name="Jen1" type="Sprite2D" parent="Furniture"]
+texture_filter = 1
+position = Vector2(-97, -349)
+scale = Vector2(2, 2)
+texture = ExtResource("41_s7mcw")
 
 [node name="DayBrain" type="Node" parent="."]
 script = ExtResource("2_mchty")
