@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4our54yywg7p"]
+
+[ext_resource type="Texture2D" uid="uid://dgvxsqucx8mpj" path="res://Visual Assets/Dave Spritely New (1).png" id="1_4tgaa"]
+[ext_resource type="Script" uid="uid://d4hf38fdvvsxg" path="res://Scripts/dave.gd" id="1_g6loe"]
+[ext_resource type="Texture2D" uid="uid://dn3hycsg07oyi" path="res://Visual Assets/Walking Sprites/Dave Walking 2.png" id="2_ihju5"]
+[ext_resource type="Texture2D" uid="uid://6updxo8bspil" path="res://Visual Assets/Walking Sprites/Dave Walking 1.png" id="3_g6loe"]
+[ext_resource type="Texture2D" uid="uid://cru4vtjckf6p5" path="res://Visual Assets/Walking Sprites/Dave Walking 3.png" id="4_rs4le"]
+[ext_resource type="Texture2D" uid="uid://ck1qomc8868w0" path="res://Visual Assets/Walking Sprites/Dave Walking 4.png" id="5_q5a5s"]
+[ext_resource type="Texture2D" uid="uid://l6leiqleds0a" path="res://Visual Assets/Walking Sprites/Dave Walking 5.png" id="6_r43a2"]
+[ext_resource type="Texture2D" uid="uid://bsqc26r6ug86m" path="res://Visual Assets/Walking Sprites/Dave Walking 6.png" id="7_s235x"]
+[ext_resource type="Texture2D" uid="uid://dhw1cdwm0w22x" path="res://Visual Assets/Walking Sprites/Dave Walking 7.png" id="8_vwvrw"]
+[ext_resource type="Texture2D" uid="uid://bk06dta5ukj6t" path="res://Visual Assets/Walking Sprites/Dave Walking 8.png" id="9_pq8rk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrn2m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4tgaa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ihju5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g6loe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rs4le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q5a5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r43a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s235x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vwvrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pq8rk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite")]
+script = ExtResource("1_g6loe")
+ownSprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vrn2m")
+animation = &"walk"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 1, 0.478431)
+polygon = PackedVector2Array(-1, -106.2, -1, -104.3, -3, -103.2, -3, -101.8, -12.4, -100, -15, -100, -15, -73.1, -9.9, -68.9, -13, -67.2, -13, -62, -17.9, -62, -30.9, -48, -33, -48, -33, -41.1, -34.7, -40, -37, -40, -37, -13.2, -25.8, -2, -17, -2, -17, -1.3, -21, 0.800003, -21, 120, 27, 120, 27, 108.8, 15, 102.7, 15, 26.8, 18.2, 30, 23.8, 30, 27, 26.8, 27, 5.5, 35, 3.60001, 35, -20.8, 31.8, -24, 27, -24, 27, -50.8, 11.8, -66, 11, -66, 11, -66.7, 14.5, -68, 17, -68, 17, -90.8, 21, -92.8, 21, -103.8)

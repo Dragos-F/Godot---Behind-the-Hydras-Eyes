@@ -9,8 +9,9 @@ class_name Fader extends Node2D
 
 #Function to fade to a black screen,
 #Later to Add text on top of said screen
-func FadeDown():
+func FadeDown(target:String):
 		print("FadingDown")
+		text.text = target
 		if (tween== null):
 			tween = get_tree().create_tween()
 		else:
