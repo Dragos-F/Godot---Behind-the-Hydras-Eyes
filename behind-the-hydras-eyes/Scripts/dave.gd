@@ -33,14 +33,15 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.y = move_toward(velocity.x, 0, SPEED)
 		
+		if hdirection || vdirection != 0:
+			animated_sprite.play("walk")
+		
+		else:
+			animated_sprite.play("idle")
 	else:
 		velocity.y = 0
 		velocity.x = 0
-	if hdirection || vdirection != 0:
-		animated_sprite.play("walk")
-		
-	else:
-		animated_sprite.play("idle")
+
 		
 	
 
