@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://d3g6gmmaudnbv"
+path="res://.godot/imported/Day5Script.yarn-d8ae89cd587c7bd688de1108a95590fd.tres"
+
+[deps]
+
+source_file="res://Dialogue stuffs/OLD/Day 5/Day5Script.yarn"
+dest_files=["res://.godot/imported/Day5Script.yarn-d8ae89cd587c7bd688de1108a95590fd.tres"]
+
+[params]
+

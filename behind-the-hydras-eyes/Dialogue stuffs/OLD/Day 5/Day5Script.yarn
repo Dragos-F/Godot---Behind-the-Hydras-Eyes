@@ -1,0 +1,87 @@
+﻿title: Start
+tags:
+---
+<<declare $start to false>>
+Internal Monlogue: The office is quiet. Alex and Jen have gone to a climate conference led by BritOil. For the first time in a while, the emails from Mexico have ceased.
+Internal Monologue: As Dave stands in front of his desk, listening to the muted chirp of birds outside over the hum of computers, he feels
+    -> A wave of relief
+        You want to feel good about this project, you want to know you're doing good. And for now, the voices making you question that have been quietened.
+    -> A pang of guilt
+        You thought this project was a clear good, but that clarity has eroded with every email. Are they right about the harms they say we're causing? You feel uneasy.
+<<set $start to true>>
+
+===
+
+title:DelayedStart
+tags:
+---
+<<declare $investigate to false>>
+Internal Monologue: You feel restless. That anonymous email is stuck in your head. Alex isn't here to discuss it, so you decide to investigate yourself.
+<<set $investigate to true>>
+
+===
+
+title:Chair
+tags:
+---
+
+Your Chair: Already you've changed the essence of this chair...
+Your Chair: ... the dented cushion creating a perfect mould of your butt.
+
+
+
+===
+
+title:BossText
+tags:
+---
+Your Phone: Bzzt!, bzzt!
+Your Phone: It's a reminder for your meeting with your boss. 
+
+===
+
+title: Boss
+tags:
+---
+<<declare $bossEnd to false>>	
+Boss: Hey Dave, news of the issues you've been having has trickled back to me. Hm. How would you say it's going?						
+    -> There's a backlash, but it's containted.						
+        Boss: Well, it was contained. Now, the cat is very much out of the bag.						
+    -> We're at risk of losing control fast.						
+        Boss: A prescient prediction. In fact, it's already come true.						
+    -> I think there's fundamental issues we need to address.						
+        Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too? 						
+Boss:...						
+Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.						
+Boss: It's also forced the Mexican authorities hand somewhat. There's going to be an investigation, which could halt construction or, well, worse.						
+Boss: Apparently, someone got word there was no EIA and has been trying to kick up a fuss, and that won't help the investigation. 						
+*He pauses and eyes you up. He seems on the cusp of a decision*						
+    -> How can I help?						
+        Boss: Ah, how very kind of you to offer. Well, I accept your resignation. 						
+    -> Stay silent						
+        Boss: Well, it's not easy but I'm going to have to fire you. You know how it is.						
+Dave: ....						
+Boss: Believe me, I'm much sadder than you about the whole thing. Just downright unfortunate. And losing Alex and Jen too...						
+    -> You fired Alex and Jen too?!						
+        Boss: Well, not yet. They're at a conference thing at the minute, I'll give them a ring once it's over to let them know.						
+    -> Stay silent						
+        Boss: But hey, redundencies are a natural growing pain for a healthy company. 						
+Dave: ....						
+Boss: That's all I wanted to say. I'll take your staff ID now, and you can go clean out your desk.						
+Boss: Lovely working with you.
+
+<<set $bossEnd to true>>
+
+						
+===
+
+title:Choice
+tags:
+---
+<<declare $EmailChoice = 0>>
+This is it. Your chance to respond
+->Leave for Mexico
+    <<set $EmailChoice = 1>>
+->Stay
+    <<set $EmailChoice = 2>>
+===

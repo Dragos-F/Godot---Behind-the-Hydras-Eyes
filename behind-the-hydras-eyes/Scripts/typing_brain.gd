@@ -9,13 +9,11 @@ extends Node
 @export var charToAdd:float = 5
 @export var checker: InputEventKey
 @export var ignoredInputs:Array[String]
+@onready var dialog: DialogueRunner = $"../YarnSpinnerCanvasLayer/DialogueRunner"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	start_new_type(targetControl) #--> Method of calling the new typing mechanic
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

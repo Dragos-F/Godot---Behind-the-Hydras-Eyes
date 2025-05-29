@@ -56,9 +56,10 @@ script = ExtResource("1_g6loe")
 ownSprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vrn2m")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-modulate = Color(1, 1, 1, 0.478431)
-polygon = PackedVector2Array(-1, -106.2, -1, -104.3, -3, -103.2, -3, -101.8, -12.4, -100, -15, -100, -15, -73.1, -9.9, -68.9, -13, -67.2, -13, -62, -17.9, -62, -30.9, -48, -33, -48, -33, -41.1, -34.7, -40, -37, -40, -37, -13.2, -25.8, -2, -17, -2, -17, -1.3, -21, 0.800003, -21, 120, 27, 120, 27, 108.8, 15, 102.7, 15, 26.8, 18.2, 30, 23.8, 30, 27, 26.8, 27, 5.5, 35, 3.60001, 35, -20.8, 31.8, -24, 27, -24, 27, -50.8, 11.8, -66, 11, -66, 11, -66.7, 14.5, -68, 17, -68, 17, -90.8, 21, -92.8, 21, -103.8)
+position = Vector2(0, 101)
+polygon = PackedVector2Array(-17, 17, -17, 3, 15, 5, 23, 9, 23, 17)

@@ -1,0 +1,107 @@
+﻿title: Start
+tags:
+---
+
+===
+
+title:Alex
+tags:
+---
+<<declare $Landlord to false>>
+<<declare $endFirst to false>>
+<<declare $AlexDone to false>>
+<<if $endFirst == false>>
+Alex: Hey, still happy with how the projects moving along?							
+    ->Yep, and construction should start soon!							
+        Alex: Glad to hear! There was some murmurings about local pressure to reopen negotiations, but it seems quashed now.							
+    -> A few snags but we're marching on now							
+        Alex: Yeah, I did catch murmurings of some pressure on the government to renegotiate. But I'm glad we're moving ahead with approval now.							
+    -> More pushback than I expected. You hear about the EIA?							
+        Alex: I heard there was someone trying kick up a fuss, but what matters is we're moving ahead. You'll feel better when things are more sure.
+							
+Alex: Just picture the turbines up and spinning, generating the renewable good stuff. Let yourseld feel good about doing your part.							
+Alex: Or if not then, hey, maybe think of the potential summer bonus! Whatever works for you.							
+Dave: Summer bonus?							
+Alex: Investors like ground being broken without much fuss, so expect some grease for your wheels as thanks now building is set to begin. 							
+Alex: Anyway, I've got some tasks to get on with, but if you have any questions about money or construction from here on out, just let me know. 							
+<<set $endFirst = true>>
+<<endif>>
+
+<<if $Landlord>>
+Dave: Do you know about this "Landlord Alliance" that's just messaged me? Or a Mr. Perez?
+Alex: Oh, yeah. Mr Perez is one of the landowners that we purchased our lots from. The landlord alliance is largely an investment vehicle for the richest in the area.
+Alex: They're a very informal group, since most companies proposing megaprojects in the region, wind farms or otherwise, won't make deals with organised groups.
+Alex: It's a very divide-and-conquer mentality to the locals. Anyway, because of this the Alliance mostly just helps landlords acquire land, rather than negotiating for them.
+Alex: Traditionally about three quarters of land around the lagoon was communal, with locals resisting privatisation. This has been rapidly changing though.
+Alex: Forty years ago the guy in charge of protecting the communal lands was assassinated, and the role has remained empty since due to political intimidation.
+Alex: Landowners and foreign companies launched legal battles to claim swathes of the communal land. Buying communal land and selling it to international firms is how Mr Perez made his fortune.
+Dave: Wait, we're building on dodgily obtained communal land?
+Alex: I didn't say it was dodgy; Mr Perez obtained the land, legally, and sold it to a willing buyer, legally. And we have the capital to put the land to do more good.
+    -> Okay, I guess I'm happy we're doing the right thing...
+        Alex: Don't let fixation on the perfect hinder the doing of good. More green energy can only be a positive, surely.
+    -> Couldn't we have done it in a fairer way?
+        Alex: The moral question is above my paygrade, but it seems better to me to good good than handwring about the risks.
+    -> Legal isn't the same as moral. We should have built elsewhere.
+        Alex: Unfortunately for your newfound moral compass, we've already started now. Don't make the boss think you've got cold feet.
+<<set $Landlord to false>>
+<<set $AlexDone to true>>
+<<endif>>
+<<if $AlexDone >>
+Alex: *He looks busy, swapping between a few spreadsheets*
+<<endif>>
+===
+
+title: Choice
+tag:
+---
+<<declare $EmailChoice = 0>>
+How would you like to reply to this email?
+->Sympathetically
+    <<set $EmailChoice = 1>>
+->Professionally
+    <<set $EmailChoice = 2>>
+->Not at all
+    <<set $EmailChoice = -1>>
+
+===
+
+title: Jen
+tag:
+---
+Jen: What a wonderful day we're having!
+
+
+===
+
+title: Kettle
+tags:
+---
+<<declare $brews = 0>>
+Kettle: Make a brew:
+-> Yes
+    <<if $brews < 3 >>
+    You make yourself a nice cup of tea. 
+    <<set $brews = $brews +1>>
+    <<else >>
+    Automated Announcement: YOU ARE CONSUMING TOO MUCH TEA. PLEASE REFRAIN FROM BANKRUPTING US.
+    <<endif>>
+-> No
+    Maybe you'll want one later.
+    
+
+
+===
+
+title:Chair
+tags:
+---
+
+Your Chair: Already you've changed the essence of this chair...
+Your Chair: ... the dented cushion creating a perfect mould of your butt.
+
+
+
+===
+
+
+
