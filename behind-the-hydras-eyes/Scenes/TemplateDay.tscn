@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://66ekdsykq5r4"]
+[gd_scene load_steps=81 format=3 uid="uid://66ekdsykq5r4"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
@@ -12,15 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://c4re8lxxdtgpt" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 1.png" id="7_tx447"]
 [ext_resource type="Texture2D" uid="uid://bg2xtrrglj2lk" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 2.png" id="8_8n7d3"]
 [ext_resource type="Texture2D" uid="uid://cmqtjxdtfthq0" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Drawer.png" id="9_ta8rc"]
+[ext_resource type="Texture2D" uid="uid://bgjxxebiq66sc" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Corkboard_Seleceted.png" id="11_0ctcj"]
 [ext_resource type="Texture2D" uid="uid://bu6fx8kqfdd5m" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Laptop.png" id="11_rfl1x"]
 [ext_resource type="Texture2D" uid="uid://c7rprchynne3v" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Door Selected.png" id="12_ra4d8"]
 [ext_resource type="Texture2D" uid="uid://c4rfeyed4tccx" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Large plant 2.png" id="12_rgewn"]
 [ext_resource type="Texture2D" uid="uid://bki7cyko7viih" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Large plant.png" id="13_5mb0h"]
 [ext_resource type="Texture2D" uid="uid://clulxt6cwtvl7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Microwave back.png" id="14_8nycw"]
+[ext_resource type="Texture2D" uid="uid://esypwvs1iccf" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office_Filing_Cabinet_Selected.png" id="15_fsano"]
 [ext_resource type="Texture2D" uid="uid://dp73wjya5kjc2" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug full.png" id="15_pwojx"]
 [ext_resource type="Texture2D" uid="uid://cmgixe7ffb6w1" path="res://Visual Assets/Old assets/Jen (1).png" id="15_ubsv2"]
 [ext_resource type="Texture2D" uid="uid://bt6dp73gnlxa0" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug trio empty.png" id="16_pr8cy"]
 [ext_resource type="Texture2D" uid="uid://cpgbgj5vmmu8t" path="res://Visual Assets/Old assets/Selected Item Versions/Jen Selected.png" id="16_ra4d8"]
+[ext_resource type="Texture2D" uid="uid://dlcohiycimwtr" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster_group_Selected.png" id="17_6ol8a"]
 [ext_resource type="Texture2D" uid="uid://d1d74uiys3cf4" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Corner Desk.png" id="17_7517s"]
 [ext_resource type="Texture2D" uid="uid://c6upse6doxf6v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 1.png" id="18_r70fk"]
 [ext_resource type="Texture2D" uid="uid://ct6hpk7wmd8ty" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Double Desks.png" id="20_ra4d8"]
@@ -54,13 +57,28 @@
 [ext_resource type="Texture2D" uid="uid://xgfnd6e3wq4v" path="res://Visual Assets/Old assets/Jen 1.png" id="41_s7mcw"]
 [ext_resource type="Script" uid="uid://0ptycn7ao3c7" path="res://Scripts/index_change_zone.gd" id="45_rgewn"]
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="47_pwojx"]
+[ext_resource type="Texture2D" uid="uid://m2wyw0h27e6t" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Kettle Selected.png" id="48_fsano"]
 [ext_resource type="Resource" uid="uid://ccgse7li1h11j" path="res://Dialogue stuffs/NEW/TestProj.yarnproject" id="48_pwojx"]
+[ext_resource type="Texture2D" uid="uid://1ppjvu4mjkpt" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard Selected.png" id="50_iv0qf"]
+[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="57_mfps5"]
+[ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="58_23jyx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7mcw"]
+height = 67.0938
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ra4d8"]
 points = PackedVector2Array(-54, 52.5, -35.5, 62.5, 10, 64.5, 31.5, 37.5, 12.5, 25.5, -24.5, 12, -44.5, 25)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ubsv2"]
 points = PackedVector2Array(-32.5, 35.5, 43, 70, 90, 71, 84.5, 27.5, -32, -1, -45.5, 10.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g3ncg"]
+radius = 35.3219
+height = 73.7983
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ctcj"]
+radius = 20.5
+height = 101.288
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r70fk"]
 radius = 90.0347
@@ -76,7 +94,48 @@ height = 116.0
 radius = 14.2093
 height = 77.7917
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ol8a"]
+radius = 17.9076
+height = 97.1979
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fsano"]
+radius = 19.1417
+height = 66.4506
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rfl1x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
+bg_color = Color(0.762325, 0.400551, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfps5"]
+bg_color = Color(0.631373, 1, 0.698039, 0.2)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id="Theme_iwb83"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkap"]
+bg_color = Color(0.939346, 0.429885, 1.92523e-07, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23jyx"]
+bg_color = Color(0, 0, 0, 0.615686)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
+bg_color = Color(0.6, 0.929412, 0.6, 1)
 
 [node name="Main" type="Node2D"]
 
@@ -88,6 +147,7 @@ texture_filter = 1
 texture = ExtResource("1_rgewn")
 
 [node name="Furniture" type="Node2D" parent="."]
+visible = false
 
 [node name="Clock" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
@@ -149,14 +209,23 @@ texture = ExtResource("31_c7lm7")
 [node name="Corkboard" type="Sprite2D" parent="Furniture"]
 z_index = -1
 texture_filter = 1
-position = Vector2(642, -255)
+position = Vector2(649, -250)
 scale = Vector2(2, 2)
 texture = ExtResource("32_pwojx")
+
+[node name="InteractableElement" parent="Furniture/Corkboard" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("32_pwojx")
+selected = ExtResource("11_0ctcj")
+
+[node name="CollisionShape2D" parent="Furniture/Corkboard/InteractableElement/Area2D" index="0"]
+position = Vector2(-4.5, 57)
+rotation = 2.02873
+shape = SubResource("CapsuleShape2D_s7mcw")
 
 [node name="OfficeDoor boss" type="Sprite2D" parent="Furniture"]
 z_index = -4
 texture_filter = 1
-position = Vector2(786, -184)
+position = Vector2(802, -174)
 scale = Vector2(2, 2)
 texture = ExtResource("35_r70fk")
 
@@ -196,27 +265,44 @@ flip_h = true
 visible = false
 polygon = PackedVector2Array(26, 41, 26, 61.5, 2, 74, -26, 62, -26, 39)
 
-[node name="OfficeFilingCabinet2" type="Sprite2D" parent="Furniture"]
+[node name="OfficeFilingCabinet2" type="Sprite2D" parent="Furniture/OfficeFilingCabinet"]
 z_index = -2
 texture_filter = 1
-position = Vector2(448, -335)
-scale = Vector2(2, 2)
+position = Vector2(-36, -17)
 texture = ExtResource("36_ubsv2")
 flip_h = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/OfficeFilingCabinet2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/OfficeFilingCabinet/OfficeFilingCabinet2"]
 visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/OfficeFilingCabinet2/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/OfficeFilingCabinet/OfficeFilingCabinet2/StaticBody2D"]
 position = Vector2(1, 47)
 polygon = PackedVector2Array(19, -9, 19, 13.5, 0, 27.5, -27, 15, -26, -11)
 
+[node name="InteractableElement" parent="Furniture/OfficeFilingCabinet" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("36_ubsv2")
+selected = ExtResource("15_fsano")
+
+[node name="CollisionShape2D" parent="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" index="0"]
+position = Vector2(-28.5, 55.5)
+rotation = 2.03828
+shape = SubResource("CapsuleShape2D_g3ncg")
+
 [node name="PosterGroup" type="Sprite2D" parent="Furniture"]
-z_index = -3
+z_index = -4
 texture_filter = 1
 position = Vector2(349, -460)
 scale = Vector2(2, 2)
 texture = ExtResource("38_cmrsf")
+
+[node name="InteractableElement" parent="Furniture/PosterGroup" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("38_cmrsf")
+selected = ExtResource("17_6ol8a")
+
+[node name="CollisionShape2D" parent="Furniture/PosterGroup/InteractableElement/Area2D" index="0"]
+position = Vector2(-38, 81)
+rotation = 2.03913
+shape = SubResource("CapsuleShape2D_0ctcj")
 
 [node name="Jen1" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
@@ -353,6 +439,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_5m7vl")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/AlexDesk/ChairSide"]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/AlexDesk/ChairSide/StaticBody2D"]
 polygon = PackedVector2Array(-37.5, 50.5, 9, 72, 38.5, 72, 72, 54, -12.5, 14.5, -32, 5.5)
@@ -437,6 +524,7 @@ flip_h = true
 flip_v = true
 
 [node name="Kitchen" type="Node2D" parent="."]
+visible = false
 z_index = 3
 
 [node name="WaterCooler" type="Sprite2D" parent="Kitchen"]
@@ -531,6 +619,7 @@ texture = ExtResource("3_1120o")
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kitchen/Cabinets/StaticBody2D"]
+z_index = 1
 polygon = PackedVector2Array(-115, 73.2, -67.5, 98, 107, 14, 105.5, -40.5, 82, -53, -123, 53.5)
 
 [node name="MugTrioEmpty" type="Sprite2D" parent="Kitchen/Cabinets"]
@@ -547,6 +636,17 @@ texture = ExtResource("14_8nycw")
 texture_filter = 1
 position = Vector2(-84.5, 10.5)
 texture = ExtResource("34_7517s")
+
+[node name="InteractableElement" parent="Kitchen/Cabinets/Kettle" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("34_7517s")
+selected = ExtResource("48_fsano")
+sizeMult = 1.0
+
+[node name="CollisionShape2D" parent="Kitchen/Cabinets/Kettle/InteractableElement/Area2D" index="0"]
+z_index = 2
+position = Vector2(-14, 11.5)
+rotation = 1.08685
+shape = SubResource("CapsuleShape2D_6ol8a")
 
 [node name="LargePlant2" type="Sprite2D" parent="Kitchen"]
 z_index = -1
@@ -598,7 +698,17 @@ position = Vector2(476, 390)
 scale = Vector2(2, 2)
 texture = ExtResource("2_rgewn")
 
+[node name="InteractableElement" parent="Kitchen/Clipboard" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("2_rgewn")
+selected = ExtResource("50_iv0qf")
+
+[node name="CollisionShape2D" parent="Kitchen/Clipboard/InteractableElement/Area2D" index="0"]
+position = Vector2(-23.5, 50.5)
+rotation = -0.727626
+shape = SubResource("CapsuleShape2D_fsano")
+
 [node name="Wall Barriers" type="Node2D" parent="."]
+visible = false
 
 [node name="Bottom" type="StaticBody2D" parent="Wall Barriers"]
 
@@ -691,8 +801,197 @@ text = "Phasellus imperdiet commodo nisi sit amet feugiat. "
 visible_characters = 0
 visible_ratio = 0.0
 
+[node name="ComputerScreen" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_rgewn")
+
+[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture = ExtResource("57_mfps5")
+
+[node name="ScreenUI" type="Control" parent="."]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = -697.0
+offset_top = -465.0
+offset_right = 707.0
+offset_bottom = 267.0
+
+[node name="EmailList" type="Panel" parent="ScreenUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.016
+anchor_right = 0.203
+anchor_bottom = 0.883
+offset_left = 5.0
+offset_top = 0.287999
+offset_right = -0.0120239
+offset_bottom = -7.35602
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+
+[node name="Inbox" type="Panel" parent="ScreenUI/EmailList"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 273.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfps5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/EmailList/Inbox"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 264.0
+offset_bottom = 35.0
+text = "INBOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenUI/EmailList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 48.0
+offset_right = -6.99997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenUI/EmailList/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 13
+size_flags_vertical = 4
+theme = SubResource("Theme_iwb83")
+
+[node name="Button" type="Button" parent="ScreenUI/EmailList/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+
+
+"
+icon = ExtResource("58_23jyx")
+autowrap_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/EmailList/VBoxContainer/VBoxContainer/Button"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 266.0
+offset_bottom = 73.0
+mouse_filter = 1
+bbcode_enabled = true
+text = "[b]Sender[/b]
+Subject
+[i]First few lines
+"
+
+[node name="MainEmail" type="Panel" parent="ScreenUI"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 12.0
+offset_right = 1401.0
+offset_bottom = 639.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbkap")
+
+[node name="EmailBody" type="Panel" parent="ScreenUI/MainEmail"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 95.0
+offset_right = 1096.0
+offset_bottom = 619.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="Sender&Subj" type="Panel" parent="ScreenUI/MainEmail"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 896.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="Panel" type="Panel" parent="ScreenUI/MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 861.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/MainEmail/Sender&Subj/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 833.0
+offset_bottom = 29.0
+
+[node name="Panel2" type="Panel" parent="ScreenUI/MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 40.0
+offset_right = 861.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+offset_left = 34.0
+offset_top = 2.0
+offset_right = 846.0
+offset_bottom = 28.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "email@whatever.co.uk; other_email@something-else.gb"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 28.0
+text = "To:"
+
+[node name="Button2" type="Button" parent="ScreenUI/MainEmail"]
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Send"
+
+[node name="BottomBar" type="Panel" parent="ScreenUI"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 645.0
+offset_right = 1401.0
+offset_bottom = 732.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
+
+[node name="Button" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.475645
+anchor_top = 0.0344828
+anchor_right = 0.532951
+anchor_bottom = 0.954023
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+icon = ExtResource("58_23jyx")
+metadata/_edit_use_anchors_ = true
+
 [node name="Dave" parent="." instance=ExtResource("5_5usxc")]
-position = Vector2(534, -60)
+position = Vector2(-494, 346)
 collision_layer = 3
 
 [node name="IndexChangeZone" type="Area2D" parent="." node_paths=PackedStringArray("targetGroup")]
@@ -769,12 +1068,17 @@ offset_bottom = 539.0
 [connection signal="body_entered" from="IndexChangeZone3" to="IndexChangeZone3" method="_on_body_entered"]
 [connection signal="body_exited" from="IndexChangeZone3" to="IndexChangeZone3" method="_on_body_exited"]
 
+[editable path="Furniture/Corkboard/InteractableElement"]
 [editable path="Furniture/OfficeDoor boss/InteractableElement"]
 [editable path="Furniture/OfficeDoor enter/InteractableElement"]
+[editable path="Furniture/OfficeFilingCabinet/InteractableElement"]
+[editable path="Furniture/PosterGroup/InteractableElement"]
 [editable path="Furniture/Jen1/InteractableElement"]
 [editable path="Furniture/Alex/InteractableElement"]
 [editable path="Furniture/DaveDesk/DeskChair/InteractableElement"]
 [editable path="Kitchen/WaterCooler/InteractableElement"]
 [editable path="Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
+[editable path="Kitchen/Cabinets/Kettle/InteractableElement"]
+[editable path="Kitchen/Clipboard/InteractableElement"]
 [editable path="Dave"]
 [editable path="YarnSpinnerCanvasLayer"]
