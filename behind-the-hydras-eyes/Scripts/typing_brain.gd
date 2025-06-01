@@ -11,6 +11,9 @@ extends Node
 @export var ignoredInputs:Array[String]
 @onready var dialog: DialogueRunner = $"../YarnSpinnerCanvasLayer/DialogueRunner"
 
+
+signal typing_finished #custom signal that the screen-UI-BRAIN thing listens for
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -46,4 +49,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				print (counter2)
 				if (counter2 == controlGroup.size()):
 					print ("Set TypingOn to False")
+					typing_finished.emit()
+					counter1 = 0
+					counter2 = 0
 					On = false

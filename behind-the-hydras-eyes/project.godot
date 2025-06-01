@@ -15,10 +15,6 @@ run/main_scene="uid://66ekdsykq5r4"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-CustomFader="*res://Scripts/fader.gd"
-
 [display]
 
 window/size/viewport_width=1920

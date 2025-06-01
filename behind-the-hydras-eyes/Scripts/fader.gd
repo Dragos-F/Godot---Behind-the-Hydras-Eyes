@@ -5,6 +5,7 @@ class_name Fader extends Node2D
 @export var duration:float
 @onready var once:bool = true
 @onready var tween:Tween
+signal fade_finished
 
 
 #Function to fade to a black screen,
@@ -20,6 +21,10 @@ func FadeDown(target:String):
 		tween.tween_property(blinder,"modulate",Color.TRANSPARENT,duration)
 		tween.tween_interval(0.5)
 		tween.tween_property(text, "modulate",Color.TRANSPARENT,duration)
+		await tween.finished
+		fade_finished.emit()
+		print ("fader finished")
+		
 
 func FadeUp(target:String):
 		print("FadingUp")
@@ -32,4 +37,7 @@ func FadeUp(target:String):
 		tween.tween_property(blinder,"modulate",Color.BLACK,duration)
 		tween.tween_interval(0.5)
 		tween.tween_property(text, "modulate",Color.WHITE,duration)
+		await tween.finished
+		fade_finished.emit()
+		print ("fader finished")
 		

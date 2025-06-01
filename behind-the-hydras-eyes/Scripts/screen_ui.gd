@@ -1,0 +1,70 @@
+extends Control
+@export var MainEmailBody:RichTextLabel
+@export var replyTarget:Control #needed since I've decided to make the typing system dependent on a control node
+@export var Sender:RichTextLabel
+@export var ToBox:RichTextLabel
+@onready var send: Button = $MainEmail/Send
+@onready var reply: Button = $MainEmail/Reply
+@onready var selectedTexts:Array[String]
+@onready var typing_brain: Node = %TypingBrain
+@onready var hint_text: RichTextLabel = $MainEmail/Hint
+@onready var selectedPreview:Node
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	send.visible = false
+	send.disabled = true
+	
+	reply.visible = false
+	reply.disabled = true
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+func open_email(text:Array[String],boss:bool)->void:
+	selectedTexts = text.duplicate(true)
+	Sender.text = text[0]
+	ToBox.text = text[1]
+	MainEmailBody.text ="[b]"+text[2]+"[/b]\n\n" + text[3]
+	if (!boss):
+		reply.visible = true
+		reply.disabled = false
+	else:
+		reply.visible = false
+		reply.disabled = true
+		
+	
+
+func _on_reply_pressed() -> void:
+	reply.visible = false #set the reply button false
+	reply.disabled = true
+	
+	Sender.text = selectedTexts[2]
+	ToBox.text = selectedTexts[0]
+	MainEmailBody.visible_characters = 0
+	hint_text.visible = true
+	MainEmailBody.text = selectedTexts[4]
+	typing_brain.start_new_type(replyTarget)
+	
+
+func _on_typing_brain_typing_finished() -> void: #custom signal from the typing brain
+	hint_text.visible = false
+	send.visible = true
+	send.disabled = false
+	
+
+func _on_send_pressed() -> void:
+	selectedPreview.queue_free()
+	MainEmailBody.text= ""
+	Sender.text=""
+	ToBox.text= ""
+	selectedTexts.clear()
+	send.visible = false
+	send.disabled = true
+	
+	

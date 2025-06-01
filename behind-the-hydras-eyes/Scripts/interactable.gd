@@ -4,8 +4,16 @@ extends Node2D
 @export var selected:CompressedTexture2D
 @export var near:bool
 @export var once:bool
+@export var once2:bool = true
 @export var sizeMult:float = 2
+@onready var day_brain: DayBrain = %DayBrain
 
+
+
+
+@export var dialogueInteract:bool = true
+@export var YarnNodeLink:String
+signal interacted
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	parentSprite = self.get_parent()
@@ -13,10 +21,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("interact")&&once):
+	if (Input.is_action_just_pressed("interact")&&once&&near):
 		print(parentSprite.name+" interacted")
+		interacted.emit()
+		if (dialogueInteract):
+			day_brain.run_dialogue(YarnNodeLink)
+			print("Asked Brain to start dialogue")
 		once = false
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	near = true
@@ -30,3 +41,11 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	near = false
 	parentSprite.texture = regular
 	parentSprite.scale = Vector2.ONE*sizeMult
+	once2 = true
+	
+
+func _interact():
+		interacted.emit()
+		print ("interacted has emitted")
+		once2 = false
+		

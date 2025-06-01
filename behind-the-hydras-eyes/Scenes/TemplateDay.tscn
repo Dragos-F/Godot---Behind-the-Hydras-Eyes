@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://66ekdsykq5r4"]
+[gd_scene load_steps=85 format=3 uid="uid://66ekdsykq5r4"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://ckeoasg4xd3jh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair Selected.png" id="27_7517s"]
 [ext_resource type="Texture2D" uid="uid://biy1qsn5y22bf" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant plain.png" id="27_fsano"]
 [ext_resource type="Texture2D" uid="uid://b527pdgv56ug7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Printer.png" id="28_6ol8a"]
+[ext_resource type="Texture2D" uid="uid://bg0wq7g8iofjj" path="res://Visual Assets/Old assets/Selected Item Versions/Alex Selected.png" id="28_sbkap"]
 [ext_resource type="Texture2D" uid="uid://bd8c2fkg30pb3" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Table round.png" id="29_mfps5"]
 [ext_resource type="Texture2D" uid="uid://cxhv1h8rtcsuv" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Water bottle.png" id="30_23jyx"]
 [ext_resource type="Texture2D" uid="uid://stkel71ynx4q" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Coffee Machine.png" id="31_8nycw"]
@@ -62,6 +63,10 @@
 [ext_resource type="Texture2D" uid="uid://1ppjvu4mjkpt" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard Selected.png" id="50_iv0qf"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="57_mfps5"]
 [ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="58_23jyx"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="58_c7lm7"]
+[ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="58_iwb83"]
+[ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="61_0av00"]
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="66_sbkap"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7mcw"]
 height = 67.0938
@@ -118,8 +123,6 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="Theme" id="Theme_iwb83"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkap"]
 bg_color = Color(0.939346, 0.429885, 1.92523e-07, 1)
 corner_radius_top_left = 6
@@ -139,6 +142,10 @@ bg_color = Color(0.6, 0.929412, 0.6, 1)
 
 [node name="Main" type="Node2D"]
 
+[node name="Fader" parent="." instance=ExtResource("66_sbkap")]
+scale = Vector2(2, 2)
+duration = 1.0
+
 [node name="Background" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
@@ -147,7 +154,6 @@ texture_filter = 1
 texture = ExtResource("1_rgewn")
 
 [node name="Furniture" type="Node2D" parent="."]
-visible = false
 
 [node name="Clock" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
@@ -382,6 +388,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("40_iv0qf")
 
 [node name="InteractableElement" parent="Furniture/Alex" instance=ExtResource("26_pr8cy")]
+regular = ExtResource("40_iv0qf")
+selected = ExtResource("28_sbkap")
 
 [node name="CollisionShape2D" parent="Furniture/Alex/InteractableElement/Area2D" index="0"]
 position = Vector2(-14.5, 31)
@@ -487,6 +495,8 @@ polygon = PackedVector2Array(-9.5, -56.5, -9.5, -54.8, -25, -46.5, -28.4, -46.5,
 [node name="InteractableElement" parent="Furniture/DaveDesk/DeskChair" instance=ExtResource("26_pr8cy")]
 regular = ExtResource("33_pr8cy")
 selected = ExtResource("27_7517s")
+dialogueInteract = false
+YarnNodeLink = ""
 
 [node name="CollisionShape2D" parent="Furniture/DaveDesk/DeskChair/InteractableElement/Area2D" index="0"]
 position = Vector2(-3, 37)
@@ -524,7 +534,6 @@ flip_h = true
 flip_v = true
 
 [node name="Kitchen" type="Node2D" parent="."]
-visible = false
 z_index = 3
 
 [node name="WaterCooler" type="Sprite2D" parent="Kitchen"]
@@ -641,6 +650,7 @@ texture = ExtResource("34_7517s")
 regular = ExtResource("34_7517s")
 selected = ExtResource("48_fsano")
 sizeMult = 1.0
+YarnNodeLink = "Kettle"
 
 [node name="CollisionShape2D" parent="Kitchen/Cabinets/Kettle/InteractableElement/Area2D" index="0"]
 z_index = 2
@@ -708,7 +718,6 @@ rotation = -0.727626
 shape = SubResource("CapsuleShape2D_fsano")
 
 [node name="Wall Barriers" type="Node2D" parent="."]
-visible = false
 
 [node name="Bottom" type="StaticBody2D" parent="Wall Barriers"]
 
@@ -756,16 +765,18 @@ rotation = -1.57079
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Right"]
 shape = SubResource("WorldBoundaryShape2D_rfl1x")
 
-[node name="DayBrain" type="Node" parent="."]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("dialog")]
+unique_name_in_owner = true
 script = ExtResource("2_mchty")
+dialog = NodePath("../YarnSpinnerCanvasLayer/DialogueRunner")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="TypingBrain" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("4_hbl6j")
 
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -802,6 +813,7 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="ComputerScreen" type="Node2D" parent="."]
+visible = false
 z_index = 5
 
 [node name="Black" type="Sprite2D" parent="ComputerScreen"]
@@ -811,7 +823,9 @@ texture = ExtResource("1_rgewn")
 [node name="Screen" type="Sprite2D" parent="ComputerScreen"]
 texture = ExtResource("57_mfps5")
 
-[node name="ScreenUI" type="Control" parent="."]
+[node name="ScreenUI" type="Control" parent="." node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox")]
+unique_name_in_owner = true
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -819,6 +833,11 @@ offset_left = -697.0
 offset_top = -465.0
 offset_right = 707.0
 offset_bottom = 267.0
+script = ExtResource("58_iwb83")
+MainEmailBody = NodePath("MainEmail/EmailBody/ScrollContainer/Control/MainEmailBody")
+replyTarget = NodePath("MainEmail/EmailBody/ScrollContainer/Control")
+Sender = NodePath("MainEmail/Sender&Subj/Panel/BoxContainer/Sender")
+ToBox = NodePath("MainEmail/Sender&Subj/Panel2/BoxContainer/ToBox")
 
 [node name="EmailList" type="Panel" parent="ScreenUI"]
 layout_mode = 1
@@ -850,7 +869,7 @@ text = "INBOX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScreenUI/EmailList"]
+[node name="SummariesContainer" type="VBoxContainer" parent="ScreenUI/EmailList"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -861,33 +880,46 @@ offset_right = -6.99997
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScreenUI/EmailList/VBoxContainer"]
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" instance=ExtResource("58_c7lm7")]
 layout_mode = 2
-size_flags_horizontal = 13
-size_flags_vertical = 4
-theme = SubResource("Theme_iwb83")
+Sender_Name = "P. Moore"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "First Day - Project Manager"
+PreviewText = "Hey Dave, Glad to have you aboard."
+MainBody = "Hey Dave, 
 
-[node name="Button" type="Button" parent="ScreenUI/EmailList/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "
+Glad to have you aboard. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
 
+Your Boss,
+Mr Moore.
 
 "
-icon = ExtResource("58_23jyx")
-autowrap_mode = 1
+boss = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/EmailList/VBoxContainer/VBoxContainer/Button"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 4.0
-offset_right = 266.0
-offset_bottom = 73.0
-mouse_filter = 1
-bbcode_enabled = true
-text = "[b]Sender[/b]
-Subject
-[i]First few lines
-"
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+autowrap_mode = 0
+
+[node name="TestEmailSummary2" parent="ScreenUI/EmailList/SummariesContainer" instance=ExtResource("58_c7lm7")]
+layout_mode = 2
+Sender_Name = "Miguel Lopez"
+ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
+PreviewText = "To whom it may concern,I've been in "
+MainBody = "To whom it may concern,
+
+I've been in correspondence with your local office about your proposed development of \"Lagoon Breeze\". They seem confident that it is soon going ahead, following approval by the state authorities and a local meeting. However, I cannot find any Environmental Impact Assessment in the submitted documents, so was hoping you could share it with me. As I'm sure you appreciate, our lagoon is home to a plethora of rare wildlife, and without careful consideration of their wellbeing my constituents and I would not be able to consent to your project.	
+
+Regards,
+Miguel Lopez"
+ReplyBody1 = "Good afternoon Miguel,
+
+I am sorry that you are unsatisfied with my previous response. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+
+Kind regards,
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
+autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="ScreenUI"]
 layout_mode = 0
@@ -904,6 +936,24 @@ offset_top = 95.0
 offset_right = 1096.0
 offset_bottom = 619.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScreenUI/MainEmail/EmailBody"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 1076.0
+offset_bottom = 516.0
+
+[node name="Control" type="Control" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer"]
+layout_mode = 2
+
+[node name="MainEmailBody" type="RichTextLabel" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control"]
+layout_mode = 2
+offset_right = 1066.0
+offset_bottom = 510.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
 
 [node name="Sender&Subj" type="Panel" parent="ScreenUI/MainEmail"]
 layout_mode = 0
@@ -928,6 +978,12 @@ offset_top = 2.0
 offset_right = 833.0
 offset_bottom = 29.0
 
+[node name="Sender" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
 [node name="Panel2" type="Panel" parent="ScreenUI/MainEmail/Sender&Subj"]
 layout_mode = 0
 offset_left = 11.0
@@ -937,24 +993,26 @@ offset_bottom = 70.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
 
 [node name="BoxContainer" type="BoxContainer" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
 offset_left = 34.0
 offset_top = 2.0
 offset_right = 846.0
 offset_bottom = 28.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer"]
+[node name="ToBox" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "email@whatever.co.uk; other_email@something-else.gb"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 3.0
 offset_right = 37.0
 offset_bottom = 28.0
 text = "To:"
 
-[node name="Button2" type="Button" parent="ScreenUI/MainEmail"]
+[node name="Send" type="Button" parent="ScreenUI/MainEmail"]
+visible = false
 layout_mode = 2
 offset_left = 910.0
 offset_top = 12.0
@@ -963,6 +1021,37 @@ offset_bottom = 87.0
 theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
 text = "Send"
+
+[node name="Reply" type="Button" parent="ScreenUI/MainEmail"]
+visible = false
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Reply
+"
+
+[node name="Hint" type="RichTextLabel" parent="ScreenUI/MainEmail"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.854657
+anchor_top = -0.00386305
+anchor_right = 1.04148
+anchor_bottom = 0.197094
+offset_left = -42.9601
+offset_top = -13.5779
+offset_right = -42.9602
+offset_bottom = -13.5779
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Press Any Key to type"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="BottomBar" type="Panel" parent="ScreenUI"]
 layout_mode = 0
@@ -974,24 +1063,41 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
 
 [node name="Button" type="Button" parent="ScreenUI/BottomBar"]
 texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.475645
-anchor_top = 0.0344828
-anchor_right = 0.532951
-anchor_bottom = 0.954023
-offset_right = -40.0
-offset_bottom = -40.0
+layout_mode = 2
+offset_left = 653.0
+offset_right = 735.0
+offset_bottom = 86.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(2, 2)
 size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 28
 icon = ExtResource("58_23jyx")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ShutDown" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.431948
+anchor_right = 0.431948
+offset_left = 653.0
+offset_right = 735.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+icon = ExtResource("61_0av00")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Dave" parent="." instance=ExtResource("5_5usxc")]
-position = Vector2(-494, 346)
+unique_name_in_owner = true
+position = Vector2(-590, 314)
 collision_layer = 3
 
 [node name="IndexChangeZone" type="Area2D" parent="." node_paths=PackedStringArray("targetGroup")]
@@ -1032,10 +1138,21 @@ position = Vector2(201, 117)
 polygon = PackedVector2Array(-396, 137, 55, -91, 262, -2, -40, 318)
 
 [node name="YarnSpinnerCanvasLayer" parent="." instance=ExtResource("47_pwojx")]
-visible = false
 
 [node name="DialogueRunner" parent="YarnSpinnerCanvasLayer" index="0"]
 yarnProject = ExtResource("48_pwojx")
+autoStart = true
+startNode = "Start"
+
+[node name="LinePresenter" parent="YarnSpinnerCanvasLayer" index="2"]
+anchors_preset = -1
+anchor_left = 0.482292
+anchor_top = 0.722222
+anchor_right = 0.482292
+anchor_bottom = 0.722222
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+metadata/_edit_use_anchors_ = true
 
 [node name="LineText" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl" index="0"]
 offset_left = -575.0
@@ -1061,6 +1178,11 @@ offset_top = 428.0
 offset_right = 601.0
 offset_bottom = 539.0
 
+[connection signal="interacted" from="Furniture/DaveDesk/DeskChair/InteractableElement" to="DayBrain" method="_on_interactable_element_interacted"]
+[connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
+[connection signal="pressed" from="ScreenUI/MainEmail/Send" to="ScreenUI" method="_on_send_pressed"]
+[connection signal="pressed" from="ScreenUI/MainEmail/Reply" to="ScreenUI" method="_on_reply_pressed"]
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="body_entered" from="IndexChangeZone" to="IndexChangeZone" method="_on_body_entered"]
 [connection signal="body_exited" from="IndexChangeZone" to="IndexChangeZone" method="_on_body_exited"]
 [connection signal="body_entered" from="IndexChangeZone2" to="IndexChangeZone2" method="_on_body_entered"]
@@ -1068,6 +1190,7 @@ offset_bottom = 539.0
 [connection signal="body_entered" from="IndexChangeZone3" to="IndexChangeZone3" method="_on_body_entered"]
 [connection signal="body_exited" from="IndexChangeZone3" to="IndexChangeZone3" method="_on_body_exited"]
 
+[editable path="Fader"]
 [editable path="Furniture/Corkboard/InteractableElement"]
 [editable path="Furniture/OfficeDoor boss/InteractableElement"]
 [editable path="Furniture/OfficeDoor enter/InteractableElement"]
@@ -1080,5 +1203,7 @@ offset_bottom = 539.0
 [editable path="Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
 [editable path="Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Kitchen/Clipboard/InteractableElement"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
 [editable path="Dave"]
 [editable path="YarnSpinnerCanvasLayer"]

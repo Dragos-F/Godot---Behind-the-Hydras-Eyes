@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Dave
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var SPEED = 275.0
