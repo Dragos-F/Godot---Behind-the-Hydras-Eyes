@@ -1,19 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://66ekdsykq5r4"]
+[gd_scene load_steps=11 format=3 uid="uid://d14m36b2xyscu"]
 
-[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
-[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_hq638"]
-[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
-[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_hbl6j"]
-[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="5_5usxc"]
-[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_p7x4l"]
-[ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_p7x4l"]
-[ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="47_pwojx"]
-[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="57_mfps5"]
-[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="66_sbkap"]
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
+[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="3_rakbq"]
+[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_bwr10"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="5_okst0"]
+[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_fuc61"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
+[ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="9_wf4m3"]
+[ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_u020q"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Fader" parent="." instance=ExtResource("66_sbkap")]
+[node name="Fader" parent="." instance=ExtResource("1_fkw1m")]
 scale = Vector2(2, 2)
 duration = 1.0
 
@@ -21,17 +21,17 @@ duration = 1.0
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(48.5, 33.5)
 
-[node name="Background" parent="." instance=ExtResource("2_hq638")]
+[node name="Background" parent="." instance=ExtResource("2_l3qly")]
 
 [node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("dialog")]
-script = ExtResource("2_mchty")
+script = ExtResource("3_rakbq")
 dialog = NodePath("../YarnSpinnerCanvasLayer/DialogueRunner")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("4_hbl6j")
+script = ExtResource("4_bwr10")
 
 [node name="ComputerScreen" type="Node2D" parent="."]
 visible = false
@@ -39,23 +39,23 @@ z_index = 5
 
 [node name="Black" type="Sprite2D" parent="ComputerScreen"]
 modulate = Color(0, 0, 0, 1)
-texture = ExtResource("1_rgewn")
+texture = ExtResource("5_okst0")
 
 [node name="Screen" type="Sprite2D" parent="ComputerScreen"]
-texture = ExtResource("57_mfps5")
+texture = ExtResource("6_fuc61")
 
-[node name="ScreenUI" parent="." instance=ExtResource("7_p7x4l")]
+[node name="ScreenUI" parent="." instance=ExtResource("7_1v22j")]
 unique_name_in_owner = true
 
-[node name="Dave" parent="." instance=ExtResource("5_5usxc")]
+[node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 collision_layer = 3
 
-[node name="YarnSpinnerCanvasLayer" parent="." instance=ExtResource("47_pwojx")]
+[node name="YarnSpinnerCanvasLayer" parent="." instance=ExtResource("9_wf4m3")]
 
 [node name="DialogueRunner" parent="YarnSpinnerCanvasLayer" index="0"]
-yarnProject = ExtResource("10_p7x4l")
+yarnProject = ExtResource("10_u020q")
 autoStart = true
 startNode = "Start"
 
