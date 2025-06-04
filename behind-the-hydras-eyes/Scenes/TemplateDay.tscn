@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://66ekdsykq5r4"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
-[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_hq638"]
+[ext_resource type="PackedScene" path="res://Scenes/backgroundOffice.tscn" id="2_hq638"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_hbl6j"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="5_5usxc"]
-[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_p7x4l"]
+[ext_resource type="PackedScene" path="res://Scenes/screen_ui.tscn" id="7_p7x4l"]
 [ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_p7x4l"]
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="47_pwojx"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="57_mfps5"]
