@@ -146,6 +146,9 @@ bg_color = Color(0.6, 0.929412, 0.6, 1)
 scale = Vector2(2, 2)
 duration = 1.0
 
+[node name="Sprite2D" parent="Fader" index="0"]
+self_modulate = Color(0, 0, 0, 1)
+
 [node name="Background" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
