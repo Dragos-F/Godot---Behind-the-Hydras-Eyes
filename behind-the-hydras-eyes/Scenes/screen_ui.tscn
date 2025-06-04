@@ -1,0 +1,319 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtpqjdqelptt3"]
+
+[ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
+[ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="3_m3eo7"]
+[ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="4_vjvvu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
+bg_color = Color(0.878431, 0.878431, 0.878431, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfps5"]
+bg_color = Color(0.631373, 1, 0.698039, 0.2)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkap"]
+bg_color = Color(0.878431, 0.878431, 0.878431, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23jyx"]
+bg_color = Color(0, 0, 0, 0.615686)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
+bg_color = Color(0.0862745, 0.643137, 1, 0.811765)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dr7px"]
+
+[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox")]
+visible = false
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = -697.0
+offset_top = -465.0
+offset_right = 707.0
+offset_bottom = 267.0
+script = ExtResource("1_3c83b")
+MainEmailBody = NodePath("MainEmail/EmailBody/ScrollContainer/Control/MainEmailBody")
+replyTarget = NodePath("MainEmail/EmailBody/ScrollContainer/Control")
+Sender = NodePath("MainEmail/Sender&Subj/Panel/BoxContainer/Sender")
+ToBox = NodePath("MainEmail/Sender&Subj/Panel2/BoxContainer/ToBox")
+
+[node name="EmailList" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356125
+anchor_top = 0.0163934
+anchor_right = 0.206553
+anchor_bottom = 0.909836
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Inbox" type="Panel" parent="EmailList"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 273.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfps5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EmailList/Inbox"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 264.0
+offset_bottom = 35.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "INBOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SummariesContainer" type="VBoxContainer" parent="EmailList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 48.0
+offset_right = -6.99997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boss" parent="EmailList/SummariesContainer" instance=ExtResource("2_tvukg")]
+layout_mode = 2
+Sender_Name = "P. Moore"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "First Day - Project Manager"
+PreviewText = "Hey Dave, Glad to have you aboard."
+MainBody = "Hey Dave, 
+
+Glad to have you aboard. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
+
+Your Boss,
+Mr Moore.
+
+"
+boss = true
+
+[node name="RichTextLabel" parent="EmailList/SummariesContainer/Boss/Button" index="0"]
+autowrap_mode = 0
+
+[node name="TestEmailSummary2" parent="EmailList/SummariesContainer" instance=ExtResource("2_tvukg")]
+layout_mode = 2
+Sender_Name = "Miguel Lopez"
+ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
+PreviewText = "To whom it may concern,I've been in "
+MainBody = "To whom it may concern,
+
+I've been in correspondence with your local office about your proposed development of \"Lagoon Breeze\". They seem confident that it is soon going ahead, following approval by the state authorities and a local meeting. However, I cannot find any Environmental Impact Assessment in the submitted documents, so was hoping you could share it with me. As I'm sure you appreciate, our lagoon is home to a plethora of rare wildlife, and without careful consideration of their wellbeing my constituents and I would not be able to consent to your project.	
+
+Regards,
+Miguel Lopez"
+ReplyBody1 = "Good afternoon Miguel,
+
+I am sorry that you are unsatisfied with my previous response. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+
+Kind regards,
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
+autowrap_mode = 0
+
+[node name="MainEmail" type="Panel" parent="."]
+layout_mode = 0
+anchor_left = 0.214387
+anchor_top = 0.0163934
+anchor_right = 0.997863
+anchor_bottom = 0.909836
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbkap")
+metadata/_edit_use_anchors_ = true
+
+[node name="EmailBody" type="Panel" parent="MainEmail"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 95.0
+offset_right = 1096.0
+offset_bottom = 619.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainEmail/EmailBody"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 1076.0
+offset_bottom = 516.0
+
+[node name="Control" type="Control" parent="MainEmail/EmailBody/ScrollContainer"]
+layout_mode = 2
+
+[node name="MainEmailBody" type="RichTextLabel" parent="MainEmail/EmailBody/ScrollContainer/Control"]
+layout_mode = 2
+offset_right = 1066.0
+offset_bottom = 510.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Sender&Subj" type="Panel" parent="MainEmail"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 896.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="Panel" type="Panel" parent="MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 861.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 833.0
+offset_bottom = 29.0
+
+[node name="Sender" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+"
+
+[node name="Panel2" type="Panel" parent="MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 40.0
+offset_right = 861.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 2.0
+offset_right = 846.0
+offset_bottom = 28.0
+
+[node name="ToBox" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 28.0
+text = "To:"
+
+[node name="Send" type="Button" parent="MainEmail"]
+visible = false
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Send"
+
+[node name="Reply" type="Button" parent="MainEmail"]
+visible = false
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Reply
+"
+
+[node name="Hint" type="RichTextLabel" parent="MainEmail"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.854657
+anchor_top = -0.00386305
+anchor_right = 1.04148
+anchor_bottom = 0.197094
+offset_left = -42.9601
+offset_top = -13.5779
+offset_right = -42.9602
+offset_bottom = -13.5779
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Press Any Key to type"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BottomBar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 676.0
+offset_right = 1401.0
+offset_bottom = 732.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
+
+[node name="Button" type="Button" parent="BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.474928
+anchor_right = 0.515759
+anchor_bottom = 1.0
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+icon = ExtResource("3_m3eo7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ShutDown" type="Button" parent="BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.0537249
+anchor_right = 0.0959885
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dr7px")
+icon = ExtResource("4_vjvvu")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]
+[connection signal="pressed" from="MainEmail/Reply" to="." method="_on_reply_pressed"]
+
+[editable path="EmailList/SummariesContainer/Boss"]
+[editable path="EmailList/SummariesContainer/TestEmailSummary2"]

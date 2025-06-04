@@ -6,7 +6,9 @@ extends Node2D
 @export var once:bool
 @export var once2:bool = true
 @export var sizeMult:float = 2
-@onready var day_brain: DayBrain = %DayBrain
+@onready var day_brain:DayBrain
+
+
 
 
 
@@ -17,8 +19,9 @@ signal interacted
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	parentSprite = self.get_parent()
-
-
+	day_brain = get_tree().current_scene.get_node("DayBrain")
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("interact")&&once&&near):

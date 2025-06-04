@@ -7,7 +7,7 @@ class_name EmailBrain
 @export var PreviewText:String
 @export_multiline var MainBody:String
 @export_multiline var ReplyBody1:String
-@onready var screen_ui: Control = %ScreenUI
+@onready var screen_ui: Control
 @export var alltexts:Array[String]
 @onready var own_label: RichTextLabel = $Button/RichTextLabel
 @export var boss:bool = false
@@ -16,7 +16,7 @@ class_name EmailBrain
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	own_label.text ="[b]"+Sender_Name+"[/b]\n" +Subject+"\n"+"[i]"+PreviewText+"[/i]"
-
+	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

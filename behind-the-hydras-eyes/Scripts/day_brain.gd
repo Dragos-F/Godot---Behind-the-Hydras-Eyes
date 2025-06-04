@@ -2,13 +2,13 @@ extends Node
 class_name DayBrain
 @onready var fader: Fader = $"../Fader"
 @export var dialog: DialogueRunner
-@onready var screen_ui: Control = %ScreenUI
+@onready var screen_ui: Control
 @onready var dave:Dave = %Dave
 @onready var computer_screen: Node2D = $"../ComputerScreen"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,6 +38,7 @@ func enter_screen():
 
 func _on_interactable_element_interacted() -> void:
 	enter_screen()
+	print ("entering screen")
 	
 func run_dialogue(nodeTitle:String):
 	dialog.StartDialogue(nodeTitle)
