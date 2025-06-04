@@ -8,6 +8,8 @@ extends Control
 @onready var selectedTexts:Array[String]
 @onready var typing_brain: Node = %TypingBrain
 @onready var hint_text: RichTextLabel = $MainEmail/Hint
+@onready var summaries_container: VBoxContainer = $EmailList/SummariesContainer
+@onready var inbox_buttons:Array[Button]
 @onready var selectedPreview:Node
 
 
@@ -50,6 +52,12 @@ func _on_reply_pressed() -> void:
 	hint_text.visible = true
 	MainEmailBody.text = selectedTexts[4]
 	typing_brain.start_new_type(replyTarget)
+	#code to get and disable all buttons
+	inbox_buttons.assign(summaries_container.find_children("Button"))
+	if (inbox_buttons!=null):
+		for i in inbox_buttons:
+			i.disabled = true
+			
 	
 
 func _on_typing_brain_typing_finished() -> void: #custom signal from the typing brain
@@ -66,5 +74,8 @@ func _on_send_pressed() -> void:
 	selectedTexts.clear()
 	send.visible = false
 	send.disabled = true
-	
+	if (inbox_buttons!=null):
+		for i in inbox_buttons:
+			i.disabled = false
+	inbox_buttons.clear()
 	
