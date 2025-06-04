@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=11 format=3 uid="uid://bd23kmgm3rpcr"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
-[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
+[ext_resource type="PackedScene" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="3_rakbq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_bwr10"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="5_okst0"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_fuc61"]
-[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
+[ext_resource type="PackedScene" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="9_wf4m3"]
 [ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_u020q"]
@@ -22,6 +22,30 @@ self_modulate = Color(0, 0, 0, 1)
 position = Vector2(48.5, 33.5)
 
 [node name="Background" parent="." instance=ExtResource("2_l3qly")]
+
+[node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
+YarnNodeLink = "Corkboard"
+
+[node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
+YarnNodeLink = "Cabinet"
+
+[node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
+YarnNodeLink = "Posters"
+
+[node name="InteractableElement" parent="Background/Furniture/Jen1" index="1"]
+YarnNodeLink = "Jen"
+
+[node name="InteractableElement" parent="Background/Furniture/Alex" index="0"]
+YarnNodeLink = "Alex"
+
+[node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
+YarnNodeLink = "Fountain"
+
+[node name="InteractableElement" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine" index="0"]
+YarnNodeLink = "CoffeeMachine"
+
+[node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
+YarnNodeLink = "Clipboard"
 
 [node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("dialog")]
 script = ExtResource("3_rakbq")
@@ -53,6 +77,7 @@ position = Vector2(-590, 314)
 collision_layer = 3
 
 [node name="YarnSpinnerCanvasLayer" parent="." instance=ExtResource("9_wf4m3")]
+visible = false
 
 [node name="DialogueRunner" parent="YarnSpinnerCanvasLayer" index="0"]
 yarnProject = ExtResource("10_u020q")
