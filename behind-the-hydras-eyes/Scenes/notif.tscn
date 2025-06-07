@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://brp0wa3mmjqge"]
+
+[ext_resource type="Texture2D" uid="uid://6lkvcujt2oym" path="res://Visual Assets/Old assets/Notification/Bouncing Notice1.png" id="1_a0x5d"]
+[ext_resource type="Texture2D" uid="uid://1iam281qtdfj" path="res://Visual Assets/Old assets/Notification/Bouncing Notice2.png" id="2_06nso"]
+[ext_resource type="Texture2D" uid="uid://77ktrrbc3xc1" path="res://Visual Assets/Old assets/Notification/Bouncing Notice3.png" id="3_s2mu6"]
+[ext_resource type="Texture2D" uid="uid://dmc55qtfqgwjm" path="res://Visual Assets/Old assets/Notification/Bouncing Notice4.png" id="4_rhipo"]
+[ext_resource type="Texture2D" uid="uid://c7siftohy32ov" path="res://Visual Assets/Old assets/Notification/Bouncing Notice5.png" id="5_rogpo"]
+[ext_resource type="Texture2D" uid="uid://qa1i28gus0u3" path="res://Visual Assets/Old assets/Notification/Bouncing Notice6.png" id="6_6xikk"]
+[ext_resource type="Texture2D" uid="uid://cff4473pr1wg" path="res://Visual Assets/Old assets/Notification/Bouncing Notice7.png" id="7_b1wmr"]
+[ext_resource type="Texture2D" uid="uid://bxcllxpjgmw8y" path="res://Visual Assets/Old assets/Notification/Bouncing Notice8.png" id="8_iijgg"]
+[ext_resource type="Texture2D" uid="uid://bvndoifp0m4wj" path="res://Visual Assets/Old assets/Notification/Bouncing Notice9.png" id="9_jtrbw"]
+[ext_resource type="Texture2D" uid="uid://brdbh0vo8yf2v" path="res://Visual Assets/Old assets/Notification/Bouncing Notice10.png" id="10_siu1o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb7so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a0x5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_06nso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s2mu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rhipo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rogpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6xikk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b1wmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iijgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jtrbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_siu1o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Notif" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_pb7so")
+autoplay = "default"
+frame_progress = 0.0102976

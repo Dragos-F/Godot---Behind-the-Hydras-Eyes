@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd23kmgm3rpcr"]
+[gd_scene load_steps=13 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
-[ext_resource type="PackedScene" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
+[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="3_rakbq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_bwr10"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="5_okst0"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_fuc61"]
-[ext_resource type="PackedScene" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="9_wf4m3"]
 [ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_u020q"]
+[ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
+[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
 
 [node name="Main" type="Node2D"]
 
@@ -19,12 +21,18 @@ duration = 1.0
 
 [node name="Sprite2D" parent="Fader" index="0"]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(48.5, 33.5)
+
+[node name="Label" parent="Fader" index="1"]
+z_index = 10
 
 [node name="Background" parent="." instance=ExtResource("2_l3qly")]
 
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
+
+[node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
+Type = 2
+textToDisplay = "Next Day"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
 YarnNodeLink = "Cabinet"
@@ -32,11 +40,17 @@ YarnNodeLink = "Cabinet"
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
 YarnNodeLink = "Posters"
 
-[node name="InteractableElement" parent="Background/Furniture/Jen1" index="1"]
+[node name="Jen1" parent="Background/Furniture" index="12"]
+z_index = -1
+
+[node name="JenInteractable" parent="Background/Furniture/Jen1" index="1"]
 YarnNodeLink = "Jen"
 
-[node name="InteractableElement" parent="Background/Furniture/Alex" index="0"]
+[node name="AlexInteractable" parent="Background/Furniture/Alex" index="0"]
 YarnNodeLink = "Alex"
+
+[node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
+Type = 1
 
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
 YarnNodeLink = "Fountain"
@@ -70,6 +84,32 @@ texture = ExtResource("6_fuc61")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_1v22j")]
 unique_name_in_owner = true
+texture_filter = 1
+emailsProgressionQuota = 1
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
+texture_filter = 1
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+texture_filter = 1
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
+texture_filter = 1
+
+[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
+texture_filter = 1
+
+[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
+texture_filter = 1
+
+[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" index="0"]
+texture_filter = 1
+
+[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
+texture_filter = 1
+
+[node name="Hint" parent="ScreenUI/MainEmail" index="4"]
+texture_filter = 1
 
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true
@@ -77,14 +117,15 @@ position = Vector2(-590, 314)
 collision_layer = 3
 
 [node name="YarnSpinnerCanvasLayer" parent="." instance=ExtResource("9_wf4m3")]
-visible = false
 
 [node name="DialogueRunner" parent="YarnSpinnerCanvasLayer" index="0"]
+rotation = 0.00120258
 yarnProject = ExtResource("10_u020q")
 autoStart = true
 startNode = "Start"
 
 [node name="LinePresenter" parent="YarnSpinnerCanvasLayer" index="2"]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.482292
 anchor_top = 0.722222
@@ -96,7 +137,6 @@ offset_right = -1.00061
 offset_bottom = 0.000244141
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
-metadata/_edit_use_anchors_ = true
 
 [node name="LineText" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl" index="0"]
 offset_left = -575.0
@@ -116,13 +156,42 @@ offset_top = -116.0
 offset_right = 604.0
 offset_bottom = -16.0
 
+[node name="OptionsPresenter" parent="YarnSpinnerCanvasLayer" index="3"]
+texture_filter = 1
+
 [node name="VBoxContainer" parent="YarnSpinnerCanvasLayer/OptionsPresenter/PresenterControl" index="0"]
 offset_left = -571.0
 offset_top = 428.0
 offset_right = 601.0
 offset_bottom = 539.0
 
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/InteractableElement" to="DayBrain" method="_on_interactable_element_interacted"]
+[node name="Specifics1" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif")]
+script = ExtResource("11_l3qly")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
+
+[node name="Notifications" type="Node2D" parent="."]
+
+[node name="Alex" parent="Notifications" instance=ExtResource("12_rakbq")]
+position = Vector2(-552, -256)
+frame_progress = 0.801034
+
+[node name="Jen" parent="Notifications" instance=ExtResource("12_rakbq")]
+position = Vector2(-138, -470)
+frame_progress = 0.0
+
+[node name="Door" parent="Notifications" instance=ExtResource("12_rakbq")]
+visible = false
+position = Vector2(-803, 161)
+frame_progress = 0.0
+
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
+[connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
 [editable path="Fader"]
@@ -132,9 +201,9 @@ offset_bottom = 539.0
 [editable path="Background/Furniture/OfficeDoor enter/InteractableElement"]
 [editable path="Background/Furniture/OfficeFilingCabinet/InteractableElement"]
 [editable path="Background/Furniture/PosterGroup/InteractableElement"]
-[editable path="Background/Furniture/Jen1/InteractableElement"]
-[editable path="Background/Furniture/Alex/InteractableElement"]
-[editable path="Background/Furniture/DaveDesk/DeskChair/InteractableElement"]
+[editable path="Background/Furniture/Jen1/JenInteractable"]
+[editable path="Background/Furniture/Alex/AlexInteractable"]
+[editable path="Background/Furniture/DaveDesk/DeskChair/DeskInteractable"]
 [editable path="Background/Kitchen/WaterCooler/InteractableElement"]
 [editable path="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]

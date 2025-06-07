@@ -263,6 +263,7 @@ offset_top = -13.5779
 offset_right = -42.9602
 offset_bottom = -13.5779
 mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 32
 text = "Press Any Key to type"
 horizontal_alignment = 1

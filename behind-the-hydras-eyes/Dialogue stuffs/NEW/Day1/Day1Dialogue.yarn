@@ -1,9 +1,3 @@
-title: Day1Dialogue
-tags:
----
-
-===
-
 title:Start
 tags:
 ---
@@ -29,11 +23,11 @@ Alex:...
 Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help?
 Alex: Project lead, you say? Nice to meet you boss! I'm Alex, I do all the odd bits. Where’ve you joined us from?
 ->I'm fresh outta uni!
-Alex: New blood, eh? Well, I can't say anyone else on the team is much older.
+    Alex: New blood, eh? Well, I can't say anyone else on the team is much older.
 -> I'm an ex-teacher!
-Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
+    Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
 -> Little England Petroleum
-Alex: Ah, one of our sponsors. You know how things work then.
+    Alex: Ah, one of our sponsors. You know how things work then.
 Alex: Well, we're happy to have you anyway. I'm just gonna finish this and then I can show you the project, so have a look around, grab a cup of tea or something, and then come back.
 <<set $Alexsecond to false>>
 <<set $Alexreturn to true>>
@@ -82,14 +76,14 @@ tags:
 <<declare $brews = 0>>
 Kettle: Pop the kettle on?
 -> Yes
-<<if $brews < 3 >>
-You make yourself a nice cup of tea.
-<<set $brews = $brews +1>>
-<<else >>
-Automated Announcement: YOU ARE CONSUMING TOO MUCH TEA. PLEASE REFRAIN FROM BANKRUPTING US.
-<<endif>>
+    <<if $brews < 3 >>
+    You make yourself a nice cup of tea.
+    <<set $brews = $brews +1>>
+    <<else >>
+    Automated Announcement: YOU ARE CONSUMING TOO MUCH TEA. PLEASE REFRAIN FROM BANKRUPTING US.
+    <<endif>>
 -> No
-Maybe you'll want one later.
+    Maybe you'll want one later.
 ===
 
 
@@ -132,10 +126,10 @@ add stuff after this
 title: Posters
 tags:
 ---
-HR: HERE FOR YOUR NEEDS! NO UNION IS BETTER THAN FAMILY. That's, uh, reassuring.
+HR - HERE FOR YOUR NEEDS! NO UNION IS BETTER THAN FAMILY. That's, uh, reassuring.
 FIRE SAFETY PLAN. Cool, I guess it's good to have one of those. You won't read it though. 
-FORWARD GREEN: TOMORROW STARTS TODAY...AND TOMORROW IS GREEN. Inspiring.
-CALANDAR. Jen has added her dogs birthday down, with a big heart around it. 
+FORWARD GREEN - TOMORROW STARTS TODAY...AND TOMORROW IS GREEN. Inspiring.
+CALENDAR. Jen has added her dogs birthday down, with a big heart around it. 
 ===
 
 

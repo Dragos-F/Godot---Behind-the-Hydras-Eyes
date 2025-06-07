@@ -1,4 +1,5 @@
 extends Control
+class_name Computer
 @export var MainEmailBody:RichTextLabel
 @export var replyTarget:Control #needed since I've decided to make the typing system dependent on a control node
 @export var Sender:RichTextLabel
@@ -11,7 +12,8 @@ extends Control
 @onready var summaries_container: VBoxContainer = $EmailList/SummariesContainer
 @onready var inbox_buttons:Array[Button]
 @onready var selectedPreview:Node
-
+@export var emailsProgressionQuota:int
+@export var emailsDone:int
 
 
 # Called when the node enters the scene tree for the first time.
@@ -78,4 +80,5 @@ func _on_send_pressed() -> void:
 		for i in inbox_buttons:
 			i.disabled = false
 	inbox_buttons.clear()
+	emailsDone+=1
 	

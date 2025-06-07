@@ -6,6 +6,8 @@ class_name DayBrain
 @onready var dave:Dave = %Dave
 @onready var computer_screen: Node2D = $"../ComputerScreen"
 
+signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
@@ -35,11 +37,16 @@ func enter_screen():
 	fader.FadeDown("")
 	await fader.fade_finished
 
-
-func _on_interactable_element_interacted() -> void:
+func _on_desk_interactable_interacted() -> void:
 	enter_screen()
 	print ("entering screen")
+	
 	
 func run_dialogue(nodeTitle:String):
 	dialog.StartDialogue(nodeTitle)
 	print ("brain told runner to start it")
+
+func end_day(nextLocation:String):
+	fader.FadeUp(nextLocation)
+	await fader.fade_finished
+	get_tree().change_scene_to_file("res://Scenes/Day2.tscn")

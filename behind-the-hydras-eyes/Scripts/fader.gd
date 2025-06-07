@@ -8,9 +8,8 @@ class_name Fader extends Node2D
 signal fade_finished
 
 
-#Function to fade to a black screen,
 #Later to Add text on top of said screen
-func FadeDown(target:String):
+func FadeDown(target:String): #function that fades down the black screen
 		print("FadingDown")
 		text.text = target
 		if (tween== null):
@@ -26,7 +25,7 @@ func FadeDown(target:String):
 		print ("fader finished")
 		
 
-func FadeUp(target:String):
+func FadeUp(target:String): #function that fades down the black screen
 		print("FadingUp")
 		text.text = target
 		if (tween== null):
