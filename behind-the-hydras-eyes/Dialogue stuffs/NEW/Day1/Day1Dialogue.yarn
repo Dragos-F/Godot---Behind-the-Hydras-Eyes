@@ -64,9 +64,9 @@ Jen: Ooh, have you seen our green office project? Not to brag but I'm the reigni
 title: BlueClipboard
 tags:
 ---
-Our green office project! To help energise our workers and liven up our office, we're asking workers to foster some plants!
-Plant fostering can be cited in your annual review as proof of living up to our brand values: loyalty, forward thinking, eco-friendly.
-Just write your name below and take a plant. A green worker is a happy worker!
+Clipboard: Our green office project! To help energise our workers and liven up our office, we're asking workers to foster some plants!
+Clipboard: Plant fostering can be cited in your annual review as proof of living up to our brand values of loyalty, forward thinking, eco-friendly.
+Clipboard: Just write your name below and take a plant. A green worker is a happy worker!
 <<set $JenClipboard = true>>
 ===
 
@@ -80,7 +80,8 @@ Kettle: Pop the kettle on?
     You make yourself a nice cup of tea.
     <<set $brews = $brews +1>>
     <<else >>
-    Automated Announcement: YOU ARE CONSUMING TOO MUCH TEA. PLEASE REFRAIN FROM BANKRUPTING US.
+    You spot a post-it note among the teabags.
+    Post-it note: BEWARE: Team tea consumption of over £1.40 per person per day will result in the office kitchen budget revoked.
     <<endif>>
 -> No
     Maybe you'll want one later.
@@ -101,6 +102,10 @@ title: Fountain
 tags:
 ---
 Water. Simple, healthy, clean. Want to stop and fill your bottle?
+-> Please
+    You stand around for a few long seconds, forcing everyone in the office to listen to the glug of your bottle filling.
+-> No thanks
+    The water cooler doesn't care. It's been there since long before you joined the office, and will be there long after.
 ===
 
 
@@ -119,7 +124,7 @@ tags:
 The drawer glides open with the well-oiled precision of a jet rolling down a runway. Inside is row after row of neat, tidy manilla folders, swaying seductively at you from the motion.
 "Pick me" whispers a folder titled "Plans to remove asbestos in office". "No, pick me", whispers another titled "Legal battle against the people of the Western Sahara"
 You resist their siren song, running your thumb along the documents until you find the ones relevant to Project Lagoon Breeze.
-add stuff after this
+
 ===
 
 
