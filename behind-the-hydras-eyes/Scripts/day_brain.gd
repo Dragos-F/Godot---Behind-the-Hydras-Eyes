@@ -42,11 +42,11 @@ func enter_screen():
 
 func enter_boss():
 	dave.move_time = false
-	fader.FadeUp("")
+	fader.FadeUp("P. Moore's Office")
 	await fader.fade_finished
 	print ("past await")
 	BossScreen.visible = true
-	fader.FadeDown("")
+	fader.FadeDown("P. Moore's Office")
 	await fader.fade_finished
 	run_dialogue("Boss")
 	await dialog.onDialogueComplete
@@ -55,11 +55,11 @@ func enter_boss():
 
 func leave_boss():
 	dave.move_time = false
-	fader.FadeUp("")
+	fader.FadeUp("The Main Office")
 	await fader.fade_finished
 	print ("past await")
 	BossScreen.visible = false
-	fader.FadeDown("")
+	fader.FadeDown("The Main Office")
 	dave.move_time = true
 	await fader.fade_finished
 
