@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_4qd7i"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_r33wl"]
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="9_cxcjv"]
-[ext_resource type="Resource" uid="uid://bpkdpsemwkxdd" path="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarnproject" id="10_gtf6l"]
+[ext_resource type="Resource" uid="uid://diwfgm37q1pil" path="res://Dialogue stuffs/NEW/Day2/Day2Dialogue.yarnproject" id="10_p8761"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_8jm43"]
 
 [node name="Main" type="Node2D"]
@@ -103,7 +103,7 @@ collision_layer = 3
 
 [node name="DialogueRunner" parent="YarnSpinnerCanvasLayer" index="0"]
 rotation = 0.00120258
-yarnProject = ExtResource("10_gtf6l")
+yarnProject = ExtResource("10_p8761")
 autoStart = true
 startNode = "Start"
 
