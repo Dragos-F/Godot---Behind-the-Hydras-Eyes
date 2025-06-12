@@ -89,7 +89,7 @@ tags:
 <<declare $choice to "">>
 <<declare $bossUpset to 0>>
 
-<<set $choice = get_location()>>
+// <<set $choice = get_location()>>
 
 Boss: Congratulations! it's brilliant work we're doing, I hope you realise that. You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
 Boss: And another congratulations for leading the crew for over a month now. As captain of the whole vessel, I thought I'd check in on my first mate's progress. So, Alex tells me that you picked a location pretty sharpish. Where did you settle on?
@@ -103,28 +103,28 @@ Boss: And another congratulations for leading the crew for over a month now. As 
 -> San Pedro Hullotepec
     <<set $location to "San Pedro Hullotepec">>
 
-<<if ($location == $choice)>>
+// <<if ($location == $choice)>>
 
-    <<if $location =="San Dionisio">>
-        Boss: Across the strait? I know the area well, great choice. I've spent more than one happy summer moored not far along the coast. The water is crystal.
-        <<jump BossMultiple>>
-    <<endif>>
-     
-    <<if $location =="Xabizende">>
-        Boss: The old town? What a lovely place to pull out of the past and into a green future. I've already been of course; lot's of people in need of jobs there.
-        <<jump BossMultiple>>
-    <<endif>>
-
-    <<if $location =="San Pedro Hullotepec">>
-        Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing around there.
-        <<jump BossMultiple>>
-    <<endif>>
-<<elseif ($location != $choice)>>
-
-*Your boss rustles through some papers on his desk*
-Boss: "Ah no, maybe that would have been an acceptable choice but we setteld with another. Did I overrule you? I'm sure I made the best decision for the company.
-<<jump BossMultiple>>
+<<if $location =="San Dionisio">>
+    Boss: Across the strait? I know the area well, great choice. I've spent more than one happy summer moored not far along the coast. The water is crystal.
+    <<jump BossMultiple>>
 <<endif>>
+    
+<<if $location =="Xabizende">>
+    Boss: The old town? What a lovely place to pull out of the past and into a green future. I've already been of course; lot's of people in need of jobs there.
+    <<jump BossMultiple>>
+<<endif>>
+
+<<if $location =="San Pedro Hullotepec">>
+    Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing around there.
+    <<jump BossMultiple>>
+<<endif>>
+// <<elseif ($location != $choice)>>
+
+// *Your boss rustles through some papers on his desk*
+// Boss: "Ah no, maybe that would have been an acceptable choice but we setteld with another. Did I overrule you? I'm sure I made the best decision for the company.
+<<jump BossMultiple>>
+// <<endif>>
 ===
 
 title: BossMultiple

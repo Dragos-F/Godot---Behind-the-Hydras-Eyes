@@ -146,3 +146,86 @@ Various important notices are pinned by the boss's door; the number of the first
 Wow, knowing that ForwardGreen cares so much about you almost makes you feel better already.
 ===
 
+title:Boss
+tags:
+---
+<<declare $location to "">>
+<<declare $choice to "">>
+<<declare $bossUpset to 0>>
+
+// <<set $choice = get_location()>>
+
+Boss: Congratulations! it's brilliant work we're doing, I hope you realise that. You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
+Boss: And another congratulations for leading the crew for over a month now. As captain of the whole vessel, I thought I'd check in on my first mate's progress. So, Alex tells me that you picked a location pretty sharpish. Where did you settle on?
+
+-> San Dionisio 
+    <<set $location to "San Dionisio">>
+    
+-> Xabizende
+    <<set $location to "Xabizende">>
+    
+-> San Pedro Hullotepec
+    <<set $location to "San Pedro Hullotepec">>
+
+// <<if ($location == $choice)>>
+
+<<if $location =="San Dionisio">>
+    Boss: Across the strait? I know the area well, great choice. I've spent more than one happy summer moored not far along the coast. The water is crystal.
+    <<jump BossMultiple>>
+<<endif>>
+    
+<<if $location =="Xabizende">>
+    Boss: The old town? What a lovely place to pull out of the past and into a green future. I've already been of course; lot's of people in need of jobs there.
+    <<jump BossMultiple>>
+<<endif>>
+
+<<if $location =="San Pedro Hullotepec">>
+    Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing around there.
+    <<jump BossMultiple>>
+<<endif>>
+// <<elseif ($location != $choice)>>
+
+// *Your boss rustles through some papers on his desk*
+// Boss: "Ah no, maybe that would have been an acceptable choice but we setteld with another. Did I overrule you? I'm sure I made the best decision for the company.
+<<jump BossMultiple>>
+// <<endif>>
+===
+
+title: BossMultiple
+tags:
+---
+<<declare $email to true>>
+<<declare $protests to true>>
+<<declare $meetings to true>>
+<<declare $endDay2 to false>>
+
+*The boss looks at you, his expression suggesting that it's time for you to get up and leave*
+-> Actually, I was meaning to ask about the emails you sent me...
+    Boss: Just the grumblings of insipid opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out. 
+    <<if ($email) >>
+        <<set $bossUpset to $bossUpset+1 >>
+        <<set $email to false>>
+    <<endif>>
+    <<jump BossMultiple>>    
+-> Alex mentioned something about protests, do we need to worry about?
+    Boss: Protests? There's been some hippies at the lithium mines in Portugal, but that's not really our problem. The Mexican landowners are too paid off to protest. Don't worry about it kid. 
+    <<if ($protests) >>
+        <<set $bossUpset to $bossUpset+1 >>
+        <<set $protests to false>>
+    <<endif>>
+    <<jump BossMultiple>>  
+-> Shall we arrange more meetings for next quarter?
+    Boss: More meetings? Sure, sure, whatever. I've already put one in at the end of the quarter, so I'll see you then. Keep things ticking over.
+    <<if ($meetings) >>
+        <<set $bossUpset to $bossUpset+1 >>
+        <<set $meetings to false>>
+    <<endif>>
+    <<jump BossMultiple>>  
+-> Thank you for your time! 
+    <<if ($bossUpset<2)>>
+        Boss: No worries! We're off to a great start with the project, and I'm excited to see how you'll grow with us at Forward Green
+    <<elseif ($bossUpset>2)>>
+        Boss: Boss: It's natural to ask questions, but let me be blunt: it's not your job. Shut my door on your way out.
+    <<endif>>
+    <<set $endDay2 to true>>
+===

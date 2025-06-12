@@ -5,6 +5,7 @@ class_name DayBrain
 @onready var screen_ui: Control
 @onready var dave:Dave = %Dave
 @onready var computer_screen: Node2D = $"../ComputerScreen"
+@export var BossScreen:Node2D
 
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 
@@ -17,6 +18,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _on_shut_down_pressed() -> void:
 	fader.FadeUp("")
 	await fader.fade_finished
@@ -24,8 +26,9 @@ func _on_shut_down_pressed() -> void:
 	screen_ui.visible = false
 	computer_screen.visible = false
 	fader.FadeDown("")
-	await fader.fade_finished
 	dave.move_time = true
+	await fader.fade_finished
+	
 	
 func enter_screen():
 	dave.move_time = false
@@ -36,6 +39,30 @@ func enter_screen():
 	computer_screen.visible = true
 	fader.FadeDown("")
 	await fader.fade_finished
+
+func enter_boss():
+	dave.move_time = false
+	fader.FadeUp("")
+	await fader.fade_finished
+	print ("past await")
+	BossScreen.visible = true
+	fader.FadeDown("")
+	await fader.fade_finished
+	run_dialogue("Boss")
+	await dialog.onDialogueComplete
+	print ("AWAIT COMPLETE, LEAVING BOSS")
+	leave_boss()
+
+func leave_boss():
+	dave.move_time = false
+	fader.FadeUp("")
+	await fader.fade_finished
+	print ("past await")
+	BossScreen.visible = false
+	fader.FadeDown("")
+	dave.move_time = true
+	await fader.fade_finished
+
 
 func _on_desk_interactable_interacted() -> void:
 	enter_screen()

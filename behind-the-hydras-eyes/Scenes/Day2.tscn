@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=14 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bv42g323prh5f" path="res://addons/YarnSpinner-Godot/Scenes/DefaultDialogueSystem.tscn" id="9_cxcjv"]
 [ext_resource type="Resource" uid="uid://diwfgm37q1pil" path="res://Dialogue stuffs/NEW/Day2/Day2Dialogue.yarnproject" id="10_p8761"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_8jm43"]
+[ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
+[ext_resource type="Script" uid="uid://b1o5xpu22evvx" path="res://addons/YarnSpinner-Godot/Runtime/InMemoryVariableStorage.cs" id="13_j0ssp"]
 
 [node name="Main" type="Node2D"]
 
@@ -25,6 +27,11 @@ self_modulate = Color(0, 0, 0, 1)
 
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
+
+[node name="InteractableElement" parent="Background/Furniture/OfficeDoor boss" index="0"]
+Type = 3
+readyToLeave = true
+YarnNodeLink = "Boss"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
 YarnNodeLink = "Cabinet"
@@ -44,9 +51,10 @@ YarnNodeLink = "CoffeeMachine"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("dialog")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("dialog", "BossScreen")]
 script = ExtResource("3_j0ssp")
 dialog = NodePath("../YarnSpinnerCanvasLayer/DialogueRunner")
+BossScreen = NodePath("../BossScreen")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -127,11 +135,17 @@ offset_top = -5.0
 offset_right = 675.0
 offset_bottom = 540.0
 
+[node name="ColorRect" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl/LineText" index="1"]
+color = Color(0, 0, 0, 1)
+
 [node name="CharacterNameText" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl" index="1"]
 offset_left = -572.0
 offset_top = -68.0
 offset_right = 314.0
 offset_bottom = -15.0
+
+[node name="ColorRect" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl/CharacterNameText" index="1"]
+color = Color(0, 0, 0, 1)
 
 [node name="ContinueButton" parent="YarnSpinnerCanvasLayer/LinePresenter/PresenterControl" index="2"]
 offset_left = 372.0
@@ -144,12 +158,23 @@ texture_filter = 1
 
 [node name="VBoxContainer" parent="YarnSpinnerCanvasLayer/OptionsPresenter/PresenterControl" index="0"]
 offset_left = -571.0
-offset_top = 428.0
+offset_top = 305.0
 offset_right = 601.0
-offset_bottom = 539.0
+offset_bottom = 416.0
 
 [node name="Specifics1" type="Node" parent="."]
 script = ExtResource("11_8jm43")
+
+[node name="BossScreen" type="Node2D" parent="."]
+visible = false
+z_index = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+texture = ExtResource("12_lh2wi")
+
+[node name="InMemoryVariableStorage" type="Node" parent="."]
+script = ExtResource("13_j0ssp")
+metadata/_custom_type_script = "uid://b1o5xpu22evvx"
 
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]

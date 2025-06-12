@@ -42,7 +42,11 @@ func _process(delta: float) -> void:
 				if (readyToLeave):
 					day_brain.end_day(textToDisplay)
 			InteractType.BossDoor:
-				pass
+				if (!readyToLeave):
+					day_brain.run_dialogue("PreBossDoor")
+				else:
+					day_brain.enter_boss()
+					readyToLeave = false;
 		
 		once = false
 
