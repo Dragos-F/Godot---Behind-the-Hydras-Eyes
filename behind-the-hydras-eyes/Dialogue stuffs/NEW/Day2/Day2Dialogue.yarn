@@ -3,9 +3,10 @@ tags:
 ---
 
 Phone: Bzzt! Bzzt! DAY 2
-Text From Boss: Hey Dave, sorry for the text, things are a bit hectic on my end so I can't greet you in person.
-Text From Boss: Welcome though! I've had a desk set up for you near the door. At the minute your team is quite small, so it won't take you long to introduce yourself.
-Text From Boss: I've put a meeting in your calender with me at the end of the month. Catch you later!
+Text From Boss: Hey, hope your first week is going well and you're beating good work out of that team of yours.
+Text From Boss: I kid, of course; HR says I shouldn't say things like that, can't joke about anything anymore.
+Text From Boss: Some old timers like me still like to say it how it is, though. 
+Text From Boss: Anyway, the conference to finalise the location is today. See you there.  
 
 ===
 
@@ -16,48 +17,65 @@ tags:
 <<declare $Alexsecond = false>>
 <<declare $Alexreturn = false>>
 <<if $Alexfirst>>
-Alex:...
+Alex: Hey boss. Hope you're not too overwhelmed yet, I'm sure you're worried about the meeting.
+Alex: If there's anything I can help with let me know. If you're not up to speed with the final choices, there's some files in the cabinet.
 <<set $Alexfirst = false>>
 <<set $Alexsecond = true>>
 <<elseif $Alexsecond>>
-Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help?
-Alex: Project lead, you say? Nice to meet you boss! I'm Alex, I do all the odd bits. Where’ve you joined us from?
-->I'm fresh outta uni!
-    Alex: New blood, eh? Well, I can't say anyone else on the team is much older.
--> I'm an ex-teacher!
-    Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
--> Little England Petroleum
-    Alex: Ah, one of our sponsors. You know how things work then.
-Alex: Well, we're happy to have you anyway. I'm just gonna finish this and then I can show you the project, so have a look around, grab a cup of tea or something, and then come back.
+Alex: ...I swear to God I'll kill whoever designed this—oh, hey. How can I help?
+-> Where are those files again?
+    Alex: They're in the cabinet; there's three locations shortlisted, and the file for each has location from independent assessors.
+-> Any advice for me?
+    Alex: Don't annoy anyone? Nah, you'll be fine. Mr Moore isn't bothered about which location you pick.
+    Alex: As long as everything goes smoothly and quickly, he'll be happy with any choice you make.
+    Alex: I heard there's a few medium-wigs in attendence; John from Legal, Mark from HR, Jen-and real bigwig Mr Moore. 
+    Dave: Are you not going to be there?
+-> Are you not going to be at the meeting?
+    Alex: God no. I turned down the invite. All the shortlist options are fine, and I don't wanna waste time debating them.
+    Dave: Oh, you think there'll be debate.
+    Alex: I think that John's an ass, Jen's indecisive, and our overlord won't pay attention.
+    You chuckle, unsure of how serious Alex was being. 
 <<set $Alexsecond to false>>
 <<set $Alexreturn to true>>
 <<elseif $Alexreturn>>
-Alex: <mumbling> Damned budgets...
+Alex: Still nervous about the meeting?
+-> Where are those files again?
+    Alex: They're in the cabinet; there's three locations shortlisted, and the file for each has location from independent assessors.
+-> Any advice for me?
+    Alex: Don't annoy anyone? Nah, you'll be fine. Mr Moore isn't bothered about which location you pick.
+    Alex: As long as everything goes smoothly and quickly, he'll be happy with any choice you make.
+    Alex: I heard there's a few medium-wigs in attendence; John from Legal, Mark from HR, Jen-and real bigwig Mr Moore. 
+    Dave: Are you not going to be there?
+-> Are you not going to be at the meeting?
+    Alex: God no. I turned down the invite. All the shortlist options are fine, and I don't wanna waste time debating them.
+    Dave: Oh, you think there'll be debate.
+    Alex: I think that John's an ass, Jen's indecisive, and our overlord won't pay attention.
+    You chuckle, unsure of how serious Alex was being. 
 <<endif>>
 ===
 
 title:Jen
 tags:
 ---
-<<declare $JenFirst = true>>
-<<declare $JenReturn = false>>
-<<declare $JenClipboard = false>>
+<<declare $Jenfirst = true >>
+<<declare $Jensecond = false>>
+<<declare $Jenreturn = false>>
+<<if $Alexfirst>>
+Jen: Dave! Hope you're enjoying yourself. Nice day today isn't it.
+Jen: Hey, did you see that new episode of "Attention Seekers"?
+Dave: Attention seekers?
+Jen: Oh my god, have you not heard of it? It's a new dating show just for marketing officers.
+Dave: ...right. 
 
-<<if $JenFirst>>
+<<set $Jenfirst = false>>
+<<set $Jensecond = true>>
 
-Jen:Oh hey! You're Dave right?
-Jen: Pleasure to meet you, I'm Jen, your lovely marketing officer. If you need any posters, pamphlets, promo images or—hmm, is there a p-word for merch?—I'm your girl!
-Jen: I think Alex has the project files when you're ready.
-Jen: Ooh, have you seen our green office project? Not to brag but I'm the reigning plant queen here.
+Jen: Sometimes it's just nice to see yourself represented on TV, y'know?
 
-<<set $JenFirst = false>>
-<<set $JenReturn = true>>
-
-<<elseif $JenClipboard>>
-Jen: Glad to see you're getting stuck in! Not that you can be a better parent than me of course, but it's good to know I'm inspiring people!
-
-<<elseif $JenReturn>>
-Jen: Ooh, have you seen our green office project? Not to brag but I'm the reigning plant queen here.
+<<set $Alexsecond to false>>
+<<set $Alexreturn to true>>
+<<elseif $Alexreturn>>
+Jen: Huh, the meeting? Oh, I was just going to wing it.
 <<endif>>
 ===
 
@@ -84,7 +102,7 @@ Kettle: Pop the kettle on?
     Post-it note: BEWARE: Team tea consumption of over £1.40 per person per day will result in the office kitchen budget revoked.
     <<endif>>
 -> No
-    Maybe you'll want one later.
+    Maybe you'll want one later...who are you kidding, you want one now. Still, you resist.
 ===
 
 
@@ -102,9 +120,9 @@ title: Fountain
 tags:
 ---
 Water. Simple, healthy, clean. Want to stop and fill your bottle?
--> Please
+-> Please.
     You stand around for a few long seconds, forcing everyone in the office to listen to the glug of your bottle filling.
--> No thanks
+-> No thanks.
     The water cooler doesn't care. It's been there since long before you joined the office, and will be there long after.
 ===
 
