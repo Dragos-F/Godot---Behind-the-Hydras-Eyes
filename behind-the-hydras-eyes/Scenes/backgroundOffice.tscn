@@ -278,6 +278,7 @@ polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5
 [node name="JenInteractable" parent="Furniture/Jen1" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("19_pjjbx")
 selected = ExtResource("20_3frnb")
+YarnNodeLink = "Jen"
 
 [node name="CollisionShape2D" parent="Furniture/Jen1/JenInteractable/Area2D" index="0"]
 shape = SubResource("CircleShape2D_r70fk")
@@ -342,6 +343,7 @@ texture = ExtResource("26_xk4hj")
 [node name="AlexInteractable" parent="Furniture/Alex" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("26_xk4hj")
 selected = ExtResource("27_vyjpg")
+YarnNodeLink = "Alex"
 
 [node name="CollisionShape2D" parent="Furniture/Alex/AlexInteractable/Area2D" index="0"]
 position = Vector2(-14.5, 31)
