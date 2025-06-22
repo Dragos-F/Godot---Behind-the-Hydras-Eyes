@@ -21,19 +21,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Alex": "res://Dialogue stuffs/Dialogic/Characters/Alex.dch",
-"Boss": "res://Dialogue stuffs/Dialogic/Characters/Boss.dch",
-"Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Clipboard.dch",
-"CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/CoffeeMachine.dch",
-"Jen": "res://Dialogue stuffs/Dialogic/Characters/Jen.dch",
-"Kettle": "res://Dialogue stuffs/Dialogic/Characters/Kettle.dch",
-"Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Text from Boss.dch",
-"WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/WaterCooler.dch"
-}
-directories/dtl_directory={
-"Alex": "res://Dialogue stuffs/Dialogic/Day1/Alex.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={
 "": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres",
 "Bubble Style Test": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
