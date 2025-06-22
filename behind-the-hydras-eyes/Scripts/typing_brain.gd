@@ -9,7 +9,7 @@ extends Node
 @export var charToAdd:float = 5
 @export var checker: InputEventKey
 @export var ignoredInputs:Array[String]
-@onready var dialog: DialogueRunner = $"../YarnSpinnerCanvasLayer/DialogueRunner"
+
 
 
 signal typing_finished #custom signal that the screen-UI-BRAIN thing listens for

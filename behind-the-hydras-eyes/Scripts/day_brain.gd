@@ -1,7 +1,6 @@
 extends Node
 class_name DayBrain
 @onready var fader: Fader = $"../Fader"
-@export var dialog: DialogueRunner
 @onready var screen_ui: Control
 @onready var dave:Dave = %Dave
 @onready var computer_screen: Node2D = $"../ComputerScreen"
@@ -12,7 +11,7 @@ signal endOfDay() # emitted by the dayBrain to let the specifics know when to en
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -49,7 +48,7 @@ func enter_boss():
 	fader.FadeDown("P. Moore's Office")
 	await fader.fade_finished
 	run_dialogue("Boss")
-	await dialog.onDialogueComplete
+	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING BOSS")
 	leave_boss()
 
@@ -70,7 +69,7 @@ func _on_desk_interactable_interacted() -> void:
 	
 	
 func run_dialogue(nodeTitle:String):
-	dialog.StartDialogue(nodeTitle)
+	Dialogic.start(nodeTitle)
 	print ("brain told runner to start it")
 
 func end_day(nextLocation:String):

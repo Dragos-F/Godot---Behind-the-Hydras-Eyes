@@ -8,8 +8,8 @@ class_name Interactable
 @export var once2:bool = true
 @export var sizeMult:float = 2
 @onready var day_brain:DayBrain
-enum InteractType {Yarn, Desk, EntryDoor, BossDoor}
-@export var Type = InteractType.Yarn
+enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
+@export var Type = InteractType.Dialogue
 @export var readyToLeave:bool = false
 @export var textToDisplay:String
 
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 		print(parentSprite.name+" interacted")
 		interacted.emit()
 		match Type:
-			InteractType.Yarn:
+			InteractType.Dialogue:
 				day_brain.run_dialogue(YarnNodeLink)
 				print("Asked Brain to start dialogue "+YarnNodeLink)
 			InteractType.Desk:
