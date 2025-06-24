@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=6 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://c36i4fsbnquln" path="res://Visual Assets/New Assets/Bedroom/Bedroom Mockup.png" id="2_gru6s"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="3_gru6s"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_gru6s"]
+points = PackedVector2Array(-120.509, 32.857, 348.76, -213.388, 494.773, -148.626)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7bxbb"]
 
 [node name="Bedroom" type="Node2D"]
 
@@ -17,3 +23,56 @@ texture = ExtResource("2_gru6s")
 
 [node name="Furniture" type="Node2D" parent="."]
 z_index = 2
+
+[node name="Dave" parent="." instance=ExtResource("3_gru6s")]
+position = Vector2(-100, 85)
+
+[node name="Wall Barriers" type="Node2D" parent="."]
+
+[node name="Bottom" type="StaticBody2D" parent="Wall Barriers"]
+position = Vector2(-51, 621)
+rotation = 0.0153778
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Bottom"]
+position = Vector2(213.761, -212.312)
+shape = SubResource("ConvexPolygonShape2D_gru6s")
+
+[node name="TopRight" type="StaticBody2D" parent="Wall Barriers"]
+modulate = Color(1, 0.0627451, 1, 1)
+position = Vector2(202, -138)
+rotation = 3.61935
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopRight"]
+shape = SubResource("WorldBoundaryShape2D_7bxbb")
+
+[node name="TopLeft" type="StaticBody2D" parent="Wall Barriers"]
+modulate = Color(1, 0.0627451, 1, 1)
+position = Vector2(-128, -131)
+rotation = 2.68177
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopLeft"]
+shape = SubResource("WorldBoundaryShape2D_7bxbb")
+
+[node name="BottomLeft" type="StaticBody2D" parent="Wall Barriers"]
+modulate = Color(1, 0.0627451, 1, 1)
+position = Vector2(-264, 275)
+rotation = 0.466819
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomLeft"]
+shape = SubResource("WorldBoundaryShape2D_7bxbb")
+
+[node name="BottomRight" type="StaticBody2D" parent="Wall Barriers"]
+modulate = Color(1, 0.0627451, 1, 1)
+position = Vector2(732, 224)
+rotation = -0.468701
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomRight"]
+shape = SubResource("WorldBoundaryShape2D_7bxbb")
+
+[node name="Top" type="StaticBody2D" parent="Wall Barriers"]
+modulate = Color(1, 0.0627451, 1, 1)
+position = Vector2(38, -165)
+rotation = -3.13625
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Top"]
+shape = SubResource("WorldBoundaryShape2D_7bxbb")
