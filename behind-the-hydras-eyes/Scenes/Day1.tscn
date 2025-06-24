@@ -41,6 +41,9 @@ YarnNodeLink = "Posters"
 [node name="Jen1" parent="Background/Furniture" index="12"]
 z_index = -1
 
+[node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
+position = Vector2(3.5, -34)
+
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
 
@@ -53,10 +56,17 @@ YarnNodeLink = "CoffeeMachine"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="."]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("Camera")]
 script = ExtResource("3_rakbq")
+Camera = NodePath("../Camera2D")
+camera_zoom = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true

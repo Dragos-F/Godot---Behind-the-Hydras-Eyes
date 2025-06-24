@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3s10rc1b4j32"]
+
+[ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
+[ext_resource type="Texture2D" uid="uid://c36i4fsbnquln" path="res://Visual Assets/New Assets/Bedroom/Bedroom Mockup.png" id="2_gru6s"]
+
+[node name="Bedroom" type="Node2D"]
+
+[node name="BedroomBackground" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_6o44b")
+
+[node name="BedroomMockup" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
+position = Vector2(-3, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_gru6s")
+
+[node name="Furniture" type="Node2D" parent="."]
+z_index = 2

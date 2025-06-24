@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb081w6opd0ni"
-path="res://.godot/imported/Dave walking spritesheet.png-c76570b5b47a936fa0dcb319748bdae7.ctex"
+uid="uid://dxtv0ut8eccpl"
+path="res://.godot/imported/Dave Spritely-export.png-f3a7076e811a8a7b7b91d0f69cd952e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogue stuffs/NEW/Dave walking spritesheet.png"
-dest_files=["res://.godot/imported/Dave walking spritesheet.png-c76570b5b47a936fa0dcb319748bdae7.ctex"]
+source_file="res://Visual Assets/Dave Spritely-export.png"
+dest_files=["res://.godot/imported/Dave Spritely-export.png-f3a7076e811a8a7b7b91d0f69cd952e9.ctex"]
 
 [params]
 

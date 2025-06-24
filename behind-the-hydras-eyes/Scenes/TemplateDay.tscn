@@ -23,6 +23,7 @@ position = Vector2(48.5, 33.5)
 
 [node name="DayBrain" type="Node" parent="."]
 script = ExtResource("2_mchty")
+camera_zoom = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

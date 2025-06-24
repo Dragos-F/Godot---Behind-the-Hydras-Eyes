@@ -12,8 +12,7 @@ enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
 @export var Type = InteractType.Dialogue
 @export var readyToLeave:bool = false
 @export var textToDisplay:String
-
-
+@export var DialogueMarker:Node2D
 @export var YarnNodeLink:String
 
 
@@ -34,7 +33,7 @@ func _process(delta: float) -> void:
 		interacted.emit()
 		match Type:
 			InteractType.Dialogue:
-				day_brain.run_dialogue(YarnNodeLink)
+				day_brain.run_dialogue(YarnNodeLink,DialogueMarker)
 				print("Asked Brain to start dialogue "+YarnNodeLink)
 			InteractType.Desk:
 				pass
@@ -43,7 +42,7 @@ func _process(delta: float) -> void:
 					day_brain.end_day(textToDisplay)
 			InteractType.BossDoor:
 				if (!readyToLeave):
-					day_brain.run_dialogue("PreBossDoor")
+					day_brain.run_dialogue("PreBossDoor",DialogueMarker)
 				else:
 					day_brain.enter_boss()
 					readyToLeave = false;

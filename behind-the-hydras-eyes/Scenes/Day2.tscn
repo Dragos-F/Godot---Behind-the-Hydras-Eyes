@@ -48,9 +48,10 @@ YarnNodeLink = "CoffeeMachine"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
+BossDialogue = NodePath("../BossScreen/Dialogue Target")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -107,11 +108,13 @@ collision_layer = 3
 script = ExtResource("11_8jm43")
 
 [node name="BossScreen" type="Node2D" parent="."]
-visible = false
 z_index = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
 texture = ExtResource("12_lh2wi")
+
+[node name="Dialogue Target" type="Node2D" parent="BossScreen"]
+position = Vector2(422, -209)
 
 [node name="InMemoryVariableStorage" type="Node" parent="."]
 metadata/_custom_type_script = "uid://b1o5xpu22evvx"

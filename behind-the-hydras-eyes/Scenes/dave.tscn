@@ -1,21 +1,46 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4our54yywg7p"]
+[gd_scene load_steps=13 format=3 uid="uid://b4our54yywg7p"]
 
-[ext_resource type="Texture2D" uid="uid://dgvxsqucx8mpj" path="res://Visual Assets/Old assets/Dave Spritely New (1).png" id="1_4tgaa"]
 [ext_resource type="Script" uid="uid://d4hf38fdvvsxg" path="res://Scripts/dave.gd" id="1_g6loe"]
-[ext_resource type="Texture2D" uid="uid://dn3hycsg07oyi" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 2.png" id="2_ihju5"]
-[ext_resource type="Texture2D" uid="uid://6updxo8bspil" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 1.png" id="3_g6loe"]
-[ext_resource type="Texture2D" uid="uid://cru4vtjckf6p5" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 3.png" id="4_rs4le"]
-[ext_resource type="Texture2D" uid="uid://ck1qomc8868w0" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 4.png" id="5_q5a5s"]
-[ext_resource type="Texture2D" uid="uid://l6leiqleds0a" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 5.png" id="6_r43a2"]
-[ext_resource type="Texture2D" uid="uid://bsqc26r6ug86m" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 6.png" id="7_s235x"]
-[ext_resource type="Texture2D" uid="uid://dhw1cdwm0w22x" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 7.png" id="8_vwvrw"]
-[ext_resource type="Texture2D" uid="uid://bk06dta5ukj6t" path="res://Visual Assets/Old assets/Walking Sprites/Dave Walking 8.png" id="9_pq8rk"]
+[ext_resource type="Texture2D" uid="uid://dxtv0ut8eccpl" path="res://Visual Assets/Dave Spritely-export.png" id="2_i7wuy"]
+[ext_resource type="Texture2D" uid="uid://bb081w6opd0ni" path="res://Visual Assets/Dave walking spritesheet.png" id="3_mo885"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7wuy"]
+atlas = ExtResource("3_mo885")
+region = Rect2(0, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo885"]
+atlas = ExtResource("3_mo885")
+region = Rect2(96, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bhxe"]
+atlas = ExtResource("3_mo885")
+region = Rect2(192, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbpsy"]
+atlas = ExtResource("3_mo885")
+region = Rect2(288, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj2c0"]
+atlas = ExtResource("3_mo885")
+region = Rect2(384, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wldn5"]
+atlas = ExtResource("3_mo885")
+region = Rect2(480, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihju5"]
+atlas = ExtResource("3_mo885")
+region = Rect2(576, 0, 96, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6loe"]
+atlas = ExtResource("3_mo885")
+region = Rect2(672, 0, 96, 244)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vrn2m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_4tgaa")
+"texture": ExtResource("2_i7wuy")
 }],
 "loop": true,
 "name": &"idle",
@@ -23,32 +48,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ihju5")
+"texture": SubResource("AtlasTexture_i7wuy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_g6loe")
+"texture": SubResource("AtlasTexture_mo885")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_rs4le")
+"texture": SubResource("AtlasTexture_8bhxe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_q5a5s")
+"texture": SubResource("AtlasTexture_gbpsy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_r43a2")
+"texture": SubResource("AtlasTexture_uj2c0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_s235x")
+"texture": SubResource("AtlasTexture_wldn5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_vwvrw")
+"texture": SubResource("AtlasTexture_ihju5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_pq8rk")
+"texture": SubResource("AtlasTexture_g6loe")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 10.0
+"speed": 3.0
 }]
 
 [node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite")]
@@ -58,8 +83,8 @@ ownSprite = NodePath("AnimatedSprite2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vrn2m")
-animation = &"idle"
+animation = &"walk"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 101)
+position = Vector2(-1, 114)
 polygon = PackedVector2Array(-17, 17, -17, 3, 15, 5, 23, 9, 23, 17)
