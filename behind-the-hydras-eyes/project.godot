@@ -26,8 +26,10 @@ directories/dch_directory={
 "Boss": "res://Dialogue stuffs/Dialogic/Characters/Boss.dch",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Clipboard.dch",
 "CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/CoffeeMachine.dch",
+"Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Corkboard.dch",
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Kettle.dch",
+"Posters": "res://Dialogue stuffs/Dialogic/Characters/Posters.dch",
 "Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Text from Boss.dch",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/WaterCooler.dch"
 }

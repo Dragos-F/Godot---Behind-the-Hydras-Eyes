@@ -85,6 +85,22 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Alex.dch",target)
 	if (nodeTitle == "Jen"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Jen.dch",target)
+	if (nodeTitle == "Boss"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Boss.dch",target)
+	if (nodeTitle == "Clipboard"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Clipboard.dch",target)
+	if (nodeTitle == "CoffeeMachine"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/CoffeeMachine.dch",target)
+	if (nodeTitle ==  "Kettle"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Kettle.dch",target)
+	if (nodeTitle == "Text"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Text from Boss.dch",target)
+	if (nodeTitle == "WaterCooler"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/WaterCooler.dch",target)
+	if (nodeTitle == "Corkboard"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Corkboard.dch",target)
+	if (nodeTitle == "Posters"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Posters.dch",target)
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()
