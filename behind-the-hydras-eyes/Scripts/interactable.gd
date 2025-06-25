@@ -1,6 +1,6 @@
 extends Node2D
 class_name Interactable
-@export var parentSprite:Sprite2D
+@export var parentSprite:Node2D
 @export var regular:CompressedTexture2D
 @export var selected:CompressedTexture2D
 @export var near:bool
@@ -23,7 +23,8 @@ signal interacted
 
 func _ready() -> void:
 	parentSprite = self.get_parent()
-	day_brain = get_tree().current_scene.get_node("DayBrain")
+	if get_tree().current_scene.get_node("DayBrain") != null:
+		day_brain = get_tree().current_scene.get_node("DayBrain")
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,14 +53,23 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	near = true
 	once = true
-	parentSprite.texture = selected
+	if parentSprite is Sprite2D:
+		parentSprite.texture = selected
+	elif parentSprite is AnimatedSprite2D:
+		print (parentSprite)
+		parentSprite.play("selected")
+		print("played selected")
 	parentSprite.scale = 1.05*Vector2.ONE*sizeMult
 	
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	near = false
-	parentSprite.texture = regular
+	if parentSprite is Sprite2D:
+		parentSprite.texture = regular
+	elif parentSprite is AnimatedSprite2D:
+		parentSprite.play("idle")
+		print ("played idle")
 	parentSprite.scale = Vector2.ONE*sizeMult
 	once2 = true
 	

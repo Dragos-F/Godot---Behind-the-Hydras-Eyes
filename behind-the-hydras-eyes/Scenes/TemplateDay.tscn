@@ -48,7 +48,6 @@ unique_name_in_owner = true
 [node name="Dave" parent="." instance=ExtResource("5_5usxc")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
-collision_layer = 3
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 

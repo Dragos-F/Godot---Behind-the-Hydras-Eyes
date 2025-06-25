@@ -7,7 +7,16 @@ class_name Dave
 const JUMP_VELOCITY = -400.0
 @export var ownSprite : AnimatedSprite2D
 
-
+func _ready() -> void:
+	Dialogic.timeline_started.connect(_stopDave)
+	Dialogic.timeline_ended.connect(_restartDave)
+	self.z_index = 0
+	
+func _stopDave():
+	move_time = false
+func _restartDave():
+	move_time = true
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

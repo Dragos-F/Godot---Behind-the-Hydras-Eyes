@@ -73,10 +73,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 3.0
+"speed": 10.0
 }]
 
 [node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite")]
+collision_layer = 3
 script = ExtResource("1_g6loe")
 ownSprite = NodePath("AnimatedSprite2D")
 

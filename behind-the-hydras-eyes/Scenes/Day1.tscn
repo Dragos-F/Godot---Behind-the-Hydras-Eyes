@@ -115,7 +115,6 @@ texture_filter = 1
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
-collision_layer = 3
 
 [node name="Specifics1" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif")]
 script = ExtResource("11_l3qly")
