@@ -15,10 +15,6 @@
 
 [node name="Fader" parent="." instance=ExtResource("1_p8761")]
 scale = Vector2(2, 2)
-duration = 1.0
-
-[node name="Sprite2D" parent="Fader" index="0"]
-self_modulate = Color(0, 0, 0, 1)
 
 [node name="Background" parent="." instance=ExtResource("2_lh2wi")]
 
@@ -107,6 +103,7 @@ position = Vector2(-590, 314)
 script = ExtResource("11_8jm43")
 
 [node name="BossScreen" type="Node2D" parent="."]
+visible = false
 z_index = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="BossScreen"]

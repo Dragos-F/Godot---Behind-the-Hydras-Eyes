@@ -15,10 +15,6 @@
 
 [node name="Fader" parent="." instance=ExtResource("1_fkw1m")]
 scale = Vector2(2, 2)
-duration = 1.0
-
-[node name="Sprite2D" parent="Fader" index="0"]
-self_modulate = Color(0, 0, 0, 1)
 
 [node name="Label" parent="Fader" index="1"]
 z_index = 10
@@ -30,6 +26,7 @@ YarnNodeLink = "Corkboard"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 Type = 2
+readyToLeave = true
 textToDisplay = "Next Day"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]

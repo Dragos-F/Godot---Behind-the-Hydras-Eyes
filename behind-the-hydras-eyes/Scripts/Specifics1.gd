@@ -7,6 +7,10 @@ extends Node
 @export var outsideDoor:Interactable
 @export var DoorNotif:AnimatedSprite2D
 
+
+func _ready() -> void:
+	pass
+	
 func _process(delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota):
 		outsideDoor.readyToLeave = true

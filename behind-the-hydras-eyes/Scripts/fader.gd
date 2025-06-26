@@ -1,13 +1,17 @@
-class_name Fader extends Node2D
+extends Node2D
 
-@onready var blinder: Sprite2D = $Sprite2D
-@onready var text: Label = $Label
-@export var duration:float
+@onready var blinder: Sprite2D
+@onready var text: Label
+@onready var duration:float = 0.5
 @onready var once:bool = true
 @onready var tween:Tween
 signal fade_finished
-
-
+func _ready() -> void:
+	var scene = load("res://Scenes/fader.tscn")
+	var instance = scene.instantiate()
+	add_child(instance)
+	blinder = $BlackOut/Sprite2D
+	text = $BlackOut/Label
 
 
 func FadeUp(target:String): #function that fades up the black screen

@@ -1,6 +1,6 @@
 extends Node
 class_name DayBrain
-@onready var fader: Fader = $"../Fader"
+
 @onready var screen_ui: Control
 @onready var dave:Dave = %Dave
 @onready var computer_screen: Node2D = $"../ComputerScreen"
@@ -24,34 +24,34 @@ func _process(delta: float) -> void:
 
 
 func _on_shut_down_pressed() -> void:
-	fader.FadeUp("")
-	await fader.fade_finished
+	Fader.FadeUp("")
+	await Fader.fade_finished
 	print ("past await")
 	screen_ui.visible = false
 	computer_screen.visible = false
-	fader.FadeDown("")
+	Fader.FadeDown("")
 	dave.move_time = true
-	await fader.fade_finished
+	await Fader.fade_finished
 	
 	
 func enter_screen():
 	dave.move_time = false
-	fader.FadeUp("")
-	await fader.fade_finished
+	Fader.FadeUp("")
+	await Fader.fade_finished
 	print ("past await")
 	screen_ui.visible = true
 	computer_screen.visible = true
-	fader.FadeDown("")
-	await fader.fade_finished
+	Fader.FadeDown("")
+	await Fader.fade_finished
 
 func enter_boss():
 	dave.move_time = false
-	fader.FadeUp("P. Moore's Office")
-	await fader.fade_finished
+	Fader.FadeUp("P. Moore's Office")
+	await Fader.fade_finished
 	print ("past await")
 	BossScreen.visible = true
-	fader.FadeDown("P. Moore's Office")
-	await fader.fade_finished
+	Fader.FadeDown("P. Moore's Office")
+	await Fader.fade_finished
 	run_dialogue("Boss", BossDialogue)
 	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING BOSS")
@@ -59,13 +59,13 @@ func enter_boss():
 
 func leave_boss():
 	dave.move_time = false
-	fader.FadeUp("The Main Office")
-	await fader.fade_finished
+	Fader.FadeUp("The Main Office")
+	await Fader.fade_finished
 	print ("past await")
 	BossScreen.visible = false
-	fader.FadeDown("The Main Office")
+	Fader.FadeDown("The Main Office")
 	dave.move_time = true
-	await fader.fade_finished
+	await Fader.fade_finished
 
 
 func _on_desk_interactable_interacted() -> void:
@@ -84,23 +84,23 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 	if (nodeTitle == "Alex"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Alex.dch",target)
 	if (nodeTitle == "Jen"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Jen.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Boss"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Boss.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Clipboard"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Clipboard.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",target)
 	if (nodeTitle == "CoffeeMachine"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/CoffeeMachine.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",target)
 	if (nodeTitle ==  "Kettle"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Kettle.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",target)
 	if (nodeTitle == "Text"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Text from Boss.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",target)
 	if (nodeTitle == "WaterCooler"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/WaterCooler.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch",target)
 	if (nodeTitle == "Corkboard"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Corkboard.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Posters.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",target)
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()
@@ -112,6 +112,7 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 	print ("brain told runner to start it")
 
 func end_day(nextLocation:String):
-	fader.FadeUp(nextLocation)
-	await fader.fade_finished
+	Fader.FadeUp(nextLocation)
+	await Fader.fade_finished
+	Fader.FadeDown(nextLocation)
 	get_tree().change_scene_to_file("res://Scenes/Day2.tscn")

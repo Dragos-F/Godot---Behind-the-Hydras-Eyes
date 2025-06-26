@@ -24,6 +24,7 @@ scene = ExtResource("4_xuhw3")
 overrides = {
 "choices_layout_force_lines": "true",
 "choices_text_size": "24.0",
+"name_label_font_size": "18.0",
 "text_size": "24.0"
 }
 

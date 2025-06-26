@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+PermanentGlobal="*res://Scripts/PermanentGlobal.gd"
+Fader="*res://Scripts/fader.gd"
 
 [dialogic]
 
@@ -26,24 +28,25 @@ directories/dch_directory={
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
-"Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",
-"Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
-"CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
-"Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Desk Chair.dch",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",
 "Front Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",
-"Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
-"Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
-"Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
-"Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
-"WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
+"Moz": "res://Dialogue stuffs/Dialogic/Characters/Moz.dch",
+"Office/Boss": "res://Dialogue stuffs/Dialogic/Characters/Boss.dch",
+"Office/Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
+"Office/CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
+"Office/Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",
+"Office/Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
+"Office/Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
+"Office/Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
+"Office/Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
+"Office/WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
 }
 directories/dtl_directory={
-"Alex": "res://Dialogue stuffs/Dialogic/Day1/Office/Alex.dtl",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Balcony Door.dtl",
-"BathroomDoor": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bathroom Door.dtl",
+"Bathroom Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bathroom Door.dtl",
+"Boardroom": "res://Boardroom.dtl",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bookshelf.dtl",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Day1/Office/Clipboard.dtl",
 "Coffee": "res://Dialogue stuffs/Dialogic/Day1/Office/Coffee.dtl",
@@ -53,6 +56,7 @@ directories/dtl_directory={
 "Front Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Front Door.dtl",
 "Jen": "res://Dialogue stuffs/Dialogic/Day1/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Day1/Office/Kettle.dtl",
+"Office/Alex": "res://Dialogue stuffs/Dialogic/Day1/Office/Alex.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Day1/Office/Posters.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Day1/Office/WaterCooler.dtl"
 }
