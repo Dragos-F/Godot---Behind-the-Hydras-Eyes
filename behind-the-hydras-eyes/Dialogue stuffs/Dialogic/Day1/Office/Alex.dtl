@@ -1,0 +1,45 @@
+label Day01
+Alex: ...
+Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help you?
+Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do..well, all the odd bits. Where’ve you joined us from?
+- I'm fresh outta uni!
+	Alex: New blood, eh? Well, I can't say anyone else on the team is much older.
+- I'm an ex-teacher!
+	Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
+- Little England Petroleum
+	Alex: Ah, one of our sponsors. You know how things work then.
+
+Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
+Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
+[end_timeline]
+label Day02
+Alex: Hey. Everything's chugging along, so whatever choice you helped make must've been fine.
+Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,
+Alex: and it sounds like the building contractors are happy to begin as soon as the paperworks ready—or even earlier.
+Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted, but that's fine.
+Alex: It hasn't helped that there's been protests at our supplier's mines, but we live in an unpredictable work, Dave. Still, we're on track.
+label Day 02 Info1
+- Protests at the mines?
+	Alex: Oh yeah. A few new mines have had their openings delayed because locals were unhappy about the land use.
+	Alex: Something about how destructive and polluting the mines are, and how the companies lied about the effect on ecosystems.
+	- That's bad...right?
+		Alex: Sure. Still, our turbines need all these materials, so someone's got to supply them.
+	- I feel like I detect irony...
+		Alex: That shiny new climate solutions rely on exploitative extractivism that produce huge amounts of CO2 and environmental damage?
+		Dave: Yeah, that.
+		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
+		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do SOME good.
+	jump Day 02 Info1
+- What does "or even earlier" mean?
+	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
+	Dave: And "moving quicker" means...?
+	Alex: Nothing ominous. Just beginning to fence of the areas while the purchase is being settled, in case any farmes get any wrong ideas about causing trouble.
+	- Couldn't they just climb the fence?
+		Alex: The barbed wire, watchtowers, and guards help to dissaude them of that.
+	- Sounds reasonable, yeah.
+		Alex: Reasonableness and efficiency, my two middle names.
+	jump Day 02 Info1
+- Thanks for the update.
+	Alex: No worries. And I know you've got a meeting with the big boss later, so I've shared a data tracker file with you. Any questions, just let me know.
+Dave: Stunning, thanks Alex! 
+[end_timeline]

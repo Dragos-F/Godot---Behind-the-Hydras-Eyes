@@ -1,0 +1,9 @@
+label Quarter 1
+Corkboard: Various important notices are pinned by the boss's door; the number of the first aid officer, a sheet to report accidents, details of a counselling service.
+- Inspect the accident sheet
+	Corkboard: <Empty Text Event>
+	Corkboard: <Empty Text Event>
+- Look at the counselling service.
+	Corkboard: "All employees are entitled to a single half hour counselling session peryear—that's how important mental health is to us!"
+	Dave: Wow, knowing that ForwardGreen cares so much about us makes me feel better already.
+- Leave.

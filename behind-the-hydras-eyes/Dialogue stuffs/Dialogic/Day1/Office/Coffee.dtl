@@ -1,0 +1,10 @@
+label First
+CoffeeMachine: Ah, too good for a brew are you? Some hotshot that only runs on caffeine and adrenaline?
+CoffeeMachine: Good! Come to me, let me fill that hole in your soul.
+CoffeeMachine: My beans are fairtrade, my blend smooth, and my liquid HOT. 
+You blink at the machine. Maybe you need more sleep.
+- One coffee please
+	CoffeeMachine: A click, a hiss, a trickle, a squirt. There. I know you'll like it. 
+- Uh, no thanks.
+	CoffeeMachine: Oh, can't handle the bitterness? Fine, fine. 
+[end_timeline]

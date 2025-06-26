@@ -1,0 +1,7 @@
+label Mouldy
+"Bathroom Door": You peer in. It's your bathroom. A strong smell of mould assaults you.
+- Brave the bathroom
+	"Bathroom Door": Limescale in the toilet, black mould all down one wall and over the ceiling, sink covered in grime and a rusted shower. Hold your nose.
+- Close the door
+	Dave: Best not to dwell on...that.
+[end_timeline]
