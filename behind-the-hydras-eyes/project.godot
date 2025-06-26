@@ -27,6 +27,7 @@ directories/dch_directory={
 "Alex": "res://Dialogue stuffs/Dialogic/Characters/Alex.dch",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",
+"Bed": "res://Dialogue stuffs/Dialogic/Characters/Bed.dch",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Desk Chair.dch",
@@ -46,6 +47,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Balcony Door.dtl",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bathroom Door.dtl",
+"Bed": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bed.dtl",
 "Boardroom": "res://Boardroom.dtl",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bookshelf.dtl",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Day1/Office/Clipboard.dtl",
