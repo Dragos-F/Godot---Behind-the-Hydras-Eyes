@@ -27,7 +27,7 @@ directories/dch_directory={
 "Alex": "res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",
-"Bed": "res://Dialogue stuffs/Dialogic/Characters/Bed.dch",
+"Bed": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bed.dch",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
 "Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",
 "CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
@@ -42,27 +42,10 @@ directories/dch_directory={
 "Office/Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
 "Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",
+"Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
 }
 directories/dtl_directory={
-<<<<<<< Updated upstream
-"Balcony Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Balcony Door.dtl",
-"Bathroom Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bathroom Door.dtl",
-"Bed": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bed.dtl",
-"Boardroom": "res://Boardroom.dtl",
-"Bookshelf": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bookshelf.dtl",
-"Clipboard": "res://Dialogue stuffs/Dialogic/Day1/Office/Clipboard.dtl",
-"Coffee": "res://Dialogue stuffs/Dialogic/Day1/Office/Coffee.dtl",
-"Corkboard": "res://Dialogue stuffs/Dialogic/Day1/Office/Corkboard.dtl",
-"Desk Chair": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Desk Chair.dtl",
-"Dirty Dishes": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Dirty Dishes.dtl",
-"Front Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Front Door.dtl",
-"Jen": "res://Dialogue stuffs/Dialogic/Day1/Office/Jen.dtl",
-"Kettle": "res://Dialogue stuffs/Dialogic/Day1/Office/Kettle.dtl",
-"Office/Alex": "res://Dialogue stuffs/Dialogic/Day1/Office/Alex.dtl",
-"Posters": "res://Dialogue stuffs/Dialogic/Day1/Office/Posters.dtl",
-"WaterCooler": "res://Dialogue stuffs/Dialogic/Day1/Office/WaterCooler.dtl"
-=======
 "Alex": "res://Dialogue stuffs/Dialogic/Timelines/Office/Alex.dtl",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Balcony Door.dtl",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bathroom Door.dtl",
@@ -78,7 +61,6 @@ directories/dtl_directory={
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Timelines/Office/WaterCooler.dtl"
->>>>>>> Stashed changes
 }
 layout/style_directory={
 "": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres",
