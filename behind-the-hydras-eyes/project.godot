@@ -24,27 +24,28 @@ Fader="*res://Scripts/fader.gd"
 [dialogic]
 
 directories/dch_directory={
-"Alex": "res://Dialogue stuffs/Dialogic/Characters/Alex.dch",
+"Alex": "res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",
 "Bed": "res://Dialogue stuffs/Dialogic/Characters/Bed.dch",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
+"Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",
+"CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
+"Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Desk Chair.dch",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",
 "Front Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",
-"Moz": "res://Dialogue stuffs/Dialogic/Characters/Moz.dch",
-"Office/Boss": "res://Dialogue stuffs/Dialogic/Characters/Boss.dch",
+"Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
+"Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
+"Moz": "res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",
 "Office/Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
-"Office/CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
-"Office/Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",
-"Office/Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
-"Office/Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
-"Office/Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
-"Office/Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
-"Office/WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
+"Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
+"Text From Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",
+"WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
 }
 directories/dtl_directory={
+<<<<<<< Updated upstream
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Balcony Door.dtl",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bathroom Door.dtl",
 "Bed": "res://Dialogue stuffs/Dialogic/Day1/Bedroom/Bed.dtl",
@@ -61,6 +62,23 @@ directories/dtl_directory={
 "Office/Alex": "res://Dialogue stuffs/Dialogic/Day1/Office/Alex.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Day1/Office/Posters.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Day1/Office/WaterCooler.dtl"
+=======
+"Alex": "res://Dialogue stuffs/Dialogic/Timelines/Office/Alex.dtl",
+"Balcony Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Balcony Door.dtl",
+"Bathroom Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bathroom Door.dtl",
+"Boardroom": "res://Dialogue stuffs/Dialogic/Timelines/Office/Boardroom.dtl",
+"Bookshelf": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bookshelf.dtl",
+"Clipboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Clipboard.dtl",
+"Coffee": "res://Dialogue stuffs/Dialogic/Timelines/Office/Coffee.dtl",
+"Corkboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Corkboard.dtl",
+"Desk Chair": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Desk Chair.dtl",
+"Dirty Dishes": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Dirty Dishes.dtl",
+"Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
+"Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
+"Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
+"Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
+"WaterCooler": "res://Dialogue stuffs/Dialogic/Timelines/Office/WaterCooler.dtl"
+>>>>>>> Stashed changes
 }
 layout/style_directory={
 "": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres",
