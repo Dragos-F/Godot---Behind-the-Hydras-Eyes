@@ -49,6 +49,7 @@ directories/dtl_directory={
 "Alex": "res://Dialogue stuffs/Dialogic/Timelines/Office/Alex.dtl",
 "Balcony Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Balcony Door.dtl",
 "Bathroom Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bathroom Door.dtl",
+"Bed": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bed.dtl",
 "Boardroom": "res://Dialogue stuffs/Dialogic/Timelines/Office/Boardroom.dtl",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bookshelf.dtl",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Clipboard.dtl",

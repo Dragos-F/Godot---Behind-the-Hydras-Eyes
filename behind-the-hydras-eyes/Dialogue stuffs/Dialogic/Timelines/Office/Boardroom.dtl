@@ -1,6 +1,46 @@
 Moz: Hey. Hi everyone. Pleasure to see so many excited faces, so many teams represented.
-Moz: I see some new faces, shall we do some icebreakers.
-Office/Boss: Dave here's the new project manager, Olu is head of finance; maternity cover for Janet
+Moz: I see some new faces, shall we do some icebreakers?
+Office/Boss: Dave here's the new project manager, Olu is head of finance; maternity cover for Janet. Everyone else knows each other.
 Office/Boss: There, I've saved us all half an hour of pissing about. You may proceed, Mohammed.
-[signal arg="next_slide"]
 Moz: Uh, thank you, sir. Right.
+Moz: So, you're all familiar with the aims of this project, but let me run quickly through them anyway.
+Moz: Project Lagoon Breeze is ambitious and forward looking, estimated to be able to procide energy to up to 180,000 homes!
+Moz: A project of this scale means local economies buouyed by construction work, plus vital upskilling for engineers.
+Moz: And with a projected lifespan of 25 years, the overall revenue generated—in so wind-rich a region—is huge.
+Moz: This scale will, of course, be a boon not just to us but to the communities we build in\: a fraction of our profits will go to our community benefit fund.
+He pauses slightly, as if expecting applause, then s
+- How did you calculate 180,00?
+- What do you mean by upskilling?
+- How will the community fund work?
+- Sit quiet.
+I can see there's very little running costs expected post-construction; is this properly accounting for risks such as breakdowns?
+Moz: [mockingly] "Is this properly accounting"—Yes! Everything's sorted, loosen up. We're reserving 25% for post-construction,
+Moz: which might be low for the coal plants you've worked on, but here on the COOL side of the energy sector it's normal.
+Moz: Remember the 3 C's bud\: cost-effective, clean, cool. That's what we're all about. 
+Olu glances around, but everyone seems unsurprised by Moz's tone. He shrugs and leans back.
+[signal arg="next_slide"]
+Moz: So anyway, we know the project. Now let's get to know where we're whacking it.
+Our three potential sites are around here\: what Oogle Maps informs me is Laguna Superior. 
+As you can see, there's already been large amounts of wind development in the region.
+And that's no coincidence. As I mentioned before, this is a super wind-rich region. A gold mine in the sky, or whatever. 
+There's some info in the packets provided, but I'm no scientist so we'll skip that.
+Boss: Good lad. Let's hurry up.
+[signal arg="next_slide"]
+Moz: Sure thing. Let's meet our lovely ladies, and see who we want to date. Location one! We've dubbed it "Five Vulture Meadows".
+Moz: (It's named after some local god that we've had translated, probably of good luck or fertility or something)
+Moz: It's near laods of the existing wind deevlopments, where locals are clamouring to sell up their land.
+Happy locals means less legal issues down the line.
+Moz: Ding ding ding. AND it's close to all the infrastructure we'd need—airports, the grid, etc. Bit pricier than the others, mind you.
+[signal arg="next_slide"]
+Moz: Bachelorette number two! Dubbed Sandbar Paradiso, this lovely lady has maximal wind potential and the local government is trying to heap benefits on us to make us bite.
+Moz: There's a few...possible setbacks—
+My team can handle any pitchforked mobs.
+And the extra costs of deeper foundations will be easily met by the stronger winds.
+Moz: Sure, whatever. I'm just reading the slide guys.
+[signal arg="next_slide"]
+Moz: Sunrise Farm! Cheap and lots of land. I don't need to sell that to you, do I? Another bids already been accepted, but we don't think that'll be TOO big a problem if we settle here.
+Moz: Okay, let me open the room. Whadda we think?
+- Well—
+	label LocationDebate
+- I think—
+	jump LocationDebate
