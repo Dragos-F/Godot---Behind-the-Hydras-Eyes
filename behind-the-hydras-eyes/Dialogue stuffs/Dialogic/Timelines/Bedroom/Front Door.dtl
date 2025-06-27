@@ -1,14 +1,15 @@
 label Quarter One
 "Front Door": The outside world lies beyond. Careful, here be monsters.
 - Go to Work
-	"Front Door": Haha, good one. 
+	"Front Door": Haha, good one.
 - Go to the Shops
 	"Front Door": At this hour? After such a long days work? Maybe not. There's noodles and beer in the cupboard and pickles in the fridge, you don't need anything else.
 - Go to the pub
-	"Front Door": For the eigth night in a row? 
+	"Front Door": For the eigth night in a row?
 	- I have a crush on one of the barstaff.
-		"Front Door": No you don't, you're just lonely and liek to fixate on people out of your league. But fine, go ahead.
+		"Front Door": No you don't, you're just lonely and like to fixate on people out of your league. But fine, go ahead.
 	- I crave company and expensive alcohol.
-		"Front Door": Desperate, but honest. 
+		"Front Door": Desperate, but honest.
 	- Fine, I'll stay in.
 - Stay inside
+[end_timeline]
