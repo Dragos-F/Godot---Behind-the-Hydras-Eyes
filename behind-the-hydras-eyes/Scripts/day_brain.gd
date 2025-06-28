@@ -6,6 +6,8 @@ class_name DayBrain
 @onready var computer_screen: Node2D = $"../ComputerScreen"
 @export var BossScreen:Node2D
 @export var BossDialogue:Node2D
+@export var DaveAnchor:Node2D
+@export var TextAnchor:Node2D
 @export var Camera:Camera2D
 @export var camera_zoom:Vector2
 @export var camera_target:Vector2
@@ -81,10 +83,11 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 	tween.tween_property(Camera,"position",camera_target,2)
 	tween.tween_interval(0.1)
 	var layout = Dialogic.start(nodeTitle)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",DaveAnchor)
 	if (nodeTitle == "Alex"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Alex.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
 	if (nodeTitle == "Jen"):
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",target)
 	if (nodeTitle == "Boss"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Clipboard"):
@@ -93,7 +96,7 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",target)
 	if (nodeTitle ==  "Kettle"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",target)
-	if (nodeTitle == "Text"):
+	if (nodeTitle == "Text From Boss"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",target)
 	if (nodeTitle == "WaterCooler"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch",target)

@@ -30,6 +30,7 @@ directories/dch_directory={
 "Bed": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bed.dch",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
 "Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",
+"Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
 "CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
 "Corkboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
@@ -39,7 +40,6 @@ directories/dch_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
 "Moz": "res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",
-"Office/Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
 "Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",
 "Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
@@ -61,6 +61,7 @@ directories/dtl_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
+"Text From Boss": "res://Dialogue stuffs/Dialogic/Timelines/Office/Text From Boss.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Timelines/Office/WaterCooler.dtl"
 }
 layout/style_directory={

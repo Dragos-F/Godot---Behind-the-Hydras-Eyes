@@ -1,9 +1,9 @@
 label Quarter 1
-Bed: Your bed. It's made, albiet badly, and you feel it call to you. Do you want to sleep?
+Bed: Your bed. It's made, albeit badly, and you feel it call to you. Do you want to sleep?
 - Not yet
 	Bed: Fine, steal some more hours of consciousness from yourself. But I know your eye lids are already heavy, and I'll see you soon.
 - Please
-	Bed: But rest now, see if your parts will at least be together in sleep; see if the sandman can fix the ravages of time and carelessness, of burnt bridges and bad decisions. 
+	Bed: But rest now, see if your parts will at least be together in sleep; see if the sandman can fix the ravages of time and carelessness, of burnt bridges and bad decisions.
 	Bed: A long day, a long week, a long quarter. Stress is starting to slip through the cracks that you already sense in this project.
 	Bed: It's your name on the project. Well, on the website it's Patrick's, and realistically most won't even look past the company name.
 	Bed: But still, YOU know—even if few others do—that you're responsible for this project, and for your team.

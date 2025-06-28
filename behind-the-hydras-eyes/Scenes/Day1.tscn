@@ -24,6 +24,9 @@ z_index = 10
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
 
+[node name="DialogueMarker" parent="Background/Furniture/Corkboard/InteractableElement" index="1"]
+position = Vector2(28, -1)
+
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 Type = 2
 readyToLeave = true
@@ -35,8 +38,14 @@ YarnNodeLink = "Cabinet"
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
 YarnNodeLink = "Posters"
 
+[node name="DialogueMarker" parent="Background/Furniture/PosterGroup/InteractableElement" index="1"]
+position = Vector2(-42.5, -0.5)
+
 [node name="Jen1" parent="Background/Furniture" index="12"]
 z_index = -1
+
+[node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
+position = Vector2(13, -39.5)
 
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
@@ -45,16 +54,30 @@ position = Vector2(3.5, -34)
 Type = 1
 
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
-YarnNodeLink = "Fountain"
+YarnNodeLink = "WaterCooler"
+
+[node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
+position = Vector2(-12.5, -15.5)
 
 [node name="InteractableElement" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine" index="0"]
 YarnNodeLink = "CoffeeMachine"
 
+[node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
+position = Vector2(-21, -6.5)
+
+[node name="DialogueMarker" parent="Background/Kitchen/Cabinets/Kettle/InteractableElement" index="1"]
+position = Vector2(4.5, -8)
+
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("Camera")]
+[node name="DialogueMarker" parent="Background/Kitchen/Clipboard/InteractableElement" index="1"]
+position = Vector2(10.5, -3.5)
+
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera")]
 script = ExtResource("3_rakbq")
+DaveAnchor = NodePath("../Dave/DialogueMarker")
+TextAnchor = NodePath("../Dave/TextAnchor")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 
@@ -113,13 +136,15 @@ texture_filter = 1
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics1" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif")]
+[node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor")]
 script = ExtResource("11_l3qly")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
+brain = NodePath("../DayBrain")
+BossTextAnchor = NodePath("../Dave/TextAnchor")
 
 [node name="Notifications" type="Node2D" parent="."]
 
