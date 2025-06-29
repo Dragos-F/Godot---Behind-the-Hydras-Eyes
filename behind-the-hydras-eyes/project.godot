@@ -71,7 +71,10 @@ layout/style_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"]
 layout/default_style="res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
-variables={}
+variables={
+"CurrentDay": "Day01",
+"CurrentQuarter": "Quarter1"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

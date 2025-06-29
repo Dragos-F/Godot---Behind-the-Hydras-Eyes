@@ -36,6 +36,8 @@ func _process(delta: float) -> void:
 			InteractType.Dialogue:
 				day_brain.run_dialogue(YarnNodeLink,DialogueMarker)
 				print("Asked Brain to start dialogue "+YarnNodeLink)
+				if parentSprite is AnimatedSprite2D:
+					parentSprite.play("open")
 			InteractType.Desk:
 				pass
 			InteractType.EntryDoor:

@@ -1,10 +1,14 @@
-[gd_scene load_steps=27 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=39 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
+[ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="3_gru6s"]
+[ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="3_p1x44"]
 [ext_resource type="Texture2D" uid="uid://bvj78hbkw3023" path="res://Visual Assets/New Assets/Bedroom/Bed 3.png" id="3_x4len"]
+[ext_resource type="Texture2D" uid="uid://cslkjei2ttpq0" path="res://Visual Assets/New Assets/Bedroom/Selected/Balcony Door Selected.png" id="4_254x1"]
 [ext_resource type="Texture2D" uid="uid://c6ngcgnlp4oqe" path="res://Visual Assets/New Assets/Bedroom/Bedroom Kitchen.png" id="4_f2uan"]
 [ext_resource type="Texture2D" uid="uid://dcb4xv5ycc8y7" path="res://Visual Assets/New Assets/Bedroom/Bedside Table.png" id="5_0yxu4"]
+[ext_resource type="Texture2D" uid="uid://bw1vbslwukde8" path="res://Visual Assets/New Assets/Bedroom/Selected/Bed Selected.png" id="6_cyeik"]
 [ext_resource type="Texture2D" uid="uid://brgdglavo8age" path="res://Visual Assets/New Assets/Bedroom/Bin Wastepaper.png" id="6_pwf4c"]
 [ext_resource type="Texture2D" uid="uid://s38l6mu2ns4w" path="res://Visual Assets/New Assets/Bedroom/Bookshelf.png" id="7_ch6vw"]
 [ext_resource type="Texture2D" uid="uid://dkeiyp0w42onk" path="res://Visual Assets/New Assets/Bedroom/Cobweb.png" id="8_ort7d"]
@@ -12,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cqee4ahybfg83" path="res://Visual Assets/New Assets/Bedroom/Desk.png" id="10_p1x44"]
 [ext_resource type="Texture2D" uid="uid://748kuoi4a3xc" path="res://Visual Assets/New Assets/Bedroom/Dirty Dishes.png" id="11_254x1"]
 [ext_resource type="Texture2D" uid="uid://dj6gg8k8vqatb" path="res://Visual Assets/New Assets/Bedroom/Figurine.png" id="12_cyeik"]
+[ext_resource type="Texture2D" uid="uid://c4sw770ovp5xr" path="res://Visual Assets/New Assets/Bedroom/Selected/Bookshelf Selected.png" id="12_ri4tq"]
 [ext_resource type="Texture2D" uid="uid://dtfsx4wxhocqj" path="res://Visual Assets/New Assets/Bedroom/Lamp Lit.png" id="13_ri4tq"]
 [ext_resource type="Texture2D" uid="uid://bvmrv6imqhcqh" path="res://Visual Assets/New Assets/Bedroom/Lamp Unlit.png" id="14_x75j5"]
 [ext_resource type="Texture2D" uid="uid://c4c27ghije640" path="res://Visual Assets/New Assets/Bedroom/Mugs Daves.png" id="15_1elqf"]
@@ -24,6 +29,29 @@
 [ext_resource type="Texture2D" uid="uid://bwr0u2o4fm7b" path="res://Visual Assets/New Assets/Bedroom/Chair Dave.png" id="22_u7yph"]
 [ext_resource type="PackedScene" uid="uid://cc2osnlrbt20" path="res://Scenes/door.tscn" id="23_f2uan"]
 [ext_resource type="PackedScene" uid="uid://dm1aw5ta85o8i" path="res://Scenes/index_change_zone.tscn" id="24_f2uan"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="28_p1x44"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
+radius = 12.0
+height = 87.0
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_1elqf"]
+points = PackedVector2Array(-140, 39.5, 27, -40.5, 140.5, 19.5, -22.5, 103.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_unbiq"]
+height = 62.3893
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7nhas"]
+radius = 12.7463
+height = 86.762
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_scg7i"]
+radius = 19.1665
+height = 91.7748
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ayyhf"]
+radius = 16.7458
+height = 109.633
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_gru6s"]
 points = PackedVector2Array(-120.509, 32.857, 348.76, -213.388, 494.773, -148.626)
@@ -40,6 +68,27 @@ texture = ExtResource("1_6o44b")
 
 [node name="Furniture" type="Node2D" parent="."]
 
+[node name="Balcony Door" type="Sprite2D" parent="Furniture"]
+z_index = -3
+texture_filter = 1
+position = Vector2(39, -292)
+scale = Vector2(2, 2)
+texture = ExtResource("2_7nhas")
+
+[node name="InteractableElement" parent="Furniture/Balcony Door" instance=ExtResource("3_p1x44")]
+position = Vector2(4, 60.5)
+regular = ExtResource("2_7nhas")
+selected = ExtResource("4_254x1")
+YarnNodeLink = "Balcony Door"
+
+[node name="CollisionShape2D" parent="Furniture/Balcony Door/InteractableElement/Area2D" index="0"]
+position = Vector2(-3, 7)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_x75j5")
+
+[node name="DialogueMarker" parent="Furniture/Balcony Door/InteractableElement" index="1"]
+position = Vector2(20, -78)
+
 [node name="Bed" type="Sprite2D" parent="Furniture"]
 z_index = -2
 texture_filter = 1
@@ -51,6 +100,17 @@ texture = ExtResource("3_x4len")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bed/StaticBody2D"]
 polygon = PackedVector2Array(-108.5, 39, -14, 83.5, 114, 21.5, 24, -26.5)
+
+[node name="InteractableElement" parent="Furniture/Bed" instance=ExtResource("3_p1x44")]
+regular = ExtResource("3_x4len")
+selected = ExtResource("6_cyeik")
+YarnNodeLink = "Bed"
+
+[node name="CollisionShape2D" parent="Furniture/Bed/InteractableElement/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_1elqf")
+
+[node name="DialogueMarker" parent="Furniture/Bed/InteractableElement" index="1"]
+position = Vector2(78, -21)
 
 [node name="Kitchen" type="Sprite2D" parent="Furniture"]
 z_index = -2
@@ -118,6 +178,16 @@ texture = ExtResource("7_ch6vw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bookshelf/StaticBody2D"]
 polygon = PackedVector2Array(-25.5, 43, -8.5, 33, 25.5, 50.5, 9.5, 60.5)
 
+[node name="InteractableElement" parent="Furniture/Bookshelf" instance=ExtResource("3_p1x44")]
+regular = ExtResource("7_ch6vw")
+selected = ExtResource("12_ri4tq")
+YarnNodeLink = "Bookshelf"
+
+[node name="CollisionShape2D" parent="Furniture/Bookshelf/InteractableElement/Area2D" index="0"]
+position = Vector2(-9.5, 49.5)
+rotation = -1.18114
+shape = SubResource("CapsuleShape2D_unbiq")
+
 [node name="Cobweb" type="Sprite2D" parent="Furniture"]
 modulate = Color(1, 1, 1, 0.4)
 texture_filter = 1
@@ -178,6 +248,20 @@ position = Vector2(-465, -36)
 scale = Vector2(2, 2)
 texture = ExtResource("11_254x1")
 
+[node name="InteractableElement" parent="Furniture/DirtyDishes" instance=ExtResource("3_p1x44")]
+YarnNodeLink = "Dirty Dishes"
+
+[node name="Area2D" parent="Furniture/DirtyDishes/InteractableElement" index="0"]
+position = Vector2(7.5, 54.5)
+
+[node name="CollisionShape2D" parent="Furniture/DirtyDishes/InteractableElement/Area2D" index="0"]
+position = Vector2(6.5, 19)
+rotation = 1.11046
+shape = SubResource("CapsuleShape2D_7nhas")
+
+[node name="DialogueMarker" parent="Furniture/DirtyDishes/InteractableElement" index="1"]
+position = Vector2(29, -14)
+
 [node name="LampUnlit" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
 position = Vector2(519, -52)
@@ -236,17 +320,29 @@ scale = Vector2(2, 2)
 frame_progress = 1.0
 
 [node name="CollisionShape2D" parent="Furniture/Door/InteractableElement/Area2D" index="0"]
-position = Vector2(44.5, 26.5)
+position = Vector2(36, 35.5)
+rotation = -1.12324
+shape = SubResource("CapsuleShape2D_scg7i")
 
-[node name="Door2" parent="Furniture" instance=ExtResource("23_f2uan")]
+[node name="BathroomDoor" parent="Furniture" instance=ExtResource("23_f2uan")]
 z_index = 2
 position = Vector2(809, 135)
 scale = Vector2(2, 2)
-frame_progress = 1.0
 flip_h = true
 
-[node name="CollisionShape2D" parent="Furniture/Door2/InteractableElement/Area2D" index="0"]
-position = Vector2(-50.5, 26.5)
+[node name="InteractableElement" parent="Furniture/BathroomDoor" index="0"]
+Type = 0
+YarnNodeLink = "Bathroom Door"
+
+[node name="CollisionShape2D" parent="Furniture/BathroomDoor/InteractableElement/Area2D" index="0"]
+position = Vector2(-47, 34)
+rotation = 1.12644
+shape = SubResource("CapsuleShape2D_ayyhf")
+
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("Camera")]
+script = ExtResource("28_p1x44")
+Camera = NodePath("../Camera2D")
+camera_zoom = Vector2(1.5, 1.5)
 
 [node name="Dave" parent="." instance=ExtResource("3_gru6s")]
 position = Vector2(-132, 100)
@@ -315,8 +411,12 @@ inValue = -3
 position = Vector2(51, -134)
 polygon = PackedVector2Array(5, 158, -214, 93, -214, 19, -105, -31, 92, -33, 265, 35, 168, 80)
 
+[editable path="Furniture/Balcony Door/InteractableElement"]
+[editable path="Furniture/Bed/InteractableElement"]
+[editable path="Furniture/Bookshelf/InteractableElement"]
+[editable path="Furniture/DirtyDishes/InteractableElement"]
 [editable path="Furniture/Door"]
 [editable path="Furniture/Door/InteractableElement"]
-[editable path="Furniture/Door2"]
-[editable path="Furniture/Door2/InteractableElement"]
+[editable path="Furniture/BathroomDoor"]
+[editable path="Furniture/BathroomDoor/InteractableElement"]
 [editable path="IndexChangeZone"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dilj6g4k7ucej" path="res://Scripts/interactable.gd" id="1_8s6bd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmsje"]
-radius = 44.7269
+radius = 26.1199
 
 [node name="InteractableElement" type="Node2D" node_paths=PackedStringArray("DialogueMarker")]
 script = ExtResource("1_8s6bd")

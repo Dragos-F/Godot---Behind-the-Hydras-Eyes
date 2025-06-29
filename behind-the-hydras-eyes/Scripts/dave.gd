@@ -14,6 +14,7 @@ func _ready() -> void:
 	
 func _stopDave():
 	move_time = false
+	animated_sprite.play("idle")
 func _restartDave():
 	move_time = true
 	

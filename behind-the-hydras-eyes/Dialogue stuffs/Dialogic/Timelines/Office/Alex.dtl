@@ -1,3 +1,4 @@
+jump {CurrentDay}
 label Day01
 Alex: ...
 Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help you?
@@ -13,7 +14,7 @@ Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do..w
 	Dave: Yeah...I can believe it.
 - Little England Petroleum
 	Alex: Ah, one of our sponsors. You know how things work then.
-	Alex: Keep the wheels greased and the money flowing. And hopefully pollute just a liiiittle bit less than LEP. 
+	Alex: Keep the wheels greased and the money flowing. And hopefully pollute just a liiiittle bit less than LEP.
 Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
 Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
 [end_timeline]
@@ -23,7 +24,8 @@ Alex: Our agents in Mexico are quietly finishing negotiations with the local gov
 Alex: and it sounds like the building contractors are happy to begin as soon as the paperworks ready—or even earlier.
 Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted, but that's fine.
 Alex: It hasn't helped that there's been protests at our supplier's mines, but we live in an unpredictable work, Dave. Still, we're on track.
-label Day 02 Info1
+
+label Day02 Info01
 - Protests at the mines?
 	Alex: Oh yeah. A few new mines have had their openings delayed because locals were unhappy about the land use.
 	Alex: Something about how destructive and polluting the mines are, and how the companies lied about the effect on ecosystems.
@@ -34,7 +36,7 @@ label Day 02 Info1
 		Dave: Yeah, that.
 		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
 		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do SOME good.
-	jump Day 02 Info1
+	jump Day02 Info1
 - What does "or even earlier" mean?
 	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
 	Dave: And "moving quicker" means...?
@@ -43,7 +45,7 @@ label Day 02 Info1
 		Alex: The barbed wire, watchtowers, and guards help to dissaude them of that.
 	- Sounds reasonable, yeah.
 		Alex: Reasonableness and efficiency, my two middle names.
-	jump Day 02 Info1
+	jump Day02 Info1
 - Thanks for the update.
 	Alex: No worries. And I know you've got a meeting with the big boss later, so I've shared a data tracker file with you. Any questions, just let me know.
 Dave: Stunning, thanks Alex!

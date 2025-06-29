@@ -1,4 +1,5 @@
-label Normal
+jump {CurrentQuarter}
+label Quarter1
 "Dirty Dishes": A pile of dirty dishes. A veritable smorgasbord of chicken bones, crumbs, and old broth.
 "Dirty Dishes": Maybe you should...clean?
 - No.

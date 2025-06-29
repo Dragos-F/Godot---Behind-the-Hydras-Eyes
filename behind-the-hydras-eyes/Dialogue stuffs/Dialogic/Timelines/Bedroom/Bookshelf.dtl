@@ -1,4 +1,5 @@
-label Normal
+jump {CurrentQuarter}
+label Quarter1
 Bookshelf: Never much of a reader, you've filled these shelves mostly with assorted tat. Fancy a stroll down memory lane?
 - God no.
 - Any happy memories for me?

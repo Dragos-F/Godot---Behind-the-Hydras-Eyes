@@ -75,8 +75,8 @@ func _on_desk_interactable_interacted() -> void:
 	print ("entering screen")
 	
 
-func run_dialogue(nodeTitle:String,target:Node2D):
-	camera_target = target.global_position
+func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from whatever calls it, registering characters 
+	camera_target = target.global_position # and bubble target anchors. Couldn't think of a smarter way, so now we have this
 	var tween = get_tree().create_tween()
 	tween.tween_property(Camera,"zoom",camera_zoom,2)
 	tween.set_parallel()
@@ -104,6 +104,16 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",target)
+	if (nodeTitle == "Bed"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bed.dch",target)
+	if (nodeTitle == "Balcony Door"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",target)
+	if (nodeTitle == "Bathroom Door"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",target)
+		
+	if (nodeTitle == "Dirty Dishes"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",target)
+	
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()
@@ -111,8 +121,6 @@ func run_dialogue(nodeTitle:String,target:Node2D):
 	tween.tween_property(Camera,"zoom",Vector2.ONE,1)
 	tween.set_parallel()
 	tween.tween_property(Camera,"position",Vector2.ZERO,1)
-	
-	print ("brain told runner to start it")
 
 func end_day(nextLocation:String):
 	Fader.FadeUp(nextLocation)
