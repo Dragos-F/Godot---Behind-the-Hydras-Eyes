@@ -14,6 +14,8 @@ class_name Computer
 @onready var selectedPreview:Node
 @export var emailsProgressionQuota:int
 @export var emailsDone:int
+@export var EmailList:Array[Panel]
+@export var Budget:Panel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -82,3 +84,14 @@ func _on_send_pressed() -> void:
 	inbox_buttons.clear()
 	emailsDone+=1
 	
+
+
+func _on_emails_pressed() -> void:
+	Budget.visible = false
+	for i in EmailList:
+		i.visible = true
+
+func _on_budget_pressed() -> void:
+	Budget.visible = true
+	for i in EmailList:
+		i.visible = false
