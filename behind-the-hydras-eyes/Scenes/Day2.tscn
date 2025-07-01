@@ -50,6 +50,11 @@ BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/Dialogue Target")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true

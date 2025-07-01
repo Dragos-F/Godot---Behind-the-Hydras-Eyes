@@ -183,4 +183,5 @@ frame_progress = 0.0
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
+[editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]

@@ -399,6 +399,11 @@ rotation = -3.13625
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true
 
 [node name="IndexChangeZone" parent="." node_paths=PackedStringArray("targetGroup") instance=ExtResource("24_f2uan")]
 visible = false
