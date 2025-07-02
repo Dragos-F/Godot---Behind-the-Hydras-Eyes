@@ -140,4 +140,5 @@ metadata/_custom_type_script = "uid://b1o5xpu22evvx"
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
+[editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]

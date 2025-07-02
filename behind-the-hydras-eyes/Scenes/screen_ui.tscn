@@ -355,12 +355,27 @@ offset_top = 6.0
 offset_right = 1365.0
 offset_bottom = 38.0
 
+[node name="Chart" parent="Budget" node_paths=PackedStringArray("savingsText") instance=ExtResource("3_vjvvu")]
+layout_mode = 1
+mouse_filter = 1
+savingsText = NodePath("../BoxContainer/Additional Costs3/BoxContainer/Label")
+totalSalary = 7200.0
+startingSavings = 2400.0
+
+[node name="LabellessPieChart" parent="Budget/Chart" index="0"]
+offset_left = 340.11
+offset_top = 117.0
+offset_right = 907.11
+offset_bottom = 599.0
+mouse_filter = 1
+chart_radius_multiplier = 1.85
+
 [node name="Additional Costs" type="Panel" parent="Budget"]
 layout_mode = 0
 offset_left = 37.0
 offset_top = 44.0
 offset_right = 368.0
-offset_bottom = 432.0
+offset_bottom = 349.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="Panel" type="Panel" parent="Budget/Additional Costs"]
@@ -371,15 +386,56 @@ offset_right = 326.0
 offset_bottom = 47.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="Chart" parent="Budget" instance=ExtResource("3_vjvvu")]
-layout_mode = 1
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs/Panel"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 40.0
 
-[node name="LabellessPieChart" parent="Budget/Chart" index="0"]
-offset_left = 340.11
-offset_top = 117.0
-offset_right = 907.11
-offset_bottom = 599.0
-chart_radius_multiplier = 1.85
+[node name="Label" type="Label" parent="Budget/Additional Costs/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "ADDITIONAL COSTS"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Budget/Additional Costs"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 58.0
+offset_right = 317.0
+offset_bottom = 373.0
+
+[node name="CheckButton" type="CheckButton" parent="Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 1"
+
+[node name="CheckButton2" type="CheckButton" parent="Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 2"
+
+[node name="CheckButton3" type="CheckButton" parent="Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 3
+"
+
+[node name="CheckButton4" type="CheckButton" parent="Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 4
+"
+
+[node name="CheckButton5" type="CheckButton" parent="Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 5"
 
 [node name="Additional Costs2" type="Panel" parent="Budget"]
 layout_mode = 0
@@ -403,8 +459,8 @@ offset_left = 122.0
 offset_top = 1.0
 offset_right = 367.0
 offset_bottom = 40.0
-theme_override_font_sizes/font_size = 28
-text = "Monthly Expenses"
+theme_override_font_sizes/font_size = 26
+text = "MONTHLY EXPENSES"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs2"]
 layout_mode = 2
@@ -516,6 +572,84 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 26
 text = "+"
 
+[node name="BoxContainer" type="BoxContainer" parent="Budget"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 388.0
+offset_right = 1340.0
+offset_bottom = 559.0
+alignment = 1
+
+[node name="Additional Costs3" type="Panel" parent="Budget/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="BoxContainer" parent="Budget/BoxContainer/Additional Costs3"]
+layout_mode = 2
+anchor_right = 0.988
+anchor_bottom = 0.265
+offset_left = 6.0
+offset_top = 7.0
+offset_right = -2.164
+offset_bottom = 1.07
+theme_override_constants/separation = 7
+
+[node name="Panel" type="Panel" parent="Budget/BoxContainer/Additional Costs3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="BoxContainer" type="BoxContainer" parent="Budget/BoxContainer/Additional Costs3/HBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 374.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Budget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "TOTAL SAVINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="Budget/BoxContainer/Additional Costs3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 59.0
+offset_right = 380.0
+offset_bottom = 154.0
+
+[node name="Label" type="Label" parent="Budget/BoxContainer/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Budget"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 74.0
+offset_right = 788.0
+offset_bottom = 114.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Panel3"]
+layout_mode = 0
+offset_right = 346.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Budget/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "QUARTERLY NET INCOME: £7200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BottomBar" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 5.0
@@ -579,6 +713,11 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]
 [connection signal="pressed" from="MainEmail/Reply" to="." method="_on_reply_pressed"]
+[connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton" to="Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton2" to="Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton3" to="Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton4" to="Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton5" to="Budget/Chart" method="_on_check_button_toggled"]
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Decrease/Savings" to="Budget/Chart" method="_on_savings_pressed"]
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Decrease/Lifestyle" to="Budget/Chart" method="_on_lifestyle_pressed"]
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Increase/Savings" to="Budget/Chart" method="_on_savings_increase"]
