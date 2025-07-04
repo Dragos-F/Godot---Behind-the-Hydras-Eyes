@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cli41apxllh6i"]
+
+[ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="1_nxpru"]
+[ext_resource type="Texture2D" uid="uid://bstwti6vw6p83" path="res://Visual Assets/New Assets/Train/Train Background.png" id="2_0hk28"]
+[ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="3_0hk28"]
+
+[node name="Train" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("1_nxpru")
+
+[node name="TrainBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_0hk28")
+
+[node name="TrainForeground" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("3_0hk28")
+
+[node name="Camera2D" type="Camera2D" parent="."]
