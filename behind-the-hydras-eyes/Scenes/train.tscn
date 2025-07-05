@@ -1,14 +1,83 @@
-[gd_scene load_steps=4 format=3 uid="uid://cli41apxllh6i"]
+[gd_scene load_steps=7 format=3 uid="uid://cli41apxllh6i"]
 
 [ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="1_nxpru"]
 [ext_resource type="Texture2D" uid="uid://bstwti6vw6p83" path="res://Visual Assets/New Assets/Train/Train Background.png" id="2_0hk28"]
 [ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="3_0hk28"]
 
+[sub_resource type="Animation" id="Animation_mcim7"]
+length = 10.0333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.05667, 5.059, 5.06353, 5.06667, 10.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(948, 529), Vector2(-2636, -1151), Vector2(-3081, -4079), Vector2(3019, -1523), Vector2(3848, 1929), Vector2(948, 529)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.05667, 10.027, 10.03, 10.031, 10.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4117, 2037), Vector2(625, 396), Vector2(-2248, -979), Vector2(-2739, -3075), Vector2(3880, -1335), Vector2(4117, 2037)]
+}
+
+[sub_resource type="Animation" id="Animation_0hk28"]
+resource_name = "background"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(948, 529), Vector2(-2651, -1150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4117, 2037), Vector2(496, 339)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_akv0e"]
+_data = {
+&"RESET": SubResource("Animation_mcim7"),
+&"background": SubResource("Animation_0hk28")
+}
+
 [node name="Train" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(960, 540)
+position = Vector2(4117, 2037)
+scale = Vector2(2, 2)
+texture = ExtResource("1_nxpru")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(948, 529)
 scale = Vector2(2, 2)
 texture = ExtResource("1_nxpru")
 
@@ -23,3 +92,9 @@ scale = Vector2(2, 2)
 texture = ExtResource("3_0hk28")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_akv0e")
+}
+autoplay = "RESET"
