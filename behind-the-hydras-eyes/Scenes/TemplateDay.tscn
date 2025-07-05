@@ -66,4 +66,5 @@ position = Vector2(-590, 314)
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
+[editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]
