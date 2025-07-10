@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://55jkptvrl5w2"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://bh2ob7luq8sml" path="res://Visual Assets/New Assets/Full Screen Scenes/Boardroom Screen.png" id="2_cayip"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_xhh6f")
+
+[node name="BoardroomScreen" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_cayip")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Start" type="Button" parent="."]
+offset_left = -565.0
+offset_top = -186.0
+offset_right = -489.0
+offset_bottom = -138.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 29
+text = "Start"
+
+[node name="Options" type="Button" parent="."]
+offset_left = -563.0
+offset_top = -50.0
+offset_right = -444.0
+offset_bottom = -2.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 29
+text = "Options
+"
+
+[node name="Options2" type="Button" parent="."]
+offset_left = 211.0
+offset_top = 95.0
+offset_right = 330.0
+offset_bottom = 143.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 29
+text = "Credits
+"
+
+[node name="Options3" type="Button" parent="."]
+offset_left = 171.0
+offset_top = -198.0
+offset_right = 393.0
+offset_bottom = -150.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 29
+text = "Something else"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var blinder: Sprite2D
 @onready var text: Label
-@onready var duration:float = 0.5
+@onready var duration:float = 1
 @onready var once:bool = true
 @onready var tween:Tween
 signal fade_finished

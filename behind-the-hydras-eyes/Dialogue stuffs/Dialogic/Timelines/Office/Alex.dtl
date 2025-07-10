@@ -36,7 +36,7 @@ label Day02 Info01
 		Dave: Yeah, that.
 		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
 		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do SOME good.
-	jump Day02 Info1
+	jump Day02 Info01
 - What does "or even earlier" mean?
 	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
 	Dave: And "moving quicker" means...?

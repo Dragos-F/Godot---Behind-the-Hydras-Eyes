@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cli41apxllh6i"]
+[gd_scene load_steps=21 format=3 uid="uid://cli41apxllh6i"]
 
 [ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="1_nxpru"]
+[ext_resource type="Script" uid="uid://cbkj0uqvtov7s" path="res://Scenes/train.gd" id="1_u3u2q"]
 [ext_resource type="Texture2D" uid="uid://bstwti6vw6p83" path="res://Visual Assets/New Assets/Train/Train Background.png" id="2_0hk28"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="2_40qti"]
 [ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="3_0hk28"]
 [ext_resource type="Texture2D" uid="uid://dus4uwj1x577g" path="res://Visual Assets/New Assets/Train/Sitting 1.png" id="4_qi5j6"]
 [ext_resource type="Texture2D" uid="uid://k48ud7fxdej5" path="res://Visual Assets/New Assets/Train/Sitting 2.png" id="5_u3u2q"]
@@ -80,6 +82,16 @@ _data = {
 }
 
 [node name="Train" type="Node2D"]
+script = ExtResource("1_u3u2q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Dave" parent="." instance=ExtResource("2_40qti")]
+z_index = 2
+position = Vector2(196, 81)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

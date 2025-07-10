@@ -244,6 +244,7 @@ frame_progress = 0.0
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
+[connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
 [editable path="Fader"]

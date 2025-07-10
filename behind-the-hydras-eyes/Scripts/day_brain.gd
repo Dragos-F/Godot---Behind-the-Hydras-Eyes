@@ -70,9 +70,9 @@ func leave_boss():
 	await Fader.fade_finished
 
 
-func _on_desk_interactable_interacted() -> void:
-	enter_screen()
-	print ("entering screen")
+#func _on_desk_interactable_interacted() -> void:
+	#enter_screen()
+	#print ("entering screen")
 	
 
 func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from whatever calls it, registering characters 

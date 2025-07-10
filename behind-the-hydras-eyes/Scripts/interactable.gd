@@ -8,6 +8,7 @@ class_name Interactable
 @export var once2:bool = true
 @export var sizeMult:float = 2
 @onready var day_brain:DayBrain
+@onready var dave:Dave
 enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
 @export var Type = InteractType.Dialogue
 @export var readyToLeave:bool = false
@@ -25,6 +26,8 @@ func _ready() -> void:
 	parentSprite = self.get_parent()
 	if get_tree().current_scene.get_node("DayBrain") != null:
 		day_brain = get_tree().current_scene.get_node("DayBrain")
+	if get_tree().current_scene.get_node("Dave") != null:
+		dave = get_tree().current_scene.get_node("Dave")
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,6 +35,7 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("interact")&&once&&near):
 		print(parentSprite.name+" interacted")
 		interacted.emit()
+		dave._stopDave()
 		match Type:
 			InteractType.Dialogue:
 				day_brain.run_dialogue(YarnNodeLink,DialogueMarker)
@@ -39,7 +43,8 @@ func _process(delta: float) -> void:
 				if parentSprite is AnimatedSprite2D:
 					parentSprite.play("open")
 			InteractType.Desk:
-				pass
+				day_brain.enter_screen()
+				print ("entering screen")
 			InteractType.EntryDoor:
 				if (readyToLeave):
 					day_brain.end_day(textToDisplay)

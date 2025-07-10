@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_k3jav"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_4qd7i"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_r33wl"]
-[ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_8jm43"]
+[ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="9_qarlu"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
 
 [node name="Main" type="Node2D"]
@@ -35,6 +35,9 @@ YarnNodeLink = "Posters"
 [node name="Jen1" parent="Background/Furniture" index="12"]
 z_index = -1
 
+[node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
+Type = 1
+
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
 YarnNodeLink = "Fountain"
 
@@ -44,10 +47,13 @@ YarnNodeLink = "CoffeeMachine"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "Camera")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/Dialogue Target")
+DaveAnchor = NodePath("../Dave/DialogueMarker")
+Camera = NodePath("../Camera2D")
+camera_zoom = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -120,8 +126,8 @@ texture_filter = 1
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics1" type="Node" parent="."]
-script = ExtResource("11_8jm43")
+[node name="Specifics2" type="Node" parent="."]
+script = ExtResource("9_qarlu")
 
 [node name="BossScreen" type="Node2D" parent="."]
 visible = false

@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 @export var alexInteracted:bool = false
 @export var AlexNotif:AnimatedSprite2D
 @export var jenInteracted:bool = false
