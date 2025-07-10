@@ -22,8 +22,14 @@ z_index = 10
 
 [node name="Background" parent="." instance=ExtResource("2_l3qly")]
 
+[node name="Corkboard" parent="Background/Furniture" index="7"]
+position = Vector2(655, -273)
+
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
+
+[node name="CollisionShape2D" parent="Background/Furniture/Corkboard/InteractableElement/Area2D" index="0"]
+position = Vector2(-5, 69.5)
 
 [node name="DialogueMarker" parent="Background/Furniture/Corkboard/InteractableElement" index="1"]
 position = Vector2(28, -1)
@@ -124,7 +130,7 @@ Patrick Moore.
 "
 ReplyBody1 = "Hi Patrick, 
 
-I'm really glad to be here, thanks again for the opportunity. I've already met my team and got a handle on the emails, so just let me know if there's anything else I can help with! 
+I'm really glad to be here, thanks again for the opportunity. I've already met my team, so just let me know if there's anything else I can help with! 
 
 Yours respectfully,
 Dave Spritely, UK Project Lead
@@ -135,19 +141,7 @@ Forward Green
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary2" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
-ReplyBody1 = "Good afternoon Miguel,
-
-I can confirm that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
-
-Kind regards,
-Dave Spritely, UK Project Lead
-Forward Green"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
-texture_filter = 1
-
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("8_l3qly")]
+[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("8_l3qly")]
 layout_mode = 2
 Sender_Name = "Miguel Lopez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -155,13 +149,13 @@ Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
 PreviewText = "To whom it may concern,I've been in "
 MainBody = "To whom it may concern,
 
-I want apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw it's record profits when we expanded sales to Israel. I also head three think tanks and a regional NHS board. I care about education because we need less protests and more graduates to go into defence contracting. 
+I want to apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw it's record profits when we expanded sales to Israel. I also head three think tanks and a regional NHS board. I care about renewable energy as this is the future of global investing and capital development—drones don't power themselves!
 
 Sir Timothy Baronsworthy
 OBE, MBE, MAYBE, BAD"
 ReplyBody1 = "Good afternoon Tim,
 
-I think you have the wrong email; perhaps you meant to email the higher education job portal Forward Dean? 
+Apologies, but this role has now been filled (to be clear, by me). I'm not sure why this email didn't get filtered by HR, but we'll keep your CV on record for any other positions matching your skillset.
 
 Kind regards,
 Dave Spritely, UK Project Lead
@@ -171,7 +165,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("8_l3qly")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("8_l3qly")]
 layout_mode = 2
 Sender_Name = "Miguel Lopez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -263,7 +257,6 @@ frame_progress = 0.0
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/Budget/Chart"]

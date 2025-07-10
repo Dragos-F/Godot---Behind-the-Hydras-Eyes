@@ -104,9 +104,6 @@ Dave"
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
-texture_filter = 1
-
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
 
@@ -161,6 +158,5 @@ metadata/_custom_type_script = "uid://b1o5xpu22evvx"
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
 [editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]

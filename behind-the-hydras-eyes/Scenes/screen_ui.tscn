@@ -167,28 +167,6 @@ boss = true
 [node name="RichTextLabel" parent="EmailList/SummariesContainer/Boss/Button" index="0"]
 autowrap_mode = 0
 
-[node name="TestEmailSummary2" parent="EmailList/SummariesContainer" instance=ExtResource("2_tvukg")]
-layout_mode = 2
-Sender_Name = "Miguel Lopez"
-ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
-PreviewText = "To whom it may concern,I've been in "
-MainBody = "To whom it may concern,
-
-I've been in correspondence with your local office about your proposed development of \"Lagoon Breeze\". They seem confident that it is soon going ahead, following approval by the state authorities and a local meeting. However, I cannot find any Environmental Impact Assessment in the submitted documents, so was hoping you could share it with me. As I'm sure you appreciate, our lagoon is home to a plethora of rare wildlife, and without careful consideration of their wellbeing my constituents and I would not be able to consent to your project.	
-
-Regards,
-Miguel Lopez"
-ReplyBody1 = "Good afternoon Miguel,
-
-I am sorry that you are unsatisfied with my previous response. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
-
-Kind regards,
-Dave Spritely, UK Project Lead"
-
-[node name="RichTextLabel" parent="EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
-autowrap_mode = 0
-
 [node name="MainEmail" type="Panel" parent="."]
 layout_mode = 0
 anchor_left = 0.214387
@@ -726,5 +704,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]
 
 [editable path="EmailList/SummariesContainer/Boss"]
-[editable path="EmailList/SummariesContainer/TestEmailSummary2"]
 [editable path="Budget/Chart"]
