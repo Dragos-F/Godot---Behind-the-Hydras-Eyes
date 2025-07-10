@@ -79,6 +79,22 @@ emailsProgressionQuota = 2
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+MainBody = "Hey Dave, 
+
+I just wanted to say good work navigating the meeting yesterday. It was definitely throwing you in the deep end, but the captain seemed to approve. If you have any questions about how the company works that A-man or big J can't answer, just gimme a shout.
+
+Peace, 
+Moz
+
+"
+ReplyBody1 = "Hi Moz,
+
+Really glad to hear it, thanks for preparing the powerpoint and walking us through the options. I'll let you know if I think of anything! 
+
+Best,
+Dave"
+
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 

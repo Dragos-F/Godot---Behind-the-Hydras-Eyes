@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=12 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="5_okst0"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_fuc61"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_1v22j"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="8_l3qly"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
@@ -111,11 +112,90 @@ emailsProgressionQuota = 1
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+MainBody = "Hey Dave, 
+
+Welcome aboard the ship. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, so your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
+
+Oh, and see you at the meeting later today.
+
+Your Boss,
+Patrick Moore.
+"
+ReplyBody1 = "Hi Patrick, 
+
+I'm really glad to be here, thanks again for the opportunity. I've already met my team and got a handle on the emails, so just let me know if there's anything else I can help with! 
+
+Yours respectfully,
+Dave Spritely, UK Project Lead
+Forward Green
+
+"
+
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
+[node name="TestEmailSummary2" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
+ReplyBody1 = "Good afternoon Miguel,
+
+I can confirm that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+
+Kind regards,
+Dave Spritely, UK Project Lead
+Forward Green"
+
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2/Button" index="0"]
 texture_filter = 1
+
+[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("8_l3qly")]
+layout_mode = 2
+Sender_Name = "Miguel Lopez"
+ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
+PreviewText = "To whom it may concern,I've been in "
+MainBody = "To whom it may concern,
+
+I want apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw it's record profits when we expanded sales to Israel. I also head three think tanks and a regional NHS board. I care about education because we need less protests and more graduates to go into defence contracting. 
+
+Sir Timothy Baronsworthy
+OBE, MBE, MAYBE, BAD"
+ReplyBody1 = "Good afternoon Tim,
+
+I think you have the wrong email; perhaps you meant to email the higher education job portal Forward Dean? 
+
+Kind regards,
+Dave Spritely, UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("8_l3qly")]
+layout_mode = 2
+Sender_Name = "Miguel Lopez"
+ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
+PreviewText = "To whom it may concern,I've been in "
+MainBody = "Good afternoon sirs,
+
+Hate lazy workers? Abolishing wfh failed to raise productivity? We have the only solution you need: AI. 
+
+AI assistants will streamline every element of your job. Miracle bullets have never been so cheap! Simply allow our consultants access to every nook of your database. GDPR compliant? Plausibly! 
+
+Big Daz,
+CEO INFORMATION SOLUTIONS LIMITED "
+ReplyBody1 = "Good afternoon Big Daz,
+
+Thank you for your inquiry. We're not currently looking for such services.
+
+Kind regards,
+Dave Spritely, UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
 
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
@@ -183,5 +263,7 @@ frame_progress = 0.0
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary2"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]
