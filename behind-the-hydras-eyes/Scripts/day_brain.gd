@@ -7,6 +7,7 @@ class_name DayBrain
 @export var BossScreen:Node2D
 @export var BossDialogue:Node2D
 @export var DaveAnchor:Node2D
+@export var BossAnchor:Node2D
 @export var TextAnchor:Node2D
 @export var Camera:Camera2D
 @export var camera_zoom:Vector2
@@ -54,7 +55,8 @@ func enter_boss():
 	BossScreen.visible = true
 	Fader.FadeDown("P. Moore's Office")
 	await Fader.fade_finished
-	run_dialogue("Boss", BossDialogue)
+	var layout = Dialogic.start("BossDialogue")
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",BossAnchor)
 	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING BOSS")
 	leave_boss()
@@ -67,7 +69,7 @@ func leave_boss():
 	BossScreen.visible = false
 	Fader.FadeDown("The Main Office")
 	dave.move_time = true
-	await Fader.fade_finished
+	endOfDay.emit()
 
 
 #func _on_desk_interactable_interacted() -> void:

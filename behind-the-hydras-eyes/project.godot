@@ -54,6 +54,7 @@ directories/dtl_directory={
 "Bed": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bed.dtl",
 "Boardroom": "res://Dialogue stuffs/Dialogic/Timelines/Office/Boardroom.dtl",
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Bookshelf.dtl",
+"Boss": "res://Dialogue stuffs/Dialogic/Timelines/Office/Boss.dtl",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Clipboard.dtl",
 "Coffee": "res://Dialogue stuffs/Dialogic/Timelines/Office/Coffee.dtl",
 "Corkboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Corkboard.dtl",
@@ -74,6 +75,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"]
 layout/default_style="res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
 variables={
+"BossUpset": 0,
 "CurrentDay": "Day01",
 "CurrentQuarter": "Quarter1"
 }

@@ -16,6 +16,7 @@ func _ready() -> void:
 	
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(end_day_boardroom)
 
 #func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept"):
@@ -30,3 +31,12 @@ func _on_dialogic_signal(argument:String):
 	if argument == "next_slide":
 		print ("inside argument")
 		scroll_along()
+
+
+func end_day_boardroom():
+	Fader.FadeUp("Next Day")
+	await Fader.fade_finished
+	Fader.FadeDown("NextDay")
+	var scene_path = "res://Scenes/Day2.tscn"
+	print ("changing scene to "+scene_path)
+	get_tree().change_scene_to_file(scene_path)

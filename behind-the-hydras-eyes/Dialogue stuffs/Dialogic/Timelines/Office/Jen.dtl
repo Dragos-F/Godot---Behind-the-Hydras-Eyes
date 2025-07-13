@@ -1,4 +1,5 @@
 label Day01
+jump {CurrentDay}
 Jen: Oh hey! You're Dave, right? Pleasure to meet you, I'm Jen, your lovely marketing officer.
 Jen: If you need any posters, pamphlets, promo images or—hmm, is there a p-word for merch?—I'm your girl!
 Jen: Ooh, have you seen our green office project? I think you'll love it. There's a clipboard near your desk where you can join.
@@ -9,7 +10,7 @@ Jen: My poster campaign is, like, totally ready for launch now.
 Jen: I even settled on different slogans for different target audiences. Listen to this\:
 Jen: "ForwardGreen\: A green future you can trust". Good, right? That one's for the brochures we've given local government.
 Jen: "Lagoon Breeze\: Good for you, good for mother Earth". That ones for the locals. I think they like spirit-y stuff like that.
-Office/Jen: Whaddaya think, captain?
+Jen: Whaddaya think, captain?
 - Keep up the good work!
 	Jen: Aw thanks! I didn't get a 2\:2 in Marketing from Max Dirikson's Online University for nothing!
 	Jen: ...I'm joking, I totally dropped out. What was I saying? Oh yeah, glad you approve.
