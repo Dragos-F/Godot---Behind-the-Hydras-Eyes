@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=43 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrsb2furimal" path="res://Visual Assets/New Assets/Bedroom/Picture Car.png" id="16_unbiq"]
 [ext_resource type="Texture2D" uid="uid://drow4yl526rik" path="res://Visual Assets/New Assets/Bedroom/Picture PaulChuckle.png" id="17_scg7i"]
 [ext_resource type="Texture2D" uid="uid://bqeg1342qwwnq" path="res://Visual Assets/New Assets/Bedroom/Poster Daves.png" id="18_ayyhf"]
+[ext_resource type="Texture2D" uid="uid://c7vvc0eb6g06e" path="res://Visual Assets/New Assets/Bedroom/Selected/Chair Dave Selected.png" id="19_254x1"]
 [ext_resource type="Texture2D" uid="uid://bvn36d82rv702" path="res://Visual Assets/New Assets/Bedroom/Shelf.png" id="19_ysrrp"]
 [ext_resource type="Texture2D" uid="uid://cl20cpwljqmmu" path="res://Visual Assets/New Assets/Bedroom/Weights.png" id="20_ii3ny"]
 [ext_resource type="Texture2D" uid="uid://wmr11mcrgsaf" path="res://Visual Assets/New Assets/Bedroom/Plant Dave.png" id="21_ek5ei"]
@@ -30,6 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://cc2osnlrbt20" path="res://Scenes/door.tscn" id="23_f2uan"]
 [ext_resource type="PackedScene" uid="uid://dm1aw5ta85o8i" path="res://Scenes/index_change_zone.tscn" id="24_f2uan"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="28_p1x44"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="32_x75j5"]
+[ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="33_x75j5"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="34_unbiq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -240,7 +244,15 @@ texture = ExtResource("22_u7yph")
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Desk/DeskChair"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Desk/DeskChair/StaticBody2D"]
-polygon = PackedVector2Array(-10.5, 35.5, -26, -8.5, 1, -21.5, 32, 14.5)
+polygon = PackedVector2Array(-10.5, 35.5, -26, -8.5, -5, -18.5, 24.5, 19)
+
+[node name="InteractableElement" parent="Furniture/Desk/DeskChair" instance=ExtResource("3_p1x44")]
+regular = ExtResource("22_u7yph")
+selected = ExtResource("19_254x1")
+Type = 1
+
+[node name="CollisionShape2D" parent="Furniture/Desk/DeskChair/InteractableElement/Area2D" index="0"]
+position = Vector2(-10.5, 0.5)
 
 [node name="DirtyDishes" type="Sprite2D" parent="Furniture"]
 texture_filter = 1
@@ -319,10 +331,17 @@ position = Vector2(-372, 163)
 scale = Vector2(2, 2)
 frame_progress = 1.0
 
+[node name="InteractableElement" parent="Furniture/Door" index="0"]
+Type = 0
+YarnNodeLink = "Front Door"
+
 [node name="CollisionShape2D" parent="Furniture/Door/InteractableElement/Area2D" index="0"]
 position = Vector2(36, 35.5)
 rotation = -1.12324
 shape = SubResource("CapsuleShape2D_scg7i")
+
+[node name="DialogueMarker" parent="Furniture/Door/InteractableElement" index="1"]
+position = Vector2(64.5, -67.5)
 
 [node name="BathroomDoor" parent="Furniture" instance=ExtResource("23_f2uan")]
 z_index = 2
@@ -345,6 +364,7 @@ Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 
 [node name="Dave" parent="." instance=ExtResource("3_gru6s")]
+unique_name_in_owner = true
 position = Vector2(-132, 100)
 
 [node name="Wall Barriers" type="Node2D" parent="."]
@@ -416,12 +436,46 @@ inValue = -3
 position = Vector2(51, -134)
 polygon = PackedVector2Array(5, 158, -214, 93, -214, 19, -105, -31, 92, -33, 265, 35, 168, 80)
 
+[node name="ComputerScreen" type="Node2D" parent="."]
+visible = false
+z_index = 5
+
+[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("32_x75j5")
+
+[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("33_x75j5")
+
+[node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
+
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = false
+
+[node name="MainEmail" parent="ScreenUI" index="1"]
+visible = false
+
+[node name="Budget" parent="ScreenUI" index="2"]
+visible = true
+
+[node name="SaveButton" parent="ScreenUI/Budget" index="7"]
+offset_left = -109.696
+offset_top = 56.998
+offset_right = -108.708
+offset_bottom = 56.712
+
 [editable path="Furniture/Balcony Door/InteractableElement"]
 [editable path="Furniture/Bed/InteractableElement"]
 [editable path="Furniture/Bookshelf/InteractableElement"]
+[editable path="Furniture/Desk/DeskChair/InteractableElement"]
 [editable path="Furniture/DirtyDishes/InteractableElement"]
 [editable path="Furniture/Door"]
 [editable path="Furniture/Door/InteractableElement"]
 [editable path="Furniture/BathroomDoor"]
 [editable path="Furniture/BathroomDoor/InteractableElement"]
 [editable path="IndexChangeZone"]
+[editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/Budget/Chart"]

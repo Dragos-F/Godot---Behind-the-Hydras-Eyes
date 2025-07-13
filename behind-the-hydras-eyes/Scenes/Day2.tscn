@@ -27,6 +27,11 @@ Type = 3
 readyToLeave = true
 YarnNodeLink = "Boss"
 
+[node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
+Type = 2
+textToDisplay = "Dingy Apartment"
+ScenePath = "res://Scenes/bedroom.tscn"
+
 [node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
 YarnNodeLink = "Cabinet"
 
@@ -35,6 +40,12 @@ YarnNodeLink = "Posters"
 
 [node name="Jen1" parent="Background/Furniture" index="12"]
 z_index = -1
+
+[node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
+position = Vector2(22, -43.5)
+
+[node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
+position = Vector2(19.5, -33.5)
 
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
@@ -77,6 +88,7 @@ modulate = Color(0, 0, 0, 1)
 texture = ExtResource("5_slnaj")
 
 [node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture_filter = 1
 texture = ExtResource("6_k3jav")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
@@ -146,7 +158,7 @@ z_index = 10
 texture = ExtResource("12_lh2wi")
 
 [node name="BossAnchor" type="Node2D" parent="BossScreen"]
-position = Vector2(422, -209)
+position = Vector2(499, -250)
 
 [node name="Notifications" type="Node2D" parent="."]
 

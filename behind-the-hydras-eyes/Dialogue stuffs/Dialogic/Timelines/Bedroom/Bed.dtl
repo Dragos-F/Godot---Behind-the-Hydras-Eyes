@@ -11,4 +11,5 @@ Bed: Your bed. It's made, albeit badly, and you feel it call to you. Do you want
 	Bed: Your rent. Your utilties. The money you send your brother so he'll look after your parents. You're so tired, but there's no stopping any of these trains that your body is split between.
 	Bed: But how burdensome those responsibilites are, and how easily they seem to desolve under your more immediate ones, once you leave the office.
 	Bed: Tomorrow is another day, and you'll ride the train without grumbling, smile to your team encouragingly. Here's to tomorrow, Dave.
+	[signal arg="bed_sleep"]
 [end_timeline]

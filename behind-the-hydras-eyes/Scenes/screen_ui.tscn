@@ -466,13 +466,13 @@ theme_override_font_sizes/font_size = 26
 disabled = true
 text = "-"
 
-[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease"]
+[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 26
 text = "-"
 
-[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease"]
+[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 26
@@ -538,13 +538,13 @@ theme_override_font_sizes/font_size = 26
 disabled = true
 text = "+"
 
-[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase"]
+[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 26
 text = "+"
 
-[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase"]
+[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 26
@@ -628,6 +628,21 @@ text = "QUARTERLY NET INCOME: £7200"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SaveButton" type="Button" parent="Budget"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.176
+anchor_top = 0.763
+anchor_right = 0.373
+anchor_bottom = 0.872
+offset_left = -79.696
+offset_top = -5.00201
+offset_right = -78.708
+offset_bottom = -5.28802
+theme_override_font_sizes/font_size = 45
+toggle_mode = true
+text = "Save Budget"
+
 [node name="BottomBar" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 5.0
@@ -700,6 +715,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Decrease/Lifestyle" to="Budget/Chart" method="_on_lifestyle_pressed"]
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Increase/Savings" to="Budget/Chart" method="_on_savings_increase"]
 [connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Increase/Lifestyle" to="Budget/Chart" method="_on_lifestyle_increase"]
+[connection signal="toggled" from="Budget/SaveButton" to="Budget/Chart" method="_on_save_button_toggled"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]
 

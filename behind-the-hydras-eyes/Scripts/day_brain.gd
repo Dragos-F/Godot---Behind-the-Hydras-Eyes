@@ -19,7 +19,7 @@ signal endOfDay() # emitted by the dayBrain to let the specifics know when to en
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
-
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -55,8 +55,8 @@ func enter_boss():
 	BossScreen.visible = true
 	Fader.FadeDown("P. Moore's Office")
 	await Fader.fade_finished
-	var layout = Dialogic.start("BossDialogue")
-	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",BossAnchor)
+	Dialogic.Styles.load_style("BottomDialogue")
+	Dialogic.start("Boss")
 	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING BOSS")
 	leave_boss()
@@ -84,6 +84,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 	tween.set_parallel()
 	tween.tween_property(Camera,"position",camera_target,2)
 	tween.tween_interval(0.1)
+	Dialogic.Styles.load_style("Bubble Style Test")
 	var layout = Dialogic.start(nodeTitle)
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",DaveAnchor)
 	if (nodeTitle == "Alex"):
@@ -112,9 +113,10 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",target)
 	if (nodeTitle == "Bathroom Door"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",target)
-		
 	if (nodeTitle == "Dirty Dishes"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",target)
+	if (nodeTitle == "Front Door"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",target)
 	
 	await Dialogic.timeline_ended
 	print ("timeline ended")
@@ -130,3 +132,7 @@ func end_day(nextLocation:String,scene_path:String):
 	Fader.FadeDown(nextLocation)
 	print ("changing scene to "+scene_path)
 	get_tree().change_scene_to_file(scene_path)
+
+func _on_dialogic_signal(argument:String):
+	if argument == "bed_sleep":
+		end_day("Q2, 202X","res://Scenes/EndOfDemo.tscn")

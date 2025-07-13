@@ -1,4 +1,5 @@
-Boss: Congratulations! it's brilliant work we're doing, I hope you realise that. You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
+Boss: Congratulations! it's brilliant work we're doing, I hope you realise that.
+Boss:  You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
 Boss: And another congratulations for leading the crew for over a month now.
 Boss: As captain of the whole vessel, I thought I'd check in on my first mate's progress.
 Boss: You picked a location pretty sharpish. Which one are we going with again?
@@ -22,11 +23,13 @@ Boss: You picked a location pretty sharpish. Which one are we going with again?
 		jump WrongChoice
 label WrongChoice
 Boss: Your boss rustles through some papers on his desk
-Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another. Did I overrule you? I'm sure I made the best decision for the company.
+Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another. 
+Boss: Did I overrule you? I'm sure I made the best decision for the company.
 jump BossQuestions
 label BossQuestions
 Boss: It looks like the project has been running smoothly since then, so clearly I made an excellent choice in hiring you. Any questions before we wrap up
 Boss: *The boss looks at you, his expression suggesting that it's time for you to get up and leave*
+Dave: <Empty Text Event>
 - Actually, I was meaning to ask about some of these complaints I've been receiving...
 	Boss: Just the grumblings of insipid opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out.
 	set {BossUpset} += 1.0

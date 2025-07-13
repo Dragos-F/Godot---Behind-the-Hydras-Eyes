@@ -103,12 +103,14 @@ script = ExtResource("4_bwr10")
 [node name="ComputerScreen" type="Node2D" parent="."]
 visible = false
 z_index = 5
+texture_filter = 1
 
 [node name="Black" type="Sprite2D" parent="ComputerScreen"]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("5_okst0")
 
 [node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture_filter = 1
 texture = ExtResource("6_fuc61")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_1v22j")]
@@ -120,6 +122,7 @@ emailsProgressionQuota = 1
 texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+Sender_Name = "P. Moore - Pinned"
 MainBody = "Hey Dave, 
 
 Welcome aboard the ship. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, so your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
@@ -192,6 +195,32 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("8_l3qly")]
+layout_mode = 2
+Sender_Name = "M. Ahmad"
+ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Calendar Invite - Location Presentation"
+PreviewText = "Internal invite address to all fo"
+MainBody = "Hello everybody,
+
+Seeing how we have a project manager now @Dave Spritely,  believe we can now hold the greatest meeting in our calendar! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and I believe it's now time to choose.
+
+See you in the collaborative space, down the hall from the main office.
+
+Best,
+Moz"
+ReplyBody1 = "Hi Moz,
+
+Thank you for this invite. I'll see you in the collaboration space!
+
+Kind Regards
+Dave Spritely, UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
 
@@ -206,6 +235,9 @@ texture_filter = 1
 
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
+
+[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
+visible = false
 
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true
@@ -260,5 +292,6 @@ frame_progress = 0.0
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
 [editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]
