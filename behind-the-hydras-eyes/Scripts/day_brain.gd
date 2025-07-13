@@ -122,8 +122,9 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 	tween.set_parallel()
 	tween.tween_property(Camera,"position",Vector2.ZERO,1)
 
-func end_day(nextLocation:String):
+func end_day(nextLocation:String,scene_path:String):
 	Fader.FadeUp(nextLocation)
 	await Fader.fade_finished
 	Fader.FadeDown(nextLocation)
-	get_tree().change_scene_to_file("res://Scenes/Day2.tscn")
+	print ("changing scene to "+scene_path)
+	get_tree().change_scene_to_file(scene_path)

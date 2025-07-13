@@ -15,6 +15,7 @@ enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
 @export var textToDisplay:String
 @export var DialogueMarker:Node2D
 @export var YarnNodeLink:String
+@export var ScenePath:String
 
 
 
@@ -47,7 +48,7 @@ func _process(delta: float) -> void:
 				print ("entering screen")
 			InteractType.EntryDoor:
 				if (readyToLeave):
-					day_brain.end_day(textToDisplay)
+					day_brain.end_day(textToDisplay,ScenePath)
 			InteractType.BossDoor:
 				if (!readyToLeave):
 					day_brain.run_dialogue("PreBossDoor",DialogueMarker)

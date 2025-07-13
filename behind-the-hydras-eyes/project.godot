@@ -40,7 +40,9 @@ directories/dch_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
 "Moz": "res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",
+"Olu": "res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",
 "Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
+"Richard": "res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",
 "Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"

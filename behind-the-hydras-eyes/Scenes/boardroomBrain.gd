@@ -2,11 +2,18 @@ extends Node2D
 @export var slides:Sprite2D
 @export var MozAnchor:Node2D
 @export var BossAnchor:Node2D
+@export var OluAnchor:Node2D
+@export var RichardAnchor:Node2D
+@export var DaveAnchor:Node2D
 
 func _ready() -> void:
 	var layout = Dialogic.start("Boardroom")
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",BossAnchor)
-	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Moz.dch",MozAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",MozAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",OluAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch", RichardAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",DaveAnchor)
+	
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 

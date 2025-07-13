@@ -38,6 +38,7 @@ position = Vector2(28, -1)
 Type = 2
 readyToLeave = true
 textToDisplay = "Next Day"
+ScenePath = "res://Scenes/boardroom.tscn"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
 YarnNodeLink = "Cabinet"

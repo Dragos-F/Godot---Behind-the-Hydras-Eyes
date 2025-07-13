@@ -85,13 +85,9 @@ _data = {
 script = ExtResource("1_u3u2q")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 one_shot = true
 autostart = true
-
-[node name="Dave" parent="." instance=ExtResource("2_40qti")]
-z_index = 2
-position = Vector2(196, 81)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -746,3 +742,9 @@ position = Vector2(741, 358)
 scale = Vector2(2, 2)
 texture = ExtResource("13_44730")
 flip_h = true
+
+[node name="Dave" parent="." instance=ExtResource("2_40qti")]
+z_index = 2
+position = Vector2(196, 81)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

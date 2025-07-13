@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bh2ob7luq8sml" path="res://Visual Assets/New Assets/Full Screen Scenes/Boardroom Screen.png" id="1_jrmwu"]
 [ext_resource type="Texture2D" uid="uid://b4hdj5vl3cytq" path="res://Visual Assets/New Assets/Full Screen Scenes/Boardroom Powerpoint.png" id="3_ok08t"]
 
-[node name="Boardroom" type="Node2D" node_paths=PackedStringArray("slides", "MozAnchor", "BossAnchor")]
+[node name="Boardroom" type="Node2D" node_paths=PackedStringArray("slides", "MozAnchor", "BossAnchor", "OluAnchor", "RichardAnchor")]
 script = ExtResource("1_c6jm2")
 slides = NodePath("Slides")
 MozAnchor = NodePath("MozDialogAnchor")
 BossAnchor = NodePath("PMooreAnhcor")
+OluAnchor = NodePath("OluAnchor")
+RichardAnchor = NodePath("RichardAnchor")
 
 [node name="StaticBackground" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -30,3 +32,12 @@ position = Vector2(-707, -223)
 
 [node name="PMooreAnhcor" type="Node2D" parent="."]
 position = Vector2(799, 425)
+
+[node name="OluAnchor" type="Node2D" parent="."]
+position = Vector2(198, 459)
+
+[node name="RichardAnchor" type="Node2D" parent="."]
+position = Vector2(-287, 452)
+
+[node name="DaveAnchor" type="Node2D" parent="."]
+position = Vector2(591, 480)
