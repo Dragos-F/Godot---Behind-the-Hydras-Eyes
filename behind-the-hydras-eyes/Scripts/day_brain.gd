@@ -12,9 +12,13 @@ class_name DayBrain
 @export var Camera:Camera2D
 @export var camera_zoom:Vector2
 @export var camera_target:Vector2
-
+@export var standing_Alex:Node2D
+@export var AlexAnchor:Node2D
+@export var JenAnchor:Node2D
 
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -99,10 +103,13 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",target)
 	if (nodeTitle ==  "Kettle"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",AlexAnchor)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",JenAnchor)
 	if (nodeTitle == "Text From Boss"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",target)
 	if (nodeTitle == "WaterCooler"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",standing_Alex)
 	if (nodeTitle == "Corkboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):
@@ -117,7 +124,10 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",target)
 	if (nodeTitle == "Front Door"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",target)
-	
+	if (nodeTitle == "BossDoor"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
+	if (nodeTitle == "FilingCabinet"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",target)
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()
@@ -136,3 +146,9 @@ func end_day(nextLocation:String,scene_path:String):
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep":
 		end_day("Q2, 202X","res://Scenes/EndOfDemo.tscn")
+	if argument == "watercooler_Alex":
+		standing_Alex.visible = true
+	if argument == "no_watercooler_Alex":
+		standing_Alex.visible = false
+		
+		

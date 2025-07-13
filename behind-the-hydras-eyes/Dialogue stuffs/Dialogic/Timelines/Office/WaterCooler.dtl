@@ -1,8 +1,10 @@
-label Day 01
 WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
 - Yes
 	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
 	WaterCooler: Oh, here comes Alex.
+	[signal arg="watercooler_Alex"]
+	Alex: Hey what's up
 - No
 	Dave: I am adequately quenched as is, thanks.
+[signal arg="no_watercooler_Alex"]
 [end_timeline]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=13 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="3_j0ssp"]
+[ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_lh2wi"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_kmxud"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="5_slnaj"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_k3jav"]
@@ -25,7 +26,7 @@ YarnNodeLink = "Corkboard"
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor boss" index="0"]
 Type = 3
 readyToLeave = true
-YarnNodeLink = "Boss"
+YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 Type = 2
@@ -53,13 +54,20 @@ Type = 1
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
 YarnNodeLink = "Fountain"
 
-[node name="InteractableElement" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine" index="0"]
-YarnNodeLink = "CoffeeMachine"
-
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera")]
+[node name="StandingAlex" type="Node2D" parent="Background"]
+visible = false
+position = Vector2(121, 12)
+scale = Vector2(2, 2)
+
+[node name="AlexStanding" type="Sprite2D" parent="Background/StandingAlex"]
+texture_filter = 1
+position = Vector2(-14.5, 47)
+texture = ExtResource("3_lh2wi")
+
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -67,6 +75,9 @@ DaveAnchor = NodePath("../Dave/DialogueMarker")
 BossAnchor = NodePath("../BossScreen/BossAnchor")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
+standing_Alex = NodePath("../Background/StandingAlex")
+AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
+JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -147,7 +158,7 @@ emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
 BossNotif = NodePath("../Notifications/BossDoor")
-BossDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
 
 [node name="BossScreen" type="Node2D" parent="."]

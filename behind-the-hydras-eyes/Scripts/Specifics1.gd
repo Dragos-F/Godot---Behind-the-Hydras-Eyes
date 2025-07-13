@@ -8,9 +8,10 @@ extends Node
 @export var DoorNotif:AnimatedSprite2D
 @export var brain:DayBrain
 @export var BossTextAnchor:Node2D
-
+@export var BossDoor:Interactable
 
 func _ready() -> void:
+	Dialogic.VAR.CurrentDay = "Day02"
 	var layout = Dialogic.start("Text From Boss")
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
 	
@@ -19,6 +20,7 @@ func _process(delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota):
 		outsideDoor.readyToLeave = true
 		DoorNotif.visible = true
+		
 
 func _on_alex_interactable_interacted() -> void:
 	alexInteracted = true

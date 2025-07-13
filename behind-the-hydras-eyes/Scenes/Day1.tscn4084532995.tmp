@@ -74,6 +74,9 @@ visible = true
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
 position = Vector2(-12.5, -15.5)
 
+[node name="InteractableElement" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine" index="0"]
+YarnNodeLink = "CoffeeMachine"
+
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)
 
@@ -96,15 +99,14 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_bwr10")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex")]
 script = ExtResource("3_rakbq")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
+camera_target = null
 standing_Alex = NodePath("../Background/Kitchen/StandingAlex")
-AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
-JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960

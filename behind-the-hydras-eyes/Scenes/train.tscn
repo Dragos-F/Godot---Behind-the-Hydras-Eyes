@@ -746,5 +746,6 @@ flip_h = true
 [node name="Dave" parent="." instance=ExtResource("2_40qti")]
 z_index = 2
 position = Vector2(196, 81)
+move_time = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

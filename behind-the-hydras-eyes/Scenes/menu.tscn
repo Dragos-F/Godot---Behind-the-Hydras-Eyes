@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene load_steps=12 format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -11,6 +11,9 @@
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_6swd7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3rjx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Menu" type="Node2D"]
@@ -105,6 +108,47 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_q3rjx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_q3rjx")
 text = "Options"
 
+[node name="Drawer3" type="Sprite2D" parent="." node_paths=PackedStringArray("folder")]
+z_index = 3
+texture_filter = 1
+position = Vector2(-466, 363)
+scale = Vector2(2, 2)
+texture = ExtResource("3_wbdvm")
+script = ExtResource("4_6swd7")
+folder = NodePath("ManillaFolder1")
+
+[node name="ManillaFolder1" type="Sprite2D" parent="Drawer3"]
+visible = false
+z_index = -1
+texture_filter = 1
+position = Vector2(-10.5, 70.5)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_q3rjx")
+
+[node name="Options" type="Button" parent="Drawer3"]
+texture_filter = 1
+offset_left = -46.5
+offset_top = -16.5
+offset_right = 8.5
+offset_bottom = -0.5
+scale = Vector2(1.665, 1.665)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6swd7")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/focus = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3rjx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q3rjx")
+text = "Quit"
+
 [node name="Leaflet" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(267, -273)
@@ -112,12 +156,26 @@ rotation = -0.168761
 scale = Vector2(2, 2)
 texture = ExtResource("5_6swd7")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaflet"]
+offset_left = -55.9956
+offset_top = -108.953
+offset_right = 83.0043
+offset_bottom = -8.95291
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.701961, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_6swd7")
+theme_override_font_sizes/normal_font_size = 22
+text = "Wishlist Now!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Button" type="Button" parent="Leaflet"]
-visible = false
 offset_left = -57.0
 offset_top = -107.0
-offset_right = 58.0
+offset_right = 55.0
 offset_bottom = 110.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6swd7")
 
 [node name="Sticky" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -126,8 +184,34 @@ rotation = 0.0796631
 scale = Vector2(2, 2)
 texture = ExtResource("6_7qvly")
 
+[node name="Button" type="Button" parent="Sticky"]
+offset_left = -45.0
+offset_top = -39.0
+offset_right = 48.0
+offset_bottom = 41.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6swd7")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Sticky"]
+offset_left = -53.3827
+offset_top = -40.3799
+offset_right = 85.6173
+offset_bottom = 59.6201
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_6swd7")
+theme_override_font_sizes/normal_font_size = 22
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]
 [connection signal="pressed" from="Drawer/Start" to="." method="_on_start_pressed"]
 [connection signal="mouse_entered" from="Drawer2/Options" to="Drawer2" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer2/Options" to="Drawer2" method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Drawer3/Options" to="Drawer3" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="Drawer3/Options" to="Drawer3" method="_on_start_mouse_exited"]
+[connection signal="pressed" from="Drawer3/Options" to="." method="on_quit_pressed"]
+[connection signal="pressed" from="Leaflet/Button" to="." method="_on_wishlist_pressed"]
+[connection signal="pressed" from="Sticky/Button" to="." method="_on_credits_pressed"]

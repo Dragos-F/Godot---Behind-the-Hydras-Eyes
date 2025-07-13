@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 		BossDoor.readyToLeave = true
 		BossNotif.visible = true
 		oncev1 = false
+		BossDoor.Type = BossDoor.InteractType.BossDoor
 
 func _on_alex_interactable_interacted() -> void:
 	alexInteracted = true

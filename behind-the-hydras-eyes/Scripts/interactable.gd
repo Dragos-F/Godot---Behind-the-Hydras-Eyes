@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 				print("Asked Brain to start dialogue "+YarnNodeLink)
 				if parentSprite is AnimatedSprite2D:
 					parentSprite.play("open")
+					
 			InteractType.Desk:
 				day_brain.enter_screen()
 				print ("entering screen")

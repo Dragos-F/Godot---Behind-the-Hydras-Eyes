@@ -147,12 +147,14 @@ visible = false
 polygon = PackedVector2Array(128, -21.5, -6, -92.2, -6, -89.3, -124, -25.5, -104.5, -15, -42, 125.5, 69.5, 55.5, 122.5, 29)
 
 [node name="PlantDrapingLeft" type="Sprite2D" parent="Furniture"]
+z_index = -2
 texture_filter = 1
 position = Vector2(-225, -411)
 scale = Vector2(2, 2)
 texture = ExtResource("6_k1f4p")
 
 [node name="PlantDrapingRight" type="Sprite2D" parent="Furniture"]
+z_index = -2
 texture_filter = 1
 position = Vector2(-187, -411)
 scale = Vector2(2, 2)
@@ -240,6 +242,7 @@ polygon = PackedVector2Array(19, -9, 19, 13.5, 0, 27.5, -27, 15, -26, -11)
 [node name="InteractableElement" parent="Furniture/OfficeFilingCabinet" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("14_0krsi")
 selected = ExtResource("15_cj83x")
+YarnNodeLink = "FilingCabinet"
 
 [node name="CollisionShape2D" parent="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" index="0"]
 position = Vector2(-28.5, 55.5)
@@ -567,6 +570,7 @@ texture = ExtResource("44_qnlhq")
 regular = ExtResource("44_qnlhq")
 selected = ExtResource("45_fcnck")
 sizeMult = 1.0
+YarnNodeLink = "Coffee"
 
 [node name="CollisionShape2D" parent="Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement/Area2D" index="0"]
 position = Vector2(-28.5, 89.5)
