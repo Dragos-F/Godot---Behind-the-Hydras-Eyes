@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=12 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_4qd7i"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_r33wl"]
 [ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="9_qarlu"]
+[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="11_p8761"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
 
 [node name="Main" type="Node2D"]
@@ -47,11 +48,12 @@ YarnNodeLink = "CoffeeMachine"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "Camera")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
-BossDialogue = NodePath("../BossScreen/Dialogue Target")
+BossDialogue = NodePath("../BossScreen/BossAnchor")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
+BossAnchor = NodePath("../BossScreen/BossAnchor")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 
@@ -80,7 +82,6 @@ texture = ExtResource("6_k3jav")
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
 texture_filter = 1
-emailsProgressionQuota = 2
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -119,12 +120,23 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
+visible = false
+
 [node name="Dave" parent="." instance=ExtResource("8_r33wl")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics2" type="Node" parent="."]
+[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
 script = ExtResource("9_qarlu")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
+BossNotif = NodePath("../Notifications/BossDoor")
+BossDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+brain = NodePath("../DayBrain")
 
 [node name="BossScreen" type="Node2D" parent="."]
 visible = false
@@ -133,12 +145,33 @@ z_index = 10
 [node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
 texture = ExtResource("12_lh2wi")
 
-[node name="Dialogue Target" type="Node2D" parent="BossScreen"]
+[node name="BossAnchor" type="Node2D" parent="BossScreen"]
 position = Vector2(422, -209)
 
-[node name="InMemoryVariableStorage" type="Node" parent="."]
-metadata/_custom_type_script = "uid://b1o5xpu22evvx"
+[node name="Notifications" type="Node2D" parent="."]
 
+[node name="Alex" parent="Notifications" instance=ExtResource("11_p8761")]
+position = Vector2(-552, -256)
+frame_progress = 0.801034
+
+[node name="Jen" parent="Notifications" instance=ExtResource("11_p8761")]
+position = Vector2(-138, -470)
+frame_progress = 0.0
+
+[node name="Door" parent="Notifications" instance=ExtResource("11_p8761")]
+visible = false
+position = Vector2(-803, 161)
+frame_progress = 0.0
+
+[node name="BossDoor" parent="Notifications" instance=ExtResource("11_p8761")]
+visible = false
+position = Vector2(813, -338)
+frame_progress = 0.0
+
+[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
+[connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
