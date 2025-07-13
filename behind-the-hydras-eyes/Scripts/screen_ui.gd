@@ -37,6 +37,8 @@ func open_email(text:Array[String],boss:bool)->void:
 	Sender.text = text[0]
 	ToBox.text = text[1]
 	MainEmailBody.text ="[b]"+text[2]+"[/b]\n\n" + text[3]
+	MainEmailBody.visible_ratio = 0.9
+	MainEmailBody.visible_ratio = 1
 	if (!boss):
 		reply.visible = true
 		reply.disabled = false
@@ -83,6 +85,8 @@ func _on_send_pressed() -> void:
 			i.disabled = false
 	inbox_buttons.clear()
 	emailsDone+=1
+	MainEmailBody.visible_ratio = 0.9
+	MainEmailBody.visible_ratio = 1
 	
 
 

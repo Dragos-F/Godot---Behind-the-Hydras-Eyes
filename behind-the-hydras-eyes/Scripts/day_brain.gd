@@ -99,7 +99,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Clipboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",target)
-	if (nodeTitle == "CoffeeMachine"):
+	if (nodeTitle == "Coffee"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",target)
 	if (nodeTitle ==  "Kettle"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",target)
@@ -124,10 +124,17 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",target)
 	if (nodeTitle == "Front Door"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",target)
+	if (nodeTitle == "Bookshelf"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",target)
+	
 	if (nodeTitle == "BossDoor"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
 	if (nodeTitle == "FilingCabinet"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",target)
+	if (nodeTitle == "BossDoor"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/BossDoor.dch",target)
+	
+	
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=14 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="6_k3jav"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_4qd7i"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_r33wl"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="9_j0ssp"]
 [ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="9_qarlu"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="11_p8761"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
@@ -24,17 +25,12 @@ scale = Vector2(2, 2)
 YarnNodeLink = "Corkboard"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor boss" index="0"]
-Type = 3
-readyToLeave = true
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 Type = 2
 textToDisplay = "Dingy Apartment"
 ScenePath = "res://Scenes/bedroom.tscn"
-
-[node name="InteractableElement" parent="Background/Furniture/OfficeFilingCabinet" index="2"]
-YarnNodeLink = "Cabinet"
 
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
 YarnNodeLink = "Posters"
@@ -105,11 +101,14 @@ texture = ExtResource("6_k3jav")
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
 texture_filter = 1
+emailsProgressionQuota = 3
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+Sender_Name = "M. Ahmad"
+PreviewText = "Hey Dave, I just wanted to say good"
 MainBody = "Hey Dave, 
 
 I just wanted to say good work navigating the meeting yesterday. It was definitely throwing you in the deep end, but the captain seemed to approve. If you have any questions about how the company works that A-man or big J can't answer, just gimme a shout.
@@ -124,9 +123,57 @@ Really glad to hear it, thanks for preparing the powerpoint and walking us throu
 
 Best,
 Dave"
+boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
+
+[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("9_j0ssp")]
+layout_mode = 2
+Sender_Name = "M Lopez"
+ToAddress = "contactus@forwardgreen.co.uk"
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
+PreviewText = "To whom it may concern,"
+MainBody = "To whom it may concern,
+
+I've been in correspondence with your local office about your proposed development of \"Lagoon Breeze\". They seem confident that it is soon going ahead, following approval by the state authorities and a local meeting. However, I cannot find any Environmental Impact Assessment in the submitted documents, so was hoping you could share it with me. As I'm sure you appreciate, our lagoon is home to a plethora of rare wildlife, and without careful consideration of their wellbeing my constituents and I would not be able to consent to your project.	
+
+Regards,
+Miguel Lopez"
+ReplyBody1 = "Hi Miguel,
+
+I am sorry that you are unsatisfied with my previous response. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+
+Kind Regards,
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("9_j0ssp")]
+layout_mode = 2
+Sender_Name = "R. Spiegel"
+ToAddress = "contactus@forwardgreen.co.uk"
+Subject = "Subj: FW: Safer Investments"
+PreviewText = "To whom it may concern,"
+MainBody = "Dear [INSERT NAME],
+
+Have you been worrying about your large investments and their possible returns? Do you wish to become an overnight billionaire? (not guaranteed). Our Safer Investments offer, could take your heavy assets and convert them into the wonderful word of cryptocurrency. If you are ready to level up to the modern world, please reply to this message.
+
+With eager financial advice,
+Ramonne Spiegel.
+Marketing Director, Safer Investments"
+ReplyBody1 = "Hi Ramonne,
+
+I appreciate your email, but I don't think we'll be interested in any other investments at this time.
+
+Kind Regards,
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
 
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
@@ -214,5 +261,7 @@ frame_progress = 0.0
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail2"]
 [editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]

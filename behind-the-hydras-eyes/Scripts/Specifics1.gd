@@ -11,7 +11,7 @@ extends Node
 @export var BossDoor:Interactable
 
 func _ready() -> void:
-	Dialogic.VAR.CurrentDay = "Day02"
+	Dialogic.VAR.CurrentDay = "Day01"
 	var layout = Dialogic.start("Text From Boss")
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
 	

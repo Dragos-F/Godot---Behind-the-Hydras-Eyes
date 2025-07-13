@@ -3,7 +3,28 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
 	WaterCooler: Oh, here comes Alex.
 	[signal arg="watercooler_Alex"]
-	Alex: Hey what's up
+	Alex: Hey
+	Dave: Hey. The weathers nice today, huh?
+	Alex: Sure is. I'm going down to a lake this evening to enjoy it.
+	Dave: Oh, do you fish?
+	Alex: No, no. I catch swans. 
+	Dave: Oh nice, so—wait, what?
+	Alex: I watch the local swan populations, then catch any injured ones to take them to the sanctuary.
+	Dave: Oh, that's really, uh, interesting. And if there's no injured ones?
+	Alex: I just sit there. It nice, no phone in sight, no-one trying to reach me.
+	- I couldn't do that
+		Alex: Yeah? It's not for the faint of heart I guess—all of it, I mean.
+		Alex: Facing off against a distressed swan is no walk in the park, but neither is facing the world around you without any device to protect you from boredom.
+	- I could do that
+		Alex: Yeah? It's nice. You get to know all the swans; their personalities and habits. Really recognise them as complex creatures. Worthy of respect.
+	- Does your partner approve of that?
+		Alex: ...
+		Alex: My wife actually left me last year.
+		Dave: ...oh. I'm sorry. Because you were spending so much time with the swans?
+		Alex: No. I slept with her sister. 
+		Dave: ...
+		Alex: ...
+		Alex: Anyway, I'll get back to work
 - No
 	Dave: I am adequately quenched as is, thanks.
 [signal arg="no_watercooler_Alex"]

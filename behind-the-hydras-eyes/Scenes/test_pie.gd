@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	]
 	savingsText.text = "£"+str(startingSavings+totalSalary*values[2])
 	
+	
 
 
 
@@ -45,7 +46,10 @@ func _on_lifestyle_increase() -> void: #INCREASE
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		values[1] += additionalsDifference
-		values[2] -= additionalsDifference
+		if (values[2]>=0):
+			values[2] -= additionalsDifference
+		else:
+			values[3] -= additionalsDifference
 
 	else:
 		values[1] -= additionalsDifference

@@ -18,6 +18,7 @@ texture = ExtResource("1_jrmwu")
 
 [node name="Slides" type="Sprite2D" parent="."]
 z_index = -1
+texture_filter = 1
 position = Vector2(2967, -32)
 scale = Vector2(2, 2)
 texture = ExtResource("3_ok08t")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c13qxsbgv6mbv"
-path="res://.godot/imported/Dirty Dishes Selected.png-5a867c66157338e4a714210949c3e71b.ctex"
+path="res://.godot/imported/Dirty Dishes Selected.png-edf964249b90fc9decc032297be33ac6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/New Assets/Bedroom/Dirty Dishes Selected.png"
-dest_files=["res://.godot/imported/Dirty Dishes Selected.png-5a867c66157338e4a714210949c3e71b.ctex"]
+source_file="res://Visual Assets/New Assets/Bedroom/Selected/Dirty Dishes Selected.png"
+dest_files=["res://.godot/imported/Dirty Dishes Selected.png-edf964249b90fc9decc032297be33ac6.ctex"]
 
 [params]
 

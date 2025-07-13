@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=44 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://c7vvc0eb6g06e" path="res://Visual Assets/New Assets/Bedroom/Selected/Chair Dave Selected.png" id="19_254x1"]
 [ext_resource type="Texture2D" uid="uid://bvn36d82rv702" path="res://Visual Assets/New Assets/Bedroom/Shelf.png" id="19_ysrrp"]
 [ext_resource type="Texture2D" uid="uid://cl20cpwljqmmu" path="res://Visual Assets/New Assets/Bedroom/Weights.png" id="20_ii3ny"]
+[ext_resource type="Texture2D" uid="uid://c13qxsbgv6mbv" path="res://Visual Assets/New Assets/Bedroom/Selected/Dirty Dishes Selected.png" id="21_1elqf"]
 [ext_resource type="Texture2D" uid="uid://wmr11mcrgsaf" path="res://Visual Assets/New Assets/Bedroom/Plant Dave.png" id="21_ek5ei"]
 [ext_resource type="Texture2D" uid="uid://bwr0u2o4fm7b" path="res://Visual Assets/New Assets/Bedroom/Chair Dave.png" id="22_u7yph"]
 [ext_resource type="PackedScene" uid="uid://cc2osnlrbt20" path="res://Scenes/door.tscn" id="23_f2uan"]
@@ -261,6 +262,8 @@ scale = Vector2(2, 2)
 texture = ExtResource("11_254x1")
 
 [node name="InteractableElement" parent="Furniture/DirtyDishes" instance=ExtResource("3_p1x44")]
+regular = ExtResource("11_254x1")
+selected = ExtResource("21_1elqf")
 YarnNodeLink = "Dirty Dishes"
 
 [node name="Area2D" parent="Furniture/DirtyDishes/InteractableElement" index="0"]
@@ -450,6 +453,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
+visible = true
 
 [node name="EmailList" parent="ScreenUI" index="0"]
 visible = false
@@ -460,11 +464,34 @@ visible = false
 [node name="Budget" parent="ScreenUI" index="2"]
 visible = true
 
+[node name="Label" parent="ScreenUI/Budget/Additional Costs/Panel/HBoxContainer" index="0"]
+text = "SUBSCRIPTIONS"
+
+[node name="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="0"]
+text = "The Financier Monthly"
+
+[node name="CheckButton2" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="1"]
+text = "Onlyfans XxMonyxX"
+
+[node name="CheckButton3" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="2"]
+text = "TV License "
+
+[node name="CheckButton4" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="3"]
+text = "DeliverNow Max"
+
+[node name="CheckButton5" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="4"]
+text = "NilePrime"
+
 [node name="SaveButton" parent="ScreenUI/Budget" index="7"]
 offset_left = -109.696
 offset_top = 56.998
 offset_right = -108.708
 offset_bottom = 56.712
+
+[node name="Emails" parent="ScreenUI/BottomBar" index="0"]
+visible = false
+
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
 [editable path="Furniture/Balcony Door/InteractableElement"]
 [editable path="Furniture/Bed/InteractableElement"]

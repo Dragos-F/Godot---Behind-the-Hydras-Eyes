@@ -36,26 +36,30 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("interact")&&once&&near):
 		print(parentSprite.name+" interacted")
 		interacted.emit()
-		dave._stopDave()
+		
 		match Type:
 			InteractType.Dialogue:
 				day_brain.run_dialogue(YarnNodeLink,DialogueMarker)
 				print("Asked Brain to start dialogue "+YarnNodeLink)
 				if parentSprite is AnimatedSprite2D:
 					parentSprite.play("open")
-					
+					dave._stopDave()
 			InteractType.Desk:
 				day_brain.enter_screen()
+				dave._stopDave()
 				print ("entering screen")
 			InteractType.EntryDoor:
 				if (readyToLeave):
 					day_brain.end_day(textToDisplay,ScenePath)
+					dave._stopDave()
 			InteractType.BossDoor:
 				if (!readyToLeave):
 					day_brain.run_dialogue("PreBossDoor",DialogueMarker)
+					dave._stopDave()
 				else:
 					day_brain.enter_boss()
 					readyToLeave = false;
+					dave._stopDave()
 		
 		once = false
 
