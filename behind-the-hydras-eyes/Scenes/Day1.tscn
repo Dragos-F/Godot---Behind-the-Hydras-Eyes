@@ -58,6 +58,12 @@ position = Vector2(13, -39.5)
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
+[node name="StaticBody2D" parent="Background/Furniture/DaveDesk/OfficeCornerDesk" index="0"]
+visible = true
+
+[node name="CollisionPolygon2D" parent="Background/Furniture/DaveDesk/OfficeCornerDesk/StaticBody2D" index="0"]
+polygon = PackedVector2Array(-56.5, -38.5, -95.5, -30.5, -119, -3.5, -61.5, 33.5, -61.5, 87, -56.5, 87, -39, 97.5, -5.5, 108, -0.5, 108, 0, 63.5, 146, 70.5, 138, 46, 135.5, 31, 98, 24)
+
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
 

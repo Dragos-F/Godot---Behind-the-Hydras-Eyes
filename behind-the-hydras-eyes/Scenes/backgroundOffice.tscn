@@ -422,7 +422,7 @@ texture = ExtResource("33_x5kt2")
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/DaveDesk/OfficeCornerDesk/StaticBody2D"]
-polygon = PackedVector2Array(-69, -46.5, -100.5, -35, -119, -3.5, -61.5, 33.5, -61.5, 87, -56.5, 87, -39, 97.5, -5.5, 108, -0.5, 108, 0, 63.5, 146, 70.5, 138, 46, 135.5, 31, 98, 24)
+polygon = PackedVector2Array(-48, -31.5, -76, -30, -119, -3.5, -61.5, 33.5, -61.5, 87, -56.5, 87, -39, 97.5, -5.5, 108, -0.5, 108, 0, 63.5, 146, 70.5, 138, 46, 135.5, 31, 98, 24)
 
 [node name="OfficeDesk2" type="Sprite2D" parent="Furniture/DaveDesk"]
 texture_filter = 1
