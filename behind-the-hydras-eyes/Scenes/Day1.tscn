@@ -40,7 +40,7 @@ YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 Type = 2
-textToDisplay = "Next Day"
+textToDisplay = "The Board Room"
 ScenePath = "res://Scenes/boardroom.tscn"
 
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
