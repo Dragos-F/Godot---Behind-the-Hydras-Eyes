@@ -48,7 +48,7 @@ position = Vector2(19.5, -33.5)
 Type = 1
 
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
-YarnNodeLink = "Fountain"
+YarnNodeLink = "WaterCooler"
 
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"

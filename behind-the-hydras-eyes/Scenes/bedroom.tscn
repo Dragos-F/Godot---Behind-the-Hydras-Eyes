@@ -453,7 +453,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
-visible = true
 
 [node name="EmailList" parent="ScreenUI" index="0"]
 visible = false
