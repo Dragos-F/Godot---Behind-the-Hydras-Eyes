@@ -1,6 +1,6 @@
-Boss: Congratulations! it's brilliant work we're doing, I hope you realise that.
+Boss: Your first quarter's over. Congratulations! it's brilliant work we're doing, I hope you realise that.
 Boss: You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
-Boss: And another congratulations for leading the crew for over a month now.
+Boss: And another congratulations for leading your little part of the crew so well.
 Boss: As captain of the whole vessel, I thought I'd check in on my first mate's progress.
 Boss: You picked a location pretty sharpish. Which one are we going with again?
 - Five Vulture Meadows
@@ -17,21 +17,24 @@ Boss: You picked a location pretty sharpish. Which one are we going with again?
 		jump WrongChoice
 - Sunrise Farm
 	if PermanentGlobal.LocationChoice == 3.0:
-		Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing around there
+		Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing out there.
 		jump BossQuestions
 	else:
 		jump WrongChoice
 label WrongChoice
-Boss: Your boss rustles through some papers on his desk
+Boss: Your boss rustles through some papers on his desk.
 Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another.
-Boss: Did I overrule you? I'm sure I made the best decision for the company.
+Boss: I'm sure it's an easy mistake to make...
+Boss: [i]He raises an eyebrow at you, eyes glinting in warning[/i]
+Boss: ...for someone who's taken their eye off the ball, that is. And by ball, I mean sails or something. And by sails, I mean the bottom line. Do you understand?
+Dave: ...
+Boss: Anyway.
 jump BossQuestions
 label BossQuestions
-Boss: It looks like the project has been running smoothly since then, so clearly I made an excellent choice in hiring you. Any questions before we wrap up
-Boss: *The boss looks at you, his expression suggesting that it's time for you to get up and leave*
-Dave: <Empty Text Event>
+Boss: It looks like the project has been running smoothly since the meeting, so clearly I made an excellent choice in hiring you. Any questions before we wrap up?
+Boss: [i]The expression Mr Moore fixes you with clearly suggests that its time for you to leave[/i]
 - Actually, I was meaning to ask about some of these complaints I've been receiving...
-	Boss: Just the grumblings of insipid opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out.
+	Boss: Just insipid grumblings from opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out.
 	set {BossUpset} += 1.0
 	jump BossQuestions
 - Alex mentioned something about protests, is that something we need to worry about?

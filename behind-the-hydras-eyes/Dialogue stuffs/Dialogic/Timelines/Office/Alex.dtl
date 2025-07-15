@@ -2,10 +2,10 @@ jump {CurrentDay}
 label Day01
 Alex: ...
 Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help you?
-Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do..well, all the odd bits. Where’ve you joined us from?
+Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...well, all the odd bits. Where’ve you joined us from?
 - Oh nowhere; I went back to uni.
 	Alex: New blood, eh? Well, the whole team is pretty green. And hey, maybe that's a good thing in our industry.
-	Alex: (and definitely not a sign of poor retention rates spurred by bad leadership)
+	Alex: [shake rate=20.0 level=5 connected=1]and definitely not a sign of poor retention rates spurred by bad leadership[/shake]
 	Dave: Hm?
 - I'm an ex-teacher!
 	Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
@@ -25,13 +25,13 @@ Alex: What can I help you with?
 - What do I need to know?
 	Alex: Very little, honestly. I'm sure Moz will run you through everything.
 	Alex: Basically, we're poised to start construction, and can get everything moving as soon as we've locked in a location.
-	Alex: There's three contenders, all around the same lagoon. At the meeting, just sit, listen, and give feedback if needed. Nothing you can't handle. 
+	Alex: There's three contenders, all around the same lagoon. At the meeting, just sit, listen, and give feedback if needed. Nothing you can't handle.
 	jump Day01.2 Choice1
 - Who's going to be at the meeting?
-	Alex: Moz is presenting. He's...hm. I can't even remember his official title. Nuisance officer? 
+	Alex: Moz is presenting. He's...hm. I can't even remember his official title. Nuisance officer?
 	Dave: Oh, is there some sort of problem I should know about?
 	Alex: Nah, I'm just kidding. He's high energy and not very professional, but Patrick let's it slide. You'll see the dynamic.
-	Alex: Besides him...Well, Richard will be out of his evil lair. He's the head of the legal department. 
+	Alex: Besides him...Well, Richard will be out of his evil lair. He's the head of the legal department.
 	Alex: Janet should be...no, my bad. Olu's head of finance at the minute, he'll be there. I've not met him yet so can't help you there.
 	Dave: And Patrick?
 	Alex: Is Patrick. He "says it like it is"—one of those sorts. Suck up to him if you like, he always likes that. Otherwise, just try not to annoy him.

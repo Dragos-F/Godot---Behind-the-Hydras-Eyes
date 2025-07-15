@@ -8,7 +8,7 @@ Moz: Project Lagoon Breeze is ambitious and forward looking, estimated to be abl
 Moz: A project of this scale means local economies buoyed by construction work, plus vital upskilling for engineers.
 Moz: And with a projected lifespan of 25 years, the revenue generated in so wind-rich a region will be huge.
 Moz: This will, of course, be a boon not just to us but also the locals\: a fraction of our profits will go to our community benefit fund!
-Moz: /He pauses slightly, as if expecting applause, then glances in disappointment around the room when none is forthcoming./
+Moz: [i]He pauses slightly, as if expecting applause, then glances in disappointment around the room when none is forthcoming.[/i]
 Moz: Well, I'm glad you all loved my spiel, thanks for resisting the overwhelming urge to cheer. Gotta keep this professional I guess.
 label Location 01
 Moz: Any questions?
@@ -19,13 +19,13 @@ Moz: Any questions?
 		Olu: And any repairs during the turbines' lifespans will mean periods of inactivity, and—
 		Moz: ANYWAY, it's a rounding thing. Finance should know all about rounding, and our partners are huge fans of it.
 		Boss: No, our turbines are huge fans!! AHAHA!
-		Moz: /He forces a laugh, glancing at you as you give him a look of pity/
+		Moz: [i]He forces a laugh, glancing at you as you give him a look of pity[/i]
 	- Right, sure.
 	jump Location 01
 - What do you mean by upskilling?
 	Moz: Simple\: we're bringing exciting engineering jobs to the area. Better pay and conditions than farming or whatever else they do, right?
 	- Who actually gets those jobs though?
-		Moz: /He blinks at you, as if not comprehending/
+		Moz: [i]He blinks at you, as if not comprehending[/i]
 		Richard: Europeans with degrees that we can coax over there by touting a low cost of living and wonderful climate.
 		Moz: Thanks Richard, super helpful.
 		Moz: NOT! I'm sure at least some of the jobs go to locals, and any jobs for them is a plus.
@@ -44,10 +44,10 @@ Moz: Any questions?
 	jump Location 01
 - Sit quiet.
 Olu: I can see there's very little running costs expected post-construction. Is this properly accounting for risks such as breakdowns?
-Moz: [mockingly] "Is this properly accounting"—Yes! Everything's sorted, loosen up. We're reserving 25% for post-construction,
+Moz: [wave amp=50.0 freq=5.0 connected=1]"Is this properly accounting"[/wave]—Yes! Everything's sorted, loosen up. We're reserving 25% for post-construction,
 Moz: ...which might be low for the coal plants you've worked on, but here on the COOL side of the energy sector it's normal.
-Moz: Remember the 3 C's bud\: cost-effective, clean, cool. That's what we're all about.
-Olu: /Olu glances around, but everyone seems unsurprised by Moz's tone, and placated by his words. He shrugs and leans back./
+Moz: Remember the 3 C's bud\: clean, cool, cost-effective. That's what we're all about.
+Olu: [i]Olu glances around, but everyone seems unsurprised by Moz's tone, and placated by his words. He shrugs and leans back.[/i]
 [signal arg="next_slide"]
 Moz: So anyway, we know the project. Now let's get to know where we're whacking it.
 Moz: Our three potential sites are around here\: what Oogle Maps informs me is Laguna Superior.
