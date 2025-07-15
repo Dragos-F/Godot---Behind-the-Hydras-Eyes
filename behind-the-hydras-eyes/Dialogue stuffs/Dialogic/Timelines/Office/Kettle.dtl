@@ -1,9 +1,9 @@
 label First
 Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 - Yes
-	Kettle: Of course; with company-provided tea bags it would be practically a crime not too. Are you going to ask the others if they want a brew?
+	Kettle: Of course. With company-provided tea bags it would be practically a crime not to. Are you going to ask the others if they want one?
 	- Yes
-		Dave: Fancy a brew team? My treat.
+		Dave: Fancy one team? My treat.
 		Alex: Thanks! No sugar, splash of milk.
 		Jen: I was just thinking of how much I need one! Milky with three sugars please boss.
 		Kettle: You're so generous. Here, three lovely cups of tea. See you around.
@@ -19,8 +19,8 @@ Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 	Kettle: You cast a glance over to Alex and Jen, who seem absorbed in their own work, then put the kettle on.
 	Kettle: It's easier this way, just me and you. Efficient. Intimate.
 	Kettle: As I begin to shake, reaching boiling, you avoid looking at my form, wondering if your coworkers have noticed your selfishness.
-	Kettle: They have, obviously, but you're the boss. Well, their boss. And besides that, they're British.
-	Kettle: Any grumbling will be done passive aggressiveness and out of the office, not to your face.
+	Kettle: They have, obviously, but you're the boss. Well, their boss. Not very senior in the grand scheme of things. Anyway, besides that, they're British.
+	Kettle: Any grumbling will be done passive aggressively and out of the office, not to your face.
 	Kettle: Makes it easier, doesn't it? Now, go and enjoy the fruits of your—our—labour. I'll see you soon, I'm sure.
 - Yes, for everyone
 	Kettle: Sure. You're generous like that.
@@ -56,6 +56,6 @@ Kettle: You, like everyone else except the CEO, only get paid a fraction of the 
 [end_timeline]
 label Fourth
 Kettle: My warning came too late, I see. Behold the sticky note beside my body.
-Kettle: "Effective immediately\: staff must bring in their own teabags and milk. Sorry team, but sometimes we've all got to tighten our belts"
+Kettle: "Effective immediately\: staff must bring in their own teabags and milk. Sorry team, but sometimes we've all got to tighten our belts - P. MOORE"
 Kettle: Some belts get tightened more than others, obviously. Tough luck, pal.
 [end_timeline]

@@ -2,6 +2,21 @@ jump {CurrentQuarter}
 label Quarter1
 "Balcony Door": The night is still and cool, streetlights buzzing and the moon full and heavy behind a whispy cloud.
 - Smoke
+	"Balcony Door": Stepping outside, you're hit by the slightly chilly air, which carries with it quiet sounds of city life.
+	"Balcony Door": There's a small table on the balcony, and atop it is a small upturned plant pot. You lift it up, 
+	"Balcony Door": Underneath is an ashtray, a lighter, and a pack of cigs. You slide one out the pack, light it, and lean over the balcony railing.
+	"Balcony Door": You've been thinking of quitting, and only have one or two a night now, but it seems like smoking is cool again.
+	"Balcony Door": You imagine how you must look in third person—your crumpled shirt, the cig between pale fingers, your gaze maintaining a practiced wistfulness—and agree that it's cool.
+	"Balcony Door": Wrinkles and lung cancer are a future Dave problem, and god do you hate thinking of the future. 
+	"Balcony Door": Thinking of the future brings forward snippets of news, carefully ignored, and questions about England's slide into gleeful cruelty and poverty.
+	"Balcony Door": A snake eating itself. Every year there's less and less body left, but the head is hungrier. Meaner. Wallowing in it's unchallenged superiority.
+	"Balcony Door": You should change your brand of cigs, they always bring weird thoughts like this. 
+	"Balcony Door": You turn and stub it out. Maybe you should go watch porn.
 - People watch
+	"Balcony Door": Leaning on the doorframe, you peer into the night. 
+	"Balcony Door": Two men sit on a bench, laughing. A teenager in a balaclava rides around on a scooter. A woman's walking her dog while chatting on the phone.
+	"Balcony Door": "And then she said 'I can't leave like this! My sisters wedding is tomorrow and you've made me look like a burnt satsuma!'"
+	"Balcony Door": Small worlds that you have no insight into beyonf the surface level, no access beyond snatched vignettes.
+	"Balcony Door": You smile, then shut the door. 
 - Leave
 [end_timeline]

@@ -18,19 +18,39 @@ Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do..w
 Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
 Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
 [end_timeline]
+label Day01.2
+Alex: Hey. Looks like you're settling in quick, good for you.
+label Day01.2 Choice1
+Alex: What can I help you with?
+- What do I need to know?
+	Alex: Very little, honestly. I'm sure Moz will run you through everything.
+	Alex: Basically, we're poised to start construction, and can get everything moving as soon as we've locked in a location.
+	Alex: There's three contenders, all around the same lagoon. At the meeting, just sit, listen, and give feedback if needed. Nothing you can't handle. 
+	jump Day01.2 Choice1
+- Who's going to be at the meeting?
+	Alex: Moz is presenting. He's...hm. I can't even remember his official title. Nuisance officer? 
+	Dave: Oh, is there some sort of problem I should know about?
+	Alex: Nah, I'm just kidding. He's high energy and not very professional, but Patrick let's it slide. You'll see the dynamic.
+	Alex: Besides him...Well, Richard will be out of his evil lair. He's the head of the legal department. 
+	Alex: Janet should be...no, my bad. Olu's head of finance at the minute, he'll be there. I've not met him yet so can't help you there.
+	Dave: And Patrick?
+	Alex: Is Patrick. He "says it like it is"—one of those sorts. Suck up to him if you like, he always likes that. Otherwise, just try not to annoy him.
+	jump Day01.2 Choice1
+- Not a the moment, thanks.
+[end_timeline]
 label Day02
 Alex: Hey. Everything's chugging along, so whatever choice you helped make must've been fine.
 Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,
-Alex: and it sounds like the building contractors are happy to begin as soon as the paperworks ready—or even earlier.
-Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted, but that's fine.
-Alex: It hasn't helped that there's been protests at our supplier's mines, but we live in an unpredictable work, Dave. Still, we're on track.
+Alex: ...and it sounds like the building contractors are happy to begin as soon as the paperwork is ready—or even earlier.
+Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted. But that's fine.
+Alex: It hasn't helped that there's been protests at our supplier's mines, but we live in an unpredictable world, Dave. Still, we're on track.
 
 label Day02 Info01
 - Protests at the mines?
 	Alex: Oh yeah. A few new mines have had their openings delayed because locals were unhappy about the land use.
 	Alex: Something about how destructive and polluting the mines are, and how the companies lied about the effect on ecosystems.
 	- That's bad...right?
-		Alex: Sure. Still, our turbines need all these materials, so someone's got to supply them.
+		Alex: Sure. Still, our turbines need these materials, so someone's got to supply them.
 	- I feel like I detect irony...
 		Alex: That shiny new climate solutions rely on exploitative extractivism that produce huge amounts of CO2 and environmental damage?
 		Dave: Yeah, that.
@@ -40,10 +60,20 @@ label Day02 Info01
 - What does "or even earlier" mean?
 	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
 	Dave: And "moving quicker" means...?
-	Alex: Nothing ominous. Just beginning to fence of the areas while the purchase is being settled, in case any farmes get any wrong ideas about causing trouble.
+	Alex: Nothing ominous. Just starting to fence off the areas while the purchase is being settled, in case any farmers get any big ideas about causing trouble.
+	label Day02 Info02
+	Dave: Right...
 	- Couldn't they just climb the fence?
-		Alex: The barbed wire, watchtowers, and guards help to dissaude them of that.
-	- Sounds reasonable, yeah.
+		Alex: The barbed wire, watchtowers, and guards help to dissaude against that.
+		Dave: That sounds like more than just a fence...
+		Alex: Legally speaking, it's nothing more than a temporary fence to ensure expediency.
+		jump Day02 Info02
+	- "Big ideas"?
+		Alex: There's been a few unfortunate incidents in the past in this region, and we're keen to avoid anything like that.
+		Alex: People getting hurt because provocateurs have riled people up about "harm to the earth" and "fair compensation".
+		Alex: It's too much to go into now, but there's probably some folders in the filing cabinet you can check.
+		jump Day02 Info02
+	- Sounds reasonable enough, yeah.
 		Alex: Reasonableness and efficiency, my two middle names.
 	jump Day02 Info01
 - Thanks for the update.

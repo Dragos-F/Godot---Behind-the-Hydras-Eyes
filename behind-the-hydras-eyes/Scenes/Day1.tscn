@@ -175,10 +175,10 @@ Subject = "Project Manager Application"
 PreviewText = "To whom it may concern, I want to"
 MainBody = "To whom it may concern,
 
-I want to apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw it's record profits when we expanded sales to Israel. I also head three think tanks and a regional NHS board. I care about renewable energy as this is the future of global investing and capital development—drones don't power themselves!
+I want to apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw its record profits and expansion to better support democracy abroad. I also head three think tanks and a regional NHS board. I care about renewable energy as this is the future of global investing and capital development—drones don't power themselves!
 
 Sir Timothy Baronsworthy
-OBE, MBE, MAYBE, BAD"
+O.B.E., M.B.E., M.A.Y.B.E., B.A.D."
 ReplyBody1 = "Good afternoon Tim,
 
 Apologies, but this role has now been filled (to be clear, by me). I'm not sure why this email didn't get filtered by HR, but we'll keep your CV on record for any other positions matching your skillset.
@@ -197,13 +197,15 @@ Sender_Name = "Big Daz"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
 Subject = "BIG BUSINESS IMPROVEMENTS"
 PreviewText = "Hate lazy workers? "
-MainBody = "Good afternoon sirs,
+MainBody = "Here is a more persuasive version of your email:
 
-Hate lazy workers? Abolishing wfh failed to raise productivity? We have the only solution you need: AI. 
+Good afternoon sirs,
+
+Hate lazy workers? Abolishing WFH failed to raise productivity? We have the only solution you need: AI. 
 
 AI assistants will streamline every element of your job. Miracle bullets have never been so cheap! Simply allow our consultants access to every nook of your database. GDPR compliant? Plausibly! 
 
-Big Daz,
+Big Daz.
 CEO INFORMATION SOLUTIONS LIMITED "
 ReplyBody1 = "Good afternoon Big Daz,
 
@@ -225,9 +227,9 @@ Subject = "Calendar Invite - Location Presentation"
 PreviewText = "Internal invite address to all fo"
 MainBody = "Hello everybody,
 
-Seeing how we have a project manager now @Dave Spritely,  believe we can now hold the greatest meeting in our calendar! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and I believe it's now time to choose.
+Seeing how we have a project manager now @Dave Spritely, we can now hold the greatest meeting ever to grace the calendar (well, your calendars anyway, mine is full of exciting stuff)! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and it's now time to choose.
 
-See you in the collaborative space, down the hall from the main office.
+See you in the collaborative space, down the hall from the fourth floor main office.
 
 Best,
 Moz"
