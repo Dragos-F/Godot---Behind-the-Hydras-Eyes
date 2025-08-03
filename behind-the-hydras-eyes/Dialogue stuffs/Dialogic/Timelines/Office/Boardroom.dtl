@@ -1,5 +1,7 @@
 Moz: Hey. Hi everyone. Pleasure to see so many head honchos, so many teams represented.
 Moz: I see some new faces, shall we do some icebreakers?
+- Hi, I'm Dave!
+- [i]Shrink back in your seat[/i]
 Boss: Dave here's the new project manager, Olu is head of finance; maternity cover for Janet. Richard's here if it sounds like we might be fishing for legal trouble. Everyone else knows each other.
 Boss: There, I've saved us all half an hour of pissing about. You may proceed, Mohammed.
 Moz: Uh, thank you, sir. Right.
@@ -18,7 +20,7 @@ Moz: Any questions?
 		Moz: ...well, no, obviously. Some days are windier than others or whatever—
 		Olu: And any repairs during the turbines' lifespans will mean periods of inactivity, and—
 		Moz: ANYWAY, it's a rounding thing. Finance should know all about rounding, and our partners are huge fans of it.
-		Boss: No, our turbines are huge fans!! AHAHA!
+		Boss: No, our turbines are huge fans!! [b]AHAHA![/b]
 		Moz: [i]He forces a laugh, glancing at you as you give him a look of pity[/i]
 	- Right, sure.
 	jump Location 01
@@ -38,7 +40,7 @@ Moz: Any questions?
 		Moz: We do, duh. Where-ever we think best, that's where it'll go. Who knows better than us how to make things better?
 		Richard: Some of it'll go towards keeping our vested interests happy, obviously.
 		Moz: "Lobbying for progressive change" is how we like to put it.
-		Olu: And we get to write it off as charity for tax breaks.
+		Olu: And we get to write it all off as charity for tax breaks.
 		Moz: Wins on top of wins. No problems here.
 	- That actually sounds great.
 	jump Location 01
@@ -57,15 +59,19 @@ Moz: There's some info in the packets provided, but I'm no scientist so we'll sk
 Boss: Good lad. Let's hurry up.
 [signal arg="next_slide"]
 Moz: Sure thing. Let's meet our lovely ladies, and see who we want to date. Location one! We've dubbed it "Five Vulture Meadows".
-Moz: (It's named after some local god that we've had translated, probably of good luck or fertility or something)
+Moz: It's named after some local god that we've had translated, probably of good luck or fertility or something.
 Moz: It's near loads of the existing wind developments, where locals are clamouring to sell up their land.
-Richard: Happy locals means less legal issues down the line.
-Moz: Ding ding ding. AND it's close to all the infrastructure we'd need—airports, the grid, etc. Bit pricier than the others, mind you.
+Richard: Happy locals means less legal issues down the line, which I obviously approve of.
+Boss: Don't lie, you love a fight you old bulldog! 
+Moz: Ding ding ding. Lack of legal issues is correct. AND it's close to all the infrastructure we'd need—airports, the grid, etc.
+Moz: Bit pricier than the others, mind you, but sometime's you've got to spend money to make money.
+Boss: As long as it's other people's money we're spending, lads. 
+Olu: I'm not sure I'm comfortable referring to our government subsidies as—
 [signal arg="next_slide"]
 Moz: Bachelorette number two! Dubbed Sandbar Paradiso, this lovely lady has maximal wind potential and the local government is trying to heap benefits on us to make us bite.
 Moz: There's a few...possible setbacks—
 Richard: My team can handle any pitchforked mobs.
-Olu: And the extra costs of deeper foundations will be easily met by the stronger winds.
+Olu: And I believe the extra costs of deeper foundations will be easily met by the stronger winds.
 Moz: Sure, whatever. I'm just reading the slide guys.
 [signal arg="next_slide"]
 Moz: Sunrise Farm! Cheap and lots of land. I don't need to sell that to you, do I? Another bid's already been accepted, but we don't think that'll be TOO big a problem if we settle here.
@@ -102,7 +108,7 @@ Moz: Okay, let me open to the room. Whadda we think?
 Boss: That's sorted then. I think The Wellington has just opened, so we might as well go celebrate with a pint.
 Moz: If we're finishing early, I might head off, the wife wants me to—
 Boss: You know the deal, first round's on me.
-Moz: ...Maybe I'll stay for one round.
+Moz: ...Actually I can stay for one round.
 Olu: I don't drink...
 # #- Well—
 # #	label LocationDebate
