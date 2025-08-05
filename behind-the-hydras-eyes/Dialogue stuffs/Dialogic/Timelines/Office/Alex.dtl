@@ -1,16 +1,18 @@
 jump {CurrentDay}
 label Day01
 Alex: ...
-Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help you?
-Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...well, all the odd bits. Where’ve you joined us from?
-- Oh nowhere; I went back to uni.
+Alex: …Oh, sorry mate! I got sucked into this spreadsheet. How can I help you?
+Alex: Oh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...well, all the odd bits. Where’ve you joined us from?
+- My flat.
+	Alex: What? I meant, like, where was your last job?
+	Dave: I know, sorry. I took some time off and went back to uni, so I'm not coming from anywhere in particular.
 	Alex: New blood, eh? Well, the whole team is pretty green. And hey, maybe that's a good thing in our industry.
-	Alex: [shake rate=20.0 level=5 connected=1]and definitely not a sign of poor retention rates spurred by bad leadership[/shake]
+	Alex: [shake rate=20.0 level=5 connected=1]and definitely not a sign of poor retention rates spurred by bad leadership.[/shake]
 	Dave: Hm?
 - I'm an ex-teacher!
-	Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
+	Alex: I should've guessed, our recruitment team are drowning in people fleeing the education sector.
 	Dave: That many of us?
-	Alex: I've heard recruitment practically have to shoo them off the premises with a broom, they're that desperate.
+	Alex: I've heard they practically have to shoo them off the premises with a broom, they're that desperate.
 	Dave: Yeah...I can believe it.
 - Little England Petroleum
 	Alex: Ah, one of our sponsors. You know how things work then.
