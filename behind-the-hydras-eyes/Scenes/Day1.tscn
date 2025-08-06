@@ -159,7 +159,8 @@ ReplyBody1 = "Hi Patrick,
 I'm really glad to be here, thanks again for the opportunity. I've already met my team, so just let me know if there's anything else I can help with! 
 
 Yours respectfully,
-Dave Spritely, UK Project Lead
+Dave Spritely, 
+UK Project Lead
 Forward Green
 
 "
@@ -184,7 +185,8 @@ ReplyBody1 = "Good afternoon Tim,
 Apologies, but this role has now been filled (to be clear, by me). I'm not sure why this email didn't get filtered by HR, but we'll keep your CV on record for any other positions matching your skillset.
 
 Kind regards,
-Dave Spritely, UK Project Lead
+Dave Spritely, 
+UK Project Lead
 Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
@@ -207,12 +209,13 @@ AI assistants will streamline every element of your job. Miracle bullets have ne
 
 Big Daz.
 CEO INFORMATION SOLUTIONS LIMITED "
-ReplyBody1 = "Good afternoon Big Daz,
+ReplyBody1 = "Good afternoon 'Big Daz',
 
 Thank you for your inquiry. We're not currently looking for such services.
 
 Kind regards,
-Dave Spritely, UK Project Lead
+Dave Spritely, 
+UK Project Lead
 Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
@@ -238,7 +241,8 @@ ReplyBody1 = "Hi Moz,
 Thank you for this invite. I'll see you in the collaboration space!
 
 Kind Regards
-Dave Spritely, UK Project Lead
+Dave Spritely, 
+UK Project Lead
 Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]

@@ -41,7 +41,7 @@ Alex: What can I help you with?
 - Not a the moment, thanks.
 [end_timeline]
 label Day02
-Alex: Hey. Everything's chugging along, so whatever choice you helped make must've been fine.
+Alex: Hey. Everything's chugging along, so whatever choice you made must've been fine.
 Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,
 Alex: ...and it sounds like the building contractors are happy to begin as soon as the paperwork is ready—or even earlier.
 Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted. But that's fine.
@@ -57,7 +57,7 @@ label Day02 Info01
 		Alex: That shiny new climate solutions rely on exploitative extractivism that produce huge amounts of CO2 and environmental damage?
 		Dave: Yeah, that.
 		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
-		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do SOME good.
+		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do <i>some</i> good.
 	jump Day02 Info01
 - What does "or even earlier" mean?
 	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
@@ -66,14 +66,14 @@ label Day02 Info01
 	label Day02 Info02
 	Dave: Right...
 	- Couldn't they just climb the fence?
-		Alex: The barbed wire, watchtowers, and guards help to dissaude against that.
+		Alex: The barbed wire, watchtowers, and guards help to dissuade against that.
 		Dave: That sounds like more than just a fence...
 		Alex: Legally speaking, it's nothing more than a temporary fence to ensure expediency.
 		jump Day02 Info02
 	- "Big ideas"?
 		Alex: There's been a few unfortunate incidents in the past in this region, and we're keen to avoid anything like that.
 		Alex: People getting hurt because provocateurs have riled people up about "harm to the earth" and "fair compensation".
-		Alex: It's too much to go into now, but there's probably some folders in the filing cabinet you can check.
+		Alex: It's too much to go into now, but there are probably some folders in the filing cabinet you can check.
 		jump Day02 Info02
 	- Sounds reasonable enough, yeah.
 		Alex: Reasonableness and efficiency, my two middle names.

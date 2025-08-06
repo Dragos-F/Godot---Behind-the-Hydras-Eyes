@@ -142,10 +142,12 @@ Regards,
 Miguel Lopez"
 ReplyBody1 = "Hi Miguel,
 
-I am sorry that you are unsatisfied with my previous response. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+I am sorry that you are unsatisfied with the response from our local office. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
 
 Kind Regards,
-Dave Spritely, UK Project Lead"
+Dave Spritely, 
+UK Project Lead
+Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
@@ -169,7 +171,9 @@ ReplyBody1 = "Hi Ramonne,
 I appreciate your email, but I don't think we'll be interested in any other investments at this time.
 
 Kind Regards,
-Dave Spritely, UK Project Lead"
+Dave Spritely, 
+UK Project Lead
+Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
