@@ -932,9 +932,9 @@ horizontal_alignment = 1
 z_index = -1
 layout_mode = 0
 offset_left = 104.0
-offset_top = 966.0
+offset_top = 920.0
 offset_right = 728.0
-offset_bottom = 1041.0
+offset_bottom = 995.0
 theme_override_fonts/normal_font = ExtResource("19_46cjv")
 theme_override_font_sizes/normal_font_size = 33
 text = "Special thanks to:"
@@ -1030,9 +1030,9 @@ horizontal_alignment = 1
 z_index = -1
 layout_mode = 0
 offset_left = 104.0
-offset_top = 1014.0
+offset_top = 968.0
 offset_right = 728.0
-offset_bottom = 1380.0
+offset_bottom = 1353.0
 theme_override_fonts/normal_font = ExtResource("19_46cjv")
 theme_override_font_sizes/normal_font_size = 33
 text = "Aaron O
@@ -1043,8 +1043,10 @@ Madalena
 Daniel
 Thomas
 Ré
+Harry
 Renato
-Aaron R"
+Aaron R
+"
 horizontal_alignment = 1
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]

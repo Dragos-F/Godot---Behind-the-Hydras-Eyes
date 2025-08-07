@@ -1,0 +1,1042 @@
+[gd_scene load_steps=28 format=3 uid="uid://qghsqgpx4kmw"]
+
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_fea21"]
+[ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="2_d7deo"]
+[ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="3_ou52f"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="4_35wiy"]
+[ext_resource type="PackedScene" uid="uid://dk0tlp5sp41uj" path="res://Scenes/testPie.tscn" id="5_wmr1n"]
+[ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="6_q3ml3"]
+[ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="6_wmr1n"]
+[ext_resource type="Texture2D" uid="uid://6fn4at4a1xot" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/86.png" id="7_c7qsa"]
+[ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_q3ml3"]
+[ext_resource type="Texture2D" uid="uid://d1essny355ere" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/87.png" id="8_4oa0n"]
+[ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="9_se1vm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
+bg_color = Color(0.878, 0.878, 0.878, 0.191)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfps5"]
+bg_color = Color(0.631373, 1, 0.698039, 0.2)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkap"]
+bg_color = Color(0.878431, 0.878431, 0.878431, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23jyx"]
+bg_color = Color(0, 0, 0, 0.615686)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3eo7"]
+bg_color = Color(0.878, 0.878, 0.878, 0.191)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvukg"]
+bg_color = Color(0.298039, 0.607843, 0.913725, 0.839216)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovuwh"]
+bg_color = Color(0, 0, 0, 0.191)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxeq5"]
+bg_color = Color(1, 0, 0, 0.192157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rttsh"]
+bg_color = Color(0.753643, 0.455672, 3.85046e-07, 0.192157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q77rv"]
+bg_color = Color(0, 0.546226, 0.933398, 0.192157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ntsw"]
+bg_color = Color(0.147376, 0.644569, 0, 0.192157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmr1n"]
+bg_color = Color(0.290196, 0.54902, 0.807843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3ml3"]
+bg_color = Color(0.1404, 0.2652, 0.39, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
+bg_color = Color(0.0862745, 0.643137, 1, 0.811765)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dr7px"]
+
+[node name="TrailerWorkspace" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ComputerScreen" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_fea21")
+
+[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_d7deo")
+
+[node name="ScreenUI" type="Control" parent="." node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget")]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = -697.0
+offset_top = -465.0
+offset_right = 707.0
+offset_bottom = 267.0
+script = ExtResource("3_ou52f")
+MainEmailBody = NodePath("MainEmail/EmailBody/ScrollContainer/Control/MainEmailBody")
+replyTarget = NodePath("MainEmail/EmailBody/ScrollContainer/Control")
+Sender = NodePath("MainEmail/Sender&Subj/Panel/BoxContainer/Sender")
+ToBox = NodePath("MainEmail/Sender&Subj/Panel2/BoxContainer/ToBox")
+EmailList = [NodePath("MainEmail"), NodePath("EmailList")]
+Budget = NodePath("Budget")
+
+[node name="EmailList" type="Panel" parent="ScreenUI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00356125
+anchor_top = 0.0163934
+anchor_right = 0.206553
+anchor_bottom = 0.909836
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Inbox" type="Panel" parent="ScreenUI/EmailList"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 273.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfps5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/EmailList/Inbox"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 264.0
+offset_bottom = 35.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "INBOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SummariesContainer" type="VBoxContainer" parent="ScreenUI/EmailList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 48.0
+offset_right = -6.99997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" instance=ExtResource("4_35wiy")]
+layout_mode = 2
+Sender_Name = "P. Moore"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "First Day - Project Manager"
+PreviewText = "Hey Dave, Glad to have you aboard."
+MainBody = "Hey Dave, 
+
+Glad to have you aboard. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
+
+Your Boss,
+Mr Moore.
+
+"
+boss = true
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+autowrap_mode = 0
+
+[node name="MainEmail" type="Panel" parent="ScreenUI"]
+visible = false
+layout_mode = 0
+anchor_left = 0.214387
+anchor_top = 0.0163934
+anchor_right = 0.997863
+anchor_bottom = 0.909836
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbkap")
+metadata/_edit_use_anchors_ = true
+
+[node name="EmailBody" type="Panel" parent="ScreenUI/MainEmail"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 95.0
+offset_right = 1096.0
+offset_bottom = 619.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScreenUI/MainEmail/EmailBody"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 1076.0
+offset_bottom = 516.0
+
+[node name="Control" type="Control" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer"]
+layout_mode = 2
+
+[node name="MainEmailBody" type="RichTextLabel" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control"]
+layout_mode = 2
+offset_right = 1066.0
+offset_bottom = 510.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+
+[node name="Sender&Subj" type="Panel" parent="ScreenUI/MainEmail"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 896.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="Panel" type="Panel" parent="ScreenUI/MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 861.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/MainEmail/Sender&Subj/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 833.0
+offset_bottom = 29.0
+
+[node name="Sender" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+text = "
+"
+
+[node name="Panel2" type="Panel" parent="ScreenUI/MainEmail/Sender&Subj"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 40.0
+offset_right = 861.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 2.0
+offset_right = 846.0
+offset_bottom = 28.0
+
+[node name="ToBox" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 28.0
+text = "To:"
+
+[node name="Send" type="Button" parent="ScreenUI/MainEmail"]
+visible = false
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Send"
+
+[node name="Reply" type="Button" parent="ScreenUI/MainEmail"]
+visible = false
+layout_mode = 2
+offset_left = 910.0
+offset_top = 12.0
+offset_right = 1093.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
+text = "Reply
+"
+
+[node name="Hint" type="RichTextLabel" parent="ScreenUI/MainEmail"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.854657
+anchor_top = -0.00386305
+anchor_right = 1.04148
+anchor_bottom = 0.197094
+offset_left = -42.9601
+offset_top = -13.5779
+offset_right = -42.9602
+offset_bottom = -13.5779
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+text = "Press Any Key to type"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Budget" type="Panel" parent="ScreenUI"]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 1401.0
+offset_bottom = 666.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+
+[node name="Panel2" type="Panel" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 1381.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m3eo7")
+
+[node name="Panel" type="Panel" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.0
+offset_right = 1381.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenUI/Budget/Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 1365.0
+offset_bottom = 38.0
+
+[node name="Chart" parent="ScreenUI/Budget" node_paths=PackedStringArray("savingsText") instance=ExtResource("5_wmr1n")]
+layout_mode = 1
+mouse_filter = 1
+savingsText = NodePath("../BoxContainer/Additional Costs3/BoxContainer/Label")
+totalSalary = 7200.0
+startingSavings = 2400.0
+
+[node name="LabellessPieChart" parent="ScreenUI/Budget/Chart" index="0"]
+offset_left = 340.11
+offset_top = 117.0
+offset_right = 907.11
+offset_bottom = 599.0
+mouse_filter = 1
+chart_radius_multiplier = 1.85
+
+[node name="Additional Costs" type="Panel" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 44.0
+offset_right = 368.0
+offset_bottom = 349.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="Panel" type="Panel" parent="ScreenUI/Budget/Additional Costs"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 326.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenUI/Budget/Additional Costs/Panel"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScreenUI/Budget/Additional Costs/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "ADDITIONAL COSTS"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenUI/Budget/Additional Costs"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 58.0
+offset_right = 317.0
+offset_bottom = 373.0
+
+[node name="CheckButton" type="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 1"
+
+[node name="CheckButton2" type="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 2"
+
+[node name="CheckButton3" type="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 3
+"
+
+[node name="CheckButton4" type="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 4
+"
+
+[node name="CheckButton5" type="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Subscription/Cost 5"
+
+[node name="Additional Costs2" type="Panel" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 43.0
+offset_right = 1378.0
+offset_bottom = 346.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="Panel" type="Panel" parent="ScreenUI/Budget/Additional Costs2"]
+layout_mode = 2
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 490.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="Label" type="Label" parent="ScreenUI/Budget/Additional Costs2/Panel"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 1.0
+offset_right = 367.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 26
+text = "MONTHLY EXPENSES"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenUI/Budget/Additional Costs2"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 56.0
+offset_right = 492.0
+offset_bottom = 292.0
+
+[node name="Decrease" type="VBoxContainer" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Rent" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+disabled = true
+text = "-"
+
+[node name="Bills" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+disabled = true
+text = "-"
+
+[node name="Savings" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="Lifestyle" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="What" type="VBoxContainer" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Rent" type="Label" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/What"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_wxeq5")
+text = "Rent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bills" type="Label" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/What"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_rttsh")
+text = "Bills"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Savings" type="Label" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/What"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_q77rv")
+text = "Savings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lifestyle" type="Label" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/What"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ntsw")
+text = "Lifestyle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Increase" type="VBoxContainer" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Rent" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+disabled = true
+text = "+"
+
+[node name="Bills" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+disabled = true
+text = "+"
+
+[node name="Savings" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="Lifestyle" type="Button" parent="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 388.0
+offset_right = 1340.0
+offset_bottom = 559.0
+alignment = 1
+
+[node name="Additional Costs3" type="Panel" parent="ScreenUI/Budget/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="BoxContainer" parent="ScreenUI/Budget/BoxContainer/Additional Costs3"]
+layout_mode = 2
+anchor_right = 0.988
+anchor_bottom = 0.265
+offset_left = 6.0
+offset_top = 7.0
+offset_right = -2.164
+offset_bottom = 1.07
+theme_override_constants/separation = 7
+
+[node name="Panel" type="Panel" parent="ScreenUI/Budget/BoxContainer/Additional Costs3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Budget/BoxContainer/Additional Costs3/HBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 374.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScreenUI/Budget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "TOTAL SAVINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Budget/BoxContainer/Additional Costs3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 59.0
+offset_right = 380.0
+offset_bottom = 154.0
+
+[node name="Label" type="Label" parent="ScreenUI/Budget/BoxContainer/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="ScreenUI/Budget"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 74.0
+offset_right = 788.0
+offset_bottom = 114.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenUI/Budget/Panel3"]
+layout_mode = 0
+offset_right = 346.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScreenUI/Budget/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "QUARTERLY NET INCOME: £7200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SaveButton" type="Button" parent="ScreenUI/Budget"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.176
+anchor_top = 0.763
+anchor_right = 0.373
+anchor_bottom = 0.872
+offset_left = -79.696
+offset_top = -5.00201
+offset_right = -78.708
+offset_bottom = -5.28802
+theme_override_font_sizes/font_size = 45
+toggle_mode = true
+text = "Save Budget"
+
+[node name="Browser" type="Panel" parent="ScreenUI"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 1401.0
+offset_bottom = 666.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+
+[node name="Panel2" type="Panel" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 1381.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m3eo7")
+
+[node name="Panel" type="Panel" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.0
+offset_right = 1381.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenUI/Browser/Panel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 1365.0
+offset_bottom = 38.0
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 71.0
+offset_right = 832.0
+offset_bottom = 601.0
+alignment = 1
+
+[node name="Additional Costs3" type="Panel" parent="ScreenUI/Browser/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="BoxContainer" parent="ScreenUI/Browser/BoxContainer/Additional Costs3"]
+layout_direction = 1
+layout_mode = 2
+anchor_right = 0.988
+anchor_bottom = 0.265
+offset_left = 6.0
+offset_top = 7.0
+offset_right = -2.19196
+offset_bottom = -85.45
+theme_override_constants/separation = 7
+
+[node name="Panel" type="Panel" parent="ScreenUI/Browser/BoxContainer/Additional Costs3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Browser/BoxContainer/Additional Costs3/HBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 44.0
+
+[node name="Label" type="Label" parent="ScreenUI/Browser/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_q3ml3")
+theme_override_font_sizes/font_size = 33
+text = "Forward Green - Project Manager"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Browser/BoxContainer/Additional Costs3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 59.0
+offset_right = 719.0
+offset_bottom = 454.0
+
+[node name="Label" type="Label" parent="ScreenUI/Browser/BoxContainer/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 147.0
+offset_right = 713.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("6_wmr1n")
+text = "Permanent, Full-Time position
+London Office Based
+£32,000/year + Benefits
+
+
+"
+
+[node name="Label2" type="Label" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 256.0
+offset_right = 699.0
+offset_bottom = 533.0
+theme_override_fonts/font = ExtResource("6_wmr1n")
+text = "- Lead technical due diligence efforts across our revolutionary renewable energy project (Lagoon Breeze), ensuring best-in-class execution.
+- Manage cross-functional teams composed of in-house experts and external consultants.
+- Identify and mitigate project risks, providing actionable recommendations to clients.
+- Oversee stakeholder negotiations, project kick-off meetings, and deliverables.
+- Monitor project budgets, forecast resource needs, and report financial performance to executive leadership.
+- Mentor junior colleagues, fostering an environment of collaboration and excellence.
+- Cultivate strong relationships across internal teams and clients, driving business success."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 226.0
+offset_right = 699.0
+offset_bottom = 257.0
+theme_override_fonts/font = ExtResource("7_q3ml3")
+theme_override_font_sizes/font_size = 22
+text = "Key Responsibilities"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 151.0
+offset_right = 1279.0
+offset_bottom = 248.0
+theme_override_colors/font_disabled_color = Color(0.101961, 0.137255, 0.494118, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.34419, 0.1617, 0.77, 1)
+theme_override_colors/font_hover_color = Color(0.345098, 0.160784, 0.768627, 1)
+theme_override_colors/font_outline_color = Color(0.101961, 0.137255, 0.494118, 1)
+theme_override_colors/font_color = Color(0.101961, 0.137255, 0.494118, 1)
+theme_override_colors/font_focus_color = Color(0.101961, 0.137255, 0.494118, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.835294, 0.309804, 1)
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 88
+theme_override_styles/hover = SubResource("StyleBoxFlat_wmr1n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q3ml3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wmr1n")
+text = "APPLY"
+
+[node name="BoxContainer2" type="BoxContainer" parent="ScreenUI/Browser"]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 384.0
+offset_right = 1375.0
+offset_bottom = 595.0
+alignment = 1
+
+[node name="Additional Costs3" type="Panel" parent="ScreenUI/Browser/BoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="HBoxContainer" type="BoxContainer" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3"]
+layout_mode = 2
+anchor_right = 0.988
+anchor_bottom = 0.265
+offset_left = 6.0
+offset_top = 7.0
+offset_right = -2.164
+offset_bottom = 1.07
+theme_override_constants/separation = 7
+
+[node name="Panel" type="Panel" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
+
+[node name="BoxContainer" type="BoxContainer" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/HBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 515.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 28
+text = "Related Positions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="VBoxContainer" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 59.0
+offset_right = 529.0
+offset_bottom = 204.0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Assistant Project Manager - Rambert Electrical Services"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Operational Compliance Managerr - Kinekticon International"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Campaign Coordinator - VerdantBuild"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Solar Development Administrator - Benedict Power&Limit"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Director of Renewable Relationships - Shapegrand "
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="ScreenUI/Browser/BoxContainer2/Additional Costs3/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_wmr1n")
+theme_override_font_sizes/font_size = 14
+text = "- Compliance Manager - Regenerative Group"
+vertical_alignment = 1
+
+[node name="BottomBar" type="Panel" parent="ScreenUI"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 676.0
+offset_right = 1401.0
+offset_bottom = 732.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
+
+[node name="Emails" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.474928
+anchor_right = 0.515759
+anchor_bottom = 1.0
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+icon = ExtResource("6_q3ml3")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="JobThing" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.554441
+anchor_right = 0.595272
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.00006
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+icon = ExtResource("7_c7qsa")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Budget" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.389685
+anchor_right = 0.430516
+anchor_bottom = 1.0
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+icon = ExtResource("8_4oa0n")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ShutDown" type="Button" parent="ScreenUI/BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.0537249
+anchor_right = 0.0959885
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dr7px")
+icon = ExtResource("9_se1vm")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ScreenUI/MainEmail/Send" to="ScreenUI" method="_on_send_pressed"]
+[connection signal="pressed" from="ScreenUI/MainEmail/Reply" to="ScreenUI" method="_on_reply_pressed"]
+[connection signal="toggled" from="ScreenUI/Budget/Additional Costs/VBoxContainer/CheckButton" to="ScreenUI/Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="ScreenUI/Budget/Additional Costs/VBoxContainer/CheckButton2" to="ScreenUI/Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="ScreenUI/Budget/Additional Costs/VBoxContainer/CheckButton3" to="ScreenUI/Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="ScreenUI/Budget/Additional Costs/VBoxContainer/CheckButton4" to="ScreenUI/Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="toggled" from="ScreenUI/Budget/Additional Costs/VBoxContainer/CheckButton5" to="ScreenUI/Budget/Chart" method="_on_check_button_toggled"]
+[connection signal="pressed" from="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease/Savings" to="ScreenUI/Budget/Chart" method="_on_savings_pressed"]
+[connection signal="pressed" from="ScreenUI/Budget/Additional Costs2/HBoxContainer/Decrease/Lifestyle" to="ScreenUI/Budget/Chart" method="_on_lifestyle_pressed"]
+[connection signal="pressed" from="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase/Savings" to="ScreenUI/Budget/Chart" method="_on_savings_increase"]
+[connection signal="pressed" from="ScreenUI/Budget/Additional Costs2/HBoxContainer/Increase/Lifestyle" to="ScreenUI/Budget/Chart" method="_on_lifestyle_increase"]
+[connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="ScreenUI/Budget/Chart" method="_on_save_button_toggled"]
+[connection signal="pressed" from="ScreenUI/BottomBar/Emails" to="ScreenUI" method="_on_emails_pressed"]
+[connection signal="pressed" from="ScreenUI/BottomBar/JobThing" to="ScreenUI" method="_on_job_thing_pressed"]
+[connection signal="pressed" from="ScreenUI/BottomBar/Budget" to="ScreenUI" method="_on_budget_pressed"]
+
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/Budget/Chart"]

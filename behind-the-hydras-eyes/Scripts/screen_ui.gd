@@ -16,6 +16,7 @@ class_name Computer
 @export var emailsDone:int
 @export var EmailList:Array[Panel]
 @export var Budget:Panel
+@export var BrowserThing:Panel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -92,10 +93,19 @@ func _on_send_pressed() -> void:
 
 func _on_emails_pressed() -> void:
 	Budget.visible = false
+	BrowserThing.visible = false
 	for i in EmailList:
 		i.visible = true
 
 func _on_budget_pressed() -> void:
 	Budget.visible = true
+	BrowserThing.visible = false
+	for i in EmailList:
+		i.visible = false
+
+
+func _on_job_thing_pressed() -> void:
+	BrowserThing.visible = true
+	Budget.visible = false
 	for i in EmailList:
 		i.visible = false

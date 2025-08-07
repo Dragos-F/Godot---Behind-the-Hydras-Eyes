@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=92 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dau6ehg47nb3a" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster group.png" id="16_q838t"]
 [ext_resource type="Texture2D" uid="uid://dlcohiycimwtr" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster_group_Selected.png" id="17_e1vmb"]
 [ext_resource type="Texture2D" uid="uid://xgfnd6e3wq4v" path="res://Visual Assets/Old assets/Jen 1.png" id="18_3mmiq"]
+[ext_resource type="Script" uid="uid://cgwl870qrmpxg" path="res://Scripts/JenAnimBrain.gd" id="19_5tuft"]
 [ext_resource type="Texture2D" uid="uid://cmgixe7ffb6w1" path="res://Visual Assets/Old assets/Jen (1).png" id="19_pjjbx"]
 [ext_resource type="Texture2D" uid="uid://cpgbgj5vmmu8t" path="res://Visual Assets/Old assets/Selected Item Versions/Jen Selected.png" id="20_3frnb"]
 [ext_resource type="Texture2D" uid="uid://bf3cmklyj415h" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair.png" id="21_2oo3l"]
@@ -26,8 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://c6upse6doxf6v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 1.png" id="24_sk8q4"]
 [ext_resource type="Texture2D" uid="uid://c4re8lxxdtgpt" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 1.png" id="25_ly42q"]
 [ext_resource type="Texture2D" uid="uid://bqs05u7laca0w" path="res://Visual Assets/Old assets/Alex.png" id="26_xk4hj"]
+[ext_resource type="Script" uid="uid://y7t88qq25dmu" path="res://Scripts/AlexAnimBrain.gd" id="27_rmr2f"]
 [ext_resource type="Texture2D" uid="uid://bg0wq7g8iofjj" path="res://Visual Assets/Old assets/Selected Item Versions/Alex Selected.png" id="27_vyjpg"]
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="28_tjo4x"]
+[ext_resource type="Texture2D" uid="uid://be2befr2xh8qm" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Tea Drinking -Sheet.png" id="29_5tuft"]
 [ext_resource type="Texture2D" uid="uid://dp73wjya5kjc2" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug full.png" id="29_q3361"]
 [ext_resource type="Texture2D" uid="uid://bu6fx8kqfdd5m" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Laptop.png" id="30_4f6p7"]
 [ext_resource type="Texture2D" uid="uid://bg2xtrrglj2lk" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 2.png" id="31_auuwe"]
@@ -79,6 +82,162 @@ radius = 90.0347
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7517s"]
 radius = 81.9909
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1f4p"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(0, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvy6j"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(200, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w137r"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(400, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r1ym"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(600, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vk3e"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(800, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmjrf"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(1000, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sem87"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(1200, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiwcw"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(1400, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0krsi"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(1600, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj83x"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(1800, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q838t"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(2000, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1vmb"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(2200, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mmiq"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(2400, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjjbx"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(2600, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3frnb"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(2800, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oo3l"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(3000, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmbmo"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(3200, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qvgb"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(3400, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk8q4"]
+atlas = ExtResource("29_5tuft")
+region = Rect2(3600, 0, 200, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ly42q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1f4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvy6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w137r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r1ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vk3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmjrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sem87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiwcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0krsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj83x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q838t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1vmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mmiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjjbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3frnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oo3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmbmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qvgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk8q4")
+}],
+"loop": false,
+"name": &"drink_tea",
+"speed": 10.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ra4d8"]
 radius = 31.0
@@ -265,11 +424,18 @@ position = Vector2(-38, 81)
 rotation = 2.03913
 shape = SubResource("CapsuleShape2D_0ctcj")
 
-[node name="Jen1" type="Sprite2D" parent="Furniture"]
+[node name="Jen1" type="Sprite2D" parent="Furniture" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "timer")]
 texture_filter = 1
 position = Vector2(-148, -314)
 scale = Vector2(2, 2)
 texture = ExtResource("18_3mmiq")
+script = ExtResource("19_5tuft")
+MainSprite = NodePath(".")
+SpriteAnim = NodePath("AnimatedSprite2D")
+regularJen = ExtResource("18_3mmiq")
+timer = NodePath("Timer")
+minTime = 5.0
+maxTime = 8.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Jen1"]
 
@@ -283,8 +449,15 @@ regular = ExtResource("19_pjjbx")
 selected = ExtResource("20_3frnb")
 YarnNodeLink = "Jen"
 
+[node name="Area2D" parent="Furniture/Jen1/JenInteractable" index="0"]
+visible = false
+
 [node name="CollisionShape2D" parent="Furniture/Jen1/JenInteractable/Area2D" index="0"]
 shape = SubResource("CircleShape2D_r70fk")
+
+[node name="Timer" type="Timer" parent="Furniture/Jen1"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Jen1"]
 
 [node name="JenDesk" type="Node2D" parent="Furniture"]
 
@@ -336,21 +509,41 @@ position = Vector2(37, -500)
 scale = Vector2(2, 2)
 texture = ExtResource("25_ly42q")
 
-[node name="Alex" type="Sprite2D" parent="Furniture"]
+[node name="Alex" type="Sprite2D" parent="Furniture" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "Chair", "CoffeeMug", "timer")]
 z_index = -1
 texture_filter = 1
 position = Vector2(-543, -110)
 scale = Vector2(2, 2)
 texture = ExtResource("26_xk4hj")
+script = ExtResource("27_rmr2f")
+MainSprite = NodePath(".")
+SpriteAnim = NodePath("AnimatedSprite2D")
+Chair = NodePath("../AlexDesk/ChairSide")
+CoffeeMug = NodePath("../AlexDesk/MugFull")
+timer = NodePath("Timer")
+minTime = 5.0
+maxTime = 8.0
+regularAlex = ExtResource("26_xk4hj")
 
 [node name="AlexInteractable" parent="Furniture/Alex" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("26_xk4hj")
 selected = ExtResource("27_vyjpg")
 YarnNodeLink = "Alex"
 
+[node name="Area2D" parent="Furniture/Alex/AlexInteractable" index="0"]
+visible = false
+
 [node name="CollisionShape2D" parent="Furniture/Alex/AlexInteractable/Area2D" index="0"]
 position = Vector2(-14.5, 31)
 shape = SubResource("CircleShape2D_7517s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Alex"]
+visible = false
+position = Vector2(14.5, -11)
+sprite_frames = SubResource("SpriteFrames_ly42q")
+animation = &"drink_tea"
+
+[node name="Timer" type="Timer" parent="Furniture/Alex"]
 
 [node name="AlexDesk" type="Node2D" parent="Furniture"]
 z_index = -1
@@ -378,21 +571,22 @@ texture = ExtResource("28_tjo4x")
 [node name="MugFull" type="Sprite2D" parent="Furniture/AlexDesk"]
 z_index = -2
 texture_filter = 1
-position = Vector2(-452, -132)
+position = Vector2(-460, -148)
 scale = Vector2(2, 2)
 texture = ExtResource("29_q3361")
+flip_h = true
 
 [node name="Laptop" type="Sprite2D" parent="Furniture/AlexDesk"]
 z_index = -2
 texture_filter = 1
-position = Vector2(-433, -181)
+position = Vector2(-424, -185)
 scale = Vector2(2, 2)
 texture = ExtResource("30_4f6p7")
 
 [node name="Computer2" type="Sprite2D" parent="Furniture/AlexDesk"]
 z_index = -2
 texture_filter = 1
-position = Vector2(-495, -205)
+position = Vector2(-497, -207)
 scale = Vector2(2, 2)
 texture = ExtResource("31_auuwe")
 
@@ -762,6 +956,10 @@ rotation = -1.57079
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Right"]
 shape = SubResource("WorldBoundaryShape2D_qx5rf")
 
+[connection signal="timeout" from="Furniture/Jen1/Timer" to="Furniture/Jen1" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Furniture/Jen1/AnimatedSprite2D" to="Furniture/Jen1" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Furniture/Alex/AnimatedSprite2D" to="Furniture/Alex" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Furniture/Alex/Timer" to="Furniture/Alex" method="_on_timer_timeout"]
 [connection signal="body_entered" from="IndexChangeZone" to="IndexChangeZone" method="_on_body_entered"]
 [connection signal="body_exited" from="IndexChangeZone" to="IndexChangeZone" method="_on_body_exited"]
 [connection signal="body_entered" from="IndexChangeZone2" to="IndexChangeZone2" method="_on_body_entered"]

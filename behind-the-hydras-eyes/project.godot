@@ -80,9 +80,11 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres", "res://Dialogue stuffs/Dialogic/Styles/BottomDialogue.tres"]
 layout/default_style="res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
 variables={
+"AlexReturn": false,
 "BossUpset": 0,
 "CurrentDay": "Day01",
-"CurrentQuarter": "Quarter1"
+"CurrentQuarter": "Quarter1",
+"KettleReturn": 0.0
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

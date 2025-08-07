@@ -1,3 +1,14 @@
+if {KettleReturn} == 0.0:
+	set {KettleReturn} += 1.0
+	jump First
+elif {KettleReturn} == 1.0:
+	set {KettleReturn} += 1.0
+	jump Second
+elif {KettleReturn} == 2.0:
+	set {KettleReturn} += 1.0
+	jump Third
+elif {KettleReturn} == 3.0:
+	jump Fourth
 label First
 Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 - Yes
