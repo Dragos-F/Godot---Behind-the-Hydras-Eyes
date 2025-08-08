@@ -1,3 +1,4 @@
+label Alex01
 WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
 - Yes
 	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
@@ -29,3 +30,42 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Dave: I am adequately quenched as is, thanks.
 [signal arg="no_watercooler_Alex"]
 [end_timeline]
+label Jen01
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Jen.
+	[signal]
+	Jen: Hiiii, how's your day going?
+	- Great, I think
+		Jen: Aw, great!
+	- A bit hectic really
+		Jen: It'll get better!
+	Jen: Anyway, did you catch the new episode of NDIAS3? 
+	- Loved it
+		Jen: I knew you were messy like that! Naked Dating Island is the best sort of trashy. What did you think of Noah and Millie's arguement?
+		Jen: I'm fully on her side of course, he shouldn't have entertained Lillie's offer to join their throuple just because she complimented his makeup in the clown challenge!
+		Jen: Like, obviously he looked really hot in the clown outfit, but Tyrell absolutely didn't need to say that in front of Gematha while she was still in her frumpy fruitfly costume she still wearing from last weeks punishment.
+		Jen: Read the room, right?
+		- ...Right.
+			Jen: I knew you'd agree, boss! And if you like Naked Dating Island, I've got so many more recomendations!
+			Jen: Lesbian House, The Great British Date Off—ooh, and can't forget Medium Meets, where they make psychics speeddate!
+		- I think he should've accepted
+			Jen: Well, it would have been dramatic at least...I struggle to think like that, like a producer, setting people against each other for entertainment, hoping for something explosive.
+			Dave: ...
+			Jen: Oh! Uh, I mean conceptually obviously, sorry if that sounded harsh. Though I guess there's a morbid voyeuristic element even when you're rooting for the nice people like I do, like a human zoo.
+			Jen: Aw, that's depressing. 
+	- Is that a virus?
+		Jen: Nooo, silly, it's Naked Dating Island All Stars 3. I can't believe you've not heard of it!
+		Dave: It sounds...interesting. I assume it does what it says on the tin?
+		Jen: Absolutely. The editing's crazy, the couples and throuples are super messy, I love it. 
+		Jen: Weirdly, I think my cat finds it super soothing. I was licking her last night while it was on last night and she was basically transfixed.
+		- Aw, you have a cat?
+			Jen: I dooo! A beautiful and very arrogant Siamese called Xena. I've got some pictures on my phone, here.
+			Dave: Very beautiful. 
+		- ...Licking her?
+			Jen: Yeah! I read somewhere that cats get sad because they don't have a mum to groom them, so I bought one of those fake rough cat tongues.
+			Jen: You bite down on it and then just sort of lick away. Xena's like, totally obsessed with it.
+		Dave: Lovely. Well, I better get back to work. 
+	- No
+		Dave: I am adequately quenched as is, thanks.

@@ -1,22 +1,27 @@
 jump {CurrentDay}
 label Day01
-Jen: Oh hey! You're Dave, right? Pleasure to meet you, I'm Jen, your lovely marketing officer.
-Jen: If you need any posters, pamphlets, promo images or—hmm, is there a p-word for merch?—I'm your girl!
+Jen: Oh hi! So nice to meet you. I'm Jen, your lovely marketing officer.
+Jen: If you need any posters, pamphlets, promo images or—hmm, is there a P-word for merch?—I'm your girl!
 Jen: Ooh, have you seen our green office project? I think you'll love it. There's a clipboard near your desk where you can join.
 Jen: Not to brag, but I'm the reigning plant queen here, so you'll struggle to get more FP points than yours truly.
 [end_timeline]
 label Day02
 Jen: My poster campaign is, like, totally ready for launch now.
 Jen: I even settled on different slogans for different target audiences. Listen to this\:
-Jen: "ForwardGreen\: A green future you can trust". Good, right? That one's for the brochures we've given local government.
-Jen: "Lagoon Breeze\: Good for you, good for mother Earth". That ones for the locals. I think they like spirit-y stuff like that.
-Jen: Whaddaya think, captain?
+Jen: "ForwardGreen\: A green future you can trust". Good, right? That one's for the brochures we've given to the local government.
+Jen: "Lagoon Breeze\: Good for you, good for mother Earth". That one's for the locals. I think they like spirit-y stuff like that.
+Jen: Whatcha think, captain?
 - Keep up the good work!
 	Jen: Aw thanks! I didn't get a 2\:2 in Marketing from Max Dirikson's Online University for nothing!
-	Jen: ...I'm joking, I totally dropped out. What was I saying? Oh yeah, glad you approve.
+	Jen: ...I'm joking, I actually dropped out. What was I saying? Oh yeah, so glad you approve.
 - Did you, uh, do market research?
-	Jen: I LOVE market research. I went to a webinar last month called "Market Research for Climax".
-	Jen: I totally misread the title and thought it'd be about climate change, but it was still interesting seeing how adult toys are marketed!
-	Jen: Oh, right, I did search the state the project is in in Oogle, but decided to "be efficient", as Alex would say, and just skim-read the AI overview.
+	Jen: I LOVE market research. I went to a webinar last month called "Market Research for a Perfect Climax".
+	Jen: I completely misread the title and thought it'd be about climate change, but it was still interesting to get a glimpse into another industry!
+	Jen: Oh, right, I did search the state the project is in online, and the first thing that popped up was this great summary about the area.
+	Dave: Oh nice, like an academic article or a think piece type thing?
+	Jen: Hm? I'm not sure, it was just at the top of the search results.
+	Dave: ...The AI overview?
+	Jen: I used AI?  The IT department could [i]never[/i].
+	Alex: ...And hopefully would never...
 Dave: Right...well, I better get back to work, have a lovely day.
 [end_timeline]
