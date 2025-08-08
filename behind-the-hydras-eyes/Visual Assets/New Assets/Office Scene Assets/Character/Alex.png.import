@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnaija8ihrdu5"
-path="res://.godot/imported/Jen Coffee Sip-Sheet.png-ae40737bd67110fb200829b67ddb2772.ctex"
+uid="uid://dw6th7e34fng0"
+path="res://.godot/imported/Alex.png-ac21ee603c11339995dba7ab75982a1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Coffee Sip-Sheet.png"
-dest_files=["res://.godot/imported/Jen Coffee Sip-Sheet.png-ae40737bd67110fb200829b67ddb2772.ctex"]
+source_file="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex.png"
+dest_files=["res://.godot/imported/Alex.png-ac21ee603c11339995dba7ab75982a1f.ctex"]
 
 [params]
 

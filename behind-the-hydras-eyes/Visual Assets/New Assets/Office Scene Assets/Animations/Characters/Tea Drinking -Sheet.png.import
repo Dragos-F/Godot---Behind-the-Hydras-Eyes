@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be2befr2xh8qm"
-path="res://.godot/imported/Tea Drinking -Sheet.png-e15389efaa423e92a5e6688a45dbfcdc.ctex"
+path="res://.godot/imported/Tea Drinking -Sheet.png-b9cabd0bdde816072a772a59367556a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/New Assets/Office Scene Assets/Character/Tea Drinking -Sheet.png"
-dest_files=["res://.godot/imported/Tea Drinking -Sheet.png-e15389efaa423e92a5e6688a45dbfcdc.ctex"]
+source_file="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Tea Drinking -Sheet.png"
+dest_files=["res://.godot/imported/Tea Drinking -Sheet.png-b9cabd0bdde816072a772a59367556a0.ctex"]
 
 [params]
 
