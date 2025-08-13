@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4our54yywg7p"]
+[gd_scene load_steps=14 format=3 uid="uid://b4our54yywg7p"]
 
 [ext_resource type="Script" uid="uid://d4hf38fdvvsxg" path="res://Scripts/dave.gd" id="1_g6loe"]
 [ext_resource type="Texture2D" uid="uid://dxtv0ut8eccpl" path="res://Visual Assets/Dave Spritely-export.png" id="2_i7wuy"]
 [ext_resource type="Texture2D" uid="uid://bb081w6opd0ni" path="res://Visual Assets/Dave walking spritesheet.png" id="3_mo885"]
+[ext_resource type="AudioStream" uid="uid://ddgvxourj72aw" path="res://Sound/edit - 761120__izzylikesnoise__fast-footsteps-on-carpet.wav" id="4_mo885"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7wuy"]
 atlas = ExtResource("3_mo885")
@@ -76,10 +77,11 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite")]
+[node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite", "walking_audio")]
 collision_layer = 3
 script = ExtResource("1_g6loe")
 ownSprite = NodePath("AnimatedSprite2D")
+walking_audio = NodePath("AudioStreamPlayer2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -95,3 +97,8 @@ position = Vector2(16, -63)
 
 [node name="TextAnchor" type="Node2D" parent="."]
 position = Vector2(32, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mo885")
+volume_db = 2.0
+bus = &"SFX"

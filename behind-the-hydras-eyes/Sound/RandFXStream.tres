@@ -1,0 +1,5 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://v8jnmdob6ip0"]
+
+[resource]
+playback_mode = 2
+random_pitch = 3.5

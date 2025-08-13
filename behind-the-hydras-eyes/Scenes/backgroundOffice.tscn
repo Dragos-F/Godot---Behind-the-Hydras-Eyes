@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=115 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cmgixe7ffb6w1" path="res://Visual Assets/Old assets/Jen (1).png" id="19_pjjbx"]
 [ext_resource type="Texture2D" uid="uid://cpgbgj5vmmu8t" path="res://Visual Assets/Old assets/Selected Item Versions/Jen Selected.png" id="20_3frnb"]
 [ext_resource type="Texture2D" uid="uid://bf3cmklyj415h" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair.png" id="21_2oo3l"]
+[ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="22_k1f4p"]
 [ext_resource type="Texture2D" uid="uid://b527pdgv56ug7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Printer.png" id="22_pmbmo"]
 [ext_resource type="Texture2D" uid="uid://8qxgsfuuruxs" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant Flowers 1.png" id="23_7qvgb"]
 [ext_resource type="Texture2D" uid="uid://c6upse6doxf6v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 1.png" id="24_sk8q4"]
@@ -30,16 +31,17 @@
 [ext_resource type="Script" uid="uid://y7t88qq25dmu" path="res://Scripts/AlexAnimBrain.gd" id="27_rmr2f"]
 [ext_resource type="Texture2D" uid="uid://bg0wq7g8iofjj" path="res://Visual Assets/Old assets/Selected Item Versions/Alex Selected.png" id="27_vyjpg"]
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="28_tjo4x"]
-[ext_resource type="Texture2D" uid="uid://be2befr2xh8qm" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Tea Drinking -Sheet.png" id="29_5tuft"]
+[ext_resource type="Texture2D" uid="uid://be2befr2xh8qm" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Tea Drinking -Sheet.png" id="29_5tuft"]
 [ext_resource type="Texture2D" uid="uid://dp73wjya5kjc2" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug full.png" id="29_q3361"]
 [ext_resource type="Texture2D" uid="uid://bu6fx8kqfdd5m" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Laptop.png" id="30_4f6p7"]
-[ext_resource type="Texture2D" uid="uid://bg2xtrrglj2lk" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 2.png" id="31_auuwe"]
 [ext_resource type="Texture2D" uid="uid://qxlk7xh4hgws" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Chair side.png" id="32_b5yax"]
 [ext_resource type="Texture2D" uid="uid://d1d74uiys3cf4" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Corner Desk.png" id="33_x5kt2"]
 [ext_resource type="Texture2D" uid="uid://ckeoasg4xd3jh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair Selected.png" id="34_2tjsp"]
 [ext_resource type="Texture2D" uid="uid://b0f1vechlub3b" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Book Green.png" id="35_evwx4"]
+[ext_resource type="Texture2D" uid="uid://waaq4vq37cf" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Computer 2.png" id="35_gvy6j"]
 [ext_resource type="Texture2D" uid="uid://b4asbei8d3f18" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper and stapler.png" id="36_0dwm3"]
 [ext_resource type="Texture2D" uid="uid://cxhv1h8rtcsuv" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Water bottle.png" id="37_jbjul"]
+[ext_resource type="Texture2D" uid="uid://b6bd12l4ikw1r" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Computer 2 mouse.png" id="37_w137r"]
 [ext_resource type="Texture2D" uid="uid://drgrql0b2etfp" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster and leaflets.png" id="38_43ctb"]
 [ext_resource type="Texture2D" uid="uid://u7xovy252k3p" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Water cooler.png" id="39_i5h4o"]
 [ext_resource type="Texture2D" uid="uid://bnchqxahys8j0" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Water_cooler_selected.png" id="40_pn164"]
@@ -79,6 +81,154 @@ height = 101.288
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r70fk"]
 radius = 90.0347
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly42q"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk4hj"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyjpg"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjo4x"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3361"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f6p7"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auuwe"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5yax"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5kt2"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tjsp"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evwx4"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dwm3"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbjul"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43ctb"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5h4o"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn164"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1c86"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oh3a"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcnfg"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnlhq"]
+atlas = ExtResource("22_k1f4p")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcnck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly42q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyjpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjo4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3361")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f6p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auuwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5yax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5kt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tjsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evwx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dwm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbjul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43ctb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5h4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn164")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1c86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oh3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcnfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnlhq")
+}],
+"loop": false,
+"name": &"drink_tea",
+"speed": 10.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7517s"]
 radius = 81.9909
@@ -458,6 +608,9 @@ shape = SubResource("CircleShape2D_r70fk")
 [node name="Timer" type="Timer" parent="Furniture/Jen1"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Jen1"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_fcnck")
+animation = &"drink_tea"
 
 [node name="JenDesk" type="Node2D" parent="Furniture"]
 
@@ -588,7 +741,7 @@ z_index = -2
 texture_filter = 1
 position = Vector2(-497, -207)
 scale = Vector2(2, 2)
-texture = ExtResource("31_auuwe")
+texture = ExtResource("35_gvy6j")
 
 [node name="ChairSide" type="Sprite2D" parent="Furniture/AlexDesk"]
 z_index = -1
@@ -602,6 +755,13 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/AlexDesk/ChairSide/StaticBody2D"]
 polygon = PackedVector2Array(-37.5, 50.5, 9, 72, 38.5, 72, 72, 54, -12.5, 14.5, -32, 5.5)
+
+[node name="Computer2Mouse" type="Sprite2D" parent="Furniture/AlexDesk"]
+z_index = -1
+texture_filter = 1
+position = Vector2(-483, -160)
+scale = Vector2(2, 2)
+texture = ExtResource("37_w137r")
 
 [node name="DaveDesk" type="Node2D" parent="Furniture"]
 z_index = -1

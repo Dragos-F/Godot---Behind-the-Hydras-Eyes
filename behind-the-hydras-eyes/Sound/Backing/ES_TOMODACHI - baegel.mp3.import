@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6x11oibx01ov"
+path="res://.godot/imported/ES_TOMODACHI - baegel.mp3-1749b723251e06f5f129610e0bf410b4.mp3str"
+
+[deps]
+
+source_file="res://Sound/Backing/ES_TOMODACHI - baegel.mp3"
+dest_files=["res://.godot/imported/ES_TOMODACHI - baegel.mp3-1749b723251e06f5f129610e0bf410b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

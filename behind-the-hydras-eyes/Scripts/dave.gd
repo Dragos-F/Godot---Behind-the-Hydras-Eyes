@@ -6,6 +6,8 @@ class_name Dave
 @export var move_time = true
 const JUMP_VELOCITY = -400.0
 @export var ownSprite : AnimatedSprite2D
+@export var walking_audio:AudioStreamPlayer2D
+@export var once1:bool
 
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_stopDave)
@@ -45,9 +47,13 @@ func _physics_process(delta: float) -> void:
 		
 		if hdirection || vdirection != 0:
 			animated_sprite.play("walk")
+			if (!walking_audio.playing):
+				walking_audio.play(0.0)
 		
 		else:
 			animated_sprite.play("idle")
+			walking_audio.stop()
+			
 	else:
 		velocity.y = 0
 		velocity.x = 0

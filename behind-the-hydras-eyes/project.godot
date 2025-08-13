@@ -20,6 +20,7 @@ config/icon="uid://blg1wfoyjweap"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 PermanentGlobal="*res://Scripts/PermanentGlobal.gd"
 Fader="*res://Scripts/fader.gd"
+AudioBrain="*res://Scenes/audio_brain.tscn"
 
 [dialogic]
 

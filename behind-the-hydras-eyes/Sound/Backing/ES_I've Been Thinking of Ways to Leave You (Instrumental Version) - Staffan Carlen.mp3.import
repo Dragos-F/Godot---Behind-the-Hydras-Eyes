@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nclvronbd1n2"
+path="res://.godot/imported/ES_I've Been Thinking of Ways to Leave You (Instrumental Version) - Staffan Carlen.mp3-20fe2641ade1c140dfa5d4a55234f74e.mp3str"
+
+[deps]
+
+source_file="res://Sound/Backing/ES_I've Been Thinking of Ways to Leave You (Instrumental Version) - Staffan Carlen.mp3"
+dest_files=["res://.godot/imported/ES_I've Been Thinking of Ways to Leave You (Instrumental Version) - Staffan Carlen.mp3-20fe2641ade1c140dfa5d4a55234f74e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
