@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=161 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -24,17 +24,20 @@
 [ext_resource type="Texture2D" uid="uid://bf3cmklyj415h" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair.png" id="21_2oo3l"]
 [ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="22_k1f4p"]
 [ext_resource type="Texture2D" uid="uid://b527pdgv56ug7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Printer.png" id="22_pmbmo"]
+[ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="23_5vk3e"]
 [ext_resource type="Texture2D" uid="uid://8qxgsfuuruxs" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant Flowers 1.png" id="23_7qvgb"]
 [ext_resource type="Texture2D" uid="uid://c6upse6doxf6v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Desk 1.png" id="24_sk8q4"]
 [ext_resource type="Texture2D" uid="uid://c4re8lxxdtgpt" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Computer 1.png" id="25_ly42q"]
 [ext_resource type="Texture2D" uid="uid://bqs05u7laca0w" path="res://Visual Assets/Old assets/Alex.png" id="26_xk4hj"]
 [ext_resource type="Script" uid="uid://y7t88qq25dmu" path="res://Scripts/AlexAnimBrain.gd" id="27_rmr2f"]
 [ext_resource type="Texture2D" uid="uid://bg0wq7g8iofjj" path="res://Visual Assets/Old assets/Selected Item Versions/Alex Selected.png" id="27_vyjpg"]
+[ext_resource type="Texture2D" uid="uid://dw6th7e34fng0" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex.png" id="28_6r1ym"]
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="28_tjo4x"]
 [ext_resource type="Texture2D" uid="uid://be2befr2xh8qm" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Tea Drinking -Sheet.png" id="29_5tuft"]
 [ext_resource type="Texture2D" uid="uid://dp73wjya5kjc2" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug full.png" id="29_q3361"]
 [ext_resource type="Texture2D" uid="uid://bu6fx8kqfdd5m" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Laptop.png" id="30_4f6p7"]
 [ext_resource type="Texture2D" uid="uid://qxlk7xh4hgws" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Chair side.png" id="32_b5yax"]
+[ext_resource type="Texture2D" uid="uid://dn47nrrwjrw81" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Alex mouse wiggle-Sheet.png" id="33_5vk3e"]
 [ext_resource type="Texture2D" uid="uid://d1d74uiys3cf4" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Corner Desk.png" id="33_x5kt2"]
 [ext_resource type="Texture2D" uid="uid://ckeoasg4xd3jh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair Selected.png" id="34_2tjsp"]
 [ext_resource type="Texture2D" uid="uid://b0f1vechlub3b" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Book Green.png" id="35_evwx4"]
@@ -162,6 +165,150 @@ region = Rect2(936, 0, 52, 122)
 atlas = ExtResource("22_k1f4p")
 region = Rect2(988, 0, 52, 122)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mqa7"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u0n3"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpxd6"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr7b6"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej8k"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrw2s"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6fm4"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb2lo"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t338"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu3io"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sinl"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_061du"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxmww"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odakp"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ngdt"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6tgp"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jdw2"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2hpw"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqj3v"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdjwe"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmnt4"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1040, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrc7b"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1092, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_734vm"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1144, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxo4l"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1196, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg5dk"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1248, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfnau"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1300, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltdj6"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1352, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu602"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1404, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8jvq"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1456, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbupp"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1508, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc3pw"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1560, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqe3p"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1612, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pc5f"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1664, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjofg"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1716, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7echg"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1768, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vreia"]
+atlas = ExtResource("23_5vk3e")
+region = Rect2(1820, 0, 52, 122)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fcnck"]
 animations = [{
 "frames": [{
@@ -227,6 +374,119 @@ animations = [{
 }],
 "loop": false,
 "name": &"drink_tea",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mqa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u0n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpxd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr7b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oej8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrw2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6fm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb2lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t338")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu3io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sinl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_061du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxmww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odakp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ngdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6tgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jdw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2hpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqj3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdjwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmnt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrc7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_734vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxo4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg5dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfnau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltdj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu602")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8jvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbupp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc3pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqe3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pc5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjofg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7echg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vreia")
+}],
+"loop": false,
+"name": &"phone_check",
 "speed": 10.0
 }]
 
@@ -309,6 +569,34 @@ region = Rect2(3400, 0, 200, 150)
 atlas = ExtResource("29_5tuft")
 region = Rect2(3600, 0, 200, 150)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcnck"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(0, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0me7r"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(200, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq117"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(400, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v48gj"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(600, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri84f"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(800, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc0sk"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(1000, 0, 200, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4ws5"]
+atlas = ExtResource("33_5vk3e")
+region = Rect2(1200, 0, 200, 150)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ly42q"]
 animations = [{
 "frames": [{
@@ -386,6 +674,32 @@ animations = [{
 }],
 "loop": false,
 "name": &"drink_tea",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcnck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0me7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq117")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v48gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri84f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc0sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4ws5")
+}],
+"loop": false,
+"name": &"mouse_wiggle",
 "speed": 10.0
 }]
 
@@ -610,7 +924,7 @@ shape = SubResource("CircleShape2D_r70fk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Jen1"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_fcnck")
-animation = &"drink_tea"
+animation = &"phone_check"
 
 [node name="JenDesk" type="Node2D" parent="Furniture"]
 
@@ -662,21 +976,22 @@ position = Vector2(37, -500)
 scale = Vector2(2, 2)
 texture = ExtResource("25_ly42q")
 
-[node name="Alex" type="Sprite2D" parent="Furniture" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "Chair", "CoffeeMug", "timer")]
+[node name="Alex" type="Sprite2D" parent="Furniture" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "Chair", "CoffeeMug", "Mouse", "timer")]
 z_index = -1
 texture_filter = 1
 position = Vector2(-543, -110)
 scale = Vector2(2, 2)
-texture = ExtResource("26_xk4hj")
+texture = ExtResource("28_6r1ym")
 script = ExtResource("27_rmr2f")
 MainSprite = NodePath(".")
 SpriteAnim = NodePath("AnimatedSprite2D")
 Chair = NodePath("../AlexDesk/ChairSide")
 CoffeeMug = NodePath("../AlexDesk/MugFull")
+Mouse = NodePath("../AlexDesk/Computer2Mouse")
 timer = NodePath("Timer")
 minTime = 5.0
 maxTime = 8.0
-regularAlex = ExtResource("26_xk4hj")
+regularAlex = ExtResource("28_6r1ym")
 
 [node name="AlexInteractable" parent="Furniture/Alex" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("26_xk4hj")
@@ -694,7 +1009,7 @@ shape = SubResource("CircleShape2D_7517s")
 visible = false
 position = Vector2(14.5, -11)
 sprite_frames = SubResource("SpriteFrames_ly42q")
-animation = &"drink_tea"
+animation = &"mouse_wiggle"
 
 [node name="Timer" type="Timer" parent="Furniture/Alex"]
 
@@ -759,7 +1074,7 @@ polygon = PackedVector2Array(-37.5, 50.5, 9, 72, 38.5, 72, 72, 54, -12.5, 14.5, 
 [node name="Computer2Mouse" type="Sprite2D" parent="Furniture/AlexDesk"]
 z_index = -1
 texture_filter = 1
-position = Vector2(-483, -160)
+position = Vector2(-491, -155)
 scale = Vector2(2, 2)
 texture = ExtResource("37_w137r")
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cli41apxllh6i"]
+[gd_scene load_steps=22 format=3 uid="uid://cli41apxllh6i"]
 
 [ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="1_nxpru"]
 [ext_resource type="Script" uid="uid://cbkj0uqvtov7s" path="res://Scenes/train.gd" id="1_u3u2q"]
 [ext_resource type="Texture2D" uid="uid://bstwti6vw6p83" path="res://Visual Assets/New Assets/Train/Train Background.png" id="2_0hk28"]
+[ext_resource type="AudioStream" uid="uid://dxvjy3m1diggo" path="res://Sound/TrainBack.wav" id="2_2egfw"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="2_40qti"]
 [ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="3_0hk28"]
 [ext_resource type="Texture2D" uid="uid://dus4uwj1x577g" path="res://Visual Assets/New Assets/Train/Sitting 1.png" id="4_qi5j6"]
@@ -81,11 +82,20 @@ _data = {
 &"background": SubResource("Animation_0hk28")
 }
 
-[node name="Train" type="Node2D"]
+[node name="Train" type="Node2D" node_paths=PackedStringArray("BossTextAnchor", "daveAnim", "train_sound")]
 script = ExtResource("1_u3u2q")
+BossTextAnchor = NodePath("TextAnchor")
+daveAnim = NodePath("Dave/AnimatedSprite2D")
+train_sound = NodePath("TrainAmbience")
+
+[node name="TrainAmbience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2egfw")
+volume_db = -80.0
+autoplay = true
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -748,4 +758,12 @@ z_index = 2
 position = Vector2(196, 81)
 move_time = false
 
+[node name="AnimatedSprite2D" parent="Dave" index="0"]
+animation = &"phone_up"
+
+[node name="TextAnchor" type="Node2D" parent="."]
+position = Vector2(236, 34)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Dave"]

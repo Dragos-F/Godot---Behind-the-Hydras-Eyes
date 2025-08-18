@@ -7,7 +7,7 @@ class_name Dave
 const JUMP_VELOCITY = -400.0
 @export var ownSprite : AnimatedSprite2D
 @export var walking_audio:AudioStreamPlayer2D
-@export var once1:bool
+@export var oncev1:bool = true
 
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_stopDave)
@@ -16,7 +16,8 @@ func _ready() -> void:
 	
 func _stopDave():
 	move_time = false
-	animated_sprite.play("idle")
+	if (animated_sprite.get_animation() =="walk"):
+		animated_sprite.play("idle")
 func _restartDave():
 	move_time = true
 	
@@ -46,12 +47,14 @@ func _physics_process(delta: float) -> void:
 			velocity.y = move_toward(velocity.x, 0, SPEED)
 		
 		if hdirection || vdirection != 0:
+			oncev1 = true
 			animated_sprite.play("walk")
 			if (!walking_audio.playing):
 				walking_audio.play(0.0)
 		
 		else:
-			animated_sprite.play("idle")
+			if (animated_sprite.get_animation() =="walk"):
+				animated_sprite.play("idle")
 			walking_audio.stop()
 			
 	else:

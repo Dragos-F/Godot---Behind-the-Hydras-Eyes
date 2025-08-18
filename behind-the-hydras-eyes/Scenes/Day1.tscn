@@ -276,6 +276,9 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
+[node name="AnimatedSprite2D" parent="Dave" index="0"]
+animation = &"idle"
+
 [node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor")]
 script = ExtResource("11_l3qly")
 AlexNotif = NodePath("../Notifications/Alex")

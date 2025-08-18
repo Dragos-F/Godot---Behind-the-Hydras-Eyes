@@ -12,8 +12,7 @@ extends Node
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day01"
-	var layout = Dialogic.start("Text From Boss")
-	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
+
 	
 	
 func _process(delta: float) -> void:

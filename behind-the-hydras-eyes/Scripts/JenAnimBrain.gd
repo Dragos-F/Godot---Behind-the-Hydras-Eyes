@@ -15,7 +15,11 @@ func _on_timer_timeout() -> void:
 	timer.wait_time = randf_range(minTime, maxTime)
 	timer.start()
 	TurnSpritesOff()
-	SpriteAnim.play("drink_tea")
+	if (randi_range(0,1)==0):
+		SpriteAnim.play("drink_tea")
+	else:
+		SpriteAnim.play("phone_check")
+	
 	
 	
 func _on_animated_sprite_2d_animation_finished() -> void:

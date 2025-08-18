@@ -1,4 +1,5 @@
 extends Node2D
+@export var BackPlayer: AudioStreamPlayer2D
 @export var UIsfxPlayer :AudioStreamPlayer2D
 @export var FXPlayer:AudioStreamPlayer2D
 @export var RandFXPlayer:AudioStreamPlayer2D

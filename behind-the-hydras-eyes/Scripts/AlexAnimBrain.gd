@@ -19,7 +19,11 @@ func _on_timer_timeout() -> void:
 	timer.wait_time = randf_range(minTime, maxTime)
 	timer.start()
 	TurnSpritesOff()
-	SpriteAnim.play("drink_tea")
+	
+	if (randi_range(0,1)==0):
+		SpriteAnim.play("drink_tea")
+	else:
+		SpriteAnim.play("mouse_wiggle")
 	
 	
 func _on_animated_sprite_2d_animation_finished() -> void:
@@ -30,6 +34,7 @@ func TurnSpritesOff() -> void:
 	MainSprite.texture = null
 	Chair.visible = false
 	CoffeeMug.visible = false
+	Mouse.visible = false
 	SpriteAnim.visible = true
 
 	
@@ -38,3 +43,4 @@ func ResetSprites():
 	Chair.visible = true
 	CoffeeMug.visible = true
 	SpriteAnim.visible = false
+	Mouse.visible = true
