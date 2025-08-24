@@ -682,7 +682,6 @@ offset_top = -5.00201
 offset_right = -78.708
 offset_bottom = -5.28802
 theme_override_font_sizes/font_size = 45
-toggle_mode = true
 text = "Save Budget"
 
 [node name="BottomBar" type="Panel" parent="."]
@@ -755,6 +754,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton5" to="Budget/Chart" method="_on_check_button_toggled"]
 [connection signal="pressed" from="Budget/Additional Costs2/Lifestyle2/Decrease" to="Budget/Chart" method="_on_decrease_pressed"]
 [connection signal="pressed" from="Budget/Additional Costs2/Lifestyle2/Increase" to="Budget/Chart" method="_on_increase_pressed"]
+[connection signal="pressed" from="Budget/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="toggled" from="Budget/SaveButton" to="Budget/Chart" method="_on_save_button_toggled"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]

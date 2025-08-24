@@ -493,6 +493,8 @@ offset_bottom = 56.712
 [node name="Emails" parent="ScreenUI/BottomBar" index="0"]
 visible = false
 
+[connection signal="pressed" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
 [editable path="Furniture/Balcony Door/InteractableElement"]

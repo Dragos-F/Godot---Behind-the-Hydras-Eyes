@@ -109,3 +109,7 @@ func _on_job_thing_pressed() -> void:
 	Budget.visible = false
 	for i in EmailList:
 		i.visible = false
+
+
+func _on_save_button_pressed() -> void:
+	pass # Replace with function body.
