@@ -460,8 +460,11 @@ visible = false
 [node name="MainEmail" parent="ScreenUI" index="1"]
 visible = false
 
-[node name="Budget" parent="ScreenUI" index="2"]
-visible = true
+[node name="Chart" parent="ScreenUI/Budget" index="2"]
+values = Array[float]([0.0, 0.0, 0.0, 0.0])
+totalRent = 4950.0
+totalBills = 1350.0
+lifestyleCosts = Array[float]([730.0, 900.0, 3000.0])
 
 [node name="Label" parent="ScreenUI/Budget/Additional Costs/Panel/HBoxContainer" index="0"]
 text = "SUBSCRIPTIONS"

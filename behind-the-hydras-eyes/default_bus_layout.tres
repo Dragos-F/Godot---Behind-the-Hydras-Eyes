@@ -1,7 +1,7 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://wahy2tljl7ll"]
 
 [resource]
-bus/0/send = &"Steps"
+bus/0/mute = true
 bus/1/name = &"UI"
 bus/1/solo = false
 bus/1/mute = false

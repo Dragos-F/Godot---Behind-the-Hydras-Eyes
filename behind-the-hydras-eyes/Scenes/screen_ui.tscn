@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=18 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
 [ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="3_m3eo7"]
 [ext_resource type="PackedScene" uid="uid://dk0tlp5sp41uj" path="res://Scenes/testPie.tscn" id="3_vjvvu"]
+[ext_resource type="Texture2D" uid="uid://catrajxdw6hs3" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/34.png" id="4_ovuwh"]
 [ext_resource type="Texture2D" uid="uid://d1essny355ere" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/87.png" id="4_tvukg"]
 [ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="4_vjvvu"]
 
@@ -51,34 +52,6 @@ corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovuwh"]
 bg_color = Color(0, 0, 0, 0.191)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxeq5"]
-bg_color = Color(1, 0, 0, 0.192157)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rttsh"]
-bg_color = Color(0.753643, 0.455672, 3.85046e-07, 0.192157)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q77rv"]
-bg_color = Color(0, 0.546226, 0.933398, 0.192157)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ntsw"]
-bg_color = Color(0.147376, 0.644569, 0, 0.192157)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -306,7 +279,6 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Budget" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 12.0
@@ -337,12 +309,19 @@ offset_top = 6.0
 offset_right = 1365.0
 offset_bottom = 38.0
 
-[node name="Chart" parent="Budget" node_paths=PackedStringArray("savingsText") instance=ExtResource("3_vjvvu")]
+[node name="Chart" parent="Budget" node_paths=PackedStringArray("savingsText", "LifeStyleText", "LifeStyleTextCost", "savingsContributionText") instance=ExtResource("3_vjvvu")]
 layout_mode = 1
 mouse_filter = 1
+colors = Array[Color]([Color(1, 0.33175, 0.266073, 1), Color(0.928098, 0.559082, 3.85046e-07, 1), Color(0.476177, 0.836152, 0.407928, 1), Color(0.278431, 0.690196, 1, 1)])
+values = Array[float]([0.45, 0.25, 0.2, 0.0])
 savingsText = NodePath("../BoxContainer/Additional Costs3/BoxContainer/Label")
+LifeStyleText = NodePath("../Additional Costs2/Lifestyle2/AspectRatioContainer/Label2")
+LifeStyleTextCost = NodePath("../Additional Costs2/SUM/AspectRatioContainer/TYPE")
 totalSalary = 7200.0
 startingSavings = 2400.0
+savingsContributionText = NodePath("../Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer/Label3")
+lifestyleTypes = Array[String](["Frugal", "Moderate", "Posh"])
+lifestyleCosts = Array[float]([600.0, 870.0, 3000.0])
 
 [node name="LabellessPieChart" parent="Budget/Chart" index="0"]
 offset_left = 340.11
@@ -424,7 +403,7 @@ layout_mode = 0
 offset_left = 878.0
 offset_top = 43.0
 offset_right = 1378.0
-offset_bottom = 346.0
+offset_bottom = 423.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="Panel" type="Panel" parent="Budget/Additional Costs2"]
@@ -442,124 +421,180 @@ offset_top = 1.0
 offset_right = 367.0
 offset_bottom = 40.0
 theme_override_font_sizes/font_size = 26
-text = "MONTHLY EXPENSES"
+text = "QUARTERLY INCOME"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs2"]
-layout_mode = 2
-offset_left = 10.0
-offset_top = 56.0
-offset_right = 492.0
-offset_bottom = 292.0
+[node name="RENT" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 58.0
+offset_right = 491.0
+offset_bottom = 107.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Decrease" type="VBoxContainer" parent="Budget/Additional Costs2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 20
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/RENT"]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 40.0
 
-[node name="Rent" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs2/RENT/AspectRatioContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-disabled = true
-text = "-"
+theme_override_constants/separation = 85
 
-[node name="Bills" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease"]
+[node name="Label2" type="Label" parent="Budget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-disabled = true
-text = "-"
-
-[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-text = "-"
-
-[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Decrease" groups=["Buttons"]]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-text = "-"
-
-[node name="What" type="VBoxContainer" parent="Budget/Additional Costs2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 20
-
-[node name="Rent" type="Label" parent="Budget/Additional Costs2/HBoxContainer/What"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_wxeq5")
+theme_override_colors/font_color = Color(1, 0.333333, 0.266667, 1)
+theme_override_font_sizes/font_size = 36
 text = "Rent"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Bills" type="Label" parent="Budget/Additional Costs2/HBoxContainer/What"]
+[node name="Label3" type="Label" parent="Budget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_rttsh")
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.333333, 0.266667, 1)
+theme_override_font_sizes/font_size = 36
+text = "£1650 *3 = £4950"
+
+[node name="BILLS" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 116.0
+offset_right = 491.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/BILLS"]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs2/BILLS/AspectRatioContainer"]
+layout_mode = 2
+theme_override_constants/separation = 85
+
+[node name="Label2" type="Label" parent="Budget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.929412, 0.560784, 0, 1)
+theme_override_font_sizes/font_size = 36
 text = "Bills"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Savings" type="Label" parent="Budget/Additional Costs2/HBoxContainer/What"]
+[node name="Label3" type="Label" parent="Budget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_q77rv")
-text = "Savings"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.929412, 0.560784, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "£450 *3 = £1350"
 
-[node name="Lifestyle" type="Label" parent="Budget/Additional Costs2/HBoxContainer/What"]
+[node name="SavingsContrib" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 302.0
+offset_right = 491.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/SavingsContrib"]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/Additional Costs2/SavingsContrib/AspectRatioContainer"]
 layout_mode = 2
-size_flags_vertical = 2
-theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_3ntsw")
+theme_override_constants/separation = 30
+
+[node name="Label2" type="Label" parent="Budget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.278259, 0.692049, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Saving Contribution"
+
+[node name="Label3" type="Label" parent="Budget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 36
+text = "£300"
+
+[node name="Lifestyle2" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 179.0
+offset_right = 491.0
+offset_bottom = 228.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/Lifestyle2"]
+layout_mode = 0
+offset_right = 477.0
+offset_bottom = 50.0
+
+[node name="Label2" type="Label" parent="Budget/Additional Costs2/Lifestyle2/AspectRatioContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47451, 0.835294, 0.407843, 1)
+theme_override_font_sizes/font_size = 36
 text = "Lifestyle"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Increase" type="VBoxContainer" parent="Budget/Additional Costs2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 20
+[node name="Decrease" type="Button" parent="Budget/Additional Costs2/Lifestyle2"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 51.0
+offset_right = 127.0
+offset_bottom = 103.0
+rotation = 3.14159
+icon = ExtResource("4_ovuwh")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Rent" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-disabled = true
-text = "+"
+[node name="Increase" type="Button" parent="Budget/Additional Costs2/Lifestyle2"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = -1.0
+offset_right = 478.0
+offset_bottom = 51.0
+icon = ExtResource("4_ovuwh")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Bills" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-disabled = true
-text = "+"
+[node name="Type" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 241.0
+offset_right = 268.0
+offset_bottom = 290.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Savings" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-text = "+"
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/Type"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 50.0
 
-[node name="Lifestyle" type="Button" parent="Budget/Additional Costs2/HBoxContainer/Increase" groups=["Buttons"]]
+[node name="TYPE" type="Label" parent="Budget/Additional Costs2/Type/AspectRatioContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 26
-text = "+"
+theme_override_colors/font_color = Color(0.47451, 0.835294, 0.407843, 1)
+theme_override_font_sizes/font_size = 36
+text = "Lifestyle Cost"
+
+[node name="SUM" type="Panel" parent="Budget/Additional Costs2"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 242.0
+offset_right = 484.0
+offset_bottom = 291.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/Additional Costs2/SUM"]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 50.0
+
+[node name="TYPE" type="Label" parent="Budget/Additional Costs2/SUM/AspectRatioContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "SUM"
 
 [node name="BoxContainer" type="BoxContainer" parent="Budget"]
 layout_mode = 0
-offset_left = 952.0
-offset_top = 388.0
-offset_right = 1340.0
-offset_bottom = 559.0
+offset_left = 837.0
+offset_top = 449.0
+offset_right = 1225.0
+offset_bottom = 620.0
 alignment = 1
 
 [node name="Additional Costs3" type="Panel" parent="Budget/BoxContainer"]
@@ -613,24 +648,27 @@ vertical_alignment = 1
 
 [node name="Panel3" type="Panel" parent="Budget"]
 layout_mode = 0
-offset_left = 438.0
-offset_top = 74.0
-offset_right = 788.0
-offset_bottom = 114.0
+offset_left = 420.0
+offset_top = 75.0
+offset_right = 861.0
+offset_bottom = 115.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Budget/Panel3"]
 layout_mode = 0
-offset_right = 346.0
+offset_right = 439.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Budget/Panel3/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 28
-text = "QUARTERLY NET INCOME: £7200"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 26
+text = "QUARTERLY NET INCOME:"
+
+[node name="Label2" type="Label" parent="Budget/Panel3/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "£7200"
 
 [node name="SaveButton" type="Button" parent="Budget"]
 layout_mode = 1
@@ -715,10 +753,8 @@ metadata/_edit_use_anchors_ = true
 [connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton3" to="Budget/Chart" method="_on_check_button_toggled"]
 [connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton4" to="Budget/Chart" method="_on_check_button_toggled"]
 [connection signal="toggled" from="Budget/Additional Costs/VBoxContainer/CheckButton5" to="Budget/Chart" method="_on_check_button_toggled"]
-[connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Decrease/Savings" to="Budget/Chart" method="_on_savings_pressed"]
-[connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Decrease/Lifestyle" to="Budget/Chart" method="_on_lifestyle_pressed"]
-[connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Increase/Savings" to="Budget/Chart" method="_on_savings_increase"]
-[connection signal="pressed" from="Budget/Additional Costs2/HBoxContainer/Increase/Lifestyle" to="Budget/Chart" method="_on_lifestyle_increase"]
+[connection signal="pressed" from="Budget/Additional Costs2/Lifestyle2/Decrease" to="Budget/Chart" method="_on_decrease_pressed"]
+[connection signal="pressed" from="Budget/Additional Costs2/Lifestyle2/Increase" to="Budget/Chart" method="_on_increase_pressed"]
 [connection signal="toggled" from="Budget/SaveButton" to="Budget/Chart" method="_on_save_button_toggled"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]
