@@ -1,0 +1,280 @@
+[gd_scene load_steps=27 format=3 uid="uid://ltwvcinww1o3"]
+
+[ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
+[ext_resource type="PackedScene" uid="uid://buh0qkey1y0en" path="res://Scenes/mug_1.tscn" id="2_aker0"]
+[ext_resource type="Texture2D" uid="uid://rpxf4bn22f5r" path="res://Visual Assets/New Assets/Tea Minigame/Kettle heater.png" id="3_b8y0n"]
+[ext_resource type="Texture2D" uid="uid://dt6xjtpmmav52" path="res://Visual Assets/New Assets/Tea Minigame/Milk maybe.png" id="5_aker0"]
+[ext_resource type="Texture2D" uid="uid://bk175u44lpg1p" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut.png" id="6_n24y3"]
+[ext_resource type="Script" uid="uid://b00qpufm2biyr" path="res://Scripts/PouringReturn.gd" id="8_aker0"]
+[ext_resource type="PackedScene" uid="uid://cs4l2gr81xfc" path="res://Scenes/kettle.tscn" id="8_fy2cc"]
+[ext_resource type="Texture2D" uid="uid://cpn5oy8n1g1ot" path="res://Visual Assets/New Assets/Tea Minigame/Tea box unselected.png" id="8_p5ecj"]
+[ext_resource type="Script" uid="uid://xxcbo2hnnw8b" path="res://Scripts/bagBrain.gd" id="9_ixkvo"]
+[ext_resource type="Texture2D" uid="uid://4c63tg8tssyi" path="res://Visual Assets/New Assets/Tea Minigame/Tea box opening-Sheet.png" id="9_ydx0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aker0"]
+size = Vector2(244.167, 228.333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exita"]
+atlas = ExtResource("8_p5ecj")
+region = Rect2(0, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jsy0"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(0, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga5wg"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(462, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r6gx"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(924, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7ydb"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(1386, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytsv5"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(1848, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yopij"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(2310, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioqxa"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(2772, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpafo"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(3234, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iir80"]
+atlas = ExtResource("9_ydx0e")
+region = Rect2(3696, 0, 462, 329)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivjq4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exita")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jsy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga5wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r6gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ydb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytsv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yopij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioqxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpafo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iir80")
+}],
+"loop": false,
+"name": &"open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydx0e"]
+size = Vector2(334.167, 225.833)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n24y3"]
+size = Vector2(556, 331.833)
+
+[sub_resource type="Animation" id="Animation_nekis"]
+resource_name = "Mug1"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lpa1k"]
+_data = {
+&"Mug1": SubResource("Animation_nekis")
+}
+
+[node name="TeaMinigame" type="Node2D"]
+
+[node name="TeaMinigameBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_m83bi")
+
+[node name="Mug1" parent="." instance=ExtResource("2_aker0")]
+position = Vector2(-264, 362)
+
+[node name="NutAnchor" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(-784, -180)
+scale = Vector2(1.2, 1.2)
+
+[node name="Base_area" type="Area2D" parent="NutAnchor" node_paths=PackedStringArray("container")]
+script = ExtResource("8_aker0")
+container = NodePath("../../Nut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NutAnchor/Base_area"]
+visible = false
+z_index = 1
+position = Vector2(8.75, -27.5)
+shape = SubResource("RectangleShape2D_aker0")
+
+[node name="CowAnchor" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(-502, -175)
+scale = Vector2(1.2, 1.2)
+
+[node name="Base_area" type="Area2D" parent="CowAnchor" node_paths=PackedStringArray("container")]
+script = ExtResource("8_aker0")
+container = NodePath("../../Cow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CowAnchor/Base_area"]
+visible = false
+z_index = 1
+position = Vector2(8.75, -27.5)
+shape = SubResource("RectangleShape2D_aker0")
+
+[node name="TeaBoxUnselected" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(738, 359)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_ivjq4")
+animation = &"idle"
+script = ExtResource("9_ixkvo")
+
+[node name="TeaBox" type="Area2D" parent="TeaBoxUnselected"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TeaBoxUnselected/TeaBox"]
+visible = false
+position = Vector2(-5.41656, 45.4167)
+shape = SubResource("RectangleShape2D_ydx0e")
+
+[node name="KettleHeater" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(701, 50)
+texture = ExtResource("3_b8y0n")
+
+[node name="Base_area" type="Area2D" parent="KettleHeater" node_paths=PackedStringArray("container")]
+script = ExtResource("8_aker0")
+container = NodePath("../../Kettle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KettleHeater/Base_area"]
+z_index = 1
+position = Vector2(-12, -227.083)
+shape = SubResource("RectangleShape2D_n24y3")
+
+[node name="KettleAnchor" type="Node2D" parent="KettleHeater"]
+position = Vector2(6, -245)
+
+[node name="Kettle" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+texture_filter = 1
+position = Vector2(701, -201)
+anchor_pos = NodePath("../KettleHeater/KettleAnchor")
+pour_anim = "water"
+
+[node name="CollisionPolygon2D" parent="Kettle/Kettle" index="0"]
+visible = false
+
+[node name="EndOfStream" parent="Kettle" index="2"]
+visible = false
+
+[node name="Cow" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+texture_filter = 1
+position = Vector2(-469, -197)
+texture = ExtResource("5_aker0")
+pourAngle = 1.152
+anchor_pos = NodePath("../CowAnchor")
+pour_anim = "milk"
+
+[node name="Kettle" parent="Cow" index="0"]
+texture_filter = 1
+
+[node name="CollisionPolygon2D" parent="Cow/Kettle" index="0"]
+visible = false
+texture_filter = 1
+polygon = PackedVector2Array(-99.5, -162.5, -99.5, -160.8, -101.5, -159.7, -101.5, -124.6, -103.2, -123.5, -105.5, -123.5, -105.5, -113.8, -109.5, -111.7, -109.5, 150.5, 86.5, 150.5, 86.5, -111.3, 83.3, -114.5, 82.5, -114.5, 82.5, -123.7, 78.5, -125.8, 78.5, -160.5)
+
+[node name="AnimatedSprite2D" parent="Cow" index="1"]
+texture_filter = 1
+position = Vector2(-227.996, -76.9155)
+rotation = 1.14276
+
+[node name="EndOfStream" parent="Cow" index="2"]
+visible = false
+texture_filter = 1
+
+[node name="CollisionShape2D" parent="Cow/EndOfStream" index="0"]
+texture_filter = 1
+position = Vector2(-441, -6)
+
+[node name="Nut" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+texture_filter = 1
+position = Vector2(-785, -179)
+texture = ExtResource("6_n24y3")
+pourAngle = 1.152
+anchor_pos = NodePath("../NutAnchor")
+pour_anim = "milk"
+
+[node name="CollisionPolygon2D" parent="Nut/Kettle" index="0"]
+visible = false
+polygon = PackedVector2Array(-99.5, -162.5, -99.5, -160.8, -101.5, -159.7, -101.5, -124.6, -103.2, -123.5, -105.5, -123.5, -105.5, -113.8, -109.5, -111.7, -109.5, 150.5, 86.5, 150.5, 86.5, -111.3, 83.3, -114.5, 82.5, -114.5, 82.5, -123.7, 78.5, -125.8, 78.5, -160.5)
+
+[node name="AnimatedSprite2D" parent="Nut" index="1"]
+position = Vector2(-227.996, -76.9155)
+rotation = 1.14276
+
+[node name="EndOfStream" parent="Nut" index="2"]
+visible = false
+
+[node name="CollisionShape2D" parent="Nut/EndOfStream" index="0"]
+position = Vector2(-441, -6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lpa1k")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true
+
+[connection signal="area_entered" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_entered"]
+[connection signal="area_exited" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_exited"]
+[connection signal="mouse_entered" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_mouse_exited"]
+[connection signal="area_entered" from="CowAnchor/Base_area" to="CowAnchor/Base_area" method="_on_area_entered"]
+[connection signal="area_exited" from="CowAnchor/Base_area" to="CowAnchor/Base_area" method="_on_area_exited"]
+[connection signal="mouse_entered" from="CowAnchor/Base_area" to="CowAnchor/Base_area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CowAnchor/Base_area" to="CowAnchor/Base_area" method="_on_mouse_exited"]
+[connection signal="animation_finished" from="TeaBoxUnselected" to="TeaBoxUnselected" method="_on_animation_finished"]
+[connection signal="input_event" from="TeaBoxUnselected/TeaBox" to="TeaBoxUnselected" method="_on_tea_box_input_event"]
+[connection signal="mouse_entered" from="TeaBoxUnselected/TeaBox" to="TeaBoxUnselected" method="_on_tea_box_mouse_entered"]
+[connection signal="mouse_exited" from="TeaBoxUnselected/TeaBox" to="TeaBoxUnselected" method="_on_tea_box_mouse_exited"]
+[connection signal="area_entered" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_area_entered"]
+[connection signal="area_exited" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_area_exited"]
+[connection signal="mouse_entered" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_exited"]
+
+[editable path="Kettle"]
+[editable path="Cow"]
+[editable path="Nut"]

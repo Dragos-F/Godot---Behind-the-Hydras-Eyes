@@ -1,0 +1,211 @@
+[gd_scene load_steps=29 format=3 uid="uid://cs4l2gr81xfc"]
+
+[ext_resource type="Texture2D" uid="uid://chj78mpr6f3ni" path="res://Visual Assets/New Assets/Tea Minigame/Kettle.png" id="1_4iebi"]
+[ext_resource type="Script" uid="uid://cvhhfoptqfx8k" path="res://Scripts/pouring.gd" id="2_leasa"]
+[ext_resource type="Texture2D" uid="uid://mc8aix0wpo4v" path="res://Visual Assets/New Assets/Tea Minigame/Milk pouring-Sheet.png" id="3_4tonj"]
+[ext_resource type="Texture2D" uid="uid://gh8np4pltb3f" path="res://Visual Assets/New Assets/Tea Minigame/Water pouring-Sheet.png" id="4_leasa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydx0e"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(0, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exita"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(127, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jsy0"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(254, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga5wg"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(381, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r6gx"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(508, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7ydb"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(635, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytsv5"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(762, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yopij"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(889, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioqxa"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(1016, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpafo"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(1143, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iir80"]
+atlas = ExtResource("3_4tonj")
+region = Rect2(1270, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tonj"]
+atlas = ExtResource("4_leasa")
+region = Rect2(0, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq2hn"]
+atlas = ExtResource("4_leasa")
+region = Rect2(127, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g6qj"]
+atlas = ExtResource("4_leasa")
+region = Rect2(254, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww1f7"]
+atlas = ExtResource("4_leasa")
+region = Rect2(381, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuvbq"]
+atlas = ExtResource("4_leasa")
+region = Rect2(508, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyba5"]
+atlas = ExtResource("4_leasa")
+region = Rect2(635, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkvbl"]
+atlas = ExtResource("4_leasa")
+region = Rect2(762, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1albo"]
+atlas = ExtResource("4_leasa")
+region = Rect2(889, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm2yd"]
+atlas = ExtResource("4_leasa")
+region = Rect2(1016, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnaga"]
+atlas = ExtResource("4_leasa")
+region = Rect2(1143, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3h31"]
+atlas = ExtResource("4_leasa")
+region = Rect2(1270, 0, 127, 425)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duapl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydx0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exita")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jsy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga5wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r6gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ydb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytsv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yopij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioqxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpafo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iir80")
+}],
+"loop": true,
+"name": &"milk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tonj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq2hn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g6qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww1f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuvbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyba5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkvbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1albo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm2yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnaga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3h31")
+}],
+"loop": true,
+"name": &"water",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_leasa"]
+radius = 43.566
+
+[node name="Kettle" type="Sprite2D" node_paths=PackedStringArray("pour_animation", "EndOfStream")]
+z_index = 1
+texture_filter = 2
+texture = ExtResource("1_4iebi")
+script = ExtResource("2_leasa")
+pour_animation = NodePath("AnimatedSprite2D")
+pourAngle = 0.873
+EndOfStream = NodePath("EndOfStream")
+
+[node name="Kettle" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kettle"]
+polygon = PackedVector2Array(-46, -328, -46, -325, -47.5, -320, -77.6, -320, -79.5, -312, -109.6, -312, -111.5, -304, -141.6, -304, -143.5, -296, -172.8, -296, -176, -292.8, -176, -288, -180.8, -288, -184, -284.8, -184, -279.5, -189.1, -278, -192, -278, -192, -259.2, -188.8, -256, -184, -256, -184, -251.2, -180.8, -248, -175.5, -248, -174, -243, -174, -240, -139.2, -240, -136, -243.2, -136, -248, -107.2, -248, -104, -251.2, -104, -256, -75.2, -256, -72, -259.2, -72, -264.2, -40, -266.1, -40, -272, 48.5, -272, 50, -267, 50, -264, 80.5, -264, 82, -259, 82, -256, 112.5, -256, 114, -251, 114, -248, 144.5, -248, 146, -243, 146, -240, 160, -240, 160, -199.5, 154.9, -198, 152, -198, 152, -167.5, 146.9, -166, 144, -166, 144, -135.6, 136, -133.6, 136, -120, 133.6, -128, 127.5, -128, 125.6, -136, 119.5, -136, 118, -141, 118, -144, 103.5, -144, 102, -149, 102, -152, 87.5, -152, 86, -157, 86, -160, 71.5, -160, 69.6, -168, 47.5, -168, 45.6, -176, 16, -176, 24, -178.4, 24, -184.6, 29.1, -186, 32, -186, 32, -196.8, 28.8, -200, 23.5, -200, 21.6, -208, -28.8, -208, -32, -204.8, -32, -199.6, -40, -197.6, -40, -187.2, -36.8, -184, -31.5, -184, -30, -179, -30, -176, -53.6, -176, -55.5, -168, -76.8, -168, -80, -164.8, -80, -160, -92.8, -160, -96, -156.8, -96, -152, -109.6, -152, -111.5, -144, -124.8, -144, -128, -140.8, -128, -136, -132.8, -136, -136, -132.8, -136, -128, -140.8, -128, -144, -124.8, -144, -120, -148.8, -120, -152, -116.8, -152, -111.6, -160, -109.6, -160, -95.6, -168, -93.6, -168, -88, -176.5, -88, -178.4, -96, -212.8, -96, -216, -92.8, -216, -86.5, -221.1, -85, -224, -85, -224, -51.2, -220.8, -48, -216, -48, -216, -43.2, -212.8, -40, -208, -40, -208, -35.2, -204.8, -32, -199.5, -32, -197.6, -24, -192, -24, -200, -21.6, -200, 8.39999, -208, 10.4, -208, 260.8, -204.8, 264, -200, 264, -200, 268.8, -196.8, 272, -192, 272, -192, 276.8, -188.8, 280, -184, 280, -184, 284.8, -180.8, 288, -176, 288, -176, 292.8, -172.8, 296, -168, 296, -168, 300.8, -164.8, 304, -160, 304, -160, 308.8, -156.8, 312, -151.5, 312, -150, 317, -150, 320, -135.5, 320, -134, 325, -134, 328, -119.5, 328, -117.6, 336, -103.5, 336, -101.6, 344, -79.5, 344, -78, 349, -78, 352, -39.5, 352, -37.6, 360, 36.6, 360, 38.5, 352, 76.6, 352, 78.5, 344, 101.6, 344, 103.5, 336, 117.6, 336, 119.5, 328, 132.8, 328, 136, 324.8, 136, 320, 140.8, 320, 144, 316.8, 144, 312, 148.8, 312, 152, 308.8, 152, 304, 156.8, 304, 160, 300.8, 160, 296, 164.8, 296, 168, 292.8, 168, 288, 172.8, 288, 176, 284.8, 176, 280, 180.8, 280, 184, 276.8, 184, 272, 188.8, 272, 192, 268.8, 192, 263.4, 197.1, 262, 200, 262, 200, 11.2, 196.8, 8, 192, 8, 192, -21.6, 184, -23.6, 184, -44.8, 180.8, -48, 176, -48, 176, -61.6, 168, -63.6, 168, -72.6, 173.1, -74, 176, -74, 176, -128.6, 181.1, -130, 184, -130, 184, -160.6, 189.1, -162, 192, -162, 192, -192.5, 200, -194.4, 200, -232, 204.8, -232, 208, -235.2, 208, -240.6, 213.1, -242, 216, -242, 216, -268.8, 212.8, -272, 208, -272, 208, -276.8, 204.8, -280, 199.5, -280, 197.6, -288, 183.5, -288, 182, -293, 182, -296, 151.5, -296, 150, -301, 150, -304, 119.5, -304, 118, -309, 118, -312, 87.5, -312, 86, -317, 86, -320, 55.5, -320, 54, -325, 54, -328)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 2
+position = Vector2(-395.949, 41.0125)
+rotation = 0.840242
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_duapl")
+animation = &"water"
+
+[node name="EndOfStream" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfStream"]
+position = Vector2(-581, 175)
+shape = SubResource("CircleShape2D_leasa")
+
+[connection signal="input_event" from="Kettle" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Kettle" to="." method="_on_area_2d_mouse_entered"]
