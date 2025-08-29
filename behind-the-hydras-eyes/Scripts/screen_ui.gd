@@ -92,14 +92,17 @@ func _on_send_pressed() -> void:
 
 
 func _on_emails_pressed() -> void:
-	Budget.visible = false
-	BrowserThing.visible = false
+	if Budget != null:
+		Budget.visible = false
+	if BrowserThing != null:
+		BrowserThing.visible = false
 	for i in EmailList:
 		i.visible = true
 
 func _on_budget_pressed() -> void:
 	Budget.visible = true
-	BrowserThing.visible = false
+	if BrowserThing!=null:
+		BrowserThing.visible = false
 	for i in EmailList:
 		i.visible = false
 

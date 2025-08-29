@@ -172,10 +172,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_leasa"]
-radius = 43.566
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_leasa"]
+points = PackedVector2Array(197, -150, 306, -229, 360, -248, 345, -266, 309, -256, 129, -126, -6, -8, 7, 6)
 
-[node name="Kettle" type="Sprite2D" node_paths=PackedStringArray("pour_animation", "EndOfStream")]
+[node name="Kettle" type="Sprite2D" node_paths=PackedStringArray("pour_animation", "EndOfStream", "ownSprite")]
 z_index = 1
 texture_filter = 2
 texture = ExtResource("1_4iebi")
@@ -183,6 +183,7 @@ script = ExtResource("2_leasa")
 pour_animation = NodePath("AnimatedSprite2D")
 pourAngle = 0.873
 EndOfStream = NodePath("EndOfStream")
+ownSprite = NodePath(".")
 
 [node name="Kettle" type="Area2D" parent="."]
 
@@ -199,13 +200,15 @@ sprite_frames = SubResource("SpriteFrames_duapl")
 animation = &"water"
 
 [node name="EndOfStream" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfStream"]
 position = Vector2(-581, 175)
-shape = SubResource("CircleShape2D_leasa")
+shape = SubResource("ConvexPolygonShape2D_leasa")
 
 [connection signal="input_event" from="Kettle" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Kettle" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Kettle" to="." method="_on_kettle_mouse_exited"]

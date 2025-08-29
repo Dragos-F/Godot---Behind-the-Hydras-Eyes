@@ -3,6 +3,7 @@ class_name containerPour
 
 @export var pour_animation:AnimatedSprite2D
 @export var pourAngle:float
+@export var milk:bool 
 @export var in_hand:bool = false
 @export var pouring:bool = false
 @export var oncev1:bool = true
@@ -10,6 +11,10 @@ class_name containerPour
 @export var anchor_pos:Node2D
 @export var pour_anim:String
 @export var EndOfStream:Area2D
+@export var ownSprite:Sprite2D
+@export var selected: CompressedTexture2D
+@export var regular:CompressedTexture2D
+@export var openMilk: CompressedTexture2D
 
 
 func _process(delta: float) -> void:
@@ -18,6 +23,7 @@ func _process(delta: float) -> void:
 		var tween = get_tree().create_tween()
 		tween.tween_property(self, "position",target,0.5)
 		self.z_index = 2
+		pour_animation.z_index = -2
 		
 func _physics_process(delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and pouring:
@@ -27,6 +33,8 @@ func _physics_process(delta: float) -> void:
 			pour_animation.play(pour_anim)
 			oncev1 = false
 			EndOfStream.monitorable = true
+			if milk:
+				ownSprite.texture = openMilk
 	if !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and pouring:
 		oncev1 = true
 		self.transform = self.transform.rotated(pourAngle)
@@ -46,8 +54,11 @@ func pour():
 
 
 func _on_area_2d_mouse_entered() -> void:
-	#print ("MouseOver")
-	pass
+	ownSprite.texture = selected
+
+func _on_kettle_mouse_exited() -> void:
+	ownSprite.texture = regular
+
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

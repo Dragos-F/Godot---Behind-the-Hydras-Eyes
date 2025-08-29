@@ -7,12 +7,18 @@ class_name mugBrain
 @export var teaBrown:Color
 @export var milkyTea:Color
 @export var newFill:bool = false #needed so that filling doesn't trigger colour change
+@export var bagSprite:Sprite2D
 var darken:Tween
 var lighten:Tween
 
 func _process(delta: float) -> void:
 	if fillAnimation.frame_progress == 1:
 		full = true
+	if hasBag && !bagSprite.visible:
+		bagSprite.visible = true
+	if hasBag &&full:
+		bagSprite.visible = false
+		
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -31,8 +37,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	elif full and newFill:
 		if area.get_parent().name == "Nut" or area.get_parent().name == "Cow" and hasBag:
 			teaColour(2)
-		if area.get_parent().name == "Kettle"and hasBag:
-			teaColour(1)
+		#if area.get_parent().name == "Kettle"and hasBag:
+			#teaColour(1)
 		if area.get_parent().name == "TeaBag":
 			area.get_parent().queue_free()
 			fillAnimation.play_backwards("tea")

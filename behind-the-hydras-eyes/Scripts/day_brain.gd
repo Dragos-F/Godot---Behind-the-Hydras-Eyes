@@ -15,7 +15,7 @@ class_name DayBrain
 @export var standing_Alex:Node2D
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
-
+@export var TeaMinigame:Node2D
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 
 
@@ -75,7 +75,12 @@ func leave_boss():
 	dave.move_time = true
 	endOfDay.emit()
 
-
+func tea_minigame():
+	Fader.FadeUp("Kitchen Counter")
+	await Fader.fade_finished
+	TeaMinigame.visible = true
+	Fader.FadeDown("Kitchen Counter")
+	
 #func _on_desk_interactable_interacted() -> void:
 	#enter_screen()
 	#print ("entering screen")
@@ -157,5 +162,7 @@ func _on_dialogic_signal(argument:String):
 		standing_Alex.visible = true
 	if argument == "no_watercooler_Alex":
 		standing_Alex.visible = false
+	if argument == "tea_minigame":
+		tea_minigame()
 		
 		

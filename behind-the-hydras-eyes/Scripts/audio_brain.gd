@@ -9,7 +9,8 @@ extends Node2D
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		UIsfxPlayer.play()
-		
+	if !BackPlayer.playing:
+		BackPlayer.play()
 func fadeBetween(A:AudioStreamPlayer2D,AVolume:float,B:AudioStreamPlayer2D,BVolume:float):
 	var tween = create_tween()
 	tween.parallel().tween_property(A,"volume_db",AVolume,2)

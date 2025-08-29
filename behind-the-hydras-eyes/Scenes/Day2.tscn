@@ -63,7 +63,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_lh2wi")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -74,6 +74,7 @@ camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
+TeaMinigame = NodePath("../Background/TeaMinigame")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -200,6 +201,9 @@ visible = false
 [node name="Dave" parent="." instance=ExtResource("8_r33wl")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
+
+[node name="AnimatedSprite2D" parent="Dave" index="0"]
+animation = &"phone_up"
 
 [node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
 script = ExtResource("9_qarlu")

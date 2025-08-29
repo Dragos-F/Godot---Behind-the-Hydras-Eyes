@@ -105,7 +105,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_bwr10")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame")]
 script = ExtResource("3_rakbq")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
@@ -114,6 +114,7 @@ camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/Kitchen/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
+TeaMinigame = NodePath("../Background/TeaMinigame")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -307,6 +308,8 @@ frame_progress = 0.0
 
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
+[connection signal="body_entered" from="Background/Furniture/Alex/AlexInteractable/Area2D" to="Background/Furniture/Alex" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Background/Furniture/Alex/AlexInteractable/Area2D" to="Background/Furniture/Alex" method="_on_area_2d_body_exited"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=68 format=3 uid="uid://buh0qkey1y0en"]
+[gd_scene load_steps=70 format=3 uid="uid://buh0qkey1y0en"]
 
 [ext_resource type="Script" uid="uid://4okc5ll5rh5j" path="res://Scripts/mugBrain.gd" id="1_tle6v"]
 [ext_resource type="Texture2D" uid="uid://du0aa6eixrfl5" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup.png" id="2_0ixc3"]
+[ext_resource type="Texture2D" uid="uid://q1pr1axio32d" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup front.png" id="3_0ixc3"]
 [ext_resource type="Texture2D" uid="uid://x4ex5xfosdp8" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling milk-Sheet.png" id="3_2ccos"]
 [ext_resource type="Texture2D" uid="uid://dx5f7tp1vpjcc" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling-Sheet.png" id="4_f23rm"]
 [ext_resource type="Texture2D" uid="uid://babeu3bl53sqo" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling water-Sheet.png" id="5_e31gv"]
+[ext_resource type="Texture2D" uid="uid://drdsw7e8pfk5d" path="res://Visual Assets/New Assets/Tea Minigame/Teabag.png" id="7_2ccos"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rihq4"]
 atlas = ExtResource("3_2ccos")
@@ -448,21 +450,29 @@ animations = [{
 radius = 49.0
 height = 230.0
 
-[node name="Mug1" type="Node2D" node_paths=PackedStringArray("fillAnimation")]
+[node name="Mug1" type="Node2D" node_paths=PackedStringArray("fillAnimation", "bagSprite")]
 texture_filter = 1
 script = ExtResource("1_tle6v")
 fillAnimation = NodePath("Fill")
 teaBrown = Color(1, 1, 1, 1)
 milkyTea = Color(5, 5, 5, 1)
+bagSprite = NodePath("Teabag")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("2_0ixc3")
 
+[node name="MugCloseupFront" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_0ixc3")
+
 [node name="Fill" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1, -18)
+position = Vector2(2, -13)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_1jsy0")
 animation = &"water"
@@ -478,6 +488,12 @@ collision_mask = 2
 texture_filter = 1
 shape = SubResource("CapsuleShape2D_n24y3")
 debug_color = Color(0.877076, 0.342282, 0, 0.42)
+
+[node name="Teabag" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-34, -1)
+rotation = 2.6156
+texture = ExtResource("7_2ccos")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

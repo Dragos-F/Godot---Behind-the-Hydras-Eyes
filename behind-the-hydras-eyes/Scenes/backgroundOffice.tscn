@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=162 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -64,6 +64,7 @@
 [ext_resource type="Texture2D" uid="uid://gmuxeutybpg6" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard.png" id="54_cpxd6"]
 [ext_resource type="Texture2D" uid="uid://1ppjvu4mjkpt" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard Selected.png" id="55_lr7b6"]
 [ext_resource type="Script" uid="uid://0ptycn7ao3c7" path="res://Scripts/index_change_zone.gd" id="56_qx5rf"]
+[ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="65_nmjrf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7mcw"]
 height = 67.0938
@@ -1431,8 +1432,15 @@ rotation = -1.57079
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Right"]
 shape = SubResource("WorldBoundaryShape2D_qx5rf")
 
+[node name="TeaMinigame" parent="." instance=ExtResource("65_nmjrf")]
+visible = false
+
+[connection signal="body_entered" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Furniture/Jen1/Timer" to="Furniture/Jen1" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="Furniture/Jen1/AnimatedSprite2D" to="Furniture/Jen1" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Furniture/Alex/AlexInteractable/Area2D" to="Furniture/Alex" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Furniture/Alex/AlexInteractable/Area2D" to="Furniture/Alex" method="_on_area_2d_body_exited"]
 [connection signal="animation_finished" from="Furniture/Alex/AnimatedSprite2D" to="Furniture/Alex" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="Furniture/Alex/Timer" to="Furniture/Alex" method="_on_timer_timeout"]
 [connection signal="body_entered" from="IndexChangeZone" to="IndexChangeZone" method="_on_body_entered"]
