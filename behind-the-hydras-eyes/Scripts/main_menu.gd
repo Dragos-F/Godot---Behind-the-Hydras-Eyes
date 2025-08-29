@@ -1,13 +1,15 @@
 extends Node2D
-@export var PauseMenu:pauseMenu
 
+@export var PauseMenu:pauseMenu
+@export var message:Control
 
 
 func _on_start_pressed() -> void:
-	Fader.FadeUp("First Day")
-	await Fader.fade_finished
-	get_tree().change_scene_to_file("res://Scenes/train.tscn")
-	Fader.FadeDown("First Day")
+	#Fader.FadeUp("First Day")
+	#await Fader.fade_finished
+	#get_tree().change_scene_to_file("res://Scenes/train.tscn")
+	#Fader.FadeDown("First Day")
+	message.visible = true
 	
 
 func _input(event):
@@ -32,3 +34,11 @@ func on_quit_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	PauseMenu.openPause()
+
+
+func _on_message_okay_pressed() -> void:
+
+	Fader.FadeUp("First Day")
+	await Fader.fade_finished
+	get_tree().change_scene_to_file("res://Scenes/train.tscn")
+	Fader.FadeDown("First Day")
