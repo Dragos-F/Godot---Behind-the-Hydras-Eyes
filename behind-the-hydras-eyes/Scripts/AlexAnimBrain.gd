@@ -46,10 +46,10 @@ func ResetSprites():
 	Mouse.visible = true
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	SpriteAnim.visible = false
 	
 
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	SpriteAnim.visible = true

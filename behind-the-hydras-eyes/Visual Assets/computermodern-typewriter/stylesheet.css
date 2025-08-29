@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "ComputerModern Typewriter";
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+    src: url("cmunvi.woff2") format("woff2"),
+         url("cmunvi.woff") format("woff");
+}
+@font-face {
+    font-family: "ComputerModern Typewriter";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("cmunvt.woff2") format("woff2"),
+         url("cmunvt.woff") format("woff");
+}
+
+/* available OT features: liga */

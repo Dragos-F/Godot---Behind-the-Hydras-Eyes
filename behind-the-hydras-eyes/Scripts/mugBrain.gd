@@ -11,7 +11,7 @@ class_name mugBrain
 var darken:Tween
 var lighten:Tween
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if fillAnimation.frame_progress == 1:
 		full = true
 	if hasBag && !bagSprite.visible:

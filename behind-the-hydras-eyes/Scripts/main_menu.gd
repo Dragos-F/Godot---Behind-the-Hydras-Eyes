@@ -1,4 +1,6 @@
 extends Node2D
+@export var PauseMenu:pauseMenu
+
 
 
 func _on_start_pressed() -> void:
@@ -8,7 +10,12 @@ func _on_start_pressed() -> void:
 	Fader.FadeDown("First Day")
 	
 
-
+func _input(event):
+	if event.is_action_pressed("menu"):
+		if !PauseMenu.visible:
+			PauseMenu.openPause()
+		elif PauseMenu.visible:
+			PauseMenu.closePause()
 
 
 
@@ -21,3 +28,7 @@ func _on_credits_pressed() -> void:
 
 func on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_options_pressed() -> void:
+	PauseMenu.openPause()

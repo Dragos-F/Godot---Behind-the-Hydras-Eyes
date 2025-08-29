@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=15 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_okst0"]
 
 [node name="Main" type="Node2D"]
 
@@ -105,7 +106,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_bwr10")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame", "PauseMenu")]
 script = ExtResource("3_rakbq")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
@@ -115,6 +116,7 @@ standing_Alex = NodePath("../Background/Kitchen/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 TeaMinigame = NodePath("../Background/TeaMinigame")
+PauseMenu = NodePath("../Pause")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -306,10 +308,10 @@ visible = false
 position = Vector2(-803, 161)
 frame_progress = 0.0
 
+[node name="Pause" parent="." instance=ExtResource("14_okst0")]
+
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
-[connection signal="body_entered" from="Background/Furniture/Alex/AlexInteractable/Area2D" to="Background/Furniture/Alex" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Background/Furniture/Alex/AlexInteractable/Area2D" to="Background/Furniture/Alex" method="_on_area_2d_body_exited"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]

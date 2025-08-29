@@ -16,6 +16,7 @@ class_name DayBrain
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
 @export var TeaMinigame:Node2D
+@export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 
 
@@ -25,10 +26,13 @@ func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func _input(event):
+	if event.is_action_pressed("menu"):
+		if !PauseMenu.visible:
+			PauseMenu.openPause()
+		elif PauseMenu.visible:
+			PauseMenu.closePause()
+	
 
 func _on_shut_down_pressed() -> void:
 	Fader.FadeUp("")

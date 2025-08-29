@@ -15,7 +15,7 @@ func _ready() -> void:
 
 	
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota):
 		outsideDoor.readyToLeave = true
 		DoorNotif.visible = true

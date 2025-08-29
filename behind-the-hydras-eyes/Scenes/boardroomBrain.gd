@@ -5,6 +5,7 @@ extends Node2D
 @export var OluAnchor:Node2D
 @export var RichardAnchor:Node2D
 @export var DaveAnchor:Node2D
+@export var PauseMenu:pauseMenu
 
 func _ready() -> void:
 	var layout = Dialogic.start("Boardroom")
@@ -31,6 +32,13 @@ func _on_dialogic_signal(argument:String):
 	if argument == "next_slide":
 		print ("inside argument")
 		scroll_along()
+
+func _input(event):
+	if event.is_action_pressed("menu"):
+		if !PauseMenu.visible:
+			PauseMenu.openPause()
+		elif PauseMenu.visible:
+			PauseMenu.closePause()
 
 
 func end_day_boardroom():

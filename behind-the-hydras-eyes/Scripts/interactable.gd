@@ -31,7 +31,7 @@ func _ready() -> void:
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("interact")&&once&&near):
 		print(parentSprite.name+" interacted")
 		interacted.emit()
@@ -62,7 +62,7 @@ func _process(delta: float) -> void:
 		
 		once = false
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	near = true
 	once = true
 	if parentSprite is Sprite2D:
@@ -75,7 +75,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	near = false
 	if parentSprite is Sprite2D:
 		parentSprite.texture = regular

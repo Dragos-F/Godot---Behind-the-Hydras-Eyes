@@ -18,7 +18,7 @@ func _ready() -> void:
 	own_label.text ="[b]"+Sender_Name+"[/b]\n" +Subject+"\n"+"[i]"+PreviewText+"[/i]"
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 

@@ -17,7 +17,7 @@ class_name containerPour
 @export var openMilk: CompressedTexture2D
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if in_hand == true:
 		var target = get_global_mouse_position()
 		var tween = get_tree().create_tween()
@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 		self.z_index = 2
 		pour_animation.z_index = -2
 		
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and pouring:
 		if oncev1:
 			self.transform = self.transform.rotated(-pourAngle)
@@ -61,7 +61,7 @@ func _on_kettle_mouse_exited() -> void:
 
 
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if !in_hand:
 		if event is InputEventMouseButton \
 		and event.button_index == MOUSE_BUTTON_LEFT \

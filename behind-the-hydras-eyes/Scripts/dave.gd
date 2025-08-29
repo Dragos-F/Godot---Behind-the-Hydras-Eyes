@@ -22,7 +22,7 @@ func _restartDave():
 	move_time = true
 	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Add the gravity.
 
 	# Get the input direction and handle the movement/deceleration.

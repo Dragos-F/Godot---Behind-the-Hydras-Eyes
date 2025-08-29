@@ -26,7 +26,7 @@ func _ready() -> void:
 	savingsText.text = str(startingSavings)
 
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	savingsContribution = totalSalary-(totalBills+totalRent+lifestyleCosts[lifestyleChoice]+additionalCosts)
 	
 	
@@ -87,7 +87,7 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		additionalCosts -=15
 
 
-func _on_save_button_toggled(toggled_on: bool) -> void:
+func _on_save_button_toggled(_toggled_on: bool) -> void:
 	pass
 	#if toggled_on == true:
 		#var buttons = get_tree().get_nodes_in_group("Buttons")

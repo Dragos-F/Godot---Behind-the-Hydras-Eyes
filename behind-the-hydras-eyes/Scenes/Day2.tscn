@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=15 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="9_qarlu"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="11_p8761"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_kmxud"]
 
 [node name="Main" type="Node2D"]
 
@@ -63,7 +64,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_lh2wi")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame", "PauseMenu")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -75,6 +76,7 @@ standing_Alex = NodePath("../Background/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 TeaMinigame = NodePath("../Background/TeaMinigame")
+PauseMenu = NodePath("../Pause")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -245,6 +247,8 @@ frame_progress = 0.0
 visible = false
 position = Vector2(813, -338)
 frame_progress = 0.0
+
+[node name="Pause" parent="." instance=ExtResource("14_kmxud")]
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]

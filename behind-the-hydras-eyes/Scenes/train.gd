@@ -15,6 +15,8 @@ func _on_timer_timeout() -> void:
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
 	
 	
+
+
 func end_scene():
 	Dialogic.timeline_ended.disconnect(end_scene)
 	daveAnim.play("phone_down")

@@ -134,13 +134,22 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_m83bi")
 
 [node name="Mug1" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(-337, 374)
+position = Vector2(-13, 72)
 
 [node name="Mug2" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(-17, 396)
+position = Vector2(-242, 374)
 
 [node name="Mug3" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(310, 376)
+position = Vector2(166, 366)
+
+[node name="Sprite" parent="Mug3" index="0"]
+flip_h = true
+
+[node name="MugCloseupFront" parent="Mug3" index="1"]
+flip_h = true
+
+[node name="Area2D" parent="Mug3" index="3"]
+position = Vector2(31, -82)
 
 [node name="NutAnchor" type="Node2D" parent="."]
 texture_filter = 1
@@ -174,8 +183,8 @@ shape = SubResource("RectangleShape2D_aker0")
 
 [node name="TeaBoxUnselected" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(738, 359)
-scale = Vector2(1.2, 1.2)
+position = Vector2(718, 313)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ivjq4")
 animation = &"idle"
 script = ExtResource("9_ixkvo")
