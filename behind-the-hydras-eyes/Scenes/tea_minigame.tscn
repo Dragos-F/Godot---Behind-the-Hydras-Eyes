@@ -148,6 +148,9 @@ flip_h = true
 [node name="MugCloseupFront" parent="Mug3" index="1"]
 flip_h = true
 
+[node name="Fill" parent="Mug3" index="2"]
+position = Vector2(60, -18)
+
 [node name="Area2D" parent="Mug3" index="3"]
 position = Vector2(31, -82)
 
@@ -161,7 +164,6 @@ script = ExtResource("8_aker0")
 container = NodePath("../../Nut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NutAnchor/Base_area"]
-visible = false
 z_index = 1
 position = Vector2(8.75, -27.5)
 shape = SubResource("RectangleShape2D_aker0")
@@ -176,7 +178,6 @@ script = ExtResource("8_aker0")
 container = NodePath("../../Cow")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CowAnchor/Base_area"]
-visible = false
 z_index = 1
 position = Vector2(8.75, -27.5)
 shape = SubResource("RectangleShape2D_aker0")
@@ -202,7 +203,6 @@ position = Vector2(701, 50)
 texture = ExtResource("3_b8y0n")
 
 [node name="Base_area" type="Area2D" parent="KettleHeater" node_paths=PackedStringArray("container")]
-visible = false
 script = ExtResource("8_aker0")
 container = NodePath("../../Kettle")
 
@@ -219,8 +219,8 @@ texture_filter = 1
 position = Vector2(701, -201)
 anchor_pos = NodePath("../KettleHeater/KettleAnchor")
 pour_anim = "water"
-selected = ExtResource("9_exita")
-regular = ExtResource("10_rihq4")
+selected = ExtResource("10_rihq4")
+regular = ExtResource("9_exita")
 
 [node name="CollisionPolygon2D" parent="Kettle/Kettle" index="0"]
 visible = false
@@ -233,8 +233,8 @@ pourAngle = 1.152
 milk = true
 anchor_pos = NodePath("../CowAnchor")
 pour_anim = "milk"
-selected = ExtResource("5_aker0")
-regular = ExtResource("12_2wu7g")
+selected = ExtResource("12_2wu7g")
+regular = ExtResource("5_aker0")
 openMilk = ExtResource("13_rihq4")
 
 [node name="Kettle" parent="Cow" index="0"]

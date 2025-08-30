@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://qp5c0ubam6af"]
+[gd_scene load_steps=13 format=3 uid="uid://qp5c0ubam6af"]
 
 [ext_resource type="Script" uid="uid://d06n8mnm4kyar" path="res://Scripts/pause.gd" id="1_e0jm0"]
 [ext_resource type="Texture2D" uid="uid://8e8kg8fcxhyc" path="res://Visual Assets/New Assets/Menus/Manilla Folder opening-Sheet.png" id="2_3fojq"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="3_nsogc"]
 [ext_resource type="FontFile" uid="uid://bqx8h2rwv8ue1" path="res://Visual Assets/computermodern-typewriter/cmunvi.woff2" id="4_0pswh"]
+[ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="5_3fojq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuc61"]
 atlas = ExtResource("2_3fojq")
@@ -48,11 +49,19 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "allControl", "randText")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsogc"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 0.823529)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText")]
 visible = false
 z_index = 4
 script = ExtResource("1_e0jm0")
 folderAnim = NodePath("AnimatedSprite2D")
+saveMessage = NodePath("Message")
 allControl = NodePath("Control")
 randText = NodePath("Control/RandomTextBoundries/RichTextLabel")
 possibleTexts = Array[String](["Corporate excelence awaits!", "Think of the shareholders!", "Maybe we should circle back on this", "Wait until the investors hear about this!"])
@@ -255,8 +264,40 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Message" type="Panel" parent="."]
+visible = false
+z_index = 5
+offset_left = -249.0
+offset_top = -163.0
+offset_right = 278.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nsogc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Message"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 530.0
+offset_bottom = 195.0
+theme_override_fonts/normal_font = ExtResource("5_3fojq")
+theme_override_font_sizes/normal_font_size = 46
+text = "In the Demo Version, your progress is not saved"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageOkay" type="Button" parent="Message"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 221.0
+offset_right = 487.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("5_3fojq")
+theme_override_font_sizes/font_size = 39
+text = "Take me to the menu"
+
 [connection signal="value_changed" from="Control/Panel/Background Music/background" to="." method="_on_background_value_changed"]
 [connection signal="value_changed" from="Control/Panel/SFX/sfx" to="." method="_on_sfx_value_changed"]
 [connection signal="value_changed" from="Control/Panel/UI/ui" to="." method="_on_ui_value_changed"]
 [connection signal="pressed" from="Control/MainMenu" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Control/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Message/MessageOkay" to="." method="_on_message_okay_pressed"]

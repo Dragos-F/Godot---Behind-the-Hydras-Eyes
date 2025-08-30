@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene load_steps=13 format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -17,17 +17,9 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qvly"]
-bg_color = Color(0.188235, 0.188235, 0.188235, 0.698039)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu", "message")]
+[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu")]
 script = ExtResource("1_xhh6f")
 PauseMenu = NodePath("Pause")
-message = NodePath("Message")
 
 [node name="MainMenuBack" type="Sprite2D" parent="."]
 z_index = -5
@@ -217,36 +209,6 @@ vertical_alignment = 1
 
 [node name="Pause" parent="." instance=ExtResource("10_7qvly")]
 
-[node name="Message" type="Panel" parent="."]
-visible = false
-offset_left = -226.0
-offset_top = -346.0
-offset_right = 301.0
-offset_bottom = -39.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_7qvly")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Message"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 2.0
-offset_right = 530.0
-offset_bottom = 195.0
-theme_override_fonts/normal_font = ExtResource("5_wbdvm")
-theme_override_font_sizes/normal_font_size = 46
-text = "In the Demo Version, your progress is not saved"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MessageOkay" type="Button" parent="Message"]
-layout_mode = 0
-offset_left = 149.0
-offset_top = 221.0
-offset_right = 366.0
-offset_bottom = 262.0
-theme_override_fonts/font = ExtResource("5_wbdvm")
-theme_override_font_sizes/font_size = 39
-text = "Okay"
-
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]
 [connection signal="pressed" from="Drawer/Start" to="." method="_on_start_pressed"]
@@ -258,4 +220,3 @@ text = "Okay"
 [connection signal="pressed" from="Drawer3/Options" to="." method="on_quit_pressed"]
 [connection signal="pressed" from="Leaflet/Button" to="." method="_on_wishlist_pressed"]
 [connection signal="pressed" from="Sticky/Button" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Message/MessageOkay" to="." method="_on_message_okay_pressed"]

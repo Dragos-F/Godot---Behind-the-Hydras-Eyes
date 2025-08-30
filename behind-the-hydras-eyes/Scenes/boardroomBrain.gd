@@ -42,9 +42,9 @@ func _input(event):
 
 
 func end_day_boardroom():
-	Fader.FadeUp("Next Day")
+	Fader.FadeUp("Next week")
 	await Fader.fade_finished
-	Fader.FadeDown("Next Day")
+	Fader.FadeDown("Next week")
 	var scene_path = "res://Scenes/Day2.tscn"
 	print ("changing scene to "+scene_path)
 	get_tree().change_scene_to_file(scene_path)
