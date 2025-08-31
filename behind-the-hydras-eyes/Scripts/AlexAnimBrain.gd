@@ -1,4 +1,6 @@
 extends Sprite2D
+class_name anim_brain
+
 
 @export var MainSprite: Sprite2D
 @export var SpriteAnim: AnimatedSprite2D
@@ -48,7 +50,9 @@ func ResetSprites():
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	SpriteAnim.visible = false
+	SpriteAnim.stop()
 	timer.stop()
+	
 	
 
 

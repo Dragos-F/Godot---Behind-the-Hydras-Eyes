@@ -4,15 +4,18 @@ class_name mugBrain
 @export var fillAnimation:AnimatedSprite2D
 @export var full:bool = false
 @export var hasBag:bool = false
-@export var teaBrown:Color
-@export var milkyTea:Color
+@export var teaBrown:Color # actually just plain white
+@export var milkyTea:Color # overbright white that compensates from tea brown
+@export var actualTea:Color # the only one meant to be tea coloured
 @export var newFill:bool = false #needed so that filling doesn't trigger colour change
 @export var bagSprite:Sprite2D
 @export var sugar: int = 0
 @export var cubes:Array[Node2D]
+@export var oncev1:bool = true
 
 var darken:Tween
 var lighten:Tween
+var even_darker:Tween
 
 func _process(_delta: float) -> void:
 	if fillAnimation.frame_progress == 1:
@@ -27,6 +30,9 @@ func _process(_delta: float) -> void:
 	if sugar > 0 && full:
 		for i in cubes.size():
 			cubes[i].visible = false
+	if full && hasBag && oncev1:
+		teaColour(3)
+		oncev1 = false
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -63,6 +69,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.get_parent().name != "TeaBag":
 		fillAnimation.pause()
 		teaColour(0)
+		oncev1 = true
 		if full:
 			newFill = true
 	
@@ -76,6 +83,10 @@ func teaColour(i:int):
 		darken = create_tween()
 	if !lighten:
 		lighten = create_tween()
+	if !even_darker:
+		even_darker = create_tween()
+	even_darker.tween_property(fillAnimation,"modulate",actualTea,3)
+	even_darker.stop()
 	darken.tween_property(fillAnimation,"modulate",teaBrown,3)
 	darken.stop()
 	lighten.tween_property(fillAnimation,"modulate",milkyTea,3)
@@ -90,3 +101,6 @@ func teaColour(i:int):
 		print("paused")
 		lighten.stop()
 		darken.stop()
+	if i == 3:
+		print ("going to even darker")
+		even_darker.play()

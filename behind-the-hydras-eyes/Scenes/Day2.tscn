@@ -246,7 +246,7 @@ frame_progress = 0.0
 [node name="BossDoor" parent="Notifications" instance=ExtResource("11_p8761")]
 visible = false
 position = Vector2(813, -338)
-frame_progress = 0.0
+frame_progress = 0.104295
 
 [node name="Pause" parent="." instance=ExtResource("14_kmxud")]
 

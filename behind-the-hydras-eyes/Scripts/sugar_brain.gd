@@ -1,14 +1,15 @@
 extends Sprite2D
 
 var cube = preload("res://Scenes/cube.tscn")
-
-
+@export var cubeParent:Node2D
 
 
 			
 func getCube():
 	var sugarcube  = cube.instantiate()
-	add_child(sugarcube)
+	cubeParent.add_child(sugarcube)
+	#sugarcube.z_as_relative = false
+	
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

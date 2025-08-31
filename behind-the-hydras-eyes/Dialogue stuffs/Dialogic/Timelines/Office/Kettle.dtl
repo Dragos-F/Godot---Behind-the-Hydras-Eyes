@@ -22,7 +22,7 @@ Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 	- No
 		Kettle: Sure. They don't deserve your labour. And hey, you're a busy guy. I'll boil faster with less water.
 		Kettle: Here, done already. Enjoy.
-		[signal arg="tea-minigame"]
+		[signal arg="tea_minigame"]
 - No
 	Kettle: Oh. Disappointing, but I'm sure you'll change your mind soon.
 [end_timeline]
@@ -35,7 +35,7 @@ Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 	Kettle: They have, obviously, but you're the boss. Well, their boss. Not very senior in the grand scheme of things. Anyway, besides that, they're British.
 	Kettle: Any grumbling will be done passive aggressively and out of the office, not to your face.
 	Kettle: Makes it easier, doesn't it? Now, go and enjoy the fruits of your—our—labour. I'll see you soon, I'm sure.
-	[signal arg="tea-minigame"]
+	[signal arg="tea_minigame"]
 - Yes, for everyone
 	Kettle: Sure. You're generous like that.
 	Dave: Alex? Jen? It's my round, if you fancy a brew.
@@ -43,7 +43,7 @@ Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 	Jen: Absolutely, best boss ever! Milky, three sugars.
 	Kettle: As I begin to shake, reaching boiling point, you gaze into your distorted reflection in my chrome body, admiring the freakish homunculous that stares back at you.
 	Kettle: If humans have a thousand of these different faces, each one refracted through the things we do, you prefer this one to the one in your computer screen in those seconds where it blinks off.
-	[signal arg="tea-minigame"]
+	[signal arg="tea_minigame"]
 - Maybe later
 	Kettle: Are you sure?
 	- Yes.
@@ -64,10 +64,11 @@ Kettle: You, like everyone else except the CEO, only get paid a fraction of the 
 	Kettle: Fun, thinking about seconds like that, isn't it? There goes another one, and another.
 	Kettle: Maybe you should stand around for a while, sip your tea slowly here, and then go for a bathroom break.
 	Kettle: Anyway, here's your tea. Careful though, the company will only provide "free kitchen supplies" for as long as people aren't actually using them.
-	[signal arg="tea-minigame"]
+	[signal arg="tea_minigame"]
 - You misjudge me.
 	Kettle: Did you miss the part where I said I'm a voice in your head? If I'm saying it, then you're thinking it.
 	Kettle: But fine, here's your third cup of tea.
+	[signal arg="tea_minigame"]
 [end_timeline]
 label Fourth
 Kettle: My warning came too late, I see. Behold the sticky note beside my body.

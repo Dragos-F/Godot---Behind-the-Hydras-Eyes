@@ -16,6 +16,7 @@ enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
 @export var DialogueMarker:Node2D
 @export var YarnNodeLink:String
 @export var ScenePath:String
+@export var animations:anim_brain
 
 
 
@@ -63,6 +64,7 @@ func _process(_delta: float) -> void:
 		once = false
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
+	animations.ResetSprites()
 	near = true
 	once = true
 	if parentSprite is Sprite2D:

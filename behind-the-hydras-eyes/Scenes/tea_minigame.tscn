@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=53 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="3_h81fs"]
 [ext_resource type="Texture2D" uid="uid://dt6xjtpmmav52" path="res://Visual Assets/New Assets/Tea Minigame/Milk maybe.png" id="5_aker0"]
 [ext_resource type="Texture2D" uid="uid://dh1u7htxyqvdb" path="res://Visual Assets/New Assets/Tea Minigame/Tea box closing-Sheet.png" id="5_hd3j3"]
+[ext_resource type="Texture2D" uid="uid://b5nw7s2nkkvdj" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup front extended.png" id="6_h81fs"]
 [ext_resource type="Texture2D" uid="uid://bk175u44lpg1p" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut.png" id="6_n24y3"]
 [ext_resource type="Script" uid="uid://b00qpufm2biyr" path="res://Scripts/PouringReturn.gd" id="8_aker0"]
 [ext_resource type="PackedScene" uid="uid://cs4l2gr81xfc" path="res://Scenes/kettle.tscn" id="8_fy2cc"]
@@ -184,7 +185,7 @@ animations = [{
 size = Vector2(334.167, 225.833)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n24y3"]
-size = Vector2(556, 331.833)
+size = Vector2(429, 324.833)
 
 [sub_resource type="Animation" id="Animation_nekis"]
 resource_name = "Mug1"
@@ -232,11 +233,15 @@ texture = ExtResource("1_m83bi")
 [node name="Mug1" parent="." instance=ExtResource("2_aker0")]
 position = Vector2(-13, 72)
 
+[node name="MugCloseupFront" parent="Mug1" index="1"]
+position = Vector2(4, 69)
+texture = ExtResource("6_h81fs")
+
 [node name="Mug2" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(-242, 374)
+position = Vector2(-270, 365)
 
 [node name="Mug3" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(166, 366)
+position = Vector2(191, 369)
 
 [node name="Sprite" parent="Mug3" index="0"]
 flip_h = true
@@ -313,7 +318,7 @@ container = NodePath("../../Kettle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KettleHeater/Base_area"]
 z_index = 1
-position = Vector2(-12, -227.083)
+position = Vector2(51.5, -223.583)
 shape = SubResource("RectangleShape2D_n24y3")
 
 [node name="KettleAnchor" type="Node2D" parent="KettleHeater"]
@@ -330,6 +335,9 @@ brain = NodePath("..")
 
 [node name="CollisionPolygon2D" parent="Kettle/Kettle" index="0"]
 visible = false
+
+[node name="EndOfStream" parent="Kettle" index="2"]
+visible = true
 
 [node name="Cow" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
 texture_filter = 1
@@ -358,6 +366,7 @@ position = Vector2(-227.996, -76.9155)
 rotation = 1.14276
 
 [node name="EndOfStream" parent="Cow" index="2"]
+visible = true
 texture_filter = 1
 
 [node name="CollisionShape2D" parent="Cow/EndOfStream" index="0"]
@@ -386,6 +395,9 @@ polygon = PackedVector2Array(-99.5, -162.5, -99.5, -160.8, -101.5, -159.7, -101.
 position = Vector2(-227.996, -76.9155)
 rotation = 1.14276
 
+[node name="EndOfStream" parent="Nut" index="2"]
+visible = true
+
 [node name="CollisionShape2D" parent="Nut/EndOfStream" index="0"]
 position = Vector2(-441, -6)
 rotation = 0.308016
@@ -412,13 +424,17 @@ rotation = -1.5708
 scale = Vector2(5, 5)
 icon = SubResource("AtlasTexture_3ckmf")
 
-[node name="SugarBowl2" type="Sprite2D" parent="."]
+[node name="SugarBowl2" type="Sprite2D" parent="." node_paths=PackedStringArray("cubeParent")]
 z_index = -2
 texture_filter = 1
 position = Vector2(-812, 134)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("20_3ckmf")
 script = ExtResource("21_gf8xl")
+cubeParent = NodePath("CubeParent")
+
+[node name="CubeParent" type="Node2D" parent="SugarBowl2"]
+z_index = 10
 
 [node name="Area2D" type="Area2D" parent="SugarBowl2"]
 

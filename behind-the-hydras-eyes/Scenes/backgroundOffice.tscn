@@ -994,10 +994,11 @@ minTime = 5.0
 maxTime = 8.0
 regularAlex = ExtResource("28_6r1ym")
 
-[node name="AlexInteractable" parent="Furniture/Alex" instance=ExtResource("10_5vk3e")]
+[node name="AlexInteractable" parent="Furniture/Alex" node_paths=PackedStringArray("animations") instance=ExtResource("10_5vk3e")]
 regular = ExtResource("26_xk4hj")
 selected = ExtResource("27_vyjpg")
 YarnNodeLink = "Alex"
+animations = NodePath("..")
 
 [node name="Area2D" parent="Furniture/Alex/AlexInteractable" index="0"]
 visible = false
