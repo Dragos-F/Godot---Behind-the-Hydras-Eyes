@@ -14,7 +14,7 @@ func _on_tea_box_mouse_entered() -> void:
 
 
 func _on_tea_box_mouse_exited() -> void:
-	play_backwards("open")
+	play_backwards("close")
 
 
 

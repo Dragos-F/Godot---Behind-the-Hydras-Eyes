@@ -7,7 +7,7 @@ extends Node2D
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact") && Dialogic.current_timeline !=null:
 		UIsfxPlayer.play()
 	if !BackPlayer.playing:
 		BackPlayer.play()

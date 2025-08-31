@@ -8,6 +8,9 @@ class_name mugBrain
 @export var milkyTea:Color
 @export var newFill:bool = false #needed so that filling doesn't trigger colour change
 @export var bagSprite:Sprite2D
+@export var sugar: int = 0
+@export var cubes:Array[Node2D]
+
 var darken:Tween
 var lighten:Tween
 
@@ -18,7 +21,12 @@ func _process(_delta: float) -> void:
 		bagSprite.visible = true
 	if hasBag &&full:
 		bagSprite.visible = false
-		
+	if sugar > 0 && sugar < 4 && !full:
+		for i in sugar:
+			cubes[i-1].visible = true
+	if sugar > 0 && full:
+		for i in cubes.size():
+			cubes[i].visible = false
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -34,6 +42,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		elif area.get_parent().name == "TeaBag":
 			area.get_parent().queue_free()
 			hasBag = true
+		elif area.get_parent().name == "Cube":
+			area.get_parent().queue_free()
+			sugar +=1
 	elif full and newFill:
 		if area.get_parent().name == "Nut" or area.get_parent().name == "Cow" and hasBag:
 			teaColour(2)

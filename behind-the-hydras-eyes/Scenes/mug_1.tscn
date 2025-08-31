@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://buh0qkey1y0en"]
+[gd_scene load_steps=71 format=3 uid="uid://buh0qkey1y0en"]
 
 [ext_resource type="Script" uid="uid://4okc5ll5rh5j" path="res://Scripts/mugBrain.gd" id="1_tle6v"]
 [ext_resource type="Texture2D" uid="uid://du0aa6eixrfl5" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup.png" id="2_0ixc3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dx5f7tp1vpjcc" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling-Sheet.png" id="4_f23rm"]
 [ext_resource type="Texture2D" uid="uid://babeu3bl53sqo" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling water-Sheet.png" id="5_e31gv"]
 [ext_resource type="Texture2D" uid="uid://drdsw7e8pfk5d" path="res://Visual Assets/New Assets/Tea Minigame/Teabag.png" id="7_2ccos"]
+[ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="8_f23rm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rihq4"]
 atlas = ExtResource("3_2ccos")
@@ -450,13 +451,14 @@ animations = [{
 radius = 49.0
 height = 230.0
 
-[node name="Mug1" type="Node2D" node_paths=PackedStringArray("fillAnimation", "bagSprite")]
+[node name="Mug1" type="Node2D" node_paths=PackedStringArray("fillAnimation", "bagSprite", "cubes")]
 texture_filter = 1
 script = ExtResource("1_tle6v")
 fillAnimation = NodePath("Fill")
 teaBrown = Color(1, 1, 1, 1)
 milkyTea = Color(5, 5, 5, 1)
 bagSprite = NodePath("Teabag")
+cubes = [NodePath("SugarCube"), NodePath("SugarCube2"), NodePath("SugarCube3")]
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -494,6 +496,27 @@ visible = false
 position = Vector2(-34, -1)
 rotation = 2.6156
 texture = ExtResource("7_2ccos")
+
+[node name="SugarCube" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-94, -17)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_f23rm")
+
+[node name="SugarCube2" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(35, -26)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_f23rm")
+
+[node name="SugarCube3" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-26, 0)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_f23rm")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

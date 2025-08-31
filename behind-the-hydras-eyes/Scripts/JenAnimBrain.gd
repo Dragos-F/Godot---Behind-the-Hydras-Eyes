@@ -37,8 +37,10 @@ func ResetSprites():
 	
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	SpriteAnim.visible = false
+	timer.stop()
 	
 
 
 func _on_area_2d_body_exited(_body: Node2D) -> void:
 	SpriteAnim.visible = true
+	timer.start()

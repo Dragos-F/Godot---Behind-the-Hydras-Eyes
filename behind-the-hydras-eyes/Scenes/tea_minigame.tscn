@@ -1,10 +1,13 @@
-[gd_scene load_steps=36 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=52 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
+[ext_resource type="Texture2D" uid="uid://b42ahfbpvyemh" path="res://Visual Assets/New Assets/Menus/Sticky.png" id="2_3evry"]
 [ext_resource type="PackedScene" uid="uid://buh0qkey1y0en" path="res://Scenes/mug_1.tscn" id="2_aker0"]
 [ext_resource type="Texture2D" uid="uid://rpxf4bn22f5r" path="res://Visual Assets/New Assets/Tea Minigame/Kettle heater.png" id="3_b8y0n"]
+[ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="3_h81fs"]
 [ext_resource type="Texture2D" uid="uid://dt6xjtpmmav52" path="res://Visual Assets/New Assets/Tea Minigame/Milk maybe.png" id="5_aker0"]
+[ext_resource type="Texture2D" uid="uid://dh1u7htxyqvdb" path="res://Visual Assets/New Assets/Tea Minigame/Tea box closing-Sheet.png" id="5_hd3j3"]
 [ext_resource type="Texture2D" uid="uid://bk175u44lpg1p" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut.png" id="6_n24y3"]
 [ext_resource type="Script" uid="uid://b00qpufm2biyr" path="res://Scripts/PouringReturn.gd" id="8_aker0"]
 [ext_resource type="PackedScene" uid="uid://cs4l2gr81xfc" path="res://Scenes/kettle.tscn" id="8_fy2cc"]
@@ -18,9 +21,49 @@
 [ext_resource type="Texture2D" uid="uid://cdy1neu8pc2ys" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut selected.png" id="14_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://dm2afp5gyxqih" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut open.png" id="16_2wu7g"]
 [ext_resource type="Texture2D" uid="uid://dk0sp5mqblx01" path="res://Visual Assets/Pixelart arrow icon pack 1.0.png" id="18_hd3j3"]
+[ext_resource type="Texture2D" uid="uid://7u0h1tywgd7g" path="res://Visual Assets/New Assets/Tea Minigame/Sugar Bowl 2.png" id="20_3ckmf"]
+[ext_resource type="Script" uid="uid://3q3qkfvwovlx" path="res://Scripts/sugar_brain.gd" id="21_gf8xl"]
+[ext_resource type="Texture2D" uid="uid://bvd1nep504j72" path="res://Visual Assets/New Assets/Tea Minigame/Sugar Bowl sugar.png" id="22_qt3rw"]
+[ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="23_3evry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aker0"]
 size = Vector2(244.167, 228.333)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsgfg"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(0, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eggp7"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(462, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf8xl"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(924, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt3rw"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(1386, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3evry"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(1848, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h81fs"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(2310, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taau1"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(2772, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00rpr"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(3234, 0, 462, 329)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo0q6"]
+atlas = ExtResource("5_hd3j3")
+region = Rect2(3696, 0, 462, 329)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_exita"]
 atlas = ExtResource("8_p5ecj")
@@ -64,6 +107,38 @@ region = Rect2(3696, 0, 462, 329)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ivjq4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsgfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eggp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf8xl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt3rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3evry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h81fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taau1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00rpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo0q6")
+}],
+"loop": false,
+"name": &"close",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_exita")
@@ -127,6 +202,27 @@ region = Rect2(64.36, 101, 23.7079, 22)
 z_index = 10
 script = ExtResource("1_4jyn8")
 
+[node name="Sticky" type="Sprite2D" parent="."]
+position = Vector2(120, -386)
+rotation = 0.261799
+scale = Vector2(2, 2)
+texture = ExtResource("2_3evry")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sticky"]
+texture_filter = 1
+offset_left = -40.754
+offset_top = -36.1851
+offset_right = 44.246
+offset_bottom = 38.8149
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_h81fs")
+theme_override_font_sizes/normal_font_size = 14
+text = "LMB to pick up
+
+RMB to Drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TeaMinigameBackground" type="Sprite2D" parent="."]
 z_index = -3
 texture_filter = 1
@@ -153,6 +249,15 @@ position = Vector2(60, -18)
 
 [node name="Area2D" parent="Mug3" index="3"]
 position = Vector2(31, -82)
+
+[node name="SugarCube" parent="Mug3" index="5"]
+position = Vector2(-40, -24)
+
+[node name="SugarCube2" parent="Mug3" index="6"]
+position = Vector2(111, -31)
+
+[node name="SugarCube3" parent="Mug3" index="7"]
+position = Vector2(42, -1)
 
 [node name="NutAnchor" type="Node2D" parent="."]
 texture_filter = 1
@@ -187,7 +292,7 @@ texture_filter = 1
 position = Vector2(718, 313)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ivjq4")
-animation = &"idle"
+animation = &"close"
 script = ExtResource("9_ixkvo")
 
 [node name="TeaBox" type="Area2D" parent="TeaBoxUnselected"]
@@ -214,18 +319,19 @@ shape = SubResource("RectangleShape2D_n24y3")
 [node name="KettleAnchor" type="Node2D" parent="KettleHeater"]
 position = Vector2(6, -245)
 
-[node name="Kettle" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+[node name="Kettle" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
 texture_filter = 1
 position = Vector2(701, -201)
 anchor_pos = NodePath("../KettleHeater/KettleAnchor")
 pour_anim = "water"
 selected = ExtResource("10_rihq4")
 regular = ExtResource("9_exita")
+brain = NodePath("..")
 
 [node name="CollisionPolygon2D" parent="Kettle/Kettle" index="0"]
 visible = false
 
-[node name="Cow" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+[node name="Cow" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
 texture_filter = 1
 position = Vector2(-507, -170)
 texture = ExtResource("5_aker0")
@@ -236,6 +342,7 @@ pour_anim = "milk"
 selected = ExtResource("12_2wu7g")
 regular = ExtResource("5_aker0")
 openMilk = ExtResource("13_rihq4")
+brain = NodePath("..")
 
 [node name="Kettle" parent="Cow" index="0"]
 texture_filter = 1
@@ -258,7 +365,7 @@ texture_filter = 1
 position = Vector2(-441, -6)
 rotation = 0.305746
 
-[node name="Nut" parent="." node_paths=PackedStringArray("anchor_pos") instance=ExtResource("8_fy2cc")]
+[node name="Nut" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
 texture_filter = 1
 position = Vector2(-785, -179)
 texture = ExtResource("6_n24y3")
@@ -269,6 +376,7 @@ pour_anim = "milk"
 selected = ExtResource("14_4jyn8")
 regular = ExtResource("6_n24y3")
 openMilk = ExtResource("16_2wu7g")
+brain = NodePath("..")
 
 [node name="CollisionPolygon2D" parent="Nut/Kettle" index="0"]
 visible = false
@@ -304,6 +412,79 @@ rotation = -1.5708
 scale = Vector2(5, 5)
 icon = SubResource("AtlasTexture_3ckmf")
 
+[node name="SugarBowl2" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(-812, 134)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("20_3ckmf")
+script = ExtResource("21_gf8xl")
+
+[node name="Area2D" type="Area2D" parent="SugarBowl2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SugarBowl2/Area2D"]
+z_index = 4
+position = Vector2(-13.077, 31.1539)
+scale = Vector2(8.76923, 7.65385)
+polygon = PackedVector2Array(-8.24561, 8.49246, -11.1403, -0.150755, -11.0526, -3.26633, -7.36842, -7.98995, -0.964905, -9.6985, 5.52632, -9.59799, 8.5965, -7.68845, 11.6667, -3.76885, 11.7544, -0.251259, 9.56141, 7.78894, 7.71931, 11.3065, 0.526321, 12.8141, -6.14034, 11.5075)
+
+[node name="SugarBowlSugar" type="Sprite2D" parent="SugarBowl2"]
+texture_filter = 1
+position = Vector2(-2.28882e-05, 1.90735e-06)
+texture = ExtResource("22_qt3rw")
+
+[node name="SugarCube" type="Sprite2D" parent="SugarBowl2"]
+z_index = 3
+position = Vector2(-21.5385, 38.4615)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube10" type="Sprite2D" parent="SugarBowl2"]
+z_index = 2
+position = Vector2(-53.8461, 32.3077)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube11" type="Sprite2D" parent="SugarBowl2"]
+z_index = 2
+position = Vector2(-13.0769, 32.3077)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube2" type="Sprite2D" parent="SugarBowl2"]
+z_index = 2
+position = Vector2(19.2308, 41.5385)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube3" type="Sprite2D" parent="SugarBowl2"]
+z_index = 1
+position = Vector2(-76.9231, 19.2308)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube4" type="Sprite2D" parent="SugarBowl2"]
+z_index = 2
+position = Vector2(-31.5385, 5.38462)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube5" type="Sprite2D" parent="SugarBowl2"]
+z_index = 1
+position = Vector2(16.1539, 0)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube6" type="Sprite2D" parent="SugarBowl2"]
+z_index = 1
+position = Vector2(54.6154, 23.8462)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube7" type="Sprite2D" parent="SugarBowl2"]
+position = Vector2(-53.8462, -5.38462)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube8" type="Sprite2D" parent="SugarBowl2"]
+position = Vector2(-6.92307, -13.0769)
+texture = ExtResource("23_3evry")
+
+[node name="SugarCube9" type="Sprite2D" parent="SugarBowl2"]
+position = Vector2(42.3077, -6.92308)
+texture = ExtResource("23_3evry")
+
 [connection signal="area_entered" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_entered"]
 [connection signal="area_exited" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_exited"]
 [connection signal="mouse_entered" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_mouse_entered"]
@@ -321,6 +502,7 @@ icon = SubResource("AtlasTexture_3ckmf")
 [connection signal="mouse_entered" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="input_event" from="SugarBowl2/Area2D" to="SugarBowl2" method="_on_area_2d_input_event"]
 
 [editable path="Mug1"]
 [editable path="Mug2"]

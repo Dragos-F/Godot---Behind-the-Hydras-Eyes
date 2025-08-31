@@ -15,6 +15,7 @@ class_name containerPour
 @export var selected: CompressedTexture2D
 @export var regular:CompressedTexture2D
 @export var openMilk: CompressedTexture2D
+@export var brain:minigame_brain
 
 
 func _process(_delta: float) -> void:
@@ -24,6 +25,10 @@ func _process(_delta: float) -> void:
 		tween.tween_property(self, "position",target,0.5)
 		self.z_index = 2
 		pour_animation.z_index = -2
+	else:
+		var target = anchor_pos.global_position
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "position",target,0.5)
 		
 func _physics_process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and pouring:
@@ -41,10 +46,17 @@ func _physics_process(_delta: float) -> void:
 		pour_animation.visible = false
 		pouring = false
 		EndOfStream.monitorable = false
-	
+	if in_hand && Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+				in_hand = false
+				self.position = anchor_pos.position
+				self.z_index = 1
+				brain.holding = false
+				
 
 func pick_up():
 	in_hand = true
+	brain.holding = true
+	
 	
 
 func pour():
@@ -62,7 +74,7 @@ func _on_kettle_mouse_exited() -> void:
 
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if !in_hand:
+	if !in_hand&&!brain.holding:
 		if event is InputEventMouseButton \
 		and event.button_index == MOUSE_BUTTON_LEFT \
 		and event.is_pressed():
@@ -78,8 +90,11 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			and event.button_index == MOUSE_BUTTON_LEFT \
 			and event.is_pressed():
 				in_hand = false
-				self.position = anchor_pos.position
+				self.position = anchor_pos.global_position
 				self.z_index = 1
+				brain.holding = false
+				
+				
 	
 
 

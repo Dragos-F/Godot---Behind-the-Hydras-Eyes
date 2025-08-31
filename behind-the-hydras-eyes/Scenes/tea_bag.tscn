@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://drdsw7e8pfk5d" path="res://Visual Assets/New Assets/Tea Minigame/Teabag.png" id="1_uqebu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqebu"]
-size = Vector2(89, 89)
+size = Vector2(58, 59)
 
 [node name="TeaBag" type="Node2D"]
 script = ExtResource("1_ui411")

@@ -1,5 +1,7 @@
 extends Node2D
+class_name minigame_brain
 
+@export var holding:bool = false
 
 
 
