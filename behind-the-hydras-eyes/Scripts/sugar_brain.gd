@@ -2,12 +2,14 @@ extends Sprite2D
 
 var cube = preload("res://Scenes/cube.tscn")
 @export var cubeParent:Node2D
+@export var minigame:minigame_brain
 
 
 			
 func getCube():
 	var sugarcube  = cube.instantiate()
 	cubeParent.add_child(sugarcube)
+	minigame.holding = true
 	#sugarcube.z_as_relative = false
 	
 

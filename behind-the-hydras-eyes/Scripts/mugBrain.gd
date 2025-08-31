@@ -12,7 +12,11 @@ class_name mugBrain
 @export var sugar: int = 0
 @export var cubes:Array[Node2D]
 @export var oncev1:bool = true
-
+@export var removable:bool = false
+@export var removed:bool = false
+@export var regularBag = CompressedTexture2D
+@export var selectedBag = CompressedTexture2D
+@onready var minigame:minigame_brain = get_node("/root/TeaMinigame")
 var darken:Tween
 var lighten:Tween
 var even_darker:Tween
@@ -20,10 +24,11 @@ var even_darker:Tween
 func _process(_delta: float) -> void:
 	if fillAnimation.frame_progress == 1:
 		full = true
-	if hasBag && !bagSprite.visible:
+	if hasBag && !bagSprite.visible && !removed:
 		bagSprite.visible = true
 	if hasBag &&full:
-		bagSprite.visible = false
+		#bagSprite.visible = false
+		removable = true
 	if sugar > 0 && sugar < 4 && !full:
 		for i in sugar:
 			cubes[i-1].visible = true
@@ -50,6 +55,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			hasBag = true
 		elif area.get_parent().name == "Cube":
 			area.get_parent().queue_free()
+			minigame.holding = false
 			sugar +=1
 	elif full and newFill:
 		if area.get_parent().name == "Nut" or area.get_parent().name == "Cow" and hasBag:
@@ -62,14 +68,16 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			fillAnimation.pause()
 			teaColour(1)
 			hasBag = true
-		
+		elif area.get_parent().name == "Cube":
+			area.get_parent().queue_free()
+			sugar +=1
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.get_parent().name != "TeaBag":
 		fillAnimation.pause()
 		teaColour(0)
-		oncev1 = true
+		#oncev1 = true
 		if full:
 			newFill = true
 	
@@ -104,3 +112,27 @@ func teaColour(i:int):
 	if i == 3:
 		print ("going to even darker")
 		even_darker.play()
+		await even_darker.finished
+		fillAnimation.play_backwards("tea")
+		fillAnimation.pause()
+
+
+func _on_area_2d_mouse_entered() -> void:
+	if removable:
+		bagSprite.texture = selectedBag
+
+
+func _on_area_2d_mouse_exited() -> void:
+	bagSprite.texture = regularBag
+	
+
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and event.is_pressed() \
+	and removable:
+		bagSprite.visible = false
+		removed = true
+		
+		
