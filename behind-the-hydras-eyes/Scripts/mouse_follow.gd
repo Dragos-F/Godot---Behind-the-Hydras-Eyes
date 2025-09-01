@@ -1,4 +1,8 @@
 extends Node2D
+@onready var minigame:minigame_brain = get_node("/root/TeaMinigame")
+
+	
+
 
 func _physics_process(_delta: float) -> void:
 		var target = get_global_mouse_position()
@@ -8,3 +12,5 @@ func _physics_process(_delta: float) -> void:
 		
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			self.queue_free()
+			minigame.holding = false
+			

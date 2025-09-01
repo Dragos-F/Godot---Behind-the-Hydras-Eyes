@@ -1,9 +1,10 @@
-[gd_scene load_steps=71 format=3 uid="uid://buh0qkey1y0en"]
+[gd_scene load_steps=72 format=3 uid="uid://buh0qkey1y0en"]
 
 [ext_resource type="Script" uid="uid://4okc5ll5rh5j" path="res://Scripts/mugBrain.gd" id="1_tle6v"]
 [ext_resource type="Texture2D" uid="uid://du0aa6eixrfl5" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup.png" id="2_0ixc3"]
 [ext_resource type="Texture2D" uid="uid://q1pr1axio32d" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup front.png" id="3_0ixc3"]
 [ext_resource type="Texture2D" uid="uid://x4ex5xfosdp8" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling milk-Sheet.png" id="3_2ccos"]
+[ext_resource type="Texture2D" uid="uid://xe7nl2omso2v" path="res://Visual Assets/New Assets/Tea Minigame/Teabag selected.png" id="3_e31gv"]
 [ext_resource type="Texture2D" uid="uid://dx5f7tp1vpjcc" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling-Sheet.png" id="4_f23rm"]
 [ext_resource type="Texture2D" uid="uid://babeu3bl53sqo" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling water-Sheet.png" id="5_e31gv"]
 [ext_resource type="Texture2D" uid="uid://drdsw7e8pfk5d" path="res://Visual Assets/New Assets/Tea Minigame/Teabag.png" id="7_2ccos"]
@@ -448,8 +449,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n24y3"]
-radius = 49.0
-height = 230.0
+radius = 61.0
+height = 238.0
 
 [node name="Mug1" type="Node2D" node_paths=PackedStringArray("fillAnimation", "bagSprite", "cubes")]
 texture_filter = 1
@@ -460,6 +461,8 @@ milkyTea = Color(5, 5, 5, 1)
 actualTea = Color(0.305882, 0.203922, 0.180392, 1)
 bagSprite = NodePath("Teabag")
 cubes = [NodePath("SugarCube"), NodePath("SugarCube2"), NodePath("SugarCube3")]
+regularBag = ExtResource("7_2ccos")
+selectedBag = ExtResource("3_e31gv")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -489,6 +492,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 texture_filter = 1
+position = Vector2(5.99999, -3.00002)
 shape = SubResource("CapsuleShape2D_n24y3")
 debug_color = Color(0.877076, 0.342282, 0, 0.42)
 
@@ -521,3 +525,6 @@ texture = ExtResource("8_f23rm")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
