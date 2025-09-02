@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=55 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
@@ -26,6 +26,11 @@
 [ext_resource type="Script" uid="uid://3q3qkfvwovlx" path="res://Scripts/sugar_brain.gd" id="21_gf8xl"]
 [ext_resource type="Texture2D" uid="uid://bvd1nep504j72" path="res://Visual Assets/New Assets/Tea Minigame/Sugar Bowl sugar.png" id="22_qt3rw"]
 [ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="23_3evry"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="27_taau1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84tlb"]
+atlas = ExtResource("6_h81fs")
+region = Rect2(11, 260, 199, 104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aker0"]
 size = Vector2(244.167, 228.333)
@@ -199,9 +204,10 @@ _data = {
 atlas = ExtResource("18_hd3j3")
 region = Rect2(64.36, 101, 23.7079, 22)
 
-[node name="TeaMinigame" type="Node2D"]
+[node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("PauseMenu")]
 z_index = 10
 script = ExtResource("1_4jyn8")
+PauseMenu = NodePath("Pause")
 
 [node name="Sticky" type="Sprite2D" parent="."]
 position = Vector2(120, -386)
@@ -232,17 +238,23 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_m83bi")
 
 [node name="Mug1" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(-13, 72)
+position = Vector2(-69, 159)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mug1/Sprite" index="0"]
+z_index = 1
+position = Vector2(-16.1539, 235)
+scale = Vector2(2.80634, 1.91568)
+texture = SubResource("AtlasTexture_84tlb")
 
 [node name="MugCloseupFront" parent="Mug1" index="1"]
 position = Vector2(4, 69)
 texture = ExtResource("6_h81fs")
 
 [node name="Mug2" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(-270, 365)
+position = Vector2(-328, 333)
 
 [node name="Mug3" parent="." instance=ExtResource("2_aker0")]
-position = Vector2(191, 369)
+position = Vector2(138, 346)
 
 [node name="Sprite" parent="Mug3" index="0"]
 flip_h = true
@@ -344,6 +356,7 @@ visible = false
 visible = true
 
 [node name="Cow" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
+z_index = -1
 texture_filter = 1
 position = Vector2(-507, -170)
 texture = ExtResource("5_aker0")
@@ -379,6 +392,7 @@ position = Vector2(-441, -6)
 rotation = 0.305746
 
 [node name="Nut" parent="." node_paths=PackedStringArray("anchor_pos", "brain") instance=ExtResource("8_fy2cc")]
+z_index = -1
 texture_filter = 1
 position = Vector2(-785, -179)
 texture = ExtResource("6_n24y3")
@@ -505,6 +519,8 @@ texture = ExtResource("23_3evry")
 [node name="SugarCube9" type="Sprite2D" parent="SugarBowl2"]
 position = Vector2(42.3077, -6.92308)
 texture = ExtResource("23_3evry")
+
+[node name="Pause" parent="." instance=ExtResource("27_taau1")]
 
 [connection signal="area_entered" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_entered"]
 [connection signal="area_exited" from="NutAnchor/Base_area" to="NutAnchor/Base_area" method="_on_area_exited"]

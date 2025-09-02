@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://cs4l2gr81xfc"]
+[gd_scene load_steps=42 format=3 uid="uid://cs4l2gr81xfc"]
 
 [ext_resource type="Texture2D" uid="uid://chj78mpr6f3ni" path="res://Visual Assets/New Assets/Tea Minigame/Kettle.png" id="1_4iebi"]
 [ext_resource type="Script" uid="uid://cvhhfoptqfx8k" path="res://Scripts/pouring.gd" id="2_leasa"]
 [ext_resource type="Texture2D" uid="uid://mc8aix0wpo4v" path="res://Visual Assets/New Assets/Tea Minigame/Milk pouring-Sheet.png" id="3_4tonj"]
 [ext_resource type="Texture2D" uid="uid://gh8np4pltb3f" path="res://Visual Assets/New Assets/Tea Minigame/Water pouring-Sheet.png" id="4_leasa"]
+[ext_resource type="Texture2D" uid="uid://byopaix0u2882" path="res://Visual Assets/New Assets/Tea Minigame/Splash-Sheet.png" id="5_4tonj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydx0e"]
 atlas = ExtResource("3_4tonj")
@@ -172,6 +173,91 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl61n"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(0, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0dnm"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(127, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebop5"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(254, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ca3j"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(381, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3h77"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(508, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dl2o"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(635, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p4an"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(762, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayt7l"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(889, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmbb8"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(1016, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ua7m"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(1143, 0, 127, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud322"]
+atlas = ExtResource("5_4tonj")
+region = Rect2(1270, 0, 127, 425)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ey8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl61n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0dnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebop5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ca3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3h77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dl2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p4an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayt7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmbb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ua7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud322")
+}],
+"loop": true,
+"name": &"splash",
+"speed": 10.0
+}]
+
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_leasa"]
 points = PackedVector2Array(197, -150, 306, -229, 360, -248, 345, -266, 309, -256, 129, -126, -6, -8, 7, 6)
 
@@ -198,6 +284,15 @@ rotation = 0.840242
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_duapl")
 animation = &"water"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(6.35542, -77.0448)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_3ey8s")
+animation = &"splash"
+autoplay = "splash"
+frame_progress = 0.858315
 
 [node name="EndOfStream" type="Area2D" parent="."]
 visible = false
