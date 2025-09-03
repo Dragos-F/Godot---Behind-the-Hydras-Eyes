@@ -7,6 +7,8 @@ class_name mugBrain
 @export var teaBrown:Color # actually just plain white
 @export var milkyTea:Color # overbright white that compensates from tea brown
 @export var actualTea:Color # the only one meant to be tea coloured
+@export var preMilkInMug:Color
+@export var topUpMilk:Color
 @export var newFill:bool = false #needed so that filling doesn't trigger colour change
 @export var bagSprite:Sprite2D
 @export var sugar: int = 0
@@ -17,6 +19,13 @@ class_name mugBrain
 @export var regularBag = CompressedTexture2D
 @export var selectedBag = CompressedTexture2D
 @onready var minigame:minigame_brain = get_node("/root/Main/TeaMinigame")
+@export var teaPour:bool = false
+@export var milkPour:bool = false
+@export var milkFrames:int #counting how many frames of milk have been poured
+@export var teaFrames:int
+@export var oncev2:bool = true
+
+
 var darken:Tween
 var lighten:Tween
 var even_darker:Tween
@@ -152,3 +161,25 @@ func reset():
 	for i in cubes:
 		i.visible = false
 		print ("Mug Reset Indeed")
+
+
+func _on_fill_animation_changed() -> void:
+	if fillAnimation.animation == "tea" && milkPour && !full && oncev2:
+		fillAnimation.modulate = preMilkInMug
+		fillAnimation.frame = milkFrames
+		oncev2 = false
+	if fillAnimation.animation == "milk" && teaPour && !full && oncev2:
+		fillAnimation.modulate = topUpMilk
+		fillAnimation.frame = teaFrames
+		oncev2 = false
+
+
+
+func _on_fill_frame_changed() -> void:
+	if fillAnimation.animation == "milk" && fillAnimation.frame>1:
+		milkPour = true
+		milkFrames = fillAnimation.frame
+	if fillAnimation.animation == "tea" && fillAnimation.frame>1:
+		teaPour = true
+		teaFrames = fillAnimation.frame
+		
