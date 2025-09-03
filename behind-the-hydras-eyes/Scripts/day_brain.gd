@@ -15,7 +15,7 @@ class_name DayBrain
 @export var standing_Alex:Node2D
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
-@export var TeaMinigame:Node2D
+@onready var TeaMinigame:Node2D = get_node("/root/Main/TeaMinigame")
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 

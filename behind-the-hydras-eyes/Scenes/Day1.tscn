@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=16 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_okst0"]
+[ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="15_fuc61"]
 
 [node name="Main" type="Node2D"]
 
@@ -106,7 +107,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_bwr10")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame", "PauseMenu")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "PauseMenu")]
 script = ExtResource("3_rakbq")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
@@ -115,7 +116,6 @@ camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/Kitchen/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
-TeaMinigame = NodePath("../Background/TeaMinigame")
 PauseMenu = NodePath("../Pause")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -309,6 +309,9 @@ position = Vector2(-803, 161)
 frame_progress = 0.0
 
 [node name="Pause" parent="." instance=ExtResource("14_okst0")]
+
+[node name="TeaMinigame" parent="." instance=ExtResource("15_fuc61")]
+visible = false
 
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]

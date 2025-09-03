@@ -16,10 +16,14 @@ class_name mugBrain
 @export var removed:bool = false
 @export var regularBag = CompressedTexture2D
 @export var selectedBag = CompressedTexture2D
-@onready var minigame:minigame_brain = get_node("/root/TeaMinigame")
+@onready var minigame:minigame_brain = get_node("/root/Main/TeaMinigame")
 var darken:Tween
 var lighten:Tween
 var even_darker:Tween
+
+func _ready() -> void:
+	if minigame == null:
+		minigame = get_node("/root/TeaMinigame")
 
 func _process(_delta: float) -> void:
 	if fillAnimation.frame_progress == 1:
@@ -36,7 +40,7 @@ func _process(_delta: float) -> void:
 		for i in cubes.size():
 			cubes[i].visible = false
 	if full && hasBag && oncev1:
-		teaColour(3)
+		#teaColour(3)
 		oncev1 = false
 
 
@@ -66,7 +70,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			area.get_parent().queue_free()
 			fillAnimation.play_backwards("tea")
 			fillAnimation.pause()
-			teaColour(1)
+			#teaColour(1)
 			hasBag = true
 		elif area.get_parent().name == "Cube":
 			area.get_parent().queue_free()
@@ -135,4 +139,16 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		bagSprite.visible = false
 		removed = true
 		
-		
+func reset():
+	fillAnimation.stop()
+	fillAnimation.frame_progress = 0
+	full = false
+	hasBag = false
+	bagSprite.visible = false
+	sugar = 0
+	newFill = false
+	removable = false
+	removed = false
+	for i in cubes:
+		i.visible = false
+		print ("Mug Reset Indeed")

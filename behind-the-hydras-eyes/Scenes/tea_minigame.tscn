@@ -204,10 +204,11 @@ _data = {
 atlas = ExtResource("18_hd3j3")
 region = Rect2(64.36, 101, 23.7079, 22)
 
-[node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("PauseMenu")]
+[node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("PauseMenu", "mugs")]
 z_index = 10
 script = ExtResource("1_4jyn8")
 PauseMenu = NodePath("Pause")
+mugs = [NodePath("Mug1"), NodePath("Mug2"), NodePath("Mug3")]
 
 [node name="Sticky" type="Sprite2D" parent="."]
 position = Vector2(120, -386)

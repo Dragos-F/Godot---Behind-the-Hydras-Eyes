@@ -64,7 +64,7 @@ texture_filter = 1
 position = Vector2(-14.5, 47)
 texture = ExtResource("3_lh2wi")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "TeaMinigame", "PauseMenu")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "AlexAnchor", "JenAnchor", "PauseMenu")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -75,7 +75,6 @@ camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
-TeaMinigame = NodePath("../Background/TeaMinigame")
 PauseMenu = NodePath("../Pause")
 
 [node name="Camera2D" type="Camera2D" parent="."]
