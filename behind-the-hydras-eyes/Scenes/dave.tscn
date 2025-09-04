@@ -228,11 +228,11 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite", "walking_audio")]
+[node name="Dave" type="CharacterBody2D" node_paths=PackedStringArray("ownSprite")]
 collision_layer = 3
 script = ExtResource("1_g6loe")
 ownSprite = NodePath("AnimatedSprite2D")
-walking_audio = NodePath("AudioStreamPlayer2D")
+walking_audio = ExtResource("4_mo885")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -249,8 +249,3 @@ position = Vector2(16, -63)
 
 [node name="TextAnchor" type="Node2D" parent="."]
 position = Vector2(32, 2)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_mo885")
-volume_db = 2.0
-bus = &"SFX"

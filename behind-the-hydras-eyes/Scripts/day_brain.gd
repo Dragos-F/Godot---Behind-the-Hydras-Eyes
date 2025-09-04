@@ -13,12 +13,14 @@ class_name DayBrain
 @export var camera_zoom:Vector2
 @export var camera_target:Vector2
 @export var standing_Alex:Node2D
+@export var Alex_walking_sprite:AnimatedSprite2D
+@export var Alex_anim:AnimationPlayer
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
 @onready var TeaMinigame:Node2D = get_node("/root/Main/TeaMinigame")
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
-
+@export var plants:Array[Node2D]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -159,14 +161,30 @@ func end_day(nextLocation:String,scene_path:String):
 	print ("changing scene to "+scene_path)
 	get_tree().change_scene_to_file(scene_path)
 
+func take_plant():
+	if PermanentGlobal.Plant == false:
+		plants[0].visible = false
+		plants[1].visible = true
+		PermanentGlobal.Plant = true
+		
+
+func water_cooler_Alex(i:int):
+		if i == 0:
+			standing_Alex.visible = true
+			Alex_anim.play("move_Alex")
+		if i == 1:
+			Alex_walking_sprite.play("walking")
+			Alex_anim.play("away_Alex")
+
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep":
 		end_day("Q2, 202X","res://Scenes/EndOfDemo.tscn")
 	if argument == "watercooler_Alex":
-		standing_Alex.visible = true
+		#standing_Alex.visible = true
+		water_cooler_Alex(0)
 	if argument == "no_watercooler_Alex":
-		standing_Alex.visible = false
+		water_cooler_Alex(1)
 	if argument == "tea_minigame":
 		tea_minigame()
-		
-		
+	if argument == "take_plant":
+		take_plant()

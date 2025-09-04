@@ -66,6 +66,7 @@ directories/dtl_directory={
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Dirty Dishes.dtl",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Timelines/Office/FilingCabinet.dtl",
 "Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
+"GiveTea": "res://Dialogue stuffs/NEW/Day1/GiveTea.dtl",
 "Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
@@ -85,7 +86,9 @@ variables={
 "BossUpset": 0,
 "CurrentDay": "Day01",
 "CurrentQuarter": "Quarter1",
-"KettleReturn": 0.0
+"JenReturn": false,
+"KettleReturn": 0.0,
+"TeaForTeam": false
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

@@ -6,7 +6,8 @@ class_name Dave
 @export var move_time = true
 const JUMP_VELOCITY = -400.0
 @export var ownSprite : AnimatedSprite2D
-@export var walking_audio:AudioStreamPlayer2D
+@export var walking_audio:AudioStream
+@export var walking:bool = false
 @export var oncev1:bool = true
 
 func _ready() -> void:
@@ -49,13 +50,16 @@ func _physics_process(_delta: float) -> void:
 		if hdirection || vdirection != 0:
 			oncev1 = true
 			animated_sprite.play("walk")
-			if (!walking_audio.playing):
-				walking_audio.play(0.0)
+			if (!walking):
+				#AudioBrain.playFX(walking_audio,false)
+				walking = true
 		
 		else:
 			if (animated_sprite.get_animation() =="walk"):
 				animated_sprite.play("idle")
-			walking_audio.stop()
+			
+			walking = false
+			
 			
 	else:
 		velocity.y = 0

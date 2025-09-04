@@ -1,14 +1,17 @@
 jump {CurrentDay}
 label Day01
+if {JenReturn} == true:
+	jump Day01.2
 Jen: Oh hi! So nice to meet you. I'm Jen, your lovely marketing officer.
 Jen: If you need any posters, pamphlets, promo images or—hmm, is there a P-word for merch?—I'm your girl!
 Jen: Ooh, have you seen our green office project? I think you'll love it. There's a clipboard near your desk where you can join.
 Jen: Not to brag, but I'm the reigning plant queen here, so you'll struggle to get more GO points than yours truly.
 - GO points?
-	Jen: It's an initiative that started just after I was hired, where you get points for saving the planet! 
+	Jen: It's an initiative that started just after I was hired, where you get points for saving the planet!
 	Jen: Or, at least, to keep the office nice. GO means Green Office, did I say that? You get two points for adopting a plant, and another one each quarter for each plant still alive.
 	Jen: And then you can trade them for cool things! Like a pizza, or a...oh, I've forgotten. You can see them on the clipboard though!
 - Right, okay.
+set {JenReturn} = true
 [end_timeline]
 label Day01.2
 Jen: Hello again! Oh, did you have a question for me?

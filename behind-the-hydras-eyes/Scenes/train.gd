@@ -2,10 +2,12 @@ extends Node2D
 @export var BossTextAnchor:Node2D
 @export var daveAnim:AnimatedSprite2D
 @export var train_sound:AudioStreamPlayer2D
+@onready var originalBackVol:float
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(end_scene)
-	AudioBrain.fadeBetween(AudioBrain.BackPlayer,-24,train_sound,0)
+	originalBackVol = AudioBrain.BackPlayer.volume_db 
+	AudioBrain.fadeBetween(AudioBrain.BackPlayer, originalBackVol - 24,train_sound,originalBackVol)
 
 
 func _on_timer_timeout() -> void:
@@ -20,7 +22,7 @@ func _on_timer_timeout() -> void:
 func end_scene():
 	Dialogic.timeline_ended.disconnect(end_scene)
 	daveAnim.play("phone_down")
-	AudioBrain.fadeBetween(train_sound, -80,AudioBrain.BackPlayer,0)
+	AudioBrain.fadeBetween(train_sound, -80,AudioBrain.BackPlayer,originalBackVol)
 	Fader.FadeUp("Forward Green Office")
 	await Fader.fade_finished
 	get_tree().change_scene_to_file("res://Scenes/Day1.tscn")

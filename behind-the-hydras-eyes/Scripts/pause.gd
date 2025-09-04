@@ -10,6 +10,15 @@ class_name pauseMenu
 @export var leftLimit:float
 @export var rightLimit:float
 @export var angleLimit:float
+@export var back_slide:HSlider
+@export var sfx_slide:HSlider
+@export var ui_slide:HSlider
+
+func _ready() -> void:
+	back_slide.value = AudioBrain.BackPlayer.volume_db
+	sfx_slide.value = AudioBrain.FXPlayer.volume_db
+	ui_slide.value = AudioBrain.UIsfxPlayer.volume_db
+	
 
 func _on_background_value_changed(value: float) -> void:
 	AudioBrain.BackPlayer.volume_db = value

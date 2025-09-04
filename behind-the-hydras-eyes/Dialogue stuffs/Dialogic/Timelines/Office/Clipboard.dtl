@@ -4,6 +4,7 @@ Clipboard: Plant fostering can be cited in your annual review as proof of living
 Clipboard: Simply write your name below and take a plant. At the end of each quarter you'll get a reward for the plants you've kept alive!
 - Sign and take a plant
 	Dave: Suspiciously vague about this reward, but sure.
+	[signal arg="take_plant"]
 - No thanks
 	Dave: I'd feel too guilty if it died; I'll leave the foster care to Jen.
 [end_timeline]

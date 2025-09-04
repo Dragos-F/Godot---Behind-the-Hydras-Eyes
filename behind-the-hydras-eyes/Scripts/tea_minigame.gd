@@ -3,6 +3,10 @@ class_name minigame_brain
 @export var PauseMenu:pauseMenu
 @export var holding:bool = false
 @export var mugs:Array[mugBrain]
+@export var AlexAnchor:Node2D
+@export var JenAnchor:Node2D
+
+
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -19,3 +23,7 @@ func _on_button_pressed() -> void:
 		print("Mug Reset")
 	self.visible = false
 	Fader.FadeDown("Office")
+	if Dialogic.VAR.TeaForTeam == true:
+		var layout = Dialogic.start("GiveTea")
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",AlexAnchor)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",JenAnchor)

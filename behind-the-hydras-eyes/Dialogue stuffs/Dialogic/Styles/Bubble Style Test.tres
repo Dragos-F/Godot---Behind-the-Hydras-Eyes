@@ -23,7 +23,6 @@ script = ExtResource("2_6h11c")
 scene = ExtResource("4_xuhw3")
 overrides = {
 "choices_layout_force_lines": "true",
-"choices_text_color_focus": "Color(0.545098, 0, 0.545098, 1)",
 "choices_text_size": "24.0",
 "name_label_font_size": "18.0",
 "text_size": "22.0"

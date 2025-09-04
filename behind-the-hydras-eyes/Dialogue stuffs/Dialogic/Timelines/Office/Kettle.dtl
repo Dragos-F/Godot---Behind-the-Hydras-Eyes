@@ -18,6 +18,7 @@ Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 		Alex: Thanks! No sugar, the smallest splash of milk.
 		Jen: I was just thinking of how much I need one! Milky with three sugars please boss.
 		[signal arg="tea_minigame"]
+		set {TeaForTeam} = true
 	- No
 		Kettle: Sure. They don't deserve your labour. And hey, you're a busy guy. I'll boil faster with less water.
 		Kettle: Here, done already. Enjoy.
@@ -26,6 +27,7 @@ Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 	Kettle: Oh. Disappointing, but I'm sure you'll change your mind soon.
 [end_timeline]
 label Second
+set {TeaForTeam} = false
 Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 - Yes, for me
 	Kettle: You cast a glance over to Alex and Jen, who seem absorbed in their own work, then put the kettle on.
@@ -42,6 +44,7 @@ Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 	Jen: Absolutely, best boss ever! Milky, three sugars.
 	Kettle: As I begin to shake, reaching boiling point, you gaze into your distorted reflection in my chrome body, admiring the freakish homunculous that stares back at you.
 	Kettle: If humans have a thousand of these different faces, each one refracted through the things we do, you prefer this one to the one in your computer screen in those seconds where it blinks off.
+	set {TeaForTeam} = true
 	[signal arg="tea_minigame"]
 - Maybe later
 	Kettle: Are you sure?
@@ -53,6 +56,7 @@ Kettle: Ah, back so soon? Want another cup of tea? You should, right? Yeah?
 		jump Second
 [end_timeline]
 label Third
+set {TeaForTeam} = false
 Kettle: Again, already? If I didn't know any better I'd think you were just using tea as an excuse to come and see me.
 Kettle: Joking, obviously. I'm an inanimate object that you're talking to in your head because you're bored.
 Kettle: I assume you're actually here to slack off work while burning through the free teabags. Not that there's an issue with that.
@@ -63,6 +67,7 @@ Kettle: You, like everyone else except the CEO, only get paid a fraction of the 
 	Kettle: Fun, thinking about seconds like that, isn't it? There goes another one, and another.
 	Kettle: Maybe you should stand around for a while, sip your tea slowly here, and then go for a bathroom break.
 	Kettle: Anyway, here's your tea. Careful though, the company will only provide "free kitchen supplies" for as long as people aren't actually using them.
+	set {TeaForTeam} = true
 	[signal arg="tea_minigame"]
 - You misjudge me.
 	Kettle: Did you miss the part where I said I'm a voice in your head? If I'm saying it, then you're thinking it.
