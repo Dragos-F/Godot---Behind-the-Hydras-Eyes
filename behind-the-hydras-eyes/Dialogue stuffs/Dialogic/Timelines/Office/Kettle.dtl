@@ -14,10 +14,9 @@ Kettle: Pop me on? It's always tea time somewhere, as I think they say.
 - Yes
 	Kettle: Of course. With company-provided tea bags it would be practically a crime not to. Are you going to ask the others if they want one?
 	- Yes
-		Dave: Fancy one team? My treat.
-		Alex: Thanks! No sugar, splash of milk.
+		Dave: Anyone want a brew? My treat.
+		Alex: Thanks! No sugar, the smallest splash of milk.
 		Jen: I was just thinking of how much I need one! Milky with three sugars please boss.
-		Kettle: You're so generous. Here, three lovely cups of tea. See you around.
 		[signal arg="tea_minigame"]
 	- No
 		Kettle: Sure. They don't deserve your labour. And hey, you're a busy guy. I'll boil faster with less water.
