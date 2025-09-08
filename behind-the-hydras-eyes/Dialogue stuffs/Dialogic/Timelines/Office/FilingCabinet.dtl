@@ -7,27 +7,27 @@ FilingCabinet: It seems there's a few different files of research done at some p
 	FilingCabinet: You scan the document. It's an assessment of strategies other companies used to convinced locals to sell land for the wind projects already built there.
 	FilingCabinet: Apparently landowners tried to organise together to pay for an advisor to read contracts for them, but wind companies refused to co-operate.
 	FilingCabinet: The report recommends continuing this, identifying weak points in organising efforts and negotiating quick deals with them.
-	FilingCabinet: It also notes that promises about "economic investment" and "local enrichment" used to work well, but sellers are much more cynical as the area has only gotten poorer as land is gobbled up by foreign corporations. 
+	FilingCabinet: It also notes that promises about "economic investment" and "local enrichment" used to work well, but sellers are much more cynical as the area has only gotten poorer with more and more land being gobbled up by foreign corporations.
 	FilingCabinet: The words seem to swim on the page, a headache threatening to start as you scan further and further down the subheadings. "Utilisation of police to enforce deals"; "Conspicuous consumption as persuasion"; "Identifying and exacerbating tribal conflicts to undermine collective bargaining".
-	FilingCabinet: You don't know what half of it means, but it all sounds...dodgy. You place the folder back, feeling uncomfortable. 
+	FilingCabinet: You don't know what half of it means, but it all sounds...dodgy. You place the folder back, feeling uncomfortable.
 	jump FilesChoice1
 - Read "Reported groundwater issues"
-	FilingCabinet: Dancing down the document, your eyes skim its contents. It seems to be evaluating various issues reported by locals in the wake of turbine constructions.
+	FilingCabinet: Your gaze dances across the page as you skim the document's contents. It seems to be evaluating various issues reported by locals in the wake of turbine constructions.
 	FilingCabinet: There's a few snippets from complaints\: farms flooding, concerns of wells drying up, and lots and lots of complaints about birds.
-	FilingCabinet: Although talk of birds seems to be the most common complaint, the report doesn't explore what the specific fears are, instead dismissing them outright as "superstitious". 
-	FilingCabinet: Regarding the other complaints, the report states that shallow groundwater does mean that significant water table disruptions are required to build turbines, and that farm flooding is one potential result of this. 
-	FilingCabinet: It then advises, however, that as farmers have failed to conclusively prove floods are the fault of turbine construction, that we should offer support in diverting floodwater but not formally recognise responsibility nor compensate anyone. 
-	FilingCabinet: It goes on to say that in the long term, the increased flooding from turbines is "only seasonal", and in fact during the dry season the wind redirection of the blades dries the soil out more. 
-	FilingCabinet: You scratch your head. The wording suggests there's a positive to that, but the report ends without expanding on that. You put it back.
+	FilingCabinet: Although talk of birds seems to be the most common complaint, the report doesn't explore what the specific fears are, instead dismissing them outright as "superstitious".
+	FilingCabinet: Regarding the other complaints, the report states that shallow groundwater does mean that significant water table disruptions are required to build turbines, and that farm flooding is one potential result of this.
+	FilingCabinet: It then advises, however, that as farmers have failed to conclusively prove floods are the fault of turbine construction, that we should offer support in diverting floodwater but not formally recognise responsibility nor compensate anyone.
+	FilingCabinet: It goes on to say that in the long term, the increased flooding from turbines is "only seasonal", and in fact during the dry season the wind redirection of the blades dries the soil out more.
+	FilingCabinet: You scratch your head. The wording suggests there's a positive to that, but the report ends without expanding on it. You put it back.
 	jump FilesChoice1
 - Read "Who owns the Earth?"
-	FilingCabinet: You scan the pags. More flashily named than the others, this also seems the least relevant, at first.
-	FilingCabinet: It details how thanks to Mexico's history, a large amount of land is categorised as "social property". Technically two thirds of land in Oaxaca falls under this term.
+	FilingCabinet: You scan the pages. These are more flashily named than the others, but ostensibly the least relevant.
+	FilingCabinet: They detail how thanks to Mexico's history, a large amount of land is categorised as "social property". Technically two thirds of land in Oaxaca falls under this term.
 	FilingCabinet: It then notes that efforts to enclose such land are central to "the forces of freedom, of both markets and progress" and have been for decades. Apparently there's a government post of "social property defender", and it's sat empty for decades after one was assassinated.
-	FilingCabinet: It's a very dry report, written in a very grating, condescending style. It seems to essentially say that the job of foreign investors should be to break up this social property system to stop it holding back Mexico.
-	FilingCabinet: It recommends doing everything possible to weaken agricultural communities to do this, and then goes on a bizarre tangent about how extreme measures could be considered to foster instability to encourage land sales.
+	FilingCabinet: It's a very dry report, written in a very grating, condescending style. It seems to essentially say that the job of foreign investors should be to break up this social property system to stop it holding Mexico back.
+	FilingCabinet: It recommends doing everything possible to weaken agricultural communities and then goes on a bizarre tangent about how extreme measures can foster instability to encourage land sales.
 	FilingCabinet: "One farmer highlights the benefit of crime in creating a positive pressure which both lowers prices and encourages sales. He told our interviewers\: 'You can steal a cow. You can't steal a turbine.' Let us make this fact central to peasant minds".
-	FilingCabinet: You regret taking the time to read this one, and put it back, glad to no longer even be touching it. Yikes. 
+	FilingCabinet: You regret taking the time to read this one, and put it back, glad to no longer even be touching it. Yikes.
 	jump FilesChoice1
 - Leave.
 [end_timeline]
