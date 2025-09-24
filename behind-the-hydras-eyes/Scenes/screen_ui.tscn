@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=84 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bswcoea8m07n1" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet normal.png" id="6_ovuwh"]
 [ext_resource type="Texture2D" uid="uid://d0f6sx3ugrc43" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail normal.png" id="6_rttsh"]
 [ext_resource type="AudioStream" uid="uid://d220oibcb3l43" path="res://Sound/327737__distillerystudio__error_02.wav" id="7_0bmt1"]
+[ext_resource type="Texture2D" uid="uid://crs6a4h1xdin3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert Doctor sheet.png" id="7_2yvqt"]
 [ext_resource type="Texture2D" uid="uid://dj71t200615dd" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet hover.png" id="7_q77rv"]
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_qy131"]
 [ext_resource type="Texture2D" uid="uid://bpkluchkinpbn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet clicked.png" id="8_3ntsw"]
@@ -70,6 +71,112 @@ corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq6wl"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(0, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akua7"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(352, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ui1g"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(704, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cmr8"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(1056, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxncp"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(1408, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5w0f"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(1760, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5mrq"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(2112, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcpdn"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(2464, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjaq7"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(2816, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dordm"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(3168, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe5m2"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(3520, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st1in"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(3872, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxbix"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(4224, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhhrm"]
+atlas = ExtResource("7_2yvqt")
+region = Rect2(4576, 0, 352, 224)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hs7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq6wl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akua7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ui1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cmr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxncp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5w0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5mrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcpdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjaq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dordm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe5m2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st1in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxbix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhhrm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yvqt"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -845,10 +952,9 @@ offset_right = 1313.0
 offset_bottom = 633.0
 scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
-current_tab = 1
+current_tab = 0
 
 [node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
-visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
@@ -890,13 +996,7 @@ theme_override_fonts/font = ExtResource("6_2tdew")
 theme_override_font_sizes/font_size = 14
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ligula quis erat feugiat aliquam ac quis felis. Vivamus egestas eros nec massa varius dignissim. Nulla sit amet tortor vel mi euismod luctus sed at sem. Fusce lacinia enim ac tellus condimentum dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nunc ligula, auctor nec faucibus vitae, pulvinar non odio. Donec euismod pharetra luctus. In consectetur eros et nisi aliquet placerat. Mauris dignissim libero sed elementum luctus. Donec efficitur id urna vitae rutrum. Cras non blandit velit.
 
-Duis imperdiet rhoncus risus, quis lobortis quam molestie in. Proin hendrerit eu dolor nec rutrum. Sed sed leo ac purus iaculis accumsan cursus eget dui. Integer egestas tincidunt quam. Aliquam faucibus tempor leo. Sed sed lacus lectus. Vivamus ornare massa arcu, posuere accumsan ipsum vulputate vel. Proin malesuada sem nec cursus ullamcorper. Vivamus eu lorem efficitur, faucibus lorem vel, pulvinar felis.
-
-Sed pretium maximus tortor ut fringilla. Donec enim massa, volutpat venenatis molestie ac, sagittis consectetur est. Curabitur aliquet augue ut diam accumsan, eget suscipit metus egestas. Morbi at enim a nibh viverra maximus faucibus ac nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam quis eros semper, ultricies enim quis, elementum ex. Duis in purus nulla. Maecenas placerat dignissim pretium. Nullam nisl magna, egestas ornare porta vulputate, venenatis sed risus. Duis non ex et diam mattis rhoncus eget quis dui. Maecenas neque tellus, pulvinar molestie diam in, hendrerit suscipit erat. Suspendisse aliquet non odio eget condimentum.
-
-Fusce lacinia ut felis quis cursus. Integer mattis aliquam odio, eu maximus urna faucibus condimentum. Sed vulputate dui urna, quis sagittis ipsum hendrerit ut. Aenean efficitur erat lorem, non lacinia erat accumsan non. Vivamus tempor erat ex, sit amet lacinia mauris consectetur sed. Nullam malesuada consequat neque nec molestie. Quisque justo quam, aliquam nec dignissim in, placerat sed ipsum. Curabitur euismod, nisl id semper fringilla, urna ligula sollicitudin nunc, a malesuada nibh nibh a dui. Aenean ut velit dui. Etiam vel turpis in arcu malesuada rhoncus eu eget risus. Aliquam a ligula vehicula, condimentum felis vel, ullamcorper dolor. Mauris congue sed mi a maximus. In at diam nec metus hendrerit lacinia eu at enim. Sed placerat sagittis fermentum. Pellentesque eget sollicitudin lectus.
-
-Donec faucibus tempus odio, luctus fermentum erat varius at. Donec pellentesque ornare bibendum. Quisque interdum metus et malesuada lacinia. Praesent vel ipsum non ante porttitor posuere elementum id ex. Integer varius ex ex, faucibus convallis urna molestie at. Nam feugiat at ligula vitae placerat. Nam condimentum, turpis nec aliquam varius, nulla nunc porttitor sem, et laoreet elit metus eget nisl. Suspendisse potenti. Nullam eros libero, dignissim eu orci sed, feugiat rhoncus purus. In condimentum neque id accumsan sagittis. Phasellus bibendum, nibh nec sodales tincidunt, nibh nisi ultrices elit, ac ultricies tellus ante at lacus. Vivamus nunc turpis, pulvinar at volutpat ut, hendrerit ac massa."
+Duis imperdiet rhoncus risus, quis lobortis quam molestie in. Proin hendrerit eu dolor nec rutrum. Sed sed leo ac purus iaculis accumsan cursus eget dui. Integer egestas tincidunt quam. Aliquam faucibus tempor leo. Sed sed lacus lectus. Vivamus ornare massa arcu, posuere accumsan ipsum vulputate vel. Proin malesuada sem nec cursus ullamcorper. Vivamus eu lorem efficitur, faucibus lorem vel, pulvinar felis."
 autowrap_mode = 2
 
 [node name="Summary" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
@@ -982,11 +1082,16 @@ offset_top = 25.7493
 offset_right = 1242.23
 offset_bottom = 284.749
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
+position = Vector2(185.865, 121.785)
+sprite_frames = SubResource("SpriteFrames_3hs7y")
+autoplay = "default"
+
 [node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
 layout_mode = 0
-offset_left = 0.953156
+offset_left = -0.953153
 offset_top = 225.891
-offset_right = 100.953
+offset_right = 99.0468
 offset_bottom = 254.891
 theme_override_colors/font_color = Color(1, 0.627451, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -997,6 +1102,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer")]
+visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 script = ExtResource("6_fio65")
