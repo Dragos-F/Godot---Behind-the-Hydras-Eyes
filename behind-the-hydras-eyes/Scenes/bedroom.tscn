@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=46 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="33_x75j5"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="34_unbiq"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_unbiq"]
+[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_scg7i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -489,10 +490,20 @@ offset_top = 56.998
 offset_right = -108.708
 offset_bottom = 56.712
 
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+layout_mode = 0
+
+[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
+layout_mode = 0
+
 [node name="Emails" parent="ScreenUI/BottomBar" index="0"]
 visible = false
 
 [node name="Pause" parent="." instance=ExtResource("36_unbiq")]
+
+[node name="TypingBrain" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("37_scg7i")
 
 [connection signal="pressed" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]

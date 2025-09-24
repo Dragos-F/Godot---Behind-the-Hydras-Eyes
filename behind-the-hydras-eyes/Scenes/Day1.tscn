@@ -675,6 +675,12 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+layout_mode = 0
+
+[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
+layout_mode = 0
+
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
