@@ -14,6 +14,7 @@ config/name="Behind the Hydras Eyes"
 run/main_scene="uid://55jkptvrl5w2"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://blg1wfoyjweap"
+config/windows_native_icon="res://Client Icon.ico"
 
 [autoload]
 
@@ -88,7 +89,8 @@ variables={
 "CurrentQuarter": "Quarter1",
 "JenReturn": false,
 "KettleReturn": 0.0,
-"TeaForTeam": false
+"TeaForTeam": false,
+"WatercoolerChar": ""
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

@@ -116,3 +116,11 @@ func _on_job_thing_pressed() -> void:
 
 func _on_save_button_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_internet_pressed() -> void:
+	if Budget.visible:
+		Budget.visible = false
+	for i in EmailList:
+		i.visible = false
+	BrowserThing.visible = true

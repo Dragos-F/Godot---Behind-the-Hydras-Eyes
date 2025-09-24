@@ -56,7 +56,7 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide", "ui_slide")]
+[node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide")]
 visible = false
 z_index = 4
 script = ExtResource("1_e0jm0")
@@ -72,7 +72,6 @@ rightLimit = 300.0
 angleLimit = 180.0
 back_slide = NodePath("Control/Panel/Background Music/background")
 sfx_slide = NodePath("Control/Panel/SFX/sfx")
-ui_slide = NodePath("Control/Panel/UI/ui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
@@ -91,7 +90,6 @@ z_index = 4
 texture = ExtResource("3_nsogc")
 
 [node name="Control" type="Control" parent="."]
-visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -188,43 +186,24 @@ text = "SFX Audio"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UI" type="Control" parent="Control/Panel"]
-anchors_preset = 0
-offset_left = 176.0
-offset_top = 216.0
-offset_right = 730.0
-offset_bottom = 344.0
-
-[node name="ui" type="HSlider" parent="Control/Panel/UI"]
-z_index = 3
-layout_mode = 0
-offset_left = 28.0
-offset_top = 69.0
-offset_right = 367.0
-offset_bottom = 85.0
-scale = Vector2(1.5, 1.5)
-min_value = -80.0
-max_value = 6.0
-step = 0.5
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/UI"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel"]
 z_index = 1
 layout_mode = 0
-offset_left = 75.0
-offset_top = 1.0
-offset_right = 476.0
-offset_bottom = 72.0
+offset_left = 252.0
+offset_top = 248.0
+offset_right = 653.0
+offset_bottom = 319.0
 theme_override_fonts/normal_font = ExtResource("4_0pswh")
 theme_override_font_sizes/normal_font_size = 38
-text = "UI Audio"
+text = "Fullscreen"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainMenu" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 120.0
+offset_left = 112.0
 offset_top = 381.0
-offset_right = 333.0
+offset_right = 353.0
 offset_bottom = 453.0
 theme_override_fonts/font = ExtResource("4_0pswh")
 theme_override_font_sizes/font_size = 39
@@ -232,9 +211,9 @@ text = "Main Menu"
 
 [node name="Credits" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 655.0
+offset_left = 624.0
 offset_top = 383.0
-offset_right = 868.0
+offset_right = 837.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("4_0pswh")
 theme_override_font_sizes/font_size = 39
@@ -266,6 +245,15 @@ text = "Random Sample Text"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="FullScreen" type="CheckBox" parent="Control"]
+z_index = 5
+layout_mode = 0
+offset_left = 612.0
+offset_top = 266.0
+offset_right = 636.0
+offset_bottom = 290.0
+scale = Vector2(2, 2)
 
 [node name="Message" type="Panel" parent="."]
 visible = false
@@ -300,7 +288,7 @@ text = "Take me to the menu"
 
 [connection signal="value_changed" from="Control/Panel/Background Music/background" to="." method="_on_background_value_changed"]
 [connection signal="value_changed" from="Control/Panel/SFX/sfx" to="." method="_on_sfx_value_changed"]
-[connection signal="value_changed" from="Control/Panel/UI/ui" to="." method="_on_ui_value_changed"]
 [connection signal="pressed" from="Control/MainMenu" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Control/Credits" to="." method="_on_credits_pressed"]
+[connection signal="toggled" from="Control/FullScreen" to="." method="_on_full_screen_toggled"]
 [connection signal="pressed" from="Message/MessageOkay" to="." method="_on_message_okay_pressed"]

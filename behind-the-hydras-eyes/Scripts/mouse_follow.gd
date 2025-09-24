@@ -2,7 +2,9 @@ extends Node2D
 @onready var minigame:minigame_brain = get_node("/root/TeaMinigame")
 
 	
-
+func _ready() -> void:
+	if minigame == null:
+		minigame = get_node("/root/Main/TeaMinigame")
 
 func _physics_process(_delta: float) -> void:
 		var target = get_global_mouse_position()

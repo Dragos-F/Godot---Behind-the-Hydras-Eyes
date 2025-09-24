@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://bwvs5j5go3ybc"]
+[gd_scene load_steps=28 format=3 uid="uid://bwvs5j5go3ybc"]
 
-[ext_resource type="Script" uid="uid://cbkj0uqvtov7s" path="res://Scenes/train.gd" id="1_h1y41"]
+[ext_resource type="Script" uid="uid://ssmehthbrmbd" path="res://Scenes/end_of_demo.gd" id="1_u4eq7"]
 [ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="2_enwmt"]
 [ext_resource type="Texture2D" uid="uid://dsbjyrhwbogpb" path="res://Visual Assets/New Assets/Train/Train Background No Bottom.png" id="3_k6no3"]
 [ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="4_k6no3"]
@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="18_u4eq7"]
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="19_46cjv"]
 [ext_resource type="Texture2D" uid="uid://dgqv7y4485u46" path="res://Visual Assets/New Assets/Train/Background triangle.png" id="20_pjihi"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="21_u4eq7"]
 
 [sub_resource type="Animation" id="Animation_mcim7"]
 length = 10.0333
@@ -121,8 +122,9 @@ _data = {
 &"creditMove": SubResource("Animation_1djmy")
 }
 
-[node name="Train" type="Node2D"]
-script = ExtResource("1_h1y41")
+[node name="Train" type="Node2D" node_paths=PackedStringArray("PauseMenu")]
+script = ExtResource("1_u4eq7")
+PauseMenu = NodePath("Pause")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -851,9 +853,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -761.0
+offset_left = -944.0
 offset_top = 541.0
-offset_right = -721.0
+offset_right = -904.0
 offset_bottom = 581.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -1055,5 +1057,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_8sflb")
 }
 autoplay = "creditMove"
+
+[node name="Pause" parent="." instance=ExtResource("21_u4eq7")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

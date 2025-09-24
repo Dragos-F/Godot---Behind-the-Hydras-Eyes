@@ -12,6 +12,7 @@ extends Node
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day01"
+	Dialogic.VAR.WatercoolerChar = "Alex01"
 
 	
 	

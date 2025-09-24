@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=20 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://catrajxdw6hs3" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/34.png" id="4_ovuwh"]
 [ext_resource type="Texture2D" uid="uid://d1essny355ere" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/87.png" id="4_tvukg"]
 [ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="4_vjvvu"]
+[ext_resource type="Texture2D" uid="uid://ch7f0qpemgp2x" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/63.png" id="7_ovuwh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
 bg_color = Color(0.878, 0.878, 0.878, 0.191)
@@ -57,6 +58,13 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxeq5"]
+bg_color = Color(0.878431, 0.419608, 0.878431, 0.192157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
 bg_color = Color(0.0862745, 0.643137, 1, 0.811765)
 
@@ -64,8 +72,7 @@ bg_color = Color(0.0862745, 0.643137, 1, 0.811765)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dr7px"]
 
-[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget")]
-visible = false
+[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing")]
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -80,8 +87,10 @@ Sender = NodePath("MainEmail/Sender&Subj/Panel/BoxContainer/Sender")
 ToBox = NodePath("MainEmail/Sender&Subj/Panel2/BoxContainer/ToBox")
 EmailList = [NodePath("MainEmail"), NodePath("EmailList")]
 Budget = NodePath("Budget")
+BrowserThing = NodePath("BrowserThing")
 
 [node name="EmailList" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -141,6 +150,7 @@ boss = true
 autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -685,6 +695,22 @@ offset_bottom = -5.28802
 theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
+[node name="BrowserThing" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 12.0
+offset_right = 1401.0
+offset_bottom = 666.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
+
+[node name="Panel2" type="Panel" parent="BrowserThing"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 1381.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxeq5")
+
 [node name="BottomBar" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 5.0
@@ -729,6 +755,24 @@ vertical_icon_alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
+[node name="Internet" type="Button" parent="BottomBar"]
+texture_filter = 1
+layout_mode = 2
+anchor_left = 0.555874
+anchor_right = 0.596705
+anchor_bottom = 1.0
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+icon = ExtResource("7_ovuwh")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
 [node name="ShutDown" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
@@ -759,6 +803,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="toggled" from="Budget/SaveButton" to="Budget/Chart" method="_on_save_button_toggled"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]
+[connection signal="pressed" from="BottomBar/Internet" to="." method="_on_internet_pressed"]
 
 [editable path="EmailList/SummariesContainer/Boss"]
 [editable path="Budget/Chart"]

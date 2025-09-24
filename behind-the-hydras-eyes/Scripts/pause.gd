@@ -15,17 +15,15 @@ class_name pauseMenu
 @export var ui_slide:HSlider
 
 func _ready() -> void:
-	back_slide.value = AudioBrain.BackPlayer.volume_db
-	sfx_slide.value = AudioBrain.FXPlayer.volume_db
-	ui_slide.value = AudioBrain.UIsfxPlayer.volume_db
+	back_slide.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
+	sfx_slide.value =  AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
 	
 
 func _on_background_value_changed(value: float) -> void:
-	AudioBrain.BackPlayer.volume_db = value
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"),value)
 	
 func _on_sfx_value_changed(value: float) -> void:
-	AudioBrain.FXPlayer.volume_db = value
-	AudioBrain.RandFXPlayer.volume_db = value
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"),value)
 	
 func _on_ui_value_changed(value: float) -> void:
 	AudioBrain.UIsfxPlayer.volume_db = value
@@ -70,3 +68,12 @@ func _on_message_okay_pressed() -> void:
 	await Fader.fade_finished
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 	Fader.FadeDown("")
+
+
+func _on_full_screen_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		

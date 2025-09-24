@@ -3,12 +3,18 @@ extends Node2D
 @export var daveAnim:AnimatedSprite2D
 @export var train_sound:AudioStreamPlayer2D
 @onready var originalBackVol:float
-
+@export var PauseMenu:Node2D
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(end_scene)
 	originalBackVol = AudioBrain.BackPlayer.volume_db 
 	AudioBrain.fadeBetween(AudioBrain.BackPlayer, originalBackVol - 24,train_sound,originalBackVol)
 
+func _input(event):
+	if event.is_action_pressed("menu"):
+		if !PauseMenu.visible:
+			PauseMenu.openPause()
+		elif PauseMenu.visible:
+			PauseMenu.closePause()
 
 func _on_timer_timeout() -> void:
 	daveAnim.play("phone_up")

@@ -306,13 +306,14 @@ z_index = 1
 position = Vector2(8.75, -27.5)
 shape = SubResource("RectangleShape2D_aker0")
 
-[node name="TeaBoxUnselected" type="AnimatedSprite2D" parent="."]
+[node name="TeaBoxUnselected" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("minigame")]
 texture_filter = 1
 position = Vector2(718, 313)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ivjq4")
 animation = &"close"
 script = ExtResource("9_ixkvo")
+minigame = NodePath("..")
 
 [node name="TeaBox" type="Area2D" parent="TeaBoxUnselected"]
 

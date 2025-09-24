@@ -16,6 +16,7 @@ var oncev1 = true
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day02"
+	Dialogic.VAR.WatercoolerChar ="Jen01"
 	
 func _process(delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota) and oncev1:

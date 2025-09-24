@@ -66,6 +66,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		elif area.get_parent().name == "TeaBag":
 			area.get_parent().queue_free()
 			hasBag = true
+			minigame.holding = false
 		elif area.get_parent().name == "Cube":
 			area.get_parent().queue_free()
 			minigame.holding = false
@@ -77,6 +78,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			#teaColour(1)
 		if area.get_parent().name == "TeaBag":
 			area.get_parent().queue_free()
+			minigame.holding = false
 			fillAnimation.play_backwards("tea")
 			fillAnimation.pause()
 			#teaColour(1)
@@ -84,6 +86,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		elif area.get_parent().name == "Cube":
 			area.get_parent().queue_free()
 			sugar +=1
+			minigame.holding = false
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:

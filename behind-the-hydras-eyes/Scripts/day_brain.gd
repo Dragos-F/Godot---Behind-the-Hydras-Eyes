@@ -27,6 +27,12 @@ signal endOfDay() # emitted by the dayBrain to let the specifics know when to en
 func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.VAR.AlexReturn = false
+	Dialogic.VAR.JenReturn = false
+	Dialogic.VAR.KettleReturn = 0
+	Dialogic.VAR.TeaForTeam = false
+	if PermanentGlobal.Plant == true:
+		take_plant()
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -121,6 +127,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 	if (nodeTitle == "WaterCooler"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch",target)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",standing_Alex)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",standing_Alex)
 	if (nodeTitle == "Corkboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):
@@ -170,11 +177,21 @@ func take_plant():
 
 func water_cooler_Alex(i:int):
 		if i == 0:
+			
 			standing_Alex.visible = true
-			Alex_anim.play("move_Alex")
+			if Dialogic.VAR.WatercoolerChar == "Alex01":
+				Alex_anim.play("move_Alex")
+				Alex_walking_sprite.play("walking_Alex")
+			elif Dialogic.VAR.WatercoolerChar == "Jen01":
+				Alex_anim.play("move_Jen")
+				Alex_walking_sprite.play("walking_Jen")
 		if i == 1:
-			Alex_walking_sprite.play("walking")
-			Alex_anim.play("away_Alex")
+			if Dialogic.VAR.WatercoolerChar == "Alex01":
+				Alex_walking_sprite.play("walking_Alex")
+				Alex_anim.play("away_Alex")
+			elif Dialogic.VAR.WatercoolerChar == "Jen01":
+				Alex_walking_sprite.play("walking_Jen")
+				Alex_anim.play("away_Jen")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep":
