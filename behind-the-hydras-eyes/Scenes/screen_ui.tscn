@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="3_m3eo7"]
 [ext_resource type="PackedScene" uid="uid://dk0tlp5sp41uj" path="res://Scenes/testPie.tscn" id="3_vjvvu"]
 [ext_resource type="Texture2D" uid="uid://catrajxdw6hs3" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/34.png" id="4_ovuwh"]
-[ext_resource type="Texture2D" uid="uid://d1essny355ere" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/87.png" id="4_tvukg"]
 [ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="4_vjvvu"]
+[ext_resource type="Texture2D" uid="uid://bswcoea8m07n1" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet normal.png" id="6_ovuwh"]
 [ext_resource type="Texture2D" uid="uid://ch7f0qpemgp2x" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/63.png" id="7_ovuwh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
@@ -66,7 +66,7 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
-bg_color = Color(0.0862745, 0.643137, 1, 0.811765)
+bg_color = Color(0.0862745, 0.368627, 1, 0.811765)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
 
@@ -711,6 +711,11 @@ offset_right = 1381.0
 offset_bottom = 644.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wxeq5")
 
+[node name="TabBar" type="TabBar" parent="BrowserThing/Panel2"]
+layout_mode = 0
+offset_right = 1379.0
+offset_bottom = 40.0
+
 [node name="BottomBar" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 5.0
@@ -740,8 +745,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Budget" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.389685
-anchor_right = 0.430516
+anchor_left = 0.320917
+anchor_right = 0.460602
 anchor_bottom = 1.0
 offset_right = 6.10352e-05
 grow_horizontal = 2
@@ -749,7 +754,7 @@ grow_vertical = 0
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
-icon = ExtResource("4_tvukg")
+icon = ExtResource("6_ovuwh")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
@@ -785,6 +790,7 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dr7px")
 icon = ExtResource("4_vjvvu")
+alignment = 2
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
