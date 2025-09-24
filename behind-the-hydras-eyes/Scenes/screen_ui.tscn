@@ -1,13 +1,21 @@
-[gd_scene load_steps=20 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=62 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
-[ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="3_m3eo7"]
 [ext_resource type="PackedScene" uid="uid://dk0tlp5sp41uj" path="res://Scenes/testPie.tscn" id="3_vjvvu"]
 [ext_resource type="Texture2D" uid="uid://catrajxdw6hs3" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/34.png" id="4_ovuwh"]
-[ext_resource type="Texture2D" uid="uid://l6u0m8os1j65" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/103.png" id="4_vjvvu"]
+[ext_resource type="Texture2D" uid="uid://dhmkdghn27hbl" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail clicked.png" id="5_qibcv"]
+[ext_resource type="Texture2D" uid="uid://b6nqxla4x0dxm" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail hover.png" id="5_wxeq5"]
 [ext_resource type="Texture2D" uid="uid://bswcoea8m07n1" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet normal.png" id="6_ovuwh"]
-[ext_resource type="Texture2D" uid="uid://ch7f0qpemgp2x" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/63.png" id="7_ovuwh"]
+[ext_resource type="Texture2D" uid="uid://d0f6sx3ugrc43" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail normal.png" id="6_rttsh"]
+[ext_resource type="Texture2D" uid="uid://dj71t200615dd" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet hover.png" id="7_q77rv"]
+[ext_resource type="Texture2D" uid="uid://bpkluchkinpbn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet clicked.png" id="8_3ntsw"]
+[ext_resource type="Texture2D" uid="uid://bhdqpjaiw8iq5" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net normal.png" id="8_q77rv"]
+[ext_resource type="Texture2D" uid="uid://oi2lu0ddku3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off normal.png" id="9_3ntsw"]
+[ext_resource type="Texture2D" uid="uid://cjwd7ehcrtmif" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net clicked.png" id="11_cp48c"]
+[ext_resource type="Texture2D" uid="uid://bpxakrlgou5ji" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net hover.png" id="12_bd8n7"]
+[ext_resource type="Texture2D" uid="uid://di6d2feer58ee" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off clicked.png" id="14_bd8n7"]
+[ext_resource type="Texture2D" uid="uid://cscqu5dr4y1qp" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off hover.png" id="15_tc0qj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
 bg_color = Color(0.878, 0.878, 0.878, 0.191)
@@ -68,9 +76,108 @@ corner_radius_bottom_left = 6
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
 bg_color = Color(0.0862745, 0.368627, 1, 0.811765)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc0qj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fio65"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bmt1"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qy131"]
+texture = ExtResource("5_wxeq5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fpvw"]
+texture = ExtResource("5_wxeq5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tu6vg"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2yvqt"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq6wl"]
+texture = ExtResource("6_rttsh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akua7"]
+texture = ExtResource("6_rttsh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q77rv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q77rv"]
+texture = ExtResource("8_3ntsw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ntsw"]
+texture = ExtResource("8_3ntsw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bd8n7"]
+texture = ExtResource("7_q77rv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qibcv"]
+texture = ExtResource("7_q77rv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tc0qj"]
+texture = ExtResource("7_q77rv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp48c"]
+texture = ExtResource("8_3ntsw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ui1g"]
+texture = ExtResource("6_ovuwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tdew"]
+texture = ExtResource("6_ovuwh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cmr8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxncp"]
+texture = ExtResource("11_cp48c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5w0f"]
+texture = ExtResource("11_cp48c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5mrq"]
+texture = ExtResource("12_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcpdn"]
+texture = ExtResource("12_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjaq7"]
+texture = ExtResource("11_cp48c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dordm"]
+texture = ExtResource("11_cp48c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe5m2"]
+texture = ExtResource("8_q77rv")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dr7px"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cmr8"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st1in"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxbix"]
+texture = ExtResource("15_tc0qj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhhrm"]
+texture = ExtResource("15_tc0qj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hs7y"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5p121"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vdjt"]
+texture = ExtResource("9_3ntsw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15dr1"]
+texture = ExtResource("9_3ntsw")
 
 [node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing")]
 z_index = 5
@@ -727,74 +834,130 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
 [node name="Emails" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.474928
-anchor_right = 0.515759
-anchor_bottom = 1.0
+anchor_left = 0.202722
+anchor_right = 0.376074
+anchor_bottom = 1.32143
 offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
-icon = ExtResource("3_m3eo7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tc0qj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_fio65")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0bmt1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_qy131")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4fpvw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tu6vg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2yvqt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_bq6wl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_akua7")
+text = "   Mail"
+icon = ExtResource("6_rttsh")
 icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Budget" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.320917
-anchor_right = 0.460602
-anchor_bottom = 1.0
+anchor_left = 0.473496
+anchor_right = 0.646848
+anchor_bottom = 1.32143
 offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q77rv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_q77rv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3ntsw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_bd8n7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qibcv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tc0qj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp48c")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_3ui1g")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2tdew")
+text = "   Data"
 icon = ExtResource("6_ovuwh")
 icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Internet" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.555874
-anchor_right = 0.596705
-anchor_bottom = 1.0
+anchor_left = 0.338825
+anchor_right = 0.512178
+anchor_bottom = 1.32143
 offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6cmr8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_dxncp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_o5w0f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_i5mrq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tcpdn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_hjaq7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dordm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_qe5m2")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
-icon = ExtResource("7_ovuwh")
+text = "Net"
+icon = ExtResource("8_q77rv")
 icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="ShutDown" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.0537249
-anchor_right = 0.0959885
-anchor_bottom = 1.0
+anchor_right = 0.185413
+anchor_bottom = 1.20157
+offset_right = 0.164032
+offset_bottom = 6.71199
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dr7px")
-icon = ExtResource("4_vjvvu")
-alignment = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2tdew")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_6cmr8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_st1in")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_fxbix")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yhhrm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_3hs7y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5p121")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0vdjt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_15dr1")
+text = "    Log Off"
+icon = ExtResource("9_3ntsw")
 icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
 metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(698, 327)
 
 [connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]
 [connection signal="pressed" from="MainEmail/Reply" to="." method="_on_reply_pressed"]

@@ -456,12 +456,6 @@ texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
 
-[node name="EmailList" parent="ScreenUI" index="0"]
-visible = false
-
-[node name="MainEmail" parent="ScreenUI" index="1"]
-visible = false
-
 [node name="Budget" parent="ScreenUI" index="2"]
 visible = true
 
