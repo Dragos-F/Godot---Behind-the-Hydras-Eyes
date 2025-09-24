@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=68 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bpkluchkinpbn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet clicked.png" id="8_3ntsw"]
 [ext_resource type="Texture2D" uid="uid://bhdqpjaiw8iq5" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net normal.png" id="8_q77rv"]
 [ext_resource type="Texture2D" uid="uid://oi2lu0ddku3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off normal.png" id="9_3ntsw"]
+[ext_resource type="Texture2D" uid="uid://m4777xshmijw" path="res://Visual Assets/New Assets/Menus/Computer UIs/ForwardFamily logo.png" id="10_tu6vg"]
 [ext_resource type="Texture2D" uid="uid://cjwd7ehcrtmif" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net clicked.png" id="11_cp48c"]
 [ext_resource type="Texture2D" uid="uid://bpxakrlgou5ji" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net hover.png" id="12_bd8n7"]
 [ext_resource type="Texture2D" uid="uid://di6d2feer58ee" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off clicked.png" id="14_bd8n7"]
@@ -69,6 +70,9 @@ corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yvqt"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
 bg_color = Color(4.23551e-06, 0.34466, 0.919269, 1)
@@ -841,9 +845,10 @@ offset_right = 1313.0
 offset_bottom = 633.0
 scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
-current_tab = 0
+current_tab = 1
 
 [node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
@@ -878,6 +883,7 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 2
 
 [node name="Body" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer"]
+custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("6_2tdew")
@@ -891,7 +897,7 @@ Sed pretium maximus tortor ut fringilla. Donec enim massa, volutpat venenatis mo
 Fusce lacinia ut felis quis cursus. Integer mattis aliquam odio, eu maximus urna faucibus condimentum. Sed vulputate dui urna, quis sagittis ipsum hendrerit ut. Aenean efficitur erat lorem, non lacinia erat accumsan non. Vivamus tempor erat ex, sit amet lacinia mauris consectetur sed. Nullam malesuada consequat neque nec molestie. Quisque justo quam, aliquam nec dignissim in, placerat sed ipsum. Curabitur euismod, nisl id semper fringilla, urna ligula sollicitudin nunc, a malesuada nibh nibh a dui. Aenean ut velit dui. Etiam vel turpis in arcu malesuada rhoncus eu eget risus. Aliquam a ligula vehicula, condimentum felis vel, ullamcorper dolor. Mauris congue sed mi a maximus. In at diam nec metus hendrerit lacinia eu at enim. Sed placerat sagittis fermentum. Pellentesque eget sollicitudin lectus.
 
 Donec faucibus tempus odio, luctus fermentum erat varius at. Donec pellentesque ornare bibendum. Quisque interdum metus et malesuada lacinia. Praesent vel ipsum non ante porttitor posuere elementum id ex. Integer varius ex ex, faucibus convallis urna molestie at. Nam feugiat at ligula vitae placerat. Nam condimentum, turpis nec aliquam varius, nulla nunc porttitor sem, et laoreet elit metus eget nisl. Suspendisse potenti. Nullam eros libero, dignissim eu orci sed, feugiat rhoncus purus. In condimentum neque id accumsan sagittis. Phasellus bibendum, nibh nec sodales tincidunt, nibh nisi ultrices elit, ac ultricies tellus ante at lacus. Vivamus nunc turpis, pulvinar at volutpat ut, hendrerit ac massa."
-autowrap_mode = 1
+autowrap_mode = 2
 
 [node name="Summary" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
@@ -991,7 +997,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer")]
-visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 script = ExtResource("6_fio65")
@@ -1007,6 +1012,7 @@ offset_left = 375.0
 offset_top = 145.0
 offset_right = 983.0
 offset_bottom = 506.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2yvqt")
 
 [node name="Control" type="Control" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel"]
 anchors_preset = 0
@@ -1021,6 +1027,7 @@ offset_left = 131.535
 offset_top = 60.8923
 offset_right = 285.535
 offset_bottom = 121.892
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Username:"
 
 [node name="TextEdit" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
@@ -1036,6 +1043,7 @@ offset_left = 131.535
 offset_top = 151.249
 offset_right = 285.535
 offset_bottom = 212.249
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Password:"
 
 [node name="TextEdit2" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
@@ -1053,6 +1061,11 @@ offset_right = 412.415
 offset_bottom = 307.176
 text = "Log In
 "
+
+[node name="ForwardFamilyLogo" type="Sprite2D" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel"]
+position = Vector2(476.167, 175.389)
+scale = Vector2(0.953155, 0.982133)
+texture = ExtResource("10_tu6vg")
 
 [node name="ErrorMessage" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In"]
 visible = false
