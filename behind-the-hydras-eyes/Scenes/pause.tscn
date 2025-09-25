@@ -57,7 +57,6 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide")]
-visible = false
 z_index = 4
 script = ExtResource("1_e0jm0")
 folderAnim = NodePath("AnimatedSprite2D")
@@ -150,7 +149,7 @@ offset_right = 476.0
 offset_bottom = 72.0
 theme_override_fonts/normal_font = ExtResource("4_0pswh")
 theme_override_font_sizes/normal_font_size = 38
-text = "Background Audio"
+text = "Master Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 

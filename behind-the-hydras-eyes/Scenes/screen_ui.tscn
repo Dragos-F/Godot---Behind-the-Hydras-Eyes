@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=98 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -8,16 +8,20 @@
 [ext_resource type="Theme" uid="uid://cnielb83lusjt" path="res://new_theme.tres" id="5_tc0qj"]
 [ext_resource type="Texture2D" uid="uid://b6nqxla4x0dxm" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail hover.png" id="5_wxeq5"]
 [ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="6_2tdew"]
+[ext_resource type="FontFile" uid="uid://ddrh7bkirqapa" path="res://Visual Assets/Terminal-Grotesque-master/Terminal-Grotesque-master/webspecimen/font/terminal-grotesque-webfont.woff" id="6_6cmr8"]
 [ext_resource type="Script" uid="uid://dl3p2mgegadp4" path="res://Scripts/intra_net_log_in.gd" id="6_fio65"]
 [ext_resource type="Texture2D" uid="uid://bswcoea8m07n1" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet normal.png" id="6_ovuwh"]
 [ext_resource type="Texture2D" uid="uid://d0f6sx3ugrc43" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail normal.png" id="6_rttsh"]
 [ext_resource type="AudioStream" uid="uid://d220oibcb3l43" path="res://Sound/327737__distillerystudio__error_02.wav" id="7_0bmt1"]
 [ext_resource type="Texture2D" uid="uid://crs6a4h1xdin3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert Doctor sheet.png" id="7_2yvqt"]
+[ext_resource type="Texture2D" uid="uid://db2541csmrmhn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert cat-Sheet.png" id="7_3ui1g"]
 [ext_resource type="Texture2D" uid="uid://dj71t200615dd" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet hover.png" id="7_q77rv"]
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_qy131"]
 [ext_resource type="Texture2D" uid="uid://bpkluchkinpbn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet clicked.png" id="8_3ntsw"]
+[ext_resource type="Script" uid="uid://cmki8uiel1mdh" path="res://Scripts/advertBrain.gd" id="8_bq6wl"]
 [ext_resource type="Texture2D" uid="uid://bhdqpjaiw8iq5" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net normal.png" id="8_q77rv"]
 [ext_resource type="Texture2D" uid="uid://oi2lu0ddku3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off normal.png" id="9_3ntsw"]
+[ext_resource type="Texture2D" uid="uid://bc6mjedv1pns8" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert update-Sheet.png" id="9_6cmr8"]
 [ext_resource type="Texture2D" uid="uid://m4777xshmijw" path="res://Visual Assets/New Assets/Menus/Computer UIs/ForwardFamily logo.png" id="10_tu6vg"]
 [ext_resource type="Texture2D" uid="uid://cjwd7ehcrtmif" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net clicked.png" id="11_cp48c"]
 [ext_resource type="Texture2D" uid="uid://bpxakrlgou5ji" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net hover.png" id="12_bd8n7"]
@@ -71,6 +75,14 @@ corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hs7y"]
+atlas = ExtResource("7_3ui1g")
+region = Rect2(0, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p121"]
+atlas = ExtResource("7_3ui1g")
+region = Rect2(352, 0, 352, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bq6wl"]
 atlas = ExtResource("7_2yvqt")
@@ -128,8 +140,51 @@ region = Rect2(4224, 0, 352, 224)
 atlas = ExtResource("7_2yvqt")
 region = Rect2(4576, 0, 352, 224)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vdjt"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(0, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15dr1"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(352, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujna0"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(704, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fncch"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(1056, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymb84"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(1408, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1626"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(1760, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgq50"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(2112, 0, 352, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjr3j"]
+atlas = ExtResource("9_6cmr8")
+region = Rect2(2464, 0, 352, 224)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3hs7y"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hs7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p121")
+}],
+"loop": true,
+"name": &"Cat",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bq6wl")
@@ -174,7 +229,36 @@ animations = [{
 "texture": SubResource("AtlasTexture_yhhrm")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Doc",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vdjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15dr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujna0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fncch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymb84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1626")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgq50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjr3j")
+}],
+"loop": true,
+"name": &"Update",
 "speed": 10.0
 }]
 
@@ -993,8 +1077,8 @@ vertical_scroll_mode = 2
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("6_2tdew")
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("6_6cmr8")
+theme_override_font_sizes/font_size = 20
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ligula quis erat feugiat aliquam ac quis felis. Vivamus egestas eros nec massa varius dignissim. Nulla sit amet tortor vel mi euismod luctus sed at sem. Fusce lacinia enim ac tellus condimentum dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nunc ligula, auctor nec faucibus vitae, pulvinar non odio. Donec euismod pharetra luctus. In consectetur eros et nisi aliquet placerat. Mauris dignissim libero sed elementum luctus. Donec efficitur id urna vitae rutrum. Cras non blandit velit.
 
 Duis imperdiet rhoncus risus, quis lobortis quam molestie in. Proin hendrerit eu dolor nec rutrum. Sed sed leo ac purus iaculis accumsan cursus eget dui. Integer egestas tincidunt quam. Aliquam faucibus tempor leo. Sed sed lacus lectus. Vivamus ornare massa arcu, posuere accumsan ipsum vulputate vel. Proin malesuada sem nec cursus ullamcorper. Vivamus eu lorem efficitur, faucibus lorem vel, pulvinar felis."
@@ -1080,7 +1164,9 @@ offset_bottom = 284.749
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
 position = Vector2(185.865, 121.785)
 sprite_frames = SubResource("SpriteFrames_3hs7y")
+animation = &"Update"
 autoplay = "default"
+script = ExtResource("8_bq6wl")
 
 [node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
 layout_mode = 0
@@ -1109,11 +1195,18 @@ error_noise = ExtResource("7_0bmt1")
 metadata/_tab_index = 1
 
 [node name="Panel" type="Panel" parent="BrowserThing/TabContainer/IntraNet Log-In"]
-layout_mode = 0
-offset_left = 375.0
-offset_top = 145.0
-offset_right = 983.0
-offset_bottom = 506.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27
+anchor_top = 0.204
+anchor_right = 0.27
+anchor_bottom = 0.204
+offset_left = 0.0301208
+offset_top = -0.249878
+offset_right = 608.03
+offset_bottom = 360.75
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2yvqt")
 
 [node name="Control" type="Control" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel"]

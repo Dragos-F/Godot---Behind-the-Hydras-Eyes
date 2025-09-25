@@ -733,9 +733,11 @@ autowrap_mode = 2
 text = "Perfect summer party vibes: floods bring beaches to you"
 autowrap_mode = 2
 
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+animation = &"Doc"
+
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
-offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
