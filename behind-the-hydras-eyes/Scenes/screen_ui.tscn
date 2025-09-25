@@ -931,6 +931,7 @@ offset_bottom = 10.7822
 theme = ExtResource("5_tc0qj")
 
 [node name="Panel" type="Panel" parent="BrowserThing/Gambling"]
+layout_mode = 0
 offset_left = 409.0
 offset_top = 179.0
 offset_right = 801.0
@@ -1061,18 +1062,12 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
 [node name="Label2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
 layout_mode = 2
-text = "RELATED News 1"
-
-[node name="Label3" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
-layout_mode = 2
-text = "RELATED News 1"
-
-[node name="Label4" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
 [node name="Panel5" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
@@ -1114,6 +1109,7 @@ error_noise = ExtResource("7_0bmt1")
 metadata/_tab_index = 1
 
 [node name="Panel" type="Panel" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+layout_mode = 0
 offset_left = 375.0
 offset_top = 145.0
 offset_right = 983.0

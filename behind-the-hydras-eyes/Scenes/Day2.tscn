@@ -508,6 +508,9 @@ unique_name_in_owner = true
 texture_filter = 1
 emailsProgressionQuota = 3
 
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = true
+
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
@@ -584,6 +587,9 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
+[node name="MainEmail" parent="ScreenUI" index="1"]
+visible = true
+
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
 
@@ -598,6 +604,62 @@ texture_filter = 1
 
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
+
+[node name="BrowserThing" parent="ScreenUI" index="3"]
+visible = false
+
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 392.0
+offset_bottom = 141.0
+
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+offset_left = 13.9025
+offset_top = -49.2858
+offset_right = 557.902
+offset_bottom = 223.714
+scale = Vector2(0.8, 0.8)
+text = "Train turmoil: troubled transport torpedoes traveller timetables"
+autowrap_mode = 2
+
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+offset_left = 25.3403
+offset_top = 124.552
+offset_right = 455.34
+offset_bottom = 531.552
+
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+text = "For the third time this week, serious delays to all major transport routes have put a dampener on the spirits of hopeful commuters and tourists. This comes one week after ticket prices were hiked 20% in a move that cabinet members have described as \"the sort of tough choices that help to toughen up our long-pampered underclass\". 									
+
+We reached out via phone to our mate that runs SuperTrain, the largest affected rail company, and he said \"[inaudible grumbling]\". Our experts understand this to mean that the blame lies with unions selfishly resisting sixteen hour shifts.									
+				
+Our following investigation on the causes has revealed chronic underfunding on repairs, maintainance, and expansion in line with demand; a workplace environment shaped by exhaustion and toxicity; and a constant failure to recruit adequate staff. We therefore conclude that SuperTrain were correct in their assement that the greedy staff is at the root cause of the issue									
+									"
+
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+text = "◦ Ticket price soaring
+◦ SuperTrain Interview
+◦ Unions to Blame"
+
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+theme_override_constants/separation = 24
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(5, 0)
+text = "And the little one says roll over: childrens hospitals declared full"
+autowrap_mode = 2
+
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(5, 0)
+text = "Air has suprising nutrional value, minister explains to food banks"
+autowrap_mode = 2
+
+[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 608.0
+offset_bottom = 361.0
 
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
