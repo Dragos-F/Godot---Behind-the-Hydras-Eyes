@@ -441,9 +441,6 @@ ScenePath = "res://Scenes/boardroom.tscn"
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(8.5, -33.5)
 
-[node name="OfficeFilingCabinet" parent="Background/Furniture" index="11"]
-position = Vector2(489, -281.5)
-
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
 YarnNodeLink = "Posters"
 
