@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://buh0qkey1y0en"]
+[gd_scene load_steps=73 format=3 uid="uid://buh0qkey1y0en"]
 
 [ext_resource type="Script" uid="uid://4okc5ll5rh5j" path="res://Scripts/mugBrain.gd" id="1_tle6v"]
 [ext_resource type="Texture2D" uid="uid://du0aa6eixrfl5" path="res://Visual Assets/New Assets/Tea Minigame/Mug closeup.png" id="2_0ixc3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://x4ex5xfosdp8" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling milk-Sheet.png" id="3_2ccos"]
 [ext_resource type="Texture2D" uid="uid://xe7nl2omso2v" path="res://Visual Assets/New Assets/Tea Minigame/Teabag selected.png" id="3_e31gv"]
 [ext_resource type="Texture2D" uid="uid://dx5f7tp1vpjcc" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling-Sheet.png" id="4_f23rm"]
+[ext_resource type="AudioStream" uid="uid://uw1iw3dqsjpb" path="res://Sound/TeaStir.wav" id="4_mwrg3"]
 [ext_resource type="Texture2D" uid="uid://babeu3bl53sqo" path="res://Visual Assets/New Assets/Tea Minigame/Tea filling water-Sheet.png" id="5_e31gv"]
 [ext_resource type="Texture2D" uid="uid://drdsw7e8pfk5d" path="res://Visual Assets/New Assets/Tea Minigame/Teabag.png" id="7_2ccos"]
 [ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="8_f23rm"]
@@ -465,6 +466,7 @@ bagSprite = NodePath("Teabag")
 cubes = [NodePath("SugarCube"), NodePath("SugarCube2"), NodePath("SugarCube3")]
 regularBag = ExtResource("7_2ccos")
 selectedBag = ExtResource("3_e31gv")
+removeBagAudio = ExtResource("4_mwrg3")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1

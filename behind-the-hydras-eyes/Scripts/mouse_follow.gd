@@ -1,6 +1,5 @@
 extends Node2D
 @onready var minigame:minigame_brain = get_node("/root/TeaMinigame")
-
 	
 func _ready() -> void:
 	if minigame == null:

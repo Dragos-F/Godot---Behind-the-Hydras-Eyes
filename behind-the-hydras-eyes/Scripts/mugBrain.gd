@@ -24,6 +24,8 @@ class_name mugBrain
 @export var milkFrames:int #counting how many frames of milk have been poured
 @export var teaFrames:int
 @export var oncev2:bool = true
+@export var removeBagAudio:AudioStream
+@export var liquidDrop:AudioStream
 
 
 var darken:Tween
@@ -71,6 +73,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			area.get_parent().queue_free()
 			minigame.holding = false
 			sugar +=1
+			AudioBrain.playFX(liquidDrop,false)
 	elif full and newFill:
 		if area.get_parent().name == "Nut" or area.get_parent().name == "Cow" and hasBag:
 			teaColour(2)
@@ -150,6 +153,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	and removable:
 		bagSprite.visible = false
 		removed = true
+		AudioBrain.playFX(removeBagAudio,false)
 		
 func reset():
 	fillAnimation.stop()
