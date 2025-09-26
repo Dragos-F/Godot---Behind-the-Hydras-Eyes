@@ -727,8 +727,6 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [node name="Pause" parent="." instance=ExtResource("14_kmxud")]
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
-[connection signal="body_entered" from="Background/Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Background/Furniture/OfficeFilingCabinet" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Background/Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Background/Furniture/OfficeFilingCabinet" method="_on_area_2d_body_exited"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
 [connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]

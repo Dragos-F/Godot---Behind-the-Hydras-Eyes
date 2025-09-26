@@ -1505,8 +1505,6 @@ rotation = -1.57079
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Right"]
 shape = SubResource("WorldBoundaryShape2D_qx5rf")
 
-[connection signal="body_entered" from="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Furniture/OfficeFilingCabinet" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Furniture/OfficeFilingCabinet" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Furniture/Jen1/Timer" to="Furniture/Jen1" method="_on_timer_timeout"]
