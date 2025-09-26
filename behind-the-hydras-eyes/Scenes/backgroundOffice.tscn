@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=170 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b23cfqmvkstnh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Door.png" id="12_sem87"]
 [ext_resource type="Texture2D" uid="uid://c7rprchynne3v" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Door Selected.png" id="13_jiwcw"]
 [ext_resource type="Texture2D" uid="uid://sj0mo1sjflsy" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office Filing Cabinet.png" id="14_0krsi"]
+[ext_resource type="Texture2D" uid="uid://cj4b245aggh3d" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Filing Cabinet.png" id="14_jiwcw"]
 [ext_resource type="Texture2D" uid="uid://esypwvs1iccf" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Office_Filing_Cabinet_Selected.png" id="15_cj83x"]
 [ext_resource type="Texture2D" uid="uid://ca2sablk6sfj7" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Office Filing Cabinet-Sheet.png" id="15_nmjrf"]
 [ext_resource type="Texture2D" uid="uid://dau6ehg47nb3a" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster group.png" id="16_q838t"]
@@ -75,10 +76,6 @@ points = PackedVector2Array(-54, 52.5, -35.5, 62.5, 10, 64.5, 31.5, 37.5, 12.5, 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ubsv2"]
 points = PackedVector2Array(-32.5, 35.5, 43, 70, 90, 71, 84.5, 27.5, -32, -1, -45.5, 10.5)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ay5js"]
-atlas = ExtResource("14_0krsi")
-region = Rect2(0, 0, 76, 168)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6xrcv"]
 atlas = ExtResource("15_nmjrf")
 region = Rect2(0, 0, 120, 200)
@@ -103,31 +100,11 @@ region = Rect2(480, 0, 120, 200)
 atlas = ExtResource("15_nmjrf")
 region = Rect2(600, 0, 120, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cae3h"]
-atlas = ExtResource("15_nmjrf")
-region = Rect2(720, 0, 120, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_16qxd"]
-atlas = ExtResource("15_nmjrf")
-region = Rect2(840, 0, 120, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e42tn"]
-atlas = ExtResource("15_nmjrf")
-region = Rect2(960, 0, 120, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6d5o8"]
-atlas = ExtResource("15_nmjrf")
-region = Rect2(1080, 0, 120, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0n5d"]
-atlas = ExtResource("15_nmjrf")
-region = Rect2(1200, 0, 120, 200)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_omiss"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ay5js")
+"texture": ExtResource("14_jiwcw")
 }],
 "loop": true,
 "name": &"idle",
@@ -151,24 +128,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e33ab")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cae3h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_16qxd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e42tn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6d5o8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n0n5d")
 }],
-"loop": true,
-"name": &"select",
+"loop": false,
+"name": &"selected",
 "speed": 10.0
 }]
 
@@ -932,43 +894,44 @@ selected = ExtResource("13_jiwcw")
 [node name="CollisionShape2D" parent="Furniture/OfficeDoor enter/InteractableElement/Area2D" index="0"]
 shape = SubResource("ConvexPolygonShape2D_ubsv2")
 
+[node name="OfficeFilingCabinet2" type="Sprite2D" parent="Furniture"]
+z_index = -2
+texture_filter = 1
+position = Vector2(424, -309.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_jiwcw")
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/OfficeFilingCabinet2"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/OfficeFilingCabinet2/StaticBody2D"]
+position = Vector2(1, 47)
+polygon = PackedVector2Array(19, -9, 19, 13.5, 0, 27.5, -27, 15, -26, -11)
+
 [node name="OfficeFilingCabinet" type="AnimatedSprite2D" parent="Furniture"]
 z_index = -1
 texture_filter = 1
-position = Vector2(503, -274)
+position = Vector2(488, -280.5)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_omiss")
 animation = &"idle"
 flip_h = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/OfficeFilingCabinet"]
-position = Vector2(11.3333, -18)
+position = Vector2(3.99985, -3.33359)
 scale = Vector2(1.33333, 1.33333)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/OfficeFilingCabinet/StaticBody2D"]
 visible = false
 polygon = PackedVector2Array(26, 41, 26, 61.5, 2, 74, -26, 62, -26, 39)
 
-[node name="OfficeFilingCabinet2" type="Sprite2D" parent="Furniture/OfficeFilingCabinet"]
-z_index = -2
-texture_filter = 1
-position = Vector2(-36.6667, -40.6667)
-scale = Vector2(1.33333, 1.33333)
-texture = ExtResource("14_0krsi")
-flip_h = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/OfficeFilingCabinet/OfficeFilingCabinet2"]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/OfficeFilingCabinet/OfficeFilingCabinet2/StaticBody2D"]
-position = Vector2(1, 47)
-polygon = PackedVector2Array(19, -9, 19, 13.5, 0, 27.5, -27, 15, -26, -11)
-
 [node name="InteractableElement" parent="Furniture/OfficeFilingCabinet" instance=ExtResource("10_5vk3e")]
-position = Vector2(11.3333, -18)
+position = Vector2(3.99985, -3.33359)
 scale = Vector2(1.33333, 1.33333)
 regular = ExtResource("14_0krsi")
 selected = ExtResource("15_cj83x")
+sizeMult = 1.5
 YarnNodeLink = "FilingCabinet"
 
 [node name="CollisionShape2D" parent="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" index="0"]
@@ -1542,6 +1505,8 @@ rotation = -1.57079
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Right"]
 shape = SubResource("WorldBoundaryShape2D_qx5rf")
 
+[connection signal="body_entered" from="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Furniture/OfficeFilingCabinet" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Furniture/OfficeFilingCabinet/InteractableElement/Area2D" to="Furniture/OfficeFilingCabinet" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Furniture/Jen1/JenInteractable/Area2D" to="Furniture/Jen1" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Furniture/Jen1/Timer" to="Furniture/Jen1" method="_on_timer_timeout"]

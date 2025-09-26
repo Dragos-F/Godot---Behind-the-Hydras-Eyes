@@ -70,11 +70,13 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	once = true
 	if parentSprite is Sprite2D:
 		parentSprite.texture = selected
+		parentSprite.scale = 1.05*Vector2.ONE*sizeMult
 	elif parentSprite is AnimatedSprite2D:
 		print (parentSprite)
 		parentSprite.play("selected")
 		print("played selected")
 	parentSprite.scale = 1.05*Vector2.ONE*sizeMult
+	
 	
 
 
