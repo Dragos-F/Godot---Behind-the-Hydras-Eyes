@@ -459,9 +459,7 @@ texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
 visible = false
-
-[node name="EmailList" parent="ScreenUI" index="0"]
-visible = true
+emailsProgressionQuota = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
 Sender_Name = "RobSpritely@personmail.co.uk"
@@ -484,9 +482,6 @@ Thanks,
 Dave.
 "
 boss = false
-
-[node name="MainEmail" parent="ScreenUI" index="1"]
-visible = true
 
 [node name="Chart" parent="ScreenUI/Budget" index="2"]
 values = Array[float]([0.0, 0.0, 0.0, 0.0])
@@ -517,9 +512,6 @@ offset_left = -109.696
 offset_top = 56.998
 offset_right = -108.708
 offset_bottom = 56.712
-
-[node name="BrowserThing" parent="ScreenUI" index="3"]
-visible = false
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0

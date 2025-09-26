@@ -17,6 +17,7 @@ class_name Computer
 @export var EmailList:Array[Panel]
 @export var Budget:Panel
 @export var BrowserThing:Panel
+@export var emailNotif:Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,7 +32,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if emailsDone == emailsProgressionQuota:
+		emailNotif.visible = false
 	
 func open_email(text:Array[String],boss:bool)->void:
 	selectedTexts = text.duplicate(true)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=61 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
@@ -21,11 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://fxfenah3mdvj" path="res://Visual Assets/New Assets/Tea Minigame/Milk maybe open.png" id="13_rihq4"]
 [ext_resource type="Texture2D" uid="uid://cdy1neu8pc2ys" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut selected.png" id="14_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://dm2afp5gyxqih" path="res://Visual Assets/New Assets/Tea Minigame/Milk Nut open.png" id="16_2wu7g"]
-[ext_resource type="Texture2D" uid="uid://dk0sp5mqblx01" path="res://Visual Assets/Pixelart arrow icon pack 1.0.png" id="18_hd3j3"]
 [ext_resource type="Texture2D" uid="uid://7u0h1tywgd7g" path="res://Visual Assets/New Assets/Tea Minigame/Sugar Bowl 2.png" id="20_3ckmf"]
 [ext_resource type="Script" uid="uid://3q3qkfvwovlx" path="res://Scripts/sugar_brain.gd" id="21_gf8xl"]
 [ext_resource type="Texture2D" uid="uid://bvd1nep504j72" path="res://Visual Assets/New Assets/Tea Minigame/Sugar Bowl sugar.png" id="22_qt3rw"]
+[ext_resource type="Texture2D" uid="uid://bfh2n33k8o0o4" path="res://Visual Assets/New Assets/Menus/Computer UIs/Grey tea button pressed.png" id="22_vo0q6"]
 [ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="23_3evry"]
+[ext_resource type="Texture2D" uid="uid://dk0po71dfo6wx" path="res://Visual Assets/New Assets/Menus/Computer UIs/Grey tea button hover.png" id="23_84tlb"]
+[ext_resource type="Texture2D" uid="uid://c8ud71r73rk8k" path="res://Visual Assets/New Assets/Menus/Computer UIs/Grey tea button.png" id="24_m0gq4"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="27_taau1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84tlb"]
@@ -200,9 +202,19 @@ _data = {
 &"Mug1": SubResource("Animation_nekis")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ckmf"]
-atlas = ExtResource("18_hd3j3")
-region = Rect2(64.36, 101, 23.7079, 22)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er7so"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2au2t"]
+texture = ExtResource("22_vo0q6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22in3"]
+texture = ExtResource("23_84tlb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyaqv"]
+texture = ExtResource("22_vo0q6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8p5n"]
+texture = ExtResource("24_m0gq4")
 
 [node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("PauseMenu", "mugs")]
 z_index = 10
@@ -436,13 +448,15 @@ limit_smoothed = true
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
-offset_left = -952.0
-offset_top = 535.0
-offset_right = -921.0
-offset_bottom = 565.0
-rotation = -1.5708
-scale = Vector2(5, 5)
-icon = SubResource("AtlasTexture_3ckmf")
+offset_left = -943.0
+offset_top = 316.0
+offset_right = -602.0
+offset_bottom = 530.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_er7so")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2au2t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_22in3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyaqv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8p5n")
 
 [node name="SugarBowl2" type="Sprite2D" parent="." node_paths=PackedStringArray("cubeParent", "minigame")]
 z_index = -2

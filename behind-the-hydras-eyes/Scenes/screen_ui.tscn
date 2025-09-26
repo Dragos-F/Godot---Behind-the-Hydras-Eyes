@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=115 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bpxakrlgou5ji" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net hover.png" id="12_bd8n7"]
 [ext_resource type="Texture2D" uid="uid://di6d2feer58ee" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off clicked.png" id="14_bd8n7"]
 [ext_resource type="Texture2D" uid="uid://cscqu5dr4y1qp" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off hover.png" id="15_tc0qj"]
+[ext_resource type="Texture2D" uid="uid://m6dp8at6d23e" path="res://Visual Assets/New Assets/Menus/Computer UIs/email notification shine-Sheet.png" id="19_dxncp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7lm7"]
 bg_color = Color(0.878, 0.878, 0.878, 0.191)
@@ -294,6 +295,119 @@ texture = ExtResource("6_rttsh")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akua7"]
 texture = ExtResource("6_rttsh")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_by5ot"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyjct"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_413q4"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wphkd"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehda0"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpm4f"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn6ir"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j51as"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46qkq"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lp2k"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syq86"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a0vn"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8bu4"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eihu0"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2i25"]
+atlas = ExtResource("19_dxncp")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2x54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by5ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyjct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_413q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wphkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehda0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpm4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn6ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j51as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46qkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lp2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syq86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a0vn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8bu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eihu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2i25")
+}],
+"loop": true,
+"name": &"bounce",
+"speed": 10.0
+}]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q77rv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q77rv"]
@@ -371,7 +485,7 @@ texture = ExtResource("9_3ntsw")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15dr1"]
 texture = ExtResource("9_3ntsw")
 
-[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing")]
+[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif")]
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -387,9 +501,9 @@ ToBox = NodePath("MainEmail/Sender&Subj/Panel2/BoxContainer/ToBox")
 EmailList = [NodePath("MainEmail"), NodePath("EmailList")]
 Budget = NodePath("Budget")
 BrowserThing = NodePath("BrowserThing")
+emailNotif = NodePath("BottomBar/Emails/AnimatedSprite2D")
 
 [node name="EmailList" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -449,7 +563,6 @@ boss = true
 autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -995,6 +1108,7 @@ theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
 [node name="BrowserThing" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 12.0
@@ -1318,6 +1432,14 @@ text = "   Mail"
 icon = ExtResource("6_rttsh")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BottomBar/Emails"]
+position = Vector2(20.0002, 22.6667)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_b2x54")
+animation = &"bounce"
+autoplay = "bounce"
+frame_progress = 0.89263
 
 [node name="Budget" type="Button" parent="BottomBar"]
 texture_filter = 1
