@@ -11,6 +11,7 @@ Jen: Not to brag, but I'm the reigning plant queen here, so you'll struggle to g
 	Jen: Or, at least, to keep the office nice. GO means Green Office, did I say that? You get two points for adopting a plant, and another one each quarter for each plant still alive.
 	Jen: And then you can trade them for cool things! Like a pizza, or a...oh, I've forgotten. You can see them on the clipboard though!
 - Right, okay.
+set {clipNotif} = true
 set {JenReturn} = true
 [end_timeline]
 label Day01.2

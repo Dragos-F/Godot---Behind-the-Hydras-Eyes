@@ -422,9 +422,12 @@ YarnNodeLink = "Corkboard"
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-Type = 2
 textToDisplay = "Dingy Apartment"
+YarnNodeLink = "EntryDoor"
 ScenePath = "res://Scenes/bedroom.tscn"
+
+[node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
+position = Vector2(15, -32)
 
 [node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
 YarnNodeLink = "Posters"
@@ -505,6 +508,7 @@ texture = ExtResource("6_k3jav")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -614,12 +618,6 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="TabContainer" parent="ScreenUI/BrowserThing" index="1"]
-current_tab = 0
-
-[node name="O-NO Alert" parent="ScreenUI/BrowserThing/TabContainer" index="1"]
-visible = true
-
 [node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
 offset_left = 13.9025
 offset_top = -49.2858
@@ -671,9 +669,6 @@ offset_top = 231.784
 offset_right = 95.2325
 offset_bottom = 260.784
 
-[node name="IntraNet Log-In" parent="ScreenUI/BrowserThing/TabContainer" index="2"]
-visible = false
-
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
@@ -713,24 +708,23 @@ frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("11_p8761")]
 position = Vector2(-138, -470)
-frame_progress = 0.0
 
 [node name="Door" parent="Notifications" instance=ExtResource("11_p8761")]
 visible = false
 position = Vector2(-803, 161)
-frame_progress = 0.0
 
 [node name="BossDoor" parent="Notifications" instance=ExtResource("11_p8761")]
 visible = false
 position = Vector2(813, -338)
-frame_progress = 0.104295
-
-[node name="Pause" parent="." instance=ExtResource("14_kmxud")]
+frame = 6
+frame_progress = 0.719289
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_k3jav")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
+
+[node name="Pause" parent="." instance=ExtResource("14_kmxud")]
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]

@@ -46,7 +46,8 @@ height = 87.0
 points = PackedVector2Array(-140, 39.5, 27, -40.5, 140.5, 19.5, -22.5, 103.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_unbiq"]
-height = 62.3893
+radius = 21.589
+height = 69.8389
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7nhas"]
 radius = 12.7463
@@ -163,6 +164,7 @@ position = Vector2(-8.5, -6)
 polygon = PackedVector2Array(-28, 16, 18.5, 38, 34, 27.5, -7.5, 6.5)
 
 [node name="Bin" type="Sprite2D" parent="Furniture"]
+z_index = 2
 texture_filter = 1
 position = Vector2(288, 264)
 scale = Vector2(2, 2)
@@ -183,7 +185,7 @@ texture = ExtResource("7_ch6vw")
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bookshelf"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bookshelf/StaticBody2D"]
-polygon = PackedVector2Array(-25.5, 43, -8.5, 33, 25.5, 50.5, 9.5, 60.5)
+polygon = PackedVector2Array(-31, 40, -14, 31, 25.5, 50.5, 9.5, 60.5)
 
 [node name="InteractableElement" parent="Furniture/Bookshelf" instance=ExtResource("3_p1x44")]
 regular = ExtResource("7_ch6vw")
@@ -458,7 +460,32 @@ texture = ExtResource("33_x75j5")
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
 visible = false
 
-[node name="Budget" parent="ScreenUI" index="2"]
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = true
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+Sender_Name = "RobSpritely@personmail.co.uk"
+ToAddress = "david199x@personmail.co.uk"
+Subject = "Budgeting in London"
+PreviewText = "Hi Son, hope the move hasn't been to..."
+MainBody = "Hi Son,
+
+Hope the move hasn't been too bad. I know life down South is quite expensive nowadays, so I thought I'd share with you my budgeting spreadsheet that I still use! Of course, you can't hope to get a mortgage or anything if you waste all your money on coffees and WebReels subscriptions. The main point is for you to balance the incoming and outgoings to a ratio that is at least in line with inflation and pension funds.
+
+Let me know if you need more explaining! Always happy to talk numbers.
+
+Your dad,
+Robert Spritely."
+ReplyBody1 = "Hi Dad,
+
+Thanks for the spreadsheet. I've already opened it up and filled some of the bits in. It's a bit confusing, but I think I can make my way around all the buttons. Unsure what you mean by the rest of balancing, but I'm gonna be okay. 
+
+Thanks,
+Dave.
+"
+boss = false
+
+[node name="MainEmail" parent="ScreenUI" index="1"]
 visible = true
 
 [node name="Chart" parent="ScreenUI/Budget" index="2"]
@@ -474,7 +501,7 @@ text = "SUBSCRIPTIONS"
 text = "The Financier Monthly"
 
 [node name="CheckButton2" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="1"]
-text = "Onlyfans XxMonyxX"
+text = "Mistress XxMonyxX"
 
 [node name="CheckButton3" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="2"]
 text = "TV License "
@@ -544,14 +571,14 @@ custom_minimum_size = Vector2(5, 0)
 text = "Pigeon arrested under terror charge for standing on sign"
 autowrap_mode = 2
 
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+anim = "Doc"
+
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
-
-[node name="Emails" parent="ScreenUI/BottomBar" index="0"]
-visible = false
 
 [node name="Pause" parent="." instance=ExtResource("36_unbiq")]
 
@@ -562,6 +589,7 @@ script = ExtResource("37_scg7i")
 [connection signal="pressed" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 
 [editable path="Furniture/Balcony Door/InteractableElement"]
 [editable path="Furniture/Bed/InteractableElement"]

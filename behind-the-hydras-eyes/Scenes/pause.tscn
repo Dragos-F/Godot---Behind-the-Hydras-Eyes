@@ -58,7 +58,7 @@ corner_radius_bottom_left = 12
 
 [node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide")]
 visible = false
-z_index = 4
+z_index = 10
 script = ExtResource("1_e0jm0")
 folderAnim = NodePath("AnimatedSprite2D")
 saveMessage = NodePath("Message")

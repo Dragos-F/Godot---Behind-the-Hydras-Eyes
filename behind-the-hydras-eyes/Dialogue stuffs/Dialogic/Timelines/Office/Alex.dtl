@@ -20,6 +20,7 @@ Alex: Oh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...w
 	Alex: Ah, one of our sponsors. You know how things work then.
 	Alex: Keep the wheels greased and the money flowing. And hopefully pollute just a liiiittle bit less than LEP.
 Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
+set {teaNotif} = true
 Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
 set {AlexReturn} = true
 [end_timeline]

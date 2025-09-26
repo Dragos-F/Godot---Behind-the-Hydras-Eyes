@@ -1153,11 +1153,9 @@ texture = ExtResource("37_jbjul")
 
 [node name="PosterAndLeaflets" type="Sprite2D" parent="Furniture/DaveDesk"]
 texture_filter = 1
-position = Vector2(5, 398)
+position = Vector2(-31, 392)
 scale = Vector2(2, 2)
 texture = ExtResource("38_43ctb")
-flip_h = true
-flip_v = true
 
 [node name="PlantFlowers3" type="Sprite2D" parent="Furniture/DaveDesk"]
 visible = false

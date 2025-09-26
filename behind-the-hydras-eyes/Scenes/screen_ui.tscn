@@ -1289,8 +1289,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
 [node name="Emails" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.318052
-anchor_right = 0.44833
+anchor_left = 0.179083
+anchor_right = 0.309362
 anchor_bottom = 0.991
 offset_right = 60.1313
 offset_bottom = 18.5041
@@ -1322,8 +1322,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Budget" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.588826
-anchor_right = 0.71933
+anchor_left = 0.449857
+anchor_right = 0.580362
 anchor_bottom = 0.991
 offset_right = 59.8159
 offset_bottom = 18.5041
@@ -1356,8 +1356,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Internet" type="Button" parent="BottomBar"]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.454155
-anchor_right = 0.58433
+anchor_left = 0.315186
+anchor_right = 0.445361
 anchor_bottom = 1.0
 offset_right = 60.2766
 offset_bottom = 18.0001

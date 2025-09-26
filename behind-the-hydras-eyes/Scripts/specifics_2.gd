@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota) and oncev1:
 		BossDoor.readyToLeave = true
 		BossNotif.visible = true
+		BossNotif.play("default")
 		oncev1 = false
 		BossDoor.Type = BossDoor.InteractType.BossDoor
 

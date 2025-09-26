@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cli41apxllh6i"]
+[gd_scene load_steps=23 format=3 uid="uid://cli41apxllh6i"]
 
 [ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="1_nxpru"]
 [ext_resource type="Script" uid="uid://cbkj0uqvtov7s" path="res://Scenes/train.gd" id="1_u3u2q"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnwfbk3ao6xy" path="res://Visual Assets/New Assets/Train/Shadow 5.png" id="13_44730"]
 [ext_resource type="Texture2D" uid="uid://btxeudak2ke8i" path="res://Visual Assets/New Assets/Train/Shadow 6.png" id="14_lhhsi"]
 [ext_resource type="Texture2D" uid="uid://c5wmlgddfssfc" path="res://Visual Assets/New Assets/Train/Shadow 7.png" id="15_e45i5"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="19_kla11"]
 
 [sub_resource type="Animation" id="Animation_mcim7"]
 length = 10.0333
@@ -82,11 +83,12 @@ _data = {
 &"background": SubResource("Animation_0hk28")
 }
 
-[node name="Train" type="Node2D" node_paths=PackedStringArray("BossTextAnchor", "daveAnim", "train_sound")]
+[node name="Train" type="Node2D" node_paths=PackedStringArray("BossTextAnchor", "daveAnim", "train_sound", "PauseMenu")]
 script = ExtResource("1_u3u2q")
 BossTextAnchor = NodePath("TextAnchor")
 daveAnim = NodePath("Dave/AnimatedSprite2D")
 train_sound = NodePath("TrainAmbience")
+PauseMenu = NodePath("Pause")
 
 [node name="TrainAmbience" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_2egfw")
@@ -763,6 +765,8 @@ animation = &"phone_up"
 
 [node name="TextAnchor" type="Node2D" parent="."]
 position = Vector2(236, 34)
+
+[node name="Pause" parent="." instance=ExtResource("19_kla11")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 

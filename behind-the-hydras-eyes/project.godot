@@ -39,6 +39,7 @@ directories/dch_directory={
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Desk Chair.dch",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",
+"EntryDoor": "res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",
 "Front Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
@@ -65,6 +66,7 @@ directories/dtl_directory={
 "Corkboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Corkboard.dtl",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Desk Chair.dtl",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Dirty Dishes.dtl",
+"EntryDoor": "res://Dialogue stuffs/Dialogic/Timelines/Office/EntryDoor.dtl",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Timelines/Office/FilingCabinet.dtl",
 "Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
 "GiveTea": "res://Dialogue stuffs/NEW/Day1/GiveTea.dtl",
@@ -90,7 +92,10 @@ variables={
 "JenReturn": false,
 "KettleReturn": 0.0,
 "TeaForTeam": false,
-"WatercoolerChar": ""
+"WatercoolerChar": "",
+"clipNotif": false,
+"computerNotif": false,
+"teaNotif": false
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

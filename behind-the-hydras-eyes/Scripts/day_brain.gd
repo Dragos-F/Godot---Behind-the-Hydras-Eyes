@@ -151,7 +151,8 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",target)
 	if (nodeTitle == "BossDoor"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/BossDoor.dch",target)
-	
+	if (nodeTitle == "EntryDoor"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",target)
 	
 	await Dialogic.timeline_ended
 	print ("timeline ended")

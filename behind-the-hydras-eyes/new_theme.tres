@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cnielb83lusjt"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cnielb83lusjt"]
 
 [ext_resource type="FontFile" uid="uid://dqmnd3avwfkhl" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle14.ttf" id="1_amlv4"]
 
@@ -9,6 +9,18 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amlv4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aggjg"]
+content_margin_left = 24.0
+content_margin_top = 7.0
+content_margin_right = 24.0
+content_margin_bottom = 7.0
+bg_color = Color(0.633757, 0.633757, 0.633757, 1)
+border_width_left = 5
+border_width_top = 3
+border_width_right = 5
+corner_radius_top_left = 8
+corner_radius_top_right = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7eh4"]
 content_margin_left = 24.0
@@ -43,7 +55,7 @@ TabContainer/colors/font_selected_color = Color(0, 0, 0, 1)
 TabContainer/constants/side_margin = 0
 TabContainer/styles/panel = SubResource("StyleBoxFlat_amlv4")
 TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_amlv4")
-TabContainer/styles/tab_hovered = null
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_aggjg")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_i7eh4")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_78ylj")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_i7eh4")
