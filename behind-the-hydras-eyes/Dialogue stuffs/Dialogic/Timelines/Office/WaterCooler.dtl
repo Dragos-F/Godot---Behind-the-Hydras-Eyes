@@ -18,22 +18,20 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	- I couldn't do that
 		Alex: Yeah? It's not for the faint of heart I guess—all of it, I mean.
 		Alex: Facing off against a distressed swan is no walk in the park, but neither is facing the world around you without any device to protect you from boredom.
-		[signal arg="no_watercooler_Alex"]
-		[wait time="2.2"]
 	- That sounds really nice
 		Alex: Yeah? It is nice. You get to know all the swans, their personalities and habits. Really recognise them for the complex creatures they are.
-		[signal arg="no_watercooler_Alex"]
-		[wait time="2.2"]
-	- Does your partner approve of that?
-		Alex: ...
-		Alex: My wife actually left me last year.
-		Dave: ...Oh. I'm sorry. Because you were spending so much time with the swans?
-		Alex: No. I slept with her sister.
-		Dave: ...
-		Alex: ...
-		Alex: Anyway, I'll get back to work.
-		[signal arg="no_watercooler_Alex"]
-		[wait time="2.2"]
+	Dave: Cool, cool. It's nice to hear about non-work Alex, though still hard to imagine you not at a computer. 
+	- Does your partner like the swans?
+	- Do you go with anyone?
+	Alex: ...
+	Alex: My wife actually left me last year.
+	Dave: ...Oh. I'm sorry. Because you were spending so much time with the swans?
+	Alex: No. I slept with her sister.
+	Dave: ...
+	Alex: ...
+	Alex: Anyway, I'll get back to work.
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
 - No
 	Dave: I am adequately quenched as is, thanks.
 [end_timeline]

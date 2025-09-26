@@ -7,9 +7,9 @@ label Quarter1
 - Go to the pub
 	"Front Door": For the eigth night in a row?
 	- I have a crush on one of the barstaff.
-		"Front Door": No you don't, you're just lonely and like to fixate on people out of your league. But fine, go ahead.
+		"Front Door": No you don't, you're just lonely and like to fixate on people out of your league. Go do something useful instead.
 	- I crave company and expensive alcohol.
-		"Front Door": Desperate, but honest.
+		"Front Door": Desperate, but honest. Still no.
 	- Fine, I'll stay in.
 - Stay inside
 [end_timeline]

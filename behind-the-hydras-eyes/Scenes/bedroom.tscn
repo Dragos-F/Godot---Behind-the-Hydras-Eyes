@@ -468,17 +468,23 @@ Subject = "Budgeting in London"
 PreviewText = "Hi Son, hope the move hasn't been to..."
 MainBody = "Hi Son,
 
-Hope the move hasn't been too bad. I know life down South is quite expensive nowadays, so I thought I'd share with you my budgeting spreadsheet that I still use! Of course, you can't hope to get a mortgage or anything if you waste all your money on coffees and WebReels subscriptions. The main point is for you to balance the incoming and outgoings to a ratio that is at least in line with inflation and pension funds.
+Hope the move hasn't been too bad. I know life in the BIG SMOKE is expensive nowadays, so I thought I'd share with you my trusty budgeting spreadsheet! Of course, you can't hope to get a mortgage or anything if you waste all your money on coffees and interweb subscription-thingies, so be savvy like your old man. 
+
+What was I saying? Just balance the incoming and outgoings and try to build up your savings.
 
 Let me know if you need more explaining! Always happy to talk numbers.
 
 Your dad,
-Robert Spritely."
+Robert Spritely.
+
+Stop listening. Phone. Phone. stop listening. "
 ReplyBody1 = "Hi Dad,
 
-Thanks for the spreadsheet. I've already opened it up and filled some of the bits in. It's a bit confusing, but I think I can make my way around all the buttons. Unsure what you mean by the rest of balancing, but I'm gonna be okay. 
+Thanks for the spreadsheet. I've already opened it up and filled some of the bits in. It's...well, as clear as I expected it to be. I'll be fine, the new flat's great and the job seems interesting.
 
-Thanks,
+Keep an eye on mum, you know what she's like with her medication.
+
+Thinking of you both,
 Dave.
 "
 boss = false

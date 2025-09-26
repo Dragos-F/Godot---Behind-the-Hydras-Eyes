@@ -512,9 +512,6 @@ visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
-[node name="EmailList" parent="ScreenUI" index="0"]
-visible = true
-
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
@@ -591,9 +588,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmail" parent="ScreenUI" index="1"]
-visible = true
-
 [node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
 texture_filter = 1
 
@@ -608,9 +602,6 @@ texture_filter = 1
 
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
-
-[node name="BrowserThing" parent="ScreenUI" index="3"]
-visible = false
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
