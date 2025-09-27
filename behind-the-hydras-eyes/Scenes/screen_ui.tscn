@@ -1,9 +1,12 @@
-[gd_scene load_steps=115 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene load_steps=131 format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
+[ext_resource type="Texture2D" uid="uid://b0u3hpwqsngx7" path="res://Visual Assets/New Assets/Menus/Computer UIs/Send clicked.png" id="3_tcpdn"]
 [ext_resource type="PackedScene" uid="uid://dk0tlp5sp41uj" path="res://Scenes/testPie.tscn" id="3_vjvvu"]
+[ext_resource type="Texture2D" uid="uid://1mfg704epct4" path="res://Visual Assets/New Assets/Menus/Computer UIs/Send Hover.png" id="4_hjaq7"]
 [ext_resource type="Texture2D" uid="uid://catrajxdw6hs3" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/34.png" id="4_ovuwh"]
+[ext_resource type="Texture2D" uid="uid://det3ryeedp154" path="res://Visual Assets/New Assets/Menus/Computer UIs/Send.png" id="5_dordm"]
 [ext_resource type="Texture2D" uid="uid://dhmkdghn27hbl" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail clicked.png" id="5_qibcv"]
 [ext_resource type="Theme" uid="uid://cnielb83lusjt" path="res://new_theme.tres" id="5_tc0qj"]
 [ext_resource type="Texture2D" uid="uid://b6nqxla4x0dxm" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail hover.png" id="5_wxeq5"]
@@ -11,14 +14,17 @@
 [ext_resource type="FontFile" uid="uid://ddrh7bkirqapa" path="res://Visual Assets/Terminal-Grotesque-master/Terminal-Grotesque-master/webspecimen/font/terminal-grotesque-webfont.woff" id="6_6cmr8"]
 [ext_resource type="Script" uid="uid://dl3p2mgegadp4" path="res://Scripts/intra_net_log_in.gd" id="6_fio65"]
 [ext_resource type="Texture2D" uid="uid://bswcoea8m07n1" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet normal.png" id="6_ovuwh"]
+[ext_resource type="Texture2D" uid="uid://dyeo4vmqcijk8" path="res://Visual Assets/New Assets/Menus/Computer UIs/Reply clicked.png" id="6_qe5m2"]
 [ext_resource type="Texture2D" uid="uid://d0f6sx3ugrc43" path="res://Visual Assets/New Assets/Menus/Computer UIs/Mail normal.png" id="6_rttsh"]
 [ext_resource type="AudioStream" uid="uid://d220oibcb3l43" path="res://Sound/327737__distillerystudio__error_02.wav" id="7_0bmt1"]
 [ext_resource type="Texture2D" uid="uid://crs6a4h1xdin3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert Doctor sheet.png" id="7_2yvqt"]
 [ext_resource type="Texture2D" uid="uid://db2541csmrmhn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert cat-Sheet.png" id="7_3ui1g"]
 [ext_resource type="Texture2D" uid="uid://dj71t200615dd" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet hover.png" id="7_q77rv"]
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_qy131"]
+[ext_resource type="Texture2D" uid="uid://bahoacrkbfy64" path="res://Visual Assets/New Assets/Menus/Computer UIs/Reply Hover.png" id="7_st1in"]
 [ext_resource type="Texture2D" uid="uid://bpkluchkinpbn" path="res://Visual Assets/New Assets/Menus/Computer UIs/Sheet clicked.png" id="8_3ntsw"]
 [ext_resource type="Script" uid="uid://cmki8uiel1mdh" path="res://Scripts/advertBrain.gd" id="8_bq6wl"]
+[ext_resource type="Texture2D" uid="uid://b5p41xkowcil6" path="res://Visual Assets/New Assets/Menus/Computer UIs/Reply .png" id="8_fxbix"]
 [ext_resource type="Texture2D" uid="uid://bhdqpjaiw8iq5" path="res://Visual Assets/New Assets/Menus/Computer UIs/Net normal.png" id="8_q77rv"]
 [ext_resource type="Texture2D" uid="uid://oi2lu0ddku3" path="res://Visual Assets/New Assets/Menus/Computer UIs/Log off normal.png" id="9_3ntsw"]
 [ext_resource type="Texture2D" uid="uid://bc6mjedv1pns8" path="res://Visual Assets/New Assets/Menus/Computer UIs/Advert update-Sheet.png" id="9_6cmr8"]
@@ -56,6 +62,34 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe5m2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujna0"]
+texture = ExtResource("3_tcpdn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fncch"]
+texture = ExtResource("4_hjaq7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymb84"]
+texture = ExtResource("3_tcpdn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1626"]
+texture = ExtResource("5_dordm")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhhrm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgq50"]
+texture = ExtResource("6_qe5m2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjr3j"]
+texture = ExtResource("7_st1in")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_by5ot"]
+texture = ExtResource("6_qe5m2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pyjct"]
+texture = ExtResource("8_fxbix")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3eo7"]
 bg_color = Color(0.878, 0.878, 0.878, 0.191)
@@ -665,8 +699,11 @@ offset_top = 12.0
 offset_right = 1093.0
 offset_bottom = 87.0
 theme_override_font_sizes/font_size = 42
-theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
-text = "Send"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qe5m2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ujna0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fncch")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ymb84")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u1626")
 
 [node name="Reply" type="Button" parent="MainEmail"]
 visible = false
@@ -676,9 +713,11 @@ offset_top = 12.0
 offset_right = 1093.0
 offset_bottom = 87.0
 theme_override_font_sizes/font_size = 42
-theme_override_styles/normal = SubResource("StyleBoxFlat_23jyx")
-text = "Reply
-"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yhhrm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_sgq50")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bjr3j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_by5ot")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pyjct")
 
 [node name="Hint" type="RichTextLabel" parent="MainEmail"]
 visible = false
@@ -1434,7 +1473,7 @@ icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BottomBar/Emails"]
-position = Vector2(20.0002, 22.6667)
+position = Vector2(70.6668, 22.6667)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_b2x54")
 animation = &"bounce"

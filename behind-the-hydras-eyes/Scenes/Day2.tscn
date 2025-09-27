@@ -652,6 +652,7 @@ autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
 position = Vector2(184.96, 117.856)
+anim = "Update"
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
 offset_left = -4.76745

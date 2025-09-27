@@ -408,7 +408,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_fkw1m")]
 scale = Vector2(2, 2)
@@ -729,6 +729,7 @@ autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
 animation = &"Doc"
+anim = "Cat"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
