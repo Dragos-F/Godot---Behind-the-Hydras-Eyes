@@ -456,6 +456,9 @@ position = Vector2(13, -39.5)
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
+[node name="AnimatedSprite2D" parent="Background/Furniture/Alex" index="1"]
+animation = &"drink_tea"
+
 [node name="ChairSide" parent="Background/Furniture/AlexDesk" index="5"]
 texture = ExtResource("3_okst0")
 

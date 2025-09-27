@@ -441,6 +441,9 @@ position = Vector2(22, -43.5)
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(19.5, -33.5)
 
+[node name="AnimatedSprite2D" parent="Background/Furniture/Alex" index="1"]
+animation = &"drink_tea"
+
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
 

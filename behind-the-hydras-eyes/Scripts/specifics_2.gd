@@ -45,3 +45,4 @@ func _on_boss_door_interacted() -> void:
 func _on_day_brain_end_of_day() -> void:
 	outsideDoor.readyToLeave = true
 	DoorNotif.visible = true
+	outsideDoor.Type = outsideDoor.InteractType.EntryDoor
