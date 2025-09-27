@@ -209,6 +209,17 @@ theme_override_fonts/font = ExtResource("4_0pswh")
 theme_override_font_sizes/font_size = 39
 text = "Main Menu"
 
+[node name="Close" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 6.0
+offset_right = 915.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("4_0pswh")
+theme_override_font_sizes/font_size = 28
+text = "Close
+"
+
 [node name="Credits" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 624.0
@@ -289,6 +300,7 @@ text = "Take me to the menu"
 [connection signal="value_changed" from="Control/Panel/Background Music/background" to="." method="_on_background_value_changed"]
 [connection signal="value_changed" from="Control/Panel/SFX/sfx" to="." method="_on_sfx_value_changed"]
 [connection signal="pressed" from="Control/MainMenu" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Control/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/Credits" to="." method="_on_credits_pressed"]
 [connection signal="toggled" from="Control/FullScreen" to="." method="_on_full_screen_toggled"]
 [connection signal="pressed" from="Message/MessageOkay" to="." method="_on_message_okay_pressed"]

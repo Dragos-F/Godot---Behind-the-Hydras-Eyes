@@ -5,6 +5,8 @@ CoffeeMachine: My beans are fairtrade, my blend smooth, and my liquid HOT.
 Dave: You blink at the machine. Maybe you need more sleep.
 - One coffee please
 	CoffeeMachine: A click, a hiss, a trickle, a squirt. There. I know you'll like it.
+	[signal arg="coffee"]
+	[wait time="3.5"]
 - Uh, no thanks.
 	CoffeeMachine: Oh, can't handle the bitterness? Fine, fine.
 [end_timeline]

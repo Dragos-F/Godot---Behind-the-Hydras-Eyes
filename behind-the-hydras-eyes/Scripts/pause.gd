@@ -42,12 +42,17 @@ func _on_credits_pressed() -> void:
 	Fader.FadeDown("")
 
 func openPause():
+	var bubble = get_node("/root/DialogicLayout_BubbleStyleTest")
+	if bubble != null:
+		bubble.visible = false
 	self.visible = true
 	folderAnim.play("open")
 	await folderAnim.animation_finished
 	randomScribble()
 	randText.visible = true
 	allControl.visible = true
+	Dialogic.paused = true
+
 func closePause():
 	allControl.visible = false
 	randText.visible = false
@@ -55,6 +60,10 @@ func closePause():
 	folderAnim.play_backwards("open")
 	await folderAnim.animation_finished
 	self.visible = false
+	Dialogic.paused = false
+	var bubble = get_node("/root/DialogicLayout_BubbleStyleTest")
+	if bubble != null:
+		bubble.visible = true
 
 func randomScribble():
 	possibleTexts.shuffle()
@@ -77,3 +86,7 @@ func _on_full_screen_toggled(toggled_on: bool) -> void:
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		
+
+
+func _on_close_pressed() -> void:
+	closePause()

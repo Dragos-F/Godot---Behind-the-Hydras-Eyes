@@ -33,6 +33,8 @@ func _ready() -> void:
 	Dialogic.VAR.TeaForTeam = false
 	if PermanentGlobal.Plant == true:
 		take_plant()
+	if TeaMinigame == null:
+		TeaMinigame = get_node("/root/Main2/TeaMinigame")
 
 func _input(event):
 	if event.is_action_pressed("menu"):
