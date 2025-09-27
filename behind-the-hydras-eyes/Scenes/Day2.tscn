@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene load_steps=51 format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -17,7 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="11_p8761"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="12_lh2wi"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_kmxud"]
+[ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_gtf6l"]
+[ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_4sxu1"]
+[ext_resource type="Texture2D" uid="uid://wxeyb6rbnkjl" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss blinking-Sheet.png" id="16_cxcjv"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_k3jav"]
+[ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_0vxql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
 atlas = ExtResource("4_r33wl")
@@ -408,6 +412,35 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtf6l"]
+atlas = ExtResource("16_cxcjv")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jm43"]
+atlas = ExtResource("16_cxcjv")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sxu1"]
+atlas = ExtResource("16_cxcjv")
+region = Rect2(1920, 0, 960, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vxql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtf6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jm43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sxu1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_p8761")]
@@ -419,6 +452,8 @@ scale = Vector2(2, 2)
 YarnNodeLink = "Corkboard"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor boss" index="0"]
+Type = 3
+readyToLeave = true
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
@@ -684,12 +719,23 @@ BossNotif = NodePath("../Notifications/BossDoor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
 
-[node name="BossScreen" type="Node2D" parent="."]
+[node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
 visible = false
 z_index = 10
+script = ExtResource("15_gtf6l")
+sprite = NodePath("Sprite2D")
+frown = ExtResource("16_4sxu1")
+contempt = ExtResource("17_0vxql")
 
 [node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+texture_filter = 1
 texture = ExtResource("12_lh2wi")
+
+[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen"]
+visible = false
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0vxql")
+frame_progress = 0.680305
 
 [node name="BossAnchor" type="Node2D" parent="BossScreen"]
 position = Vector2(499, -250)

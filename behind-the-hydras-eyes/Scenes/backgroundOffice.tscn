@@ -38,7 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://be2befr2xh8qm" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Tea Drinking -Sheet.png" id="29_5tuft"]
 [ext_resource type="Texture2D" uid="uid://dp73wjya5kjc2" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Mug full.png" id="29_q3361"]
 [ext_resource type="Texture2D" uid="uid://bu6fx8kqfdd5m" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Laptop.png" id="30_4f6p7"]
-[ext_resource type="Texture2D" uid="uid://qxlk7xh4hgws" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Chair side.png" id="32_b5yax"]
 [ext_resource type="Texture2D" uid="uid://dn47nrrwjrw81" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Alex mouse wiggle-Sheet.png" id="33_5vk3e"]
 [ext_resource type="Texture2D" uid="uid://d1d74uiys3cf4" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Office Corner Desk.png" id="33_x5kt2"]
 [ext_resource type="Texture2D" uid="uid://ckeoasg4xd3jh" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Desk Chair Selected.png" id="34_2tjsp"]
@@ -50,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://drgrql0b2etfp" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Poster and leaflets.png" id="38_43ctb"]
 [ext_resource type="Texture2D" uid="uid://u7xovy252k3p" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Water cooler.png" id="39_i5h4o"]
 [ext_resource type="Texture2D" uid="uid://bnchqxahys8j0" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Water_cooler_selected.png" id="40_pn164"]
+[ext_resource type="Texture2D" uid="uid://bvceergvvgwi6" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Chair side.png" id="41_0krsi"]
 [ext_resource type="Texture2D" uid="uid://iirfckgr722x" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Kitch_Wall_Rear_2.png" id="41_l1c86"]
 [ext_resource type="Texture2D" uid="uid://d7ljna0mjgh1" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Kitch_Wall_Front.png" id="42_8oh3a"]
 [ext_resource type="Texture2D" uid="uid://cn0paws28jne" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Cabinets.png" id="43_dcnfg"]
@@ -1418,7 +1418,7 @@ z_index = -1
 texture_filter = 1
 position = Vector2(-601, -92)
 scale = Vector2(2, 2)
-texture = ExtResource("32_b5yax")
+texture = ExtResource("41_0krsi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/AlexDesk/ChairSide"]
 visible = false
