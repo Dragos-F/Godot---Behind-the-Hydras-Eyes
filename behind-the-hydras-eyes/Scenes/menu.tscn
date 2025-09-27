@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene load_steps=14 format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b42ahfbpvyemh" path="res://Visual Assets/New Assets/Menus/Sticky.png" id="6_7qvly"]
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_6swd7"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="10_7qvly"]
+[ext_resource type="Texture2D" uid="uid://bjlcxwuxm4soy" path="res://Visual Assets/New Assets/Menus/Title Only.png" id="11_rfqti"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3rjx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -153,7 +154,7 @@ text = "Quit"
 
 [node name="Leaflet" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(365, -279)
+position = Vector2(531, 206)
 rotation = -0.168761
 scale = Vector2(2, 2)
 texture = ExtResource("5_6swd7")
@@ -208,6 +209,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Pause" parent="." instance=ExtResource("10_7qvly")]
+
+[node name="TitleOnly" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(363, -281)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("11_rfqti")
 
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]
