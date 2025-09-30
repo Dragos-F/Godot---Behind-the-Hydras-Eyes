@@ -1,9 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=42 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
 [ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_bwr10"]
-[ext_resource type="Texture2D" uid="uid://bvceergvvgwi6" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Chair side.png" id="3_okst0"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="3_rakbq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_bwr10"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_1v22j"]
@@ -411,6 +410,7 @@ _data = {
 [node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_fkw1m")]
+z_index = 15
 scale = Vector2(2, 2)
 
 [node name="Label" parent="Fader" index="1"]
@@ -458,9 +458,6 @@ position = Vector2(3.5, -34)
 
 [node name="AnimatedSprite2D" parent="Background/Furniture/Alex" index="1"]
 animation = &"drink_tea"
-
-[node name="ChairSide" parent="Background/Furniture/AlexDesk" index="5"]
-texture = ExtResource("3_okst0")
 
 [node name="StaticBody2D" parent="Background/Furniture/DaveDesk/OfficeCornerDesk" index="0"]
 visible = true
@@ -581,6 +578,7 @@ UK Project Lead
 Forward Green
 
 "
+boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
@@ -793,6 +791,8 @@ z_index = 7
 position = Vector2(-157, 152)
 
 [node name="Pause" parent="." instance=ExtResource("14_okst0")]
+unique_name_in_owner = true
+z_index = 12
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("15_fuc61")]
 visible = false

@@ -22,6 +22,9 @@ func _ready() -> void:
 func _on_background_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"),value)
 	
+func _on_back_music_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Background"),value)
+	
 func _on_sfx_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"),value)
 	

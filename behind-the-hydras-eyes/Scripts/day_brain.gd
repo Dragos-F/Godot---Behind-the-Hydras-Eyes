@@ -140,6 +140,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Balcony Door.dch",target)
 	if (nodeTitle == "Bathroom Door"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bathroom Door.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",DaveAnchor)
 	if (nodeTitle == "Dirty Dishes"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",target)
 	if (nodeTitle == "Front Door"):
