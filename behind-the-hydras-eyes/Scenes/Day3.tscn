@@ -558,20 +558,17 @@ texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
 Sender_Name = "P. Moore - Pinned"
-MainBody = "Hey Dave, 
+MainBody = "Good morning Dave, 
 
-Welcome aboard the ship. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, so your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
+A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
 
-Oh, and see you at the meeting later today.
-
-Your Boss,
-Patrick Moore.
+Richard.
 "
 ReplyBody1 = "Hi Patrick, 
 
-I'm really glad to be here, thanks again for the opportunity. I've already met my team, so just let me know if there's anything else I can help with! 
+Thank you for the advice. I'll keep it in mind, while being respectul and helpful of course.
 
-Yours respectfully,
+Best,
 Dave Spritely, 
 UK Project Lead
 Forward Green
@@ -584,24 +581,22 @@ texture_filter = 1
 
 [node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_alg7f")]
 layout_mode = 2
-Sender_Name = "Sir T. Baronsworthy"
+Sender_Name = "Maria Cruz"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Project Manager Application"
-PreviewText = "To whom it may concern, I want to"
-MainBody = "To whom it may concern,
+Subject = "Compensation"
+PreviewText = "My families livestock..."
+MainBody = "Hi, can you help?
 
-I want to apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw its record profits and expansion to better support democracy abroad. I also head three think tanks and a regional NHS board. I care about renewable energy as this is the future of global investing and capital development—drones don't power themselves!
+My family's livestock graze on the proposed site of one of your turbines. At the public forum to vote on it, your officer, Mr Gallardo, who gave the presentation ignored my parents. Could you please consider compensating my family, as not only are they losing land but have also decided to sell their livestock. "
+ReplyBody1 = "Good morning Maria, 
 
-Sir Timothy Baronsworthy
-O.B.E., M.B.E., M.A.Y.B.E., B.A.D."
-ReplyBody1 = "Good afternoon Tim,
+I hope you're well, and thank you for taking the time to get in touch. I'm really sorry to hear about your family's difficulties, and that our officer did not handle the public forum in the manner you wished. I will pass your request for compensation onto our external enquiries team, though redress is considered on a case-by-case basis and I can't guranteee any outcome.
 
-Apologies, but this role has now been filled (to be clear, by me). I'm not sure why this email didn't get filtered by HR, but we'll keep your CV on record for any other positions matching your skillset.
-
-Kind regards,
+Wishing you luck,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+Forward Green
+								"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
 texture_filter = 1
@@ -613,19 +608,20 @@ Sender_Name = "Big Daz"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
 Subject = "BIG BUSINESS IMPROVEMENTS"
 PreviewText = "Hate lazy workers? "
-MainBody = "Here is a more persuasive version of your email:
+MainBody = "Here is an even more persuasive version of your email:
 
-Good afternoon sirs,
+Good afternoon Dave!!!
 
-Hate lazy workers? Abolishing WFH failed to raise productivity? We have the only solution you need: AI. 
+Thank you so much for replying to my last email. You might be surprised that not many people do, despite our range of amazing AI solutions! 
 
-AI assistants will streamline every element of your job. Miracle bullets have never been so cheap! Simply allow our consultants access to every nook of your database. GDPR compliant? Plausibly! 
+Since you say you're not currently looking, I've signed you up to six of our mailing lists so you'll be well informed for when you're ready.
 
 Big Daz.
+Now bigger and Dazzer than ever,
 CEO INFORMATION SOLUTIONS LIMITED "
 ReplyBody1 = "Good afternoon 'Big Daz',
 
-Thank you for your inquiry. We're not currently looking for such services.
+To clarify, I do not need or want your services, now or in the future. I mean no offence, and apologise for wasting your time. Could you please unsubscribe me from your mailing lists?
 
 Kind regards,
 Dave Spritely, 
@@ -642,19 +638,17 @@ Sender_Name = "M. Ahmad"
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
 Subject = "Calendar Invite - Location Presentation"
 PreviewText = "Internal invite address to all fo"
-MainBody = "Hello everybody,
+MainBody = "Hello ForwardGreen,
 
-Seeing how we have a project manager now @Dave Spritely, we can now hold the greatest meeting ever to grace the calendar (well, your calendars anyway, mine is full of exciting stuff)! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and it's now time to choose.
+Do you have any information on the impact of the project on animals? I've heard rumours of engineers disposing of bird corpses to avoid reporting them, and myself and other farmers are also worried out livestock.
 
-See you in the collaborative space, down the hall from the fourth floor main office.
+With concern,
+Cosijoeza"
+ReplyBody1 = "Good morning Cosijoeza,
 
-Best,
-Moz"
-ReplyBody1 = "Hi Moz,
+In terms of animal health, we have no studies to suggest any negative impact, so please be reassured your livestock aren't endangered. As for birds, we have no reason to believe there's significant impact nor that engineers are interfering in any way.
 
-Thank you for this invite. I'll see you in the collaboration space!
-
-Kind Regards
+Hope that's helpful!
 Dave Spritely, 
 UK Project Lead
 Forward Green"
