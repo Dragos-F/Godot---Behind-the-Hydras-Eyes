@@ -552,22 +552,23 @@ emailsProgressionQuota = 3
 texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
-Sender_Name = "M. Ahmad"
-PreviewText = "Hey Dave, I just wanted to say good"
-MainBody = "Hey Dave, 
+Sender_Name = "Maria Cruz"
+Subject = "Compensation"
+PreviewText = "I don't know what"
+MainBody = "Hello Mr Spritely
 
-I just wanted to say good work navigating the meeting yesterday. It was definitely throwing you in the deep end, but the captain seemed to approve. If you have any questions about how the company works that A-man or big J can't answer, just gimme a shout.
+I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
 
-Peace, 
-Moz
+Maria Cruz
+								"
+ReplyBody1 = "Afternoon Maria,
 
-"
-ReplyBody1 = "Hi Moz,
+Thank you for your email. I don't recognise this Mr Gallardo, but from what you've told me he does not sound affiliated with us directly. I sincerely apologise that the forum about the site proposal has lead to this, but I cannot help with anything more. I would certainly contact your local police department as soon as possible. Please keep me updated about your situation.
 
-Really glad to hear it, thanks for preparing the slides and walking us through them. I'll let you know if I think of anything! 
-
-Best,
-Dave"
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+Forward Green"
 boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
@@ -575,19 +576,19 @@ texture_filter = 1
 
 [node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_lauko")]
 layout_mode = 2
-Sender_Name = "M Lopez"
+Sender_Name = "Ana Vásquez"
 ToAddress = "contactus@forwardgreen.co.uk"
-Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
-PreviewText = "To whom it may concern,"
-MainBody = "To whom it may concern,
+Subject = "Official Statement"
+PreviewText = "I'm contacting you"
+MainBody = "Dear ForwardGreen Official,
 
-I've been in correspondence with your local office about your proposed development of \"Lagoon Breeze\". They seem confident that it is soon going ahead, following approval by the state authorities and a local meeting. However, I cannot find any Environmental Impact Assessment in the submitted documents, so was hoping you could share it with me. As I'm sure you appreciate, our lagoon is home to a plethora of rare wildlife, and without careful consideration of their wellbeing my constituents and I would not be able to consent to your project.	
+I'm contacting you to ask if ForwardGreen would like to give a statement on Project Lagoon Breeze. You may be aware that many locals have stated their desire to resist the construction, and already a group of activists seems to have formed to protest. We have already reached out to local police, who stated: \"we have experience handling disturbances like this, and are confident in our ability to quash any nuisance.\" Do you feel the same confidence, and what do you have to say to the disgruntled locals?
 
-Regards,
-Miguel Lopez"
-ReplyBody1 = "Hi Miguel,
+I await your reply,
+Ana Vásquez"
+ReplyBody1 = "Good afternoon Ana, 
 
-I am sorry that you are unsatisfied with the response from our local office. However, it is true that we have already secured the required approval for the construction of this project to begin, and that approval required conducting the Environmental Impact Assessment. Unfortunately I cannot provide any more info as I am not part of the team that oversaw the carrying out of the survey, but I have included another correspondent in this chain that you can follow up with.
+I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
 
 Kind Regards,
 Dave Spritely, 
@@ -600,20 +601,19 @@ autowrap_mode = 0
 
 [node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_lauko")]
 layout_mode = 2
-Sender_Name = "R. Spiegel"
+Sender_Name = "Nayeli"
 ToAddress = "contactus@forwardgreen.co.uk"
-Subject = "Subj: FW: Safer Investments"
-PreviewText = "To whom it may concern,"
-MainBody = "Dear [INSERT NAME],
+Subject = "Do you know your giants bleed?"
+PreviewText = "We are the voice of"
+MainBody = "To whom it concerns,
 
-Have you been worrying about your large investments and their possible returns? Do you wish to become an overnight billionaire? Our Safer Investments offer could take your heavy assets and convert them into the epoch-defining world of cryptocurrency. If you are ready to level up to the future, please reply to this message.
+We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
 
-Yours with truly wise financial advice,
-Ramonne Spiegel.
-Director, Safer Investments"
-ReplyBody1 = "Hi Ramonne,
+Do not turn your back on us,
+Nayeli, Spokesperson of Strike the Hydra's Heart"
+ReplyBody1 = "Dear Nayeli,
 
-I appreciate your email, but I don't think we'll be interested in any other investments at this time.
+I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of Forward Green. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
 
 Kind Regards,
 Dave Spritely, 
