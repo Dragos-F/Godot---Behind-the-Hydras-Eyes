@@ -557,7 +557,9 @@ emailsProgressionQuota = 3
 texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
-Sender_Name = "P. Moore - Pinned"
+Sender_Name = "Richard"
+Subject = "Advice"
+PreviewText = "A word for the wise"
 MainBody = "Good morning Dave, 
 
 A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
@@ -634,16 +636,16 @@ autowrap_mode = 0
 
 [node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_alg7f")]
 layout_mode = 2
-Sender_Name = "M. Ahmad"
+Sender_Name = "Cosijoeza T."
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Calendar Invite - Location Presentation"
-PreviewText = "Internal invite address to all fo"
+Subject = "Query about turbines"
+PreviewText = "Do you have any inf"
 MainBody = "Hello ForwardGreen,
 
 Do you have any information on the impact of the project on animals? I've heard rumours of engineers disposing of bird corpses to avoid reporting them, and myself and other farmers are also worried out livestock.
 
 With concern,
-Cosijoeza"
+Cosijoeza T."
 ReplyBody1 = "Good morning Cosijoeza,
 
 In terms of animal health, we have no studies to suggest any negative impact, so please be reassured your livestock aren't endangered. As for birds, we have no reason to believe there's significant impact nor that engineers are interfering in any way.
