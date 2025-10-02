@@ -1,4 +1,25 @@
+label Day2
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
 BossDoor: From inside, you hear a voice through a speaker loudly commentating on a tennis match.
+[end_timeline]
+label Day2
+BossDoor: The closed door leads to the captain's quarters.
+BossDoor: He is probably busy, keeping this entire company afloat.
+BossDoor: Inside, you can hear him laughing with Richard on a call.
+[end_timeline]
+label Day3
+BossDoor: The closed door leads to the captain's quarters.
+BossDoor: He is probably busy, keeping this entire company afloat.
+BossDoor: You hear him swear loudly, and the grumble something the slot machine being rigged.
+[end_timeline]
+label Day4
+BossDoor: The closed door leads to the captain's quarters.
+BossDoor: He is probably busy, keeping this entire company afloat.
+BossDoor: The sound of a laugh track drifts from under the door.
+[end_timeline]
+label Day5
+BossDoor: The closed door leads to the captain's quarters.
+BossDoor: He is probably busy, keeping this entire company afloat.
+BossDoor: You hear him ask his phone to play his "naptime soundtrack".
 [end_timeline]

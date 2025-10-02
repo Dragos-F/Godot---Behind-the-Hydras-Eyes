@@ -10,3 +10,12 @@ Dave: You blink at the machine. Maybe you need more sleep.
 - Uh, no thanks.
 	CoffeeMachine: Oh, can't handle the bitterness? Fine, fine.
 [end_timeline]
+CoffeeMachine: Survived your first few months, huh? Mainly thanks to my help, of course. 
+CoffeeMachine: I'm joking of course. I mean ONLY because of my help. Everyone would have figured out you're useless by now without me. 
+CoffeeMachine: Well, not entirely useless. You can press my buttons, and that's all you need to do after all. 
+CoffeeMachine: Go on, press it now.
+- ...okay.
+	CoffeeMachine: Good. 
+- I'm good, actually.
+	CoffeeMachine: Uh huh. I'm sure I'll see you again as soon as you have to make any hard decisions. 
+[end_timeline]
