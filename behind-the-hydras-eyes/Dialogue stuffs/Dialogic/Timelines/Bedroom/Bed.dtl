@@ -14,3 +14,17 @@ Bed: Your bed. It's made, albeit badly, and you feel it call to you. Do you want
 	Bed: Tomorrow is another day, and you'll ride the train without grumbling, smile to your team encouragingly. Here's to tomorrow, Dave.
 	[signal arg="bed_sleep"]
 [end_timeline]
+label Quarter2
+Bed: Ah, there's your bed again. Are you ready to lie in it?
+- Not yet
+	Bed: Always delaying, always avoiding decisions, always evading the inevitable. Fine. You'll be back.
+- Please.
+	Bed: You enter my embrace, but sleep doesn't come easily. This second quarter weighs upon you, but you cannot tell yet how heavily.
+	Bed: Small issues, building, nibbling at your conscience, dismissable for now, but where does this path lead?
+	Bed: Something that you can't place hisses at you from your periphery, taunting you. Can you hear its voice?
+	Bed: It sees what you're doing, and it grins, teeth stretching on infinitely, mouth a void, eyes dancing embers, blood dripping from its gums.
+	Bed: Does that scare you, Dave? Because the voice is closing in, and it's not the fact it might catch you that scares you.
+	Bed: It's the fact that you know it's whispers are true\: the path of least resistance is apathy, and it'd be so easy. The only easy path. Let the thing subsume you.
+	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write. 
+	Bed: You toss. You turn. At last, you sleep.
+	[signal arg="bed_sleep"]
