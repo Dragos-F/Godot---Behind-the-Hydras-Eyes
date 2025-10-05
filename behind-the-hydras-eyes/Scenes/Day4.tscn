@@ -556,7 +556,35 @@ emailsProgressionQuota = 3
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_mw0mh")]
+layout_mode = 2
+Sender_Name = "Richard"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Advice"
+PreviewText = "A word for the wise"
+MainBody = "Good morning Dave, 
+
+A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
+
+Richard.
+"
+ReplyBody1 = "Hi Patrick, 
+
+Thank you for the advice. I'll keep it in mind, while being respectul and helpful of course.
+
+Best,
+Dave Spritely, 
+UK Project Lead
+Forward Green
+
+"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
+visible = false
 Sender_Name = "Olu - Finance"
 Subject = "New budget approved"
 PreviewText = "In case you haven't"
@@ -583,7 +611,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_mw0mh")]
+[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_mw0mh")]
 layout_mode = 2
 Sender_Name = "Miguel Lopez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -608,7 +636,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_mw0mh")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_mw0mh")]
 layout_mode = 2
 Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -634,7 +662,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_mw0mh")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_mw0mh")]
 layout_mode = 2
 Sender_Name = "Miracure"
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -642,7 +670,7 @@ Subject = "Secret For You"
 PreviewText = "I Am Writing To"
 MainBody = "Hello Fellow Person,
 
-I Am Writing To You To Offer My Human Solutions To All Of Your Problems. If You Want To Purchase My Miracle Goo, Please Reply To This Email With The Secret Password: 12345.
+I Am Writing To You To Offer My Human Solutions To All Of Your Problems. If You Want To Purchase My Miracle GOO, Please Reply To This Email With The Secret Password: GOO.
 
 Otherwise, Reply \"NO GOO\".
 
@@ -806,6 +834,7 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]

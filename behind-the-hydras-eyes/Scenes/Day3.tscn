@@ -556,7 +556,37 @@ emailsProgressionQuota = 3
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_alg7f")]
+layout_mode = 2
+Sender_Name = "Olu - Finance"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "New budget approved"
+PreviewText = "In case you haven't"
+MainBody = "Good afternoon Dave, 
+
+In case you haven't heard, we've approved extra budget for marketing, both in the UK and Mexico. The hope is that it'll ease any concerns. 
+
+Also, please ignore anything Moz says about what happened at the pub after you left.
+
+Kind regards
+Olu."
+ReplyBody1 = "Hi Olu, 
+
+Great news about the marketing, Jen is of course over the moon. I've not heard anything from Moz, don't worry.
+
+Yours respectfully,
+Dave Spritely, 
+UK Project Lead
+Forward Green
+
+"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
+visible = false
 Sender_Name = "Richard"
 Subject = "Advice"
 PreviewText = "A word for the wise"
@@ -581,7 +611,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_alg7f")]
+[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_alg7f")]
 layout_mode = 2
 Sender_Name = "Maria Cruz"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -589,10 +619,14 @@ Subject = "Compensation"
 PreviewText = "My families livestock..."
 MainBody = "Hi, can you help?
 
-My family's livestock graze on the proposed site of one of your turbines. At the public forum to vote on it, your officer, Mr Gallardo, who gave the presentation ignored my parents. Could you please consider compensating my family, as not only are they losing land but have also decided to sell their livestock. "
+My family's livestock graze on the proposed site of one of your turbines. At the public forum to vote on it, your officer, Mr Gallardo, who gave the presentation, ignored my parents. Could you please consider compensating my family, as not only are they losing land but have also decided to sell their livestock. 
+
+Maria Cruz
+Translated by Bingle.
+Sent from emails for Wiwawi. "
 ReplyBody1 = "Good morning Maria, 
 
-I hope you're well, and thank you for taking the time to get in touch. I'm really sorry to hear about your family's difficulties, and that our officer did not handle the public forum in the manner you wished. I will pass your request for compensation onto our external enquiries team, though redress is considered on a case-by-case basis and I can't guranteee any outcome.
+I hope you're well, and thank you for taking the time to get in touch. I'm really sorry to hear about your family's difficulties, and that our officer did not handle the public forum in the manner you wished. I will pass your request for compensation onto our external enquiries team, though redress is considered on a case-by-case basis and I can't guarantee any outcome.
 
 Wishing you luck,
 Dave Spritely, 
@@ -604,7 +638,7 @@ Forward Green
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_alg7f")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_alg7f")]
 layout_mode = 2
 Sender_Name = "Big Daz"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -620,7 +654,9 @@ Since you say you're not currently looking, I've signed you up to six of our mai
 
 Big Daz.
 Now bigger and Dazzer than ever,
-CEO INFORMATION SOLUTIONS LIMITED "
+CEO INFORMATION SOLUTIONS LIMITED 
+
+Do you want me to generate anything else?"
 ReplyBody1 = "Good afternoon 'Big Daz',
 
 To clarify, I do not need or want your services, now or in the future. I mean no offence, and apologise for wasting your time. Could you please unsubscribe me from your mailing lists?
@@ -634,7 +670,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_alg7f")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_alg7f")]
 layout_mode = 2
 Sender_Name = "Cosijoeza T."
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -642,7 +678,7 @@ Subject = "Query about turbines"
 PreviewText = "Do you have any inf"
 MainBody = "Hello ForwardGreen,
 
-Do you have any information on the impact of the project on animals? I've heard rumours of engineers disposing of bird corpses to avoid reporting them, and myself and other farmers are also worried out livestock.
+Do you have any information on the impact of the project on animals? I've heard rumours of engineers disposing of bird corpses to avoid reporting them, and myself and other farmers are also worried about our livestock.
 
 With concern,
 Cosijoeza T."
@@ -806,6 +842,7 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
