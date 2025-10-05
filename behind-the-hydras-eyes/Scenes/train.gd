@@ -4,6 +4,8 @@ extends Node2D
 @export var train_sound:AudioStreamPlayer2D
 @onready var originalBackVol:float
 @export var PauseMenu:Node2D
+@export var TimelineToStart:String
+
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(end_scene)
 	originalBackVol = AudioBrain.BackPlayer.volume_db 
@@ -19,8 +21,9 @@ func _input(event):
 func _on_timer_timeout() -> void:
 	daveAnim.play("phone_up")
 	print ("PhoneUp Started")
-	var layout = Dialogic.start("Text From Boss")
-	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
+	var layout = Dialogic.start(TimelineToStart)
+	if TimelineToStart == "Text From Boss":
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
 	
 	
 
