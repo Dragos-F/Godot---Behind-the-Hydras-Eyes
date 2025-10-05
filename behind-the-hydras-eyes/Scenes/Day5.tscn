@@ -192,7 +192,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"idle-Alex"]
+"values": [&"idle_Alex"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -495,7 +495,7 @@ scale = Vector2(2, 2)
 texture_filter = 1
 position = Vector2(-14.5, 47)
 sprite_frames = SubResource("SpriteFrames_gtf6l")
-animation = &"idle-Alex"
+animation = &"idle_Alex"
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex"]

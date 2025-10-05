@@ -85,14 +85,18 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres", "res://Dialogue stuffs/Dialogic/Styles/BottomDialogue.tres"]
 layout/default_style="res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
 variables={
+"AlexNayeli": false,
 "AlexReturn": false,
 "BossUpset": 0,
+"BudgetApproved": false,
 "CurrentDay": "Day01",
 "CurrentQuarter": "Quarter1",
+"Day4AlexEmails": false,
 "JenReturn": false,
 "KettleReturn": 0.0,
 "TeaForTeam": false,
 "WatercoolerChar": "",
+"_2AlexReturn": false,
 "clipNotif": false,
 "computerNotif": false,
 "teaNotif": false

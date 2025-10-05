@@ -55,4 +55,155 @@ Jen: Whatcha think, captain?
 	Jen: I used AI?  The IT department could never!
 	Alex: ...And hopefully would never...
 Dave: Right...well, I better get back to work, have a lovely day.
+set {JenReturn} = true
+[end_timeline]
+
+label Day03
+if {JenReturn} == true:
+	jump Day03.1
+Jen: Did you hear? We might be getting some new marketing budget!
+Jen: *Jen's eyes sparkle as she pauses and stares longingly into the distance*
+Jen: Mostly to spend on the Mexican side. Y'know, to ease tensions and raise some goodwill.
+Jen: It should be fun to help allocate it, maybe I'll do some market research on brand loyalty. Do you reckon it's best to build brand awareness first,
+Jen: like with posters and merch, or to jump straight into building brand loyalty? Maybe by, like, providing food or fixing someone's house.
+- I doubt many on the ground know about us, so maybe awareness?
+	Jen: I'll have a million awareness-raising solutions on your desk shortly then!
+- Definitely loyalty, the resulting word of mouth will help awareness too.
+	Jen: Great point, I'll get brainstorming! Maybe a tiktok video of us feeding the homeless to some viral music?
+- Don't you think that's quite a crass and unempathetic question?
+	Jen: Huh? Oh, are you testing me? *ahem* "By caring for the community we earn their trust in return, and that's what allows our projects and the communities they're in to prosper mutually."
+Jen: Anyway, I'll let you know when the total amount is finalised, since I assume you'll want to have final say.
+set {JenReturn} = true
+[end_timeline]
+label Day03.1
+Jen: Hey! Budget's still under revision, but that's all I can think about. I hope we have enough to sponsor a vet clinic!
+Jen: Oh, sorry, I'm getting caught up in the possibilities again. What can I help you with?
+- How're your plants doing?
+	Jen: Oh, I never thought you'd ask!
+	Jen: They're all splendid really. The hanging vine by my drawers has actually gotten so long I had to take some cuttings and replant.
+	Jen: I just feel so attached to them, like they're my own children, ya know, such little personalities!
+	Jen: Um, yeah, sure.
+- Do you talk to any local press?
+	Jen: Ah, not really. I just do the social media posts and graphic design.
+	Jen: I think we pay some external comms company to deal with all the local government and press releases
+	Dave: So you don't write any of it?
+	Jen: Well, maybe a tagline or a catchy motto. Someone else does all the boring parts.
+	Jen: Can't catch me stringing more than 280 characters at a time.
+	Jen: Unless it's my blog about Naked Dating Island.
+- Do you ever get any complaints?
+	Jen: Me? Oh, no. But I don't really go through my emails unless someone tells me I need to look at it.
+	Jen: There's a bunch of stuff in there I don't wanna read.
+	Jen: Plus, if it was super serious, they'd call or invite me to a meeting instead.
+	Jen: ....Or you know, text. Like a person.
+[end_timeline]
+label Day04
+if {JenReturn} == true:
+	if {BudgetApproved} == true:
+		jump Day04.1
+	else:
+		jump Day04.2
+
+Jen: The budget is IN! Exciting stuff, I'll send you the numbers for your crunching pleasure!
+Jen: Always nice to be able to do some good, and a relatively cheap boost for our brand representation.
+Jen: Have a jiggle around with the numbers to help you make your mind up, but I recommend the beautification project in particular!
+Jen: After all, what better way to make people associate ForwardGreen with clean energy than physically cleaning up their neighborhoods?
+- Thanks I've already approved it!
+	Jen: Oh gosh, you moved so quick! I'll take a look in a second
+	Jen: I'm gonna email Diego from the printing company today and tell him we're one step closer!
+	Jen: Me and him are besties now, we've been emailing for weeks.
+- Oh, great. I'll have a look in a bit
+	Jen: Take as long as you need! The whole process has taken so long, we can sit on it for a bit
+	Jen: Plus, Olu is really slow replying to emails anyway. I feel like there's always more important stuff than my invoices and budgets \:(
+	I'm sure he prioritises his work. Finance is a pretty rough department, especially at this scale with so much spending
+	Jen: Yeah, but why do I have to wait for this stuff once it's all approved. Surely he just needs to swipe his card or whatever and send the money across, right?
+	Dave: That's....really not how it works.
+	Jen: Are you sure? Well, maybe it should be. God knows the company's pockets are endless when it comes to lawyers, what's a few posters?
+- What are we hoping to achieve with it?
+	I've been receiving a fair few complaints from locals. This feels like a bit of a plaster to hide some of our procedural issues
+	Jen: Well, I wouldn't know anything about those. I think the locals will definitely love it!
+	Jen: Think of all the posters everywhere, the whole town in our colours and with our branding! Who wouldn't love it?
+	Jen: Like game day for Bromworth FC, but with less hooligans and no pasties being thrown.
+Dave: Right, I best return to my bits. I'll catch you around
+Jen: Thanks again for checking in!
+set {JenReturn} = true
+[end_timeline]
+label Day04.1
+Jen: Printing should take a few weeks! I hope by the end of the month we can start getting pictures from the locals!
+Jen: I can already see the posts on socials coming in, tagging us and all that!
+- Are people actually excited?...
+	Jen: Oh, c'mon! This must be the most exciting thing happening for them!
+- Absolutely! Glad to hear you're passionate
+	Jen: Thanks Dave! Good to have you on my side.
+[end_timeline]
+label Day04.2
+Jen: No pressure! Have you had a look yet?
+Jen: At the budget, I mean.
+- Yeah, with you now!
+	Jen: Oh, you're just the best! Thanks so much. Diego will be so excited!
+- It'll be with you by the end of today
+	Jen: Great! I'll keep an eye out for it.
+[end_timeline]
+
+label Day05
+if {JenReturn} == true:
+	jump Day05.1
+Jen: Oh hey. Sorry, i'm a still a bit flustered.
+Jen: I got one of those Pear Bikes. Never tried them before, but they can really get up to some speed!
+Jen: I bumped into an older lady crossing when I took off a bit too quickly from a traffic light.
+Dave: Wh—
+Jen: Did you get in okay?
+- Yeah, I got the Annabel line in
+	Dave: It was a bit cramped inside, but nothing too crazy
+	Jen: Oh, is that the one with airconditioning?
+	Jen: I haven't been on it, but I keep wanting to!
+	Jen: I'll post a story to my socials when I do.
+- I got the bus in
+	Jen: It wasn't too bad, but a burst pipe on the road delayed things a bit.
+	Jen: Oh, is that what's happening?
+	Jen: I've been seeing people gathered around and some works happening, but couldn't really tell
+	Jen: What I can tell you is that one of the guys was digging shirtless the other week and he was definitely the one to look at, not the pipe
+	Jen: What were we talking about?
+Jen: Anyway, i'm glad this mess with the strikes or whatever will be over by tomorrow.
+Jen: I need to water my plants, but I'll catch you in a bit!
+Dave: See you in a bit!
+[end_timeline]
+label Day05.1
+Jen: Hey! Most of our programs are now up and running. Couldn't have done it without you!
+Jen: I'm waiting on a promotional reel we've contracted from a videographer that flew over to the Mexico for a few panoramic shots, and some interviews with locals
+Jen: I can't wait for you guys to see it!
+- Video's a great idea!
+	Jen: Yeah! We hired a big american vlogger to come and do all the footage.
+	Jen: He's even bringing his drone! I've been following his channel for years.
+	Jen: It's just so great to be able to work with people you like
+	- Should we have picked a professional?
+		Jen: Ah, he's got over 2 million subscribers!
+	- Oh, send me a link!
+		Jen: Absolutely! My fave his vid of his is when he visited an indigenous people
+		Jen: And just gave them cigarettes and filmed them getting drunk!
+- Could we have picked someone local for the production?
+	Jen: Well, maybe but this guy was handpicked!
+	Jen: He's my favourite content creator, and when we saw the budget allocation, I knew I could convince him to take the job
+	Jen: The whole project would've been delayed at least a month if we would've had to put an advert our and filter for candidates
+	- Isn't that ....your job?
+		Jen: Don't think so. I'm here to make the designs and make everyone like us!
+	- That makes sense
+		Jen: So glad you think so
+	- Do you know anything about a "Big Daz"?
+		Jen: Hm... name sounds familiar
+		Jen: I think we were at the networking event before you got hired, me, Alex and Patrick, representing the company
+		Jen: Some guy came around and was buying drinks for everyone all night?
+		Jen: I seem to remember him and Patrick chatting for ages during the rest of the event. I think he introduced himself as "Dazza"?
+		Dave: Hm. Interesting. Has he been in touch since?
+		Jen: Not with me, but I'm sure Patrick would remember him better.
+- Does the name "Nayeli" ring any bells? | [if {AlexNayeli} == true] [else="hide"]
+	Jen: Is that one of the influencers we payed to come and take selfies with the builders?
+	- No, she seems to be working for a local resistance group
+	- She is complaining to me about the project
+		Dave: So if we did pay her, I don't think we should continue
+	Jen: Oh. I'm so sorry to hear she doesn't like us!
+	Jen: I was hoping that this whole marketing campaign would turn some people around to liking the turbines
+	Jen: I'm sure if we show her some of our promotional materials she'll switch sides
+	Dave: I think she sounds more passionate about it than that
+	Jen: No such thing! Everyone can be marketed to
+	Jen: Even me ;)
 [end_timeline]
