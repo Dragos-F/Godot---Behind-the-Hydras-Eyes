@@ -22,9 +22,8 @@ func _on_timer_timeout() -> void:
 	daveAnim.play("phone_up")
 	print ("PhoneUp Started")
 	var layout = Dialogic.start(TimelineToStart)
-	if TimelineToStart == "Text From Boss":
-		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
-	
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Mum.dch",BossTextAnchor)
 	
 
 

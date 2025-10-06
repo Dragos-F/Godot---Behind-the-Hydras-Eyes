@@ -45,6 +45,7 @@ directories/dch_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
 "Moz": "res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",
+"Mum": "res://Dialogue stuffs/Dialogic/Characters/Mum.dch",
 "Olu": "res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",
 "Posters": "res://Dialogue stuffs/Dialogic/Characters/Office/Posters.dch",
 "Richard": "res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch",
@@ -74,6 +75,7 @@ directories/dtl_directory={
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Timelines/Office/Text From Boss.dtl",
+"Text From Mum": "res://Dialogue stuffs/Dialogic/Timelines/Text From Mum.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Timelines/Office/WaterCooler.dtl"
 }
 layout/style_directory={
