@@ -12,7 +12,7 @@ Bed: Your bed. It's made, albeit badly, and you feel it call to you. Do you want
 	Bed: You can never be whole.
 	Bed: But rest now, see if your parts will at least be together in sleep; see if the sandman can fix the ravages of time and carelessness, of burnt bridges and bad decisions.
 	Bed: Tomorrow is another day, and you'll ride the train without grumbling, smile to your team encouragingly. Here's to tomorrow, Dave.
-	[signal arg="bed_sleep"]
+	[signal arg="bed_sleep1"]
 [end_timeline]
 label Quarter2
 Bed: Ah, there's your bed again. Are you ready to lie in it?
@@ -25,6 +25,6 @@ Bed: Ah, there's your bed again. Are you ready to lie in it?
 	Bed: It sees what you're doing, and it grins, teeth stretching on infinitely, mouth a void, eyes dancing embers, blood dripping from its gums.
 	Bed: Does that scare you, Dave? Because the voice is closing in, and it's not the fact it might catch you that scares you.
 	Bed: It's the fact that you know it's whispers are true\: the path of least resistance is apathy, and it'd be so easy. The only easy path. Let the thing subsume you.
-	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write. 
+	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write.
 	Bed: You toss. You turn. At last, you sleep.
-	[signal arg="bed_sleep"]
+	[signal arg="bed_sleep1"]

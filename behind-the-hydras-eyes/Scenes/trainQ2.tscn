@@ -89,7 +89,8 @@ BossTextAnchor = NodePath("TextAnchor")
 daveAnim = NodePath("Dave/AnimatedSprite2D")
 train_sound = NodePath("TrainAmbience")
 PauseMenu = NodePath("Pause")
-TimelineToStart = "THING"
+TimelineToStart = "Text From Mum"
+dayToChange = "Day3"
 
 [node name="TrainAmbience" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_eq0bj")

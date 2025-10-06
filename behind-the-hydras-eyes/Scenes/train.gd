@@ -5,6 +5,8 @@ extends Node2D
 @onready var originalBackVol:float
 @export var PauseMenu:Node2D
 @export var TimelineToStart:String
+@export var dayToChange:String
+
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(end_scene)
@@ -23,8 +25,8 @@ func _on_timer_timeout() -> void:
 	print ("PhoneUp Started")
 	var layout = Dialogic.start(TimelineToStart)
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",BossTextAnchor)
-	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Mum.dch",BossTextAnchor)
-	
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Mum.dch",BossTextAnchor)
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",BossTextAnchor)
 
 
 func end_scene():
@@ -33,6 +35,6 @@ func end_scene():
 	AudioBrain.fadeBetween(train_sound, -80,AudioBrain.BackPlayer,originalBackVol)
 	Fader.FadeUp("Forward Green Office")
 	await Fader.fade_finished
-	get_tree().change_scene_to_file("res://Scenes/Day1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/"+dayToChange+".tscn")
 	Fader.FadeDown("Forward Green Office")
 	

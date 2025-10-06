@@ -90,6 +90,7 @@ daveAnim = NodePath("Dave/AnimatedSprite2D")
 train_sound = NodePath("TrainAmbience")
 PauseMenu = NodePath("Pause")
 TimelineToStart = "Text From Boss"
+dayToChange = "Day1"
 
 [node name="TrainAmbience" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_2egfw")
