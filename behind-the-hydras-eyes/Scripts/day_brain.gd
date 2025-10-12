@@ -199,7 +199,8 @@ func water_cooler_Alex(i:int):
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep1":
-		end_day("Q2, 202X","res://Scenes/trainQ2.tscn")
+		#end_day("Q2, 202X","res://Scenes/trainQ2.tscn") - #For Non Demo
+		end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
 	if argument == "watercooler_Alex":
 		#standing_Alex.visible = true
 		water_cooler_Alex(0)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bln8xvggdaxt2"
-path="res://.godot/imported/Boardroom Powerpoint updated.png-e45e869a52085501615b553b172d7588.ctex"
+path="res://.godot/imported/Boardroom Powerpoint updated.png-bebcc7a21d36e8fccbc7a06b5ddf1c7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/New Assets/Office Scene Assets/Boardroom Powerpoint updated.png"
-dest_files=["res://.godot/imported/Boardroom Powerpoint updated.png-e45e869a52085501615b553b172d7588.ctex"]
+source_file="res://Visual Assets/New Assets/Full Screen Scenes/Boardroom Powerpoint updated.png"
+dest_files=["res://.godot/imported/Boardroom Powerpoint updated.png-bebcc7a21d36e8fccbc7a06b5ddf1c7d.ctex"]
 
 [params]
 
