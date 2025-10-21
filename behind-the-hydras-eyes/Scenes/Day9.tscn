@@ -1,98 +1,95 @@
-[gd_scene load_steps=45 format=3 uid="uid://6pbl4xqwqdko"]
+[gd_scene load_steps=41 format=3 uid="uid://cfwn1gpwpkhb0"]
 
-[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_2ae21"]
-[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_1q0wu"]
-[ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_16dch"]
-[ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_x7jdd"]
-[ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_5l3uk"]
-[ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_xp30b"]
-[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_qxxee"]
-[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_tgdyt"]
-[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_l25cw"]
-[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_frqo2"]
-[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_6qeij"]
-[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_4qhl5"]
-[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_8fujy"]
-[ext_resource type="Script" uid="uid://c8kj85ou1o6rt" path="res://Scripts/P&Ctest.gd" id="14_1q0wu"]
-[ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="14_jq06o"]
-[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="15_oahv6"]
-[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="16_bbj1p"]
-[ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="17_gkuhn"]
-[ext_resource type="Script" uid="uid://dyeruhuuhdbd6" path="res://Scripts/p_n_c_brain.gd" id="19_16dch"]
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_2v33i"]
+[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_vv8s7"]
+[ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_2m2yv"]
+[ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_w3uu3"]
+[ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_wnebf"]
+[ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_hug6l"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_pek1x"]
+[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_qgh21"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_m78dw"]
+[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_4uy8g"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_ks1xs"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_e7355"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_r7utf"]
+[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_o1oqo"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_wgaeq"]
+[ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_j7ewo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
-atlas = ExtResource("4_x7jdd")
+atlas = ExtResource("4_w3uu3")
 region = Rect2(468, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t5tpt"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(0, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wf4m3"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(90, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u020q"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(180, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hph1"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(270, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cwmwp"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(360, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkchc"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(450, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eb88j"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(540, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttuwe"]
-atlas = ExtResource("5_5l3uk")
+atlas = ExtResource("5_wnebf")
 region = Rect2(630, 0, 90, 140)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsmfe"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(0, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fy5xc"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(52, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xk2j"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(104, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqkss"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(156, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c14by"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(208, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_38uq3"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(260, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7cuo"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(312, 0, 52, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dmapi"]
-atlas = ExtResource("6_xp30b")
+atlas = ExtResource("6_hug6l")
 region = Rect2(364, 0, 52, 122)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjnw6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_16dch")
+"texture": ExtResource("3_2m2yv")
 }],
 "loop": false,
 "name": &"idle_Alex",
@@ -409,28 +406,16 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_16dch"]
-vertices = PackedVector2Array(338.242, 392.648, 481.93, 527.219, 187.242, 529.93, 160.906, 448.969, -394.203, 380.898, -585.438, 527.063, -966.859, 330.633, -740.117, 203.727, -641.93, 151.359, -350.594, 319.609, 523.422, -123.563, 584.328, -160.5, 851.563, -18.9688, 698.531, 83.9922, 553.406, 144.828, 311.203, 105.406, 837.219, 75.3672, 936, 138.469, 936, 200.109, 727.344, 316.141, 602.844, 375.977, 420.781, 294.961, 444.898, 272.18, 612.242, 182.867, 747.063, 116.977, 75.2578, 422.531, -193.742, -92.2813, -206.797, -161.344, -143.344, -158, 236.039, 281.906, 307.172, 315.781, 366.656, 352.852, -665.891, 100, -667.898, 50.1563, -660.344, 35.0391, -588.977, 67.0703, -317.281, 492.688, -321.102, 534.719, -524.594, 64.9297, -220.656, 303.758, 699.539, 95.7188, 611.75, 170.352, 243.258, -308.133, 386.094, -251.563, 379.188, -197.289, 141.648, -261.852, -67.0391, -156.883, 434.219, 212.789, -46.5703, -246.953, 95.8125, -286.289)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20, 21, 22, 23, 24), PackedInt32Array(25, 26, 27, 28, 15, 29, 3), PackedInt32Array(30, 31, 0, 3, 29), PackedInt32Array(8, 32, 33, 34, 35, 9), PackedInt32Array(36, 37, 5, 4), PackedInt32Array(9, 35, 38), PackedInt32Array(9, 38, 26, 39), PackedInt32Array(40, 24, 23, 41), PackedInt32Array(42, 43, 44, 15, 45), PackedInt32Array(25, 39, 26), PackedInt32Array(15, 28, 46), PackedInt32Array(14, 47, 15), PackedInt32Array(15, 46, 48, 49, 45), PackedInt32Array(15, 44, 10), PackedInt32Array(41, 14, 13, 40)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-588, 537, -988, 331, -745, 195, -655, 147, -675.804, 102.419, -678, 48, -665, 22, -587, 57, -527, 55, -205, -98, -219, -172, -143, -168, -75, -167, -55, -255, 97, -297, 142, -273, 243, -319, 397, -258, 390, -203, 523, -135, 584, -172, 871, -20, 709, 89, 747, 106, 838, 64, 946, 133, 946, 206, 732, 325, 603, 387, 403, 298, 439, 264, 602, 177, 554, 156, 433, 225, 315, 122, 249, 277, 312, 307, 381, 350, 351.472, 391.338, 507, 537, 180, 540, 153, 457, 72, 432, -222, 314, -345, 329, -382, 381, -307, 490, -312, 545)])
-border_size = 10.0
-
 [node name="Main" type="Node2D"]
 
-[node name="Fader" parent="." instance=ExtResource("1_2ae21")]
+[node name="Fader" parent="." instance=ExtResource("1_2v33i")]
 z_index = 15
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Fader" index="0"]
-position = Vector2(-281, -15)
 
 [node name="Label" parent="Fader" index="1"]
 z_index = 10
 
-[node name="Background" parent="." instance=ExtResource("2_1q0wu")]
-
-[node name="StaticBody2D" parent="Background/Furniture/OfficeDoubleDesks2" index="0"]
-visible = true
+[node name="Background" parent="." instance=ExtResource("2_vv8s7")]
 
 [node name="Corkboard" parent="Background/Furniture" index="7"]
 position = Vector2(655, -273)
@@ -462,28 +447,20 @@ YarnNodeLink = "Posters"
 position = Vector2(-42.5, -0.5)
 
 [node name="Jen1" parent="Background/Furniture" index="13"]
+visible = false
 z_index = -1
-
-[node name="CollisionPolygon2D" parent="Background/Furniture/Jen1/StaticBody2D" index="0"]
-visible = true
-
-[node name="Area2D" parent="Background/Furniture/Jen1/JenInteractable" index="0"]
-visible = true
 
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
+
+[node name="Alex" parent="Background/Furniture" index="15"]
+visible = false
 
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
 [node name="AnimatedSprite2D" parent="Background/Furniture/Alex" index="1"]
 animation = &"drink_tea"
-
-[node name="StaticBody2D" parent="Background/Furniture/AlexDesk/ChairSide" index="0"]
-visible = true
-
-[node name="CollisionPolygon2D" parent="Background/Furniture/AlexDesk/ChairSide/StaticBody2D" index="0"]
-visible = false
 
 [node name="StaticBody2D" parent="Background/Furniture/DaveDesk/OfficeCornerDesk" index="0"]
 visible = true
@@ -506,17 +483,8 @@ visible = true
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
 position = Vector2(-12.5, -15.5)
 
-[node name="StaticBody2D" parent="Background/Kitchen/verticalKWall" index="0"]
-visible = true
-
-[node name="StaticBody2D" parent="Background/Kitchen/BackgroundKitchen/horizontalKWall" index="0"]
-visible = true
-
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)
-
-[node name="StaticBody2D" parent="Background/Kitchen/Cabinets" index="0"]
-visible = true
 
 [node name="DialogueMarker" parent="Background/Kitchen/Cabinets/Kettle/InteractableElement" index="1"]
 position = Vector2(4.5, -8)
@@ -526,9 +494,6 @@ YarnNodeLink = "Clipboard"
 
 [node name="DialogueMarker" parent="Background/Kitchen/Clipboard/InteractableElement" index="1"]
 position = Vector2(10.5, -3.5)
-
-[node name="CollisionShape2D" parent="Background/Wall Barriers/TopRight" index="0"]
-position = Vector2(-28.9667, -55.9458)
 
 [node name="StandingAlex" type="Node2D" parent="Background"]
 visible = false
@@ -549,7 +514,7 @@ libraries = {
 }
 
 [node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
-script = ExtResource("7_qxxee")
+script = ExtResource("7_pek1x")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
 Camera = NodePath("../Camera2D")
@@ -571,7 +536,7 @@ limit_smoothed = true
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("8_tgdyt")
+script = ExtResource("8_qgh21")
 
 [node name="ComputerScreen" type="Node2D" parent="."]
 visible = false
@@ -580,13 +545,13 @@ texture_filter = 1
 
 [node name="Black" type="Sprite2D" parent="ComputerScreen"]
 modulate = Color(0, 0, 0, 1)
-texture = ExtResource("9_l25cw")
+texture = ExtResource("9_m78dw")
 
 [node name="Screen" type="Sprite2D" parent="ComputerScreen"]
 texture_filter = 1
-texture = ExtResource("10_frqo2")
+texture = ExtResource("10_4uy8g")
 
-[node name="ScreenUI" parent="." instance=ExtResource("11_6qeij")]
+[node name="ScreenUI" parent="." instance=ExtResource("11_ks1xs")]
 unique_name_in_owner = true
 visible = false
 texture_filter = 1
@@ -595,20 +560,49 @@ emailsProgressionQuota = 3
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
-Sender_Name = "P. Moore - Pinned"
-MainBody = "Hey Dave, 
+[node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_e7355")]
+layout_mode = 2
+Sender_Name = "Richard"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Advice"
+PreviewText = "A word for the wise"
+MainBody = "Good morning Dave, 
 
-Welcome aboard the ship. Try to keep your inbox cleared, since it'll boost our metrics and also help prevent any bad press—you know the drill, keep it short and professional; any real issues would've been forwarded to the right departments anyway, so your inbox should just be fluff. We'll go over your performance at our quarterly meetings.
+A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
 
-Oh, and see you at the meeting later today.
-
-Your Boss,
-Patrick Moore.
+Richard.
 "
 ReplyBody1 = "Hi Patrick, 
 
-I'm really glad to be here, thanks again for the opportunity. I've already met my team, so just let me know if there's anything else I can help with! 
+Thank you for the advice. I'll keep it in mind, while being respectul and helpful of course.
+
+Best,
+Dave Spritely, 
+UK Project Lead
+Forward Green
+
+"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
+visible = false
+Sender_Name = "Olu - Finance"
+Subject = "New budget approved"
+PreviewText = "In case you haven't"
+MainBody = "Good afternoon Dave, 
+
+In case you haven't heard, we've approved extra budget for marketing, both in the UK and Mexico. The hope is that it'll ease any concerns. 
+
+Also, please ignore anything Moz says about what happened at the pub after you left.
+
+Kind regards
+Olu."
+ReplyBody1 = "Hi Olu, 
+
+Great news about the marketing, Jen is of course over the moon. I've not heard anything from Moz, don't worry.
 
 Yours respectfully,
 Dave Spritely, 
@@ -621,21 +615,21 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_4qhl5")]
+[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_e7355")]
 layout_mode = 2
-Sender_Name = "Sir T. Baronsworthy"
+Sender_Name = "Miguel Lopez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Project Manager Application"
-PreviewText = "To whom it may concern, I want to"
-MainBody = "To whom it may concern,
+Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessme"
+PreviewText = "Thank you for taking"
+MainBody = "Good afternoon Dave.
 
-I want to apply for the attached job listing. My experience is that I was put straight onto the board of a weapons company out of uni, oversaw its record profits and expansion to better support democracy abroad. I also head three think tanks and a regional NHS board. I care about renewable energy as this is the future of global investing and capital development—drones don't power themselves!
+Thank you for taking the time to respond to my previous email. Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
 
-Sir Timothy Baronsworthy
-O.B.E., M.B.E., M.A.Y.B.E., B.A.D."
-ReplyBody1 = "Good afternoon Tim,
+Regards,
+Miguel Lopez"
+ReplyBody1 = "Good afternoon Miguel,
 
-Apologies, but this role has now been filled (to be clear, by me). I'm not sure why this email didn't get filtered by HR, but we'll keep your CV on record for any other positions matching your skillset.
+I am sorry that you are unsatisfied with my previous response, but I am the incorrect point of contact for this enquiry. I can only assure you that, as a requirement to begin construction, we must have completed the assessment. If you have any other questions, please do not hesitate to reach out.
 
 Kind regards,
 Dave Spritely, 
@@ -646,25 +640,22 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_4qhl5")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_e7355")]
 layout_mode = 2
-Sender_Name = "Big Daz"
+Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "BIG BUSINESS IMPROVEMENTS"
-PreviewText = "Hate lazy workers? "
-MainBody = "Here is a more persuasive version of your email:
+Subject = "Our Support"
+PreviewText = "I hope you are well"
+MainBody = "Good afternoon ForwardGreen team! 
 
-Good afternoon sirs,
+I hope you are well. I have heard that there has been some slight pushback from certain residents about your project. I am writing to assure you that many residents, a silent majority perhaps, actually support the projects aims of renewable modernisation, and will welcome the money and opportunities that it will bring to the region. So, please do not let any vocal minorities dissuade you in your investment in our humble region. If the project is a success, we would in fact be interested in collaborating further.
 
-Hate lazy workers? Abolishing WFH failed to raise productivity? We have the only solution you need: AI. 
+Regards,
+Mr Perez,
+Chair of the Entrepreneurial Business Alliance"
+ReplyBody1 = "Good afternoon Mr Perez,
 
-AI assistants will streamline every element of your job. Miracle bullets have never been so cheap! Simply allow our consultants access to every nook of your database. GDPR compliant? Plausibly! 
-
-Big Daz.
-CEO INFORMATION SOLUTIONS LIMITED "
-ReplyBody1 = "Good afternoon 'Big Daz',
-
-Thank you for your inquiry. We're not currently looking for such services.
+Thank you for expressing your support. We here at FutureGreen are glad to have the backing of the local business community, and look forward to our continuing positive relations.
 
 Kind regards,
 Dave Spritely, 
@@ -675,23 +666,21 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_4qhl5")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_e7355")]
 layout_mode = 2
-Sender_Name = "M. Ahmad"
+Sender_Name = "Miracure"
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Calendar Invite - Location Presentation"
-PreviewText = "Internal invite address to all fo"
-MainBody = "Hello everybody,
+Subject = "Secret For You"
+PreviewText = "I Am Writing To"
+MainBody = "Hello Fellow Person,
 
-Seeing how we have a project manager now @Dave Spritely, we can now hold the greatest meeting ever to grace the calendar (well, your calendars anyway, mine is full of exciting stuff)! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and it's now time to choose.
+I Am Writing To You To Offer My Human Solutions To All Of Your Problems. If You Want To Purchase My Miracle GOO, Please Reply To This Email With The Secret Password: GOO.
 
-See you in the collaborative space, down the hall from the fourth floor main office.
+Otherwise, Reply \"NO GOO\".
 
-Best,
-Moz"
-ReplyBody1 = "Hi Moz,
-
-Thank you for this invite. I'll see you in the collaboration space!
+You're Welcome,
+Miracure Solutions For Exhaustion"
+ReplyBody1 = "NO GOO.
 
 Kind Regards
 Dave Spritely, 
@@ -778,107 +767,60 @@ offset_bottom = 361.0
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
-[node name="Dave" parent="." instance=ExtResource("13_8fujy")]
+[node name="Dave" parent="." instance=ExtResource("13_r7utf")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-590, 314)
-walking_audio = null
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Dave"]
-
-[node name="Dave2" parent="." instance=ExtResource("13_8fujy")]
-unique_name_in_owner = true
-position = Vector2(-514, 398)
-script = ExtResource("14_1q0wu")
-
-[node name="AnimatedSprite2D" parent="Dave2" index="0"]
-position = Vector2(-5, -117)
-
-[node name="CollisionPolygon2D" parent="Dave2" index="1"]
-position = Vector2(-2, -11)
-
-[node name="DialogueMarker" parent="Dave2" index="2"]
-position = Vector2(11, -180)
-
-[node name="TextAnchor" parent="Dave2" index="3"]
-position = Vector2(27, -115)
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Dave2"]
-target_desired_distance = 2.0
-avoidance_enabled = true
-
-[node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor", "TeaNotif", "ClipNotif", "CompNotif")]
-script = ExtResource("14_jq06o")
-AlexNotif = NodePath("../Notifications/Alex")
-JenNotif = NodePath("../Notifications/Jen")
-emails = NodePath("../ScreenUI")
-outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
-DoorNotif = NodePath("../Notifications/Door")
-brain = NodePath("../DayBrain")
-BossTextAnchor = NodePath("../Dave/TextAnchor")
-BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
-TeaNotif = NodePath("../Notifications/Tea")
-ClipNotif = NodePath("../Notifications/Clipboard")
-CompNotif = NodePath("../Notifications/Computer")
+[node name="Specifics3" type="Node2D" parent="."]
 
 [node name="Notifications" type="Node2D" parent="."]
 
-[node name="Alex" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Alex" parent="Notifications" instance=ExtResource("14_o1oqo")]
+visible = false
 position = Vector2(-552, -256)
 frame_progress = 0.801034
 
-[node name="Jen" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Jen" parent="Notifications" instance=ExtResource("14_o1oqo")]
+visible = false
 position = Vector2(-138, -470)
 
-[node name="Door" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Door" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false
 position = Vector2(-803, 161)
 
-[node name="Tea" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Tea" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false
 position = Vector2(688, 231)
 autoplay = "Q"
 
-[node name="Clipboard" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Clipboard" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false
 z_index = 4
 position = Vector2(467, 302)
 autoplay = "Q"
 
-[node name="Computer" parent="Notifications" instance=ExtResource("15_oahv6")]
+[node name="Computer" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false
 z_index = 7
 position = Vector2(-157, 152)
 
-[node name="Pause" parent="." instance=ExtResource("16_bbj1p")]
+[node name="Pause" parent="." instance=ExtResource("15_wgaeq")]
 unique_name_in_owner = true
 z_index = 12
 
-[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("17_gkuhn")]
+[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_j7ewo")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_16dch")
-
-[node name="PnCBrain" type="Node2D" parent="." node_paths=PackedStringArray("dave", "timer")]
-script = ExtResource("19_16dch")
-dave = NodePath("../Dave2")
-timer = NodePath("Timer")
-
-[node name="Timer" type="Timer" parent="PnCBrain"]
-wait_time = 0.5
-
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics3" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics3" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics1" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics1" method="_on_interactable_element_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics1" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics3" method="_on_desk_interactable_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics3" method="_on_interactable_element_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics3" method="_on_clipboard_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
-[connection signal="timeout" from="PnCBrain/Timer" to="PnCBrain" method="_on_timer_timeout"]
 
 [editable path="Fader"]
 [editable path="Background"]
@@ -895,10 +837,10 @@ wait_time = 0.5
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
 [editable path="ScreenUI/Budget/Chart"]
 [editable path="Dave"]
-[editable path="Dave2"]
