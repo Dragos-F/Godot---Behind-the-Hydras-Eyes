@@ -16,9 +16,12 @@ class_name containerPour
 @export var regular:CompressedTexture2D
 @export var openMilk: CompressedTexture2D
 @export var brain:minigame_brain
+@export var cowboyKettle:bool = false
 
 
 func _process(_delta: float) -> void:
+	if cowboyKettle:
+		oncev1 = true
 	if in_hand == true:
 		var target = get_global_mouse_position()
 		var tween = get_tree().create_tween()

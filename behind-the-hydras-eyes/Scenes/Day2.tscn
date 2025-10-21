@@ -718,7 +718,6 @@ BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement
 brain = NodePath("../DayBrain")
 
 [node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
-visible = false
 z_index = 10
 script = ExtResource("15_gtf6l")
 sprite = NodePath("Sprite2D")

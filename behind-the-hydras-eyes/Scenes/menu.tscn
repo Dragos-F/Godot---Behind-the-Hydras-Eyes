@@ -212,9 +212,19 @@ vertical_alignment = 1
 
 [node name="TitleOnly" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(363, -281)
+position = Vector2(363, -255)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("11_rfqti")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 680.0
+offset_top = -194.0
+offset_right = 971.0
+offset_bottom = -153.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_wbdvm")
+theme_override_font_sizes/normal_font_size = 28
+text = "Version D1.28.2"
 
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]

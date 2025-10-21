@@ -238,7 +238,7 @@ walking_audio = ExtResource("4_mo885")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vrn2m")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(3, 106)
