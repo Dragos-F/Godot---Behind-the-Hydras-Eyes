@@ -601,7 +601,7 @@ autowrap_mode = 0
 
 [node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_lauko")]
 layout_mode = 2
-Sender_Name = "Nayeli"
+Sender_Name = "Nayali"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Do you know your giants bleed?"
 PreviewText = "We are the voice of"
@@ -610,8 +610,8 @@ MainBody = "To whom it concerns,
 We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
 
 Do not turn your back on us,
-Nayeli, Spokesperson of Strike the Hydra's Heart"
-ReplyBody1 = "Dear Nayeli,
+Nayali, Spokesperson of Strike the Hydra's Heart"
+ReplyBody1 = "Dear Nayali,
 
 I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of Forward Green. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
 
