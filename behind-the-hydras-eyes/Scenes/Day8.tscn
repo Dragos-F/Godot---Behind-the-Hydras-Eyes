@@ -552,18 +552,18 @@ emailsProgressionQuota = 3
 texture_filter = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
-Sender_Name = "Maria Cruz"
+Sender_Name = "Miguel Lopez"
 Subject = "Compensation"
 PreviewText = "I don't know what"
-MainBody = "Hello Mr Spritely
+MainBody = "Good afternoon Mr Spritely,
 
-I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
+It's over. I've finally convinced the courts that your criminal negligence, environmental destruction, and wanton disregard for the lives of locals is impossible to ignore. Even if your project isn't cancelled, the delays will be huge, as will the fines. My only hope, and the reason I'm sending you this courtesy email, is that those that work at ForwardGreen reflect on their role in greenwashing greed and climate crimes. See you in court.
 
-Maria Cruz
+Miguel Lopez
 								"
-ReplyBody1 = "Afternoon Maria,
+ReplyBody1 = "Good afternoon Miguel,
 
-Thank you for your email. I don't recognise this Mr Gallardo, but from what you've told me he does not sound affiliated with us directly. I sincerely apologise that the forum about the site proposal has lead to this, but I cannot help with anything more. I would certainly contact your local police department as soon as possible. Please keep me updated about your situation.
+It seems that every day I learn of more harm and damage that is done in the name of the company I work for, and though it is easy to ignore at first when you live in a completely different world—I'm beginning to see just how intentional that is. It does weigh on my conscience, as does the guilt of knowing that the chances of accountability is slim. All I can offer is my apologies; I don't have the power for anything more. 
 
 Kind Regards,
 Dave Spritely, 
@@ -576,24 +576,22 @@ texture_filter = 1
 
 [node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_xuce3")]
 layout_mode = 2
-Sender_Name = "Ana Vásquez"
+Sender_Name = "Nayeli"
 ToAddress = "contactus@forwardgreen.co.uk"
-Subject = "Official Statement"
-PreviewText = "I'm contacting you"
-MainBody = "Dear ForwardGreen Official,
+Subject = "Now you see us"
+PreviewText = "We have been rendered"
+MainBody = "Dave.
 
-I'm contacting you to ask if ForwardGreen would like to give a statement on Project Lagoon Breeze. You may be aware that many locals have stated their desire to resist the construction, and already a group of activists seems to have formed to protest. We have already reached out to local police, who stated: \"we have experience handling disturbances like this, and are confident in our ability to quash any nuisance.\" Do you feel the same confidence, and what do you have to say to the disgruntled locals?
+We have been rendered unseen for too long. You are part of the machinery that performs this act of forced disappearance, whatever your role. The webs of power through which you navigate your life are attached in uncountable ways to the land and bodies of people like us. The people that mine the lithium for your turbines, the people whose land is taken, the people whose homes are washed away when the profit of your turbines lines the pockets of the fossil fuel beast—we are all connected. And you are too, though you may refuse to believe it. The destruction will get closer and closer until it is your home washed away, your crops that wither. Anyway, today we've plucked those threads. We've rendered ourselves visible again. It won't be the last time.
 
-I await your reply,
-Ana Vásquez"
-ReplyBody1 = "Good afternoon Ana, 
+Nayeli,
+Strike the Hydra's Heart"
+ReplyBody1 = "Hi Nayeli, 
 
-I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
+You are, of course, right. It is painful to admit, but I know more about the violence this project involves now. I must admit I still feel distant, but every discovery closes that gap against my will. I don't know what to do with this though. If I tell anyone at ForwardGreen they'll think I'm mad, and even my friends would think I'm weird for caring that much. And this is my job, it's not a luxary I can just throw away, if that makes sense? Still I'm rooting for your visibility.	
 
 Kind Regards,
-Dave Spritely, 
-UK Project Lead
-Forward Green"
+Dave Spritely, "
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
