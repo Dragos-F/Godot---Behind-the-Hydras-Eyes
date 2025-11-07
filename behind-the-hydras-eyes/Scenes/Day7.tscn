@@ -558,26 +558,25 @@ texture_filter = 1
 
 [node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_3oh5d")]
 layout_mode = 2
-Sender_Name = "Richard"
+Sender_Name = "Nayeli"
 ToAddress = "dspritely@forwardgreen.co.uk"
-Subject = "Advice"
-PreviewText = "A word for the wise"
-MainBody = "Good morning Dave, 
+Subject = "Do you own our blood?"
+PreviewText = "Do you know our history?"
+MainBody = "Good morning. 
 
-A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
+Do you know our history? What the greedy hydra has already eaten? My father and brother were murdered by the police for fighting against the mass seizure of land from regular people; for daring to challenge the injustice of theft and destruction. I have not escaped the state's cruelty. We will not accept your damage to our ecosystem, polluting of our water. We will not accept losing our livelihoods so you can produce energy for rich people far away and claim you're doing good. For speaking out, we will be brutalised by the police. You invite this upon us, and are you even aware of it? Do not worry, we will ensure the world will be.
 
-Richard.
-"
-ReplyBody1 = "Hi Patrick, 
+Do not turn your back on your actions,
+Nayeli, 
+Strike the Hydra's Heart"
+ReplyBody1 = "Good afternoon Nayeli,
 
-Thank you for the advice. I'll keep it in mind, while being respectul and helpful of course.
+I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
 
-Best,
+Yours respectfully,
 Dave Spritely, 
 UK Project Lead
-Forward Green
-
-"
+Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
 texture_filter = 1
@@ -585,20 +584,18 @@ autowrap_mode = 0
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
 visible = false
-Sender_Name = "Olu - Finance"
-Subject = "New budget approved"
-PreviewText = "In case you haven't"
+Sender_Name = "Miguel Lopez"
+Subject = "Lagoon Breeze EIA"
+PreviewText = "I hope you're well."
 MainBody = "Good afternoon Dave, 
 
-In case you haven't heard, we've approved extra budget for marketing, both in the UK and Mexico. The hope is that it'll ease any concerns. 
+I hope you're well. I also hope you haven't forgotten our correspondence, as I haven't. In case you have, let me remind you: you dodged my question and handed me to an account that never responded. Anyway, I wanted to let you know that I've investigated Project Lagoon Breeze and can find no evidence whatsoever of an Environmental Impact Assessment ever being conducted. I suspect you already knew that. Shame on you. Anyway, I'm writing to ask: can you put it in writing for me that you have no plans to conduct an EIA?								
+								
+Regards,
+Miguel Lopez"
+ReplyBody1 = "Hi Miguel, 
 
-Also, please ignore anything Moz says about what happened at the pub after you left.
-
-Kind regards
-Olu."
-ReplyBody1 = "Hi Olu, 
-
-Great news about the marketing, Jen is of course over the moon. I've not heard anything from Moz, don't worry.
+As I told you previously, I am not in a position to comment of the EIA submitted as part of the approval process. Now that we have more past the approval process (which, as previously stated includes governmental oversight of an EIA), we are not planning to carry out another. I can assure you that we are a company that cares about the environment as much as you, which is why we are so commited to building real renewable energy solutions. We've also committed to a budget to uplift the local community. Hopefully you can see that it would be more beneficial for us to work together than be in opposition.
 
 Yours respectfully,
 Dave Spritely, 
@@ -663,6 +660,7 @@ texture_filter = 1
 autowrap_mode = 0
 
 [node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_3oh5d")]
+visible = false
 layout_mode = 2
 Sender_Name = "Miracure"
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -766,9 +764,6 @@ visible = false
 [node name="Dave" parent="." instance=ExtResource("13_7uuwi")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
-
-[node name="AnimatedSprite2D" parent="Dave" index="0"]
-animation = &"idle"
 
 [node name="Specifics3" type="Node2D" parent="."]
 
