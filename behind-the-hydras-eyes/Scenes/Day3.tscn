@@ -711,6 +711,54 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+layout_mode = 0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+layout_mode = 0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+layout_mode = 0
+
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -774,9 +822,6 @@ visible = false
 [node name="Dave" parent="." instance=ExtResource("13_wrxha")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
-
-[node name="AnimatedSprite2D" parent="Dave" index="0"]
-animation = &"idle"
 
 [node name="Specifics3" type="Node2D" parent="."]
 
@@ -847,5 +892,5 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

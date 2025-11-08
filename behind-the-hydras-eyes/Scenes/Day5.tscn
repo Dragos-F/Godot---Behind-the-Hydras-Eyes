@@ -639,6 +639,102 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -789,5 +885,5 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail2"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

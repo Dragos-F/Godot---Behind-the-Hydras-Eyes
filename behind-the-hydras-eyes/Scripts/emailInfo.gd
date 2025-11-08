@@ -7,6 +7,7 @@ class_name EmailBrain
 @export var PreviewText:String
 @export_multiline var MainBody:String
 @export_multiline var ReplyBody1:String
+@export_multiline var ReplyBody2:String
 @onready var screen_ui: Control
 @export var alltexts:Array[String]
 @onready var own_label: RichTextLabel = $Button/RichTextLabel

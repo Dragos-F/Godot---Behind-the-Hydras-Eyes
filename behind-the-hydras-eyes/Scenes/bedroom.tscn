@@ -490,35 +490,108 @@ Dave.
 "
 boss = false
 
-[node name="Chart" parent="ScreenUI/Budget" index="2"]
-values = Array[float]([0.0, 0.0, 0.0, 0.0])
+[node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
+visible = true
+
+[node name="Chart" parent="ScreenUI/Budget/HomeBudget" index="2"]
 totalRent = 4950.0
 totalBills = 1350.0
-lifestyleCosts = Array[float]([730.0, 900.0, 3000.0])
 
-[node name="Label" parent="ScreenUI/Budget/Additional Costs/Panel/HBoxContainer" index="0"]
-text = "SUBSCRIPTIONS"
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
 
-[node name="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="0"]
-text = "The Financier Monthly"
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
 
-[node name="CheckButton2" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="1"]
-text = "Mistress XxMonyxX"
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
 
-[node name="CheckButton3" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="2"]
-text = "TV License "
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
 
-[node name="CheckButton4" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="3"]
-text = "DeliverNow Max"
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
 
-[node name="CheckButton5" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="4"]
-text = "NilePrime"
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
 
-[node name="SaveButton" parent="ScreenUI/Budget" index="7"]
-offset_left = -109.696
-offset_top = 56.998
-offset_right = -108.708
-offset_bottom = 56.712
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
@@ -545,7 +618,7 @@ offset_bottom = 516.98
 text = "\"Recent protests by nationalist groups have sparked outrage among phone-obsessed loony leftists. Is this reaction justified, or are the snowflakes being too sensitive?
 In a recent survey conducted on the streets of our capital, 3 out of 5 bald white men considered the protests \"\"necessary\"\" and a core part of representing \"\"Fundamental British Values\"\".
 
-A leading Minister originally called for an end to the protest, but was seen at the pub with the organisers of the movement on the same day. Earlier this week his stance changed, readvocating for free speech and right to protest, in the face of restricting laws on the freedom of assembly and association. When asked about his previous comments on the environmental march earlier in the year he said  \"For your weak midn to understand my thinking, you need to take some MindPower pills! I've got a pack right here with me. Everyone should buy some.\"
+A leading Minister originally called for an end to the protest, but was seen at the pub with the organisers of the movement on the same day. Earlier this week his stance changed, readvocating for free speech and right to protest, in the face of restricting laws on the freedom of assembly and association. When asked about his previous comments on the environmental march earlier in the year he said  \"For your weak mind to understand my thinking, you need to take some MindPower pills! I've got a pack right here with me. Everyone should buy some.\"
 					
 In an attempt to bring the nation together, the Prime Minister held a press conference to address worried voters. He spoke greatly of the rich, expansive history of our nation, and how restrictions on protests never stopped the country from achieving its glory. Ultimately, when asked about the increase in flags being flown and painted on public infrastructure he reassured the press: \"I don't fear any flag. Some of my best friends are flags\".							
 
@@ -585,8 +658,6 @@ offset_bottom = 361.0
 unique_name_in_owner = true
 script = ExtResource("37_scg7i")
 
-[connection signal="pressed" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
-[connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 
@@ -603,4 +674,4 @@ script = ExtResource("37_scg7i")
 [editable path="IndexChangeZone"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
