@@ -1,0 +1,53 @@
+Boss: Your first quarter's over. Congratulations! it's brilliant work we're doing, I hope you realise that.
+Boss: You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
+Boss: And another congratulations for leading your little part of the crew so well.
+Boss: As captain of the whole vessel, I thought I'd check in on my first mate's progress.
+Boss: You picked a location pretty sharpish. Which one are we going with again?
+- Five Vulture Meadows
+	if PermanentGlobal.LocationChoice ==  1.0:
+		Boss: Across the strait? I know the area well, great choice. I've spent more than one happy summer moored not far along the coast. The water is crystal.
+		jump BossQuestions
+	else:
+		jump WrongChoice
+- Sandbar Paradiso
+	if PermanentGlobal.LocationChoice == 2.0:
+		Boss: The old town? What a lovely place to pull out of the past and into a green future. I've already been of course; lot's of people in need of jobs there.
+		jump BossQuestions
+	else:
+		jump WrongChoice
+- Sunrise Farm
+	if PermanentGlobal.LocationChoice == 3.0:
+		Boss: Along the sand bar eh? What a lovely silhoutte they'll make against the sunset next time I'm sailing out there.
+		jump BossQuestions
+	else:
+		jump WrongChoice
+label WrongChoice
+Boss: Your boss rustles through some papers on his desk.
+Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another.
+Boss: I'm sure it's an easy mistake to make...
+Boss: [i]He raises an eyebrow at you, eyes glinting in warning[/i]
+Boss: ...for someone who's taken their eye off the ball, that is. And by ball, I mean sails or something. And by sails, I mean the bottom line. Do you understand?
+Dave: ...
+Boss: Anyway.
+jump BossQuestions
+label BossQuestions
+Boss: It looks like the project has been running smoothly since the meeting, so clearly I made an excellent choice in hiring you. Any questions before we wrap up?
+Boss: [i]The expression Mr Moore fixes you with clearly suggests that its time for you to leave[/i]
+- Actually, I was meaning to ask about some of these complaints I've been receiving...
+	Boss: Just insipid grumblings from opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out.
+	set {BossUpset} += 1.0
+	jump BossQuestions
+- Alex mentioned something about protests, is that something we need to worry about?
+	Boss: Protests? There's been some hippies at the lithium mines in Portugal, but that's not really our problem. The Mexican landowners are too paid off to protest. Don't worry about it kid.
+	set {BossUpset} += 1.0
+	jump BossQuestions
+- Shall we arrange more meetings for next quarter?
+	Boss: More meetings? Sure, sure, whatever. I've already put one in at the end of the quarter, so I'll see you then. Keep things ticking over.
+	set {BossUpset} += 1.0
+	jump BossQuestions
+- Thank you for your time!
+	if {BossUpset} < 2.0:
+		Boss: No worries! We're off to a great start with the project, and I'm excited to see how you'll grow with us at Forward Green.
+	else:
+		Boss: It's natural to ask questions, but let me be blunt\: it's not your job. Shut my door on your way out.
+[end_timeline]

@@ -1,0 +1,15 @@
+label Quarter 1
+Corkboard: Various important notices are pinned by the boss's door\: the number of the first aid officer, a sheet to report accidents, details of a counselling service.
+- Inspect the accident sheet
+	Corkboard: The first line is crossed out\: "I was in Amsterdam this weekend and fell into the canal \:("
+	Dave: I'm glad I wasn't here to have the conversation that followed that.
+	Corkboard: The second line notes a trip over a cable, the third a sprained back from moving office furniture.
+	Corkboard: A forth line has been crossed out by a thick pen, now unreadable. After that the sheet's blank.
+	jump Quarter 1
+- Look at the counselling service.
+	Corkboard: "All employees are entitled to a single half hour counselling session per year—that's how important mental health is to us!"
+	Dave: Wow, knowing that ForwardGreen cares so much about us makes me feel better already.
+	Dave: I should probably save my session 'till I really need it... a mindset that'll guarantee I never use it.
+	jump Quarter 1
+- Leave.
+[end_timeline]

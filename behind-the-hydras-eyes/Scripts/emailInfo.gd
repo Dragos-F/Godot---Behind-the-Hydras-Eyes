@@ -5,6 +5,9 @@ class_name EmailBrain
 @export var ToAddress:String
 @export var Subject:String
 @export var PreviewText:String
+@export var replyChoice:bool
+@export var choiceDialog1:String
+@export var choiceDialog2:String
 @export_multiline var MainBody:String
 @export_multiline var ReplyBody1:String
 @export_multiline var ReplyBody2:String
@@ -18,6 +21,7 @@ class_name EmailBrain
 func _ready() -> void:
 	own_label.text ="[b]"+Sender_Name+"[/b]\n" +Subject+"\n"+"[i]"+PreviewText+"[/i]"
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
@@ -32,5 +36,14 @@ func _on_button_pressed() -> void:
 	alltexts.append(Subject)
 	alltexts.append(MainBody)
 	alltexts.append(ReplyBody1)
-	screen_ui.open_email(alltexts,boss)
+	alltexts.append(ReplyBody2)
+	screen_ui.open_email(alltexts,boss,replyChoice)
 	screen_ui.selectedPreview = self
+	if replyChoice:
+		reset_choices()
+		Dialogic.VAR.Option1 = choiceDialog1
+		Dialogic.VAR.Option2 = choiceDialog2
+
+func reset_choices()->void:
+	Dialogic.VAR.Option1 = ""
+	Dialogic.VAR.Option2 = ""

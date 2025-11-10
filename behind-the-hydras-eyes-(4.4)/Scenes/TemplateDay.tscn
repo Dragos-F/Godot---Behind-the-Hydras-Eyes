@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://66ekdsykq5r4"]
+
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_rgewn"]
+[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_hq638"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="2_mchty"]
+[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="4_hbl6j"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="5_5usxc"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="7_p7x4l"]
+[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="57_mfps5"]
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="66_sbkap"]
+
+[node name="Main2" type="Node2D"]
+
+[node name="Fader" parent="." instance=ExtResource("66_sbkap")]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" parent="Fader" index="0"]
+position = Vector2(48.5, 33.5)
+
+[node name="Background" parent="." instance=ExtResource("2_hq638")]
+
+[node name="DayBrain" type="Node" parent="."]
+script = ExtResource("2_mchty")
+camera_zoom = Vector2(1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TypingBrain" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_hbl6j")
+
+[node name="ComputerScreen" type="Node2D" parent="."]
+visible = false
+z_index = 5
+
+[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_rgewn")
+
+[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture = ExtResource("57_mfps5")
+
+[node name="ScreenUI" parent="." instance=ExtResource("7_p7x4l")]
+unique_name_in_owner = true
+
+[node name="Dave" parent="." instance=ExtResource("5_5usxc")]
+unique_name_in_owner = true
+position = Vector2(-590, 314)
+
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+
+[editable path="Fader"]
+[editable path="Background"]
+[editable path="Background/Furniture/Corkboard/InteractableElement"]
+[editable path="Background/Furniture/OfficeDoor boss/InteractableElement"]
+[editable path="Background/Furniture/OfficeDoor enter/InteractableElement"]
+[editable path="Background/Furniture/OfficeFilingCabinet/InteractableElement"]
+[editable path="Background/Furniture/PosterGroup/InteractableElement"]
+[editable path="Background/Furniture/Jen1/JenInteractable"]
+[editable path="Background/Furniture/Alex/AlexInteractable"]
+[editable path="Background/Furniture/DaveDesk/DeskChair/DeskInteractable"]
+[editable path="Background/Kitchen/WaterCooler/InteractableElement"]
+[editable path="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
+[editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
+[editable path="Background/Kitchen/Clipboard/InteractableElement"]
+[editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/Budget/Chart"]
+[editable path="Dave"]

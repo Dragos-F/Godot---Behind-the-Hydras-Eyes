@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Behind the Hydras Eyes"
 run/main_scene="uid://55jkptvrl5w2"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://blg1wfoyjweap"
 config/windows_native_icon="res://Client Icon.ico"
 
@@ -39,11 +39,13 @@ directories/dch_directory={
 "Dave": "res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Desk Chair.dch",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Dirty Dishes.dch",
+"EmailDave": "res://Dialogue stuffs/Dialogic/Characters/Office/EmailDave.dch",
 "EntryDoor": "res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",
 "Front Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
+"Keyboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Keyboard.dch",
 "Moz": "res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",
 "Mum": "res://Dialogue stuffs/Dialogic/Characters/Mum.dch",
 "Olu": "res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",
@@ -67,6 +69,7 @@ directories/dtl_directory={
 "Corkboard": "res://Dialogue stuffs/Dialogic/Timelines/Office/Corkboard.dtl",
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Desk Chair.dtl",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Dirty Dishes.dtl",
+"EmailChoice": "res://Dialogue stuffs/Dialogic/Timelines/Office/EmailChoice.dtl",
 "EntryDoor": "res://Dialogue stuffs/Dialogic/Timelines/Office/EntryDoor.dtl",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Timelines/Office/FilingCabinet.dtl",
 "Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
@@ -94,8 +97,11 @@ variables={
 "CurrentDay": "Day01",
 "CurrentQuarter": "Quarter1",
 "Day4AlexEmails": false,
+"EmailChoice": 0.0,
 "JenReturn": false,
 "KettleReturn": 0.0,
+"Option1": "",
+"Option2": "",
 "TeaForTeam": false,
 "WatercoolerChar": "",
 "_2AlexReturn": false,

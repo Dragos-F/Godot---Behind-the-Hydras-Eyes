@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvalhn1hsu11y"
+path="res://.godot/imported/MA_PeopleSFX_CrowdAmbiance_8. Distant crowd, conversation.wav-5a6014b7a65051f74415a70db275e55a.sample"
+
+[deps]
+
+source_file="res://Sound/Crowd_Ambiance_5_source_1367553/MA_PeopleSFX_CrowdAmbiance_8. Distant crowd, conversation.wav"
+dest_files=["res://.godot/imported/MA_PeopleSFX_CrowdAmbiance_8. Distant crowd, conversation.wav-5a6014b7a65051f74415a70db275e55a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

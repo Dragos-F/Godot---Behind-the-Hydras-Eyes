@@ -1,0 +1,285 @@
+jump {CurrentDay}
+label Day05
+if {AlexReturn} == true:
+	if {AlexNayeli} == true:
+		jump Day05Nayeli
+	else:
+		jump Day05.1
+Alex: What a nightmare getting in today, right?
+Alex: I was at Shingle station this morning when the whole line just got cancelled. I tried hopping on a bus, but the works on the burst mains pipe down the road are still going.
+Dave: Yeah, I got the Annabel line in, things were pretty smooth, and the walk over wasn't too bad...
+Alex: It just felt like I couldn't get anywhere—delays, announcements, traffic, delays, announcements, traffic...
+Alex: It's crazy when your daily commute just overrun by construction. Makes it unrecognisable sometimes.
+- That sounds rough
+- I used to have a long commute...
+Alex: Back to work though, I've got a bunch of compliance letters to file away to the portfolio projects.
+Alex: Richard sent them through and he said I gotta help him out since a few of the team have now left.
+Alex: Hope that's alright wih you?
+- Oh, yeah, whatever the company needs	
+	Alex: Yeah, thanks. At least it gets me away from filing architectural plans.
+- I'm sure he can find his own time to do that, I need you on Lagoon Breeze.	
+	Alex: Oh, yep, sure. I'll ....send the portfolio back to him and tell him you're keeping me busy.
+- What's been happening in legal?	
+	Alex: Ah. Me and a couple of the boys from legal used to go play pool every other Saturday at the Wellington.
+	Alex: One of them had their probation extended twice, and then let go last week for "Not embodying company values"
+	Alex: The other is suspended and going through a disciplinary for coming into work drunk 6 times in 4 weeks.
+	Dave: Right.... that sounds like Richard's having a rough time then
+	Alex: Ah, I think he was looking to get rid of them to be honest. Never liked Torvil and Dean
+	Dave: : ...Torvill and Dean?
+	Alex: Yeah, the guys from Legal.
+	Dave: Right... I'll get back to my emails then.
+set {AlexReturn} = true
+[end_timeline]
+label Day05.1
+Alex: We're not far off the land settlement being complete. Anything you need before the EoQ?	
+- Do we have some sort of EoQ Report?	
+	Alex: Ah.... *Alex pretends to click through some tabs of the shared company intranet*
+	Alex: No, don't think so. We don't really make them. Big Pat tends to do them and then present them at the shareholder meetings
+	Alex: The things you hear about those meetings by the way....and the nights out after...all true.
+- I just wanted to check in with you and see if I could support anything	
+	Well, I wouldn't wanna take you away from your important management. Whatever I've got is less important than your business.
+	Plus, I don't wanna sound like I'm struggling. Gotta keep it up for that summer bonus.
+- Is the paperwork you deal with all in order?	
+	Alex: I seem to be getting complaints about inaccurate EIP's, incomplete files with local authorities and such. Is everything good on your end?
+	Alex: All good with me! All that sounds like either Jen's problem, or i don't know, probably Legal and compliance? 
+	Alex: I'm mostly just here to keep all the paperwork in check for the project development. That being said, don't ask me for copies of anything.
+[end_timeline]
+	
+label Day05Nayeli
+Dave: I've got this email from a "Nayeli?" Do yoou know anything about her?
+Alex: *Alex makes a pained groan sound*
+Alex: Ugh, not her again
+Alex: She got involved with a different project in the area. It was originally going to be a quarry, mostly for gravel production to one of our investor's developments that needed more supply.
+Alex: She was quite the pain. Did I mention the guy we had before you? That quit after dealing with a bunch of complaints?
+Alex: Yeah, she would drive Nigel crazy. I saw one of the emails she sent. Super dramatic, just absolute bollocks. 
+- She seemd quite passionate about it all.
+	Alex: Well, if she was serious about it, she would attend the local council meetings we have to organise anyway
+	Alex: No point in her typing up some flowery threats she can't enact anyway. There's proper channels for these sorts of complaints
+- Yeah, I guess she seems a bit eccentric
+	Alex: She's definitely weird. She represents some group of deranged nature lovers, that pray to forest spirits or whatever
+	Alex: I just wouldn't take anything from her seriously
+[end_timeline]
+
+
+
+label Day04
+if {AlexReturn} == true:
+	jump Day04.1
+elif :
+	jump Day04Pre_Emails
+Dave: Do you know about this "Entreprenurial alliance" that's just messaged me? Or a Mr. Perez?
+Alex: Oh, yeah. Mr Perez is one of the landowners that we purchased our lots from. The alliance is largely an investment vehicle for the richest in the area.
+Alex: They're a very informal group, since most companies proposing megaprojects in the region, wind farms or otherwise, won't make deals with organised groups.
+Alex: It's a very divide-and-conquer mentality to the locals. Anyway, because of this the Alliance mostly just helps landlords acquire land, rather than negotiating for them.
+Alex: Traditionally about three quarters of land around the lagoon was communal, with locals resisting privatisation. This has been rapidly changing though.
+Alex: Forty years ago the guy in charge of protecting the communal lands was assassinated, and the role has remained empty since due to political intimidation.
+Alex: Landowners and foreign companies launched legal battles to claim swathes of the communal land.
+Alex:  Buying communal land and selling it to international firms is how Mr Perez made his fortune.
+Dave: Wait, we're building on dodgily obtained communal land?
+Alex: I didn't say it was dodgy; Mr Perez obtained the land, legally, and sold it to a willing buyer, legally. And we have the capital to put the land to do more good.
+- Okay, I guess I'm happy we're doing the right thing...
+	Alex: Don't let fixation on the perfect hinder the doing of good. More green energy can only be a positive, surely.
+- Couldn't we have done it in a fairer way?
+	Alex: The moral question is above my paygrade, but it seems better to me to good good than handwring about the risks.
+- Legal isn't the same as moral. We should have built elsewhere.
+	Alex: Unfortunately for your newfound moral compass, we've already started now. Don't make the boss think you've got cold feet.
+set {AlexReturn} = true
+[end_timeline]
+label Day04Pre_Emails
+Alex: I'm up to my elbows in land survey replots and sales contracts.
+Alex:We are waiting to be in possession of almost a small state's worth of land, as well as local government ceading some coastline, seabed territory we'll also merge into the project.
+Alex:And I'm the lucky sod processing it all...
+- Can I help with anything?
+	Alex: Ah, don't stress. That's what you pay me to do. I'm just remarking on the influx of it all in the last two weeks. What you could really do is clone me twice over and put us all to work!
+- Well, keep on it
+	Alex: *Alex gives you a brief look, before swinging his chair back to the many tabs he has open*
+set {AlexReturn} = true
+[end_timeline]
+label Day04.1
+Alex: Try not to overthink Jen's budget too much! Splashing around some cash like this should help ease tension wherever it goes.
+Alex: How's the allocation going?
+- Haven't started it yet
+	Alex: Oh, no rush. I think Olu was wanting the approved version back by next week, so don't pull a muscle or anything.
+- Pretty good, I think it's all in hand.
+	Alex: Sound of progress, that is. Glad we've got you managing.
+
+[end_timeline]
+label Day03
+if {AlexReturn} == true:
+	if {_2AlexReturn} == true:
+		jump Day03.2
+	else:
+		jump Day03.1
+Alex: Mornin'! Did you see the update from Olu? Jen's been talking about it all morning.
+- Yeah, great to hear!
+	Alex: Sure is. Good to know we're spending money on the things that matter
+- I haven't gotten to my emails yet.
+	Alex: Ah, well, I won't spoil anything then. Good news on the horizon though!
+Alex: Anyway, I think Q2 is off to a good start!
+Alex: I haven't heard any complaints from senior management, and all my spreadsheets are mostly green, so that must be a good sign.
+Alex: Happy with how the projects moving along?
+- Yep, Construction should start soon, so add that to the green spreadsheet
+	Alex: Glad to hear! There was some murmurings about local pressure to reopen negotiations, but it seems quashed now.
+- A few snags but we're marching on now
+	Alex: Yeah, I did catch murmurings of some pressure on the government to renegotiate. But I'm glad we're moving ahead with approval now.
+- Wait, let's go back to the Olu news....
+	Alex: No need to worry. The marketing budget got approved, just another milestone in the development.
+Alex: Just picture the turbines up and spinning, generating the renewable good stuff. Let yourself feel good about doing your part.
+Alex: Or if not then, hey, maybe think of the potential summer bonus! Whatever works for you.
+- Summer bonus?
+	Alex: Investors like ground being broken without much fuss, so expect some grease for your wheels as thanks now building is set to begin.
+- I've never really spent too long thinking about a turbine.
+	Dave: The view from up there must be pretty nice.
+	Alex: Oh yeah. We did a site visit at spot in Spain, and got to climb to the maintenance platform.
+	Alex: A week earlier someone apparently got trapped at the top when the main rotor caught fire, but they cleaned the place up real well.
+Alex: Anyway, I've got some tasks to get on with, but if you have any questions about money or construction from here on out, just let me know.
+set {AlexReturn} = true
+[end_timeline]
+label Day03.1
+Alex: Ah, the man with the decisions, how's it going?
+- Actually, local complaints got me thinking.... | [=""]
+	Alex: Don't overthink this one. I don't really get them since my email isn't public on the website, but just respond according to policy.
+	Alex: We had a guy stress himself into leaving because of complaints on a previous project.
+- Oh you know, it's ticking along.
+	Alex: Glad to hear it. That's why they pay you the big bucks.
+set {_2AlexReturn} = true
+[end_timeline]
+label Day03.2
+Alex: Anything else I can do for now?
+- Do we have anything on site impact to local populations?
+	Alex: Eh, there might be some stuff in the filing cabinet, but I really don't concern myself with that.
+	Alex: If the spreadsheet's groovy, I haven't a scoobie.
+- How's the swans been?
+	Alex: No injured ones I'm afraid, but hanging out at the park's nice.
+	Alex: Better than sitting lonely at home.
+- Anything else going on I should know about?
+	Alex: Ah, probably not. If you haven't heard it in an email, it's probably not worth worrying about.
+[end_timeline]
+label Day01
+if {AlexReturn} == true:
+	jump Day01.2
+Alex: ...
+Alex: …Oh, sorry mate! I got sucked into this spreadsheet. How can I help you?
+Alex: Oh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...well, all the odd bits. Where’ve you joined us from?
+- My flat.
+	Alex: What? I meant, like, where was your last job?
+	Dave: I know, sorry. I took some time off and went back to uni, so I'm not coming from anywhere in particular.
+	Alex: New blood, eh? Well, the whole team is pretty green. And hey, maybe that's a good thing in our industry.
+	Alex: [shake rate=20.0 level=5 connected=1]and definitely not a sign of poor retention rates spurred by bad leadership.[/shake]
+	Dave: Hm?
+- I'm an ex-teacher!
+	Alex: I should've guessed, our recruitment team are drowning in people fleeing the education sector.
+	Dave: That many of us?
+	Alex: I've heard they practically have to shoo them off the premises with a broom, they're that desperate.
+	Dave: Yeah...I can believe it.
+- Little England Petroleum
+	Alex: Ah, one of our sponsors. You know how things work then.
+	Alex: Keep the wheels greased and the money flowing. And hopefully pollute just a liiiittle bit less than LEP.
+Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
+set {teaNotif} = true
+Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
+set {AlexReturn} = true
+[end_timeline]
+label Day01.2
+Alex: Hey. Looks like you're settling in quick, good for you.
+label Day01.2 Choice1
+Alex: What can I help you with?
+- What do I need to know?
+	Alex: Very little, honestly. I'm sure Moz will run you through everything.
+	Alex: Basically, we're poised to start construction, and can get everything moving as soon as we've locked in a location.
+	Alex: There's three contenders, all around the same lagoon. At the meeting, just sit, listen, and give feedback if needed. Nothing you can't handle.
+	jump Day01.2 Choice1
+- Who's going to be at the meeting?
+	Alex: Moz is presenting. He's...hm. I can't even remember his official title. Nuisance officer?
+	Dave: Oh, is there some sort of problem I should know about?
+	Alex: Nah, I'm just kidding. He's high energy and not very professional, but Patrick let's it slide. You'll see the dynamic.
+	Alex: Besides him...Well, Richard will be out of his evil lair. He's the head of the legal department.
+	Alex: Janet should be...no, my bad. Olu's head of finance at the minute, he'll be there. I've not met him yet so can't help you there.
+	Dave: And Patrick?
+	Alex: Is Patrick. He "says it like it is"—one of those sorts. Suck up to him if you like, he always likes that. Otherwise, just try not to annoy him.
+	jump Day01.2 Choice1
+- Not a the moment, thanks.
+set {AlexReturn} = true
+[end_timeline]
+if {AlexReturn} == false:
+	set {AlexReturn} = true
+	Alex: ...
+	Alex: …oh, sorry! I got sucked into this spreadsheet. How can I help you?
+	Alex: Ohh, you're the new project lead? Nice to meet you boss! I'm Alex, I do...well, all the odd bits. Where’ve you joined us from?
+	- Oh nowhere; I went back to uni.
+		Alex: New blood, eh? Well, the whole team is pretty green. And hey, maybe that's a good thing in our industry.
+		Alex: [shake rate=20.0 level=5 connected=1]and definitely not a sign of poor retention rates spurred by bad leadership[/shake]
+		Dave: Hm?
+	- I'm an ex-teacher!
+		Alex: I should've guessed, our recruitment team are drowning in those fleeing the education sector.
+		Dave: That many of us?
+		Alex: I've heard recruitment practically have to shoo them off the premises with a broom, they're that desperate.
+		Dave: Yeah...I can believe it.
+	- Little England Petroleum
+		Alex: Ah, one of our sponsors. You know how things work then.
+		Alex: Keep the wheels greased and the money flowing. And hopefully pollute just a liiiittle bit less than LEP.
+	Alex: Well, we're happy to have you anyway. Grab a cup of tea or something and acquaint yourself with your computer.
+	Alex: You're hitting the ground running because there's a boardroom meeting today to finalise the construction plans. Let me know if I can answer any questions before you go.
+	[end_timeline]
+else:
+	Alex: Hey. Looks like you're settling in quick, good for you.
+	label Day01.2 Choice1
+	Alex: What can I help you with?
+	- What do I need to know?
+		Alex: Very little, honestly. I'm sure Moz will run you through everything.
+		Alex: Basically, we're poised to start construction, and can get everything moving as soon as we've locked in a location.
+		Alex: There's three contenders, all around the same lagoon. At the meeting, just sit, listen, and give feedback if needed. Nothing you can't handle.
+		jump Day01.2 Choice1
+	- Who's going to be at the meeting?
+		Alex: Moz is presenting. He's...hm. I can't even remember his official title. Nuisance officer?
+		Dave: Oh, is there some sort of problem I should know about?
+		Alex: Nah, I'm just kidding. He's high energy and not very professional, but Patrick let's it slide. You'll see the dynamic.
+		Alex: Besides him...Well, Richard will be out of his evil lair. He's the head of the legal department.
+		Alex: Janet should be...no, my bad. Olu's head of finance at the minute, he'll be there. I've not met him yet so can't help you there.
+		Dave: And Patrick?
+		Alex: Is Patrick. He "says it like it is"—one of those sorts. Suck up to him if you like, he always likes that. Otherwise, just try not to annoy him.
+		jump Day01.2 Choice1
+	- Not a the moment, thanks.
+	[end_timeline]
+label Day02
+Alex: Hey. Everything's chugging along, so whatever choice you made must've been fine.
+Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,
+Alex: ...and it sounds like the building contractors are happy to begin as soon as the paperwork is ready—or even earlier.
+Alex: The price of certain raw goods, particularly lithium and cobalt, is all over the place, so construction costs will be a bit higher than forecasted. But that's fine.
+Alex: It hasn't helped that there's been protests at our supplier's mines, but we live in an unpredictable world, Dave. Still, we're on track.
+
+label Day02 Info01
+- Protests at the mines?
+	Alex: Oh yeah. A few new mines have had their openings delayed because locals were unhappy about the land use.
+	Alex: Something about how destructive and polluting the mines are, and how the companies lied about the effect on ecosystems.
+	- That's bad...right?
+		Alex: Sure. Still, our turbines need these materials, so someone's got to supply them.
+	- I feel like I detect irony...
+		Alex: That shiny new climate solutions rely on exploitative extractivism that produce huge amounts of CO2 and environmental damage?
+		Dave: Yeah, that.
+		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
+		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do <i>some</i> good.
+	jump Day02 Info01
+- What does "or even earlier" mean?
+	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
+	Dave: And "moving quicker" means...?
+	Alex: Nothing ominous. Just starting to fence off the areas while the purchase is being settled, in case any farmers get any big ideas about causing trouble.
+	label Day02 Info02
+	Dave: Right...
+	- Couldn't they just climb the fence?
+		Alex: The barbed wire, watchtowers, and guards help to dissuade against that.
+		Dave: That sounds like more than just a fence...
+		Alex: Legally speaking, it's nothing more than a temporary fence to ensure expediency.
+		jump Day02 Info02
+	- "Big ideas"?
+		Alex: There's been a few unfortunate incidents in the past in this region, and we're keen to avoid anything like that.
+		Alex: People getting hurt because provocateurs have riled people up about "harm to the earth" and "fair compensation".
+		Alex: It's too much to go into now, but there are probably some folders in the filing cabinet you can check.
+		jump Day02 Info02
+	- Sounds reasonable enough, yeah.
+		Alex: Reasonableness and efficiency, my two middle names.
+	jump Day02 Info01
+- Thanks for the update.
+	Alex: No worries. And I know you've got a meeting with the big boss later, so I've shared a data tracker file with you. Any questions, just let me know.
+Dave: Stunning, thanks Alex!
+[end_timeline]

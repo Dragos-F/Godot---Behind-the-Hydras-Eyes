@@ -1,0 +1,889 @@
+[gd_scene load_steps=51 format=3 uid="uid://bwesthwpicym7"]
+
+[ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_h2npb"]
+[ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_meadn"]
+[ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_fj3au"]
+[ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_t6dyq"]
+[ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_v76qe"]
+[ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_2nrrg"]
+[ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_u6ljm"]
+[ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_tw3us"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_436ib"]
+[ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_53qxh"]
+[ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_j53rr"]
+[ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_lauko"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_e8b16"]
+[ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="14_hsnp8"]
+[ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_m7jpg"]
+[ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_ceivk"]
+[ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_ui2j1"]
+[ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="18_5h2hh"]
+[ext_resource type="Texture2D" uid="uid://wxeyb6rbnkjl" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss blinking-Sheet.png" id="19_lkueq"]
+[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="20_ld0to"]
+[ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="21_6l3lm"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="22_rshjd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
+atlas = ExtResource("4_t6dyq")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5tpt"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(0, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf4m3"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(90, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u020q"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(180, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hph1"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(270, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwmwp"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(360, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkchc"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(450, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb88j"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(540, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttuwe"]
+atlas = ExtResource("5_v76qe")
+region = Rect2(630, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsmfe"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy5xc"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xk2j"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqkss"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c14by"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38uq3"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7cuo"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmapi"]
+atlas = ExtResource("6_2nrrg")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtf6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fj3au")
+}],
+"loop": false,
+"name": &"idle_Alex",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjnw6")
+}],
+"loop": true,
+"name": &"idle_Jen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5tpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf4m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u020q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hph1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwmwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkchc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb88j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttuwe")
+}],
+"loop": true,
+"name": &"walking_Alex",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsmfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy5xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xk2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqkss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c14by")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38uq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7cuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmapi")
+}],
+"loop": true,
+"name": &"walking_Jen",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_fy5xc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle_Alex"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_wf4m3"]
+resource_name = "away_Alex"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-14.5, 47), Vector2(-190, -16.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking_Alex"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_1hph1"]
+resource_name = "away_Jen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-14.5, 47), Vector2(-96, -74)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking_Jen"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_gsmfe"]
+resource_name = "move_Alex"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173.5, -13), Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0333333, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walking_Alex", &"idle_Alex"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_u020q"]
+resource_name = "move_Jen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-96, -74), Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walking_Jen", &"idle_Jen"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3xk2j"]
+_data = {
+&"RESET": SubResource("Animation_fy5xc"),
+&"away_Alex": SubResource("Animation_wf4m3"),
+&"away_Jen": SubResource("Animation_1hph1"),
+&"move_Alex": SubResource("Animation_gsmfe"),
+&"move_Jen": SubResource("Animation_u020q")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtf6l"]
+atlas = ExtResource("19_lkueq")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jm43"]
+atlas = ExtResource("19_lkueq")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sxu1"]
+atlas = ExtResource("19_lkueq")
+region = Rect2(1920, 0, 960, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vxql"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtf6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jm43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sxu1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fader" parent="." instance=ExtResource("1_h2npb")]
+scale = Vector2(2, 2)
+
+[node name="Background" parent="." instance=ExtResource("2_meadn")]
+
+[node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
+YarnNodeLink = "Corkboard"
+
+[node name="InteractableElement" parent="Background/Furniture/OfficeDoor boss" index="0"]
+YarnNodeLink = "BossDoor"
+
+[node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
+textToDisplay = "Dingy Apartment"
+YarnNodeLink = "EntryDoor"
+ScenePath = "res://Scenes/bedroom.tscn"
+
+[node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
+position = Vector2(15, -32)
+
+[node name="InteractableElement" parent="Background/Furniture/PosterGroup" index="0"]
+YarnNodeLink = "Posters"
+
+[node name="Jen1" parent="Background/Furniture" index="13"]
+z_index = -1
+
+[node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
+position = Vector2(22, -43.5)
+
+[node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
+position = Vector2(19.5, -33.5)
+
+[node name="AnimatedSprite2D" parent="Background/Furniture/Alex" index="1"]
+animation = &"drink_tea"
+
+[node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
+Type = 1
+
+[node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
+YarnNodeLink = "WaterCooler"
+
+[node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
+YarnNodeLink = "Clipboard"
+
+[node name="StandingAlex" type="Node2D" parent="Background"]
+visible = false
+position = Vector2(121, 12)
+scale = Vector2(2, 2)
+
+[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex"]
+texture_filter = 1
+position = Vector2(-14.5, 47)
+sprite_frames = SubResource("SpriteFrames_gtf6l")
+animation = &"idle_Alex"
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex"]
+libraries = {
+&"": SubResource("AnimationLibrary_3xk2j")
+}
+
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+script = ExtResource("7_u6ljm")
+BossScreen = NodePath("../BossScreen")
+BossDialogue = NodePath("../BossScreen/BossAnchor")
+DaveAnchor = NodePath("../Dave/DialogueMarker")
+BossAnchor = NodePath("../BossScreen/BossAnchor")
+Camera = NodePath("../Camera2D")
+camera_zoom = Vector2(1.5, 1.5)
+standing_Alex = NodePath("../Background/StandingAlex")
+Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
+Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
+AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
+JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
+PauseMenu = NodePath("../Pause")
+plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true
+
+[node name="TypingBrain" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_tw3us")
+
+[node name="ComputerScreen" type="Node2D" parent="."]
+visible = false
+z_index = 5
+
+[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("9_436ib")
+
+[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+texture_filter = 1
+texture = ExtResource("10_53qxh")
+
+[node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
+unique_name_in_owner = true
+visible = false
+texture_filter = 1
+emailsProgressionQuota = 3
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
+texture_filter = 1
+
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+Sender_Name = "Maria Cruz"
+Subject = "Compensation"
+PreviewText = "I don't know what"
+MainBody = "Hello Mr Spritely
+
+I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
+
+Maria Cruz
+								"
+ReplyBody1 = "Afternoon Maria,
+
+Thank you for your email. I don't recognise this Mr Gallardo, but from what you've told me he does not sound affiliated with us directly. I sincerely apologise that the forum about the site proposal has lead to this, but I cannot help with anything more. I would certainly contact your local police department as soon as possible. Please keep me updated about your situation.
+
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+Forward Green"
+boss = false
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+texture_filter = 1
+
+[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_lauko")]
+layout_mode = 2
+Sender_Name = "Ana Vásquez"
+ToAddress = "contactus@forwardgreen.co.uk"
+Subject = "Official Statement"
+PreviewText = "I'm contacting you"
+MainBody = "Dear ForwardGreen Official,
+
+I'm contacting you to ask if ForwardGreen would like to give a statement on Project Lagoon Breeze. You may be aware that many locals have stated their desire to resist the construction, and already a group of activists seems to have formed to protest. We have already reached out to local police, who stated: \"we have experience handling disturbances like this, and are confident in our ability to quash any nuisance.\" Do you feel the same confidence, and what do you have to say to the disgruntled locals?
+
+I await your reply,
+Ana Vásquez"
+ReplyBody1 = "Good afternoon Ana, 
+
+I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
+
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_lauko")]
+layout_mode = 2
+Sender_Name = "Nayali"
+ToAddress = "contactus@forwardgreen.co.uk"
+Subject = "Do you know your giants bleed?"
+PreviewText = "We are the voice of"
+MainBody = "To whom it concerns,
+
+We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
+
+Do not turn your back on us,
+Nayali, Spokesperson of Strike the Hydra's Heart"
+ReplyBody1 = "Dear Nayali,
+
+I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of Forward Green. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
+
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
+texture_filter = 1
+
+[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
+texture_filter = 1
+
+[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" index="0"]
+texture_filter = 1
+
+[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
+texture_filter = 1
+
+[node name="Hint" parent="ScreenUI/MainEmail" index="4"]
+texture_filter = 1
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 23.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 31.0
+
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 392.0
+offset_bottom = 141.0
+
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+offset_left = 13.9025
+offset_top = -49.2858
+offset_right = 557.902
+offset_bottom = 223.714
+scale = Vector2(0.8, 0.8)
+text = "Train turmoil: troubled transport torpedoes traveller timetables"
+autowrap_mode = 2
+
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+offset_left = 25.3403
+offset_top = 124.552
+offset_right = 455.34
+offset_bottom = 531.552
+
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+text = "For the third time this week, serious delays to all major transport routes have put a dampener on the spirits of hopeful commuters and tourists. This comes one week after ticket prices were hiked 20% in a move that cabinet members have described as \"the sort of tough choices that help to toughen up our long-pampered underclass\". 									
+
+We reached out via phone to our mate that runs SuperTrain, the largest affected rail company, and he said \"[inaudible grumbling]\". Our experts understand this to mean that the blame lies with unions selfishly resisting sixteen hour shifts.									
+				
+Our following investigation on the causes has revealed chronic underfunding on repairs, maintainance, and expansion in line with demand; a workplace environment shaped by exhaustion and toxicity; and a constant failure to recruit adequate staff. We therefore conclude that SuperTrain were correct in their assement that the greedy staff is at the root cause of the issue									
+									"
+
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+text = "◦ Ticket price soaring
+◦ SuperTrain Interview
+◦ Unions to Blame"
+
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+theme_override_constants/separation = 24
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(5, 0)
+text = "And the little one says roll over: childrens hospitals declared full"
+autowrap_mode = 2
+
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(5, 0)
+text = "Air has suprising nutrional value, minister explains to food banks"
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+position = Vector2(184.96, 117.856)
+anim = "Update"
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
+offset_left = -4.76745
+offset_top = 231.784
+offset_right = 95.2325
+offset_bottom = 260.784
+
+[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
+visible = false
+
+[node name="Dave" parent="." instance=ExtResource("13_e8b16")]
+unique_name_in_owner = true
+position = Vector2(-590, 314)
+
+[node name="AnimatedSprite2D" parent="Dave" index="0"]
+animation = &"phone_up"
+
+[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+script = ExtResource("14_hsnp8")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
+BossNotif = NodePath("../Notifications/BossDoor")
+BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
+brain = NodePath("../DayBrain")
+
+[node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+visible = false
+z_index = 10
+script = ExtResource("15_m7jpg")
+sprite = NodePath("Sprite2D")
+frown = ExtResource("16_ceivk")
+contempt = ExtResource("17_ui2j1")
+
+[node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+texture_filter = 1
+texture = ExtResource("18_5h2hh")
+
+[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen"]
+visible = false
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0vxql")
+frame_progress = 0.680305
+
+[node name="BossAnchor" type="Node2D" parent="BossScreen"]
+position = Vector2(499, -250)
+
+[node name="Notifications" type="Node2D" parent="."]
+
+[node name="Alex" parent="Notifications" instance=ExtResource("20_ld0to")]
+position = Vector2(-552, -256)
+frame_progress = 0.801034
+
+[node name="Jen" parent="Notifications" instance=ExtResource("20_ld0to")]
+position = Vector2(-138, -470)
+
+[node name="Door" parent="Notifications" instance=ExtResource("20_ld0to")]
+visible = false
+position = Vector2(-803, 161)
+
+[node name="BossDoor" parent="Notifications" instance=ExtResource("20_ld0to")]
+visible = false
+position = Vector2(813, -338)
+frame = 6
+frame_progress = 0.719289
+
+[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]
+visible = false
+AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
+JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
+
+[node name="Pause" parent="." instance=ExtResource("22_rshjd")]
+
+[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
+[connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
+[connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+
+[editable path="Fader"]
+[editable path="Background"]
+[editable path="Background/Furniture/Corkboard/InteractableElement"]
+[editable path="Background/Furniture/OfficeDoor boss/InteractableElement"]
+[editable path="Background/Furniture/OfficeDoor enter/InteractableElement"]
+[editable path="Background/Furniture/OfficeFilingCabinet/InteractableElement"]
+[editable path="Background/Furniture/PosterGroup/InteractableElement"]
+[editable path="Background/Furniture/Jen1/JenInteractable"]
+[editable path="Background/Furniture/Alex/AlexInteractable"]
+[editable path="Background/Furniture/DaveDesk/DeskChair/DeskInteractable"]
+[editable path="Background/Kitchen/WaterCooler/InteractableElement"]
+[editable path="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
+[editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
+[editable path="Background/Kitchen/Clipboard/InteractableElement"]
+[editable path="ScreenUI"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail2"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
+[editable path="Dave"]

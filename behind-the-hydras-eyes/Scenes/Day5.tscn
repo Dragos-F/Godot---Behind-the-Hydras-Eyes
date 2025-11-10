@@ -555,6 +555,9 @@ texture_filter = 1
 Sender_Name = "Maria Cruz"
 Subject = "Compensation"
 PreviewText = "I don't know what"
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
 MainBody = "Hello Mr Spritely
 
 I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
@@ -569,7 +572,9 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
-boss = false
+ReplyBody2 = null
+alltexts = null
+boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
@@ -580,6 +585,9 @@ Sender_Name = "Ana Vásquez"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Official Statement"
 PreviewText = "I'm contacting you"
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
 MainBody = "Dear ForwardGreen Official,
 
 I'm contacting you to ask if ForwardGreen would like to give a statement on Project Lagoon Breeze. You may be aware that many locals have stated their desire to resist the construction, and already a group of activists seems to have formed to protest. We have already reached out to local police, who stated: \"we have experience handling disturbances like this, and are confident in our ability to quash any nuisance.\" Do you feel the same confidence, and what do you have to say to the disgruntled locals?
@@ -594,6 +602,9 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
+ReplyBody2 = null
+alltexts = null
+boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
@@ -605,6 +616,9 @@ Sender_Name = "Nayali"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Do you know your giants bleed?"
 PreviewText = "We are the voice of"
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
 MainBody = "To whom it concerns,
 
 We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
@@ -619,6 +633,9 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
+ReplyBody2 = null
+alltexts = null
+boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
@@ -636,8 +653,50 @@ texture_filter = 1
 [node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
 texture_filter = 1
 
+[node name="Send" parent="ScreenUI/MainEmail" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 75.0
+
+[node name="Reply" parent="ScreenUI/MainEmail" index="3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 75.0
+
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
+
+[node name="Panel" parent="ScreenUI/Budget/HomeBudget/Additional Costs2" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 484.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/HomeBudget/BoxContainer/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/BoxContainer/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
 offset_left = 0.0
@@ -735,6 +794,14 @@ offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
+[node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -792,8 +859,35 @@ offset_top = 231.784
 offset_right = 95.2325
 offset_bottom = 260.784
 
+[node name="Emails" parent="ScreenUI/BottomBar" index="0"]
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Internet" parent="ScreenUI/BottomBar" index="2"]
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ShutDown" parent="ScreenUI/BottomBar" index="3"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Dave" parent="." instance=ExtResource("13_e8b16")]
 unique_name_in_owner = true

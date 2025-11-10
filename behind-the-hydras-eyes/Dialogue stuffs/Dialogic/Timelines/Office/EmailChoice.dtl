@@ -1,0 +1,6 @@
+Keyboard: Hm.... i feel destiny torn asunder here. The paths lie before us.
+- {Option1}
+	set {EmailChoice} = 1.0
+- {Option2}
+	set {EmailChoice} = 2.0
+[end_timeline]

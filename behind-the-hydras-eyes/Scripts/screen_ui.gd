@@ -6,6 +6,7 @@ class_name Computer
 @export var ToBox:RichTextLabel
 @onready var send: Button = $MainEmail/Send
 @onready var reply: Button = $MainEmail/Reply
+@onready var choiceEmail: bool = false
 @onready var selectedTexts:Array[String]
 @onready var typing_brain: Node = %TypingBrain
 @onready var hint_text: RichTextLabel = $MainEmail/Hint
@@ -18,6 +19,7 @@ class_name Computer
 @export var Budget:Panel
 @export var BrowserThing:Panel
 @export var emailNotif:Node2D
+@export var keyboardTarget:Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,19 +37,22 @@ func _process(_delta: float) -> void:
 	if emailsDone == emailsProgressionQuota:
 		emailNotif.visible = false
 	
-func open_email(text:Array[String],boss:bool)->void:
+func open_email(text:Array[String],boss:bool,choice:bool)->void:
+	choiceEmail = false
 	selectedTexts = text.duplicate(true)
 	Sender.text = text[0]
 	ToBox.text = text[1]
 	MainEmailBody.text ="[b]"+text[2]+"[/b]\n\n" + text[3]
 	MainEmailBody.visible_ratio = 0.9
 	MainEmailBody.visible_ratio = 1
+	choiceEmail = choice
 	if (!boss):
 		reply.visible = true
 		reply.disabled = false
 	else:
 		reply.visible = false
 		reply.disabled = true
+
 		
 	
 
@@ -55,19 +60,50 @@ func _on_reply_pressed() -> void:
 	reply.visible = false #set the reply button false
 	reply.disabled = true
 	
-	Sender.text = selectedTexts[2]
-	ToBox.text = selectedTexts[0]
-	MainEmailBody.visible_characters = 0
-	hint_text.visible = true
-	MainEmailBody.text = selectedTexts[4]
-	typing_brain.start_new_type(replyTarget)
-	#code to get and disable all buttons
-	inbox_buttons.assign(summaries_container.find_children("Button"))
-	if (inbox_buttons!=null):
-		for i in inbox_buttons:
-			i.disabled = true
-			
-	
+	if !choiceEmail:
+		Sender.text = selectedTexts[2]
+		ToBox.text = selectedTexts[0]
+		MainEmailBody.visible_characters = 0
+		hint_text.visible = true
+		MainEmailBody.text = selectedTexts[4]
+		typing_brain.start_new_type(replyTarget)
+		#code to get and disable all buttons
+		inbox_buttons.assign(summaries_container.find_children("Button"))
+		if (inbox_buttons!=null):
+			for i in inbox_buttons:
+				i.disabled = true
+				
+	elif choiceEmail:
+		
+		Dialogic.Styles.load_style("Bubble Style Test")
+		var layout = Dialogic.start("EmailChoice")
+		layout.register_character ("res://Dialogue stuffs/Dialogic/Characters/Office/Keyboard.dch",keyboardTarget)
+		await Dialogic.timeline_ended
+		if Dialogic.VAR.EmailChoice == 1:
+			Sender.text = selectedTexts[2]
+			ToBox.text = selectedTexts[0]
+			MainEmailBody.visible_characters = 0
+			hint_text.visible = true
+			MainEmailBody.text = selectedTexts[4]
+			typing_brain.start_new_type(replyTarget)
+			#code to get and disable all buttons
+			inbox_buttons.assign(summaries_container.find_children("Button"))
+			if (inbox_buttons!=null):
+				for i in inbox_buttons:
+					i.disabled = true
+		elif Dialogic.VAR.EmailChoice == 2:
+			Sender.text = selectedTexts[2]
+			ToBox.text = selectedTexts[0]
+			MainEmailBody.visible_characters = 0
+			hint_text.visible = true
+			MainEmailBody.text = selectedTexts[5]
+			typing_brain.start_new_type(replyTarget)
+			#code to get and disable all buttons
+			inbox_buttons.assign(summaries_container.find_children("Button"))
+			if (inbox_buttons!=null):
+				for i in inbox_buttons:
+					i.disabled = true
+		PermanentGlobal.new_choice(selectedTexts[2],Dialogic.VAR.EmailChoice)
 
 func _on_typing_brain_typing_finished() -> void: #custom signal from the typing brain
 	hint_text.visible = false

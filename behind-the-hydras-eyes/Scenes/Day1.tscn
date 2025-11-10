@@ -536,7 +536,6 @@ unique_name_in_owner = true
 script = ExtResource("4_bwr10")
 
 [node name="ComputerScreen" type="Node2D" parent="."]
-visible = false
 z_index = 5
 texture_filter = 1
 
@@ -677,8 +676,50 @@ texture_filter = 1
 [node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
 texture_filter = 1
 
+[node name="Send" parent="ScreenUI/MainEmail" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 75.0
+
+[node name="Reply" parent="ScreenUI/MainEmail" index="3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 75.0
+
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
+
+[node name="Panel" parent="ScreenUI/Budget/HomeBudget/Additional Costs2" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 484.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/HomeBudget/BoxContainer/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/BoxContainer/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
 offset_left = 0.0
@@ -776,6 +817,14 @@ offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
+[node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -833,8 +882,35 @@ offset_left = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
+[node name="Emails" parent="ScreenUI/BottomBar" index="0"]
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Internet" parent="ScreenUI/BottomBar" index="2"]
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ShutDown" parent="ScreenUI/BottomBar" index="3"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true

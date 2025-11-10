@@ -1,0 +1,14 @@
+[remap]
+
+importer="yarnscript"
+type="Resource"
+uid="uid://bq1oj6daba2dv"
+path="res://.godot/imported/Day1Dialogue.yarn-99ff9b8fd5ea442fb6d1f64dae4c4333.tres"
+
+[deps]
+
+source_file="res://Dialogue stuffs/NEW/Day1/Day1Dialogue.yarn"
+dest_files=["res://.godot/imported/Day1Dialogue.yarn-99ff9b8fd5ea442fb6d1f64dae4c4333.tres"]
+
+[params]
+

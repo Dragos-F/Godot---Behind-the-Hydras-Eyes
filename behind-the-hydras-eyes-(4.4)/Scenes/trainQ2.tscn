@@ -1,0 +1,775 @@
+[gd_scene load_steps=23 format=3 uid="uid://cjjh2p84a5h5g"]
+
+[ext_resource type="Script" uid="uid://cbkj0uqvtov7s" path="res://Scenes/train.gd" id="1_cavyt"]
+[ext_resource type="AudioStream" uid="uid://dxvjy3m1diggo" path="res://Sound/TrainBack.wav" id="2_eq0bj"]
+[ext_resource type="Texture2D" uid="uid://d1hqlc78j4inj" path="res://Visual Assets/New Assets/Train/Background reel.png" id="3_v0lfv"]
+[ext_resource type="Texture2D" uid="uid://bstwti6vw6p83" path="res://Visual Assets/New Assets/Train/Train Background.png" id="4_udbap"]
+[ext_resource type="Texture2D" uid="uid://bfxm0rfoekti3" path="res://Visual Assets/New Assets/Train/Train foreground.png" id="5_uvrlr"]
+[ext_resource type="Texture2D" uid="uid://dus4uwj1x577g" path="res://Visual Assets/New Assets/Train/Sitting 1.png" id="6_wndjs"]
+[ext_resource type="Texture2D" uid="uid://k48ud7fxdej5" path="res://Visual Assets/New Assets/Train/Sitting 2.png" id="7_j4ywj"]
+[ext_resource type="Texture2D" uid="uid://boqqakyv385vt" path="res://Visual Assets/New Assets/Train/Sitting 3.png" id="8_e1gxr"]
+[ext_resource type="Texture2D" uid="uid://djwnrgurjh0or" path="res://Visual Assets/New Assets/Train/Sitting 4.png" id="9_b4dlr"]
+[ext_resource type="Texture2D" uid="uid://b0jss51gcu556" path="res://Visual Assets/New Assets/Train/Sitting 5.png" id="10_g6ob1"]
+[ext_resource type="Texture2D" uid="uid://dxa1lbofaysoo" path="res://Visual Assets/New Assets/Train/Sitting 6.png" id="11_d166k"]
+[ext_resource type="Texture2D" uid="uid://qfbb710jeglx" path="res://Visual Assets/New Assets/Train/Shadow 2.png" id="12_5v451"]
+[ext_resource type="Texture2D" uid="uid://dsn63ppkgbcil" path="res://Visual Assets/New Assets/Train/Shadow 3.png" id="13_quykd"]
+[ext_resource type="Texture2D" uid="uid://cok2xbsdhah8w" path="res://Visual Assets/New Assets/Train/Shadow 4.png" id="14_nn8uy"]
+[ext_resource type="Texture2D" uid="uid://dvnwfbk3ao6xy" path="res://Visual Assets/New Assets/Train/Shadow 5.png" id="15_dpnsp"]
+[ext_resource type="Texture2D" uid="uid://btxeudak2ke8i" path="res://Visual Assets/New Assets/Train/Shadow 6.png" id="16_q6wac"]
+[ext_resource type="Texture2D" uid="uid://c5wmlgddfssfc" path="res://Visual Assets/New Assets/Train/Shadow 7.png" id="17_5o8oj"]
+[ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="18_qwpwy"]
+[ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="19_1w40t"]
+
+[sub_resource type="Animation" id="Animation_mcim7"]
+length = 10.0333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.05667, 5.059, 5.06353, 5.06667, 10.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(948, 529), Vector2(-2636, -1151), Vector2(-3081, -4079), Vector2(3019, -1523), Vector2(3848, 1929), Vector2(948, 529)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.05667, 10.027, 10.03, 10.031, 10.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4117, 2037), Vector2(625, 396), Vector2(-2248, -979), Vector2(-2739, -3075), Vector2(3880, -1335), Vector2(4117, 2037)]
+}
+
+[sub_resource type="Animation" id="Animation_0hk28"]
+resource_name = "background"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(948, 529), Vector2(-2651, -1150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4117, 2037), Vector2(496, 339)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_akv0e"]
+_data = {
+&"RESET": SubResource("Animation_mcim7"),
+&"background": SubResource("Animation_0hk28")
+}
+
+[node name="Train" type="Node2D" node_paths=PackedStringArray("BossTextAnchor", "daveAnim", "train_sound", "PauseMenu")]
+script = ExtResource("1_cavyt")
+BossTextAnchor = NodePath("TextAnchor")
+daveAnim = NodePath("Dave/AnimatedSprite2D")
+train_sound = NodePath("TrainAmbience")
+PauseMenu = NodePath("Pause")
+TimelineToStart = "Text From Mum"
+dayToChange = "Day3"
+
+[node name="TrainAmbience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_eq0bj")
+volume_db = -80.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4117, 2037)
+scale = Vector2(2, 2)
+texture = ExtResource("3_v0lfv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(948, 529)
+scale = Vector2(2, 2)
+texture = ExtResource("3_v0lfv")
+
+[node name="TrainBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("4_udbap")
+
+[node name="TrainForeground" type="Sprite2D" parent="."]
+z_index = 3
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("5_uvrlr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_akv0e")
+}
+autoplay = "RESET"
+
+[node name="SittingFar" type="Node2D" parent="."]
+
+[node name="Sitting1" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(287, 36)
+scale = Vector2(2, 2)
+texture = ExtResource("6_wndjs")
+
+[node name="Sitting13" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-616, -422)
+scale = Vector2(2, 2)
+texture = ExtResource("6_wndjs")
+
+[node name="Sitting2" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(545, 152)
+scale = Vector2(2, 2)
+texture = ExtResource("7_j4ywj")
+
+[node name="Sitting10" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(485, 122)
+scale = Vector2(2, 2)
+texture = ExtResource("7_j4ywj")
+
+[node name="Sitting3" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(233, 9)
+scale = Vector2(2, 2)
+texture = ExtResource("8_e1gxr")
+
+[node name="Sitting8" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-497, -343)
+scale = Vector2(2, 2)
+texture = ExtResource("8_e1gxr")
+
+[node name="Sitting4" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(30, -88)
+scale = Vector2(2, 2)
+texture = ExtResource("9_b4dlr")
+
+[node name="Sitting15" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-753, -480)
+scale = Vector2(2, 2)
+texture = ExtResource("9_b4dlr")
+
+[node name="Sitting5" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(158, -14)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting16" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-827, -506)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting14" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-563, -374)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting17" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-889, -538)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting11" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-43, -114)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting9" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(429, 110)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+
+[node name="Sitting6" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(106, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+
+[node name="Sitting12" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(-676, -440)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+
+[node name="Sitting7" type="Sprite2D" parent="SittingFar"]
+texture_filter = 1
+position = Vector2(369, 81)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+
+[node name="SittingNear" type="Node2D" parent="."]
+
+[node name="Sitting18" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(289, 268)
+scale = Vector2(2, 2)
+texture = ExtResource("6_wndjs")
+flip_h = true
+
+[node name="Sitting19" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-822, -307)
+scale = Vector2(2, 2)
+texture = ExtResource("6_wndjs")
+flip_h = true
+
+[node name="Sitting20" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(160, 172)
+scale = Vector2(2, 2)
+texture = ExtResource("7_j4ywj")
+flip_h = true
+
+[node name="Sitting21" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(104, 136)
+scale = Vector2(2, 2)
+texture = ExtResource("7_j4ywj")
+flip_h = true
+
+[node name="Sitting22" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-38, 94)
+scale = Vector2(2, 2)
+texture = ExtResource("8_e1gxr")
+flip_h = true
+
+[node name="Sitting23" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-703, -228)
+scale = Vector2(2, 2)
+texture = ExtResource("8_e1gxr")
+flip_h = true
+
+[node name="Sitting24" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-272, -1)
+scale = Vector2(2, 2)
+texture = ExtResource("9_b4dlr")
+flip_h = true
+
+[node name="Sitting25" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-940, -354)
+scale = Vector2(2, 2)
+texture = ExtResource("9_b4dlr")
+flip_h = true
+
+[node name="Sitting26" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-113, 68)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+flip_h = true
+
+[node name="Sitting28" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-769, -259)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+flip_h = true
+
+[node name="Sitting30" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(228, 257)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+flip_h = true
+
+[node name="Sitting31" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(37, 139)
+scale = Vector2(2, 2)
+texture = ExtResource("10_g6ob1")
+flip_h = true
+
+[node name="Sitting32" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-204, 26)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+flip_h = true
+
+[node name="Sitting33" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(-882, -325)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+flip_h = true
+
+[node name="Sitting34" type="Sprite2D" parent="SittingNear"]
+self_modulate = Color(0.702977, 0.702977, 0.702977, 1)
+z_index = 2
+texture_filter = 1
+position = Vector2(332, 288)
+scale = Vector2(2, 2)
+texture = ExtResource("11_d166k")
+flip_h = true
+
+[node name="Clump1" type="Node2D" parent="."]
+
+[node name="Shadow2" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(285, 104)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow10" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(32, -25)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow3" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(511, 193)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow8" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(210, 41)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow12" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-45, -83)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+flip_h = true
+
+[node name="Shadow4" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(448, 174)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow11" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(80, -12)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+flip_h = true
+
+[node name="Shadow5" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(383, 147)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+
+[node name="Shadow9" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(145, 5)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+
+[node name="Shadow6" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(317, 105)
+scale = Vector2(2, 2)
+texture = ExtResource("16_q6wac")
+
+[node name="Shadow14" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(885, 362)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+flip_h = true
+
+[node name="Shadow17" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(932, 387)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+flip_h = true
+
+[node name="Shadow19" type="Sprite2D" parent="Clump1"]
+texture_filter = 1
+position = Vector2(880, 395)
+scale = Vector2(2, 2)
+texture = ExtResource("16_q6wac")
+
+[node name="Shadow7" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(559, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("17_5o8oj")
+
+[node name="Shadow13" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-784, -429)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow15" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-558, -340)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow16" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-859, -492)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow18" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-621, -359)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow20" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-686, -386)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+
+[node name="Shadow21" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-924, -528)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+
+[node name="Shadow22" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-752, -428)
+scale = Vector2(2, 2)
+texture = ExtResource("16_q6wac")
+
+[node name="Shadow23" type="Sprite2D" parent="Clump1"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+texture_filter = 1
+position = Vector2(-518, -294)
+scale = Vector2(2, 2)
+texture = ExtResource("17_5o8oj")
+
+[node name="Clump2" type="Node2D" parent="."]
+
+[node name="Shadow14" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-216, -50)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow15" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(438, 265)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow17" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(106, 50)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+flip_h = true
+
+[node name="Shadow18" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(360, 208)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow24" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-71, -31)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow19" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(486, 272)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+flip_h = true
+
+[node name="Shadow20" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(272, 144)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow21" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(18, 21)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow22" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(931, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow27" type="Sprite2D" parent="Clump2"]
+z_index = 2
+texture_filter = 1
+position = Vector2(803, 488)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow23" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-148, -75)
+scale = Vector2(2, 2)
+texture = ExtResource("17_5o8oj")
+
+[node name="Shadow16" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-695, -342)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow25" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-933, -426)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+flip_h = true
+
+[node name="Shadow26" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-754, -347)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow29" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-842, -411)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow30" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-644, -269)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow31" type="Sprite2D" parent="Clump2"]
+z_index = 1
+texture_filter = 1
+position = Vector2(659, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("17_5o8oj")
+flip_h = true
+
+[node name="ClumpDoors" type="Node2D" parent="."]
+
+[node name="Shadow25" type="Sprite2D" parent="ClumpDoors"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-338, -279)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow26" type="Sprite2D" parent="ClumpDoors"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-275, -185)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow27" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.67977, 0.67977, 0.67977, 1)
+texture_filter = 1
+position = Vector2(-205, -220)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Shadow30" type="Sprite2D" parent="ClumpDoors"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-454, -143)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+
+[node name="Shadow28" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.683077, 0.683077, 0.683077, 1)
+z_index = 1
+texture_filter = 1
+position = Vector2(-372, -165)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+flip_h = true
+
+[node name="Shadow29" type="Sprite2D" parent="ClumpDoors"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-552, -184)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+flip_h = true
+
+[node name="Shadow13" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.643571, 0.643571, 0.643571, 1)
+z_index = 1
+texture_filter = 1
+position = Vector2(827, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5v451")
+
+[node name="Shadow22" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.643571, 0.643571, 0.643571, 1)
+z_index = 1
+texture_filter = 1
+position = Vector2(773, 276)
+scale = Vector2(2, 2)
+texture = ExtResource("16_q6wac")
+
+[node name="Shadow14" type="Sprite2D" parent="ClumpDoors"]
+texture_filter = 1
+position = Vector2(595, 385)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow31" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.706303, 0.706303, 0.706303, 1)
+texture_filter = 1
+position = Vector2(-399, -338)
+scale = Vector2(2, 2)
+texture = ExtResource("14_nn8uy")
+
+[node name="Shadow15" type="Sprite2D" parent="ClumpDoors"]
+self_modulate = Color(0.68, 0.68, 0.68, 1)
+z_index = 1
+texture_filter = 1
+position = Vector2(514, 338)
+scale = Vector2(2, 2)
+texture = ExtResource("13_quykd")
+
+[node name="Shadow23" type="Sprite2D" parent="ClumpDoors"]
+z_index = 1
+texture_filter = 1
+position = Vector2(741, 358)
+scale = Vector2(2, 2)
+texture = ExtResource("15_dpnsp")
+flip_h = true
+
+[node name="Dave" parent="." instance=ExtResource("18_qwpwy")]
+z_index = 2
+position = Vector2(196, 81)
+move_time = false
+
+[node name="AnimatedSprite2D" parent="Dave" index="0"]
+animation = &"phone_up"
+
+[node name="TextAnchor" type="Node2D" parent="."]
+position = Vector2(236, 34)
+
+[node name="Pause" parent="." instance=ExtResource("19_1w40t")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Dave"]

@@ -65,33 +65,33 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe5m2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1626"]
+texture = ExtResource("5_dordm")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujna0"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymb84"]
 texture = ExtResource("3_tcpdn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fncch"]
 texture = ExtResource("4_hjaq7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymb84"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujna0"]
 texture = ExtResource("3_tcpdn")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1626"]
-texture = ExtResource("5_dordm")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe5m2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhhrm"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pyjct"]
+texture = ExtResource("8_fxbix")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgq50"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_by5ot"]
 texture = ExtResource("6_qe5m2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjr3j"]
 texture = ExtResource("7_st1in")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_by5ot"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgq50"]
 texture = ExtResource("6_qe5m2")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pyjct"]
-texture = ExtResource("8_fxbix")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhhrm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3eo7"]
 bg_color = Color(0.878, 0.878, 0.878, 0.191)
@@ -314,31 +314,31 @@ bg_color = Color(0.8, 0.8, 0.8, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0av00"]
 bg_color = Color(4.23551e-06, 0.34466, 0.919269, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc0qj"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fio65"]
-texture = ExtResource("5_qibcv")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bmt1"]
-texture = ExtResource("5_qibcv")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qy131"]
-texture = ExtResource("5_wxeq5")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fpvw"]
-texture = ExtResource("5_wxeq5")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tu6vg"]
-texture = ExtResource("5_qibcv")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2yvqt"]
-texture = ExtResource("5_qibcv")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akua7"]
+texture = ExtResource("6_rttsh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq6wl"]
 texture = ExtResource("6_rttsh")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akua7"]
-texture = ExtResource("6_rttsh")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2yvqt"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tu6vg"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fpvw"]
+texture = ExtResource("5_wxeq5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qy131"]
+texture = ExtResource("5_wxeq5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bmt1"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fio65"]
+texture = ExtResource("5_qibcv")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc0qj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_by5ot"]
 atlas = ExtResource("19_dxncp")
@@ -453,84 +453,84 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q77rv"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tdew"]
+texture = ExtResource("6_ovuwh")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q77rv"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ui1g"]
+texture = ExtResource("6_ovuwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp48c"]
 texture = ExtResource("8_3ntsw")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ntsw"]
-texture = ExtResource("8_3ntsw")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bd8n7"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tc0qj"]
 texture = ExtResource("7_q77rv")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qibcv"]
 texture = ExtResource("7_q77rv")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tc0qj"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bd8n7"]
 texture = ExtResource("7_q77rv")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp48c"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ntsw"]
 texture = ExtResource("8_3ntsw")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ui1g"]
-texture = ExtResource("6_ovuwh")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q77rv"]
+texture = ExtResource("8_3ntsw")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tdew"]
-texture = ExtResource("6_ovuwh")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q77rv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cmr8"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxncp"]
-texture = ExtResource("11_cp48c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5w0f"]
-texture = ExtResource("11_cp48c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5mrq"]
-texture = ExtResource("12_bd8n7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcpdn"]
-texture = ExtResource("12_bd8n7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjaq7"]
-texture = ExtResource("11_cp48c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dordm"]
-texture = ExtResource("11_cp48c")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe5m2"]
 texture = ExtResource("8_q77rv")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbkap"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dordm"]
+texture = ExtResource("11_cp48c")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjaq7"]
+texture = ExtResource("11_cp48c")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cmr8"]
-texture = ExtResource("14_bd8n7")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcpdn"]
+texture = ExtResource("12_bd8n7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st1in"]
-texture = ExtResource("14_bd8n7")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5mrq"]
+texture = ExtResource("12_bd8n7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxbix"]
-texture = ExtResource("15_tc0qj")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5w0f"]
+texture = ExtResource("11_cp48c")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhhrm"]
-texture = ExtResource("15_tc0qj")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxncp"]
+texture = ExtResource("11_cp48c")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hs7y"]
-texture = ExtResource("14_bd8n7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5p121"]
-texture = ExtResource("14_bd8n7")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vdjt"]
-texture = ExtResource("9_3ntsw")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cmr8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15dr1"]
 texture = ExtResource("9_3ntsw")
 
-[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif")]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vdjt"]
+texture = ExtResource("9_3ntsw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5p121"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hs7y"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhhrm"]
+texture = ExtResource("15_tc0qj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxbix"]
+texture = ExtResource("15_tc0qj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st1in"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cmr8"]
+texture = ExtResource("14_bd8n7")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
+
+[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget")]
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -547,6 +547,7 @@ EmailList = [NodePath("MainEmail"), NodePath("EmailList")]
 Budget = NodePath("Budget")
 BrowserThing = NodePath("BrowserThing")
 emailNotif = NodePath("BottomBar/Emails/AnimatedSprite2D")
+keyboardTarget = NodePath("KeyboardTarget")
 
 [node name="EmailList" type="Panel" parent="."]
 layout_mode = 1
@@ -635,7 +636,7 @@ offset_bottom = 516.0
 layout_mode = 2
 
 [node name="MainEmailBody" type="RichTextLabel" parent="MainEmail/EmailBody/ScrollContainer/Control"]
-layout_mode = 2
+layout_mode = 0
 offset_right = 1066.0
 offset_bottom = 510.0
 size_flags_horizontal = 3
@@ -704,31 +705,31 @@ text = "To:"
 
 [node name="Send" type="Button" parent="MainEmail"]
 visible = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 910.0
 offset_top = 12.0
 offset_right = 1093.0
 offset_bottom = 87.0
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_qe5m2")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ujna0")
-theme_override_styles/hover = SubResource("StyleBoxTexture_fncch")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ymb84")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u1626")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ymb84")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fncch")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ujna0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qe5m2")
 
 [node name="Reply" type="Button" parent="MainEmail"]
 visible = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 910.0
 offset_top = 12.0
 offset_right = 1093.0
 offset_bottom = 87.0
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yhhrm")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_sgq50")
-theme_override_styles/hover = SubResource("StyleBoxTexture_bjr3j")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_by5ot")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pyjct")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_by5ot")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bjr3j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_sgq50")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yhhrm")
 
 [node name="Hint" type="RichTextLabel" parent="MainEmail"]
 visible = false
@@ -888,7 +889,7 @@ offset_bottom = 423.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="Panel" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 6.0
 offset_top = 4.0
 offset_right = 490.0
@@ -1084,7 +1085,7 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="HBoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3"]
-layout_mode = 2
+layout_mode = 0
 anchor_right = 0.988
 anchor_bottom = 0.265
 offset_left = 6.0
@@ -1166,6 +1167,7 @@ theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
 [node name="MarketingBudget" type="Control" parent="Budget"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1207,7 +1209,7 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3"]
-layout_mode = 2
+layout_mode = 0
 anchor_right = 0.988
 anchor_bottom = 0.265
 offset_left = 6.0
@@ -1290,7 +1292,7 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
 [node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3"]
-layout_mode = 2
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 6.0
@@ -2594,7 +2596,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
 
 [node name="Gambling" type="Control" parent="BrowserThing"]
 visible = false
-layout_mode = 2
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2878,7 +2879,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
 
 [node name="Emails" type="Button" parent="BottomBar"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 anchor_left = 0.179083
 anchor_right = 0.309362
 anchor_bottom = 0.991
@@ -2888,22 +2889,22 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("6_2tdew")
 theme_override_font_sizes/font_size = 28
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tc0qj")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_fio65")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0bmt1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_qy131")
-theme_override_styles/hover = SubResource("StyleBoxTexture_4fpvw")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tu6vg")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_2yvqt")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_bq6wl")
 theme_override_styles/normal = SubResource("StyleBoxTexture_akua7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_bq6wl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2yvqt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tu6vg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4fpvw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_qy131")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0bmt1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_fio65")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tc0qj")
 text = "   Mail"
 icon = ExtResource("6_rttsh")
 icon_alignment = 1
@@ -2919,7 +2920,7 @@ frame_progress = 0.89263
 
 [node name="Budget" type="Button" parent="BottomBar"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 anchor_left = 0.449857
 anchor_right = 0.580362
 anchor_bottom = 0.991
@@ -2929,23 +2930,23 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_2tdew")
 theme_override_font_sizes/font_size = 28
-theme_override_styles/focus = SubResource("StyleBoxEmpty_q77rv")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_q77rv")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3ntsw")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_bd8n7")
-theme_override_styles/hover = SubResource("StyleBoxTexture_qibcv")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tc0qj")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_cp48c")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_3ui1g")
 theme_override_styles/normal = SubResource("StyleBoxTexture_2tdew")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_3ui1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp48c")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_tc0qj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qibcv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_bd8n7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3ntsw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_q77rv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q77rv")
 text = "   Data"
 icon = ExtResource("6_ovuwh")
 icon_alignment = 1
@@ -2953,7 +2954,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Internet" type="Button" parent="BottomBar"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 anchor_left = 0.315186
 anchor_right = 0.445361
 anchor_bottom = 1.0
@@ -2963,22 +2964,22 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("6_2tdew")
 theme_override_font_sizes/font_size = 28
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6cmr8")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_dxncp")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_o5w0f")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_i5mrq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_tcpdn")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_hjaq7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_dordm")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_qe5m2")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_sbkap")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_qe5m2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dordm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_hjaq7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tcpdn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_i5mrq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_o5w0f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_dxncp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6cmr8")
 text = "Net"
 icon = ExtResource("8_q77rv")
 icon_alignment = 1
@@ -2986,7 +2987,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ShutDown" type="Button" parent="BottomBar"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 anchor_right = 0.185413
 anchor_bottom = 1.20157
 offset_right = 0.164032
@@ -2995,22 +2996,22 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.75, 0.75)
 size_flags_vertical = 4
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
 theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("6_2tdew")
 theme_override_font_sizes/font_size = 28
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2tdew")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_6cmr8")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_st1in")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_fxbix")
-theme_override_styles/hover = SubResource("StyleBoxTexture_yhhrm")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_3hs7y")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5p121")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0vdjt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_15dr1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_0vdjt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5p121")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_3hs7y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yhhrm")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_fxbix")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_st1in")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_6cmr8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2tdew")
 text = "    Log Off"
 icon = ExtResource("9_3ntsw")
 icon_alignment = 1
@@ -3018,6 +3019,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(698, 327)
+
+[node name="KeyboardTarget" type="Node2D" parent="."]
+position = Vector2(775, 951)
 
 [connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]
 [connection signal="pressed" from="MainEmail/Reply" to="." method="_on_reply_pressed"]
