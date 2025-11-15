@@ -20,6 +20,7 @@ class_name Computer
 @export var BrowserThing:Panel
 @export var emailNotif:Node2D
 @export var keyboardTarget:Node2D
+@export var info:BudgetData
 
 
 # Called when the node enters the scene tree for the first time.
@@ -153,8 +154,9 @@ func _on_job_thing_pressed() -> void:
 
 
 func _on_save_button_pressed() -> void:
-	pass # Replace with function body.
-
+	PermanentGlobal.savings = info.savingsContribution
+	PermanentGlobal.Lifestyle = info.lifestyleTypes[info.lifestyleChoice]
+	SaveLoad._save()
 
 func _on_internet_pressed() -> void:
 	if Budget.visible:

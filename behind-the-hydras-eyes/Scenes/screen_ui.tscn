@@ -530,7 +530,7 @@ texture = ExtResource("14_bd8n7")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
-[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget")]
+[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -548,6 +548,7 @@ Budget = NodePath("Budget")
 BrowserThing = NodePath("BrowserThing")
 emailNotif = NodePath("BottomBar/Emails/AnimatedSprite2D")
 keyboardTarget = NodePath("KeyboardTarget")
+info = NodePath("Budget/HomeBudget/Chart")
 
 [node name="EmailList" type="Panel" parent="."]
 layout_mode = 1

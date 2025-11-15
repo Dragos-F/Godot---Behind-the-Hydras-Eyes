@@ -371,6 +371,7 @@ DaveAnchor = NodePath("../Dave/DialogueMarker")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 PauseMenu = NodePath("../Pause")
+current_scene = "res://Scenes/bedroom3.tscn"
 
 [node name="Dave" parent="." instance=ExtResource("31_vcnnr")]
 unique_name_in_owner = true

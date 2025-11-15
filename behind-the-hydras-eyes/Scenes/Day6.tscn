@@ -522,6 +522,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 PauseMenu = NodePath("../Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
+current_scene = "res://Scenes/Day6.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -586,7 +587,7 @@ A word for the wise: please refrain from any extended engagament with emails tha
 
 Richard.
 "
-ReplyBody1 = "Hi Patrick, 
+ReplyBody1 = "Hi Richard, 
 
 Thank you for the advice. I'll keep it in mind, while being respectul and helpful of course.
 
@@ -601,32 +602,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_uldrl")]
-layout_mode = 2
-Sender_Name = "Nayali"
-ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Our silence differs"
-PreviewText = "You of course know how"
-MainBody = "Dear Dave,
-
-You of course know how and why your reply served to speak past us rather than to us. How it responded to a real issue with empty PR, how it ignored the fact that proper research into harmful side-effects has not been carried out simply because the harm is carried by a people easy to ignore. In effect, your reply was part of a wall of silence erected to allow you to refuse to engage with us, to spare your conscience from us. We are rendered silent by the crushing weight of a machinery of death you harness against us without understanding. You are rendered silence by your own lack of empathy. 
-
-Our silence is not the same.
-Nayali, spokespersn for Strike the Hydra's Heart"
-ReplyBody1 = "Dear Nayali,
-
-We here at ForwardGreen are sorry that you feel like your questions have gone unanswered. You can write to our dedicated complaint team, who I have CC'd into this email.
-
-Kindest Regards,
-Dave Spritely,
-UK Project Lead
-Forward Green"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_uldrl")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_uldrl")]
 layout_mode = 2
 Sender_Name = "Alex"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -645,7 +621,7 @@ Dave. "
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_uldrl")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_uldrl")]
 layout_mode = 2
 Sender_Name = "Cosijoeza T."
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -817,7 +793,6 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]

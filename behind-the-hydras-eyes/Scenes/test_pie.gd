@@ -1,4 +1,5 @@
 extends Control
+class_name BudgetData
 
 @export var chart:LabellessPieChart
 @export var colors:Array[Color]

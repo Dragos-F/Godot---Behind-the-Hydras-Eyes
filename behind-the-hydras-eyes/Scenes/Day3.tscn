@@ -522,6 +522,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 PauseMenu = NodePath("../Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
+current_scene = "res://Scenes/Day3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
