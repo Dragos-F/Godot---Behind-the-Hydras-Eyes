@@ -798,6 +798,7 @@ position = Vector2(-157, 152)
 
 [node name="Pause" parent="." instance=ExtResource("15_4uukd")]
 unique_name_in_owner = true
+visible = false
 z_index = 12
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_klie1")]
@@ -834,5 +835,5 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

@@ -32,17 +32,15 @@ func _on_ui_value_changed(value: float) -> void:
 	AudioBrain.UIsfxPlayer.volume_db = value
 	
 func _on_restart_pressed() -> void:
-	#Fader.FadeUp("")
-	#await Fader.fade_finished
-	#get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-	#Fader.FadeDown("")
-	saveMessage.visible = true
+	Fader.FadeUp("")
+	closePause()
+	await Fader.fade_finished
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	Fader.FadeDown("")
+	#saveMessage.visible = true - Enables messages
 
 func _on_credits_pressed() -> void:
-	Fader.FadeUp("")
-	await Fader.fade_finished
-	get_tree().change_scene_to_file("res://Scenes/EndOfDemo.tscn")
-	Fader.FadeDown("")
+	get_tree().quit()
 
 func openPause():
 	var bubble = get_node("/root/DialogicLayout_BubbleStyleTest")
@@ -75,11 +73,11 @@ func randomScribble():
 	randText.rotation_degrees = randf_range(-angleLimit,angleLimit)
 
 
-func _on_message_okay_pressed() -> void:
-	Fader.FadeUp("")
-	await Fader.fade_finished
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-	Fader.FadeDown("")
+#func _on_message_okay_pressed() -> void:
+	#Fader.FadeUp("")
+	#await Fader.fade_finished
+	#get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	#Fader.FadeDown("")
 
 
 func _on_full_screen_toggled(toggled_on: bool) -> void:

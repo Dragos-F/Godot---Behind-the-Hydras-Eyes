@@ -953,6 +953,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMar
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
 [node name="Pause" parent="." instance=ExtResource("22_rshjd")]
+visible = false
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]

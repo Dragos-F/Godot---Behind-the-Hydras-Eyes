@@ -57,7 +57,6 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide")]
-visible = false
 z_index = 10
 script = ExtResource("1_e0jm0")
 folderAnim = NodePath("AnimatedSprite2D")
@@ -273,7 +272,7 @@ offset_right = 837.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("4_0pswh")
 theme_override_font_sizes/font_size = 39
-text = "Credits"
+text = "Quit"
 
 [node name="RandomTextBoundries" type="Control" parent="Control"]
 anchors_preset = 0

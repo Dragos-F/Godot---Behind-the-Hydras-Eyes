@@ -490,36 +490,6 @@ Dave.
 "
 boss = false
 
-[node name="Chart" parent="ScreenUI/Budget" index="2"]
-values = Array[float]([0.0, 0.0, 0.0, 0.0])
-totalRent = 4950.0
-totalBills = 1350.0
-lifestyleCosts = Array[float]([730.0, 900.0, 3000.0])
-
-[node name="Label" parent="ScreenUI/Budget/Additional Costs/Panel/HBoxContainer" index="0"]
-text = "SUBSCRIPTIONS"
-
-[node name="CheckButton" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="0"]
-text = "The Financier Monthly"
-
-[node name="CheckButton2" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="1"]
-text = "Mistress XxMonyxX"
-
-[node name="CheckButton3" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="2"]
-text = "TV License "
-
-[node name="CheckButton4" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="3"]
-text = "DeliverNow Max"
-
-[node name="CheckButton5" parent="ScreenUI/Budget/Additional Costs/VBoxContainer" index="4"]
-text = "NilePrime"
-
-[node name="SaveButton" parent="ScreenUI/Budget" index="7"]
-offset_left = -109.696
-offset_top = 56.998
-offset_right = -108.708
-offset_bottom = 56.712
-
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -580,13 +550,12 @@ offset_right = 608.0
 offset_bottom = 361.0
 
 [node name="Pause" parent="." instance=ExtResource("36_4bp7u")]
+visible = false
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("37_1n7mf")
 
-[connection signal="pressed" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
-[connection signal="toggled" from="ScreenUI/Budget/SaveButton" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 
@@ -603,4 +572,4 @@ script = ExtResource("37_1n7mf")
 [editable path="IndexChangeZone"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]

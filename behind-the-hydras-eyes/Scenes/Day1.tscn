@@ -523,6 +523,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 PauseMenu = NodePath("../Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
+current_scene = "res://Scenes/Day1.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -536,6 +537,7 @@ unique_name_in_owner = true
 script = ExtResource("4_bwr10")
 
 [node name="ComputerScreen" type="Node2D" parent="."]
+visible = false
 z_index = 5
 texture_filter = 1
 
@@ -912,6 +914,9 @@ offset_bottom = 8.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="Camera2D" parent="ScreenUI" index="5"]
+enabled = false
+
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
@@ -961,6 +966,7 @@ position = Vector2(-157, 152)
 
 [node name="Pause" parent="." instance=ExtResource("14_okst0")]
 unique_name_in_owner = true
+visible = false
 z_index = 12
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("15_fuc61")]

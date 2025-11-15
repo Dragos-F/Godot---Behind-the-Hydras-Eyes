@@ -21,6 +21,7 @@ class_name DayBrain
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 @export var plants:Array[Node2D]
+@export var current_scene:String
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,6 +36,12 @@ func _ready() -> void:
 		take_plant()
 	if TeaMinigame == null:
 		TeaMinigame = get_node("/root/Main2/TeaMinigame")
+	SaveLoad.SaveFileData.lastScene = current_scene
+	SaveLoad._save()
+
+
+
+
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -177,7 +184,9 @@ func take_plant():
 		plants[0].visible = false
 		plants[1].visible = true
 		PermanentGlobal.Plant = true
-		
+	else:
+		plants[0].visible = false
+		plants[1].visible = true
 
 func water_cooler_Alex(i:int):
 		if i == 0:

@@ -518,6 +518,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
 PauseMenu = NodePath("../Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
+current_scene = "\"res://Scenes/Day2.tscn\""
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -960
@@ -858,6 +859,7 @@ AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMar
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
 [node name="Pause" parent="." instance=ExtResource("14_kmxud")]
+visible = false
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]

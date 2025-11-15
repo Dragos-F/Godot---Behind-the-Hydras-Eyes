@@ -4,10 +4,20 @@ extends Node2D
 
 
 func _on_start_pressed() -> void:
-	Fader.FadeUp("First Day")
-	await Fader.fade_finished
-	get_tree().change_scene_to_file("res://Scenes/train.tscn")
-	Fader.FadeDown("First Day")
+	
+	if FileAccess.file_exists(SaveLoad.save_location):
+		Fader.FadeUp("Last you were here...")
+		await Fader.fade_finished
+		SaveLoad._load()
+		print (SaveLoad.SaveFileData.lastScene)
+		var scene_to_load:String = SaveLoad.SaveFileData.lastScene
+		get_tree().change_scene_to_file(scene_to_load)
+		Fader.FadeDown("Last you were here...")
+		PermanentGlobal.LocationChoice = SaveLoad.SaveFileData.location_choice
+		PermanentGlobal.Lifestyle = SaveLoad.SaveFileData.Lifestyle
+		PermanentGlobal.Savings = SaveLoad.SaveFileData.Savings
+		PermanentGlobal.email_choices = SaveLoad.SaveFileData.email_choices.duplicate(true)
+	
 	
 	
 
@@ -27,9 +37,15 @@ func _on_wishlist_pressed() -> void:
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/EndOfDemo.tscn")
 
-func on_quit_pressed() -> void:
-	get_tree().quit()
+
 
 
 func _on_options_pressed() -> void:
 	PauseMenu.openPause()
+
+
+func _on_new_game_pressed() -> void:
+	Fader.FadeUp("First Day")
+	await Fader.fade_finished
+	get_tree().change_scene_to_file("res://Scenes/train.tscn")
+	Fader.FadeDown("First Day")

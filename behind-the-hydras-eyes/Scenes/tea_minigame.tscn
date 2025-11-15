@@ -201,19 +201,19 @@ _data = {
 &"Mug1": SubResource("Animation_nekis")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er7so"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8p5n"]
+texture = ExtResource("24_m0gq4")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2au2t"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyaqv"]
 texture = ExtResource("22_vo0q6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22in3"]
 texture = ExtResource("23_84tlb")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyaqv"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2au2t"]
 texture = ExtResource("22_vo0q6")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8p5n"]
-texture = ExtResource("24_m0gq4")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er7so"]
 
 [node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("mugs")]
 z_index = 10
@@ -439,6 +439,7 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 limit_left = -960
 limit_top = -541
 limit_right = 960
@@ -451,11 +452,11 @@ offset_left = -943.0
 offset_top = 316.0
 offset_right = -602.0
 offset_bottom = 530.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_er7so")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2au2t")
-theme_override_styles/hover = SubResource("StyleBoxTexture_22in3")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uyaqv")
 theme_override_styles/normal = SubResource("StyleBoxTexture_t8p5n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uyaqv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_22in3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2au2t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_er7so")
 
 [node name="SugarBowl2" type="Sprite2D" parent="." node_paths=PackedStringArray("cubeParent", "minigame")]
 z_index = -2

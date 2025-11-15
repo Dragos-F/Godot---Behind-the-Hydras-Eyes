@@ -769,6 +769,7 @@ animation = &"phone_up"
 position = Vector2(236, 34)
 
 [node name="Pause" parent="." instance=ExtResource("19_1w40t")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 

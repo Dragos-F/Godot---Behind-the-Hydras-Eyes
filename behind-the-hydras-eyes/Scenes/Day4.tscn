@@ -896,6 +896,7 @@ position = Vector2(-157, 152)
 
 [node name="Pause" parent="." instance=ExtResource("15_qm78i")]
 unique_name_in_owner = true
+visible = false
 z_index = 12
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_3qcfa")]
