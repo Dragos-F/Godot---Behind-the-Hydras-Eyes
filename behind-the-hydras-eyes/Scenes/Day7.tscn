@@ -848,9 +848,9 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "The Board Room"
+textToDisplay = "End of Q3"
 YarnNodeLink = "EntryDoor"
-ScenePath = "res://Scenes/boardroom.tscn"
+ScenePath = "res://Scenes/Day8.tscn"
 
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(8.5, -33.5)
