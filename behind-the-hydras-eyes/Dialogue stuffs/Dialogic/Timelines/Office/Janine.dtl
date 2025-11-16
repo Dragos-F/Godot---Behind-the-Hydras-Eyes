@@ -1,0 +1,23 @@
+jump {CurrentDay}
+label Day07
+Janine: Can I help you?!
+- I need to talk to Patrick
+	Janine: (rolling her eyes) Patrick is not in today. Important lunch meetings.
+	Janine: He said I can call him only if the office is burning down.
+- No, all good
+	Janine: Hm.
+[end_timeline]
+label Day06
+if {JanineReturn} == false:
+	Dave: You approach the new person in the office. They're clicking away at a keyboard with great speed, and don't look up as you approach.
+	Unknown: Oh, hey. It's Dave right? Patrick's told me your CV highlights. This is is your first media storm, right? Don't slip up.
+	Dave: Err, thanks. Yeah, I'll do my best. Sorry, I didn't catch your name.
+	Unknown: That's because I didn't say it. It's Janine.
+	Janine: If you need anything, direct it to Alex, I'm busy handling all these complaints (you've brought in).
+	Dave: Sorry, I what was that last bit?
+	Janine: Hmm? I didn't say anything.
+	set {JanineReturn} = true
+	[end_timeline]
+else:
+	Janine: I'm busy
+	[end_timeline]

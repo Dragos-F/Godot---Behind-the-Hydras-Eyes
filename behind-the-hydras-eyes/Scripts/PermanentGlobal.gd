@@ -30,7 +30,7 @@ func new_choice(emailTitle:String, choice:int) -> void:
 func reset_choices():
 	LocationChoice = 0
 	Savings = 2400
-	Lifestyle = 0
+	Lifestyle = "Moderate"
 	Plant = false
 	email_choices.clear()
 	

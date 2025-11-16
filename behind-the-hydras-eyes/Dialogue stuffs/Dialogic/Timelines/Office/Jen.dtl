@@ -166,6 +166,7 @@ Jen: Did you get in okay?
 Jen: Anyway, I'm glad this mess with the strikes or whatever will be over by tomorrow.
 Jen: I need to water my plants, but I'll catch you in a bit!
 Dave: Right, yeah. See you!
+set {JenReturn} = true
 [end_timeline]
 label Day05.1
 Jen: Hey! Most of our programs are now up and running. Couldn't have done it without you!

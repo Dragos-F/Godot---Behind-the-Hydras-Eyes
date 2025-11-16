@@ -64,9 +64,13 @@ Alex: Yeah, she would drive Nigel crazy. I saw one of the emails she sent. Super
 
 label Day04
 if {AlexReturn} == true:
-	jump Day04.1
-elif :
+	if {Day4AlexEmails} == true:
+		jump Day04Emails
+	else:
+		jump Day04.1
+else:
 	jump Day04Pre_Emails
+label Day04Emails
 Dave: Do you know about this "Entreprenurial alliance" that's just messaged me? Or a Mr. Perez?
 Alex: Oh, yeah. Mr Perez is one of the landowners that we purchased our lots from. The alliance is largely an investment vehicle for the richest in the area.
 Alex: They're a very informal group, since most companies proposing megaprojects in the region, wind farms or otherwise, won't make deals with organised groups.

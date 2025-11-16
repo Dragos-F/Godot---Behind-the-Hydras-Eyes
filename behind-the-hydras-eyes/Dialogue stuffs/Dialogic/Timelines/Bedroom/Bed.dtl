@@ -27,4 +27,4 @@ Bed: Ah, there's your bed again. Are you ready to lie in it?
 	Bed: It's the fact that you know it's whispers are true\: the path of least resistance is apathy, and it'd be so easy. The only easy path. Let the thing subsume you.
 	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write.
 	Bed: You toss. You turn. At last, you sleep.
-	[signal arg="bed_sleep1"]
+	[signal arg="bed_sleep2"]

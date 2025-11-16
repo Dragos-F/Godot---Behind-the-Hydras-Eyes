@@ -1,3 +1,5 @@
+jump {CurrentQuarter}
+label Quarter1
 Boss: Your first quarter's over. Congratulations! it's brilliant work we're doing, I hope you realise that.
 Boss: You're really playing a pivotal role in the development of ForwardGreen's vision for a better planet.
 Boss: And another congratulations for leading your little part of the crew so well.
@@ -51,3 +53,4 @@ Boss: [i]The expression Mr Moore fixes you with clearly suggests that its time f
 	else:
 		Boss: It's natural to ask questions, but let me be blunt\: it's not your job. Shut my door on your way out.
 [end_timeline]
+label Quarter2

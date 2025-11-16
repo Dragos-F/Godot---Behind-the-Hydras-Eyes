@@ -3018,9 +3018,6 @@ icon = ExtResource("9_3ntsw")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(698, 327)
-
 [node name="KeyboardTarget" type="Node2D" parent="."]
 position = Vector2(775, 951)
 

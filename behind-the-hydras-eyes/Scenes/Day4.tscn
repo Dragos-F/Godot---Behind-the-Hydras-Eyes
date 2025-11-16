@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ptj85vk1uimx"]
+[gd_scene load_steps=42 format=3 uid="uid://ptj85vk1uimx"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_j7m46"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_f0dxk"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_sjsk0"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_mw0mh"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_dm1gs"]
+[ext_resource type="Script" uid="uid://dk07lsco1rd1x" path="res://Scripts/specifics_4.gd" id="14_f0dxk"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_gpadi"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_qm78i"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_3qcfa"]
@@ -105,6 +106,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_re2c4")
+}],
+"loop": false,
+"name": &"idle_Richard",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_t5tpt")
 }, {
 "duration": 1.0,
@@ -159,6 +168,35 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking_Jen",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5tpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf4m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u020q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hph1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwmwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkchc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb88j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttuwe")
+}],
+"loop": true,
+"name": &"walking_Richard",
 "speed": 10.0
 }]
 
@@ -433,9 +471,9 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "The Board Room"
+textToDisplay = "End of Quarter 2"
 YarnNodeLink = "EntryDoor"
-ScenePath = "res://Scenes/boardroom.tscn"
+ScenePath = "res://Scenes/Day5.tscn"
 
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(8.5, -33.5)
@@ -558,6 +596,7 @@ emailsProgressionQuota = 3
 texture_filter = 1
 
 [node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_mw0mh")]
+visible = false
 layout_mode = 2
 Sender_Name = "Richard"
 ToAddress = "dspritely@forwardgreen.co.uk"
@@ -704,6 +743,9 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
+visible = true
+
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
 offset_left = 0.0
 offset_top = 0.0
@@ -807,33 +849,26 @@ offset_right = 392.0
 offset_bottom = 141.0
 
 [node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = 24.3871
-offset_top = 8.66014
-offset_right = 486.387
-offset_bottom = 97.6601
-scale = Vector2(0.9, 0.9)
-text = "Green is impossible, say Blue and Yellow"
+offset_left = -6.1137543
+offset_top = 1.7851949
+offset_right = 817.41003
+offset_bottom = 172.67668
+scale = Vector2(0.585, 0.585)
+text = "“RainbowHope” defaces “unsightly” concrete wall in village of Hedgewater."
 autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "In their latest party conferences, two of the largest and oldest British parties, vying desperately for the title of most irrelevant, have confirmed their commitment to undermine a green transition by denying first the need, then the methods, and then by singing the national anthem over all following questions. Read on to find out why this is actually a genius move, and how those who don't agree are part of a secretive globalist cabal, from our election specialist, Baron Toph Crasscock.							
-							
-\"The only Green that matters is that which lines the pockets of my two dads: Mr Petrochemical and Mr. Warbucks\"—Triumphant speech given to braying masses of millionaires and their pet journalists.	
-							
-Does this spell the end of the green energy sector in the UK? We gathered three experts on our podcast to discuss, here's the transcript:							
+text = "Police in the village of Hedgewater received over 304 complaints this week concerning a major act of vandalism committed in the village centre. Photos on social media show graffiti sprayed on the wall of Clover Lodge, a charity-run hostel that was shuttered three years ago after numerous reports of “unfamiliar, unsavoury visitors”. The wall faces directly onto the Overflow Parking area of the village gentlemen’s club, leaving some members “audibly upset” according to the manager.
 
-Jom Angerland, angry pensioner: Yes.							
-Gareth Tundersly, women's rights activist: Yes and also I hate t*******.							
-Dr Jane Apperton: The energy sector is a vital part of the UK economy, and a rapid green transition is essential if we want to save the unique ecosystems across our country, as well as prevent catastrophic—							
-Baron Crasscock: And that's all we've got time for. As you can see, the majority of our experts agree that treehugging is the realm of crackpots and, worse, students. A sensible energy policy is that of fire and brimstone. 							
+Local MP William Dunse brought this issue to Parliament yesterday, calling for National efforts to hunt down the alleged offender, known as “RainbowHope” on the Internet. “RainbowHope” has gained online popularity for their international acts of vandalism. They have openly broadcast their defacing of large white walls during several Art Festivals in European capitals. The account is littered with the slogan “Finding life and colour in a grey world”.
 
-Time will tell whether 'Green politics' is possible in Britain, but we implore all readers to be wary of the rising threat of environmentalist extremists on our proud British soil. 							"
+The intimidating graffiti in Hedgewater depicts a large cartoon love-heart surrounded by an array of characters, including humans, animals and robots.The multi-coloured and stylish eyesore does not include any writing, but residents remain concerned by the possible symbolism. Jenessica, a lifelong Hedgewater resident, stated on social media: “the flowerpot committee and I agree that this is an act of terror.”"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
 offset_right = 352.0
-text = "◦ Green agenda?
-◦ Expert Panel Says No
-◦ Reject Green Scam"
+text = "◦ MISSING
+◦ MISSING
+◦ MISSING"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
@@ -841,11 +876,11 @@ offset_bottom = 394.0
 theme_override_constants/separation = 22
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-text = "Oodles of poodles: canine fashion week under fire for lack of diversity"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-text = "Perfect summer party vibes: floods bring beaches to you"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
@@ -857,22 +892,25 @@ offset_left = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
-[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
-visible = false
-
 [node name="Dave" parent="." instance=ExtResource("13_dm1gs")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics3" type="Node2D" parent="."]
+[node name="Specifics4" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif")]
+script = ExtResource("14_f0dxk")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
 
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("14_gpadi")]
+visible = false
 position = Vector2(-552, -256)
 frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("14_gpadi")]
+visible = false
 position = Vector2(-138, -470)
 
 [node name="Door" parent="Notifications" instance=ExtResource("14_gpadi")]
@@ -905,13 +943,14 @@ visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics3" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics3" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics4" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics4" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics3" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics3" method="_on_interactable_element_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics3" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics4" method="_on_desk_interactable_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics4" method="_on_interactable_element_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics4" method="_on_clipboard_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
+[connection signal="pressed" from="ScreenUI/Budget/MarketingBudget/SaveButton" to="Specifics4" method="_on_save_button_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
 [editable path="Fader"]

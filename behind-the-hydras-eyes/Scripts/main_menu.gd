@@ -47,5 +47,6 @@ func _on_options_pressed() -> void:
 func _on_new_game_pressed() -> void:
 	Fader.FadeUp("First Day")
 	await Fader.fade_finished
+	PermanentGlobal.reset_choices()
 	get_tree().change_scene_to_file("res://Scenes/train.tscn")
 	Fader.FadeDown("First Day")

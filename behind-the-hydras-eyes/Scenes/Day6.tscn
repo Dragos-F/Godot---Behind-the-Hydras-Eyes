@@ -1,12 +1,18 @@
-[gd_scene load_steps=41 format=3 uid="uid://b8khy38y6cpun"]
+[gd_scene load_steps=106 format=3 uid="uid://b8khy38y6cpun"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_ddjcg"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_gst1s"]
 [ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_e72cc"]
+[ext_resource type="Texture2D" uid="uid://xgfnd6e3wq4v" path="res://Visual Assets/Old assets/Jen 1.png" id="3_fgwj2"]
 [ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_iy7se"]
+[ext_resource type="Script" uid="uid://cgwl870qrmpxg" path="res://Scripts/JenAnimBrain.gd" id="4_pol0u"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_ph2r7"]
+[ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="5_ssufr"]
+[ext_resource type="Texture2D" uid="uid://cmgixe7ffb6w1" path="res://Visual Assets/Old assets/Jen (1).png" id="6_1o464"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_v02v2"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_1y5hl"]
+[ext_resource type="Texture2D" uid="uid://cpgbgj5vmmu8t" path="res://Visual Assets/Old assets/Selected Item Versions/Jen Selected.png" id="7_uldrl"]
+[ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="8_d2ma2"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_fgwj2"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_pol0u"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_ssufr"]
@@ -14,8 +20,417 @@
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_uldrl"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_d2ma2"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_dr76r"]
+[ext_resource type="Script" uid="uid://dmhbe5pq5b8js" path="res://Scripts/specifics_6.gd" id="14_gst1s"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_d01yk"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_a7k0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r70fk"]
+radius = 90.0347
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly42q"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk4hj"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyjpg"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjo4x"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3361"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f6p7"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auuwe"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5yax"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5kt2"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tjsp"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evwx4"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dwm3"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbjul"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43ctb"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5h4o"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn164"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1c86"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oh3a"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcnfg"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnlhq"]
+atlas = ExtResource("8_d2ma2")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mqa7"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u0n3"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpxd6"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr7b6"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej8k"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrw2s"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6fm4"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb2lo"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t338"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu3io"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sinl"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_061du"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxmww"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odakp"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ngdt"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6tgp"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jdw2"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2hpw"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqj3v"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdjwe"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmnt4"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1040, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrc7b"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1092, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_734vm"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1144, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxo4l"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1196, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg5dk"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1248, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfnau"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1300, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltdj6"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1352, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu602"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1404, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8jvq"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1456, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbupp"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1508, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc3pw"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1560, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqe3p"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1612, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pc5f"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1664, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjofg"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1716, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7echg"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1768, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vreia"]
+atlas = ExtResource("4_iy7se")
+region = Rect2(1820, 0, 52, 122)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcnck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly42q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyjpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjo4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3361")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f6p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auuwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5yax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5kt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tjsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evwx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dwm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbjul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43ctb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5h4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn164")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1c86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oh3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcnfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnlhq")
+}],
+"loop": false,
+"name": &"drink_tea",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mqa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u0n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpxd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr7b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oej8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrw2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6fm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb2lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t338")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu3io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sinl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_061du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxmww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odakp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ngdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6tgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jdw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2hpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqj3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdjwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmnt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrc7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_734vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxo4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg5dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfnau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltdj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu602")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8jvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbupp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc3pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqe3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pc5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjofg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7echg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vreia")
+}],
+"loop": false,
+"name": &"phone_check",
+"speed": 10.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
 atlas = ExtResource("4_iy7se")
@@ -100,6 +515,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_bjnw6")
 }],
 "loop": true,
+"name": &"idle_Janine",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjnw6")
+}],
+"loop": true,
 "name": &"idle_Jen",
 "speed": 5.0
 }, {
@@ -130,6 +553,35 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking_Alex",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsmfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy5xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xk2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqkss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c14by")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38uq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7cuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmapi")
+}],
+"loop": true,
+"name": &"walking_Janine",
 "speed": 10.0
 }, {
 "frames": [{
@@ -452,6 +904,50 @@ z_index = -1
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
 
+[node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "timer")]
+modulate = Color(1, 0, 0.9843137, 1)
+z_index = -1
+texture_filter = 1
+position = Vector2(-688, 68)
+scale = Vector2(2, 2)
+texture = ExtResource("3_fgwj2")
+flip_h = true
+script = ExtResource("4_pol0u")
+MainSprite = NodePath(".")
+SpriteAnim = NodePath("AnimatedSprite2D")
+regularJen = ExtResource("3_fgwj2")
+timer = NodePath("Timer")
+minTime = 5.0
+maxTime = 8.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Background/Furniture/Janine"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Furniture/Janine/StaticBody2D"]
+visible = false
+position = Vector2(3.5, 56.5)
+polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5, -9, 15.5, -79)
+
+[node name="JenInteractable" parent="Background/Furniture/Janine" instance=ExtResource("5_ssufr")]
+regular = ExtResource("6_1o464")
+selected = ExtResource("7_uldrl")
+YarnNodeLink = "Janine"
+
+[node name="Area2D" parent="Background/Furniture/Janine/JenInteractable" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="Background/Furniture/Janine/JenInteractable/Area2D" index="0"]
+shape = SubResource("CircleShape2D_r70fk")
+
+[node name="DialogueMarker" parent="Background/Furniture/Janine/JenInteractable" index="1"]
+position = Vector2(13, -39.5)
+
+[node name="Timer" type="Timer" parent="Background/Furniture/Janine"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Furniture/Janine"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_fcnck")
+animation = &"phone_check"
+
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
@@ -509,7 +1005,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_3xk2j")
 }
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "JanineAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_1y5hl")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
@@ -520,6 +1016,7 @@ Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
 Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
+JanineAnchor = NodePath("../Background/Furniture/Janine/JenInteractable/DialogueMarker")
 PauseMenu = NodePath("../Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day6.tscn"
@@ -674,28 +1171,17 @@ offset_top = 8.66014
 offset_right = 486.387
 offset_bottom = 97.6601
 scale = Vector2(0.9, 0.9)
-text = "Green is impossible, say Blue and Yellow"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "In their latest party conferences, two of the largest and oldest British parties, vying desperately for the title of most irrelevant, have confirmed their commitment to undermine a green transition by denying first the need, then the methods, and then by singing the national anthem over all following questions. Read on to find out why this is actually a genius move, and how those who don't agree are part of a secretive globalist cabal, from our election specialist, Baron Toph Crasscock.							
-							
-\"The only Green that matters is that which lines the pockets of my two dads: Mr Petrochemical and Mr. Warbucks\"—Triumphant speech given to braying masses of millionaires and their pet journalists.	
-							
-Does this spell the end of the green energy sector in the UK? We gathered three experts on our podcast to discuss, here's the transcript:							
-
-Jom Angerland, angry pensioner: Yes.							
-Gareth Tundersly, women's rights activist: Yes and also I hate t*******.							
-Dr Jane Apperton: The energy sector is a vital part of the UK economy, and a rapid green transition is essential if we want to save the unique ecosystems across our country, as well as prevent catastrophic—							
-Baron Crasscock: And that's all we've got time for. As you can see, the majority of our experts agree that treehugging is the realm of crackpots and, worse, students. A sensible energy policy is that of fire and brimstone. 							
-
-Time will tell whether 'Green politics' is possible in Britain, but we implore all readers to be wary of the rising threat of environmentalist extremists on our proud British soil. 							"
+text = "MISSING"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
 offset_right = 352.0
-text = "◦ Green agenda?
-◦ Expert Panel Says No
-◦ Reject Green Scam"
+text = "◦ MISSING
+◦ MISSING
+◦ MISSING"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
@@ -703,11 +1189,11 @@ offset_bottom = 394.0
 theme_override_constants/separation = 22
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-text = "Oodles of poodles: canine fashion week under fire for lack of diversity"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-text = "Perfect summer party vibes: floods bring beaches to you"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
@@ -726,15 +1212,21 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics3" type="Node2D" parent="."]
+[node name="Specifics6" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif")]
+script = ExtResource("14_gst1s")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
 
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("14_dr76r")]
+visible = false
 position = Vector2(-552, -256)
 frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("14_dr76r")]
+visible = false
 position = Vector2(-138, -470)
 
 [node name="Door" parent="Notifications" instance=ExtResource("14_dr76r")]
@@ -767,12 +1259,17 @@ visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics3" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics3" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics6" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Janine/JenInteractable" to="Specifics6" method="_on_jen_interactable_interacted"]
+[connection signal="body_entered" from="Background/Furniture/Janine/JenInteractable/Area2D" to="Background/Furniture/Janine" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Background/Furniture/Janine/JenInteractable/Area2D" to="Background/Furniture/Janine" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Background/Furniture/Janine/Timer" to="Background/Furniture/Janine" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Background/Furniture/Janine/AnimatedSprite2D" to="Background/Furniture/Janine" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics6" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics3" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics3" method="_on_interactable_element_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics3" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics6" method="_on_desk_interactable_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics6" method="_on_interactable_element_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics6" method="_on_clipboard_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
@@ -784,6 +1281,7 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="Background/Furniture/OfficeFilingCabinet/InteractableElement"]
 [editable path="Background/Furniture/PosterGroup/InteractableElement"]
 [editable path="Background/Furniture/Jen1/JenInteractable"]
+[editable path="Background/Furniture/Janine/JenInteractable"]
 [editable path="Background/Furniture/Alex/AlexInteractable"]
 [editable path="Background/Furniture/DaveDesk/DeskChair/DeskInteractable"]
 [editable path="Background/Kitchen/WaterCooler/InteractableElement"]

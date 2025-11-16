@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=48 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -37,6 +37,8 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="34_unbiq"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_unbiq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_scg7i"]
+[ext_resource type="Script" uid="uid://dl25svddpr1ps" path="res://Scripts/bedroom_specifics1.gd" id="38_ayyhf"]
+[ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="39_ysrrp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -660,6 +662,21 @@ visible = false
 unique_name_in_owner = true
 script = ExtResource("37_scg7i")
 
+[node name="Node" type="Node" parent="."]
+script = ExtResource("38_ayyhf")
+
+[node name="Notifications" type="Node2D" parent="."]
+
+[node name="Notif" parent="Notifications" instance=ExtResource("39_ysrrp")]
+position = Vector2(146, 117)
+
+[node name="Notif2" parent="Notifications" instance=ExtResource("39_ysrrp")]
+position = Vector2(44, -465)
+animation = &"Q"
+autoplay = "Q"
+
+[connection signal="interacted" from="Furniture/Balcony Door/InteractableElement" to="Node" method="_on_balcony_interacted"]
+[connection signal="interacted" from="Furniture/Desk/DeskChair/InteractableElement" to="Node" method="_on_computer_interacted"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 

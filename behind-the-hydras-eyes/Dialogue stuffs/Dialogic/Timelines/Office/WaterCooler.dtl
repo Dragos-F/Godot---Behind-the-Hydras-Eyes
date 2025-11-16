@@ -91,4 +91,234 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		[end_timeline]
 - No
 	Dave: I am adequately quenched as is, thanks.
+label Moz
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Moz.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Moz: Wagwan, my D!
+	Moz: Sorry for startling you, hows it hanging on this floor? The mouth of the lion's den treating you alright?
+	Dave: ...Sorry?
+	Moz: You know, the lion. Big P, the bulldog, the chief scrotum himself?
+	Dave: Sorry, did you just say chief scrotum?
+	Moz: You know, Mr Moore, the wrinkly old bald man you work for! Yeah, he treating you well? You probably see him more than anyone other than his wife and Richard, right?
+	Moz: Or, y'know, Richard's wife.
+	- Uh, I guess so.
+		Moz: It's not like we catch up that much though. End of quarter debriefings, and occasional awkward run-ins at the lifts.
+		Moz: And I can never tell what he's thinking.
+		Moz: Like, I guess my job is to keep all the plates spinning, which is fine, but he seems annoyed I'm not making them spin faster, or that there's not more plates.
+		Moz: Or—sorry, this is a really bad analogy isn't it? I guess I'm just trying to say he's like any other boss.
+	- Uh, no, not really.
+		Moz: I mean, I only really see him at the end of quarter meetings where he frowns at me until I shut up and leave.
+		Moz: I get the feeling that he's completely disinterested in the project, and yet there's no-one else for me to really ask things to.
+	Moz: Rough, or whatever.
+	Moz: ANYWAY!
+	Moz: I'm only here to check in that everyone is happy to come if I arrange leaving drinks for Olu in a month or two.
+	Moz: Give me the nod and I'll work my magic, cuz there ain't no party like a company mandated farewell to a maternity cover colleague party.
+	Moz: Or something.
+	- Oh, cool! Absolutely yeah.
+		Moz: Great stuff, great stuff.
+	- Remember he doesn't drink
+		Moz: Pshh, I know, I know, but trust me, he won't mind the pub...more than anywhere else, anyway.
+		Moz: I won't let him get away with not having a leaving do though, so he better grit his teeth and take it.
+		Moz: ...again.
+		Dave: Hm?
+		Moz: Oh, nothing.
+	Moz: I'll send you a message when it's arranged anyway, and you can let Alex and Jen know.
+	Moz: RIGHT! That's everything from me. Better get back to my own desk. Hey, do you like books by the way?
+	- I guess it depends on the book
+		Moz: Oh yeah sure. Life's too short for boring things.
+	- Not really.
+		Moz: Yeah? Yeah, me neither to be honest.
+	Moz: But there's this really cool audiobook thing that I've been listening to that you should totally check out.
+	Moz: It's called 1488 Rules of Power, and it's about all the ways you can be more direct and persuasive and shit.
+	Moz: I mean, it's still a bit boring, so I'm listening on three times speed, but there's totally lots of wisdom there.
+	Dave: ...Right.
+	Moz: Here's a parting bit of wisdom for you. "Eating in front of other people is a sign of trust, like with cats, and trust is a sign of weakness"
+	Moz: So I've started blending all my lunches before work, so I only have to drink and not eat. Gotta stay grifting, y'know?
+	Moz: Anyway, better run. Ciao ciao.
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	[end_timeline]
+- No
+	Dave: I am adequately quenched as is, thanks.
+[end_timeline]
+
+label Richard
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Richard.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Richard: Here he is.
+	Richard: The First Mate, hydrating like any good performance athlete.
+	Dave: ...Yeah, hi.
+	Richard: I thought I'd come down and see how you're all getting along.
+	Richard: What with the project coming up on my desk more often.
+	- Oh, any trouble?
+		Richard: Enquiries more than anything, and people probing to see if I'm up for a fight
+		Richard: Nothing I can't handle, of course, just wanted to make sure you weren't going into any skirmishes unprepared
+		Dave: Don't think so, i've defused most emails coming my way
+		Richard: I'd be lying saying I didn't want to pick up a quick squabble with some rural mexican wanna-be lawyer, but glad you're keeping level headed.
+	- It's all going smoothly yeah
+		Richard: Ah, that's what any opponent says in Round 1, before the proper punches start flying
+		Richard: Drop me a line whenever things start looking heated. Wouldn't want you alone in the ring with the mexican hounds.
+		Dave: Really don't think that's necessary, things have been quite civil
+		Richard: They are until they aren't, but you'll see how things go
+		Richard: I've weathered a fair share of storms here in this company
+		Richard: It's always better to cut back before you actually hit the bottom.
+		Dave: Right, I'll keep that in mind
+	Richard: Anyway, did you catch the match last night?
+	- Sorry, I don't follow football anymore.
+		Richard: Football? Hah, that's not a proper sport
+		Richard: It was a rousing cage fight! MMA, the ultimate expression of fitness and ruthlessness!
+		Dave: Oh, I'm not that into that.
+		Richard: Not that into it? What else could you be watching? Badminton?
+		Richard: I used to do a bit of boxing when I was younger, but this MMA thing is proper stuff. They gotta give it all to survive!
+		Dave: Oh yeah, what was your biggest fight?
+		Richard: Me and my uncle Roger used to tussle in the backyard.
+		Richard: One day I come home from college and he set up a whole ring, ropes and all.
+		Dave: Wow, sounds like a core memory!
+		Richard: Well, it was my best fight. I still remember the heavy gloves on my hands, looking up at my uncle, a solid foot taller than me, and about two feet wider
+		Richard: It was my big day.
+		Richard: Until I knocked him out and they had to give him a new pacemaker.
+	- Oh, who was playing?
+		Richard: Playing? Nonono. There was no playing in the ring last night
+		Richard: The Morocccan guy knocked him out by the 4th round, but by then they both had blood streaming down their face
+		Dave: Ew...
+		Richard: Yeah, when they declared him the winner and lifted his arm up
+		Richard: You could see the other guy's tooth in his knuckle. Proper good stuff
+		Dave: Right.... Well I'm glad you've got a hobby?
+		Richard: Oh, I wish I could've kept up the boxing. Shame about Uncle Roger
+		Dave: What?
+		Richard: Oh, we sparred when I was younger. God, that was a big funeral.
+		Dave: I'm—sorry, what!?
+		Richard: Oh, the funeral was unrelated.
+	Dave: Right....
+	Richard: ....
+	Dave: Well, I'm all hydrated now, so I'll head back to work...
+	Richard: Ah yeah, good shout.
+	Richard: I don't usually drink from the watercooler. Not enough electrolytes in the water
+	Richard: I've got my own filter upstairs, and I get special, 50L jugs delivered to my floor
+	Dave: Is anything wrong with the water?!
+	Richard: Well, if you're looking for peak performance from your brain at all times, then you should be drinking something else
+	Richard: But I'm not sharing my TruNevis Naturally Purified Electrolyte Dense Reserve Solution with anyone.
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	[end_timeline]
+- No
+	Dave: I am adequately quenched as is, thanks.
+[end_timeline]
+
+label Olu
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Olu.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Olu: Uh, hi.
+	Olu: You doing well?
+	- I think so?
+		Dave: Why, has someone said something?
+	- Just about.
+		Dave: You know how it is, always new complaints to answer, nothing's ever straightforward.
+	Olu: Yeah? Cool, cool.
+	Olu: Hey, listen, you haven't heard anything from Moz about a party or anything, have you?
+	Olu: I've told him repeatedly that I don't want any fuss, and I REALLY don't want him arranging any fuss that I can't avoid.
+	- He may have said something.
+		Olu: Ah. Fuck's sake.
+		Olu: Sorry, that's unprofessional. *clears throat* I rescind my previous comment.
+		Olu: I'll...have a word with him. I just want to bow out quietly, no fanfare, and I don't really want to keep in touch with anyone anyway.
+		Dave: ...
+		Olu: Sorry. Sorry, I don't mean anything personal.
+		Olu: ...
+	- Uh, no, nothing.
+		Olu: ...
+		Dave: You okay?
+		Olu: Oh, yeah, yeah, I'm just relieved, that's all. Relieved...
+		Olu: Hey, has he said anything about me? Like, to you or Alex or Jen? Anything...no, never mind.
+		Olu: Yeah. Well, I'm glad he's not doing anything. Even if it makes it the only time he's ever listened to me properly.
+	Olu: Well. That's all I came to say. Sorry to bother you, Dave.
+	- So, uh, how are you?
+		Olu: Me? Oh. I'm good...got an extension recently.
+		Dave: Oh, on some project?
+		Olu: Huh? No on my house. A little conservatory. Big windows so I can watch the birds. Turns out we have more foxes than birds though.
+		Olu: You can hear their screaming so loud in the conservatory. Bloodcurdling, like they're angry at the world they're forced to live in, scavenging in bins, fighting with rats.
+		Olu: ...or to ward off rivals, I guess. Maybe I'll try it with Moz.
+		Olu: Sorry, that was weird. I'm not going to scream at Moz. He's not my rival or anything.
+		Olu: I mean, I don't have any rivals.
+		Dave: ...
+	- So, uh, how's the project?
+		Olu: Oh. Fine, I guess. Delays and suprises, but we knew there was going to be some bumps whatever the site you picked.
+		Olu: Worrying about those isn't really my job, I just make sure we have the money for whatever you or Richard or Patrick sign off, and everyone gets their wages.
+		- But do you think it's a good thing?
+			Olu: What, the wind? I mean, wind is good I guess. I heard talk about their being local complaints, which is a shame, but, again, nothing to do with me.
+		- Sure, yeah.
+	- ...
+		Olu: ...
+		Dave: ...
+		Olu: ...
+		Olu: Um, do you hear that? Think my secretary is calling me.
+		Dave: You have a secretary?
+		Olu: ...no.
+	Olu: Anyway, I better go. Have a good one, Dave.
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	[end_timeline]
+
+- No
+	Dave: I am adequately quenched as is, thanks.
+[end_timeline]
+
+label Janine
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Janine.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Janine: ....
+	Dave: ....
+	Janine: ....
+	Dave: ....
+	Watercooler: ....
+	Watercooler: Well this is awkward
+	- How's it going?
+		Janine: Fine,
+		Janine: I wish I didn't have so much to do
+		Janine: But someone's gotta clear this mess
+		Dave: Listen, if I can help with anythi...
+		Janine: No.
+		Janine: Patrick entrusted me with this
+		Janine: And / I / don't plan to dissapoint him
+		- Was that aimed at me?
+			Janine: Not unless you felt it necessary
+			Janine: I'm not here to make presumptions on your relationship with your boss
+			Janine: I'm here to sort through complaints
+			Dave: Right, nice to have you.
+		- I feel like we got off on the wrong foot
+			Janine: Did we?
+			Janine: I'm not here to make friends
+			Janine: There's obviously work to do, and I need to refill my water bottle
+			Dave: Uhuh, well, don't let me stop you
+			Janine: You couldn't.
+			Dave: ...Right.
+	
+	- Say Nothing
+		Janine: ....
+		Dave: ....
+		Watercooler: ....
+		Dave: ....
+		Janine: ....
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	Watercooler: Well she's quite something
+	[end_timeline]
+
+- No
+Dave: I am adequately quenched as is, thanks.
 [end_timeline]

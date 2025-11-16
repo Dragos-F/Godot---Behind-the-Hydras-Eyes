@@ -30,6 +30,8 @@ func _ready() -> void:
 	
 	reply.visible = false
 	reply.disabled = true
+	info.startingSavings = PermanentGlobal.Savings
+	
 	
 
 
@@ -104,7 +106,7 @@ func _on_reply_pressed() -> void:
 			if (inbox_buttons!=null):
 				for i in inbox_buttons:
 					i.disabled = true
-		PermanentGlobal.new_choice(selectedTexts[2],Dialogic.VAR.EmailChoice)
+		PermanentGlobal.new_choice(selectedTexts[2],Dialogic.VAR.EmailChoice) # this look wrong, but selText[2] is indeed right
 
 func _on_typing_brain_typing_finished() -> void: #custom signal from the typing brain
 	hint_text.visible = false

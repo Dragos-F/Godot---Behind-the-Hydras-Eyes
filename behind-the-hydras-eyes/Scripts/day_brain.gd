@@ -17,6 +17,7 @@ class_name DayBrain
 @export var Alex_anim:AnimationPlayer
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
+@export var JanineAnchor:Node2D
 @onready var TeaMinigame:Node2D = get_node("/root/Main/TeaMinigame")
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
@@ -121,6 +122,9 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
 	if (nodeTitle == "Jen"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",target)
+	if (nodeTitle == "Janine"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",JanineAnchor)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Unknown.dch",JanineAnchor)
 	if (nodeTitle == "Boss"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Clipboard"):
@@ -137,6 +141,12 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch",target)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",standing_Alex)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",standing_Alex)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Moz.dch",standing_Alex)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch",standing_Alex)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",standing_Alex)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",standing_Alex)
+		
+		
 	if (nodeTitle == "Corkboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):
@@ -190,7 +200,6 @@ func take_plant():
 
 func water_cooler_Alex(i:int):
 		if i == 0:
-			
 			standing_Alex.visible = true
 			if Dialogic.VAR.WatercoolerChar == "Alex01":
 				Alex_anim.play("move_Alex")
@@ -198,6 +207,18 @@ func water_cooler_Alex(i:int):
 			elif Dialogic.VAR.WatercoolerChar == "Jen01":
 				Alex_anim.play("move_Jen")
 				Alex_walking_sprite.play("walking_Jen")
+			elif Dialogic.VAR.WatercoolerChar == "Moz":
+				Alex_anim.play("move_Alex")
+				Alex_walking_sprite.play("walking_Moz")
+			elif Dialogic.VAR.WatercoolerChar == "Richard":
+				Alex_anim.play("move_Alex")
+				Alex_walking_sprite.play("walking_Richard")
+			elif Dialogic.VAR.WatercoolerChar == "Olu":
+				Alex_anim.play("move_Alex")
+				Alex_walking_sprite.play("walking_Olu")
+			elif Dialogic.VAR.WatercoolerChar == "Janine":
+				Alex_anim.play("move_Alex")
+				Alex_walking_sprite.play("walking_Janine")
 		if i == 1:
 			if Dialogic.VAR.WatercoolerChar == "Alex01":
 				Alex_walking_sprite.play("walking_Alex")
@@ -205,14 +226,30 @@ func water_cooler_Alex(i:int):
 			elif Dialogic.VAR.WatercoolerChar == "Jen01":
 				Alex_walking_sprite.play("walking_Jen")
 				Alex_anim.play("away_Jen")
+			elif Dialogic.VAR.WatercoolerChar == "Moz":
+				Alex_walking_sprite.play("walking_Moz")
+				Alex_anim.play("away_Alex")
+			elif Dialogic.VAR.WatercoolerChar == "Richard":
+				Alex_walking_sprite.play("walking_Richard")
+				Alex_anim.play("away_Alex")
+			elif Dialogic.VAR.WatercoolerChar == "Olu":
+				Alex_walking_sprite.play("walking_Olu")
+				Alex_anim.play("away_Alex")
+			elif Dialogic.VAR.WatercoolerChar == "Janine":
+				Alex_walking_sprite.play("walking_Janine")
+				Alex_anim.play("away_Alex")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep1":
-		#end_day("Q2, 202X","res://Scenes/trainQ2.tscn") - #For Non Demo
-		end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
+		end_day("Q2, 202X","res://Scenes/trainQ2.tscn") #For Non Demo
+		#end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
+	if argument == "bed_sleep2":
+		end_day("Q2, 202X","res://Scenes/trainQ3.tscn") #For Non Demo
 	if argument == "watercooler_Alex":
 		#standing_Alex.visible = true
 		water_cooler_Alex(0)
+		if dave.ownSprite.flip_h != true:
+			dave.ownSprite.flip_h = true
 	if argument == "no_watercooler_Alex":
 		water_cooler_Alex(1)
 	if argument == "tea_minigame":

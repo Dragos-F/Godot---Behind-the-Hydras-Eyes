@@ -44,6 +44,7 @@ directories/dch_directory={
 "EntryDoor": "res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Characters/Office/FilingCabinet.dch",
 "Front Door": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Front Door.dch",
+"Janine": "res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",
 "Jen": "res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",
 "Kettle": "res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",
 "Keyboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Keyboard.dch",
@@ -54,6 +55,7 @@ directories/dch_directory={
 "Richard": "res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text From Boss.dch",
 "Text from Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",
+"Unknown": "res://Dialogue stuffs/Dialogic/Characters/Office/Unknown.dch",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Characters/Office/WaterCooler.dch"
 }
 directories/dtl_directory={
@@ -75,6 +77,7 @@ directories/dtl_directory={
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Timelines/Office/FilingCabinet.dtl",
 "Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
 "GiveTea": "res://Dialogue stuffs/NEW/Day1/GiveTea.dtl",
+"Janine": "res://Dialogue stuffs/Dialogic/Timelines/Office/Janine.dtl",
 "Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
@@ -99,6 +102,7 @@ variables={
 "CurrentQuarter": "Quarter1",
 "Day4AlexEmails": false,
 "EmailChoice": 0.0,
+"JanineReturn": false,
 "JenReturn": false,
 "KettleReturn": 0.0,
 "Option1": "",

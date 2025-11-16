@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_j53rr"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_lauko"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_e8b16"]
-[ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="14_hsnp8"]
+[ext_resource type="Script" uid="uid://cvvd6kahm84nf" path="res://Scripts/specifics_5.gd" id="14_h2npb"]
 [ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_m7jpg"]
 [ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_ceivk"]
 [ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_ui2j1"]
@@ -111,6 +111,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_fj3au")
+}],
+"loop": false,
+"name": &"idle_Olu",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_t5tpt")
 }, {
 "duration": 1.0,
@@ -165,6 +173,35 @@ animations = [{
 }],
 "loop": true,
 "name": &"walking_Jen",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5tpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf4m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u020q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hph1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwmwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkchc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb88j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttuwe")
+}],
+"loop": true,
+"name": &"walking_Olu",
 "speed": 10.0
 }]
 
@@ -457,7 +494,7 @@ YarnNodeLink = "BossDoor"
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 textToDisplay = "Dingy Apartment"
 YarnNodeLink = "EntryDoor"
-ScenePath = "res://Scenes/bedroom.tscn"
+ScenePath = "res://Scenes/bedroom2.tscn"
 
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(15, -32)
@@ -575,7 +612,7 @@ UK Project Lead
 Forward Green"
 ReplyBody2 = null
 alltexts = null
-boss = null
+boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
@@ -653,18 +690,6 @@ texture_filter = 1
 
 [node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
 texture_filter = 1
-
-[node name="Send" parent="ScreenUI/MainEmail" index="2"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 183.0
-offset_bottom = 75.0
-
-[node name="Reply" parent="ScreenUI/MainEmail" index="3"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 183.0
-offset_bottom = 75.0
 
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
@@ -810,12 +835,11 @@ offset_right = 392.0
 offset_bottom = 141.0
 
 [node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = 13.9025
-offset_top = -49.2858
-offset_right = 557.902
-offset_bottom = 223.714
-scale = Vector2(0.8, 0.8)
-text = "Train turmoil: troubled transport torpedoes traveller timetables"
+offset_left = -8.973217
+offset_top = -69.91066
+offset_right = 466.6499
+offset_bottom = 203.08916
+text = "War overseas - march at ease"
 autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -825,29 +849,31 @@ offset_right = 455.34
 offset_bottom = 531.552
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "For the third time this week, serious delays to all major transport routes have put a dampener on the spirits of hopeful commuters and tourists. This comes one week after ticket prices were hiked 20% in a move that cabinet members have described as \"the sort of tough choices that help to toughen up our long-pampered underclass\". 									
+text = "This week marks the 81st Military Parade through our glorious city. You'll hear snowflakes complaining that rolling tanks and every model of bullet-proof vehicle in existence through our streets is not a fruitful use of our nation's dwindling reserves. To them, we need only show the glorious trails left in the dull grey sky that the latest F-53s, painting the beautiful St George Cross. It brought myself, and the editorial team watching the display live, to tears for our nation's brave defenders, as well as the courageous men, (and mostly men, let's face it) that gave their lives in our country's past.	
 
-We reached out via phone to our mate that runs SuperTrain, the largest affected rail company, and he said \"[inaudible grumbling]\". Our experts understand this to mean that the blame lies with unions selfishly resisting sixteen hour shifts.									
-				
-Our following investigation on the causes has revealed chronic underfunding on repairs, maintainance, and expansion in line with demand; a workplace environment shaped by exhaustion and toxicity; and a constant failure to recruit adequate staff. We therefore conclude that SuperTrain were correct in their assement that the greedy staff is at the root cause of the issue									
-									"
+One needed only to watch the beautiful march, with the pristine uniforms and choreography, to feel a sudden urge to rise and fight for our country. This is quite a fortuitous instinct, as the Ministry has also, on this occasion, increased it's incentives to enroll! What a glorious opportunity, and to have it announced at this parade was the very definition of a pledge to patriotism.
+
+If I didn't have to be here, in my 53rd floor office, overlooking our unique skyline, giving you all the most essential of coverage of our nation, I'd march this very moment down to my local branch and ask for the paperwork. Whatever your dream may be, it can be achieved overseas. Alas, I still have to do my job so that our peers may defend us. I therefore would like to conclude this article by acknowledging the recent war declarations from 12 commonwealth micronations, presented to Britain late last night. I pray for everyone to remain safe in these troubling times.								
+								
+								
+								"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Ticket price soaring
-◦ SuperTrain Interview
-◦ Unions to Blame"
+text = "◦ MISSING
+◦ MISSING
+◦ MISSING"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
 custom_minimum_size = Vector2(5, 0)
-text = "And the little one says roll over: childrens hospitals declared full"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
 custom_minimum_size = Vector2(5, 0)
-text = "Air has suprising nutrional value, minister explains to food banks"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
@@ -864,6 +890,9 @@ offset_bottom = 260.784
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 249.99988
+offset_right = 491.99988
+offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -872,6 +901,9 @@ visible = false
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 628.00037
+offset_right = 870.00037
+offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -879,6 +911,9 @@ grow_vertical = 1
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 439.99963
+offset_right = 681.99963
+offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -897,8 +932,8 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
-script = ExtResource("14_hsnp8")
+[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+script = ExtResource("14_h2npb")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
 emails = NodePath("../ScreenUI")
@@ -932,10 +967,12 @@ position = Vector2(499, -250)
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("20_ld0to")]
+visible = false
 position = Vector2(-552, -256)
 frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("20_ld0to")]
+visible = false
 position = Vector2(-138, -470)
 
 [node name="Door" parent="Notifications" instance=ExtResource("20_ld0to")]
@@ -956,10 +993,10 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [node name="Pause" parent="." instance=ExtResource("22_rshjd")]
 visible = false
 
-[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
-[connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
+[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics5" method="_on_boss_door_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics5" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics5" method="_on_alex_interactable_interacted"]
+[connection signal="endOfDay" from="DayBrain" to="Specifics5" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 

@@ -498,12 +498,12 @@ offset_right = 392.0
 offset_bottom = 141.0
 
 [node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = -7.06689
-offset_top = -31.6074
-offset_right = 577.933
-offset_bottom = 241.393
+offset_left = 6.277218
+offset_top = -30.625265
+offset_right = 567.4458
+offset_bottom = 242.37514
 scale = Vector2(0.8, 0.8)
-text = "Prime Minister on nationalist protests: \"Some of my best friends are flags\""
+text = "NEW: Which MPs will hit our screens next week?"
 autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -513,32 +513,34 @@ offset_right = 445.809
 offset_bottom = 516.98
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "\"Recent protests by nationalist groups have sparked outrage among phone-obsessed loony leftists. Is this reaction justified, or are the snowflakes being too sensitive?
-In a recent survey conducted on the streets of our capital, 3 out of 5 bald white men considered the protests \"\"necessary\"\" and a core part of representing \"\"Fundamental British Values\"\".
+text = "You may have caught Deputy Prime Minister Melanie Rumpelsgit on hit show \"Celebrity Tricksters In Haunted House\", where she bravely talked about her experience dealing with problem tenants as a slum landlord.	
 
-A leading Minister originally called for an end to the protest, but was seen at the pub with the organisers of the movement on the same day. Earlier this week his stance changed, readvocating for free speech and right to protest, in the face of restricting laws on the freedom of assembly and association. When asked about his previous comments on the environmental march earlier in the year he said  \"For your weak midn to understand my thinking, you need to take some MindPower pills! I've got a pack right here with me. Everyone should buy some.\"
-					
-In an attempt to bring the nation together, the Prime Minister held a press conference to address worried voters. He spoke greatly of the rich, expansive history of our nation, and how restrictions on protests never stopped the country from achieving its glory. Ultimately, when asked about the increase in flags being flown and painted on public infrastructure he reassured the press: \"I don't fear any flag. Some of my best friends are flags\".							
+If so, we're sure you've got one main question: which MP will hit your TV screen next? Well, this is the only TV guide you need.
 
-Later this month, we are expecting another round of protests, and counterprotests, to occur in our streets. If you are concerned about this, we offer a wealth of discounted holiday locations. These include former British colonies, struggling economies and tax havens. 							
-							"
+First up we have Sir Humphrey Boggatoady, third earl of Wimplesdown and disgraced former Foreign Secretary, who is on \"Dancing with Devils\", where glamorous celebrities reform violent youth convicts through the transformative powers of dance, next Tuesday. Expect fireworks, as his partner is a young man who pled guilty to appearing at a climate protest.
+
+Then, we have Harriet Harrier-Harrier Applesby, the sixth leader of the Conservatives this year and disgraced former Foreign Secretary, who you can see on Thursday as she goes into Bog Brother, the Fenlands' Premier Social Experiment. She'll be appearing alongside a diverse cast of six other right-wing politicians and Humphrey Boggatoady's son Wilf.
+
+Finally, disgraced former Foreign Secretary Shibibly Toddings, will be on \"The Great British Dog Grooming Show\", though due to unfortunate press around Shibibly's past, this season will simply be called \"The Great British Dog Show\". 
+
+Tune in next week for your next pop culture update!								"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Protest Good
-◦ Snowflakes bad
-◦ Flags are friends"
+text = "◦ MISSING
+◦ MISSING
+◦ MISSING"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
 custom_minimum_size = Vector2(5, 0)
-text = "The animal health benefits of battery farming"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
 custom_minimum_size = Vector2(5, 0)
-text = "Pigeon arrested under terror charge for standing on sign"
+text = "MISSING"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
