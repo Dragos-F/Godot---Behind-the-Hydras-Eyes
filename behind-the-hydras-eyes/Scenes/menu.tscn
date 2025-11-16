@@ -89,10 +89,10 @@ texture = ExtResource("4_q3rjx")
 
 [node name="NewGame" type="Button" parent="Drawer2"]
 texture_filter = 1
-offset_left = -49.0
-offset_top = -16.5
-offset_right = 29.0
-offset_bottom = -0.5
+offset_left = -49.5
+offset_top = -13.5
+offset_right = 28.5
+offset_bottom = 2.5
 scale = Vector2(1.26, 1.26)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)

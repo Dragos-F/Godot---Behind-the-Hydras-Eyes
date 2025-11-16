@@ -596,7 +596,6 @@ emailsProgressionQuota = 3
 texture_filter = 1
 
 [node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_mw0mh")]
-visible = false
 layout_mode = 2
 Sender_Name = "Richard"
 ToAddress = "dspritely@forwardgreen.co.uk"
