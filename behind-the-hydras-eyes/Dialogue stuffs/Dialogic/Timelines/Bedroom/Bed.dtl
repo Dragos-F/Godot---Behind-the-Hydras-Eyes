@@ -28,3 +28,7 @@ Bed: Ah, there's your bed again. Are you ready to lie in it?
 	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write.
 	Bed: You toss. You turn. At last, you sleep.
 	[signal arg="bed_sleep2"]
+label Quarter3
+Bed: TEST BED INTO Q4
+Bed: TEST COMPLETE
+[signal arg="bed_sleep3"]

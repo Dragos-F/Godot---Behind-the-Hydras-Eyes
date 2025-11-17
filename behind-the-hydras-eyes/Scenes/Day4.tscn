@@ -1,13 +1,15 @@
-[gd_scene load_steps=42 format=3 uid="uid://ptj85vk1uimx"]
+[gd_scene load_steps=54 format=3 uid="uid://ptj85vk1uimx"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_j7m46"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_f0dxk"]
 [ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_re2c4"]
 [ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_uxrk3"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_6vp8x"]
+[ext_resource type="Texture2D" uid="uid://bdmuamuiy2shp" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Richard standing.png" id="5_uxrk3"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_qbxx6"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_qs0y6"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_0gkix"]
+[ext_resource type="Texture2D" uid="uid://r7w74ihrqipl" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Richard walking-Sheet.png" id="8_6vp8x"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_5kyc3"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_vl8em"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_sjsk0"]
@@ -86,6 +88,38 @@ region = Rect2(312, 0, 52, 122)
 atlas = ExtResource("6_qbxx6")
 region = Rect2(364, 0, 52, 122)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbxx6"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(0, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs0y6"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(90, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gkix"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(180, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kyc3"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(270, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl8em"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(360, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjsk0"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(450, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw0mh"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(540, 0, 90, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm1gs"]
+atlas = ExtResource("8_6vp8x")
+region = Rect2(630, 0, 90, 140)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjnw6"]
 animations = [{
 "frames": [{
@@ -106,7 +140,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_re2c4")
+"texture": ExtResource("5_uxrk3")
 }],
 "loop": false,
 "name": &"idle_Richard",
@@ -172,28 +206,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t5tpt")
+"texture": SubResource("AtlasTexture_qbxx6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wf4m3")
+"texture": SubResource("AtlasTexture_qs0y6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u020q")
+"texture": SubResource("AtlasTexture_0gkix")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1hph1")
+"texture": SubResource("AtlasTexture_5kyc3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cwmwp")
+"texture": SubResource("AtlasTexture_vl8em")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wkchc")
+"texture": SubResource("AtlasTexture_sjsk0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eb88j")
+"texture": SubResource("AtlasTexture_mw0mh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ttuwe")
+"texture": SubResource("AtlasTexture_dm1gs")
 }],
 "loop": true,
 "name": &"walking_Richard",
@@ -435,13 +469,107 @@ tracks/2/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_uxrk3"]
+resource_name = "move_Richard"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173.5, -13), Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walking_Richard", &"idle_Richard"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6vp8x"]
+resource_name = "away_Richard"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-14.5, 47), Vector2(-190, -16.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking_Richard"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3xk2j"]
 _data = {
 &"RESET": SubResource("Animation_fy5xc"),
 &"away_Alex": SubResource("Animation_wf4m3"),
 &"away_Jen": SubResource("Animation_1hph1"),
+&"away_Richard": SubResource("Animation_6vp8x"),
 &"move_Alex": SubResource("Animation_gsmfe"),
-&"move_Jen": SubResource("Animation_u020q")
+&"move_Jen": SubResource("Animation_u020q"),
+&"move_Richard": SubResource("Animation_uxrk3")
 }
 
 [node name="Main" type="Node2D"]
@@ -515,7 +643,7 @@ YarnNodeLink = "WaterCooler"
 visible = true
 
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
-position = Vector2(-12.5, -15.5)
+position = Vector2(18, -42)
 
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)

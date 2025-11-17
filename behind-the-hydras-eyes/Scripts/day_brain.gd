@@ -211,16 +211,16 @@ func water_cooler_Alex(i:int):
 				Alex_anim.play("move_Jen")
 				Alex_walking_sprite.play("walking_Jen")
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
-				Alex_anim.play("move_Alex")
+				Alex_anim.play("move_Moz")
 				Alex_walking_sprite.play("walking_Moz")
 			elif Dialogic.VAR.WatercoolerChar == "Richard":
-				Alex_anim.play("move_Alex")
+				Alex_anim.play("move_Richard")
 				Alex_walking_sprite.play("walking_Richard")
 			elif Dialogic.VAR.WatercoolerChar == "Olu":
-				Alex_anim.play("move_Alex")
+				Alex_anim.play("move_Olu")
 				Alex_walking_sprite.play("walking_Olu")
 			elif Dialogic.VAR.WatercoolerChar == "Janine":
-				Alex_anim.play("move_Alex")
+				Alex_anim.play("move_Janine")
 				Alex_walking_sprite.play("walking_Janine")
 		if i == 1:
 			if Dialogic.VAR.WatercoolerChar == "Alex01":
@@ -231,23 +231,25 @@ func water_cooler_Alex(i:int):
 				Alex_anim.play("away_Jen")
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
 				Alex_walking_sprite.play("walking_Moz")
-				Alex_anim.play("away_Alex")
+				Alex_anim.play("away_Moz")
 			elif Dialogic.VAR.WatercoolerChar == "Richard":
 				Alex_walking_sprite.play("walking_Richard")
-				Alex_anim.play("away_Alex")
+				Alex_anim.play("away_Richard")
 			elif Dialogic.VAR.WatercoolerChar == "Olu":
 				Alex_walking_sprite.play("walking_Olu")
-				Alex_anim.play("away_Alex")
+				Alex_anim.play("away_Olu")
 			elif Dialogic.VAR.WatercoolerChar == "Janine":
 				Alex_walking_sprite.play("walking_Janine")
-				Alex_anim.play("away_Alex")
+				Alex_anim.play("away_Janine")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep1":
 		end_day("Q2, 202X","res://Scenes/trainQ2.tscn") #For Non Demo
 		#end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
 	if argument == "bed_sleep2":
-		end_day("Q2, 202X","res://Scenes/trainQ3.tscn") #For Non Demo
+		end_day("Q3, 202X","res://Scenes/trainQ3.tscn") #For Non Demo
+	if argument == "bed_sleep3":
+		end_day("Q4, 202X","res://Scenes/trainQ4.tscn") #For Non Demo
 	if argument == "watercooler_Alex":
 		#standing_Alex.visible = true
 		water_cooler_Alex(0)

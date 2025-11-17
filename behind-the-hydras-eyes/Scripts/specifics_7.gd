@@ -10,7 +10,7 @@ extends Node2D
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day07"
-	Dialogic.VAR.WatercoolerChar ="Jen02"
+	Dialogic.VAR.WatercoolerChar ="Janine"
 	Dialogic.VAR.JanineReturn = false
 	
 func _process(delta: float) -> void:

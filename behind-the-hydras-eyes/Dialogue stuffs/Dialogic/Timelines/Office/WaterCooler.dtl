@@ -285,8 +285,8 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Dave: ....
 	Janine: ....
 	Dave: ....
-	Watercooler: ....
-	Watercooler: Well this is awkward
+	WaterCooler: ....
+	WaterCooler: Well this is awkward
 	- How's it going?
 		Janine: Fine,
 		Janine: I wish I didn't have so much to do
@@ -311,14 +311,141 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	- Say Nothing
 		Janine: ....
 		Dave: ....
-		Watercooler: ....
+		WaterCooler: ....
 		Dave: ....
 		Janine: ....
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
-	Watercooler: Well she's quite something
+	WaterCooler: Well she's quite something
 	[end_timeline]
 
 - No
 Dave: I am adequately quenched as is, thanks.
 [end_timeline]
+
+label Jen02
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Jen.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Jen: Oh, hi Boss!
+	Jen: Nice to see you here
+	Dave: Yeah... I work here?
+	Jen: Haha, yeah, I guess we all do
+	Jen: You'll never believe what Xena did last night
+	- Xena?
+		Jen: Oh, I can't imagine I haven't told you
+		Jen: Wait, lemme show you some more pictures to jog your memory
+		Watercooler: Stop her
+		Watercooler: You don't want that
+		- Oh...No, of course I remember Xena
+			Jen: Yeah, see, she's great
+		- She slipped my mind
+			Dave: I couldn't forget a cat like her
+			Dave: She's very beautiful
+			Jen: Of Course she is
+	- What's she done this time? 
+		Jen: This time?!
+		Jen: She's an absolute princess that has never stepped out of line
+		Dave: Oh, sorry, I just assumed there was like plenty of funny stories about her
+		Jen: She would never act unlike the royalty she is
+		Dave: No, yeah, right....
+	Jen: Anyway, we were watching Medium Meets 2\: The Ghosting Return
+	Jen: This season they're bringing people that ghosted eachother in Season 1 to commune with compatible partners that may have died
+	Dave: Uhuh...
+	Jen: They were just about to get to the Ouija board segment, when Xena started meowing everywhere
+	Jen: I thought she had formed a connection, or was being called by one of the mediums
+	Jen: But instead she went to the automatic feeder.
+	Dave: Right...
+	Jen: See, i thought the feeder was posessed by a spirit and she could sense it
+	Jen: But then I saw the clock, and realised that the clocks went back
+	Dave: Yeah, not bad for the extra hour of sleep
+	Jen: Try explaining that to Xena
+	Jen: I went to pick her up, and she just strached me all over my arm
+	Jen: *she pulls up her sleeve to reveal a nasty gash running down her forearm*
+	Watercooler: Looks like that's infected, pretty badly
+	- You should probably see a doctor
+		Jen: Don't be silly. She's done this before.
+		Jen: It's my fault for not treating her with the respect she deserves
+		Jen: Of course she was hungry
+	- Oh god, are you okay?
+		Jen: Ah, i've had worse
+		Jen: One time she almost clawed my eye out
+		Jen: It was cause I stopped licking her
+	Dave: What?!
+	Jen: Yeah, she just has a lot of personality
+	Jen: Anyhow, i'm running off early today to catch the new reboot of Orgy Sex Box!
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	Watercooler: Did you approve her leave?
+	[end_timeline]
+- No
+	Dave: I am adequately quenched as is, thanks.
+	[end_timeline]
+
+label Alex02
+WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
+- Yes
+	WaterCooler: You begin to fill. If this was an American TV show then there'd be some sort of awkward small talk right about now, but—
+	WaterCooler: Oh, here comes Alex.
+	[signal arg="watercooler_Alex"]
+	[wait time="2.0" hide_text="false"]
+	Alex: Oh... hey Dave
+	Dave: Hey, how's it going?
+	Alex: Not bad, not bad....
+	Alex: ...How are things with you?
+	- Yeah, not bad you know
+	- Actually, things are a bit out of con...
+	Alex: No, yeah, yeah, totally
+	Alex: Can you help me with something?
+	Alex: Man to man
+	- Eeerrrmm, sure, what's up?
+		Alex: Well...I've been on the apps and such lately
+		Dave: Oh, I'm....glad to hear it?
+		Alex: Yeah, things are pretty rough out there.
+		Alex: But it's not a bad activity to and from the pond
+		Dave: Well, good to hear you're keeping up with the swans
+		Alex: Yeah, they're doing great
+	- ...man to man?
+		Alex: Yeah, like, you're my boss and I think you might be able to help
+		Dave: Right, is this work related?
+		Alex: No.
+		Alex: Is that a problem?
+		Dave: Aaaah, no, I... I can help with whatever
+		Alex: Right, I was hoping you'd say that
+	Alex: Anyway, I've been on the apps
+	Alex: and things have been getting pretty serious with this girl
+	Alex: I even named one of the swans after her
+	Dave: Oh hey, that sounds....
+	- Great! I'm happy for you
+		Alex: Yeah, thanks
+		Alex: Since my wife left me, I haven't really gone back out there
+		Alex: Glad I still got it
+	- A bit cringey, but fair
+		Alex: I know!
+		Alex: And that's the problem
+	Alex: We've got a date tonight and I just feel like I don't know how to be a human anymore
+	Alex: I thought you might have same inspirational advice
+	Alex: Or would think that this whole thing is stupid and I should quit it
+	Alex: Maybe I should just stick to my swans
+	Dave: Whoa, let's not get ahead of ourselves here.
+	- You should relax
+		Dave: Things'll work out one way or another
+		Dave: Just tell her about the swans and whatever else you like doing
+		Dave: Worst comes to worst, you're back where you started
+		Alex: Thanks for the kind words boss
+	
+	- You should call it off
+		Dave: I just don't think it's worth that kinda stress
+		Dave: You should wait for someone to come find you!
+		Alex: Maybe you're right...
+	
+	[signal arg="no_watercooler_Alex"]
+	[wait time="2.2"]
+	WaterCooler: He does know you're single, right?
+	[end_timeline]
+- No
+	Dave: I am adequately quenched as is, thanks.
+	[end_timeline]

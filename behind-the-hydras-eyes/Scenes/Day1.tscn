@@ -478,7 +478,7 @@ YarnNodeLink = "WaterCooler"
 visible = true
 
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
-position = Vector2(-12.5, -15.5)
+position = Vector2(18.5, -42.5)
 
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)

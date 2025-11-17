@@ -18,12 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="11_reana"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_xuce3"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_3wd2s"]
-[ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="14_4dxny"]
 [ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_vxreb"]
 [ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_xm151"]
 [ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_igg27"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="18_bdn6f"]
 [ext_resource type="Texture2D" uid="uid://wxeyb6rbnkjl" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss blinking-Sheet.png" id="19_6aywc"]
+[ext_resource type="Script" uid="uid://csuurcy0gdx6i" path="res://Scripts/specifics_8.gd" id="19_dknox"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="20_0lere"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="21_sasod"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="22_tfmm6"]
@@ -870,7 +870,7 @@ YarnNodeLink = "BossDoor"
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 textToDisplay = "Dingy Apartment"
 YarnNodeLink = "EntryDoor"
-ScenePath = "res://Scenes/bedroom.tscn"
+ScenePath = "res://Scenes/bedroom3.tscn"
 
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(15, -32)
@@ -1202,10 +1202,8 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
-script = ExtResource("14_4dxny")
-AlexNotif = NodePath("../Notifications/Alex")
-JenNotif = NodePath("../Notifications/Jen")
+[node name="Specifics8" type="Node" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+script = ExtResource("19_dknox")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
@@ -1263,14 +1261,14 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [node name="Pause" parent="." instance=ExtResource("22_tfmm6")]
 visible = false
 
-[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics8" method="_on_boss_door_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics8" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics8" method="_on_alex_interactable_interacted"]
 [connection signal="body_entered" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Background/Janine/Timer" to="Background/Janine" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="Background/Janine/AnimatedSprite2D" to="Background/Janine" method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
+[connection signal="endOfDay" from="DayBrain" to="Specifics8" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 

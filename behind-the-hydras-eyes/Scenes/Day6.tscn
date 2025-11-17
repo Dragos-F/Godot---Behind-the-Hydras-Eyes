@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://b8khy38y6cpun"]
+[gd_scene load_steps=117 format=3 uid="uid://b8khy38y6cpun"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_ddjcg"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_gst1s"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_pol0u"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_ssufr"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_1o464"]
+[ext_resource type="Texture2D" uid="uid://cmvxbbblkopbo" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Janine Walk-Sheet.png" id="11_fgwj2"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_uldrl"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_d2ma2"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_dr76r"]
@@ -467,6 +468,42 @@ region = Rect2(540, 0, 90, 140)
 atlas = ExtResource("5_ph2r7")
 region = Rect2(630, 0, 90, 140)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pol0u"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(0, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssufr"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(48, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o464"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(96, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uldrl"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(144, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2ma2"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(192, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr76r"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(240, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d01yk"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(288, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7k0c"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(336, 0, 48, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2off"]
+atlas = ExtResource("11_fgwj2")
+region = Rect2(384, 0, 48, 122)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsmfe"]
 atlas = ExtResource("6_v02v2")
 region = Rect2(0, 0, 52, 122)
@@ -511,7 +548,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bjnw6")
+"texture": ExtResource("3_ph2r7")
 }],
 "loop": true,
 "name": &"idle_Janine",
@@ -556,28 +593,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gsmfe")
+"texture": SubResource("AtlasTexture_pol0u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fy5xc")
+"texture": SubResource("AtlasTexture_ssufr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3xk2j")
+"texture": SubResource("AtlasTexture_1o464")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bqkss")
+"texture": SubResource("AtlasTexture_uldrl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c14by")
+"texture": SubResource("AtlasTexture_d2ma2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38uq3")
+"texture": SubResource("AtlasTexture_dr76r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w7cuo")
+"texture": SubResource("AtlasTexture_d01yk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dmapi")
+"texture": SubResource("AtlasTexture_a7k0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2off")
 }],
 "loop": true,
 "name": &"walking_Janine",
@@ -848,12 +888,106 @@ tracks/2/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_fgwj2"]
+resource_name = "move_Janine"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173.5, -13), Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walking_Janine", &"idle_Janine"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pol0u"]
+resource_name = "away_Janine"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-14.5, 47), Vector2(-190, -16.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking_Janine"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3xk2j"]
 _data = {
 &"RESET": SubResource("Animation_fy5xc"),
 &"away_Alex": SubResource("Animation_wf4m3"),
+&"away_Janine": SubResource("Animation_pol0u"),
 &"away_Jen": SubResource("Animation_1hph1"),
 &"move_Alex": SubResource("Animation_gsmfe"),
+&"move_Janine": SubResource("Animation_fgwj2"),
 &"move_Jen": SubResource("Animation_u020q")
 }
 
@@ -1017,7 +1151,7 @@ YarnNodeLink = "WaterCooler"
 visible = true
 
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
-position = Vector2(-12.5, -15.5)
+position = Vector2(19, -43)
 
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)

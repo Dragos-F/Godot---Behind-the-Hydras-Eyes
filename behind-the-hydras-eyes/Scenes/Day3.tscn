@@ -1,13 +1,15 @@
-[gd_scene load_steps=42 format=3 uid="uid://bwonmfg7rplbu"]
+[gd_scene load_steps=54 format=3 uid="uid://bwonmfg7rplbu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_gx0c7"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_d7jx5"]
 [ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_iheph"]
 [ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_lefky"]
+[ext_resource type="Texture2D" uid="uid://bnodosub1u4jj" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Moz.png" id="5_iheph"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_j8d6v"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_12vkb"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_hml5a"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_dskq5"]
+[ext_resource type="Texture2D" uid="uid://dlhswqcnbdsni" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Moz Walk phone-Sheet.png" id="8_lefky"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_3m6ih"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_dgien"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_v0hbc"]
@@ -86,6 +88,38 @@ region = Rect2(312, 0, 52, 122)
 atlas = ExtResource("6_12vkb")
 region = Rect2(364, 0, 52, 122)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8d6v"]
+atlas = ExtResource("8_lefky")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12vkb"]
+atlas = ExtResource("8_lefky")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hml5a"]
+atlas = ExtResource("8_lefky")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dskq5"]
+atlas = ExtResource("8_lefky")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m6ih"]
+atlas = ExtResource("8_lefky")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgien"]
+atlas = ExtResource("8_lefky")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0hbc"]
+atlas = ExtResource("8_lefky")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alg7f"]
+atlas = ExtResource("8_lefky")
+region = Rect2(364, 0, 52, 122)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjnw6"]
 animations = [{
 "frames": [{
@@ -106,7 +140,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bjnw6")
+"texture": ExtResource("5_iheph")
 }],
 "loop": true,
 "name": &"idle_Moz",
@@ -172,28 +206,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t5tpt")
+"texture": SubResource("AtlasTexture_j8d6v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wf4m3")
+"texture": SubResource("AtlasTexture_12vkb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u020q")
+"texture": SubResource("AtlasTexture_hml5a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1hph1")
+"texture": SubResource("AtlasTexture_dskq5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cwmwp")
+"texture": SubResource("AtlasTexture_3m6ih")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wkchc")
+"texture": SubResource("AtlasTexture_dgien")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eb88j")
+"texture": SubResource("AtlasTexture_v0hbc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ttuwe")
+"texture": SubResource("AtlasTexture_alg7f")
 }],
 "loop": true,
 "name": &"walking_Moz",
@@ -435,13 +469,107 @@ tracks/2/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_gx0c7"]
+resource_name = "move_Moz"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-173.5, -13), Vector2(-14.5, 47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walking_Moz", &"idle_Moz"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_d7jx5"]
+resource_name = "away_Moz"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlexStanding:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-14.5, 47), Vector2(-190, -16.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AlexStanding:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking_Moz"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlexStanding:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3xk2j"]
 _data = {
 &"RESET": SubResource("Animation_fy5xc"),
 &"away_Alex": SubResource("Animation_wf4m3"),
 &"away_Jen": SubResource("Animation_1hph1"),
+&"away_Moz": SubResource("Animation_d7jx5"),
 &"move_Alex": SubResource("Animation_gsmfe"),
-&"move_Jen": SubResource("Animation_u020q")
+&"move_Jen": SubResource("Animation_u020q"),
+&"move_Moz": SubResource("Animation_gx0c7")
 }
 
 [node name="Main" type="Node2D"]
@@ -515,7 +643,7 @@ YarnNodeLink = "WaterCooler"
 visible = true
 
 [node name="DialogueMarker" parent="Background/Kitchen/WaterCooler/InteractableElement" index="1"]
-position = Vector2(-12.5, -15.5)
+position = Vector2(20, -44.5)
 
 [node name="DialogueMarker" parent="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement" index="1"]
 position = Vector2(-21, -6.5)

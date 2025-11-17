@@ -12,9 +12,10 @@ extends Node2D
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day06"
-	Dialogic.VAR.WatercoolerChar ="Janine"
+	Dialogic.VAR.CurrentQuarter = "Quarter3"
+	Dialogic.VAR.WatercoolerChar ="Jen02"
 	Dialogic.VAR.JanineReturn = false
-	Dialogic.VAR.AlexNayali = false
+	Dialogic.VAR.AlexNayeli = false
 	
 func _process(delta: float) -> void:
 	if emails.emailsDone == emails.emailsProgressionQuota && onceV1:
