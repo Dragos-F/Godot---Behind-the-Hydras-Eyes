@@ -33,8 +33,8 @@ Dave: ...
 Boss: Anyway.
 jump BossQuestions
 label BossQuestions
-Boss: It looks like the project has been running smoothly since the meeting, so clearly I made an excellent choice in hiring you. Any questions before we wrap up?
-Boss: [i]The expression Mr Moore fixes you with clearly suggests that its time for you to leave[/i]
+Boss: It looks like the project has been running smoothly since the meeting, so clearly I made an excellent choice in hiring you. Any other questions before we wrap up?
+Boss: [i]The expression Mr Moore fixes you with clearly suggests that the correct answer is no.[/i]
 - Actually, I was meaning to ask about some of these complaints I've been receiving...
 	Boss: Just insipid grumblings from opponents of progress! Did you forward any to that email I gave you? Ha, no-one ever checks it, let them tire themselves out.
 	set {BossUpset} += 1.0
@@ -53,4 +53,91 @@ Boss: [i]The expression Mr Moore fixes you with clearly suggests that its time f
 	else:
 		Boss: It's natural to ask questions, but let me be blunt\: it's not your job. Shut my door on your way out.
 [end_timeline]
+
 label Quarter2
+Boss: Dave, Dave, Dave. I thought when I hired you that you'd be my protege, but at this rate you're more a stumbler than a skipper.
+Boss: Ha! 
+Boss: Anyway, what was I saying?
+Dave: ...
+Boss: Oh, that's right. You're falling behind on your targets. Expenditure is up, construction deadlines have been missed, and journalists are on my ass like flies on horseshit.
+Boss: And you're meant to be the one swatting them. Or zapping them, crushing them, drowning them. Whatever. Just deal with the flies, capiche?
+- Which flies specifically?
+	Boss: Does it matter? If they buzz, kill 'em. If they look like they might buzz in the future, bribe 'em.
+	Dave: I'm answering all emails I get, but I can't always see who's trying to escalate. 
+	Boss: Escalate?
+	Dave: ...buzz.
+	Boss: Fine, fine. That loser Miguel for starters. You've seen him, right? Some do-gooder busybody trying to find loopholes to shut us down.
+	- Well, do we have an EIA?
+		Boss: Do we have an EIA? 
+		Boss: Fuck off. What are you, a judge?
+		Dave: ...
+	- Okay, I'll handle him. 
+		Boss: You should've already handled him! Your job should be simpler than Olu's or Richard's, so stop fucking it up, alright?
+		Boss: If the project goes under, then, well, it brings me no joy to say this, but it'll be YOUR fault that I'll have to lay a load of people off. 
+		- Is ForwardGreen struggling financially?
+			Boss: No.
+		- ...Yes, sir.
+			Boss: Good lad.
+- I get it.
+	Boss: I should hope you do. 
+	Boss: Look, you seem a good kid, but, and it really pains me to say this, if you keep fucking up, it'll be your fault I have to lay people off.
+	Boss: So you better hope Lagoon Breeze gets finished.
+	- I can't control the protests!
+		Boss: Life's unfair, kid. You were hired to push things over the line, and if you don't, or can't, than the buck stops with you. 
+		Boss: Not me. 
+	- Yes. Of course sir.
+		Boss: I knew you'd understand. Good lad, keep pulling yourself up on those bootstraps and you'll be like me some day, I'm sure.
+	- So if it finishes, there'll be no layoffs?
+		Boss: Well, I didn't say that, did I?
+Boss: Anyway. That's all I wanted to discuss with you. Close the door behind you.
+Dave: Uh, what about my end of quarter feedback?
+Boss: Oh. You want more? Right, fine, let's get it over with.
+Boss: What's on your mind?
+- Is the project actually in real danger?
+	Boss: Real danger? Well, I suppose that's subjective. Sometimes big projects get held up for years, but in real life David doesn't beat goliath.
+	Boss: By which I mean, those protesters will get bored, or hungry, or restless, and move on to some other fad. Making avacado on toast, or whatever.
+	Boss: Which is to say, there's always the danger of delays which eat profits, but progress always triumphs.
+	Dave: ...
+- Is there anything else I can help with?
+	Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed. 
+	Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now. 
+	Dave: ...Right, okay.
+- What's you're favourite type of dog?
+	Boss: Hm? Sorry?
+	Dave: Oh, uh, I don't know why I asked that, sorry.
+- Alex mentioned something about a bonus?
+	Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
+	Dave: Moz? 
+	Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months! 
+	Dave: ...And that's...good?
+	Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing. 
+	Boss: But, uh, not evil.
+[end_timeline]
+
+label Quarter3
+Boss: Hey Dave, news of the issues you've been having has trickled back to me. Hm. I'd hoped for better from you.
+- There's a backlash, but it's containted.
+	Boss: How would you say it's going in your own words?
+- We're at risk of losing control fast.
+	Boss: A prescient prediction. In fact, it's already come true.
+- I think there's fundamental issues we need to address.
+	Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too?
+Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.
+Boss: It's also forced the Mexican authorities hand somewhat. There's going to be an investigation, which could halt construction or, well, worse.
+Boss: Apparently, someone got word there was no EIA and has been trying to kick up a fuss, and that won't help the investigation.
+*He pauses and eyes you up. He seems on the cusp of a decision*
+- How can I help?
+Boss: Ah, how very kind of you to offer. Well, I accept your resignation.
+- Stay silent
+Boss: Well, it's not easy but I'm going to have to fire you. You know how it is.
+
+Dave: ....
+Boss: Believe me, I'm much sadder than you about the whole thing. Just downright unfortunate. And losing Alex and Jen too...
+- 
+Boss: Well, not yet. They're at a conference thing at the minute, I'll give them a ring once it's over to let them know.
+- 
+Boss: But hey, redundencies are a natural growing pain for a healthy company.
+Dave: ....
+Boss: That's all I wanted to say. I'll take your staff ID now, and you can go clean out your desk.
+Boss: Lovely working with you.
+[end_timeline]
