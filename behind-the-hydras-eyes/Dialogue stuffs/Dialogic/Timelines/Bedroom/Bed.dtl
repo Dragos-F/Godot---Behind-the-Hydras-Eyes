@@ -28,7 +28,26 @@ Bed: Ah, there's your bed again. Are you ready to lie in it?
 	Bed: And if you don't? There's no reward for feeling guilt, no gold star for exposing your humanity to the cold, distant eyes thousands of miles away that see the pixels you write.
 	Bed: You toss. You turn. At last, you sleep.
 	[signal arg="bed_sleep2"]
+[end_timeline]
 label Quarter3
-Bed: TEST BED INTO Q4
-Bed: TEST COMPLETE
+Bed: Your bed. You've not been sleeping well recently, but maybe tonight will be different. Are you ready to sleep?
+- Not yet.
+	Bed: You can only delay the inevitable for so long. It's an unbecoming form of indecision, only cheating yourself.
+- Please.
+	Bed: Your covers feel extra cool against your skin tonight. Your room extra empty. Your hands extra dirty.
+	Bed: Three quarters down. How many to go? It feels unsustainable already.
+	Bed: A house of cards built upon real people, real lives, real ecosystems and real lies.
+	Bed: In some of your nightmares, you sit in front of a shadow that you know is named Miguel, awaiting sentence.
+	Bed: You're cold, submerged up to your neck in dirty water, oil slowly dripping from an unseeable height onto you.
+	Bed: A dead bird hangs around your neck, and you're struggling to stay afloat. Out of sight, you can hear laughing, and hissing, and writhing.
+	Bed: Hopefully tonight your dreams are easier. None of this is your fault, after all.
+	Bed: You're just doing your job. And there's some goodness still in that job, right? Trying to mitigate some of ForwardGreen's worst excesses, while helping build renewable energy.
+	Bed: There has to be goodness in that, there just has to be.
+	Bed: Because if there isn't? You don't know. Sometimes it feels like you don't know anything anymore.
+	Bed: Like you're a bystander in your own life. Sure, at work. But also when you speak to your parents. When you stare out of the balcony. When you stare at the mould in the bathroom.
+	Bed: When you climb into me alone, for another night.
+	Bed: Maybe that's all it's possible to be, though.
+	Bed: Bystanders. Foam thrown carelessly by the ocean.
+	Bed: Which is to say, you're not special. So stop moping. You've got work tomorrow.
 [signal arg="bed_sleep3"]
+[end_timeline]
