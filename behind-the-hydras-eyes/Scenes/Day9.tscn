@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cfwn1gpwpkhb0"]
+[gd_scene load_steps=53 format=3 uid="uid://cfwn1gpwpkhb0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_2v33i"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_vv8s7"]
@@ -18,6 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_o1oqo"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_wgaeq"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_j7ewo"]
+[ext_resource type="Script" uid="uid://cgwniat6428ye" path="res://Scripts/specifics_9.gd" id="16_w3uu3"]
+[ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="20_m78dw"]
+[ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="21_4uy8g"]
+[ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="22_ks1xs"]
+[ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="23_e7355"]
+[ext_resource type="Texture2D" uid="uid://wxeyb6rbnkjl" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss blinking-Sheet.png" id="24_r7utf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
 atlas = ExtResource("4_w3uu3")
@@ -408,6 +414,35 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtf6l"]
+atlas = ExtResource("24_r7utf")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jm43"]
+atlas = ExtResource("24_r7utf")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sxu1"]
+atlas = ExtResource("24_r7utf")
+region = Rect2(1920, 0, 960, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o1oqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtf6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jm43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sxu1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_2v33i")]
@@ -565,10 +600,12 @@ texture = ExtResource("8_w3uu3")
 position = Vector2(-318, 174.5)
 texture = ExtResource("8_w3uu3")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_pek1x")
+BossScreen = NodePath("../BossScreen")
+BossDialogue = NodePath("../BossScreen/BossAnchor")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
-TextAnchor = NodePath("../Dave/TextAnchor")
+BossAnchor = NodePath("../BossScreen/BossAnchor")
 Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
@@ -641,27 +678,19 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="EMAIL CHOICE TEST" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_e7355")]
+[node name="Reminder" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_e7355")]
+visible = false
 layout_mode = 2
-Sender_Name = "Email choice"
-ToAddress = "Test address"
-Subject = "EMAIL CHOICE TEST"
-PreviewText = "This is a test to try out..."
-replyChoice = true
-choiceDialog1 = "I want the first one"
-choiceDialog2 = "I want the other one"
-MainBody = "This is a test to try out the email choice system. Hit reply and see what happens"
-ReplyBody1 = "This should be Choice 1
+Sender_Name = "PowerAutomated"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Meeting Reminder"
+PreviewText = "This is an automated reminder"
+MainBody = "This is an automated reminder for your meeting with:
+Patrick Moore
+Your calendar meeting is starting: Now"
+boss = true
 
-Kind Regards,
-Dave Spritely
-"
-ReplyBody2 = "This should be Choice 2
-
-Kind Regads,
-Dave Spritely,"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/EMAIL CHOICE TEST/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Reminder/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
 
@@ -738,6 +767,9 @@ offset_left = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
+[node name="AnimatedSprite2D" parent="ScreenUI/BottomBar/Emails" index="0"]
+visible = false
+
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
@@ -745,7 +777,24 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics3" type="Node2D" parent="."]
+[node name="Specifics9" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "email_reminder", "computer_target", "timer")]
+script = ExtResource("16_w3uu3")
+emails = NodePath("../ScreenUI")
+outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
+DoorNotif = NodePath("../Notifications/Door")
+BossNotif = NodePath("../Notifications/BossDoor")
+BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
+brain = NodePath("../DayBrain")
+email_reminder = NodePath("../ScreenUI/EmailList/SummariesContainer/Reminder")
+computer_target = NodePath("CompTarget")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="Specifics9"]
+wait_time = 2.5
+one_shot = true
+
+[node name="CompTarget" type="Node2D" parent="Specifics9"]
+position = Vector2(743, 291)
 
 [node name="Notifications" type="Node2D" parent="."]
 
@@ -778,6 +827,12 @@ visible = false
 z_index = 7
 position = Vector2(-157, 152)
 
+[node name="BossDoor" parent="Notifications" instance=ExtResource("14_o1oqo")]
+visible = false
+position = Vector2(813, -338)
+frame = 6
+frame_progress = 0.719289
+
 [node name="Pause" parent="." instance=ExtResource("15_wgaeq")]
 unique_name_in_owner = true
 visible = false
@@ -788,14 +843,36 @@ visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics3" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics3" method="_on_alex_interactable_interacted"]
+[node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+visible = false
+z_index = 10
+script = ExtResource("20_m78dw")
+sprite = NodePath("Sprite2D")
+frown = ExtResource("21_4uy8g")
+contempt = ExtResource("22_ks1xs")
+
+[node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+texture_filter = 1
+texture = ExtResource("23_e7355")
+
+[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen"]
+visible = false
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_o1oqo")
+
+[node name="BossAnchor" type="Node2D" parent="BossScreen"]
+position = Vector2(499, -250)
+
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics9" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics9" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics3" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics3" method="_on_interactable_element_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics3" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics9" method="_on_desk_interactable_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics9" method="_on_interactable_element_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics9" method="_on_clipboard_interacted"]
+[connection signal="introspection" from="DayBrain" to="Specifics9" method="_on_day_brain_introspection"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="timeout" from="Specifics9/Timer" to="Specifics9" method="_on_timer_timeout"]
 
 [editable path="Fader"]
 [editable path="Background"]
@@ -813,6 +890,6 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/EMAIL CHOICE TEST"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Reminder"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

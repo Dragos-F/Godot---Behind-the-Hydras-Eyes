@@ -1,0 +1,7 @@
+Computer: ...you sit staring at your screen, but feel restless. The office feels empty...
+Computer: Your inbox is empty as well. Not much to do really.
+Computer: Except....
+[wait time="1.0"]
+[signal arg="reminder"]
+Computer: There it is
+Computer: It's the inevitable.

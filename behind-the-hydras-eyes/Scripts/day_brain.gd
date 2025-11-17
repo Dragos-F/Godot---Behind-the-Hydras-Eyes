@@ -21,6 +21,7 @@ class_name DayBrain
 @onready var TeaMinigame:Node2D = get_node("/root/Main/TeaMinigame")
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
+signal introspection()
 @export var plants:Array[Node2D]
 @export var current_scene:String
 
@@ -72,6 +73,7 @@ func enter_screen():
 	computer_screen.visible = true
 	Fader.FadeDown("")
 	await Fader.fade_finished
+	introspection.emit()
 
 func enter_boss():
 	dave.move_time = false
