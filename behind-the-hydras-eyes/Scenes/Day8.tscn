@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://by3s2naub2064"]
+[gd_scene load_steps=114 format=3 uid="uid://by3s2naub2064"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_555dt"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_ijfl6"]
@@ -6,11 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_8jsol"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_ktq5j"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_dknox"]
+[ext_resource type="Texture2D" uid="uid://ccd1cedlkwwit" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Janine.png" id="7_dknox"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_feprj"]
+[ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="8_feprj"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_vaw03"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_rv4uh"]
+[ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="9_vaw03"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_reana"]
+[ext_resource type="Texture2D" uid="uid://66r6ijkdi54s" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Doc box.png" id="10_rv4uh"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_gs4e5"]
+[ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="11_reana"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_xuce3"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_3wd2s"]
 [ext_resource type="Script" uid="uid://bjtkrmyuvhvpu" path="res://Scripts/specifics_2.gd" id="14_4dxny"]
@@ -412,6 +417,414 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gs4e5"]
+radius = 90.0347
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly42q"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk4hj"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyjpg"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjo4x"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3361"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f6p7"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auuwe"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5yax"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5kt2"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tjsp"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evwx4"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dwm3"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbjul"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43ctb"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5h4o"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn164"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1c86"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oh3a"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcnfg"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnlhq"]
+atlas = ExtResource("9_vaw03")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mqa7"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(0, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u0n3"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(52, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpxd6"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(104, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr7b6"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(156, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej8k"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(208, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrw2s"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(260, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6fm4"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(312, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb2lo"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(364, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t338"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(416, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu3io"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(468, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sinl"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(520, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_061du"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(572, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxmww"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(624, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odakp"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(676, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ngdt"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(728, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6tgp"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(780, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jdw2"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(832, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2hpw"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(884, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqj3v"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(936, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdjwe"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(988, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmnt4"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1040, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrc7b"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1092, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_734vm"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1144, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxo4l"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1196, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg5dk"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1248, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfnau"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1300, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltdj6"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1352, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu602"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1404, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8jvq"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1456, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbupp"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1508, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc3pw"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1560, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqe3p"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1612, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pc5f"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1664, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjofg"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1716, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7echg"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1768, 0, 52, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vreia"]
+atlas = ExtResource("4_8jsol")
+region = Rect2(1820, 0, 52, 122)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xuce3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly42q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk4hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyjpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjo4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3361")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f6p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auuwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5yax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5kt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tjsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evwx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dwm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbjul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43ctb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5h4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn164")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1c86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oh3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcnfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnlhq")
+}],
+"loop": false,
+"name": &"drink_tea",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mqa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u0n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpxd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr7b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oej8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrw2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6fm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb2lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t338")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu3io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sinl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_061du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxmww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odakp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ngdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6tgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jdw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2hpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqj3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdjwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmnt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrc7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_734vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxo4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg5dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfnau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltdj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu602")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8jvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbupp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc3pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqe3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pc5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjofg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7echg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vreia")
+}],
+"loop": false,
+"name": &"phone_check",
+"speed": 10.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtf6l"]
 atlas = ExtResource("19_6aywc")
 region = Rect2(0, 0, 960, 540)
@@ -502,6 +915,90 @@ flip_h = true
 libraries = {
 &"": SubResource("AnimationLibrary_3xk2j")
 }
+
+[node name="Janine" type="Sprite2D" parent="Background"]
+z_index = -3
+texture_filter = 1
+position = Vector2(-719, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("7_dknox")
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Background/Janine"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Janine/StaticBody2D"]
+visible = false
+position = Vector2(3.5, 56.5)
+polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5, -9, 15.5, -79)
+
+[node name="JenInteractable" parent="Background/Janine" instance=ExtResource("8_feprj")]
+regular = ExtResource("7_dknox")
+selected = ExtResource("7_dknox")
+YarnNodeLink = "Janine"
+
+[node name="Area2D" parent="Background/Janine/JenInteractable" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="Background/Janine/JenInteractable/Area2D" index="0"]
+shape = SubResource("CircleShape2D_gs4e5")
+
+[node name="DialogueMarker" parent="Background/Janine/JenInteractable" index="1"]
+position = Vector2(13, -39.5)
+
+[node name="Timer" type="Timer" parent="Background/Janine"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Janine"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_xuce3")
+animation = &"phone_check"
+
+[node name="ComplaintCorner" type="Node2D" parent="Background"]
+texture_filter = 1
+position = Vector2(-148, -314)
+scale = Vector2(2, 2)
+
+[node name="DocBox" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-358, 156.5)
+texture = ExtResource("10_rv4uh")
+flip_h = true
+
+[node name="DocBox2" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-381.5, 169)
+texture = ExtResource("10_rv4uh")
+flip_h = true
+
+[node name="DocBox3" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-371.5, 136)
+texture = ExtResource("10_rv4uh")
+flip_h = true
+
+[node name="Paper" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-355.5, 195)
+texture = ExtResource("11_reana")
+
+[node name="Paper4" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-355, 199.5)
+texture = ExtResource("11_reana")
+
+[node name="Paper5" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-353.5, 203.5)
+texture = ExtResource("11_reana")
+
+[node name="Paper3" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-324, 191.5)
+texture = ExtResource("11_reana")
+
+[node name="Paper6" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-323.5, 196)
+texture = ExtResource("11_reana")
+
+[node name="Paper7" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-322, 200)
+texture = ExtResource("11_reana")
+
+[node name="Paper2" type="Sprite2D" parent="Background/ComplaintCorner"]
+position = Vector2(-318, 174.5)
+texture = ExtResource("11_reana")
 
 [node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_feprj")
@@ -769,6 +1266,10 @@ visible = false
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
+[connection signal="body_entered" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Background/Janine/Timer" to="Background/Janine" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Background/Janine/AnimatedSprite2D" to="Background/Janine" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
@@ -787,6 +1288,7 @@ visible = false
 [editable path="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
+[editable path="Background/Janine/JenInteractable"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]

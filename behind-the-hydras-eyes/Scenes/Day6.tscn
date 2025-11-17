@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://b8khy38y6cpun"]
+[gd_scene load_steps=105 format=3 uid="uid://b8khy38y6cpun"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_ddjcg"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_gst1s"]
@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="5_ssufr"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_v02v2"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_1y5hl"]
+[ext_resource type="Texture2D" uid="uid://66r6ijkdi54s" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Doc box.png" id="7_fgwj2"]
 [ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="8_d2ma2"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_fgwj2"]
+[ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="8_pol0u"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_pol0u"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_ssufr"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_1o464"]
@@ -902,9 +904,9 @@ z_index = -1
 position = Vector2(13, -39.5)
 
 [node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14"]
-z_index = -1
+z_index = -3
 texture_filter = 1
-position = Vector2(-688, 68)
+position = Vector2(-719, 3)
 scale = Vector2(2, 2)
 texture = ExtResource("3_ph2r7")
 flip_h = true
@@ -937,6 +939,54 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_fcnck")
 animation = &"phone_check"
 
+[node name="ComplaintCorner2" type="Node2D" parent="Background/Furniture" index="15"]
+texture_filter = 1
+position = Vector2(-159, -317)
+scale = Vector2(2, 2)
+
+[node name="DocBox" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-358, 156.5)
+texture = ExtResource("7_fgwj2")
+flip_h = true
+
+[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-381.5, 169)
+texture = ExtResource("7_fgwj2")
+flip_h = true
+
+[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-371.5, 136)
+texture = ExtResource("7_fgwj2")
+flip_h = true
+
+[node name="Paper" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-355.5, 195)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper4" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-355, 199.5)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper5" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-353.5, 203.5)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-324, 191.5)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper6" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-323.5, 196)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper7" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-322, 200)
+texture = ExtResource("8_pol0u")
+
+[node name="Paper2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner2"]
+position = Vector2(-318, 174.5)
+texture = ExtResource("8_pol0u")
+
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
@@ -951,6 +1001,11 @@ polygon = PackedVector2Array(-56.5, -38.5, -95.5, -30.5, -119, -3.5, -61.5, 33.5
 
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
+
+[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture" index="20"]
+texture_filter = 1
+position = Vector2(-148, -314)
+scale = Vector2(2, 2)
 
 [node name="StaticBody2D" parent="Background/Kitchen/WaterCooler" index="0"]
 visible = true
@@ -1201,11 +1256,13 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics6" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif")]
+[node name="Specifics6" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "AlexNotif", "JenNotif")]
 script = ExtResource("14_gst1s")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
 
 [node name="Notifications" type="Node2D" parent="."]
 

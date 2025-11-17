@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dtf5vs15jiut0"]
+[gd_scene load_steps=108 format=3 uid="uid://dtf5vs15jiut0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_3eksu"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lt3sq"]
@@ -14,7 +14,9 @@
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_jc8h6"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_kurw2"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_2y3md"]
+[ext_resource type="Texture2D" uid="uid://gmuxeutybpg6" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard.png" id="9_db5ya"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_db5ya"]
+[ext_resource type="Texture2D" uid="uid://1ppjvu4mjkpt" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard Selected.png" id="10_gnihg"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_gnihg"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_3oh5d"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_7uuwi"]
@@ -430,6 +432,10 @@ animations = [{
 "name": &"phone_check",
 "speed": 10.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fsano"]
+radius = 19.1417
+height = 66.4506
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
 atlas = ExtResource("4_fpqi8")
@@ -862,54 +868,11 @@ position = Vector2(-42.5, -0.5)
 
 [node name="Jen1" parent="Background/Furniture" index="13"]
 z_index = -1
+position = Vector2(-124, -1103)
+script = null
 
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
-
-[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture/Jen1" index="4"]
-
-[node name="DocBox" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-358, 156.5)
-texture = ExtResource("3_jc8h6")
-flip_h = true
-
-[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-381.5, 169)
-texture = ExtResource("3_jc8h6")
-flip_h = true
-
-[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-371.5, 136)
-texture = ExtResource("3_jc8h6")
-flip_h = true
-
-[node name="Paper" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-355.5, 195)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper4" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-355, 199.5)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper5" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-353.5, 203.5)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper3" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-324, 191.5)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper6" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-323.5, 196)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper7" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-322, 200)
-texture = ExtResource("4_kurw2")
-
-[node name="Paper2" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
-position = Vector2(-318, 174.5)
-texture = ExtResource("4_kurw2")
 
 [node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14"]
 z_index = -3
@@ -947,6 +910,10 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_fcnck")
 animation = &"phone_check"
 
+[node name="Alex" parent="Background/Furniture" index="16"]
+position = Vector2(-1218, -647)
+script = null
+
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
 
@@ -961,6 +928,54 @@ polygon = PackedVector2Array(-56.5, -38.5, -95.5, -30.5, -119, -3.5, -61.5, 33.5
 
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
+
+[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture" index="19"]
+texture_filter = 1
+position = Vector2(-148, -314)
+scale = Vector2(2, 2)
+
+[node name="DocBox" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-358, 156.5)
+texture = ExtResource("3_jc8h6")
+flip_h = true
+
+[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-381.5, 169)
+texture = ExtResource("3_jc8h6")
+flip_h = true
+
+[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-371.5, 136)
+texture = ExtResource("3_jc8h6")
+flip_h = true
+
+[node name="Paper" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-355.5, 195)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper4" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-355, 199.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper5" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-353.5, 203.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-324, 191.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper6" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-323.5, 196)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper7" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-322, 200)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+position = Vector2(-318, 174.5)
+texture = ExtResource("4_kurw2")
 
 [node name="StaticBody2D" parent="Background/Kitchen/WaterCooler" index="0"]
 visible = true
@@ -984,6 +999,31 @@ position = Vector2(4.5, -8)
 YarnNodeLink = "Clipboard"
 
 [node name="DialogueMarker" parent="Background/Kitchen/Clipboard/InteractableElement" index="1"]
+position = Vector2(10.5, -3.5)
+
+[node name="Clipboard2" type="Sprite2D" parent="Background/Kitchen" index="7"]
+z_index = -5
+texture_filter = 1
+position = Vector2(-464, -108)
+scale = Vector2(2, 2)
+texture = ExtResource("9_db5ya")
+flip_h = true
+
+[node name="InteractableElement" parent="Background/Kitchen/Clipboard2" instance=ExtResource("5_2y3md")]
+regular = ExtResource("9_db5ya")
+selected = ExtResource("10_gnihg")
+YarnNodeLink = "StickyNote"
+
+[node name="Area2D" parent="Background/Kitchen/Clipboard2/InteractableElement" index="0"]
+position = Vector2(3, 6.5)
+rotation = -0.4826308
+
+[node name="CollisionShape2D" parent="Background/Kitchen/Clipboard2/InteractableElement/Area2D" index="0"]
+position = Vector2(-23.5, 50.5)
+rotation = -0.727626
+shape = SubResource("CapsuleShape2D_fsano")
+
+[node name="DialogueMarker" parent="Background/Kitchen/Clipboard2/InteractableElement" index="1"]
 position = Vector2(10.5, -3.5)
 
 [node name="StandingAlex" type="Node2D" parent="Background"]
@@ -1262,19 +1302,28 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif")]
+[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain")]
 script = ExtResource("19_jc8h6")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
+StickyNotif = NodePath("../Notifications/Clipboard")
+brain = NodePath("../DayBrain")
+
+[node name="Timer" type="Timer" parent="Specifics7"]
+wait_time = 2.0
+one_shot = true
+autostart = true
 
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("14_uy7q1")]
-position = Vector2(-552, -256)
+visible = false
+position = Vector2(-461, -202)
 frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("14_uy7q1")]
+visible = false
 position = Vector2(-138, -470)
 
 [node name="Door" parent="Notifications" instance=ExtResource("14_uy7q1")]
@@ -1287,9 +1336,8 @@ position = Vector2(688, 231)
 autoplay = "Q"
 
 [node name="Clipboard" parent="Notifications" instance=ExtResource("14_uy7q1")]
-visible = false
 z_index = 4
-position = Vector2(467, 302)
+position = Vector2(-458, -178)
 autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_uy7q1")]
@@ -1318,8 +1366,10 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics7" method="_on_desk_interactable_interacted"]
 [connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics7" method="_on_interactable_element_interacted"]
 [connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics7" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard2/InteractableElement" to="Specifics7" method="_on_interactable_element_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="timeout" from="Specifics7/Timer" to="Specifics7" method="_on_timer_timeout"]
 
 [editable path="Fader"]
 [editable path="Background"]
@@ -1336,6 +1386,7 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="Background/Kitchen/BackgroundKitchen/Cabinets2/CoffeeMachine/InteractableElement"]
 [editable path="Background/Kitchen/Cabinets/Kettle/InteractableElement"]
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
+[editable path="Background/Kitchen/Clipboard2/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]

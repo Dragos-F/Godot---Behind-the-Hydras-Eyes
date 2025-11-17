@@ -129,6 +129,8 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",target)
 	if (nodeTitle == "Clipboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",target)
+	if (nodeTitle == "StickyNote"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
 	if (nodeTitle == "Coffee"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",target)
 	if (nodeTitle ==  "Kettle"):
@@ -146,7 +148,8 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Olu.dch",standing_Alex)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",standing_Alex)
 		
-		
+	if (nodeTitle == "EmptyOffice"):
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",target)
 	if (nodeTitle == "Corkboard"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Corkboard.dch",target)
 	if (nodeTitle == "Posters"):

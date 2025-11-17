@@ -208,3 +208,23 @@ Jen: I can't wait for you guys to see it!
 	Jen: No such thing as unpersuadable! Everyone can be marketed to!
 	Jen: Even us!
 [end_timeline]
+
+
+
+label Day06
+if {AlexNayeli} == false:
+	Jen: I was just speaking to the lady the boss has brought in. She seems, uh, nice? 
+	[end_timeline]
+else:
+	Dave: [i]Jen's got a few dozen tabs that's she's flitting between, stopping briefly to adjust the font size on a leaflet. She turns slightly as she notices you.[/i]		
+Jen: Oh hey, how're you getting on? It sounds like this project's already involving a lot more work and bad press than anyone expected!		
+Jen: But don't mind that, at least you've got the most stunning and amazing marketing officer ever to grace an office to handle everything, right?		
+Jen flashes you the sort of smile that costs money, and swivels around to face you.		
+- Your words, not mine!		
+- That's not quite how I'd describe it.		
+	Jen: What can I say, some things are true no matter who says them or how! 	
+	Dave: [i]For a fraction of a second he face creases as a frown passes over it.[/i]	
+	Jen: And I fear the bad press part was the most true of all. I won't lie, I was a bit startled by the vitriol that those on the ground were getting. What's going on?	
+		- I'm not really sure...
+		- I can't blame them...
+		- Same old story...

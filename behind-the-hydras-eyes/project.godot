@@ -73,6 +73,7 @@ directories/dtl_directory={
 "Desk Chair": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Desk Chair.dtl",
 "Dirty Dishes": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Dirty Dishes.dtl",
 "EmailChoice": "res://Dialogue stuffs/Dialogic/Timelines/Office/EmailChoice.dtl",
+"EmptyOffice": "res://Dialogue stuffs/Dialogic/Timelines/Office/EmptyOffice.dtl",
 "EntryDoor": "res://Dialogue stuffs/Dialogic/Timelines/Office/EntryDoor.dtl",
 "FilingCabinet": "res://Dialogue stuffs/Dialogic/Timelines/Office/FilingCabinet.dtl",
 "Front Door": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Front Door.dtl",
@@ -81,6 +82,7 @@ directories/dtl_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
+"StickyNote": "res://Dialogue stuffs/Dialogic/Timelines/Office/StickyNote.dtl",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Timelines/Office/Text From Boss.dtl",
 "Text From Mum": "res://Dialogue stuffs/Dialogic/Timelines/Text From Mum.dtl",
 "WaterCooler": "res://Dialogue stuffs/Dialogic/Timelines/Office/WaterCooler.dtl"

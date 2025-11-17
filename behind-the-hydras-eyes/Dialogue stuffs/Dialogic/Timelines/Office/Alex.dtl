@@ -1,4 +1,28 @@
 jump {CurrentDay}
+label Day06
+if {AlexNayeli} == false:
+	Alex: Have you introduced yourself to Phil's secretary? You're in for a treat...
+	[end_timeline]
+else:
+	Dave: [i]As you walk up to Alex you see him typing out an email to an "Atlas Technologies". You watch for a moment before speaking.[/i]	
+- Is there a history of police brutality in Oaxaca that I wasn't told of?	
+	Alex: Hm? Oh. Yeah.
+	Alex: It's the same old story of every unequal place on earth: poverty, cycles of violence, gangs, heavy-handed policing to protect property, etc etc.
+	Alex: Any intervention is bound to upset the uneasy peace of deprivation and I guess a wind farm is a big intervention.
+- Are you sure that's the whole story?	
+	Alex: It's as much of it as is important to us. No offence, but we're not anthropologists or aid workers or whatever, we manage a building project.
+	Alex: So yeah, I'm sure there's a messy web of relationships between people, land, and conglomerates that we've stepped on, but our job isn't to fret over that.
+- Specifically though, we're not the first windfarm	
+	Alex: Has somebody sent you something about the past riots? People got hurt because they fought the police, that's their choice. 
+	Dave: ...
+	Alex: If they harbour an anti-wind farm grudge, that's on them. What are we supposed to do with that? We've told them it's safe, we pumped money in, that's all there is.
+	Alex: We're not involved in any violence, we haven't wronged anyone, we haven't made anyone disappear or whatever. Don't keep yourself up at night imagining things.
+- I guess you're right	
+	Alex: I don't blame you for being sensitive, but you shouldn't let a few weaponised tears stop a renwable project that could power thousands of homes. 
+- So you've not heard of a Nayali or anything?	
+	Alex: No, is that who's claiming victimhood? Even if she was attacked by the police or whatever, what right does that give her to meddle in green solutions?
+[end_timeline]
+
 label Day05
 if {AlexReturn} == true:
 	if {AlexNayeli} == true:

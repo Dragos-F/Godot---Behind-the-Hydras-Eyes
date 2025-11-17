@@ -447,14 +447,16 @@ YarnNodeLink = "Posters"
 position = Vector2(-42.5, -0.5)
 
 [node name="Jen1" parent="Background/Furniture" index="13"]
-visible = false
 z_index = -1
+position = Vector2(-1129, -1011)
+script = null
 
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
 
 [node name="Alex" parent="Background/Furniture" index="15"]
-visible = false
+position = Vector2(-1524, -807)
+script = null
 
 [node name="DialogueMarker" parent="Background/Furniture/Alex/AlexInteractable" index="1"]
 position = Vector2(3.5, -34)
