@@ -1,15 +1,14 @@
-[gd_scene load_steps=106 format=3 uid="uid://dtf5vs15jiut0"]
+[gd_scene load_steps=105 format=3 uid="uid://dtf5vs15jiut0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_3eksu"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lt3sq"]
+[ext_resource type="Texture2D" uid="uid://ccd1cedlkwwit" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Janine.png" id="3_a7utg"]
+[ext_resource type="Texture2D" uid="uid://66r6ijkdi54s" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Doc box.png" id="3_jc8h6"]
 [ext_resource type="Texture2D" uid="uid://cugl3qtg5y0rh" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex standing.png" id="3_my70i"]
-[ext_resource type="Texture2D" uid="uid://xgfnd6e3wq4v" path="res://Visual Assets/Old assets/Jen 1.png" id="3_v7ro1"]
 [ext_resource type="Texture2D" uid="uid://ceeu1slwfp4py" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Phone check-Sheet.png" id="4_fpqi8"]
-[ext_resource type="Script" uid="uid://cgwl870qrmpxg" path="res://Scripts/JenAnimBrain.gd" id="4_jc8h6"]
+[ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="4_kurw2"]
 [ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="5_2y3md"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_a7utg"]
-[ext_resource type="Texture2D" uid="uid://cmgixe7ffb6w1" path="res://Visual Assets/Old assets/Jen (1).png" id="5_kurw2"]
-[ext_resource type="Texture2D" uid="uid://cpgbgj5vmmu8t" path="res://Visual Assets/Old assets/Selected Item Versions/Jen Selected.png" id="6_2y3md"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_v7ro1"]
 [ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="7_db5ya"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_jc8h6"]
@@ -867,21 +866,58 @@ z_index = -1
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
 
-[node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14" node_paths=PackedStringArray("MainSprite", "SpriteAnim", "timer")]
-modulate = Color(1, 0, 1, 1)
-z_index = -1
-texture_filter = 1
-position = Vector2(-688, 68)
-scale = Vector2(2, 2)
-texture = ExtResource("3_v7ro1")
+[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture/Jen1" index="4"]
+
+[node name="DocBox" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-358, 156.5)
+texture = ExtResource("3_jc8h6")
 flip_h = true
-script = ExtResource("4_jc8h6")
-MainSprite = NodePath(".")
-SpriteAnim = NodePath("AnimatedSprite2D")
-regularJen = ExtResource("3_v7ro1")
-timer = NodePath("Timer")
-minTime = 5.0
-maxTime = 8.0
+
+[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-381.5, 169)
+texture = ExtResource("3_jc8h6")
+flip_h = true
+
+[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-371.5, 136)
+texture = ExtResource("3_jc8h6")
+flip_h = true
+
+[node name="Paper" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-355.5, 195)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper4" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-355, 199.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper5" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-353.5, 203.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper3" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-324, 191.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper6" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-323.5, 196)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper7" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-322, 200)
+texture = ExtResource("4_kurw2")
+
+[node name="Paper2" type="Sprite2D" parent="Background/Furniture/Jen1/ComplaintCorner"]
+position = Vector2(-318, 174.5)
+texture = ExtResource("4_kurw2")
+
+[node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14"]
+z_index = -3
+texture_filter = 1
+position = Vector2(-719, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("3_a7utg")
+flip_h = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Background/Furniture/Janine"]
 
@@ -891,8 +927,8 @@ position = Vector2(3.5, 56.5)
 polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5, -9, 15.5, -79)
 
 [node name="JenInteractable" parent="Background/Furniture/Janine" instance=ExtResource("5_2y3md")]
-regular = ExtResource("5_kurw2")
-selected = ExtResource("6_2y3md")
+regular = ExtResource("3_a7utg")
+selected = ExtResource("3_a7utg")
 YarnNodeLink = "Janine"
 
 [node name="Area2D" parent="Background/Furniture/Janine/JenInteractable" index="0"]
