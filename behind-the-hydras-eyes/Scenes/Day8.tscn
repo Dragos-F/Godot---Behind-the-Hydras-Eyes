@@ -1147,7 +1147,7 @@ offset_top = -49.2858
 offset_right = 557.902
 offset_bottom = 223.714
 scale = Vector2(0.8, 0.8)
-text = "Train turmoil: troubled transport torpedoes traveller timetables"
+text = "The way is Forward, the way is Green"
 autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -1157,12 +1157,17 @@ offset_right = 455.34
 offset_bottom = 531.552
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "For the third time this week, serious delays to all major transport routes have put a dampener on the spirits of hopeful commuters and tourists. This comes one week after ticket prices were hiked 20% in a move that cabinet members have described as \"the sort of tough choices that help to toughen up our long-pampered underclass\". 									
+text = "Renewables giant ForwardGreen is once again leading where others will surely follow. Last year it pioneered with its \"green coal\" initiative, and this year it announced an ambitious new windfarm project dubbed \"Lagoon Breeze\". 
 
-We reached out via phone to our mate that runs SuperTrain, the largest affected rail company, and he said \"[inaudible grumbling]\". Our experts understand this to mean that the blame lies with unions selfishly resisting sixteen hour shifts.									
-				
-Our following investigation on the causes has revealed chronic underfunding on repairs, maintainance, and expansion in line with demand; a workplace environment shaped by exhaustion and toxicity; and a constant failure to recruit adequate staff. We therefore conclude that SuperTrain were correct in their assement that the greedy staff is at the root cause of the issue									
-									"
+
+Providing huge amounts of jobs while also generating energy in areas that often face large powercuts, this venture has been heralded as yet another step towards a shared green future. ForwardGreen has gone beyond this, though, and also invested in a variety of philanthropic endeavors in the local communities, showing that it truly is a big friendly giant.	
+
+
+There have been, unfortunately, some overinflated rumours about dissatisfaction. ForwardGreen CEO Patrick Moore has been clear that this is a loud and very small minority: \"look, you see it here in Britain too. NIMBY whiners who are afraid of change and afraid of progress. While we're sympathetic to people's concerns, we operate to the highest environmental, scientific, and moral standards, so will not bow to any pressure by loony activists.\"
+
+		
+We look forward to updating you on the progress of this exciting project. Surely ForwardGreen rides the winds of change, and was it not the great Winston Churchill who said \"all change is good change\"?							
+"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
 text = "◦ Ticket price soaring

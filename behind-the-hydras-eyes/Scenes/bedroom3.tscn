@@ -464,31 +464,52 @@ visible = false
 emailsProgressionQuota = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
-Sender_Name = "RobSpritely@personmail.co.uk"
+Sender_Name = "Lorena.k@markinsons.co.uk"
 ToAddress = "david199x@personmail.co.uk"
-Subject = "Budgeting in London"
-PreviewText = "Hi Son, hope the move hasn't been to..."
-MainBody = "Hi Son,
+Subject = "Bathroom condition"
+PreviewText = "Dear Mr Spritely...."
+MainBody = "Dear Mr Spritely,
 
-Hope the move hasn't been too bad. I know life in the BIG SMOKE is expensive nowadays, so I thought I'd share with you my trusty budgeting spreadsheet! Of course, you can't hope to get a mortgage or anything if you waste all your money on coffees and interweb subscription-thingies, so be savvy like your old man. 
+Thank you for reaching out to us about the condition of your bathroom. We remind you that your contract assumes the entire responsibility for the maintenance status of your property. Clause 4.4.1 and 4.4.2 (a) and (b) specify clearily that any mould due to misuse of the property is yours to fix.
 
-What was I saying? Just balance the incoming and outgoings and try to build up your savings.
+We can, of course, arrange a contractor to come visit the site on your behalf, for £1,200, as well as an hourly fee for any material, repair or installation costs.
 
-Let me know if you need more explaining! Always happy to talk numbers.
+Please advise how you would like to proceed.
 
-Your dad,
-Robert Spritely.
+Regards,
+Lorena Kimball\"			
+				
+				
+				
+				
+				
+				
+				
+				
+				"
+ReplyBody1 = "Hi Lorena,				
+The contract does indeed mention that it is my responsibility if the damage is due to misuse. I am quite confident that the water damage, and ensuing mould all down the wall, is due to a leaky pipe somewhere in the ceiling.
 
-Stop listening. Phone. Phone. stop listening. "
-ReplyBody1 = "Hi Dad,
+I haven't been able to fully use the bathroom for a couple of months now, and the wall is still saturated with water. I conclude that this is absolute evidence that it is not directly caused by my use of the bathroom.
 
-Thanks for the spreadsheet. I've already opened it up and filled some of the bits in. It's...well, as clear as I expected it to be. I'll be fine, the new flat's great and the job seems interesting.
+Additionally, the pricetag on your contractor seems outrageous, for what is essentially a consultation — I remind you that nobody has yet attended the property to even assess the possible causes.
 
-Keep an eye on mum, you know what she's like with her medication.
+I urge you to send someone around to look at the issue, as I am confident that it is a wider, building specific issue.
 
-Thinking of you both,
-Dave.
-"
+Best,
+Dave Spritely	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				"
 boss = false
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
@@ -503,7 +524,7 @@ offset_top = -31.6074
 offset_right = 577.933
 offset_bottom = 241.393
 scale = Vector2(0.8, 0.8)
-text = "Prime Minister on nationalist protests: \"Some of my best friends are flags\""
+text = "\"More tough choices!\", demand nation's youth"
 autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -513,20 +534,19 @@ offset_right = 445.809
 offset_bottom = 516.98
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "\"Recent protests by nationalist groups have sparked outrage among phone-obsessed loony leftists. Is this reaction justified, or are the snowflakes being too sensitive?
-In a recent survey conducted on the streets of our capital, 3 out of 5 bald white men considered the protests \"\"necessary\"\" and a core part of representing \"\"Fundamental British Values\"\".
+text = "One challenge that always besets our proud government is keeping a finger on the racing pulse of that ever-unpredictable under-25 demographic. What manner of \"meems\", wokeness and tomfoolery has entranced their soft brains this month, and what can be done about it?
 
-A leading Minister originally called for an end to the protest, but was seen at the pub with the organisers of the movement on the same day. Earlier this week his stance changed, readvocating for free speech and right to protest, in the face of restricting laws on the freedom of assembly and association. When asked about his previous comments on the environmental march earlier in the year he said  \"For your weak midn to understand my thinking, you need to take some MindPower pills! I've got a pack right here with me. Everyone should buy some.\"
-					
-In an attempt to bring the nation together, the Prime Minister held a press conference to address worried voters. He spoke greatly of the rich, expansive history of our nation, and how restrictions on protests never stopped the country from achieving its glory. Ultimately, when asked about the increase in flags being flown and painted on public infrastructure he reassured the press: \"I don't fear any flag. Some of my best friends are flags\".							
+Luckily, we have a series of polling, corrected to remove the lefty bias that has infected society, and well-funded public events to inform more refined and mature world views. 
 
-Later this month, we are expecting another round of protests, and counterprotests, to occur in our streets. If you are concerned about this, we offer a wealth of discounted holiday locations. These include former British colonies, struggling economies and tax havens. 							
+And the writing on the wall is clear: today's youth yearn for yet more difficult choices, more \"pragmatism\", more budget cuts and more cultural homogeneity. It is only through these serious, adult-minded measures that we can defeat the pernicious forces of student politics, sixth-form activism, and whatever other witty derision we can muster towards these upstarts. [Editors note: add \"scrounging dependents\"? Remove this comment after.] 
+
+The fleas of that dreaded vampire bat, \"the left\", have indeed been shaken off, and now we must let loose the dogs of war (and privatisation, and deruglation, and free enterprise). Make Britain imperial again.							
 							"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Protest Good
-◦ Snowflakes bad
-◦ Flags are friends"
+text = "◦ MISSING
+◦ MISSING
+◦ MISSING"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24

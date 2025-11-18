@@ -466,29 +466,40 @@ emailsProgressionQuota = 1
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
 Sender_Name = "RobSpritely@personmail.co.uk"
 ToAddress = "david199x@personmail.co.uk"
-Subject = "Budgeting in London"
-PreviewText = "Hi Son, hope the move hasn't been to..."
-MainBody = "Hi Son,
+Subject = "Weekend plans"
+PreviewText = "Hi Son, hope you're well..."
+MainBody = "\"Hi Son, hope you're well. 
 
-Hope the move hasn't been too bad. I know life in the BIG SMOKE is expensive nowadays, so I thought I'd share with you my trusty budgeting spreadsheet! Of course, you can't hope to get a mortgage or anything if you waste all your money on coffees and interweb subscription-thingies, so be savvy like your old man. 
+Mrs Colbridge next door has redone her front garden, and it's been contractors all up and down the street the whole week. I tell you, she could've gotten one of her kids to do all that for probably half the price. She must have the money to spend, the old hoot.
+Anyway, I know you've told your mum you might be coming to visit over the weekend. I wanted to make sure that you know there's delays and cancellation on the rail up to us. You probably need to plan in advance, and we can pick you up from a few towns over. Let me know how you get on.
 
-What was I saying? Just balance the incoming and outgoings and try to build up your savings.
-
-Let me know if you need more explaining! Always happy to talk numbers.
-
-Your dad,
-Robert Spritely.
-
-Stop listening. Phone. Phone. stop listening. "
+Best, 
+Dad.
+Robert Spritely.\"				
+				
+				
+				
+				
+				
+				
+				
+				
+				"
 ReplyBody1 = "Hi Dad,
 
-Thanks for the spreadsheet. I've already opened it up and filled some of the bits in. It's...well, as clear as I expected it to be. I'll be fine, the new flat's great and the job seems interesting.
+Yup, that's right. I'll be coming up Friday eve, and staying till around midday on Sunday. Thanks for letting me know about the trains, i'll let you know what i'm booking
+I'm happy to hear Mrs Colbridge is still doing well enough to be pottering around her garden.
+I'll see you Friday.
 
-Keep an eye on mum, you know what she's like with her medication.
-
-Thinking of you both,
-Dave.
-"
+Dave. 
+				
+				
+				
+				
+				
+				
+				
+				"
 boss = false
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]

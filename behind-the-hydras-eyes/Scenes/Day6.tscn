@@ -1359,16 +1359,24 @@ offset_right = 392.0
 offset_bottom = 141.0
 
 [node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = 24.3871
-offset_top = 8.66014
-offset_right = 486.387
-offset_bottom = 97.6601
-scale = Vector2(0.9, 0.9)
-text = "MISSING"
+offset_left = 34.871807
+offset_top = 7.678005
+offset_right = 634.4121
+offset_bottom = 142.67801
+scale = Vector2(0.655, 0.655)
+text = "Tragedy hits British-owned windfarm project \"Lagoon Breeze\""
 autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "MISSING"
+text = "Yesterday, at 8pm CST, two bodies, 47 and 26, were discovered after a small flashflood disturbed their shallow graves.	
+	
+Police quickly categorised these deaths as the result of gang violence, implementing harsh restrictions including travel bans and a curfew. Locals reject this though, arguing they're linked to the anti-turbine protests, and claiming that it was a politically motivated killing carried out by a drug cartel acting as mercenaries for ForwardGreeen.
+				
+The British company, headed by Patrick Moore, were quick to dismiss these claims as paranoid superstition, offering condolences to the families of the dead, but these deaths—along with another tragic accident last week which caused the death of an engineer—meant that a riot quickly formed in spite of heavy police presence. After having succeeded in ripping down much of the fencing around the project, rioters retreated under a hail of rubber bullets to the cover of a hastily fabricated network of road barricades.
+				
+When asked for a statement, a local mayor told us that \"while the tensions are still ongoing, with a police ring formed around the remaining barricades this morning, we are sure we can de-escalate so that our generous international investors can continue with constructions and augment the economy.\"	
+
+Maria, a local, reached out to us to state that one of the bodies was her father, a respected farmer and pillar of the community, who will be sorely missed. She explains that he was not a vigilante, just a man who wanted compensation for his life's work and the ability to continue supporting his family, and who had tried to stand up to for his daughters despite his anxiety. When asked about her views on ForwardGreen, she declined to comment."
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
 offset_right = 352.0
