@@ -19,6 +19,7 @@ var onceV3:bool = true
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day01"
 	Dialogic.VAR.WatercoolerChar = "Alex01"
+	Dialogic.get_subsystem("subssystem_Variables").clear_game_state()
 	
 	
 	

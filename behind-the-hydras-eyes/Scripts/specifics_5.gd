@@ -11,6 +11,7 @@ extends Node
 @export var BossNotif:AnimatedSprite2D
 @export var BossDoor:Interactable
 @export var brain:DayBrain
+@export var specific_emails:Array[EmailBrain]
 var oncev1 = true
 
 
@@ -18,6 +19,10 @@ func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day05"
 	Dialogic.VAR.WatercoolerChar ="Olu"
 	Dialogic.VAR.AlexNayeli = false
+	if PermanentGlobal.LocationChoice !=null:
+		specific_emails[PermanentGlobal.LocationChoice-1].visible = true
+	else:
+		specific_emails[0].visible = true
 	
 func _process(delta: float) -> void:
 	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota) and oncev1:

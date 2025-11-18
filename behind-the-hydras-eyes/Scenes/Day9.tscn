@@ -678,7 +678,26 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="Reminder" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_e7355")]
+[node name="NayeliFinal" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_e7355")]
+visible = false
+layout_mode = 2
+Sender_Name = "Nayeli"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "An Invitation"
+PreviewText = "Dave, I don't think you believe what "
+MainBody = "Dave,
+
+I don't think you believe what you wrote to me. Perhaps you once did, but surely in the face of painful awareness you realise in shame the actual impact you're making. That rather than green energy, you bring forth red blood. If indeed you do waver, I extend an invitation: come and see it with your own eyes. See how our impoverished communities have already been overlooked, speak to our group. To remain isolated from the results of your actions is a choice born of privilege, but is it a choice you can bear?
+
+I await your arrival,
+Nayeli, spokesperson for Strike the Hydra's Heart"
+ReplyBody1 = "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ."
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/NayeliFinal/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Reminder" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_e7355")]
 visible = false
 layout_mode = 2
 Sender_Name = "PowerAutomated"
@@ -777,7 +796,7 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics9" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "email_reminder", "computer_target", "timer", "email_notification")]
+[node name="Specifics9" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "email_reminder", "computer_target", "timer", "email_notification", "Nayeli_email", "computer_notif", "shutdown")]
 script = ExtResource("16_w3uu3")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -789,6 +808,9 @@ email_reminder = NodePath("../ScreenUI/EmailList/SummariesContainer/Reminder")
 computer_target = NodePath("CompTarget")
 timer = NodePath("Timer")
 email_notification = NodePath("../ScreenUI/BottomBar/Emails/AnimatedSprite2D")
+Nayeli_email = NodePath("../ScreenUI/EmailList/SummariesContainer/NayeliFinal")
+computer_notif = NodePath("../Notifications/Computer")
+shutdown = NodePath("../ScreenUI/BottomBar/ShutDown")
 
 [node name="Timer" type="Timer" parent="Specifics9"]
 wait_time = 2.5
@@ -870,8 +892,10 @@ position = Vector2(499, -250)
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics9" method="_on_desk_interactable_interacted"]
 [connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics9" method="_on_interactable_element_interacted"]
 [connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics9" method="_on_clipboard_interacted"]
+[connection signal="endOfDay" from="DayBrain" to="Specifics9" method="_on_day_brain_end_of_day"]
 [connection signal="introspection" from="DayBrain" to="Specifics9" method="_on_day_brain_introspection"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
+[connection signal="pressed" from="ScreenUI/MainEmail/Reply" to="Specifics9" method="_on_reply_pressed"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="timeout" from="Specifics9/Timer" to="Specifics9" method="_on_timer_timeout"]
 
@@ -891,6 +915,7 @@ position = Vector2(499, -250)
 [editable path="Background/Kitchen/Clipboard/InteractableElement"]
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
+[editable path="ScreenUI/EmailList/SummariesContainer/NayeliFinal"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Reminder"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

@@ -721,7 +721,6 @@ texture_filter = 1
 Sender_Name = "Maria Cruz"
 Subject = "Compensation"
 PreviewText = "I don't know what"
-replyChoice = null
 choiceDialog1 = null
 choiceDialog2 = null
 MainBody = "Hello Mr Spritely
@@ -804,6 +803,100 @@ alltexts = null
 boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="TooExpensive" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_lauko")]
+visible = false
+layout_mode = 2
+Sender_Name = "Olu - Finance"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Funding Update"
+PreviewText = "Good morning Dave, Hope you're managing"
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
+MainBody = "Good morning Dave,
+						
+Hope you're managing okay. Just wanted to confirm that everything's funded appropriately: as discussed in the boardroom, the site for Five Vulture Meadows was above what we'd accounted for, but local politicians have agreed to a series of deals to cut costs elsewhere. I double checked there was no unexpected additional legal costs, and he's happy, so I think we made a great choice. 	
+
+Best, Olu.	"
+ReplyBody1 = "Morning Olu	
+						
+Thanks for the heads up. I did wonder what happened to the slightly increased cost, as I don't get direct oversight onto all the bills and everything, thanks to you and Alex computing all the numbers. This series of deals you mentioned, what exactly did we promise them? Asking since it might be worth me knowing. I've had a few people local to the site emailing about various concerns, so just want to make sure I get all my facts straight internally, rather than through some external outlet.
+
+Best Regards,							
+Dave"
+ReplyBody2 = null
+alltexts = null
+boss = null
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TooExpensive/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Flooding" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_lauko")]
+visible = false
+layout_mode = 2
+Sender_Name = "Richard"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Paradiso Update"
+PreviewText = "Good morning Dave, Richard from legal...."
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
+MainBody = "Good morning Dave,
+						
+Richard from legal here. We expected a few possible setbacks with \"Sandbar Paradiso\" (stupid name), and indeed they have arrived. That's what I'm paid for though. I'm liaising with local authorities to prosecute some people that broke down the fence, and there's some structural issues requiring the foundations to be deeper, but we won't let either issue stop .
+
+Over and out, Richard.								"
+ReplyBody1 = "Hi Richard,
+
+\"I appreciate the news. I've been trying to keep an eye out on the headines and haven't heard anything yet on this, so glad it's all being handled quietly. Is there anything else I should know about these people? Are they organised in some way, or do you think they're acting alone?
+
+Re:Structural issues, I don't believe we forecasted for that. According to the development schedule, our structural redressal is pencilled in for after all sites are complete, but that can't be right. If you hear of any more issues related to this, let me know and I can try getting in touch with the construction company/architect for an update. \"
+
+Best Regards,							
+Dave							"
+ReplyBody2 = null
+alltexts = null
+boss = null
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Flooding/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="Competition" parent="ScreenUI/EmailList/SummariesContainer" index="5" instance=ExtResource("12_lauko")]
+visible = false
+layout_mode = 2
+Sender_Name = "Richard"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Sunrise Farms Update"
+PreviewText = "Good morning Dave, Richard from legal...."
+replyChoice = null
+choiceDialog1 = null
+choiceDialog2 = null
+MainBody = "Good morning Dave,
+					
+Richard from legal here. Just wanted to update you, since - as mentioned the other day - the site chosen, \"Sunrise farm\" (ridiculous branding if you ask me), involves manouvering around competition. Our carrot was big enough for them to terminate the previous contract and rush us in, but our newfound rival isn't going lying down. Don't worry, I'll run them in circles or crush them with counter-litigation, but things will move slow for a bit.
+
+Over and out, Richard.								"
+ReplyBody1 = "Hi Richard,
+			
+I agree, Sunrise farm is certainly a particular type of branding. 
+Noted on the possible delays coming up while you deal with the counter-litigation. Is this something we expect to end up in the press? Local to us, them or international?
+Patrick was keen to not show any cracks in the plan with the development, especially since we snubbed the site from one of his \"\"friends\"\". Let me know if I can help with anything on this.
+
+Also, when you say \"carrot\", what exactly do we mean?
+
+
+Best,							
+Dave							"
+ReplyBody2 = null
+alltexts = null
+boss = null
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Competition/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
 
@@ -1073,7 +1166,7 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "specific_emails")]
 script = ExtResource("14_h2npb")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
@@ -1083,6 +1176,7 @@ DoorNotif = NodePath("../Notifications/Door")
 BossNotif = NodePath("../Notifications/BossDoor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
+specific_emails = [NodePath("../ScreenUI/EmailList/SummariesContainer/TooExpensive"), NodePath("../ScreenUI/EmailList/SummariesContainer/Flooding"), NodePath("../ScreenUI/EmailList/SummariesContainer/Competition")]
 
 [node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
 visible = false
@@ -1159,5 +1253,8 @@ visible = false
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail2"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TooExpensive"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Flooding"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Competition"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

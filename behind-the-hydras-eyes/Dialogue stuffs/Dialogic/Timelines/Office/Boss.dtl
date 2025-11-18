@@ -185,12 +185,12 @@ Boss: Anyway. That's all I wanted to discuss with you. Close the door behind you
 
 label Quarter4
 Boss: Hey Dave, news of the issues you've been having has trickled back to me. Hm. How would you say it's going?
-	- There's a backlash, but it's containted.
-Boss: Well, it was contained. Now, the cat is very much out of the bag.
-	- We're at risk of losing control fast.
-Boss: A prescient prediction. In fact, it's already come true.
-	- I think there's fundamental issues we need to address.
-Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too? 
+- There's a backlash, but it's containted.
+	Boss: Well, it was contained. Now, the cat is very much out of the bag.
+- We're at risk of losing control fast.
+	Boss: A prescient prediction. In fact, it's already come true.
+- I think there's fundamental issues we need to address.
+	Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too? 
 Boss:...
 Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.	
 Boss: It's also forced the Mexican authorities hand somewhat. There's going to be an investigation, which could halt construction or, well, worse.
@@ -200,14 +200,12 @@ Boss: *He pauses and eyes you up. He seems on the cusp of a decision*
 	Boss: Ah, how very kind of you to offer. Well, I accept your resignation. 
 - Stay silent
 	Boss: Well, it's not easy but I'm going to have to fire you. You know how it is.
-Dave: ....
 Boss: Believe me, I'm much sadder than you about the whole thing. Just downright unfortunate. And losing Alex and Jen too...
 - You fired Alex and Jen too?!
 	Boss: Well, I haven't told them yet, but yes. They're both off today. 
 	Boss: I'll give them a ring once this over to let them know.
 - Stay silent
 	Boss: But hey, redundencies are a natural growing pain for a healthy company. 
-Dave: ....
 Boss: That's all I wanted to say. I'll take your staff ID now, and you can go clean out your desk.
 Boss: Lovely working with you.
 [end_timeline]

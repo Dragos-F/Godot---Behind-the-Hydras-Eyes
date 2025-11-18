@@ -3012,6 +3012,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_yhhrm")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_fxbix")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_st1in")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_6cmr8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_15dr1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2tdew")
 text = "    Log Off"
 icon = ExtResource("9_3ntsw")

@@ -83,7 +83,7 @@ Moz: Okay, let me open to the room. Whadda we think?
 	Richard: Sure, it's got the least amount of potential legal problems, from my estimation.
 	Richard: Not that there's any legal problems we couldn't handle, of course. Still, sometimes best to avoid needless battles.
 	- Lock it in.
-		set {PermanentGlobal.LocationChoice} = 1.0
+		set {PermanentGlobal.LocationChoice} = 1
 	- On second thoughts...
 		jump Location 02
 - Sandbar Paradiso
