@@ -1269,6 +1269,9 @@ Sender_Name = "Nayeli"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Do you own our blood?"
 PreviewText = "Do you know our history?"
+replyChoice = true
+choiceDialog1 = "Make it professional..."
+choiceDialog2 = "Speak to her like a person"
 MainBody = "Good morning. 
 
 Do you know our history? What the greedy hydra has already eaten? My father and brother were murdered by the police for fighting against the mass seizure of land from regular people; for daring to challenge the injustice of theft and destruction. I have not escaped the state's cruelty. We will not accept your damage to our ecosystem, polluting of our water. We will not accept losing our livelihoods so you can produce energy for rich people far away and claim you're doing good. For speaking out, we will be brutalised by the police. You invite this upon us, and are you even aware of it? Do not worry, we will ensure the world will be.
@@ -1284,6 +1287,13 @@ Yours respectfully,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
+ReplyBody2 = "Dear Nayeli,
+						
+I am truly sorry for the pain that the local issues of police repression and land expropriation have caused you and many others in the region. We are trying to hold ourselves to a higher standard than the companies you may have had previous negative experiences with. The land we build on was bought legally, we're building carefully with the local ecostyem in mind, and have developed a plan to invest in the local region. We don't want to commit, or invite, and wrongs upon you or your family. I hope you can come to see that we're no hydra.
+
+							
+Kindest Regard,								
+Dave Spritely, UK Project Lead								"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
 texture_filter = 1

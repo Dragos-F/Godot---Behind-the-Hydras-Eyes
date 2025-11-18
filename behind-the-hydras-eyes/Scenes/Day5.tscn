@@ -721,8 +721,9 @@ texture_filter = 1
 Sender_Name = "Maria Cruz"
 Subject = "Compensation"
 PreviewText = "I don't know what"
-choiceDialog1 = null
-choiceDialog2 = null
+replyChoice = true
+choiceDialog1 = "Best show you care a bit...."
+choiceDialog2 = "Eh, i'm sure she'll be fine."
 MainBody = "Hello Mr Spritely
 
 I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
@@ -737,7 +738,16 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
-ReplyBody2 = null
+ReplyBody2 = "Hi Maria,
+
+Thank you for your email. Mr Gallardo does not ring a bell. I wouldn't worry too much about him, as I'm sure things will blow over soon. In regards to your father, if he was violent in any way, he may have been detained by the police. I would imagine that the the first point of contact would be to ring your local station and enquire.
+
+Thanks again for your email.
+
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+Forward Green"
 alltexts = null
 boss = false
 

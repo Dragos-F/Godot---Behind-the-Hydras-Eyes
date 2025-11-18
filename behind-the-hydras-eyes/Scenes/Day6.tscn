@@ -1238,6 +1238,9 @@ Sender_Name = "Mr Perez"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Our Support"
 PreviewText = "In case you haven't"
+replyChoice = true
+choiceDialog1 = "An important business relationship"
+choiceDialog2 = "Maybe best to not be associated...."
 MainBody = "Good afternoon again Dave!
 
 I hope you are well. To build on our positive business relationship, we're happy to help you with managing any backlash so that you can expedite development and negotiate further projects with us. We know that you already have PR and marketing teams, so our offer is that we, as local business leaders, can leverage our pre-existing relationships to facilitate smooth progress. This includes our connections with the powers that be to avoid any roadblocks. 
@@ -1245,7 +1248,19 @@ I hope you are well. To build on our positive business relationship, we're happy
 Regards,
 Mr Perez, 
 Chair of the Entrepreneurial Business Alliance"
-ReplyBody1 = "Y/n"
+ReplyBody1 = "Good afternoon Mr Perez,	
+				
+Thank you again for your support. Our partnership has been mutually beneficial and we're happy to further continue our business relationship. I already look forward to negotiating our next joint project.
+
+
+Kindest regards,								
+Dave Spritely, UK Project Lead								"
+ReplyBody2 = "Good afternoon Mr Perez,	
+
+Thank you again for your support. However, for simplicities sake we would like to ask you to not intervene in our process of community outreach. We still appreciate our business relationship, and look forward to working together in future.
+
+Kindest regards,	
+Dave Spritely, UK Project Lead"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
 texture_filter = 1
