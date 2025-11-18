@@ -150,35 +150,64 @@ Boss: And you're meant to be the one swatting them. Or zapping them, crushing th
 	- So if it finishes, there'll be no layoffs?		
 		Boss: Well, I didn't say that, did I?	
 Boss: Anyway. That's all I wanted to discuss with you. Close the door behind you.			
-	- Uh, what about my end of quarter feedback?
-		label QuestionsQ2
-		Boss: Oh. You want more? Right, fine, let's get it over with.
-		Boss: What's on your mind?	
-		- Is the project actually in real danger?	
-			Boss: Real danger? Well, I suppose that's subjective. Sometimes big projects get held up for years, but in real life David doesn't beat Goliath.
-			Boss: By which I mean, those protesters will get bored, or hungry, or restless, and move on to some other fad. Making avacado on toast, or whatever.
-			Boss: Which is to say, there's always the danger of delays which eat profits, but progress always triumphs.
-			Dave: ...
-			jump QuestionsQ2
-		- Is there anything else I can help with?	
-			Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed.
-			Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now.
-			Dave: ...Right, okay.
-			jump QuestionsQ2
-		- What's you're favourite type of dog?	
-			Boss: Hm? Sorry?
-			Dave: Oh, uh, I don't know why I asked that, sorry.
-			Boss: A corgi. Royal, of course
-			jump QuestionsQ2
-		- Alex mentioned something about a bonus?	
-			Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
-			Dave: Moz?
-			Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months!
-			Dave: ...And that's...good?
-			Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing.
-			Boss: But, uh, not evil.
-			jump QuestionsQ2
-		-Leave
-			[end_timeline]
-	- Get up and Leave		
+- Uh, what about my end of quarter feedback?
+	label QuestionsQ2
+	Boss: Oh. You want more? Right, fine, let's get it over with.
+	Boss: What's on your mind?	
+	- Is the project actually in real danger?	
+		Boss: Real danger? Well, I suppose that's subjective. Sometimes big projects get held up for years, but in real life David doesn't beat Goliath.
+		Boss: By which I mean, those protesters will get bored, or hungry, or restless, and move on to some other fad. Making avacado on toast, or whatever.
+		Boss: Which is to say, there's always the danger of delays which eat profits, but progress always triumphs.
+		Dave: ...
+		jump QuestionsQ2
+	- Is there anything else I can help with?	
+		Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed.
+		Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now.
+		Dave: ...Right, okay.
+		jump QuestionsQ2
+	- What's you're favourite type of dog?	
+		Boss: Hm? Sorry?
+		Dave: Oh, uh, I don't know why I asked that, sorry.
+		Boss: A corgi. Royal, of course
+		jump QuestionsQ2
+	- Alex mentioned something about a bonus?	
+		Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
+		Dave: Moz?
+		Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months!
+		Dave: ...And that's...good?
+		Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing.
+		Boss: But, uh, not evil.
+		jump QuestionsQ2
+	-Leave
+		[end_timeline]
+- Get up and Leave		
+[end_timeline]
+
+label Quarter4
+Boss: Hey Dave, news of the issues you've been having has trickled back to me. Hm. How would you say it's going?
+	- There's a backlash, but it's containted.
+Boss: Well, it was contained. Now, the cat is very much out of the bag.
+	- We're at risk of losing control fast.
+Boss: A prescient prediction. In fact, it's already come true.
+	- I think there's fundamental issues we need to address.
+Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too? 
+Boss:...
+Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.	
+Boss: It's also forced the Mexican authorities hand somewhat. There's going to be an investigation, which could halt construction or, well, worse.
+Boss: Apparently, someone got word there was no EIA and has been trying to kick up a fuss, and that won't help the investigation. 
+Boss: *He pauses and eyes you up. He seems on the cusp of a decision*
+- How can I help?
+	Boss: Ah, how very kind of you to offer. Well, I accept your resignation. 
+- Stay silent
+	Boss: Well, it's not easy but I'm going to have to fire you. You know how it is.
+Dave: ....
+Boss: Believe me, I'm much sadder than you about the whole thing. Just downright unfortunate. And losing Alex and Jen too...
+- You fired Alex and Jen too?!
+	Boss: Well, I haven't told them yet, but yes. They're both off today. 
+	Boss: I'll give them a ring once this over to let them know.
+- Stay silent
+	Boss: But hey, redundencies are a natural growing pain for a healthy company. 
+Dave: ....
+Boss: That's all I wanted to say. I'll take your staff ID now, and you can go clean out your desk.
+Boss: Lovely working with you.
 [end_timeline]

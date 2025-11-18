@@ -472,7 +472,7 @@ YarnNodeLink = "BossDoor"
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
 textToDisplay = "The Board Room"
 YarnNodeLink = "EntryDoor"
-ScenePath = "res://Scenes/boardroom.tscn"
+ScenePath = "res://Scenes/EndOfDemo.tscn"
 
 [node name="DialogueMarker" parent="Background/Furniture/OfficeDoor enter/InteractableElement" index="1"]
 position = Vector2(8.5, -33.5)
@@ -777,7 +777,7 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics9" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "email_reminder", "computer_target", "timer")]
+[node name="Specifics9" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "email_reminder", "computer_target", "timer", "email_notification")]
 script = ExtResource("16_w3uu3")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -788,6 +788,7 @@ brain = NodePath("../DayBrain")
 email_reminder = NodePath("../ScreenUI/EmailList/SummariesContainer/Reminder")
 computer_target = NodePath("CompTarget")
 timer = NodePath("Timer")
+email_notification = NodePath("../ScreenUI/BottomBar/Emails/AnimatedSprite2D")
 
 [node name="Timer" type="Timer" parent="Specifics9"]
 wait_time = 2.5

@@ -789,13 +789,13 @@ position = Vector2(196, 81)
 move_time = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 73.0
-offset_top = -517.0
-offset_right = 912.0
-offset_bottom = -292.0
+offset_left = 150.0
+offset_top = -503.0
+offset_right = 934.0
+offset_bottom = -278.0
 theme_override_fonts/normal_font = ExtResource("18_u4eq7")
 theme_override_font_sizes/normal_font_size = 64
-text = "Thanks for playing the demo for Behind The Hydra's Eyes!"
+text = "Thanks for playing  Behind The Hydra's Eyes!"
 horizontal_alignment = 2
 
 [node name="BackgroundTriangle" type="Sprite2D" parent="."]
@@ -1018,6 +1018,7 @@ libraries = {
 autoplay = "creditMove"
 
 [node name="Pause" parent="." instance=ExtResource("21_u4eq7")]
+visible = false
 
 [node name="Main Menu" type="Button" parent="."]
 offset_left = 560.0

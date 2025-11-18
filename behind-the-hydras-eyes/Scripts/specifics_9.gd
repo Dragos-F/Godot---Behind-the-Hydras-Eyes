@@ -10,7 +10,7 @@ extends Node2D
 @export var email_reminder:Control
 @export var computer_target:Node2D
 @export var timer:Timer
-
+@export var email_notification:Node2D
 var oncev1 = true
 
 
@@ -36,6 +36,7 @@ func _on_day_brain_end_of_day() -> void:
 func _on_dialogic_signal(argument:String):
 		if argument == "reminder":
 			email_reminder.visible = true
+			email_notification.visible = true
 			BossDoor.readyToLeave = true
 			BossNotif.visible = true
 			BossNotif.play("default")
