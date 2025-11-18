@@ -1174,12 +1174,12 @@ theme_override_constants/separation = 24
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
 custom_minimum_size = Vector2(5, 0)
-text = "And the little one says roll over: childrens hospitals declared full"
+text = "Mis-shapen, unsightly, and spirtually unclean: harsh words for annual flower show"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
 custom_minimum_size = Vector2(5, 0)
-text = "Air has suprising nutrional value, minister explains to food banks"
+text = "Leeches back in style, says man in cloak and strange mask"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]

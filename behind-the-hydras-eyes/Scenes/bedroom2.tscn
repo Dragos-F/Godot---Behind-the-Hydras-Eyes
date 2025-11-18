@@ -530,17 +530,29 @@ text = "◦ MISSING
 ◦ MISSING
 ◦ MISSING"
 
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+offset_top = 18.66098
+offset_bottom = 71.45073
+
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
-theme_override_constants/separation = 24
+offset_top = 74.64268
+theme_override_constants/separation = 18
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
 custom_minimum_size = Vector2(5, 0)
-text = "MISSING"
+text = "Bad joke averted, say police after arresting small medium"
 autowrap_mode = 2
 
 [node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
 custom_minimum_size = Vector2(5, 0)
-text = "MISSING"
+text = "DIY vaginoplasty, and other hot new trends"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Games more satanical in good old days, claims bored pastor"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
