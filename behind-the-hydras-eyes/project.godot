@@ -23,6 +23,7 @@ PermanentGlobal="*res://Scripts/PermanentGlobal.gd"
 Fader="*res://Scripts/fader.gd"
 AudioBrain="*res://Scenes/audio_brain.tscn"
 SaveLoad="*res://Scripts/SaveLoad.gd"
+GlobalCamera="*res://Scenes/global_camera.tscn"
 
 [dialogic]
 

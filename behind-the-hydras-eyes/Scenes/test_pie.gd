@@ -24,6 +24,7 @@ var chartTotal:float
 
 
 func _ready() -> void:
+	startingSavings = PermanentGlobal.Savings
 	savingsText.text = str(startingSavings)
 
 	

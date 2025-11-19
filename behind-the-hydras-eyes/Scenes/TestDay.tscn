@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://6pbl4xqwqdko"]
+[gd_scene load_steps=42 format=3 uid="uid://6pbl4xqwqdko"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_2ae21"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_1q0wu"]
@@ -13,12 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_6qeij"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_4qhl5"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_8fujy"]
-[ext_resource type="Script" uid="uid://c8kj85ou1o6rt" path="res://Scripts/P&Ctest.gd" id="14_1q0wu"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="14_jq06o"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="15_oahv6"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="16_bbj1p"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="17_gkuhn"]
-[ext_resource type="Script" uid="uid://dyeruhuuhdbd6" path="res://Scripts/p_n_c_brain.gd" id="19_16dch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjnw6"]
 atlas = ExtResource("4_x7jdd")
@@ -409,12 +407,6 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_16dch"]
-vertices = PackedVector2Array(338.242, 392.648, 481.93, 527.219, 187.242, 529.93, 160.906, 448.969, -394.203, 380.898, -585.438, 527.063, -966.859, 330.633, -740.117, 203.727, -641.93, 151.359, -350.594, 319.609, 523.422, -123.563, 584.328, -160.5, 851.563, -18.9688, 698.531, 83.9922, 553.406, 144.828, 311.203, 105.406, 837.219, 75.3672, 936, 138.469, 936, 200.109, 727.344, 316.141, 602.844, 375.977, 420.781, 294.961, 444.898, 272.18, 612.242, 182.867, 747.063, 116.977, 75.2578, 422.531, -193.742, -92.2813, -206.797, -161.344, -143.344, -158, 236.039, 281.906, 307.172, 315.781, 366.656, 352.852, -665.891, 100, -667.898, 50.1563, -660.344, 35.0391, -588.977, 67.0703, -317.281, 492.688, -321.102, 534.719, -524.594, 64.9297, -220.656, 303.758, 699.539, 95.7188, 611.75, 170.352, 243.258, -308.133, 386.094, -251.563, 379.188, -197.289, 141.648, -261.852, -67.0391, -156.883, 434.219, 212.789, -46.5703, -246.953, 95.8125, -286.289)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20, 21, 22, 23, 24), PackedInt32Array(25, 26, 27, 28, 15, 29, 3), PackedInt32Array(30, 31, 0, 3, 29), PackedInt32Array(8, 32, 33, 34, 35, 9), PackedInt32Array(36, 37, 5, 4), PackedInt32Array(9, 35, 38), PackedInt32Array(9, 38, 26, 39), PackedInt32Array(40, 24, 23, 41), PackedInt32Array(42, 43, 44, 15, 45), PackedInt32Array(25, 39, 26), PackedInt32Array(15, 28, 46), PackedInt32Array(14, 47, 15), PackedInt32Array(15, 46, 48, 49, 45), PackedInt32Array(15, 44, 10), PackedInt32Array(41, 14, 13, 40)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-588, 537, -988, 331, -745, 195, -655, 147, -675.804, 102.419, -678, 48, -665, 22, -587, 57, -527, 55, -205, -98, -219, -172, -143, -168, -75, -167, -55, -255, 97, -297, 142, -273, 243, -319, 397, -258, 390, -203, 523, -135, 584, -172, 871, -20, 709, 89, 747, 106, 838, 64, 946, 133, 946, 206, 732, 325, 603, 387, 403, 298, 439, 264, 602, 177, 554, 156, 433, 225, 315, 122, 249, 277, 312, 307, 381, 350, 351.472, 391.338, 507, 537, 180, 540, 153, 457, 72, 432, -222, 314, -345, 329, -382, 381, -307, 490, -312, 545)])
-border_size = 10.0
-
 [node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_2ae21")]
@@ -548,11 +540,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_3xk2j")
 }
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_qxxee")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
 Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
@@ -780,32 +771,8 @@ visible = false
 
 [node name="Dave" parent="." instance=ExtResource("13_8fujy")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-590, 314)
 walking_audio = null
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Dave"]
-
-[node name="Dave2" parent="." instance=ExtResource("13_8fujy")]
-unique_name_in_owner = true
-position = Vector2(-514, 398)
-script = ExtResource("14_1q0wu")
-
-[node name="AnimatedSprite2D" parent="Dave2" index="0"]
-position = Vector2(-5, -117)
-
-[node name="CollisionPolygon2D" parent="Dave2" index="1"]
-position = Vector2(-2, -11)
-
-[node name="DialogueMarker" parent="Dave2" index="2"]
-position = Vector2(11, -180)
-
-[node name="TextAnchor" parent="Dave2" index="3"]
-position = Vector2(27, -115)
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Dave2"]
-target_desired_distance = 2.0
-avoidance_enabled = true
 
 [node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor", "TeaNotif", "ClipNotif", "CompNotif")]
 script = ExtResource("14_jq06o")
@@ -850,25 +817,14 @@ visible = false
 z_index = 7
 position = Vector2(-157, 152)
 
-[node name="Pause" parent="." instance=ExtResource("16_bbj1p")]
-unique_name_in_owner = true
-z_index = 12
-
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("17_gkuhn")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_16dch")
-
-[node name="PnCBrain" type="Node2D" parent="." node_paths=PackedStringArray("dave", "timer")]
-script = ExtResource("19_16dch")
-dave = NodePath("../Dave2")
-timer = NodePath("Timer")
-
-[node name="Timer" type="Timer" parent="PnCBrain"]
-wait_time = 0.5
+[node name="Pause" parent="." instance=ExtResource("16_bbj1p")]
+unique_name_in_owner = true
+z_index = 12
 
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
@@ -878,7 +834,6 @@ wait_time = 0.5
 [connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics1" method="_on_clipboard_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
-[connection signal="timeout" from="PnCBrain/Timer" to="PnCBrain" method="_on_timer_timeout"]
 
 [editable path="Fader"]
 [editable path="Background"]
@@ -899,6 +854,5 @@ wait_time = 0.5
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
-[editable path="ScreenUI/Budget/Chart"]
+[editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]
-[editable path="Dave2"]

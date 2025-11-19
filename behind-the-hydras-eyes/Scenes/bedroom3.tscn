@@ -365,12 +365,11 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "Camera", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
 script = ExtResource("30_c7u8e")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom3.tscn"
 
 [node name="Dave" parent="." instance=ExtResource("31_vcnnr")]
@@ -477,16 +476,7 @@ We can, of course, arrange a contractor to come visit the site on your behalf, f
 Please advise how you would like to proceed.
 
 Regards,
-Lorena Kimball\"			
-				
-				
-				
-				
-				
-				
-				
-				
-				"
+Lorena Kimball"
 ReplyBody1 = "Hi Lorena,				
 The contract does indeed mention that it is my responsibility if the damage is due to misuse. I am quite confident that the water damage, and ensuing mould all down the wall, is due to a leaky pipe somewhere in the ceiling.
 
@@ -497,20 +487,11 @@ Additionally, the pricetag on your contractor seems outrageous, for what is esse
 I urge you to send someone around to look at the issue, as I am confident that it is a wider, building specific issue.
 
 Best,
-Dave Spritely	
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				"
+Dave Spritely"
 boss = false
+
+[node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
+visible = true
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
@@ -570,7 +551,9 @@ offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
-[node name="Pause" parent="." instance=ExtResource("36_q3som")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("36_q3som")]
 visible = false
 
 [node name="TypingBrain" type="Node" parent="."]

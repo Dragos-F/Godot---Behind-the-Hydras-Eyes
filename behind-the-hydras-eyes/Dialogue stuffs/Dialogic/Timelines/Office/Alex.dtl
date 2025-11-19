@@ -1,4 +1,25 @@
 jump {CurrentDay}
+label Day08
+Alex: Hey! Hope you managed okay alone while we were at the conference. I see we've got a new offering to the corporate alter.
+Dave: Huh?
+Alex: Oh, I mean the new intern. Hopefully she can keep abreast of the complaints, but she'll need be a strong swimmer.
+Alex: Anyway, the conference!
+Alex: It was good. Lots of NGOs mingling with the BritOil bigwigs and the magnates from various petrostates. We have a few new funding leads.
+Alex: Jen seemed to have a fun time, came away weighed down by two bags of freebies and the contact details of some other marketing teams.
+- New funding leads?
+	Alex: Yeah, there's an upcoming climate summit so we've had a few big corps interested in the PR of association with ForwardGreen.
+	Alex: There was a bit of hesitancy with Lagoon Breeze, but the boss agreed to a tree planting project those more cautious could support.
+	Alex: We did have one main lead for our project: Atlas Technologies. They've got a bit of experience with what they call "high-risk" projects.
+	So even if things do go south with the protesters they could be a great sponsor to have. 
+- How's the boss?
+	Dave: Have you noticed the boss acting a bit odd lately?
+	Alex: Hm, maybe? It's hard to tell because he's been erratic since I started. He was quite blunt to me and Jen about the conference.
+	Alex: Maybe it's just nerves about the backlash brewing. Normally third world scuffles don't affect our Euro/American trade, 
+	Alex: but there's been a lot more scrutiny around that sort of thing in recent years, and people film everything. Don't dwell on it.
+- Glad you enjoyed, I'll catch up with you later! 
+	Alex: Thanks, I'm glad to be back in the office! If you need anything just let me know. 
+[end_timeline]
+
 label Day06
 if {AlexNayeli} == false:
 	Alex: Have you introduced yourself to Phil's secretary? You're in for a treat...

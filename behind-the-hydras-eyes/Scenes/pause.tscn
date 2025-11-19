@@ -58,6 +58,7 @@ corner_radius_bottom_left = 12
 
 [node name="Pause" type="Node2D" node_paths=PackedStringArray("folderAnim", "saveMessage", "allControl", "randText", "back_slide", "sfx_slide")]
 z_index = 10
+position = Vector2(961, 538)
 script = ExtResource("1_e0jm0")
 folderAnim = NodePath("AnimatedSprite2D")
 saveMessage = NodePath("Message")
@@ -86,6 +87,7 @@ frame_progress = 1.0
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(1, 1, 1, 0.443137)
 z_index = 4
+scale = Vector2(1.0950158, 1.269526)
 texture = ExtResource("3_nsogc")
 
 [node name="Control" type="Control" parent="."]

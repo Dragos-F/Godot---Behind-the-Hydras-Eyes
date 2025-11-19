@@ -126,8 +126,6 @@ texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("5_uvrlr")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_akv0e")

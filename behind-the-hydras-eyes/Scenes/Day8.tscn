@@ -1000,20 +1000,19 @@ texture = ExtResource("11_reana")
 position = Vector2(-318, 174.5)
 texture = ExtResource("11_reana")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_feprj")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 BossAnchor = NodePath("../BossScreen/BossAnchor")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
 Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
 Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day8.tscn"
 
@@ -1263,7 +1262,9 @@ visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="Pause" parent="." instance=ExtResource("22_tfmm6")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("22_tfmm6")]
 visible = false
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics8" method="_on_boss_door_interacted"]

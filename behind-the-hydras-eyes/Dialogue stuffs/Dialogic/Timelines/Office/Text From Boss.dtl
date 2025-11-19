@@ -7,29 +7,29 @@ label Quarter1
 "Text From Boss": Anyway, see you later today, and I've put a performance meeting in your calender with me at the end of the month. Regards, P.M.
 [end_timeline]
 label Quarter2
-Boss: Bzzt! Bzzt!
-Boss: Hi Dave, don't think I got to mention this at our last catchup
-Boss: I spoke to a very good friend of mine, and he's got a solution to some of our problems
-Boss: You may have heard of his company, Information Solutions Limited?
+"Text From Boss": Bzzt! Bzzt!
+"Text From Boss": Hi Dave, don't think I got to mention this at our last catchup
+"Text From Boss": I spoke to a very good friend of mine, and he's got a solution to some of our problems
+"Text From Boss": You may have heard of his company, Information Solutions Limited?
 - You know "Big Daz"? 
-	Boss: Oh yeah, we go way back
-	Boss: We went to private school together, our parents were in the same sailing club
-	Boss: You know how these go
+	"Text From Boss": Oh yeah, we go way back
+	"Text From Boss": We went to private school together, our parents were in the same sailing club
+	"Text From Boss": You know how these go
 
 - Hm, don't remember them coming up 
-	Boss: Oh, huge in the tech business
-	Boss: I've known him since we were boys, kept in touch of course
-	Boss: Always good to know other CEO's
+	"Text From Boss": Oh, huge in the tech business
+	"Text From Boss": I've known him since we were boys, kept in touch of course
+	"Text From Boss": Always good to know other CEO's
 
-Boss: Either way, he's got some fancy new "Artificially Inteligent" solution.
-Boss: Says this stuff is good for business PR, and will actually deal with a lot of the complaints itself
+"Text From Boss": Either way, he's got some fancy new "Artificially Inteligent" solution.
+"Text From Boss": Says this stuff is good for business PR, and will actually deal with a lot of the complaints itself
 - Isn't that why you hired me?- 
-	Boss: C'mon Dave, I hired you to manage the project! There's plenty more to do
-	Boss: It'll free you up to dedicate time to the important parts
+	"Text From Boss": C'mon Dave, I hired you to manage the project! There's plenty more to do
+	"Text From Boss": It'll free you up to dedicate time to the important parts
 
 - Oh, sweet!
-	Boss: Glad you're sharing the excitement
-Boss: It'll take some time for it to get trained up on your emails, so just reply to everything as normal for now
-Boss: We've also started to recieve tons of physical letters though, so I've grabbed an intern to handle that for you.
-Boss: Better get someone unpaid than waste your time. Remember to introduce yourself.
+	"Text From Boss": Glad you're sharing the excitement
+"Text From Boss": It'll take some time for it to get trained up on your emails, so just reply to everything as normal for now
+"Text From Boss": We've also started to recieve tons of physical letters though, so I've grabbed an intern to handle that for you.
+"Text From Boss": Better get someone unpaid than waste your time. Remember to introduce yourself.
 [end_timeline]

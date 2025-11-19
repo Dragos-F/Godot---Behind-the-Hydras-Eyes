@@ -9,7 +9,7 @@ class_name DayBrain
 @export var DaveAnchor:Node2D
 @export var BossAnchor:Node2D
 @export var TextAnchor:Node2D
-@export var Camera:Camera2D
+@onready var Camera:Camera2D = get_node("/root/GlobalCamera/Camera2D") 
 @export var camera_zoom:Vector2
 @export var camera_target:Vector2
 @export var standing_Alex:Node2D

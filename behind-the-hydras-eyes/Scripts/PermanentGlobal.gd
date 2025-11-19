@@ -1,13 +1,14 @@
 extends Node
 
 @onready var LocationChoice:float
-@onready var Savings:float
+@onready var Savings:float = 2400
 @onready var Lifestyle:String
 @onready var Plant:bool = false
 @onready var email_choices = {}
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(reset_focus)
+	
 
 
 func _input(event: InputEvent) -> void:

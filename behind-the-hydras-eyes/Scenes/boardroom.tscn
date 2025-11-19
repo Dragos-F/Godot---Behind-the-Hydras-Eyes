@@ -47,3 +47,4 @@ position = Vector2(-287, 452)
 position = Vector2(591, 480)
 
 [node name="Pause" parent="." instance=ExtResource("4_ok08t")]
+visible = false

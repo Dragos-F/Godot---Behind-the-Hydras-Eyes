@@ -367,12 +367,11 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "Camera", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
 script = ExtResource("28_p1x44")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom.tscn"
 
 [node name="Dave" parent="." instance=ExtResource("3_gru6s")]
@@ -430,13 +429,6 @@ rotation = -3.13625
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Top"]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -960
-limit_top = -541
-limit_right = 960
-limit_bottom = 541
-limit_smoothed = true
-
 [node name="IndexChangeZone" parent="." node_paths=PackedStringArray("targetGroup") instance=ExtResource("24_f2uan")]
 visible = false
 collision_layer = 0
@@ -465,6 +457,9 @@ texture = ExtResource("33_x75j5")
 visible = false
 emailsProgressionQuota = 1
 
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = false
+
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
 Sender_Name = "RobSpritely@personmail.co.uk"
 ToAddress = "david199x@personmail.co.uk"
@@ -492,6 +487,12 @@ Thinking of you both,
 Dave.
 "
 boss = false
+
+[node name="MainEmail" parent="ScreenUI" index="1"]
+visible = false
+
+[node name="Budget" parent="ScreenUI" index="2"]
+visible = true
 
 [node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
 visible = true
@@ -655,15 +656,19 @@ offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
-[node name="Pause" parent="." instance=ExtResource("36_unbiq")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("36_unbiq")]
 visible = false
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("37_scg7i")
 
-[node name="Node" type="Node" parent="."]
+[node name="BedroomSpecifics" type="Node" parent="." node_paths=PackedStringArray("balcony_notif", "computer_notif")]
 script = ExtResource("38_ayyhf")
+balcony_notif = NodePath("../Notifications/Notif2")
+computer_notif = NodePath("../Notifications/Notif")
 
 [node name="Notifications" type="Node2D" parent="."]
 
@@ -675,8 +680,8 @@ position = Vector2(44, -465)
 animation = &"Q"
 autoplay = "Q"
 
-[connection signal="interacted" from="Furniture/Balcony Door/InteractableElement" to="Node" method="_on_balcony_interacted"]
-[connection signal="interacted" from="Furniture/Desk/DeskChair/InteractableElement" to="Node" method="_on_computer_interacted"]
+[connection signal="interacted" from="Furniture/Balcony Door/InteractableElement" to="BedroomSpecifics" method="_on_balcony_interacted"]
+[connection signal="interacted" from="Furniture/Desk/DeskChair/InteractableElement" to="BedroomSpecifics" method="_on_computer_interacted"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://pphkrh6xsg3l"]
+[gd_scene load_steps=47 format=3 uid="uid://pphkrh6xsg3l"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6qi5j"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_k5jl3"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="35_yt013"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_4bp7u"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_1n7mf"]
+[ext_resource type="Script" uid="uid://diqpv7rj5hd8n" path="res://Scripts/bed_specifics_2.gd" id="38_k5jl3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -365,12 +366,11 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "Camera", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
 script = ExtResource("30_eivt4")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom2.tscn"
 
 [node name="Dave" parent="." instance=ExtResource("31_k61kq")]
@@ -427,13 +427,6 @@ rotation = -3.13625
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Top"]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -960
-limit_top = -541
-limit_right = 960
-limit_bottom = 541
-limit_smoothed = true
 
 [node name="IndexChangeZone" parent="." node_paths=PackedStringArray("targetGroup") instance=ExtResource("32_5c67q")]
 visible = false
@@ -501,6 +494,13 @@ Dave.
 				
 				"
 boss = false
+
+[node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
+visible = true
+
+[node name="Chart" parent="ScreenUI/Budget/HomeBudget" index="2"]
+totalRent = 4950.0
+totalBills = 1350.0
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
@@ -575,12 +575,17 @@ offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
-[node name="Pause" parent="." instance=ExtResource("36_4bp7u")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("36_4bp7u")]
 visible = false
 
 [node name="TypingBrain" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("37_1n7mf")
+
+[node name="bed_specifics2" type="Node" parent="."]
+script = ExtResource("38_k5jl3")
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]

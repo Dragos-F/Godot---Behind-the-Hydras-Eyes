@@ -1,5 +1,4 @@
 extends Node2D
-
 class_name mugBrain
 @export var fillAnimation:AnimatedSprite2D
 @export var full:bool = false
@@ -26,6 +25,8 @@ class_name mugBrain
 @export var oncev2:bool = true
 @export var removeBagAudio:AudioStream
 @export var liquidDrop:AudioStream
+@onready var hoveredHold:holdable
+@onready var type_of_holdable:int = -1
 
 
 var darken:Tween
@@ -53,6 +54,8 @@ func _process(_delta: float) -> void:
 	if full && hasBag && oncev1:
 		#teaColour(3)
 		oncev1 = false
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && hoveredHold != null:
+		hoveredHold.put_in_mug(self,type_of_holdable)
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -66,34 +69,37 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				fillAnimation.play("water")
 			
 		elif area.get_parent().name == "TeaBag":
-			area.get_parent().queue_free()
-			hasBag = true
-			minigame.holding = false
+			hoveredHold = area.get_parent()
+			area.get_parent().scale = Vector2(1.1, 1.1)
+			type_of_holdable = 0
+			
 		elif area.get_parent().name == "Cube":
-			area.get_parent().queue_free()
-			minigame.holding = false
-			sugar +=1
-			AudioBrain.playFX(liquidDrop,false)
+			hoveredHold = area.get_parent()
+			area.get_parent().scale = Vector2(1.1, 1.1)
+			type_of_holdable = 1
+			
 	elif full and newFill:
 		if area.get_parent().name == "Nut" or area.get_parent().name == "Cow" and hasBag:
 			teaColour(2)
 		#if area.get_parent().name == "Kettle"and hasBag:
 			#teaColour(1)
 		if area.get_parent().name == "TeaBag":
-			area.get_parent().queue_free()
-			minigame.holding = false
-			fillAnimation.play_backwards("tea")
-			fillAnimation.pause()
-			#teaColour(1)
-			hasBag = true
+			hoveredHold = area.get_parent()
+			area.get_parent().scale = Vector2(1.1, 1.1)
+			type_of_holdable = 0
 		elif area.get_parent().name == "Cube":
-			area.get_parent().queue_free()
-			sugar +=1
-			minigame.holding = false
+			hoveredHold = area.get_parent()
+			area.get_parent().scale = Vector2(1.1, 1.1)
+			type_of_holdable = 1
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.get_parent().name != "TeaBag":
+	if area.get_parent().name == "TeaBag" or area.get_parent().name == "Cube":
+		area.get_parent().scale = Vector2(1.0, 1.0)
+		
+	hoveredHold = null
+	type_of_holdable = -1
+	if area.name == "EndOfStream":
 		fillAnimation.pause()
 		teaColour(0)
 		#oncev1 = true

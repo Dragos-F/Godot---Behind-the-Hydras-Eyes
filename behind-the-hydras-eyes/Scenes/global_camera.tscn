@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://chespnivlwwdj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -960
+limit_top = -541
+limit_right = 960
+limit_bottom = 541
+limit_smoothed = true

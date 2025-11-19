@@ -32,6 +32,7 @@ func _on_ui_value_changed(value: float) -> void:
 	AudioBrain.UIsfxPlayer.volume_db = value
 	
 func _on_restart_pressed() -> void:
+	Dialogic.end_timeline()
 	Fader.FadeUp("")
 	closePause()
 	await Fader.fade_finished

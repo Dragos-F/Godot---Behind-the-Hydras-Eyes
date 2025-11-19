@@ -600,20 +600,19 @@ texture = ExtResource("8_w3uu3")
 position = Vector2(-318, 174.5)
 texture = ExtResource("8_w3uu3")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "Camera", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_pek1x")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 BossAnchor = NodePath("../BossScreen/BossAnchor")
-Camera = NodePath("../Camera2D")
 camera_zoom = Vector2(1.5, 1.5)
 standing_Alex = NodePath("../Background/StandingAlex")
 Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
 Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day9.tscn"
 
@@ -861,7 +860,9 @@ position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
 
-[node name="Pause" parent="." instance=ExtResource("15_wgaeq")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("15_wgaeq")]
 unique_name_in_owner = true
 visible = false
 z_index = 12

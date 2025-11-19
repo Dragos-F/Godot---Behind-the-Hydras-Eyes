@@ -1,6 +1,7 @@
 extends Control
 class_name Computer
 @export var MainEmailBody:RichTextLabel
+@onready var dave:Dave = %Dave
 @export var replyTarget:Control #needed since I've decided to make the typing system dependent on a control node
 @export var Sender:RichTextLabel
 @export var ToBox:RichTextLabel
@@ -82,6 +83,7 @@ func _on_reply_pressed() -> void:
 		var layout = Dialogic.start("EmailChoice")
 		layout.register_character ("res://Dialogue stuffs/Dialogic/Characters/Office/Keyboard.dch",keyboardTarget)
 		await Dialogic.timeline_ended
+		dave.move_time = false
 		if Dialogic.VAR.EmailChoice == 1:
 			Sender.text = selectedTexts[2]
 			ToBox.text = selectedTexts[0]
@@ -156,7 +158,7 @@ func _on_job_thing_pressed() -> void:
 
 
 func _on_save_button_pressed() -> void:
-	PermanentGlobal.savings = info.savingsContribution
+	PermanentGlobal.Savings = info.savingsContribution+info.startingSavings
 	PermanentGlobal.Lifestyle = info.lifestyleTypes[info.lifestyleChoice]
 	SaveLoad._save()
 

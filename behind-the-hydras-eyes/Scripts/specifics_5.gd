@@ -17,6 +17,7 @@ var oncev1 = true
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day05"
+	Dialogic.VAR.CurrentQuarter = "Quarter2"
 	Dialogic.VAR.WatercoolerChar ="Olu"
 	Dialogic.VAR.AlexNayeli = false
 	if PermanentGlobal.LocationChoice !=null:
@@ -25,7 +26,7 @@ func _ready() -> void:
 		specific_emails[0].visible = true
 	
 func _process(delta: float) -> void:
-	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota) and oncev1:
+	if emails.emailsDone==emails.emailsProgressionQuota and oncev1:
 		BossDoor.readyToLeave = true
 		BossNotif.visible = true
 		BossNotif.play("default")
