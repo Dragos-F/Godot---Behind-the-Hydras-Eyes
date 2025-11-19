@@ -40,7 +40,8 @@ func _physics_process(_delta: float) -> void:
 			pour_animation.visible = true
 			pour_animation.play(pour_anim)
 			oncev1 = false
-			EndOfStream.monitorable = true
+			#EndOfStream.monitorable = true
+			EndOfStream.process_mode = Node.PROCESS_MODE_INHERIT
 			if milk:
 				ownSprite.texture = openMilk
 	if !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and pouring:
@@ -48,7 +49,8 @@ func _physics_process(_delta: float) -> void:
 		self.transform = self.transform.rotated(pourAngle)
 		pour_animation.visible = false
 		pouring = false
-		EndOfStream.monitorable = false
+		#EndOfStream.monitorable = false
+		EndOfStream.process_mode = Node.PROCESS_MODE_DISABLED
 	if in_hand && Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 				in_hand = false
 				self.position = anchor_pos.position
