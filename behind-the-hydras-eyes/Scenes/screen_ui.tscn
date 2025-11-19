@@ -531,6 +531,7 @@ texture = ExtResource("14_bd8n7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
 [node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -853,33 +854,31 @@ offset_bottom = 373.0
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Subscription/Cost 1"
+text = "The Financier Monthly"
 
 [node name="CheckButton2" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Subscription/Cost 2"
+text = "XxMonyxX  Sub"
 
 [node name="CheckButton3" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Subscription/Cost 3
-"
+text = "TV License"
 
 [node name="CheckButton4" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Subscription/Cost 4
-"
+text = "DeliverNow Max"
 
 [node name="CheckButton5" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Subscription/Cost 5"
+text = "NilePrime"
 
 [node name="Additional Costs2" type="Panel" parent="Budget/HomeBudget"]
 layout_mode = 0
@@ -2988,14 +2987,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ShutDown" type="Button" parent="BottomBar"]
 texture_filter = 1
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_right = 0.185413
 anchor_bottom = 1.20157
 offset_right = 0.164032
 offset_bottom = 6.71199
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.75, 0.7515108)
 size_flags_vertical = 4
 theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)

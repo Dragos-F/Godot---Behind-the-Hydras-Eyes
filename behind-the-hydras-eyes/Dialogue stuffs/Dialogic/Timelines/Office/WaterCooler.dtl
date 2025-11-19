@@ -1,7 +1,9 @@
 jump {WatercoolerChar}
 label Empty
-WaterCooler: I'm empty. Dessicated and Dehydrated. 
+WaterCooler: I'm empty. 
+WaterCooler: Dessicated and Dehydrated. 
 WaterCooler: Just like you without me. 
+[end_timeline]
 label Alex01
 WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
 - Yes

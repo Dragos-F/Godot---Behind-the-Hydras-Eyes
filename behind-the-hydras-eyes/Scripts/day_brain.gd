@@ -22,6 +22,7 @@ class_name DayBrain
 @export var PauseMenu:pauseMenu
 signal endOfDay() # emitted by the dayBrain to let the specifics know when to end. 
 signal introspection()
+signal empty()
 @export var plants:Array[Node2D]
 @export var current_scene:String
 
@@ -259,6 +260,7 @@ func _on_dialogic_signal(argument:String):
 			dave.ownSprite.flip_h = true
 	if argument == "no_watercooler_Alex":
 		water_cooler_Alex(1)
+		empty.emit()
 	if argument == "tea_minigame":
 		tea_minigame()
 	if argument == "take_plant":

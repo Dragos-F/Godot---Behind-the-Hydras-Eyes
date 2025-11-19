@@ -3,6 +3,8 @@ class_name Interactable
 @export var parentSprite:Node2D
 @export var regular:CompressedTexture2D
 @export var selected:CompressedTexture2D
+@export var empty:CompressedTexture2D
+@export var empty_selected:CompressedTexture2D
 @export var near:bool
 @export var once:bool
 @export var once2:bool = true
@@ -29,6 +31,8 @@ func _ready() -> void:
 		day_brain = get_tree().current_scene.get_node("DayBrain")
 	if get_tree().current_scene.get_node("Dave") != null:
 		dave = get_tree().current_scene.get_node("Dave")
+	day_brain.empty.connect(empty_cooler)
+	
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,6 +48,8 @@ func _process(_delta: float) -> void:
 				if parentSprite is AnimatedSprite2D:
 					parentSprite.play("open")
 					dave._stopDave()
+
+					
 			InteractType.Desk:
 				day_brain.enter_screen()
 				dave._stopDave()
@@ -96,3 +102,7 @@ func _interact():
 		print ("interacted has emitted")
 		once2 = false
 		
+func empty_cooler():
+		regular = empty
+		selected = empty_selected
+		Dialogic.VAR.WatercoolerChar = "Empty"

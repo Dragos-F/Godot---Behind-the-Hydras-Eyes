@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=3 uid="uid://c3o7xc4gc5h13"]
+[gd_scene load_steps=215 format=3 uid="uid://c3o7xc4gc5h13"]
 
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="1_qxydj"]
 [ext_resource type="Texture2D" uid="uid://c7f52a00hj8i7" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Clock.png" id="2_qx5rf"]
@@ -61,7 +61,9 @@
 [ext_resource type="Texture2D" uid="uid://m2wyw0h27e6t" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Kettle Selected.png" id="49_ri84f"]
 [ext_resource type="Texture2D" uid="uid://c4rfeyed4tccx" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Large plant 2.png" id="50_rc0sk"]
 [ext_resource type="Texture2D" uid="uid://bd8c2fkg30pb3" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Table round.png" id="51_m4ws5"]
+[ext_resource type="Texture2D" uid="uid://c53o4ah78fnc8" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Water cooler empty.png" id="51_q838t"]
 [ext_resource type="Texture2D" uid="uid://cxnel3mt0mi4v" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant plain 2.png" id="52_3mqa7"]
+[ext_resource type="Texture2D" uid="uid://fjtdur4gjepb" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Water cooler empty selected.png" id="52_e1vmb"]
 [ext_resource type="Texture2D" uid="uid://biy1qsn5y22bf" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Plant plain.png" id="53_5u0n3"]
 [ext_resource type="Texture2D" uid="uid://gmuxeutybpg6" path="res://Visual Assets/New Assets/Office Scene Assets/Selectable/Clipboards, binders, docs/Clipboard.png" id="54_cpxd6"]
 [ext_resource type="Script" uid="uid://bjhaeeo11kmoj" path="res://Scripts/coffee_machine.gd" id="55_0krsi"]
@@ -1538,6 +1540,8 @@ polygon = PackedVector2Array(-19, 48.5, 4, 60.5, 19.5, 48.5, 0.5, 40)
 [node name="InteractableElement" parent="Kitchen/WaterCooler" instance=ExtResource("10_5vk3e")]
 regular = ExtResource("39_i5h4o")
 selected = ExtResource("40_pn164")
+empty = ExtResource("51_q838t")
+empty_selected = ExtResource("52_e1vmb")
 
 [node name="Area2D" parent="Kitchen/WaterCooler/InteractableElement" index="0"]
 visible = false

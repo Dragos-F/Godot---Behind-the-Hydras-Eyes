@@ -543,7 +543,6 @@ texture = ExtResource("6_fuc61")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_1v22j")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -891,8 +890,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 8.0
 offset_bottom = 8.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="Dave" parent="." instance=ExtResource("8_t5tpt")]
 unique_name_in_owner = true

@@ -1255,7 +1255,6 @@ texture = ExtResource("10_db5ya")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_gnihg")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
