@@ -574,7 +574,6 @@ texture = ExtResource("6_k3jav")
 
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -622,7 +621,7 @@ I am sorry that you are unsatisfied with the response from our local office. How
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1

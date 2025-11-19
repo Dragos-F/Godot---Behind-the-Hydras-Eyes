@@ -708,7 +708,6 @@ texture = ExtResource("10_vl8em")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_sjsk0")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -810,12 +809,12 @@ Mr Perez,
 Chair of the Entrepreneurial Business Alliance"
 ReplyBody1 = "Good afternoon Mr Perez,
 
-Thank you for expressing your support. We here at FutureGreen are glad to have the backing of the local business community, and look forward to our continuing positive relations.
+Thank you for expressing your support. We here at ForwardGreen are glad to have the backing of the local business community, and look forward to our continuing positive relations.
 
 Kind regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
 texture_filter = 1
