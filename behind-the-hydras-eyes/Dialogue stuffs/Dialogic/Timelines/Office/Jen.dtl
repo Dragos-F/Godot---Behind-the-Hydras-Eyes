@@ -154,9 +154,9 @@ Dave: Wh—
 Jen: Did you get in okay?
 - Yeah, I got the Annabel line in
 	Dave: It was a bit cramped inside, but nothing too crazy.
-	Jen: Oh, is that the one with airconditioning?
+	Jen: Oh, is that the one with air conditioning?
 	Jen: I haven't been on it, but I keep wanting to!
-	Jen: I'll post a story to my socials when I do.
+	Jen: I'll post a story when I do.
 - I got the bus in
 	Dave: It wasn't too bad, but a burst pipe on the road delayed things a bit.
 	Jen: Oh, is that what's happening?
@@ -197,7 +197,7 @@ Jen: I can't wait for you guys to see it!
 		Dave: Hm. Interesting. Has he been in touch since?
 		Jen: Not with me, but I'm sure Patrick would remember him better.
 - Does the name "Nayeli" ring any bells? | [if {AlexNayeli} == true] [else="hide"]
-	Jen: Is that one of the influencers we payed to come and take selfies with the builders?
+	Jen: Is that one of the influencers we paid to come and take selfies with the builders?
 	- No, she seems to be working for a local resistance group
 	- She is complaining to me about the project
 		Dave: So if we did pay her, I don't think we should continue...

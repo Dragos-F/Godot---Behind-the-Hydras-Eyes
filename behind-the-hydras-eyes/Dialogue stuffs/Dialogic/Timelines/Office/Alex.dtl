@@ -70,7 +70,7 @@ Alex: Hope that's alright wih you?
 	Alex: The other is suspended and going through a disciplinary for coming into work drunk 6 times in 4 weeks.
 	Dave: Right.... that sounds like Richard's having a rough time then
 	Alex: Ah, I think he was looking to get rid of them to be honest. Never liked Torvil and Dean
-	Dave: : ...Torvill and Dean?
+	Dave: : ...Torvil and Dean?
 	Alex: Yeah, the guys from Legal.
 	Dave: Right... I'll get back to my emails then.
 set {AlexReturn} = true
@@ -92,12 +92,12 @@ Alex: We're not far off the land settlement being complete. Anything you need be
 	
 label Day05Nayeli
 Dave: I've got this email from a "Nayeli?" Do yoou know anything about her?
-Alex: *Alex makes a pained groan sound*
+Alex: *Alex makes a pained groaning sound*
 Alex: Ugh, not her again
 Alex: She got involved with a different project in the area. It was originally going to be a quarry, mostly for gravel production to one of our investor's developments that needed more supply.
 Alex: She was quite the pain. Did I mention the guy we had before you? That quit after dealing with a bunch of complaints?
 Alex: Yeah, she would drive Nigel crazy. I saw one of the emails she sent. Super dramatic, just absolute bollocks. 
-- She seemd quite passionate about it all.
+- She seemed quite passionate about it all.
 	Alex: Well, if she was serious about it, she would attend the local council meetings we have to organise anyway
 	Alex: No point in her typing up some flowery threats she can't enact anyway. There's proper channels for these sorts of complaints
 - Yeah, I guess she seems a bit eccentric
