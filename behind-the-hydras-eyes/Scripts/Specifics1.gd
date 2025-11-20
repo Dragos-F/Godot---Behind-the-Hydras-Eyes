@@ -1,8 +1,9 @@
 extends Node
 @export var alexInteracted:bool = false
-@export var AlexNotif:AnimatedSprite2D
 @export var jenInteracted:bool = false
+@export var AlexNotif:AnimatedSprite2D
 @export var JenNotif:AnimatedSprite2D
+@export var CompNotif:Node2D
 @export var emails:Computer
 @export var outsideDoor:Interactable
 @export var DoorNotif:AnimatedSprite2D
@@ -11,7 +12,7 @@ extends Node
 @export var BossDoor:Interactable
 @export var TeaNotif:Node2D
 @export var ClipNotif:Node2D
-@export var CompNotif:Node2D
+
 var onceV1:bool = true
 var onceV2:bool = true
 var onceV3:bool = true

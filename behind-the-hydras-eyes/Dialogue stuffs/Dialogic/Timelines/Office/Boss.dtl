@@ -92,19 +92,23 @@ Boss: And you're meant to be the one swatting them. Or zapping them, crushing th
 Boss: Anyway. That's all I wanted to discuss with you. Close the door behind you.
 Dave: Uh, what about my end of quarter feedback?
 Boss: Oh. You want more? Right, fine, let's get it over with.
+label Q2Questions
 Boss: What's on your mind?
 - Is the project actually in real danger?
 	Boss: Real danger? Well, I suppose that's subjective. Sometimes big projects get held up for years, but in real life David doesn't beat goliath.
 	Boss: By which I mean, those protesters will get bored, or hungry, or restless, and move on to some other fad. Making avacado on toast, or whatever.
 	Boss: Which is to say, there's always the danger of delays which eat profits, but progress always triumphs.
 	Dave: ...
+	jump Q2Questions
 - Is there anything else I can help with?
 	Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed. 
 	Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now. 
 	Dave: ...Right, okay.
+	jump Q2Questions
 - What's you're favourite type of dog?
 	Boss: Hm? Sorry?
 	Dave: Oh, uh, I don't know why I asked that, sorry.
+	jump Q2Questions
 - Alex mentioned something about a bonus?
 	Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
 	Dave: Moz? 
@@ -112,9 +116,8 @@ Boss: What's on your mind?
 	Dave: ...And that's...good?
 	Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing. 
 	Boss: But, uh, not evil.
-	jump QuestionsQ2
-	-Leave
-		[end_timeline]
+	jump Q2Questions
+
 - Get up and Leave		
 [end_timeline]
 

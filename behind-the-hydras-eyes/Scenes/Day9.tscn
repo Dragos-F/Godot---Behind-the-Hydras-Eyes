@@ -642,7 +642,6 @@ texture = ExtResource("10_4uy8g")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_ks1xs")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -711,10 +710,6 @@ boss = true
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Reminder/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
-
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
 
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1

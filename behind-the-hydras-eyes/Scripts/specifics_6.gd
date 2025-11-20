@@ -8,6 +8,7 @@ extends Node2D
 @export var onceV3 = true
 @export var AlexNotif:Node2D
 @export var JenNotif:Node2D
+@export var CompNotif:Node2D
 
 
 func _ready() -> void:
@@ -38,3 +39,5 @@ func _on_jen_interactable_interacted() -> void:
 
 func _on_alex_interactable_interacted() -> void:
 	AlexNotif.visible = false
+func _on_desk_interactable_interacted() -> void:
+	CompNotif.visible = false

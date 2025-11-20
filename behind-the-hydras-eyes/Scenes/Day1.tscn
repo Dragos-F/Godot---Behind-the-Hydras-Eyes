@@ -656,10 +656,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -895,10 +891,11 @@ offset_bottom = 8.0
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor", "TeaNotif", "ClipNotif", "CompNotif")]
+[node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "CompNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor", "TeaNotif", "ClipNotif")]
 script = ExtResource("11_l3qly")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
+CompNotif = NodePath("../Notifications/Computer")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
@@ -907,7 +904,6 @@ BossTextAnchor = NodePath("../Dave/TextAnchor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 TeaNotif = NodePath("../Notifications/Tea")
 ClipNotif = NodePath("../Notifications/Clipboard")
-CompNotif = NodePath("../Notifications/Computer")
 
 [node name="Notifications" type="Node2D" parent="."]
 

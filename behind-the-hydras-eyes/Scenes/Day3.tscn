@@ -853,10 +853,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1035,22 +1031,26 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics3" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif")]
+[node name="Specifics3" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "AlexNotif", "JenNotif", "CompNotif")]
 script = ExtResource("14_gx0c7")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
+CompNotif = NodePath("../Notifications/Computer")
 
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("15_cne7c")]
-visible = false
 position = Vector2(-552, -256)
-frame_progress = 0.801034
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Jen" parent="Notifications" instance=ExtResource("15_cne7c")]
-visible = false
 position = Vector2(-138, -470)
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Door" parent="Notifications" instance=ExtResource("15_cne7c")]
 visible = false
@@ -1068,7 +1068,6 @@ position = Vector2(467, 302)
 autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("15_cne7c")]
-visible = false
 z_index = 7
 position = Vector2(-157, 152)
 

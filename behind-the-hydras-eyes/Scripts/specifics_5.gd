@@ -13,6 +13,7 @@ extends Node
 @export var brain:DayBrain
 @export var specific_emails:Array[EmailBrain]
 var oncev1 = true
+@export var CompNotif:Node2D
 
 
 func _ready() -> void:
@@ -46,6 +47,9 @@ func _on_jen_interactable_interacted() -> void:
 	JenNotif.visible = false
 	JenNotif.stop()
 	
+func _on_desk_interactable_interacted() -> void:
+	CompNotif.visible = false
+	
 func _on_boss_door_interacted() -> void:
 	BossNotif.visible = false
 	bossInteracted = true
@@ -55,3 +59,4 @@ func _on_day_brain_end_of_day() -> void:
 	outsideDoor.readyToLeave = true
 	DoorNotif.visible = true
 	outsideDoor.Type = outsideDoor.InteractType.EntryDoor
+	

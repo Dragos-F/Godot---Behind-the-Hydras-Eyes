@@ -1400,10 +1400,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1473,13 +1469,14 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain")]
+[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain", "CompNotif")]
 script = ExtResource("19_jc8h6")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
 StickyNotif = NodePath("../Notifications/Clipboard")
 brain = NodePath("../DayBrain")
+CompNotif = NodePath("../Notifications/Computer")
 
 [node name="Timer" type="Timer" parent="Specifics7"]
 wait_time = 2.0
@@ -1512,7 +1509,6 @@ position = Vector2(-458, -178)
 autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_uy7q1")]
-visible = false
 z_index = 7
 position = Vector2(-157, 152)
 

@@ -3,6 +3,7 @@ extends Node
 @export var alexInteracted:bool = false
 @export var AlexNotif:AnimatedSprite2D
 @export var jenInteracted:bool = false
+@export var CompNotif:AnimatedSprite2D
 @export var JenNotif:AnimatedSprite2D
 @export var emails:Computer
 @export var outsideDoor:Interactable
@@ -41,6 +42,9 @@ func _on_boss_door_interacted() -> void:
 	BossNotif.visible = false
 	bossInteracted = true
 	BossNotif.stop()
+
+func _on_desk_interactable_interacted() -> void:
+	CompNotif.visible = false
 	
 func _on_day_brain_end_of_day() -> void:
 	outsideDoor.readyToLeave = true

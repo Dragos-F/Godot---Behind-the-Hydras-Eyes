@@ -1224,7 +1224,6 @@ texture = ExtResource("10_ssufr")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_1o464")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -1335,10 +1334,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1412,13 +1407,14 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics6" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "AlexNotif", "JenNotif")]
+[node name="Specifics6" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "AlexNotif", "JenNotif", "CompNotif")]
 script = ExtResource("14_gst1s")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
 DoorNotif = NodePath("../Notifications/Door")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
+CompNotif = NodePath("../Notifications/Computer")
 
 [node name="Notifications" type="Node2D" parent="."]
 

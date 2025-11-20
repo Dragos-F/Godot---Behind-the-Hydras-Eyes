@@ -653,9 +653,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -831,9 +828,10 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "CompNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
 script = ExtResource("9_qarlu")
 AlexNotif = NodePath("../Notifications/Alex")
+CompNotif = NodePath("../Notifications/Computer")
 JenNotif = NodePath("../Notifications/Jen")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -867,10 +865,13 @@ position = Vector2(499, -250)
 
 [node name="Alex" parent="Notifications" instance=ExtResource("11_p8761")]
 position = Vector2(-552, -256)
-frame_progress = 0.801034
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Jen" parent="Notifications" instance=ExtResource("11_p8761")]
 position = Vector2(-138, -470)
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Door" parent="Notifications" instance=ExtResource("11_p8761")]
 visible = false
@@ -881,6 +882,10 @@ visible = false
 position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
+
+[node name="Computer" parent="Notifications" instance=ExtResource("11_p8761")]
+z_index = 7
+position = Vector2(-157, 152)
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_k3jav")]
 visible = false
@@ -895,6 +900,7 @@ visible = false
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics2" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics2" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics2" method="_on_desk_interactable_interacted"]
 [connection signal="endOfDay" from="DayBrain" to="Specifics2" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]

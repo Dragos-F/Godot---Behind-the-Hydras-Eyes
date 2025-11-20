@@ -25,8 +25,8 @@ label Quarter1
 label Quarter2
 "Balcony Door": Tonight there's a drizzle, pitter-pattering against the door. The soft, relaxing sort of rain that England does so well.
 - Smoke
-	label Q2Smoke
 	"Balcony Door": You step out, not minding the spots of rain that briefy fleck at your flesh before settling into the fibres of your shirt. Like the tactility of smoking, it's a reminder of the nervous system that pulses inside of you, ready to FEEL.
+	label Q2Smoke
 	"Balcony Door": Your mind is a jumble of half-organised, half-anxious thoughts. Which strand will you pull?
 	- Think about work.
 		"Balcony Door": Ugh. Why? At least in the office you're paid to untangle the mess of the project, but here you're burning you candle for...what?
@@ -45,6 +45,8 @@ label Quarter2
 		"Balcony Door": You remember that conversation, held on your parents driveway last New Year's eve. It was late, like this; raining, like this. Your dad looked smaller than usual. Tired.
 		"Balcony Door": Stubbing out the cigarette, you tuck your hands under your armpits. You don't want to go inside yet. Why are you breathing so loud?
 		jump Q2Smoke
+	- Retreat to the apparent warmth inside
+		[end_timeline]
 - People watch
 	"Balcony Door": The rain makes for quieter viewing than normal, only a few people trotting briskly across the street, some with brollies, some with hoods pulled tight.
 	"Balcony Door": Small wet people, going about small wet lives. No, that's not fair, you're just in a mood because of your meeting with Mr Moore. It's his eyes you're looking through when others look small.
@@ -52,3 +54,4 @@ label Quarter2
 	"Balcony Door": A woman with a fur hat, sausage dog under her arm still moving its legs, looking like it's swimming. Her face is stern, annoyed by the rain, something on her mind. Maybe she's going to the vet, or to see a friend she no longer cares for.
 	"Balcony Door": A man bumps into her, walking the other way. He was distracted, looking over his shoulder, smiling, and almost drops his umbrella in surprise when the two collide.
 	"Balcony Door": You follow his gaze back to another man cycling away. The first man's friend? Or maybe something more, given the deepness of his smile? You stub out the cigarette.
+[end_timeline]

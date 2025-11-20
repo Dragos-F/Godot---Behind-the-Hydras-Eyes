@@ -1041,7 +1041,6 @@ texture = ExtResource("10_reana")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_gs4e5")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -1118,9 +1117,6 @@ Forward Green"
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
-
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
 
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
@@ -1206,7 +1202,7 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics8" type="Node" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+[node name="Specifics8" type="Node" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "AlexNotif", "JenNotif", "CompNotif")]
 script = ExtResource("19_dknox")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -1214,6 +1210,9 @@ DoorNotif = NodePath("../Notifications/Door")
 BossNotif = NodePath("../Notifications/BossDoor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
+AlexNotif = NodePath("../Notifications/Alex")
+JenNotif = NodePath("../Notifications/Jen")
+CompNotif = NodePath("../Notifications/Computer")
 
 [node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
 visible = false
@@ -1257,6 +1256,10 @@ position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
 
+[node name="Computer" parent="Notifications" instance=ExtResource("20_0lere")]
+z_index = 7
+position = Vector2(-157, 152)
+
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_sasod")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
@@ -1270,6 +1273,7 @@ visible = false
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics8" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics8" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics8" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics8" method="_on_desk_interactable_interacted"]
 [connection signal="body_entered" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Background/Janine/JenInteractable/Area2D" to="Background/Janine" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Background/Janine/Timer" to="Background/Janine" method="_on_timer_timeout"]

@@ -453,7 +453,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("34_11ghq")
 
 [node name="ScreenUI" parent="." instance=ExtResource("35_yt013")]
-visible = false
 emailsProgressionQuota = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]

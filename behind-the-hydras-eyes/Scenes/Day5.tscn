@@ -901,9 +901,6 @@ boss = null
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1165,7 +1162,7 @@ position = Vector2(-590, 314)
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "specific_emails")]
+[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "specific_emails", "CompNotif")]
 script = ExtResource("14_h2npb")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
@@ -1176,6 +1173,7 @@ BossNotif = NodePath("../Notifications/BossDoor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
 specific_emails = [NodePath("../ScreenUI/EmailList/SummariesContainer/TooExpensive"), NodePath("../ScreenUI/EmailList/SummariesContainer/Flooding"), NodePath("../ScreenUI/EmailList/SummariesContainer/Competition")]
+CompNotif = NodePath("../Notifications/Computer")
 
 [node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
 visible = false
@@ -1201,13 +1199,14 @@ position = Vector2(499, -250)
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("20_ld0to")]
-visible = false
 position = Vector2(-552, -256)
-frame_progress = 0.801034
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Jen" parent="Notifications" instance=ExtResource("20_ld0to")]
-visible = false
 position = Vector2(-138, -470)
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Door" parent="Notifications" instance=ExtResource("20_ld0to")]
 visible = false
@@ -1218,6 +1217,10 @@ visible = false
 position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
+
+[node name="Computer" parent="Notifications" instance=ExtResource("20_ld0to")]
+z_index = 7
+position = Vector2(-157, 152)
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]
 visible = false
@@ -1232,6 +1235,7 @@ visible = false
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics5" method="_on_boss_door_interacted"]
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics5" method="_on_jen_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics5" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics5" method="_on_desk_interactable_interacted"]
 [connection signal="endOfDay" from="DayBrain" to="Specifics5" method="_on_day_brain_end_of_day"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]

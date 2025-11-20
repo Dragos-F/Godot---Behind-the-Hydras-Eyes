@@ -6,7 +6,7 @@ extends Node2D
 @export var StickyNotif: Node2D
 @export var brain: DayBrain
 @export var onceV1 = true
-
+@export var CompNotif:Node2D
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day07"
@@ -25,7 +25,8 @@ func _process(delta: float) -> void:
 func _on_interactable_element_interacted() -> void:
 	StickyNotif.visible = false
 	
-
+func _on_desk_interactable_interacted() -> void:
+	CompNotif.visible = false
 
 func _on_timer_timeout() -> void:
 	brain.run_dialogue("EmptyOffice",outsideDoor)

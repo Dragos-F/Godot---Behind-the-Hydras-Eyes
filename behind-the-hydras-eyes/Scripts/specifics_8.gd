@@ -8,6 +8,9 @@ extends Node
 @export var BossDoor:Interactable
 @export var brain:DayBrain
 var oncev1 = true
+@export var AlexNotif:AnimatedSprite2D
+@export var JenNotif:AnimatedSprite2D
+@export var CompNotif:Node2D
 
 
 func _ready() -> void:
@@ -27,6 +30,18 @@ func _on_boss_door_interacted() -> void:
 	BossNotif.visible = false
 	bossInteracted = true
 	BossNotif.stop()
+	
+func _on_alex_interactable_interacted() -> void:
+	AlexNotif.visible = false
+	AlexNotif.stop()
+
+
+func _on_jen_interactable_interacted() -> void:
+	JenNotif.visible = false
+	JenNotif.stop()
+	
+func _on_desk_interactable_interacted() -> void:
+	CompNotif.visible = false
 	
 func _on_day_brain_end_of_day() -> void:
 	outsideDoor.readyToLeave = true

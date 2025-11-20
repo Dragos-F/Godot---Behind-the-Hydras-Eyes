@@ -454,7 +454,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." instance=ExtResource("34_unbiq")]
-visible = false
 emailsProgressionQuota = 1
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
@@ -656,10 +655,11 @@ visible = false
 unique_name_in_owner = true
 script = ExtResource("37_scg7i")
 
-[node name="BedroomSpecifics" type="Node" parent="." node_paths=PackedStringArray("balcony_notif", "computer_notif")]
+[node name="BedroomSpecifics" type="Node" parent="." node_paths=PackedStringArray("balcony_notif", "computer_notif", "computer_container")]
 script = ExtResource("38_ayyhf")
 balcony_notif = NodePath("../Notifications/Notif2")
 computer_notif = NodePath("../Notifications/Notif")
+computer_container = NodePath("../ScreenUI/BrowserThing/TabContainer")
 
 [node name="Notifications" type="Node2D" parent="."]
 
