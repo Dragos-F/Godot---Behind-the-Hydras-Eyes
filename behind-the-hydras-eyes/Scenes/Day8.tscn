@@ -1238,13 +1238,14 @@ position = Vector2(499, -250)
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("20_0lere")]
-visible = false
 position = Vector2(-552, -256)
-frame_progress = 0.801034
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Jen" parent="Notifications" instance=ExtResource("20_0lere")]
-visible = false
 position = Vector2(-138, -470)
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Door" parent="Notifications" instance=ExtResource("20_0lere")]
 visible = false

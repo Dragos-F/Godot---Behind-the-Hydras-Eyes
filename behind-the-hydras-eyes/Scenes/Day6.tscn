@@ -1419,13 +1419,14 @@ CompNotif = NodePath("../Notifications/Computer")
 [node name="Notifications" type="Node2D" parent="."]
 
 [node name="Alex" parent="Notifications" instance=ExtResource("14_dr76r")]
-visible = false
 position = Vector2(-552, -256)
-frame_progress = 0.801034
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Jen" parent="Notifications" instance=ExtResource("14_dr76r")]
-visible = false
 position = Vector2(-138, -470)
+animation = &"Q"
+autoplay = "Q"
 
 [node name="Door" parent="Notifications" instance=ExtResource("14_dr76r")]
 visible = false
@@ -1443,7 +1444,6 @@ position = Vector2(467, 302)
 autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_dr76r")]
-visible = false
 z_index = 7
 position = Vector2(-157, 152)
 
