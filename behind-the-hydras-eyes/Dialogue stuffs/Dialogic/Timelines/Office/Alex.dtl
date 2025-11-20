@@ -91,18 +91,18 @@ Alex: We're not far off the land settlement being complete. Anything you need be
 [end_timeline]
 	
 label Day05Nayeli
-Dave: I've got this email from a "Nayeli?" Do yoou know anything about her?
+Dave: I've had an email from "Nayeli", who says she's with some ominous sounding group. Do you know anything about her?
 Alex: *Alex makes a pained groaning sound*
-Alex: Ugh, not her again
+Alex: Ugh, not her again.
 Alex: She got involved with a different project in the area. It was originally going to be a quarry, mostly for gravel production to one of our investor's developments that needed more supply.
 Alex: She was quite the pain. Did I mention the guy we had before you? That quit after dealing with a bunch of complaints?
 Alex: Yeah, she would drive Nigel crazy. I saw one of the emails she sent. Super dramatic, just absolute bollocks. 
 - She seemed quite passionate about it all.
-	Alex: Well, if she was serious about it, she would attend the local council meetings we have to organise anyway
-	Alex: No point in her typing up some flowery threats she can't enact anyway. There's proper channels for these sorts of complaints
-- Yeah, I guess she seems a bit eccentric
-	Alex: She's definitely weird. She represents some group of deranged nature lovers, that pray to forest spirits or whatever
-	Alex: I just wouldn't take anything from her seriously
+	Alex: Well, if she was serious about it, she would attend the local council meetings we have to organise anyway.
+	Alex: No point in her typing up some flowery threats she can't enact anyway. There's proper channels for these sorts of complaints.
+- Yeah, I guess she seems a bit eccentric.
+	Alex: She's definitely weird. She represents some group of deranged nature lovers, that pray to forest spirits or whatever.
+	Alex: I just wouldn't take anything from her seriously.
 [end_timeline]
 
 
@@ -161,7 +161,7 @@ if {AlexReturn} == true:
 		jump Day03.1
 Alex: Mornin'! Did you see the update from Olu? Jen's been talking about it all morning.
 - Yeah, great to hear!
-	Alex: Sure is. Good to know we're spending money on the things that matter
+	Alex: Sure is. Good to know we're spending money on the things that matter.
 - I haven't gotten to my emails yet.
 	Alex: Ah, well, I won't spoil anything then. Good news on the horizon though!
 Alex: Anyway, I think Q2 is off to a good start!

@@ -708,7 +708,6 @@ texture = ExtResource("10_dgien")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_v0hbc")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 4
 
@@ -785,12 +784,12 @@ Translated by Bingle.
 Sent from emails for Wiwawi. "
 ReplyBody1 = "Good morning Maria, 
 
-I hope you're well, and thank you for taking the time to get in touch. I'm really sorry to hear about your family's difficulties, and that our officer did not handle the public forum in the manner you wished. I will pass your request for compensation onto our external enquiries team, though redress is considered on a case-by-case basis and I can't guarantee any outcome.
+I hope you're well, and thank you for taking the time to get in touch. I'm really sorry to hear about your family's difficulties, and that our officer did not handle the public forum in the manner you wished. I will pass your request for compensation on to our external enquiries team, though redress is considered on a case-by-case basis and I can't guarantee any outcome.
 
 Wishing you luck,
 Dave Spritely, 
 UK Project Lead
-Forward Green
+ForwardGreen
 								"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]

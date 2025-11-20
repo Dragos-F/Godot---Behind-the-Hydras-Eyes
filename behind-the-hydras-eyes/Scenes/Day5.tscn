@@ -702,7 +702,6 @@ texture = ExtResource("10_53qxh")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -718,7 +717,7 @@ choiceDialog1 = "Best show you care a bit...."
 choiceDialog2 = "Eh, i'm sure she'll be fine."
 MainBody = "Hello Mr Spritely
 
-I don't know what your relationsihp with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
+I don't know what your relationship with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
 
 Maria Cruz
 								"
@@ -729,7 +728,7 @@ Thank you for your email. I don't recognise this Mr Gallardo, but from what you'
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 ReplyBody2 = "Hi Maria,
 
 Thank you for your email. Mr Gallardo does not ring a bell. I wouldn't worry too much about him, as I'm sure things will blow over soon. In regards to your father, if he was violent in any way, he may have been detained by the police. I would imagine that the the first point of contact would be to ring your local station and enquire.
@@ -763,7 +762,7 @@ I await your reply,
 Ana Vásquez"
 ReplyBody1 = "Good afternoon Ana, 
 
-I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
+I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability—Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
 
 Kind Regards,
 Dave Spritely, 
@@ -849,17 +848,17 @@ choiceDialog1 = null
 choiceDialog2 = null
 MainBody = "Good morning Dave,
 						
-Richard from legal here. We expected a few possible setbacks with \"Sandbar Paradiso\" (stupid name), and indeed they have arrived. That's what I'm paid for though. I'm liaising with local authorities to prosecute some people that broke down the fence, and there's some structural issues requiring the foundations to be deeper, but we won't let either issue stop .
+Richard from legal here. We expected a few possible setbacks with \"Sandbar Paradiso\" (stupid name), and indeed they have arrived. That's what I'm paid for though. I'm liaising with local authorities to prosecute some people that broke down the fence, and there's some structural issues requiring the foundations to be deeper, but we won't let either issue stop us.
 
 Over and out, Richard.								"
 ReplyBody1 = "Hi Richard,
 
-\"I appreciate the news. I've been trying to keep an eye out on the headines and haven't heard anything yet on this, so glad it's all being handled quietly. Is there anything else I should know about these people? Are they organised in some way, or do you think they're acting alone?
+I appreciate the news. I've been trying to keep an eye out on the headines and haven't heard anything yet on this, so glad it's all being handled quietly. Is there anything else I should know about these people? Are they organised in some way, or do you think they're acting alone?
 
-Re:Structural issues, I don't believe we forecasted for that. According to the development schedule, our structural redressal is pencilled in for after all sites are complete, but that can't be right. If you hear of any more issues related to this, let me know and I can try getting in touch with the construction company/architect for an update. \"
+Re:Structural issues, I don't believe we forecasted for that. According to the development schedule, our structural redressal is pencilled in for after all sites are complete, but that can't be right. If you hear of any more issues related to this, let me know and I can try getting in touch with the construction company for an update.
 
 Best Regards,							
-Dave							"
+Dave				"
 ReplyBody2 = null
 alltexts = null
 boss = null
@@ -879,10 +878,10 @@ replyChoice = null
 choiceDialog1 = null
 choiceDialog2 = null
 MainBody = "Good morning Dave,
-					
-Richard from legal here. Just wanted to update you, since - as mentioned the other day - the site chosen, \"Sunrise farm\" (ridiculous branding if you ask me), involves manouvering around competition. Our carrot was big enough for them to terminate the previous contract and rush us in, but our newfound rival isn't going lying down. Don't worry, I'll run them in circles or crush them with counter-litigation, but things will move slow for a bit.
 
-Over and out, Richard.								"
+Richard from legal here. Just wanted to update you, since—as mentioned the other day—the site chosen, \"Sunrise farm\" (ridiculous branding if you ask me), involves manoeuvring around competition. Our carrot was big enough for them to terminate the previous contract and rush us in, but our newfound rival isn't going lying down. Don't worry, I'll run them in circles or crush them with counter-litigation, but things will move slow for a bit.
+
+Over and out, Richard."
 ReplyBody1 = "Hi Richard,
 			
 I agree, Sunrise farm is certainly a particular type of branding. 
@@ -1158,8 +1157,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 8.0
 offset_bottom = 8.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="Dave" parent="." instance=ExtResource("13_e8b16")]
 unique_name_in_owner = true
