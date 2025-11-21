@@ -525,9 +525,9 @@ The fleas of that dreaded vampire bat, \"the left\", have indeed been shaken off
 							"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ MISSING
-◦ MISSING
-◦ MISSING"
+text = "◦ Youth still bad
+◦ But maybe rightwing?
+◦ Have cake, eat it"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24

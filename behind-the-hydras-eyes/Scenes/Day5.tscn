@@ -1058,7 +1058,7 @@ offset_left = -8.973217
 offset_top = -69.91066
 offset_right = 466.6499
 offset_bottom = 203.08916
-text = "War overseas - march at ease"
+text = "War? PISS says: about time! "
 autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -1068,19 +1068,27 @@ offset_right = 455.34
 offset_bottom = 531.552
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "This week marks the 81st Military Parade through our glorious city. You'll hear snowflakes complaining that rolling tanks and every model of bullet-proof vehicle in existence through our streets is not a fruitful use of our nation's dwindling reserves. To them, we need only show the glorious trails left in the dull grey sky that the latest F-53s, painting the beautiful St George Cross. It brought myself, and the editorial team watching the display live, to tears for our nation's brave defenders, as well as the courageous men, (and mostly men, let's face it) that gave their lives in our country's past.	
+text = "This week, a military parade descends on the city, joyously celebrating the hard work of our many service-men and -women who keep us all safe. I'm here with a campaigner for Protectors of Integrity, Servicemen and Society (PISS), who are currently lobbying for greater military spending.	
 
-One needed only to watch the beautiful march, with the pristine uniforms and choreography, to feel a sudden urge to rise and fight for our country. This is quite a fortuitous instinct, as the Ministry has also, on this occasion, increased it's incentives to enroll! What a glorious opportunity, and to have it announced at this parade was the very definition of a pledge to patriotism.
+Sir Wilbur Sàuságe, what do you think of this parade?	
+You'll hear snowflakes complaining that rolling tanks and every model of bullet-proof vehicle in existence through our streets is not a fruitful use of our time or resources. To they's and them's, I say: look at the glorious red trails painting a flag across a grey sky, fine penmanship by the latest F-53s. A symbol of hope and strength. I'm not too proud to say I shed a tear, thinking about the courageous men—and it's always mostly men, let's face it—that've given their lives for our great nation.			
 
-If I didn't have to be here, in my 53rd floor office, overlooking our unique skyline, giving you all the most essential of coverage of our nation, I'd march this very moment down to my local branch and ask for the paperwork. Whatever your dream may be, it can be achieved overseas. Alas, I still have to do my job so that our peers may defend us. I therefore would like to conclude this article by acknowledging the recent war declarations from 12 commonwealth micronations, presented to Britain late last night. I pray for everyone to remain safe in these troubling times.								
+And what message do you hope it gives people?			
+To see the pristine uniforms and disciplined choreography is to feel a sudden urge to stand and fight for our country. With this, I am glad the Defence Secretary agrees, having today announced increased incentives to enroll! While this is vindicating, I still call for further spending and war preparedness, as we never know when we might have to pre-emptively strike an enemy to maintain peace.						
 								
+You've said before that only cowards don't enroll, correct?				
+Yes. Cowards and hippies.				
 								
-								"
+Yet you've never enrolled?								
+I'd march myself into a barracks this instant, if not for my existing commitment to the preservation of journalistic integrity and free speech. Alas, my humble role is here, on the soap-box, a modern day Martin Luther, and I'm told that I actually have huge support from the troops, so—								
+								
+Okay, okay. Well, thank you for speaking to us. We'll include Wilbur's latest petition below. Can you tell our viewers what it is?					
+Mandatory service for dogs."
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ MISSING
-◦ MISSING
-◦ MISSING"
+text = "◦ Parade inspires all
+◦ 'Soldiers heroes'
+◦ 'PISS not yellow' "
 
 [node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
 offset_top = 18.66098

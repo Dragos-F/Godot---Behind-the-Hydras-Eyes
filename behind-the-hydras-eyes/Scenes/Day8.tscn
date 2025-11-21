@@ -1165,9 +1165,9 @@ We look forward to updating you on the progress of this exciting project. Surely
 "
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Ticket price soaring
-◦ SuperTrain Interview
-◦ Unions to Blame"
+text = "◦ We love green!
+◦ We're squeaky-clean!
+◦ Rumours are SO boring"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24

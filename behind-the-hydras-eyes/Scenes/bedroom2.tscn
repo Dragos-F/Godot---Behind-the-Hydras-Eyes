@@ -527,7 +527,7 @@ text = "You may have caught Deputy Prime Minister Melanie Rumpelsgit on hit show
 
 If so, we're sure you've got one main question: which MP will hit your TV screen next? Well, this is the only TV guide you need.
 
-First up we have Sir Humphrey Boggatoady, third earl of Wimplesdown and disgraced former Foreign Secretary, who is on \"Dancing with Devils\", where glamorous celebrities reform violent youth convicts through the transformative powers of dance, next Tuesday. Expect fireworks, as his partner is a young man who pled guilty to appearing at a climate protest.
+First up we have Sir Humphrey Boggatoady, third earl of Wimplesdown and disgraced former Foreign Secretary, who is on 'Dancing with Devils', where glamorous celebrities reform violent youth convicts through the transformative powers of dance, next Tuesday. Expect fireworks, as his partner is a young man who pled guilty to appearing at a climate protest.
 
 Then, we have Harriet Harrier-Harrier Applesby, the sixth leader of the Conservatives this year and disgraced former Foreign Secretary, who you can see on Thursday as she goes into Bog Brother, the Fenlands' Premier Social Experiment. She'll be appearing alongside a diverse cast of six other right-wing politicians and Humphrey Boggatoady's son Wilf.
 
@@ -536,9 +536,9 @@ Finally, disgraced former Foreign Secretary Shibibly Toddings, will be on \"The 
 Tune in next week for your next pop culture update!								"
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ MISSING
-◦ MISSING
-◦ MISSING"
+text = "◦ 'MP summer' is here
+◦ Finally, unbiased TV
+◦ Who gets your vote?"
 
 [node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
 offset_top = 18.66098

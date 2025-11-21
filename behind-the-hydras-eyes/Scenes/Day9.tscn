@@ -759,9 +759,9 @@ So, our investigation meets a dead end. We must all wait for answers together, r
 
 [node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
 offset_right = 352.0
-text = "◦ Green agenda?
-◦ Expert Panel Says No
-◦ Reject Green Scam"
+text = "◦ People going goo-goo
+◦ What is happening?
+◦ What is GOO?!"
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
