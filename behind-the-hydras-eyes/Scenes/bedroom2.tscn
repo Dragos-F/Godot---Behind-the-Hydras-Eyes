@@ -467,31 +467,14 @@ Anyway, I know you've told your mum you might be coming to visit over the weeken
 
 Best, 
 Dad.
-Robert Spritely.\"				
-				
-				
-				
-				
-				
-				
-				
-				
-				"
+Robert Spritely."
 ReplyBody1 = "Hi Dad,
 
 Yup, that's right. I'll be coming up Friday eve, and staying till around midday on Sunday. Thanks for letting me know about the trains, i'll let you know what i'm booking
 I'm happy to hear Mrs Colbridge is still doing well enough to be pottering around her garden.
 I'll see you Friday.
 
-Dave. 
-				
-				
-				
-				
-				
-				
-				
-				"
+Dave."
 boss = false
 
 [node name="HomeBudget" parent="ScreenUI/Budget" index="0"]

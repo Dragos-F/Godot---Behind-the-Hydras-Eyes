@@ -1,5 +1,6 @@
 jump {CurrentQuarter}
 label Quarter1
+[signal arg="smoking"]
 "Balcony Door": The night is still and cool, streetlights buzzing and the moon full and heavy behind a whispy cloud.
 - Smoke
 	"Balcony Door": Stepping outside, you're hit by the slightly chilly air, which carries with it quiet sounds of city life.
@@ -23,6 +24,7 @@ label Quarter1
 - Leave
 [end_timeline]
 label Quarter2
+[signal arg="smoking"]
 "Balcony Door": Tonight there's a drizzle, pitter-pattering against the door. The soft, relaxing sort of rain that England does so well.
 - Smoke
 	"Balcony Door": You step out, not minding the spots of rain that briefy fleck at your flesh before settling into the fibres of your shirt. Like the tactility of smoking, it's a reminder of the nervous system that pulses inside of you, ready to FEEL.

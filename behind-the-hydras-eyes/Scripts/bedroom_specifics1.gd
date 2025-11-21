@@ -15,3 +15,4 @@ func _on_balcony_interacted() -> void:
 
 func _on_computer_interacted() -> void:
 	computer_notif.visible = false
+	

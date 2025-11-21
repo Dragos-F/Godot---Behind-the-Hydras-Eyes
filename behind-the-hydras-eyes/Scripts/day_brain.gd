@@ -25,6 +25,8 @@ signal introspection()
 signal empty()
 @export var plants:Array[Node2D]
 @export var current_scene:String
+@export var SmokingScene:Node2D
+@export var smokingAnchor:Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -265,3 +267,27 @@ func _on_dialogic_signal(argument:String):
 		tea_minigame()
 	if argument == "take_plant":
 		take_plant()
+	if argument == "smoking":
+		enter_smoking()
+		
+func enter_smoking():
+	dave.move_time = false
+	Fader.FadeUp("Balcony")
+	await Fader.fade_finished
+	print ("past await")
+	SmokingScene.visible = true
+	Fader.FadeDown("Balcony")
+	await Fader.fade_finished
+	run_dialogue("Balcony Door",smokingAnchor)
+	await Dialogic.timeline_ended
+	print ("AWAIT COMPLETE, LEAVING Balcony")
+	leave_balcony()
+	
+func leave_balcony():
+	dave.move_time = false
+	Fader.FadeUp("Dingy Apartment")
+	await Fader.fade_finished
+	print ("past await")
+	SmokingScene.visible = false
+	Fader.FadeDown("Dingy Apartment")
+	dave.move_time = true
