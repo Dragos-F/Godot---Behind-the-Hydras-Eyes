@@ -1,0 +1,84 @@
+jump {CurrentQuarter}
+label Quarter1
+Cigarette: The night is still and cool, streetlights buzzing and the moon full and heavy behind a whispy cloud.
+- Smoke
+	Cigarette: You're hit by the slightly chilly air, which carries with it quiet sounds of city life.
+	Cigarette: I was where you expected. The small table on the balcony, the weathered upturned plant pot.
+	Cigarette: Underneath was an ashtray, a lighter, and a pack of cigs. That's where we first met, and now we're here together.
+	Cigarette: You've been thinking of quitting, and only have one or two a night now, but it seems like smoking is cool again.
+	Cigarette: You imagine how you must look in third person—your crumpled shirt, the cigarette between pale fingers, your gaze maintaining a practiced wistfulness—and agree that it's cool.
+	Cigarette: Wrinkles and lung cancer are a future Dave problem, and god do you hate thinking of that prick.
+	Cigarette: Thinking of the future brings to mind snippets of news, headlines which have pierced your studious ignorance, and questions about England's slide into gleeful cruelty and poverty.
+	Cigarette: Spiking suicides for trans youth. A refugee boat sank by vigilantes. The government covering up the deaths of disabled people. Keep your head down, see no evil, this is the way it has to be, no alternative allowed.
+	Cigarette: A snake eating itself. Every year there's less and less body left, but the head is hungrier. Meaner. Wallowing in it's unchallenged superiority.
+	Cigarette: ...
+	Cigarette: You should change your brand of cigs, these ones always bring weird thoughts like this.
+	Cigarette: You turn and stub it out. Maybe you should go watch porn.
+- People watch
+	Cigarette: Leaning on the doorframe, you peer into the night.
+	Cigarette: Two men sit on a bench, laughing. A teenager in a balaclava rides around on a scooter. A woman's walking her dog while chatting on the phone.
+	Cigarette: "And then she said 'I can't leave like this! My sisters' wedding is tomorrow and you've made me look like a burnt satsuma!'"
+	Cigarette: Small worlds that you have no insight into beyond the surface level, no access beyond snatched vignettes.
+	Cigarette: You smile, and turn back inside.
+- Leave
+
+[end_timeline]
+
+label Quarter2
+Cigarette: Tonight there's a drizzle, pitter-pattering against the door. The soft, relaxing sort of rain that England does so well.
+- Smoke
+	Cigarette: You stepped out, not minding the spots of rain that briefy fleck at your flesh before settling into the fibres of your shirt. Like the tactility of smoking, it's a reminder of the nervous system that pulses inside of you, ready to FEEL.
+	label Q2Smoke
+	Cigarette: Your mind is a jumble of half-organised, half-anxious thoughts. Which strand will you pull?
+	- Think about work.
+		Cigarette: Ugh. Why? At least in the office you're paid to untangle the mess of the project, but here you're burning you candle for...what?
+		Cigarette: To belabour your guilt around that girl—what was her name? Maria?—or to imagine dripping oil, dead birds. It's self-flagellating. You should let it slide off you, like how it slides off of Alex.
+		Cigarette: ...
+		Cigarette: You watch the burning light of the cigarette between your fingers. Jen. Alex. They're the people you actually know. It's easier to think of your circle of influence like this. Simple. No global reverberations, tip-tapping keys echoing across continents.
+		Cigarette: Your reality is here, and from this vantage point you know the complaints of locals are far-away whispers of people between trees, unable to see forest. Mr Moore can see the forest. He knows green energy is progress, whatever the cost.
+		Cigarette: ...
+		Cigarette: Whatever. You don't have to believe it all, just to trust the process. It's not like you can stop it. The word "manager" is in your title, but you're as small and replacable a cog as Alex and Jen.
+		jump Q2Smoke
+	- Think about mum
+		Cigarette: It is, perhaps, the sort of reminder you need right now. You don't want to think about work, so instead you think about family, but that too is dangerous.
+		Cigarette: The slow deterioration of your mum is too painful to watch. Slow enough that you can carry on your normal life, but soon you'll go home and she'll be unrecognisable.
+		Cigarette: Already she can't walk. She refuses to claim benefits, to access mobility aids and live a normal life, because she refuses the humiliation of the proving rituals.
+		Cigarette: You tried to persuade her, and then, when that failed, to talk to your dad, but he shrugged. He doesn't want his wife sobbing in a capability assessment while somebody sneers at her. Lies about her.
+		Cigarette: You remember that conversation, held on your parents driveway last New Year's eve. It was late, like this; raining, like this. Your dad looked smaller than usual. Tired.
+		Cigarette: Stubbing out the cigarette, you tuck your hands under your armpits. You don't want to go inside yet. Why are you breathing so loud?
+		jump Q2Smoke
+	- Retreat to the apparent warmth inside
+		[end_timeline]
+- People watch
+	Cigarette: The rain makes for quieter viewing than normal, only a few people trotting briskly across the street, some with brollies, some with hoods pulled tight.
+	Cigarette: Small wet people, going about small wet lives. No, that's not fair, you're just in a mood because of your meeting with Mr Moore. It's his eyes you're looking through when others look small.
+	Cigarette: You stand up straighter, taking a long drag and then looking again at some of the passers by.
+	Cigarette: A woman with a fur hat, sausage dog under her arm still moving its legs, looking like it's swimming. Her face is stern, annoyed by the rain, something on her mind. Maybe she's going to the vet, or to see a friend she no longer cares for.
+	Cigarette: A man bumps into her, walking the other way. He was distracted, looking over his shoulder, smiling, and almost drops his umbrella in surprise when the two collide.
+	Cigarette: You follow his gaze back to another man cycling away. The first man's friend? Or maybe something more, given the deepness of his smile? You stub out the cigarette.
+[end_timeline]
+
+label Quarter3
+Cigarette: You've come to seek refuge here, a few meters above everyone else, breathing in the fresh, yet probably polluted air.
+Cigarette: The lights from the nearby crossing glare slightly in your vision.
+- Smoke
+	Cigarette: As you take the first drag of the day inside your occasional-smoker lungs, you gaze over the city.
+	Cigarette: How long have you been here by now? 10 or 11 months?
+	Cigarette: Almost a year in the Big Smoke. You live here now.
+	Cigarette: But then again, calling it home feels uncomfortable. The idea of this becoming normality, settling into the high strung atmosphere tenses some unusual muscles in your face.
+	Cigarette: Distant visions of mice on a tube platform, the smell of piss around every street corner, and a bus that never arrives flood your senses.
+	Cigarette: While your body is here, living out of this joke of a rental property, your mind dreams of...more.
+	Cigarette: A usable bathroom. More than a local Express shop, and an overpriced pub. Heaven forbid, people you would willingly hang out with after work.
+	Cigarette: You try to remember the last time you had a drink with anyone that wasn't Moz. Certainly not while you've lived here.
+	Cigarette: What's the alternative? Well, a tiny village just as starved of amenities, but with the priviledge of watching your parents decay to a lifestyle just barely above the poverty line. 
+	Cigarette: Move to a third, even newer place? Let's be real, you barely socialise with anyone here, what makes you think you'll make an effort in even more unfamiliar ground?
+	Cigarette: Perhaps you'll eventually embrace it. Friends you only talk to when you wish eachother happy birthday did tell you that the city grows on people.
+	Cigarette: You now realise that could have been a warning.
+	
+- People watch
+	Cigarette: You're out later than usual, and the gang of teenagers huddled around the parck bench to smoke weed is gone by now.
+	Cigarette: You see someone pop out of the shop below you. Someone in a uniform is bringing out some flattened cardboard. From the balcony above you, two people are giggling to eachother
+	Cigarette: Just past the crossing, a fox is tearing into a bin bag dangling from the bottom of a bin.
+	Cigarette: A crow, sitting on the rim of the bin is curiously watching the fox. 
+	Cigarette: You haven't seen this much wildlife since your trip to Chester Zoo in 10th Grade
+[end_timeline]

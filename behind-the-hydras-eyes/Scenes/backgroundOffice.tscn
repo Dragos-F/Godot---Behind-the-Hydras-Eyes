@@ -559,7 +559,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7517s"]
-radius = 81.9909
+radius = 50.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k1f4p"]
 atlas = ExtResource("29_5tuft")
@@ -1355,11 +1355,8 @@ selected = ExtResource("27_vyjpg")
 YarnNodeLink = "Alex"
 animations = NodePath("..")
 
-[node name="Area2D" parent="Furniture/Alex/AlexInteractable" index="0"]
-visible = false
-
 [node name="CollisionShape2D" parent="Furniture/Alex/AlexInteractable/Area2D" index="0"]
-position = Vector2(-14.5, 31)
+position = Vector2(7.5, 38)
 shape = SubResource("CircleShape2D_7517s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Furniture/Alex"]

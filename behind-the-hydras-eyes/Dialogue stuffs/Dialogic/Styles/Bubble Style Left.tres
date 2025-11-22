@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=9 format=3 uid="uid://sn4oitoksgfc"]
+
+[ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn" id="1_4olbo"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_6kuwp"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_xny1v"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_p8mlv"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_bdvni"]
+
+[sub_resource type="Resource" id="Resource_p8jlh"]
+script = ExtResource("2_6kuwp")
+scene = ExtResource("1_4olbo")
+
+[sub_resource type="Resource" id="Resource_eb7v8"]
+script = ExtResource("2_6kuwp")
+scene = ExtResource("3_xny1v")
+overrides = {
+"disabled": "true"
+}
+
+[sub_resource type="Resource" id="Resource_5dfcp"]
+script = ExtResource("2_6kuwp")
+scene = ExtResource("4_p8mlv")
+overrides = {
+"behaviour_direction": "Vector2(-100, -100)",
+"choices_layout_force_lines": "true",
+"choices_text_size": "24.0",
+"name_label_font_size": "18.0",
+"text_size": "22.0"
+}
+
+[resource]
+script = ExtResource("5_bdvni")
+name = "Bubble Style Left"
+layer_list = Array[String](["10", "11"])
+layer_info = {
+"": SubResource("Resource_p8jlh"),
+"10": SubResource("Resource_eb7v8"),
+"11": SubResource("Resource_5dfcp")
+}
+metadata/_latest_layer = "11"

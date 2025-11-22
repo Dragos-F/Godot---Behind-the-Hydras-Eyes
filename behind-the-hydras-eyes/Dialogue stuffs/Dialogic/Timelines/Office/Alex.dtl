@@ -1,5 +1,8 @@
 jump {CurrentDay}
 label Day08
+if {AlexReturn} == true:
+	jump Day08Return
+else:
 Alex: Hey! Hope you managed okay alone while we were at the conference. I see we've got a new offering to the corporate alter.
 Dave: Huh?
 Alex: Oh, I mean the new intern. Hopefully she can keep abreast of the complaints, but she'll need be a strong swimmer.
@@ -18,6 +21,11 @@ Alex: Jen seemed to have a fun time, came away weighed down by two bags of freeb
 	Alex: but there's been a lot more scrutiny around that sort of thing in recent years, and people film everything. Don't dwell on it.
 - Glad you enjoyed, I'll catch up with you later! 
 	Alex: Thanks, I'm glad to be back in the office! If you need anything just let me know. 
+set {AlexReturn} = true
+[end_timeline]
+label Day08Return
+Alex: I'm hoping conference flu won't catch up with me.
+Alex: I've managed to dodge it the last couple of years. 
 [end_timeline]
 
 label Day06
@@ -25,6 +33,10 @@ if {AlexNayeli} == false:
 	Alex: Have you introduced yourself to Phil's secretary? You're in for a treat...
 	[end_timeline]
 else:
+	if {_2AlexReturn} == true
+		Alex: What a day, eh?
+		[end_timeline]
+	else:
 	Dave: [i]As you walk up to Alex you see him typing out an email to an "Atlas Technologies". You watch for a moment before speaking.[/i]	
 - Is there a history of police brutality in Oaxaca that I wasn't told of?	
 	Alex: Hm? Oh. Yeah.
@@ -42,12 +54,16 @@ else:
 	Alex: I don't blame you for being sensitive, but you shouldn't let a few weaponised tears stop a renwable project that could power thousands of homes. 
 - So you've not heard of a Nayali or anything?	
 	Alex: No, is that who's claiming victimhood? Even if she was attacked by the police or whatever, what right does that give her to meddle in green solutions?
+set {_2AlexReturn} = true
 [end_timeline]
 
 label Day05
 if {AlexReturn} == true:
 	if {AlexNayeli} == true:
-		jump Day05Nayeli
+		if {_2AlexReturn} == true:
+			jump Day05.1
+		else:
+			jump Day05Nayeli
 	else:
 		jump Day05.1
 Alex: What a nightmare getting in today, right?
@@ -57,26 +73,26 @@ Alex: It just felt like I couldn't get anywhere—delays, announcements, traffic
 Alex: It's crazy when your daily commute just overrun by construction. Makes it unrecognisable sometimes.
 - That sounds rough
 - I used to have a long commute...
-Alex: Back to work though, I've got a bunch of compliance letters to file away to the portfolio projects.
+Alex: Anyway... back to work though, I've got a bunch of compliance letters to file away to the portfolio projects.
 Alex: Richard sent them through and he said I gotta help him out since a few of the team have now left.
 Alex: Hope that's alright wih you?
 - Oh, yeah, whatever the company needs	
 	Alex: Yeah, thanks. At least it gets me away from filing architectural plans.
 - I'm sure he can find his own time to do that, I need you on Lagoon Breeze.	
 	Alex: Oh, yep, sure. I'll ....send the portfolio back to him and tell him you're keeping me busy.
-- What's been happening in legal?	
+- What's been happening in legal?s
 	Alex: Ah. Me and a couple of the boys from legal used to go play pool every other Saturday at the Wellington.
 	Alex: One of them had their probation extended twice, and then let go last week for "Not embodying company values"
 	Alex: The other is suspended and going through a disciplinary for coming into work drunk 6 times in 4 weeks.
 	Dave: Right.... that sounds like Richard's having a rough time then
 	Alex: Ah, I think he was looking to get rid of them to be honest. Never liked Torvil and Dean
-	Dave: : ...Torvil and Dean?
+	Dave: ...Torvil and Dean?
 	Alex: Yeah, the guys from Legal.
 	Dave: Right... I'll get back to my emails then.
 set {AlexReturn} = true
 [end_timeline]
 label Day05.1
-Alex: We're not far off the land settlement being complete. Anything you need before the EoQ?	
+Alex: We're not far off the land settlement being complete. Anything you need before the EoQ?
 - Do we have some sort of EoQ Report?	
 	Alex: Ah.... *Alex pretends to click through some tabs of the shared company intranet*
 	Alex: No, don't think so. We don't really make them. Big Pat tends to do them and then present them at the shareholder meetings
@@ -88,6 +104,7 @@ Alex: We're not far off the land settlement being complete. Anything you need be
 	Alex: I seem to be getting complaints about inaccurate EIP's, incomplete files with local authorities and such. Is everything good on your end?
 	Alex: All good with me! All that sounds like either Jen's problem, or i don't know, probably Legal and compliance? 
 	Alex: I'm mostly just here to keep all the paperwork in check for the project development. That being said, don't ask me for copies of anything.
+- Nope, all good
 [end_timeline]
 	
 label Day05Nayeli
@@ -103,6 +120,7 @@ Alex: Yeah, she would drive Nigel crazy. I saw one of the emails she sent. Super
 - Yeah, I guess she seems a bit eccentric.
 	Alex: She's definitely weird. She represents some group of deranged nature lovers, that pray to forest spirits or whatever.
 	Alex: I just wouldn't take anything from her seriously.
+set {_2AlexReturn} = true
 [end_timeline]
 
 
@@ -250,6 +268,8 @@ Alex: What can I help you with?
 	- Not a the moment, thanks.
 	[end_timeline]
 label Day02
+if {AlexReturn} = true:
+	jump Day02Return
 Alex: Hey. Everything's chugging along, so whatever choice you made must've been fine.
 Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,
 Alex: ...and it sounds like the building contractors are happy to begin as soon as the paperwork is ready—or even earlier.
@@ -266,7 +286,7 @@ label Day02 Info01
 		Alex: That shiny new climate solutions rely on exploitative extractivism that produce huge amounts of CO2 and environmental damage?
 		Dave: Yeah, that.
 		Alex: Well, mulling over irony's not your job. Just make Mr Moore money, and you get to say you've fought climate change in the process.
-		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do <i>some</i> good.
+		Alex: Plus, all big infrastructure will require things that harm the environment. We're not special in that regard, and at least we do [i]some[/i] good.
 	jump Day02 Info01
 - What does "or even earlier" mean?
 	Alex: Well, sometimes we've got to move a bit quicker than the paper trail does to avoid any potential issues. It's nothing unusual, don't worry about it.
@@ -288,6 +308,10 @@ label Day02 Info01
 		Alex: Reasonableness and efficiency, my two middle names.
 	jump Day02 Info01
 - Thanks for the update.
-	Alex: No worries. And I know you've got a meeting with the big boss later, so I've shared a data tracker file with you. Any questions, just let me know.
+	Alex: No worries. And I know you've got a meeting with the big boss later, so I've shared a data tracker file with you.
 Dave: Stunning, thanks Alex!
+set {AlexReturn} = true
+[end_timeline]
+label Day02Return
+Alex: Things are looking pretty on track.
 [end_timeline]

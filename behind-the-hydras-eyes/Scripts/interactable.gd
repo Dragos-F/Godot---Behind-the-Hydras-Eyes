@@ -11,7 +11,7 @@ class_name Interactable
 @export var sizeMult:float = 2
 @onready var day_brain:DayBrain
 @onready var dave:Dave
-enum InteractType {Dialogue, Desk, EntryDoor, BossDoor}
+enum InteractType {Dialogue, Desk, EntryDoor, BossDoor,BalconyDoor}
 @export var Type = InteractType.Dialogue
 @export var readyToLeave:bool = false
 @export var textToDisplay:String
@@ -66,6 +66,8 @@ func _process(_delta: float) -> void:
 					day_brain.enter_boss()
 					readyToLeave = false;
 					dave._stopDave()
+			InteractType.BalconyDoor:
+				day_brain.enter_smoking()
 		
 		once = false
 

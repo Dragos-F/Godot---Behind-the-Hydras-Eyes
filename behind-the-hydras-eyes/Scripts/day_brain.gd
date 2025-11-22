@@ -34,6 +34,7 @@ func _ready() -> void:
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.VAR.AlexReturn = false
+	Dialogic.VAR._2AlexReturn = false
 	Dialogic.VAR.JenReturn = false
 	Dialogic.VAR.KettleReturn = 0
 	Dialogic.VAR.TeaForTeam = false
@@ -182,6 +183,8 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 	if (nodeTitle == "EntryDoor"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/EntryDoor.dch",target)
 	
+		
+	
 	await Dialogic.timeline_ended
 	print ("timeline ended")
 	tween.kill()
@@ -278,7 +281,9 @@ func enter_smoking():
 	SmokingScene.visible = true
 	Fader.FadeDown("Balcony")
 	await Fader.fade_finished
-	run_dialogue("Balcony Door",smokingAnchor)
+	Dialogic.Styles.load_style("Bubble Style Left")
+	var layout = Dialogic.start("Smoking")
+	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Bedroom/Cigarette.dch",smokingAnchor)
 	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING Balcony")
 	leave_balcony()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://pphkrh6xsg3l"]
+[gd_scene load_steps=48 format=3 uid="uid://pphkrh6xsg3l"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6qi5j"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_k5jl3"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_4bp7u"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_1n7mf"]
 [ext_resource type="Script" uid="uid://diqpv7rj5hd8n" path="res://Scripts/bed_specifics_2.gd" id="38_k5jl3"]
+[ext_resource type="Texture2D" uid="uid://1nbuvpgg5lwn" path="res://Visual Assets/New Assets/Full Screen Scenes/Dave smoking png-export.png" id="39_vcjit"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -88,6 +89,7 @@ texture = ExtResource("2_k5jl3")
 position = Vector2(4, 60.5)
 regular = ExtResource("2_k5jl3")
 selected = ExtResource("4_hcmpi")
+Type = 4
 YarnNodeLink = "Balcony Door"
 
 [node name="CollisionShape2D" parent="Furniture/Balcony Door/InteractableElement/Area2D" index="0"]
@@ -366,12 +368,14 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu", "SmokingScene", "smokingAnchor")]
 script = ExtResource("30_eivt4")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 camera_zoom = Vector2(1.5, 1.5)
 PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom2.tscn"
+SmokingScene = NodePath("../SmokingScene")
+smokingAnchor = NodePath("../SmokingScene/SmokingAnchor")
 
 [node name="Dave" parent="." instance=ExtResource("31_k61kq")]
 unique_name_in_owner = true
@@ -460,7 +464,7 @@ Sender_Name = "RobSpritely@personmail.co.uk"
 ToAddress = "david199x@personmail.co.uk"
 Subject = "Weekend plans"
 PreviewText = "Hi Son, hope you're well..."
-MainBody = "\"Hi Son, hope you're well. 
+MainBody = "Hi Son, hope you're well. 
 
 Mrs Colbridge next door has redone her front garden, and it's been contractors all up and down the street the whole week. I tell you, she could've gotten one of her kids to do all that for probably half the price. She must have the money to spend, the old hoot.
 Anyway, I know you've told your mum you might be coming to visit over the weekend. I wanted to make sure that you know there's delays and cancellation on the rail up to us. You probably need to plan in advance, and we can pick you up from a few towns over. Let me know how you get on.
@@ -566,8 +570,20 @@ visible = false
 unique_name_in_owner = true
 script = ExtResource("37_1n7mf")
 
-[node name="bed_specifics2" type="Node" parent="."]
+[node name="bed_specifics2" type="Node" parent="." node_paths=PackedStringArray("computer_container")]
 script = ExtResource("38_k5jl3")
+computer_container = NodePath("../ScreenUI/BrowserThing/TabContainer")
+
+[node name="SmokingScene" type="Node2D" parent="."]
+visible = false
+z_index = 5
+
+[node name="DaveSmokingPngExport" type="Sprite2D" parent="SmokingScene"]
+texture_filter = 1
+texture = ExtResource("39_vcjit")
+
+[node name="SmokingAnchor" type="Node2D" parent="SmokingScene"]
+position = Vector2(601, 257)
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]

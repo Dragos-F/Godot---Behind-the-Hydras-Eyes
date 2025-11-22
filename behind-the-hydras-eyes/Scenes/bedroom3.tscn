@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cfbr2dcyk1iew"]
+[gd_scene load_steps=48 format=3 uid="uid://cfbr2dcyk1iew"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_q1evu"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_wwx8v"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_q3som"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_m5pqb"]
 [ext_resource type="Script" uid="uid://dol288voa7xwq" path="res://Scripts/bed_specifics_3.gd" id="38_wwx8v"]
+[ext_resource type="Texture2D" uid="uid://1nbuvpgg5lwn" path="res://Visual Assets/New Assets/Full Screen Scenes/Dave smoking png-export.png" id="39_wmggs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x75j5"]
 radius = 12.0
@@ -88,6 +89,7 @@ texture = ExtResource("2_wwx8v")
 position = Vector2(4, 60.5)
 regular = ExtResource("2_wwx8v")
 selected = ExtResource("4_ng3rn")
+Type = 4
 YarnNodeLink = "Balcony Door"
 
 [node name="CollisionShape2D" parent="Furniture/Balcony Door/InteractableElement/Area2D" index="0"]
@@ -366,12 +368,14 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu", "SmokingScene", "smokingAnchor")]
 script = ExtResource("30_c7u8e")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 camera_zoom = Vector2(1.5, 1.5)
 PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom3.tscn"
+SmokingScene = NodePath("../SmokingScene")
+smokingAnchor = NodePath("../SmokingScene/SmokingAnchor")
 
 [node name="Dave" parent="." instance=ExtResource("31_vcnnr")]
 unique_name_in_owner = true
@@ -563,6 +567,17 @@ script = ExtResource("37_m5pqb")
 [node name="bed_specifics3" type="Node" parent="." node_paths=PackedStringArray("computer_container")]
 script = ExtResource("38_wwx8v")
 computer_container = NodePath("../ScreenUI/BrowserThing/TabContainer")
+
+[node name="SmokingScene" type="Node2D" parent="."]
+visible = false
+z_index = 5
+
+[node name="DaveSmokingPngExport" type="Sprite2D" parent="SmokingScene"]
+texture_filter = 1
+texture = ExtResource("39_wmggs")
+
+[node name="SmokingAnchor" type="Node2D" parent="SmokingScene"]
+position = Vector2(601, 257)
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]

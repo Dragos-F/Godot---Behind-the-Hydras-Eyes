@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://dtf5vs15jiut0"]
+[gd_scene load_steps=121 format=3 uid="uid://dtf5vs15jiut0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_3eksu"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lt3sq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://downtqjf7yxst" path="res://Visual Assets/New Assets/Office Scene Assets/Furniture/Paper.png" id="4_kurw2"]
 [ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="5_2y3md"]
 [ext_resource type="Texture2D" uid="uid://dbx3knr0kwopt" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Alex walking-Sheet.png" id="5_a7utg"]
+[ext_resource type="Texture2D" uid="uid://b88mfgjunqnd8" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Janine selected.png" id="5_gnihg"]
 [ext_resource type="Texture2D" uid="uid://x3rkitwelmju" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Jen Walk phone-Sheet.png" id="6_v7ro1"]
 [ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="7_db5ya"]
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_jc8h6"]
@@ -1062,11 +1063,12 @@ polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5
 
 [node name="JenInteractable" parent="Background/Furniture/Janine" instance=ExtResource("5_2y3md")]
 regular = ExtResource("3_a7utg")
-selected = ExtResource("3_a7utg")
+selected = ExtResource("5_gnihg")
 YarnNodeLink = "Janine"
 
 [node name="Area2D" parent="Background/Furniture/Janine/JenInteractable" index="0"]
-visible = false
+position = Vector2(19, 61)
+scale = Vector2(0.38814285, 0.29113463)
 
 [node name="CollisionShape2D" parent="Background/Furniture/Janine/JenInteractable/Area2D" index="0"]
 shape = SubResource("CircleShape2D_r70fk")

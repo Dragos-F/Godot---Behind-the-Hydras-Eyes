@@ -35,8 +35,11 @@ Jen: Hello again! Oh, did you have a question for me?
 	Dave: Right.
 	Jen: Ooh, and our marketing report advises against using posters in languages the audience can't speak.
 	Dave: Thanks Jen, I'll keep that in mind.
+- All good!
 [end_timeline]
 label Day02
+if {JenReturn} == true:
+	jump Day02Return
 Jen: My poster campaign is, like, totally ready for launch now.
 Jen: I even settled on different slogans for different target audiences. Listen to this\:
 Jen: "ForwardGreen\: A green future you can trust". Good, right? That one's for the brochures we've given to the local government.
@@ -57,7 +60,9 @@ Jen: Whatcha think, captain?
 Dave: Right...well, I better get back to work, have a lovely day.
 set {JenReturn} = true
 [end_timeline]
-
+label Jen02Return
+Jen: Maybe we could print a limited, glittery run of the posters?
+[end_timeline]
 label Day03
 if {JenReturn} == true:
 	jump Day03.1
@@ -77,7 +82,8 @@ set {JenReturn} = true
 [end_timeline]
 label Day03.1
 Jen: Hey! Budget's still under revision, but that's all I can think about. I hope we have enough to sponsor a vet clinic!
-Jen: Oh, sorry, I'm getting caught up in the possibilities again. What can I help you with?
+Jen: Oh, sorry, I'm getting caught up in the possibilities again. 
+Jen: What can I help you with?
 - How're your plants doing?
 	Jen: Oh, I never thought you'd ask!
 	Jen: They're all splendid really. The hanging vine by my drawers has actually gotten so long I had to take some cuttings and replant.
@@ -95,6 +101,8 @@ Jen: Oh, sorry, I'm getting caught up in the possibilities again. What can I hel
 	Jen: There's a bunch of stuff in there I don't want to read.
 	Jen: Plus, if it was super serious, they'd call or invite me to a meeting instead.
 	Jen: ....Or you know, text. Like a person.
+- I think that's everything!
+
 [end_timeline]
 label Day04
 if {JenReturn} == true:
@@ -207,6 +215,7 @@ Jen: I can't wait for you guys to see it!
 	Dave: She sounds more, uh, passionate about it than that.
 	Jen: No such thing as unpersuadable! Everyone can be marketed to!
 	Jen: Even us!
+- Great to hear it!
 [end_timeline]
 
 
@@ -231,6 +240,8 @@ Jen: She flashes you the sort of smile that costs money, and swivels around to f
 [end_timeline]
 
 label Day08
+if {JenReturn} == true:
+	jump Day08Return
 Jen: Hi Dave! I'm sorry to say you really missed out, the conference was great! Wow, where to begin?
 Jen: The atmosphere, the excitement, the mega companies there, the speakers, the merch—oh the merch!
 Jen: I waddled out with tote bags overflowing with pens and notepads and bottles and lanyards and—
@@ -239,3 +250,9 @@ Jen: I waddled out with tote bags overflowing with pens and notepads and bottles
 	Jen: I've got a load of new marketing ideas—had a great brainstorming session with the woman who sends newsletters for that AI company.
 - Glad you enjoyed! I'll catch you around!
 	Jen: Thanks!! I'll get you some merch too next time!
+set {JenReturn} = true
+[end_timeline]
+label Day08Return
+Jen: My posts from the conference are honestly taking off.
+Jen: One of them has 100 likes!
+[end_timeline]

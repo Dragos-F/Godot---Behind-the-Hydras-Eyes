@@ -35,6 +35,7 @@ directories/dch_directory={
 "Bookshelf": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Bookshelf.dch",
 "Boss": "res://Dialogue stuffs/Dialogic/Characters/Office/Boss.dch",
 "BossDoor": "res://Dialogue stuffs/Dialogic/Characters/Office/BossDoor.dch",
+"Cigarette": "res://Dialogue stuffs/Dialogic/Characters/Bedroom/Cigarette.dch",
 "Clipboard": "res://Dialogue stuffs/Dialogic/Characters/Office/Clipboard.dch",
 "CoffeeMachine": "res://Dialogue stuffs/Dialogic/Characters/Office/CoffeeMachine.dch",
 "Computer": "res://Dialogue stuffs/Dialogic/Characters/Office/Computer.dch",
@@ -85,6 +86,7 @@ directories/dtl_directory={
 "Jen": "res://Dialogue stuffs/Dialogic/Timelines/Office/Jen.dtl",
 "Kettle": "res://Dialogue stuffs/Dialogic/Timelines/Office/Kettle.dtl",
 "Posters": "res://Dialogue stuffs/Dialogic/Timelines/Office/Posters.dtl",
+"Smoking": "res://Dialogue stuffs/Dialogic/Timelines/Bedroom/Smoking.dtl",
 "StickyNote": "res://Dialogue stuffs/Dialogic/Timelines/Office/StickyNote.dtl",
 "Text From Boss": "res://Dialogue stuffs/Dialogic/Timelines/Office/Text From Boss.dtl",
 "Text From Mum": "res://Dialogue stuffs/Dialogic/Timelines/Text From Mum.dtl",
@@ -93,10 +95,11 @@ directories/dtl_directory={
 layout/style_directory={
 "": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres",
 "BottomDialogue": "res://Dialogue stuffs/Dialogic/Styles/BottomDialogue.tres",
+"Bubble Style Left": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Left.tres",
 "Bubble Style Test": "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres", "res://Dialogue stuffs/Dialogic/Styles/BottomDialogue.tres"]
+layout/style_list=["res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres", "res://Dialogue stuffs/Dialogic/Styles/BottomDialogue.tres", "res://Dialogue stuffs/Dialogic/Styles/Bubble Style Left.tres"]
 layout/default_style="res://Dialogue stuffs/Dialogic/Styles/Bubble Style Test.tres"
 variables={
 "AlexNayeli": false,

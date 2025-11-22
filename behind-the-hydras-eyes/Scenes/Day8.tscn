@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://by3s2naub2064"]
+[gd_scene load_steps=115 format=3 uid="uid://by3s2naub2064"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_555dt"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_ijfl6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://b2f8u486rcnae" path="res://Scripts/day_brain.gd" id="7_feprj"]
 [ext_resource type="PackedScene" uid="uid://bekroc3307ka5" path="res://Scenes/interactable.tscn" id="8_feprj"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="8_vaw03"]
+[ext_resource type="Texture2D" uid="uid://b88mfgjunqnd8" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Janine selected.png" id="9_feprj"]
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="9_rv4uh"]
 [ext_resource type="Texture2D" uid="uid://cnaija8ihrdu5" path="res://Visual Assets/New Assets/Office Scene Assets/Animations/Characters/Jen Coffee Sip-Sheet.png" id="9_vaw03"]
 [ext_resource type="Texture2D" uid="uid://dekxkt8sfts6u" path="res://Visual Assets/New Assets/Full Screen Scenes/Monitor Screen.png" id="10_reana"]
@@ -933,11 +934,12 @@ polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5
 
 [node name="JenInteractable" parent="Background/Janine" instance=ExtResource("8_feprj")]
 regular = ExtResource("7_dknox")
-selected = ExtResource("7_dknox")
+selected = ExtResource("9_feprj")
 YarnNodeLink = "Janine"
 
 [node name="Area2D" parent="Background/Janine/JenInteractable" index="0"]
-visible = false
+position = Vector2(20.499998, 66.49999)
+scale = Vector2(0.4, 0.2819578)
 
 [node name="CollisionShape2D" parent="Background/Janine/JenInteractable/Area2D" index="0"]
 shape = SubResource("CircleShape2D_gs4e5")

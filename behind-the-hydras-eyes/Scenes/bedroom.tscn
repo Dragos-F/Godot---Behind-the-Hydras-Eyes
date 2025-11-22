@@ -368,12 +368,14 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu")]
+[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu", "SmokingScene", "smokingAnchor")]
 script = ExtResource("28_p1x44")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 camera_zoom = Vector2(1.5, 1.5)
 PauseMenu = NodePath("../CanvasLayer/Pause")
 current_scene = "res://Scenes/bedroom.tscn"
+SmokingScene = NodePath("../SmokingScene")
+smokingAnchor = NodePath("../SmokingScene/SmokingAnchor")
 
 [node name="Dave" parent="." instance=ExtResource("3_gru6s")]
 unique_name_in_owner = true
@@ -681,7 +683,7 @@ texture_filter = 1
 texture = ExtResource("40_ii3ny")
 
 [node name="SmokingAnchor" type="Node2D" parent="SmokingScene"]
-position = Vector2(635, 15)
+position = Vector2(601, 257)
 
 [connection signal="interacted" from="Furniture/Balcony Door/InteractableElement" to="BedroomSpecifics" method="_on_balcony_interacted"]
 [connection signal="interacted" from="Furniture/Desk/DeskChair/InteractableElement" to="BedroomSpecifics" method="_on_computer_interacted"]
