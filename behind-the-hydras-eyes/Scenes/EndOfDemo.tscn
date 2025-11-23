@@ -1017,7 +1017,9 @@ libraries = {
 }
 autoplay = "creditMove"
 
-[node name="Pause" parent="." instance=ExtResource("21_u4eq7")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("21_u4eq7")]
 visible = false
 
 [node name="Main Menu" type="Button" parent="."]

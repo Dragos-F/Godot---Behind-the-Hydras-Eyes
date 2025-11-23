@@ -11,7 +11,7 @@ extends Node2D
 
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day03"
-	Dialogic.VAR.CurrentQuarter = "Quarter3"
+	Dialogic.VAR.CurrentQuarter = "Quarter2"
 	Dialogic.VAR.WatercoolerChar ="Moz"
 	
 func _process(delta: float) -> void:

@@ -847,7 +847,7 @@ autoplay = "Q"
 [node name="Computer" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="BossDoor" parent="Notifications" instance=ExtResource("14_o1oqo")]
 visible = false

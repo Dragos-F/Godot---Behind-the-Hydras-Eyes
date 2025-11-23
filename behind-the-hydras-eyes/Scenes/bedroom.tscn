@@ -641,6 +641,7 @@ text = "Pigeon arrested under terror charge for standing on sign"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+animation = &"Cat"
 anim = "Doc"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]

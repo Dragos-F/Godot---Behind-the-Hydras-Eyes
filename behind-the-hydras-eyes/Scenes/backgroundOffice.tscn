@@ -1539,6 +1539,7 @@ regular = ExtResource("39_i5h4o")
 selected = ExtResource("40_pn164")
 empty = ExtResource("51_q838t")
 empty_selected = ExtResource("52_e1vmb")
+AMIWATERCOOLER = true
 
 [node name="Area2D" parent="Kitchen/WaterCooler/InteractableElement" index="0"]
 visible = false

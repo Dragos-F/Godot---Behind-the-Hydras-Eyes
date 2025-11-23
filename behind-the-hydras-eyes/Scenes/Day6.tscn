@@ -1019,7 +1019,7 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "Q3"
+textToDisplay = "Time slips by inconsequentially"
 YarnNodeLink = "EntryDoor"
 ScenePath = "res://Scenes/Day7.tscn"
 
@@ -1339,6 +1339,7 @@ texture_filter = 1
 autowrap_mode = 0
 
 [node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_uldrl")]
+visible = false
 layout_mode = 2
 Sender_Name = "Cosijoeza T."
 ToAddress = "dave@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -1474,7 +1475,7 @@ autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_dr76r")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

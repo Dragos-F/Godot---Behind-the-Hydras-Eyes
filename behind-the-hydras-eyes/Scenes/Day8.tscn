@@ -1261,7 +1261,7 @@ frame_progress = 0.719289
 
 [node name="Computer" parent="Notifications" instance=ExtResource("20_0lere")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_sasod")]
 visible = false

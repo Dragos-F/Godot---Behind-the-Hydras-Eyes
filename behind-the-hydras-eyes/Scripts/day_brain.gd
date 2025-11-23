@@ -128,6 +128,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",target)
 	if (nodeTitle == "Jen"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",target)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",AlexAnchor)
 	if (nodeTitle == "Janine"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",JanineAnchor)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Unknown.dch",JanineAnchor)
@@ -212,10 +213,10 @@ func take_plant():
 func water_cooler_Alex(i:int):
 		if i == 0:
 			standing_Alex.visible = true
-			if Dialogic.VAR.WatercoolerChar == "Alex01":
+			if Dialogic.VAR.WatercoolerChar == "Alex01" or Dialogic.VAR.WatercoolerChar == "Alex02":
 				Alex_anim.play("move_Alex")
 				Alex_walking_sprite.play("walking_Alex")
-			elif Dialogic.VAR.WatercoolerChar == "Jen01":
+			elif Dialogic.VAR.WatercoolerChar == "Jen01" or Dialogic.VAR.WatercoolerChar == "Jen02":
 				Alex_anim.play("move_Jen")
 				Alex_walking_sprite.play("walking_Jen")
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
@@ -231,10 +232,10 @@ func water_cooler_Alex(i:int):
 				Alex_anim.play("move_Janine")
 				Alex_walking_sprite.play("walking_Janine")
 		if i == 1:
-			if Dialogic.VAR.WatercoolerChar == "Alex01":
+			if Dialogic.VAR.WatercoolerChar == "Alex01" or Dialogic.VAR.WatercoolerChar == "Alex02":
 				Alex_walking_sprite.play("walking_Alex")
 				Alex_anim.play("away_Alex")
-			elif Dialogic.VAR.WatercoolerChar == "Jen01":
+			elif Dialogic.VAR.WatercoolerChar == "Jen01" or Dialogic.VAR.WatercoolerChar == "Jen02":
 				Alex_walking_sprite.play("walking_Jen")
 				Alex_anim.play("away_Jen")
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
@@ -252,12 +253,12 @@ func water_cooler_Alex(i:int):
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep1":
-		end_day("Q2, 202X","res://Scenes/trainQ2.tscn") #For Non Demo
+		end_day("A few months later...","res://Scenes/trainQ2.tscn") #For Non Demo
 		#end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
 	if argument == "bed_sleep2":
-		end_day("Q3, 202X","res://Scenes/trainQ3.tscn") #For Non Demo
+		end_day("Even more months later...","res://Scenes/trainQ3.tscn") #For Non Demo
 	if argument == "bed_sleep3":
-		end_day("Q4, 202X","res://Scenes/trainQ4.tscn") #For Non Demo
+		end_day("The End Times...","res://Scenes/trainQ4.tscn") #For Non Demo
 	if argument == "watercooler_Alex":
 		#standing_Alex.visible = true
 		water_cooler_Alex(0)

@@ -343,8 +343,8 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	- Xena?
 		Jen: Oh, I can't imagine I haven't told you
 		Jen: Wait, lemme show you some more pictures to jog your memory
-		Watercooler: Stop her
-		Watercooler: You don't want that
+		WaterCooler: Stop her
+		WaterCooler: You don't want that
 		- Oh...No, of course I remember Xena
 			Jen: Yeah, see, she's great
 		- She slipped my mind

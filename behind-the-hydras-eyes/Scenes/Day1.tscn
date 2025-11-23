@@ -472,6 +472,7 @@ Type = 1
 visible = true
 
 [node name="InteractableElement" parent="Background/Kitchen/WaterCooler" index="1"]
+position = Vector2(0, 0.5)
 YarnNodeLink = "WaterCooler"
 
 [node name="Area2D" parent="Background/Kitchen/WaterCooler/InteractableElement" index="0"]
@@ -863,6 +864,9 @@ offset_bottom = 361.0
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 249.99988
+offset_right = 491.99988
+offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -878,6 +882,9 @@ grow_vertical = 1
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+offset_left = 439.99963
+offset_right = 681.99963
+offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -912,6 +919,7 @@ position = Vector2(-552, -256)
 frame_progress = 0.801034
 
 [node name="Jen" parent="Notifications" instance=ExtResource("12_rakbq")]
+z_index = 1
 position = Vector2(-138, -470)
 
 [node name="Door" parent="Notifications" instance=ExtResource("12_rakbq")]
@@ -932,7 +940,7 @@ autoplay = "Q"
 [node name="Computer" parent="Notifications" instance=ExtResource("12_rakbq")]
 visible = false
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

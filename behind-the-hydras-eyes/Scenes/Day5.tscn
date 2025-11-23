@@ -703,7 +703,7 @@ texture = ExtResource("10_53qxh")
 [node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
 texture_filter = 1
-emailsProgressionQuota = 3
+emailsProgressionQuota = 4
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -778,7 +778,7 @@ autowrap_mode = 0
 
 [node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_lauko")]
 layout_mode = 2
-Sender_Name = "Nayali"
+Sender_Name = "Nayeli"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Do you know your giants bleed?"
 PreviewText = "We are the voice of"
@@ -1228,7 +1228,7 @@ frame_progress = 0.719289
 
 [node name="Computer" parent="Notifications" instance=ExtResource("20_ld0to")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]
 visible = false

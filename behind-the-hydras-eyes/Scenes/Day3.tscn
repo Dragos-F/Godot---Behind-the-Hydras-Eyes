@@ -599,7 +599,7 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "Later that quarter"
+textToDisplay = "Weeks pass"
 YarnNodeLink = "EntryDoor"
 ScenePath = "res://Scenes/Day4.tscn"
 
@@ -1016,7 +1016,7 @@ text = "Rise of \"gooning\" could help proselytisation, claims priest"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Doc"
+animation = &"Cat"
 anim = "Cat"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
@@ -1069,7 +1069,7 @@ autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("15_cne7c")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

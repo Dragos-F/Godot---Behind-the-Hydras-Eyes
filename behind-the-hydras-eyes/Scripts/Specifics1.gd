@@ -25,10 +25,11 @@ func _ready() -> void:
 	
 	
 func _process(_delta: float) -> void:
-	if (alexInteracted and jenInteracted and emails.emailsDone==emails.emailsProgressionQuota):
+	if (alexInteracted and jenInteracted and emails.emailsDone>=emails.emailsProgressionQuota):
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
 		DoorNotif.visible = true
+		print ("Should be ready to leave")
 	if Dialogic.VAR.teaNotif == true && !TeaNotif.visible && onceV1:
 		TeaNotif.visible = true
 		onceV1 = false
@@ -46,13 +47,14 @@ func _on_alex_interactable_interacted() -> void:
 	alexInteracted = true
 	AlexNotif.visible = false
 	AlexNotif.stop()
+	print ("Alex interacted true")
 
 
 func _on_jen_interactable_interacted() -> void:
 	jenInteracted = true
 	JenNotif.visible = false
 	JenNotif.stop()
-
+	print ("Jen interacted true")
 
 func _on_desk_interactable_interacted() -> void:
 	CompNotif.visible = false

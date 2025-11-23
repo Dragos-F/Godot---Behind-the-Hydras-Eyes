@@ -1,5 +1,5 @@
 jump {CurrentDay}
-label Day02
+label Day01
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
 BossDoor: From inside, you hear a voice through a speaker loudly commentating on a tennis match.

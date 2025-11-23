@@ -1,6 +1,9 @@
 extends Node2D
 
 @export var PauseMenu:pauseMenu
+@export var smoking:Node2D
+@export var timer:Timer
+
 
 
 func _on_start_pressed() -> void:
@@ -18,7 +21,14 @@ func _on_start_pressed() -> void:
 		PermanentGlobal.Savings = SaveLoad.SaveFileData.Savings
 		PermanentGlobal.email_choices = SaveLoad.SaveFileData.email_choices.duplicate(true)
 	
-	
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("smoking")&&timer.is_stopped():
+		if smoking.visible == true:
+			smoking.visible = false
+			timer.start()
+		else:
+			smoking.visible = true
+			timer.start()
 	
 
 func _input(event):

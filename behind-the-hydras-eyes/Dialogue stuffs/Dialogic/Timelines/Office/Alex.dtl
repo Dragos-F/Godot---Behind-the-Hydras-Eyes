@@ -13,7 +13,7 @@ Alex: Jen seemed to have a fun time, came away weighed down by two bags of freeb
 	Alex: Yeah, there's an upcoming climate summit so we've had a few big corps interested in the PR of association with ForwardGreen.
 	Alex: There was a bit of hesitancy with Lagoon Breeze, but the boss agreed to a tree planting project those more cautious could support.
 	Alex: We did have one main lead for our project: Atlas Technologies. They've got a bit of experience with what they call "high-risk" projects.
-	So even if things do go south with the protesters they could be a great sponsor to have. 
+	Alex: So even if things do go south with the protesters they could be a great sponsor to have. 
 - How's the boss?
 	Dave: Have you noticed the boss acting a bit odd lately?
 	Alex: Hm, maybe? It's hard to tell because he's been erratic since I started. He was quite blunt to me and Jen about the conference.
@@ -268,7 +268,7 @@ Alex: What can I help you with?
 	- Not a the moment, thanks.
 	[end_timeline]
 label Day02
-if {AlexReturn} = true:
+if {AlexReturn} == true:
 	jump Day02Return
 Alex: Hey. Everything's chugging along, so whatever choice you made must've been fine.
 Alex: Our agents in Mexico are quietly finishing negotiations with the local government and landowners,

@@ -21,3 +21,6 @@ if {JanineReturn} == false:
 else:
 	Janine: I'm busy
 	[end_timeline]
+label Day08
+	Janine: I'm busy
+[end_timeline]

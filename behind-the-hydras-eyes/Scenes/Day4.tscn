@@ -599,7 +599,7 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "End of Quarter 2"
+textToDisplay = "More weeks roll by"
 YarnNodeLink = "EntryDoor"
 ScenePath = "res://Scenes/Day5.tscn"
 
@@ -709,7 +709,7 @@ texture = ExtResource("10_vl8em")
 [node name="ScreenUI" parent="." instance=ExtResource("11_sjsk0")]
 unique_name_in_owner = true
 texture_filter = 1
-emailsProgressionQuota = 3
+emailsProgressionQuota = 4
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -1048,7 +1048,7 @@ autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_gpadi")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

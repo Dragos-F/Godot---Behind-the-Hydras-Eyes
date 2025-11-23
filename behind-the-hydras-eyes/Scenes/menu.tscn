@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene load_steps=15 format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://cwaoa6rj3j1on" path="res://Visual Assets/Fonts/NotJamOldStyle11/NotJamOldStyle11.ttf" id="7_6swd7"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="10_7qvly"]
 [ext_resource type="Texture2D" uid="uid://bjlcxwuxm4soy" path="res://Visual Assets/New Assets/Menus/Title Only.png" id="11_rfqti"]
+[ext_resource type="Texture2D" uid="uid://1nbuvpgg5lwn" path="res://Visual Assets/New Assets/Full Screen Scenes/Dave smoking png-export.png" id="12_g8i7c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3rjx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -18,17 +19,17 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu")]
+[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu", "smoking", "timer")]
 script = ExtResource("1_xhh6f")
-PauseMenu = NodePath("Pause")
+PauseMenu = NodePath("CanvasLayer/Pause")
+smoking = NodePath("DaveSmokingPngExport")
+timer = NodePath("Timer")
 
 [node name="MainMenuBack" type="Sprite2D" parent="."]
 z_index = -5
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("2_jsrd8")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Drawer" type="Sprite2D" parent="." node_paths=PackedStringArray("folder")]
 texture_filter = 1
@@ -208,7 +209,9 @@ text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pause" parent="." instance=ExtResource("10_7qvly")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("10_7qvly")]
 visible = false
 
 [node name="TitleOnly" type="Sprite2D" parent="."]
@@ -226,6 +229,15 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_wbdvm")
 theme_override_font_sizes/normal_font_size = 28
 text = "Version D1.28.2"
+
+[node name="DaveSmokingPngExport" type="Sprite2D" parent="."]
+visible = false
+z_index = 4
+texture = ExtResource("12_g8i7c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]

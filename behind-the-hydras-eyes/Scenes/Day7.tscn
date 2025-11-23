@@ -1025,7 +1025,7 @@ position = Vector2(28, -1)
 YarnNodeLink = "BossDoor"
 
 [node name="InteractableElement" parent="Background/Furniture/OfficeDoor enter" index="0"]
-textToDisplay = "End of Q3"
+textToDisplay = "What even is a Day?"
 YarnNodeLink = "EntryDoor"
 ScenePath = "res://Scenes/Day8.tscn"
 
@@ -1512,7 +1512,7 @@ autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_uy7q1")]
 z_index = 7
-position = Vector2(-157, 152)
+position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

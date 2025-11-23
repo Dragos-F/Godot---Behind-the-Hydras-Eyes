@@ -19,6 +19,7 @@ enum InteractType {Dialogue, Desk, EntryDoor, BossDoor,BalconyDoor}
 @export var YarnNodeLink:String
 @export var ScenePath:String
 @export var animations:anim_brain
+@export var AMIWATERCOOLER:bool = false
 
 
 
@@ -83,7 +84,12 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 		print (parentSprite)
 		parentSprite.play("selected")
 		print("played selected")
+	else:
+		print ("THIS SHOULD HAPPEN")
 	parentSprite.scale = 1.05*Vector2.ONE*sizeMult
+	print ("Scale is ",parentSprite.scale)
+	#if animations == null:
+		##print ("Texture is ",parentSprite.texture)
 	
 	
 
@@ -105,6 +111,7 @@ func _interact():
 		once2 = false
 		
 func empty_cooler():
-		regular = empty
+	if AMIWATERCOOLER:
+		regular = empty 
 		selected = empty_selected
 		Dialogic.VAR.WatercoolerChar = "Empty"
