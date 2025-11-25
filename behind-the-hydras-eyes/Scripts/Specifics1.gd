@@ -42,6 +42,8 @@ func _process(_delta: float) -> void:
 		if onceV3:
 			CompNotif.visible = true
 			onceV3 = false
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 
 func _on_alex_interactable_interacted() -> void:
 	alexInteracted = true
@@ -56,8 +58,7 @@ func _on_jen_interactable_interacted() -> void:
 	JenNotif.stop()
 	print ("Jen interacted true")
 
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false
+	
 
 
 func _on_interactable_element_interacted() -> void:

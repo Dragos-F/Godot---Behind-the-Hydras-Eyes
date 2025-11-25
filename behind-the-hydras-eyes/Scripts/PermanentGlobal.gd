@@ -35,3 +35,4 @@ func reset_choices():
 	Plant = false
 	email_choices.clear()
 	
+	

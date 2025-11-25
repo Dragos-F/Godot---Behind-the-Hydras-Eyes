@@ -13,12 +13,14 @@ func _ready() -> void:
 	Dialogic.VAR.Day4AlexEmails = false
 	
 func _process(delta: float) -> void:
-	if emails.emailsDone == emails.emailsProgressionQuota && onceV1:
+	if emails.emailsDone >= emails.emailsProgressionQuota && onceV1:
 		Dialogic.VAR.Day4AlexEmails = true
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
 		DoorNotif.visible = true
 		onceV1 = false
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 
 
 func _on_save_button_pressed() -> void: # approve budget
@@ -32,7 +34,3 @@ func _on_alex_interactable_interacted() -> void:
 func _on_jen_interactable_interacted() -> void:
 	JenNotif.visible = false
 	JenNotif.stop()
-
-
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false

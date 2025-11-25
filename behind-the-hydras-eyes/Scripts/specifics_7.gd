@@ -14,19 +14,20 @@ func _ready() -> void:
 	Dialogic.VAR.JanineReturn = false
 	
 func _process(delta: float) -> void:
-	if emails.emailsDone == emails.emailsProgressionQuota && onceV1:
+	if emails.emailsDone >= emails.emailsProgressionQuota && onceV1:
 		Dialogic.VAR.Day4AlexEmails = true
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
 		DoorNotif.visible = true
 		onceV1 = false
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 
 
 func _on_interactable_element_interacted() -> void:
 	StickyNotif.visible = false
 	
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false
+
 
 func _on_timer_timeout() -> void:
 	brain.run_dialogue("EmptyOffice",outsideDoor)

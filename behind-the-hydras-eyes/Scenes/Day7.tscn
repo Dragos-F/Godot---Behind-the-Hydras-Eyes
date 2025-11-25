@@ -1511,7 +1511,7 @@ position = Vector2(-458, -178)
 autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("14_uy7q1")]
-z_index = 7
+z_index = 4
 position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -15,11 +15,13 @@ func _ready() -> void:
 	Dialogic.VAR.WatercoolerChar ="Moz"
 	
 func _process(delta: float) -> void:
-	if emails.emailsDone== emails.emailsProgressionQuota && onceV1:
+	if emails.emailsDone >= emails.emailsProgressionQuota && onceV1:
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
 		DoorNotif.visible = true
 		onceV1 = false
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 func _on_alex_interactable_interacted() -> void:
 	AlexNotif.visible = false
 	AlexNotif.stop()
@@ -28,7 +30,3 @@ func _on_alex_interactable_interacted() -> void:
 func _on_jen_interactable_interacted() -> void:
 	JenNotif.visible = false
 	JenNotif.stop()
-
-
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false

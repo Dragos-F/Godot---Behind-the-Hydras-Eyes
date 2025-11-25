@@ -19,12 +19,14 @@ func _ready() -> void:
 	Dialogic.VAR.WatercoolerChar ="Alex02"
 	
 func _process(delta: float) -> void:
-	if emails.emailsDone==emails.emailsProgressionQuota and oncev1:
+	if emails.emailsDone>=emails.emailsProgressionQuota and oncev1:
 		BossDoor.readyToLeave = true
 		BossNotif.visible = true
 		BossNotif.play("default")
 		oncev1 = false
 		BossDoor.Type = BossDoor.InteractType.BossDoor
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 	
 func _on_boss_door_interacted() -> void:
 	BossNotif.visible = false
@@ -39,9 +41,7 @@ func _on_alex_interactable_interacted() -> void:
 func _on_jen_interactable_interacted() -> void:
 	JenNotif.visible = false
 	JenNotif.stop()
-	
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false
+
 	
 func _on_day_brain_end_of_day() -> void:
 	outsideDoor.readyToLeave = true

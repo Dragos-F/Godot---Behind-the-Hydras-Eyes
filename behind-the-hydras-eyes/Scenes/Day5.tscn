@@ -739,7 +739,6 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
-alltexts = null
 boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
@@ -751,9 +750,6 @@ Sender_Name = "Ana Vásquez"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Official Statement"
 PreviewText = "I'm contacting you"
-replyChoice = null
-choiceDialog1 = null
-choiceDialog2 = null
 MainBody = "Dear ForwardGreen Official,
 
 I'm contacting you to ask if ForwardGreen would like to give a statement on Project Lagoon Breeze. You may be aware that many locals have stated their desire to resist the construction, and already a group of activists seems to have formed to protest. We have already reached out to local police, who stated: \"we have experience handling disturbances like this, and are confident in our ability to quash any nuisance.\" Do you feel the same confidence, and what do you have to say to the disgruntled locals?
@@ -768,9 +764,6 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
-ReplyBody2 = null
-alltexts = null
-boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
@@ -782,9 +775,6 @@ Sender_Name = "Nayeli"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Do you know your giants bleed?"
 PreviewText = "We are the voice of"
-replyChoice = null
-choiceDialog1 = null
-choiceDialog2 = null
 MainBody = "To whom it concerns,
 
 We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
@@ -799,9 +789,6 @@ Kind Regards,
 Dave Spritely, 
 UK Project Lead
 Forward Green"
-ReplyBody2 = null
-alltexts = null
-boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
@@ -814,9 +801,6 @@ Sender_Name = "Olu - Finance"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Funding Update"
 PreviewText = "Good morning Dave, Hope you're managing"
-replyChoice = null
-choiceDialog1 = null
-choiceDialog2 = null
 MainBody = "Good morning Dave,
 						
 Hope you're managing okay. Just wanted to confirm that everything's funded appropriately: as discussed in the boardroom, the site for Five Vulture Meadows was above what we'd accounted for, but local politicians have agreed to a series of deals to cut costs elsewhere. I double checked there was no unexpected additional legal costs, and he's happy, so I think we made a great choice. 	
@@ -828,9 +812,6 @@ Thanks for the heads up. I did wonder what happened to the slightly increased co
 
 Best Regards,							
 Dave"
-ReplyBody2 = null
-alltexts = null
-boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TooExpensive/Button" index="0"]
 texture_filter = 1
@@ -843,9 +824,6 @@ Sender_Name = "Richard"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Paradiso Update"
 PreviewText = "Good morning Dave, Richard from legal...."
-replyChoice = null
-choiceDialog1 = null
-choiceDialog2 = null
 MainBody = "Good morning Dave,
 						
 Richard from legal here. We expected a few possible setbacks with \"Sandbar Paradiso\" (stupid name), and indeed they have arrived. That's what I'm paid for though. I'm liaising with local authorities to prosecute some people that broke down the fence, and there's some structural issues requiring the foundations to be deeper, but we won't let either issue stop us.
@@ -859,9 +837,6 @@ Re:Structural issues, I don't believe we forecasted for that. According to the d
 
 Best Regards,							
 Dave				"
-ReplyBody2 = null
-alltexts = null
-boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Flooding/Button" index="0"]
 texture_filter = 1
@@ -874,9 +849,6 @@ Sender_Name = "Richard"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Sunrise Farms Update"
 PreviewText = "Good morning Dave, Richard from legal...."
-replyChoice = null
-choiceDialog1 = null
-choiceDialog2 = null
 MainBody = "Good morning Dave,
 
 Richard from legal here. Just wanted to update you, since—as mentioned the other day—the site chosen, \"Sunrise farm\" (ridiculous branding if you ask me), involves manoeuvring around competition. Our carrot was big enough for them to terminate the previous contract and rush us in, but our newfound rival isn't going lying down. Don't worry, I'll run them in circles or crush them with counter-litigation, but things will move slow for a bit.
@@ -893,9 +865,6 @@ Also, when you say \"carrot\", what exactly do we mean?
 
 Best,							
 Dave							"
-ReplyBody2 = null
-alltexts = null
-boss = null
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Competition/Button" index="0"]
 texture_filter = 1
@@ -1227,7 +1196,7 @@ frame = 6
 frame_progress = 0.719289
 
 [node name="Computer" parent="Notifications" instance=ExtResource("20_ld0to")]
-z_index = 7
+z_index = 4
 position = Vector2(-306, 221)
 
 [node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]

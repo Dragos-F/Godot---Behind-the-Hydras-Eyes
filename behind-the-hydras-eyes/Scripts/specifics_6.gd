@@ -19,7 +19,7 @@ func _ready() -> void:
 	Dialogic.VAR.AlexNayeli = false
 	
 func _process(delta: float) -> void:
-	if emails.emailsDone == emails.emailsProgressionQuota && onceV1:
+	if emails.emailsDone >= emails.emailsProgressionQuota && onceV1:
 		Dialogic.VAR.Day4AlexEmails = true
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
@@ -32,6 +32,8 @@ func _process(delta: float) -> void:
 	if emails.emailsDone == emails.emailsProgressionQuota && onceV3:
 		JenNotif.visible = true
 		onceV3 = false
+	if emails.emailsDone>=emails.emailsProgressionQuota:
+		CompNotif.visible = false
 
 
 func _on_jen_interactable_interacted() -> void:
@@ -39,5 +41,3 @@ func _on_jen_interactable_interacted() -> void:
 
 func _on_alex_interactable_interacted() -> void:
 	AlexNotif.visible = false
-func _on_desk_interactable_interacted() -> void:
-	CompNotif.visible = false

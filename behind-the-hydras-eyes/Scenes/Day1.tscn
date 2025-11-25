@@ -939,7 +939,7 @@ autoplay = "Q"
 
 [node name="Computer" parent="Notifications" instance=ExtResource("12_rakbq")]
 visible = false
-z_index = 7
+z_index = 4
 position = Vector2(-306, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

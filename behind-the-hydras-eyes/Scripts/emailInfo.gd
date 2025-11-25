@@ -11,16 +11,18 @@ class_name EmailBrain
 @export_multiline var MainBody:String
 @export_multiline var ReplyBody1:String
 @export_multiline var ReplyBody2:String
-@onready var screen_ui: Control
+@onready var screen_ui: Computer
 @export var alltexts:Array[String]
 @onready var own_label: RichTextLabel = $Button/RichTextLabel
 @export var boss:bool = false
+@export var ownDel:Button
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	own_label.text ="[b]"+Sender_Name+"[/b]\n" +Subject+"\n"+"[i]"+PreviewText+"[/i]"
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
+	ownDel.visible = false
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -43,7 +45,13 @@ func _on_button_pressed() -> void:
 		reset_choices()
 		Dialogic.VAR.Option1 = choiceDialog1
 		Dialogic.VAR.Option2 = choiceDialog2
+	ownDel.visible = true
 
 func reset_choices()->void:
 	Dialogic.VAR.Option1 = ""
 	Dialogic.VAR.Option2 = ""
+
+
+func _on_delete_pressed() -> void:
+	screen_ui.emailsDone +=1	
+	self.queue_free()
