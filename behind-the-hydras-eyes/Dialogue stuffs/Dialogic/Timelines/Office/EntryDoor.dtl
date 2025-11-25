@@ -4,7 +4,7 @@ EntryDoor: You're not quite done for the day just yet.
 [end_timeline]
 label Q2
 EntryDoor: Woah, slow your horses.
-EntryDoor: You can't leave after just one quarter.
+EntryDoor: You can't leave after just one quarter. Well, not before the end of the workday anyway.
 [end_timeline]
 label Q3
 EntryDoor: Steady now, don't fall from the saddle just yet.
@@ -12,5 +12,5 @@ EntryDoor: Things might be rough, but you still can't leave until 5, y'know.
 [end_timeline]
 label Q4
 EntryDoor: ...
-EntryDoor: Whatever.
+EntryDoor: Whatever. Come back in a bit, I guess.
 [end_timeline]

@@ -1,7 +1,7 @@
 jump {CurrentDay}
 label Day01
 BossDoor: The closed door leads to the captain's quarters.
-BossDoor: He is probably busy, keeping this entire company afloat.
+BossDoor: He's probably busy, keeping this entire company afloat.
 BossDoor: From inside, you hear a voice through a speaker loudly commentating on a tennis match.
 [end_timeline]
 label Day02
@@ -12,12 +12,12 @@ BossDoor: Inside, you can hear him laughing with Richard on a call.
 label Day03
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: You hear him swear loudly, and the grumble something the slot machine being rigged.
+BossDoor: You hear him swear loudly, and then grumble something about a slot machine being rigged.
 [end_timeline]
 label Day04
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: The sound of a laugh track drifts from under the door.
+BossDoor: The sound of a laugh track drifts merrily under the door.
 [end_timeline]
 label Day05
 BossDoor: The closed door leads to the captain's quarters.
@@ -27,20 +27,20 @@ BossDoor: You hear him ask his phone to play his "naptime soundtrack".
 label Day06
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: You hear him ask his phone to play his "naptime soundtrack".
+BossDoor: You hear a rubber ball bouncing against the wall.
 [end_timeline]
 label Day07
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: You hear him ask his phone to play his "naptime soundtrack".
+BossDoor: You hear him ask his phone what "comprador" means.
 [end_timeline]
 label Day08
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: You hear him ask his phone to play his "naptime soundtrack".
+BossDoor: The aroma of a full roast dinner with all the trimmings wafts into your nose.
 [end_timeline]
 label Day09
 BossDoor: The closed door leads to the captain's quarters.
 BossDoor: He is probably busy, keeping this entire company afloat.
-BossDoor: You hear him ask his phone to play his "naptime soundtrack".
+BossDoor: You hear him arguing with a lawyer about the legality of "suprise terminations".
 [end_timeline]

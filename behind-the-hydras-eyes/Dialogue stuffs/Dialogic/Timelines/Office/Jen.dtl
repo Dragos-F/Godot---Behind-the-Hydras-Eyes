@@ -67,22 +67,22 @@ label Day03
 if {JenReturn} == true:
 	jump Day03.1
 Jen: Did you hear? We might be getting some new marketing budget!
-Jen: *Jen's eyes sparkle as she pauses and stares longingly into the distance*
-Jen: Mostly to spend on the Mexican side. Y'know, to ease tensions and raise some goodwill.
-Jen: It should be fun to help allocate it, maybe I'll do some market research on brand loyalty. Do you reckon it's best to build brand awareness first,
-Jen: like with posters and merch, or to jump straight into building brand loyalty? Maybe by, like, providing food or fixing someone's house.
+Jen: [i]Jen's eyes sparkle as she pauses and stares longingly into the distance[/i]
+Jen: Mostly to spend on the Mexican side. You know, to ease tensions and raise some goodwill.
+Jen: It should be fun to help allocate it, maybe I'll do some market research on brand loyalty. Do you reckon it's best to build brand awareness first?
+Jen: Like, posters and merch, or to jump straight into building brand loyalty? Maybe by, like, providing food or fixing someone's house.
 - I doubt many on the ground know about us, so maybe awareness?
 	Jen: I'll have a million awareness-raising solutions on your desk shortly then!
 - Definitely loyalty, the resulting word of mouth will help awareness too.
 	Jen: Great point, I'll get brainstorming! Maybe a tiktok video of us feeding the homeless to some viral music?
 - Don't you think that's quite a crass and unempathetic question?
-	Jen: Huh? Oh, are you testing me? *ahem* "By caring for the community we earn their trust in return, and that's what allows our projects and the communities they're in to prosper mutually."
+	Jen: Huh? Oh, are you testing me? [i]Ahem.[/i] "By caring for the community we earn their trust in return, and that's what allows our projects and the communities they're in to prosper mutually."
 Jen: Anyway, I'll let you know when the total amount is finalised, since I assume you'll want to have final say.
 set {JenReturn} = true
 [end_timeline]
 label Day03.1
 Jen: Hey! Budget's still under revision, but that's all I can think about. I hope we have enough to sponsor a vet clinic!
-Jen: Oh, sorry, I'm getting caught up in the possibilities again. 
+Jen: Oh, sorry, I'm getting caught up in the possibilities again.
 Jen: What can I help you with?
 - How're your plants doing?
 	Jen: Oh, I never thought you'd ask!
@@ -91,10 +91,10 @@ Jen: What can I help you with?
 	Dave: Um, yeah, sure.
 - Do you talk to any local press?
 	Jen: Ah, not really. I just do the social media posts and graphic design.
-	Jen: I think we pay some external comms company to deal with all the local government and press releases
+	Jen: I think we pay some external comms company to deal with all the local government and press releases.
 	Dave: So you don't write any of it?
 	Jen: Well, maybe a tagline or a catchy motto. Someone else does all the boring parts.
-	Jen: Can't catch me stringing more than 280 characters at a time.
+	Jen: Can't catch me stringing more than 280 characters at a time unless the pay's worth it.
 	Jen: Unless it's my blog about Naked Dating Island, obviously. There's a LOT to say there!
 - Do you ever get any complaints?
 	Jen: Me? Oh, no. That's not my job. Not that I read my emails anyway, unless someone tells me I need to look at it.
@@ -119,7 +119,7 @@ Jen: After all, what better way to make people associate ForwardGreen with clean
 	Jen: Oh gosh, you moved so quick! I'll take a look in a second.
 	Jen: I'm gonna email Diego from the printing company today and tell him we're one step closer!
 	Jen: Me and him are besties now, we've been emailing for weeks.
-- Oh, great. I'll have a look in a bit
+- Oh, great. I'll have a look in a bit.
 	Jen: Take as long as you need! The whole process has taken so long, we can sit on it for a bit.
 	Jen: Plus, Olu is really slow replying to emails anyway. I feel like there's always more important stuff than my invoices and budgets...
 	Dave: I'm sure he prioritises his work. Finance is a pretty rough department, especially at this scale with so much spending.
@@ -206,12 +206,12 @@ Jen: I can't wait for you guys to see it!
 		Jen: Not with me, but I'm sure Patrick would remember him better.
 - Does the name "Nayeli" ring any bells? | [if {AlexNayeli} == true] [else="hide"]
 	Jen: Is that one of the influencers we paid to come and take selfies with the builders?
-	- No, she seems to be working for a local resistance group
-	- She is complaining to me about the project
+	- No, she seems to be working for a local resistance group.
+	- She is complaining to me about the project.
 		Dave: So if we did pay her, I don't think we should continue...
 	Jen: Oh. I'm so sorry to hear she doesn't like us!
 	Jen: I was hoping that this whole marketing campaign would win around some of those grouches.
-	Jen: I'm sure if we show her some of our promotional materials she'll get excited. 
+	Jen: I'm sure if we show her some of our promotional materials she'll get excited.
 	Dave: She sounds more, uh, passionate about it than that.
 	Jen: No such thing as unpersuadable! Everyone can be marketed to!
 	Jen: Even us!
@@ -222,26 +222,21 @@ Jen: I can't wait for you guys to see it!
 
 label Day06
 if {AlexNayeli} == false:
-	Jen: I was just speaking to the lady the boss has brought in. She seems, uh, nice? 
+	Jen: I was just speaking to the lady the boss has brought in. She seems, uh, nice?
 	[end_timeline]
 else:
-	Dave: [i]Jen's got a few dozen tabs that's she's flitting between, stopping briefly to adjust the font size on a leaflet. She turns slightly as she notices you.[/i]		
-Jen: Oh hey, how're you getting on? It sounds like this project's already involving a lot more work and bad press than anyone expected!		
-Jen: But don't mind that, at least you've got the most stunning and amazing marketing officer ever to grace an office to handle everything, right?		
-Jen: She flashes you the sort of smile that costs money, and swivels around to face you.		
-- Your words, not mine!		
-- That's not quite how I'd describe it.		
-	Jen: What can I say, some things are true no matter who says them or how! 	
-	Dave: [i]For a fraction of a second he face creases as a frown passes over it.[/i]	
-	Jen: And I fear the bad press part was the most true of all. I won't lie, I was a bit startled by the vitriol that those on the ground were getting. What's going on?	
-		- I'm not really sure...
-		- I can't blame them...
-		- Same old story...
-[end_timeline]
-
-label Day08
-if {JenReturn} == true:
-	jump Day08Return
+	Dave: [i]Jen's got a few dozen tabs that's she's flitting between, stopping briefly to adjust the font size on a leaflet. She turns slightly as she notices you.[/i]
+Jen: Oh hey, how're you getting on? It sounds like this project's already involving a lot more work and bad press than anyone expected!
+Jen: But don't mind that, at least you've got the most stunning and amazing marketing officer ever to grace an office to handle everything, right?
+Jen: She flashes you the sort of smile that costs money, whiter than white, and swivels around to face you.
+- Your words, not mine!
+- That's not quite how I'd describe it.
+	Jen: What can I say, some things are true no matter who says them or how!
+	Dave: [i]For a fraction of a second he face creases as a frown passes over it.[/i]
+	Jen: And I fear the bad press part was the most true of all. I won't lie, I was a bit startled by the vitriol that those on the ground were getting. What's going on?
+	- I'm not really sure...
+	- I can't blame them...
+	- Same old story...
 Jen: Hi Dave! I'm sorry to say you really missed out, the conference was great! Wow, where to begin?
 Jen: The atmosphere, the excitement, the mega companies there, the speakers, the merch—oh the merch!
 Jen: I waddled out with tote bags overflowing with pens and notepads and bottles and lanyards and—
@@ -250,9 +245,10 @@ Jen: I waddled out with tote bags overflowing with pens and notepads and bottles
 	Jen: I've got a load of new marketing ideas—had a great brainstorming session with the woman who sends newsletters for that AI company.
 - Glad you enjoyed! I'll catch you around!
 	Jen: Thanks!! I'll get you some merch too next time!
+	Jen: I'm already excited for next years, I loveeee a good conference!
 set {JenReturn} = true
 [end_timeline]
 label Day08Return
 Jen: My posts from the conference are honestly taking off.
-Jen: One of them has 100 likes!
+Jen: One of them has 150 likes!
 [end_timeline]
