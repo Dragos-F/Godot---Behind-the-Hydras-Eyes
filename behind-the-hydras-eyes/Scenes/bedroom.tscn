@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=50 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="32_x75j5"]
 [ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="33_x75j5"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="34_unbiq"]
+[ext_resource type="Texture2D" uid="uid://ddyedx52b00te" path="res://Visual Assets/New Assets/Menus/Computer UIs/news patriot.png" id="36_ek5ei"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_unbiq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_scg7i"]
 [ext_resource type="Script" uid="uid://dl25svddpr1ps" path="res://Scripts/bedroom_specifics1.gd" id="38_ayyhf"]
@@ -596,53 +597,8 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = -7.06689
-offset_top = -31.6074
-offset_right = 577.933
-offset_bottom = 241.393
-scale = Vector2(0.8, 0.8)
-text = "Prime Minister on nationalist protests: \"Some of my best friends are flags\""
-autowrap_mode = 2
-
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
-offset_left = 15.8088
-offset_top = 155.98
-offset_right = 445.809
-offset_bottom = 516.98
-
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "\"Recent protests by nationalist groups have sparked outrage among phone-obsessed loony leftists. Is this reaction justified, or are the snowflakes being too sensitive?
-In a recent survey conducted on the streets of our capital, 3 out of 5 bald white men considered the protests \"\"necessary\"\" and a core part of representing \"\"Fundamental British Values\"\".
-
-A leading Minister originally called for an end to the protest, but was seen at the pub with the organisers of the movement on the same day. Earlier this week his stance changed, readvocating for free speech and right to protest, in the face of restricting laws on the freedom of assembly and association. When asked about his previous comments on the environmental march earlier in the year he said  \"For your weak mind to understand my thinking, you need to take some MindPower pills! I've got a pack right here with me. Everyone should buy some.\"
-					
-In an attempt to bring the nation together, the Prime Minister held a press conference to address worried voters. He spoke greatly of the rich, expansive history of our nation, and how restrictions on protests never stopped the country from achieving its glory. Ultimately, when asked about the increase in flags being flown and painted on public infrastructure he reassured the press: \"I don't fear any flag. Some of my best friends are flags\".							
-
-Later this month, we are expecting another round of protests, and counterprotests, to occur in our streets. If you are concerned about this, we offer a wealth of discounted holiday locations. These include former British colonies, struggling economies and tax havens. 							
-							"
-
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Protest Good
-◦ Snowflakes bad
-◦ Flags are friends"
-
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
-theme_override_constants/separation = 24
-
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-custom_minimum_size = Vector2(5, 0)
-text = "The animal health benefits of battery farming"
-autowrap_mode = 2
-
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-custom_minimum_size = Vector2(5, 0)
-text = "Pigeon arrested under terror charge for standing on sign"
-autowrap_mode = 2
-
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Cat"
-anim = "Doc"
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
+texture = ExtResource("36_ek5ei")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

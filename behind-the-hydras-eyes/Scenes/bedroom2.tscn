@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://pphkrh6xsg3l"]
+[gd_scene load_steps=49 format=3 uid="uid://pphkrh6xsg3l"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6qi5j"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_k5jl3"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="34_11ghq"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="35_yt013"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_4bp7u"]
+[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="36_hcmpi"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_1n7mf"]
 [ext_resource type="Script" uid="uid://diqpv7rj5hd8n" path="res://Scripts/bed_specifics_2.gd" id="38_k5jl3"]
 [ext_resource type="Texture2D" uid="uid://1nbuvpgg5lwn" path="res://Visual Assets/New Assets/Full Screen Scenes/Dave smoking png-export.png" id="39_vcjit"]
@@ -494,66 +495,8 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = 6.277218
-offset_top = -30.625265
-offset_right = 567.4458
-offset_bottom = 242.37514
-scale = Vector2(0.8, 0.8)
-text = "NEW: Which MPs will hit our screens next week?"
-autowrap_mode = 2
-
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
-offset_left = 15.8088
-offset_top = 155.98
-offset_right = 445.809
-offset_bottom = 516.98
-
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "You may have caught Deputy Prime Minister Melanie Rumpelsgit on hit show \"Celebrity Tricksters In Haunted House\", where she bravely talked about her experience dealing with problem tenants as a slum landlord.	
-
-If so, we're sure you've got one main question: which MP will hit your TV screen next? Well, this is the only TV guide you need.
-
-First up we have Sir Humphrey Boggatoady, third earl of Wimplesdown and disgraced former Foreign Secretary, who is on 'Dancing with Devils', where glamorous celebrities reform violent youth convicts through the transformative powers of dance, next Tuesday. Expect fireworks, as his partner is a young man who pled guilty to appearing at a climate protest.
-
-Then, we have Harriet Harrier-Harrier Applesby, the sixth leader of the Conservatives this year and disgraced former Foreign Secretary, who you can see on Thursday as she goes into Bog Brother, the Fenlands' Premier Social Experiment. She'll be appearing alongside a diverse cast of six other right-wing politicians and Humphrey Boggatoady's son Wilf.
-
-Finally, disgraced former Foreign Secretary Shibibly Toddings, will be on \"The Great British Dog Grooming Show\", though due to unfortunate press around Shibibly's past, this season will simply be called \"The Great British Dog Show\". 
-
-Tune in next week for your next pop culture update!								"
-
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ 'MP summer' is here
-◦ Finally, unbiased TV
-◦ Who gets your vote?"
-
-[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
-offset_top = 18.66098
-offset_bottom = 71.45073
-
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
-offset_top = 74.64268
-theme_override_constants/separation = 18
-
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-custom_minimum_size = Vector2(5, 0)
-text = "Bad joke averted, say police after arresting small medium"
-autowrap_mode = 2
-
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-custom_minimum_size = Vector2(5, 0)
-text = "DIY vaginoplasty, and other hot new trends"
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2"]
-custom_minimum_size = Vector2(5, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Games more satanical in good old days, claims bored pastor"
-autowrap_mode = 2
-
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-anim = "Doc"
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
+texture = ExtResource("36_hcmpi")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

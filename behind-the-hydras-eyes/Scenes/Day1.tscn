@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=43 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
+[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="13_wf4m3"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_okst0"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="15_fuc61"]
 
@@ -407,7 +408,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main3" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_fkw1m")]
 z_index = 15
@@ -809,51 +810,8 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = 24.3871
-offset_top = 8.66014
-offset_right = 486.387
-offset_bottom = 97.6601
-scale = Vector2(0.9, 0.9)
-text = "Green is impossible, say Blue and Yellow"
-autowrap_mode = 2
-
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "In their latest party conferences, two of the largest and oldest British parties, vying desperately for the title of most irrelevant, have confirmed their commitment to undermine a green transition by denying first the need, then the methods, and then by singing the national anthem over all following questions. Read on to find out why this is actually a genius move, and how those who don't agree are part of a secretive globalist cabal, from our election specialist, Baron Toph Crasscock.							
-							
-\"The only Green that matters is that which lines the pockets of my two dads: Mr Petrochemical and Mr. Warbucks\"—Triumphant speech given to braying masses of millionaires and their pet journalists.	
-							
-Does this spell the end of the green energy sector in the UK? We gathered three experts on our podcast to discuss, here's the transcript:							
-
-Jom Angerland, angry pensioner: Yes.							
-Gareth Tundersly, women's rights activist: Yes and also I hate t*******.							
-Dr Jane Apperton: The energy sector is a vital part of the UK economy, and a rapid green transition is essential if we want to save the unique ecosystems across our country, as well as prevent catastrophic—							
-Baron Crasscock: And that's all we've got time for. As you can see, the majority of our experts agree that treehugging is the realm of crackpots and, worse, students. A sensible energy policy is that of fire and brimstone. 							
-
-Time will tell whether 'Green politics' is possible in Britain, but we implore all readers to be wary of the rising threat of environmentalist extremists on our proud British soil. 							"
-
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-offset_right = 352.0
-text = "◦ Green agenda?
-◦ Expert Panel Says No
-◦ Reject Green Scam"
-
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
-offset_right = 336.0
-offset_bottom = 394.0
-theme_override_constants/separation = 22
-
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-text = "Oodles of poodles: canine fashion week under fire for lack of diversity"
-autowrap_mode = 2
-
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-text = "Perfect summer party vibes: floods bring beaches to you"
-autowrap_mode = 2
-
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Doc"
-anim = "Cat"
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
+texture = ExtResource("13_wf4m3")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

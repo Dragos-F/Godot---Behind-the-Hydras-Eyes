@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bwesthwpicym7"]
+[gd_scene load_steps=64 format=3 uid="uid://bwesthwpicym7"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_h2npb"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_meadn"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_e8b16"]
 [ext_resource type="Script" uid="uid://cvvd6kahm84nf" path="res://Scripts/specifics_5.gd" id="14_h2npb"]
 [ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_m7jpg"]
+[ext_resource type="Texture2D" uid="uid://ddyedx52b00te" path="res://Visual Assets/New Assets/Menus/Computer UIs/news patriot.png" id="15_t6dyq"]
 [ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_ceivk"]
 [ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_ui2j1"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="18_5h2hh"]
@@ -668,6 +669,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_3xk2j")
 }
 
+[node name="ScreenUI_BrowserThing_TabContainer_O-NO Alert_Related News_VBoxContainer#Label3" type="Label" parent="."]
+custom_minimum_size = Vector2(5, 0)
+theme_override_font_sizes/font_size = 18
+text = "Eating croissants unpatriotic, declare British farmers"
+autowrap_mode = 2
+
 [node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_u6ljm")
 BossScreen = NodePath("../BossScreen")
@@ -1022,78 +1029,8 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
-offset_left = -8.973217
-offset_top = -69.91066
-offset_right = 466.6499
-offset_bottom = 203.08916
-text = "War? PISS says: about time! "
-autowrap_mode = 2
-
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
-offset_left = 25.3403
-offset_top = 124.552
-offset_right = 455.34
-offset_bottom = 531.552
-
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
-text = "This week, a military parade descends on the city, joyously celebrating the hard work of our many service-men and -women who keep us all safe. I'm here with a campaigner for Protectors of Integrity, Servicemen and Society (PISS), who are currently lobbying for greater military spending.	
-
-Sir Wilbur Sàuságe, what do you think of this parade?	
-You'll hear snowflakes complaining that rolling tanks and every model of bullet-proof vehicle in existence through our streets is not a fruitful use of our time or resources. To they's and them's, I say: look at the glorious red trails painting a flag across a grey sky, fine penmanship by the latest F-53s. A symbol of hope and strength. I'm not too proud to say I shed a tear, thinking about the courageous men—and it's always mostly men, let's face it—that've given their lives for our great nation.			
-
-And what message do you hope it gives people?			
-To see the pristine uniforms and disciplined choreography is to feel a sudden urge to stand and fight for our country. With this, I am glad the Defence Secretary agrees, having today announced increased incentives to enroll! While this is vindicating, I still call for further spending and war preparedness, as we never know when we might have to pre-emptively strike an enemy to maintain peace.						
-								
-You've said before that only cowards don't enroll, correct?				
-Yes. Cowards and hippies.				
-								
-Yet you've never enrolled?								
-I'd march myself into a barracks this instant, if not for my existing commitment to the preservation of journalistic integrity and free speech. Alas, my humble role is here, on the soap-box, a modern day Martin Luther, and I'm told that I actually have huge support from the troops, so—								
-								
-Okay, okay. Well, thank you for speaking to us. We'll include Wilbur's latest petition below. Can you tell our viewers what it is?					
-Mandatory service for dogs."
-
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
-text = "◦ Parade inspires all
-◦ 'Soldiers heroes'
-◦ 'PISS not yellow' "
-
-[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
-offset_top = 18.66098
-offset_bottom = 78.847755
-
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
-offset_top = 78.57121
-offset_bottom = 241.0
-theme_override_constants/separation = 17
-
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
-custom_minimum_size = Vector2(5, 0)
-text = "No men like snowmen: strange viral sex trend"
-autowrap_mode = 2
-
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
-custom_minimum_size = Vector2(5, 0)
-text = "Why you should choo-choo-choose to keep trains privatised"
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2"]
-custom_minimum_size = Vector2(5, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Eating croissants unpatriotic, declare British farmers"
-autowrap_mode = 2
-
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-position = Vector2(184.96, 117.856)
-anim = "Update"
-
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
-offset_left = -4.76745
-offset_top = 231.784
-offset_right = 95.2325
-offset_bottom = 260.784
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
+texture = ExtResource("15_t6dyq")
 
 [node name="Emails" parent="ScreenUI/BottomBar" index="0"]
 anchor_left = 0.0
