@@ -22,7 +22,7 @@ class_name EmailBrain
 func _ready() -> void:
 	own_label.text ="[b]"+Sender_Name+"[/b]\n" +Subject+"\n"+"[i]"+PreviewText+"[/i]"
 	screen_ui = get_tree().current_scene.get_node("ScreenUI")
-	ownDel.visible = false
+	ownDel.disabled = true
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -45,7 +45,7 @@ func _on_button_pressed() -> void:
 		reset_choices()
 		Dialogic.VAR.Option1 = choiceDialog1
 		Dialogic.VAR.Option2 = choiceDialog2
-	ownDel.visible = true
+	ownDel.disabled = false
 
 func reset_choices()->void:
 	Dialogic.VAR.Option1 = ""
@@ -53,5 +53,12 @@ func reset_choices()->void:
 
 
 func _on_delete_pressed() -> void:
-	screen_ui.emailsDone +=1	
+	screen_ui.emailsDone +=1
+	screen_ui.MainEmailBody.text= ""
+	screen_ui.Sender.text=""
+	screen_ui.ToBox.text= ""
+	screen_ui.selectedTexts.clear()
+	screen_ui.reply.visible = false
+	screen_ui.reply.disabled = true
+	screen_ui.hint_text.visible = false
 	self.queue_free()

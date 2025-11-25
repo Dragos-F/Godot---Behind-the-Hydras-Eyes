@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 
 
-@export_enum("Doc","Cat","Update") var anim:String
+@export_enum("Doc","Cat","Update","Knocks","Love","Smoking","Vacuum") var anim:String
 @export var PopUp:Control
 
 

@@ -75,6 +75,8 @@ func _on_reply_pressed() -> void:
 		inbox_buttons.assign(summaries_container.find_children("Button"))
 		if (inbox_buttons!=null):
 			for i in inbox_buttons:
+				if i.find_child("Delete") != null:
+						i.find_child("Delete").disabled = true
 				i.disabled = true
 				
 	elif choiceEmail:
