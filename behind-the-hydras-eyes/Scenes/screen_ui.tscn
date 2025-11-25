@@ -787,7 +787,6 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Budget" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 12.0
@@ -2889,6 +2888,11 @@ offset_right = 386.97992
 offset_bottom = 307.44348
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ujna0")
 
+[node name="Outlet Logo" type="Sprite2D" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+position = Vector2(199.2089, 77.62393)
+scale = Vector2(1.324882, 1.3651675)
+texture = ExtResource("37_yhhrm")
+
 [node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer")]
 visible = false
 layout_mode = 2
@@ -3135,11 +3139,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="KeyboardTarget" type="Node2D" parent="."]
 position = Vector2(775, 951)
-
-[node name="Outlet Logo" type="Sprite2D" parent="."]
-position = Vector2(228.00002, 155)
-scale = Vector2(1.39, 1.39)
-texture = ExtResource("37_yhhrm")
 
 [connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]
 [connection signal="pressed" from="MainEmail/Reply" to="." method="_on_reply_pressed"]
