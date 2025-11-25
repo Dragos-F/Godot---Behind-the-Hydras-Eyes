@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cfwn1gpwpkhb0"]
+[gd_scene load_steps=53 format=3 uid="uid://cfwn1gpwpkhb0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_2v33i"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_vv8s7"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_e7355"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_r7utf"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="14_o1oqo"]
-[ext_resource type="Texture2D" uid="uid://ddyedx52b00te" path="res://Visual Assets/New Assets/Menus/Computer UIs/news patriot.png" id="15_4uy8g"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_wgaeq"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_j7ewo"]
 [ext_resource type="Script" uid="uid://cgwniat6428ye" path="res://Scripts/specifics_9.gd" id="16_w3uu3"]
@@ -730,8 +729,56 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
-texture = ExtResource("15_4uy8g")
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+offset_left = 24.3871
+offset_top = 8.66014
+offset_right = 579.42017
+offset_bottom = 97.66014
+scale = Vector2(0.735, 0.735)
+text = "What is GOO? The craze that's swept London"
+autowrap_mode = 2
+
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+text = "Ten days ago, adverts began to spring up all over the udnerground. No-one knows who puts them up, no-one knows what they mean, but they appear in clusters at night, spreading like a virus. Their message is simple: GOO.								
+						
+So who, or what, is GOO? 								
+								
+Our reporter, Gab, took to the streets to find out - but, spoilers, everyone else is as confused as we are. Even, or perhaps especially, those that are diehard fans. 								
+								
+Gab: So, let me get this straight, you think the posters are being put up by mind controlled rats?								
+\"Jibble\": Aye.								
+Gab: Wow. Please, expand on that.								
+\"Jibble\": *spits* I do my cleaning rounds every night, and I don't see nobody. And yet, sometimes when I double back, they're just there. Like I'm being haunted.								
+Gab: Like a ghost is putting them up?								
+\"Jibble\": No, stupid. Ghosts aren't real. Around these parts, only rats are real.								
+								
+We stopped and asked a few other people, who all said some variation of \"another fucking street interview? Kill yourself\". 								
+								
+So, our investigation meets a dead end. We must all wait for answers together, rumours and paranoia festering. Anyway, join us next week for our special holiday installment: which high pitched siren is best to ward away teenagers on Halloween?								
+								"
+
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+offset_right = 352.0
+text = "◦ People going goo-goo
+◦ What is happening?
+◦ What is GOO?!"
+
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+offset_right = 336.0
+offset_bottom = 394.0
+theme_override_constants/separation = 22
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+text = "Oodles of poodles: canine fashion week under fire for lack of diversity"
+autowrap_mode = 2
+
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+text = "Perfect summer party vibes: floods bring beaches to you"
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+animation = &"Doc"
+anim = "Cat"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

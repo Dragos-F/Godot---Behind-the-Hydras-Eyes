@@ -25,10 +25,10 @@ Mum: What? If you're worried about me you'll come up and visit instead of making
 - Ask about your brother.
 	Dave: Alright okay, let's not get bogged down talking about me. How's your other son?
 	Mum: Oh, the golden child? He's fine, he actually comes to see his parents, isn't that nice?
-	Dave: Alright, well I'm glad Andrew's—
+	Dave: Alright, well I'm glad Andrews—
 	Mum: He brings food, he brings my medication, he actually talks to us. 
 	Mum: Rose says that this is exactly why everyone should have two children. A back up in old age. 
-	Mum: ...Of course, MOST parents have both of their children helping them.
+	Mum: Of course, MOST parents have both of their children helping them.
 	Dave: I do help all the ti—
 	Mum: Financial help isn't the same as being here, hun, you're not some sort of itinerary.
 	Dave: Itinerant, mum.
@@ -36,44 +36,44 @@ Mum: What? If you're worried about me you'll come up and visit instead of making
 - Try to get off the phone.
 	Dave: Alright, alright. Well, I'm glad we could catch up.
 	Mum: Oh, didn't you want to hear about Rose's grandchildren's new—?
-	- Right mum. Talk to you later.
+	- Right mum. Talk to you later
 		Mum: Have an easy day sweetie! You know where we are if you need us, and we'll always support you if you move back.
+		Dave: Yeah, thanks. Love you, bye.
+		[end_timeline]
 	- Say Hi to Dad from me.
 		Dave: I've got to go, but pass on my love to dad. I hope he's not taking on too much work.
 		Mum: He says hi. He's been going round Mrs Colbridge's a lot, to listen to her complain and complain and complain about her garden.
 		Mum: I think she wants to do it up, and your dad has been telling her he can do it, but she thinks he doesn't have any taste or sense.
 		Mum: Which, obviously, he doesn't.
-Dave: Right. Okay. Gotta go mum, I'm almost at my stop. Love you.
+Dave: Right. Okay. Gotta go mum, I'm almost at my stop. Love you,
 Mum: Okay hun, take care! Love you, bye bye! Call me again soo—
 [end_timeline]
 
 label Quarter3
 Mum: Morning love! Have you heard the news?
-Dave: No, what happened? Is everyone okay?
+Dave: What happened?
 Mum: Mrs Colbridge finally let your dad do her garden up!
-Dave: Oh, I thought something had happ—
-Mum: Well, it's pretty big news here in the village.
-Mum: You know how much he's been complaining about her unkempt shrubbery.
-Mum: I haven't seen him move so quick after she rang the house to tell him she's finally ready.
-Dave: Well, great to hear he's getting some outdoor activity in.
-Mum: Yeah, he's been a bit too stationary for a while.
+Dave: Oh, I thought something had happened
+Mum: Well, it's pretty big news here in the village
+Mum: You know how much he's been complaining about her unkept hedge, and all
+Mum: I haven't seen him move so quick after she rang the house to tell him she's finally ready
+Dave: Well, great to hear he's getting some outdoor activity in
+Mum: Yeah, he's been quite stationary for a while
 Mum: ...
 Mum: It was nice to see you a few weeks ago...
-- We're not doing this again.
+- We're not doing this again
 	Mum: Doing what?
-	Dave: I was happy to drop by, but please don't try and guilt trip me into coming home again.
-	Mum: Well there you go again blaming me for the fact that we love you! Like it's some sort of crime!
-	Dave: I'm just very busy mum, nothing else. I'll come up when I can next.
+	Dave: I was happy to drop by, but you're just gonna guilt trip me into coming by again
+	Mum: Well there you go again blaming me for the fact that we love you!
+	Dave: I'm just very busy mum. I'll come up when I can next
 - Yeah, absolutely. Glad you guys are well
-	Mum: Well, if you get to work fully from home you could be closer. One of those new remote control jobs?
-	Dave: Remote.
-	Mum: ...Maybe even move back in the village. Somewhere up the road.
-	Mum: House prices here are much better, you know. Proper houses. Affordable. Even on your wage.
-	Dave: Mum, I'm not moving back home.
-	Dave: Wait, I earn more than Andrew, so don't go making people think—
-	Mum: I'm just saying it would be a good idea. To be close to family. Stop paying rent to a faceless slumlord.
-Mum: I'm just worried that I'll be lonelier with your dad being next door all the time, pruning and grunting and getting his hands dirty.
-Dave: He's only gonna be there for a week or two mum, it's not a big deal.
-Dave: No need to overreact.
+	Mum: Well, if you get to work fully from home you could be closer
+	Mum: Maybe even move back in the village
+	Mum: House prices here are much better
+	Dave: Mum, I'm not moving back home
+	Mum: I'm just saying it would be a good idea,
+Mum: I'm just worried that i'll be lonier with your dad being next door all the way
+Dave: He's only gonna be there for a week or two mum
+Dave: No need to overreact
 Mum: What if he's having an affair?!
-Dave: He's not mum. You know he's not. You'll be fine. I've got to go. Love you, bye.
+Dave: He's not mum. You'll be fine. Gotta go

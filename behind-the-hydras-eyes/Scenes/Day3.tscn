@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bwonmfg7rplbu"]
+[gd_scene load_steps=54 format=3 uid="uid://bwonmfg7rplbu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_gx0c7"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_d7jx5"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_wrxha"]
 [ext_resource type="Script" uid="uid://8oqbyu55mwhn" path="res://Scripts/specifics_3.gd" id="14_gx0c7"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="15_cne7c"]
-[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="15_lefky"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="16_rdv6d"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="17_cj043"]
 
@@ -573,7 +572,7 @@ _data = {
 &"move_Moz": SubResource("Animation_gx0c7")
 }
 
-[node name="Main3" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_gx0c7")]
 z_index = 15
@@ -968,8 +967,57 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
-texture = ExtResource("15_lefky")
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.34622
+offset_top = -261.76843
+offset_right = 345.6515
+offset_bottom = -126.76842
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.67, 0.67)
+text = "Commemorative Poppy hospitalises three"
+autowrap_mode = 2
+
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+text = "This year's poppy season is upon us, with sightings of MPs already bedecked in sparkly red pins two weeks ago, keen not to be left out. Unfortunately, this year's rememberance, usually a time of such joy, has also brought grievous bodily harm.	
+
+Outside Westminster, a giant novelty poppy was unveiled yesterday by the brash new Housing Secretary. Suspended above the entrance of the House of Commons by a crane, this huge 8ft-by-8ft poppy \"proves once and for all that our party is the most patriotic\". 
+		
+Standing with the minister were a delegation of young cadets, there to symbolise the heroic future of the British military. After this triumphant speech, including a spit-flecked cry that \"landlords, the police, and doctors that don't join strikes are the true carriers of the spirit of Normandy\", the aforementioned giant effigy fell from the crane, crushing three children.								
+
+Speaking today to journalists, the Housing Secretary said: \"We expect the children to make remarkable recoveries and return to active du—sorry, I mean, school. I spoke to one parent who reassured me that this honest mistake was 'character building'. I also want to stress that the government strongly rejects jobless detractors claiming this is some sort of omen. We won't be cowed, and will be reducing university funding in order to have an even bigger poppy next year. Thank you.\"								
+								
+								
+								"
+
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+offset_right = 352.0
+text = "◦ Celebration mishap
+◦ Poppy at large
+◦ Child 'likely' fine"
+
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+offset_right = 336.0
+offset_bottom = 394.0
+theme_override_constants/separation = 22
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+text = "A shoe-in: poll decides Britain's favourite sock"
+autowrap_mode = 2
+
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+text = "Rise of \"gooning\" could help proselytisation, claims priest"
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+animation = &"Cat"
+anim = "Cat"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

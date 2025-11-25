@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://b8khy38y6cpun"]
+[gd_scene load_steps=118 format=3 uid="uid://b8khy38y6cpun"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_ddjcg"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_gst1s"]
@@ -24,7 +24,6 @@
 [ext_resource type="Script" uid="uid://dmhbe5pq5b8js" path="res://Scripts/specifics_6.gd" id="14_gst1s"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_d01yk"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_a7k0c"]
-[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="20_ssufr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r70fk"]
 radius = 90.0347
@@ -993,7 +992,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main3" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_ddjcg")]
 z_index = 15
@@ -1383,8 +1382,48 @@ offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/NOM—News Feeder" index="6"]
-texture = ExtResource("20_ssufr")
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+offset_left = 34.871807
+offset_top = 7.678005
+offset_right = 634.4121
+offset_bottom = 142.67801
+scale = Vector2(0.655, 0.655)
+text = "Tragedy hits British-owned windfarm project \"Lagoon Breeze\""
+autowrap_mode = 2
+
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+text = "Yesterday, at 8pm CST, two bodies, 47 and 26, were discovered after a small flashflood disturbed their shallow graves.	
+	
+Police quickly categorised these deaths as the result of gang violence, implementing harsh restrictions including travel bans and a curfew. Locals reject this though, arguing they're linked to the anti-turbine protests, and claiming that it was a politically motivated killing carried out by a drug cartel acting as mercenaries for ForwardGreeen.
+				
+The British company, headed by Patrick Moore, were quick to dismiss these claims as paranoid superstition, offering condolences to the families of the dead, but these deaths—along with another tragic accident last week which caused the death of an engineer—meant that a riot quickly formed in spite of heavy police presence. After having succeeded in ripping down much of the fencing around the project, rioters retreated under a hail of rubber bullets to the cover of a hastily fabricated network of road barricades.
+				
+When asked for a statement, a local mayor told us that \"while the tensions are still ongoing, with a police ring formed around the remaining barricades this morning, we are sure we can de-escalate so that our generous international investors can continue with constructions and augment the economy.\"	
+
+Maria, a local, reached out to us to state that one of the bodies was her father, a respected farmer and pillar of the community, who will be sorely missed. She explains that he was not a vigilante, just a man who wanted compensation for his life's work and the ability to continue supporting his family, and who had tried to stand up to for his daughters despite his anxiety. When asked about her views on ForwardGreen, she declined to comment."
+
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+offset_right = 352.0
+text = "◦ Tragic mystery
+◦ CEO says \"wasn't us\"
+◦ Bottom line still green"
+
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+offset_right = 336.0
+offset_bottom = 394.0
+theme_override_constants/separation = 28
+
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+text = "Man seen playing flute leading line of rats through Luton"
+autowrap_mode = 2
+
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+text = "What is GOO, and how you can stay safe"
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+animation = &"Doc"
+anim = "Cat"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
