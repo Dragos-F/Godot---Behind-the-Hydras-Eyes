@@ -702,8 +702,12 @@ texture = ExtResource("10_53qxh")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 emailsProgressionQuota = 4
+
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = true
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -870,6 +874,42 @@ Dave							"
 texture_filter = 1
 autowrap_mode = 0
 
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="6" instance=ExtResource("12_lauko")]
+layout_mode = 2
+Sender_Name = "IT Service Desk"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Re: Missing Password Reset"
+PreviewText = "Hi Dave! Alex mentioned to us that you"
+MainBody = "Hi Dave!
+
+Alex mentioned to us that you still don't have access to the company portal. You should've had an email from the system, with a link to reset, but don't stress, we've done that for you now.
+
+We've generated you a temporary password: k5@K;SA6@,Yg>_n$.
+
+Please make sure to log in before this expires, as it would then required another reset.
+
+Thanks!
+
+
+Best,	
+IT Service Desk"
+ReplyBody1 = "Hi there,
+
+Thanks for your email.
+To be clear, how long do I have before this password expires?
+
+
+Dave Spritely,
+UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="MainEmail" parent="ScreenUI" index="1"]
+visible = true
+
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1008,6 +1048,9 @@ offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
+[node name="BrowserThing" parent="ScreenUI" index="3"]
+visible = false
+
 [node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1028,7 +1071,6 @@ offset_top = -69.91066
 offset_right = 466.6499
 offset_bottom = 203.08916
 text = "War? PISS says: about time! "
-autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
 offset_left = 25.3403
@@ -1238,5 +1280,6 @@ visible = false
 [editable path="ScreenUI/EmailList/SummariesContainer/TooExpensive"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Flooding"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Competition"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail3"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

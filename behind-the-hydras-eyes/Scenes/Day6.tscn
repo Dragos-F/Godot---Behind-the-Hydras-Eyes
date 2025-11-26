@@ -1319,7 +1319,7 @@ Subject = " Our silence differs to yours"
 PreviewText = "You of course know how and why your reply served"
 MainBody = "Dear Dave,
 
-You of course know how and why your reply served to speak past us rather than to us. How it responded to a real issue with empty PR, how it ignored the fact that proper research into harmful side-effects has not been carried out simply because the harm is carried by a people easy to ignore. In effect, your reply was part of a wall of silence erected to allow you to refuse to engage with us, to spare your conscience from us. We are rendered silent by the crushing weight of a machinery of death you harness against us without understanding. You are rendered silence by your own lack of empathy. 
+You of course know how and why your empty reply served to speak past us rather than to us. How empty PR is will not heal our wounds, how it ignored the fact that proper research into harmful side-effects has not been carried out simply because the harm is carried by a people easy to ignore. This is part of a wall of silence erected to allow you to refuse to engage with us, to spare your conscience from us. We are rendered silent by the crushing weight of a machinery of death you harness against us without understanding. You are rendered silence by your own lack of empathy. 
 
 Our silence is not the same,
 Nayeli, spokesperson for Strike the Hydra's Heart"
@@ -1389,7 +1389,6 @@ offset_right = 634.4121
 offset_bottom = 142.67801
 scale = Vector2(0.655, 0.655)
 text = "Tragedy hits British-owned windfarm project \"Lagoon Breeze\""
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "Yesterday, at 8pm CST, two bodies, 47 and 26, were discovered after a small flashflood disturbed their shallow graves.	

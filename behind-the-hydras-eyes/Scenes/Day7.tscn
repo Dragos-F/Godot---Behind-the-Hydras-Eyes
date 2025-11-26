@@ -1300,7 +1300,6 @@ texture_filter = 1
 autowrap_mode = 0
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
-visible = false
 Sender_Name = "Miguel Lopez"
 Subject = "Lagoon Breeze EIA"
 PreviewText = "I hope you're well."
@@ -1325,32 +1324,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
-layout_mode = 2
-Sender_Name = "Miguel Lopez"
-ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessme"
-PreviewText = "Thank you for taking"
-MainBody = "Good afternoon Dave.
-
-Thank you for taking the time to respond to my previous email. Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
-
-Regards,
-Miguel Lopez"
-ReplyBody1 = "Good afternoon Miguel,
-
-I am sorry that you are unsatisfied with my previous response, but I am the incorrect point of contact for this enquiry. I can only assure you that, as a requirement to begin construction, we must have completed the assessment. If you have any other questions, please do not hesitate to reach out.
-
-Kind regards,
-Dave Spritely, 
-UK Project Lead
-Forward Green"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
 layout_mode = 2
 Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -1376,7 +1350,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_3oh5d")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
 visible = false
 layout_mode = 2
 Sender_Name = "Miracure"
@@ -1427,7 +1401,6 @@ offset_right = 665.0052
 offset_bottom = 143.66014
 scale = Vector2(0.67, 0.67)
 text = "AI industry collapses, British economy follows"
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "For decades, the British economy has rested on a series of bubbles, which the government has tried desperately to fortify, pumping billions in taxpayer money on propping up extra-ordinarily wasteful private enterprises.
@@ -1561,7 +1534,6 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]

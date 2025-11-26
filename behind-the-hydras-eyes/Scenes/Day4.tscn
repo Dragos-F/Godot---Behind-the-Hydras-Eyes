@@ -777,7 +777,7 @@ Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessme"
 PreviewText = "Thank you for taking"
 MainBody = "Good afternoon Dave.
 
-Thank you for taking the time to respond to my previous email. Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
+Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
 
 Regards,
 Miguel Lopez"
@@ -969,7 +969,6 @@ offset_right = 817.41003
 offset_bottom = 172.67668
 scale = Vector2(0.585, 0.585)
 text = "“RainbowHope” defaces “unsightly” concrete wall in village of Hedgewater."
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "Police in the village of Hedgewater received over 304 complaints this week concerning a major act of vandalism committed in the village centre. Photos on social media show graffiti sprayed on the wall of Clover Lodge, a charity-run hostel that was shuttered three years ago after numerous reports of “unfamiliar, unsavoury visitors”. The wall faces directly onto the Overflow Parking area of the village gentlemen’s club, leaving some members “audibly upset” according to the manager.
