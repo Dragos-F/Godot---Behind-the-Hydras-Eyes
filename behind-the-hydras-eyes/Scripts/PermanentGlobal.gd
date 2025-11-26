@@ -5,9 +5,12 @@ extends Node
 @onready var Lifestyle:String
 @onready var Plant:bool = false
 @onready var email_choices = {}
-
+var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse normal.png")
+var finger = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse finger.png")
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(reset_focus)
+	Input.set_custom_mouse_cursor(arrow)
+	Input.set_custom_mouse_cursor(finger,Input.CURSOR_POINTING_HAND)
 	
 
 
