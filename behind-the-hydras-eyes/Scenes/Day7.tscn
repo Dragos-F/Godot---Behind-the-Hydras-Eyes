@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://dtf5vs15jiut0"]
+[gd_scene load_steps=122 format=3 uid="uid://dtf5vs15jiut0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_3eksu"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lt3sq"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="15_4uukd"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="16_klie1"]
 [ext_resource type="Script" uid="uid://16pyb8c1gso8" path="res://Scripts/specifics_7.gd" id="19_jc8h6"]
+[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="22_3oh5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r70fk"]
 radius = 90.0347
@@ -998,7 +999,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main4" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_3eksu")]
 z_index = 15
@@ -1326,33 +1327,58 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
+[node name="Perez3A" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
+visible = false
 layout_mode = 2
 Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Our Support"
-PreviewText = "I hope you are well"
-MainBody = "Good afternoon ForwardGreen team! 
+Subject = "Re: Our Support"
+PreviewText = "Good afternoon again Dave!"
+MainBody = "Good afternoon again Dave!	
 
-I hope you are well. I have heard that there has been some slight pushback from certain residents about your project. I am writing to assure you that many residents, a silent majority perhaps, actually support the projects aims of renewable modernisation, and will welcome the money and opportunities that it will bring to the region. So, please do not let any vocal minorities dissuade you in your investment in our humble region. If the project is a success, we would in fact be interested in collaborating further.
+
+As per our agreement, we've used our local business links to mobilise resources in favour of your project. A little extra incentives, a little exta muscle, etc. We've also used the opportunity to convince a few more people to sign over their land, so you know who to come to if you want to expand the farm. My people tell me one unfortunate soul died during these negotiations, unrelated to us, of course, but that is the cost of protecting our stake holders. I needn't tell you to disregard any requests for comments from the media.
 
 Regards,
-Mr Perez,
-Chair of the Entrepreneurial Business Alliance"
-ReplyBody1 = "Good afternoon Mr Perez,
+Mr Perez, Chair of Landlord Alliance"
+ReplyBody1 = "Good afternoon Mr Perez,	
 
-Thank you for expressing your support. We here at FutureGreen are glad to have the backing of the local business community, and look forward to our continuing positive relations.
 
-Kind regards,
-Dave Spritely, 
-UK Project Lead
-ForwardGreen"
+Thank you for your assistance in facilitating our project, and for your advice regarding the media - though of course media relationships are handled by our cabable marketing officer, I will pass on your advice. We wish you the best, and look forward to working more closely with you in the future.
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
+Kindest regard,	
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Perez3A/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
+[node name="Perez3AB" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
+layout_mode = 2
+Sender_Name = "Mr Perez"
+ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
+Subject = "Re: Our Support"
+PreviewText = "Good afternoon again Dave!"
+MainBody = "Good afternoon again Dave!	
+
+You naively turned down our offer of assistance, but yours is not the only interest here. We have too much invested in your little project to let it fail, so - to put it simply - we won't. In case you're also naive enough to speak to the press: don't. Best just to ignore their attempts to whip up a storm, and buckle down to finish the project. And once it's done, you know who to come to for land should there be an expansion.
+
+
+Regards,
+Mr Perez, Chair of Landlord Alliance"
+ReplyBody1 = "Good afternoon Mr Perez,
+
+I appreciate your correspondance, but want to make it clear that my previous email was intended to be simply an affirmation of our continued relationship, not a sanctioning of any further actions outside of that. Our media relationships, like our PR, is handled by a capable marketing officer and outside complications are only likely to risk unbalancing a complicated situation on the ground.
+
+
+Kindest regard,
+Dave Spritely, UK Project Lead"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Perez3AB/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_3oh5d")]
 visible = false
 layout_mode = 2
 Sender_Name = "Miracure"
@@ -1402,6 +1428,8 @@ offset_top = 8.66014
 offset_right = 665.0052
 offset_bottom = 143.66014
 scale = Vector2(0.67, 0.67)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
 text = "AI industry collapses, British economy follows"
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
@@ -1417,6 +1445,14 @@ text = "◦ Recession, again?
 ◦ We're all used to it now
 ◦ Just another Monday"
 
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
+
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
+
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
 offset_bottom = 394.0
@@ -1431,8 +1467,11 @@ text = "Lady of lake disappointed as teens too busy on phones to accept mystical
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Doc"
-anim = "Cat"
+animation = &"Knocks"
+anim = "Knocks"
+
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+texture = ExtResource("22_3oh5d")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
@@ -1446,7 +1485,7 @@ visible = false
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain", "CompNotif")]
+[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain", "CompNotif", "Perez3A", "Perez3B")]
 script = ExtResource("19_jc8h6")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -1454,6 +1493,8 @@ DoorNotif = NodePath("../Notifications/Door")
 StickyNotif = NodePath("../Notifications/Clipboard")
 brain = NodePath("../DayBrain")
 CompNotif = NodePath("../Notifications/Computer")
+Perez3A = NodePath("../ScreenUI/EmailList/SummariesContainer/Perez3A")
+Perez3B = NodePath("../ScreenUI/EmailList/SummariesContainer/Perez3AB")
 
 [node name="Timer" type="Timer" parent="Specifics7"]
 wait_time = 2.0
@@ -1536,7 +1577,8 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Perez3A"]
+[editable path="ScreenUI/EmailList/SummariesContainer/Perez3AB"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

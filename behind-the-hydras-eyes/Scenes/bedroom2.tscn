@@ -501,6 +501,7 @@ offset_top = -30.625265
 offset_right = 567.4458
 offset_bottom = 242.37514
 scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "NEW: Which MPs will hit our screens next week?"
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -527,9 +528,13 @@ text = "◦ 'MP summer' is here
 ◦ Finally, unbiased TV
 ◦ Who gets your vote?"
 
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
 [node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
 offset_top = 18.66098
 offset_bottom = 71.45073
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_top = 74.64268
@@ -553,7 +558,7 @@ text = "Games more satanical in good old days, claims bored pastor"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-anim = "Doc"
+anim = "Vacuum"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
@@ -586,6 +591,7 @@ texture = ExtResource("39_vcjit")
 position = Vector2(601, 257)
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="ScreenUI" method="_on_save_button_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 
 [editable path="Furniture/Balcony Door/InteractableElement"]

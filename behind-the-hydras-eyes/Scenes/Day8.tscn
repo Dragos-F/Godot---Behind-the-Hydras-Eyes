@@ -855,7 +855,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main4" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_555dt")]
 scale = Vector2(2, 2)
@@ -1164,6 +1164,7 @@ offset_top = -49.2858
 offset_right = 557.902
 offset_bottom = 223.714
 scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "The way is Forward, the way is Green"
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -1190,6 +1191,12 @@ text = "◦ We love green!
 ◦ We're squeaky-clean!
 ◦ Rumours are SO boring"
 
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24
 
@@ -1205,7 +1212,7 @@ autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
 position = Vector2(184.96, 117.856)
-anim = "Update"
+anim = "Vacuum"
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
 offset_left = -4.76745

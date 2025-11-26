@@ -249,7 +249,7 @@ scale = Vector2(2, 2)
 layout_mode = 0
 offset_left = 112.0
 offset_top = 381.0
-offset_right = 353.0
+offset_right = 370.0
 offset_bottom = 453.0
 theme_override_fonts/font = ExtResource("4_0pswh")
 theme_override_font_sizes/font_size = 39
@@ -268,7 +268,7 @@ text = "Close
 
 [node name="Credits" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 624.0
+offset_left = 605.0
 offset_top = 383.0
 offset_right = 837.0
 offset_bottom = 455.0

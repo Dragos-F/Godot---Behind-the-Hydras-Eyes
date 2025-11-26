@@ -68,6 +68,7 @@ Boss: And you're meant to be the one swatting them. Or zapping them, crushing th
 	Dave: ...buzz.
 	Boss: Fine, fine. That loser Miguel for starters. You've seen him, right? Some do-gooder busybody trying to find loopholes to shut us down.
 	- Well, do we have an EIA?
+		set {BossUpset} += 1.0
 		Boss: [wave amp=50.0 freq=5.0 connected=1]"Do we have an EIA?"[/wave]
 		Boss: Fuck off. What are you, a judge?
 		Dave: ...
@@ -75,6 +76,7 @@ Boss: And you're meant to be the one swatting them. Or zapping them, crushing th
 		Boss: You should've already handled him! Your job should be simpler than Olu's or Richard's, so stop fucking it up, alright?
 		Boss: If the project goes under, then, well, it brings me no joy to say this, but it'll be YOUR fault that I'll have to lay a load of people off.
 		- Is ForwardGreen struggling financially?
+			set {BossUpset} += 1.0
 			Boss: No.
 		- ...Yes, sir.
 			Boss: Good lad.
@@ -83,6 +85,7 @@ Boss: And you're meant to be the one swatting them. Or zapping them, crushing th
 	Boss: Look, you seem a good kid, but, and it really pains me to say this, if you keep fucking up, it'll be your fault I have to lay people off.
 	Boss: So you better hope Lagoon Breeze gets finished.
 	- I can't control the protests!
+		set {BossUpset} += 1.0
 		Boss: Life's unfair, kid. You were hired to push things over the line, and if you don't, or can't, than the buck stops with you.
 		Boss: Not me.
 	- Yes. Of course sir.
@@ -95,6 +98,7 @@ Boss: Oh. You want more? Right, fine, let's get it over with.
 label Q2Questions
 Boss: What's on your mind?
 - Is the project actually in real danger?
+	set {BossUpset} += 1.0
 	Boss: Real danger? Well, I suppose that's subjective. Sometimes big projects get held up for years, but in real life David doesn't beat goliath.
 	Boss: By which I mean, those protesters will get bored, or hungry, or restless, and move on to some other fad. Making avacado on toast, or whatever.
 	Boss: Which is to say, there's always the danger of delays which eat profits, but progress always triumphs.
@@ -110,6 +114,7 @@ Boss: What's on your mind?
 	Dave: Oh, uh, I don't know why I asked that, sorry.
 	jump Q2Questions
 - Alex mentioned something about a bonus?
+	set {BossUpset} += 1.0
 	Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
 	Dave: Moz?
 	Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months!
@@ -129,6 +134,7 @@ Boss: Respects people's time, unlike some people, who constantly ask questions.
 Dave: ...
 Boss: So, go on, thank me for saving the project and, by extension, your jobs.
 - But, the riot...
+	set {BossUpset} += 1.0
 	Boss: Riot? More like an argument. A little spat over some bodies that were probably nothing to do with us.
 	- Probably?
 		Boss: The captain can't have eyes on every part of the ship at once. It's called plausible deniability. Makes the ship insurance cheaper.
@@ -137,9 +143,11 @@ Boss: So, go on, thank me for saving the project and, by extension, your jobs.
 		Boss: But we're not responsible for the actions of those groups, nor, technically speaking, the proxy groups that contracted them.
 		Boss: That's how the modern world works, Dave. Webs of shell companies and proxies and ghosts, all the way down.
 - But, the EIP...
+	set {BossUpset} += 1.0
 	Boss: Courts are slow. Nothing is guranteed. A simple mistake, something innocently overlooked, shouldn't get in the way of progress.
 	Boss: And that's all there is to it. Should we really believe newts, or whatever, get precedent over humanities enrichment?
 - But, the recent disaster...
+	set {BossUpset} += 1.0
 	Boss: Disaster, dis-shmaster. Momentary setbacks are exactly that, there's no reason to baulk now.
 	Boss: The potential profits on it are still huge, even with the issues.
 	Boss: And we prepared for these issues, so don't be a baby.

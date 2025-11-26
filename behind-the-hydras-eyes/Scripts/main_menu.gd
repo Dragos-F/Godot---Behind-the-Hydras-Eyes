@@ -3,12 +3,14 @@ extends Node2D
 @export var PauseMenu:pauseMenu
 @export var smoking:Node2D
 @export var timer:Timer
+@export var black:Node2D
 
 
 
 func _on_start_pressed() -> void:
 	
 	if FileAccess.file_exists(SaveLoad.save_location):
+
 		Fader.FadeUp("Last you were here...")
 		await Fader.fade_finished
 		SaveLoad._load()
@@ -21,14 +23,14 @@ func _on_start_pressed() -> void:
 		PermanentGlobal.Savings = SaveLoad.SaveFileData.Savings
 		PermanentGlobal.email_choices = SaveLoad.SaveFileData.email_choices.duplicate(true)
 	
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("smoking")&&timer.is_stopped():
-		if smoking.visible == true:
-			smoking.visible = false
-			timer.start()
-		else:
-			smoking.visible = true
-			timer.start()
+#func _process(delta: float) -> void:
+	#if Input.is_action_pressed("smoking")&&timer.is_stopped():
+		#if smoking.visible == true:
+			#smoking.visible = false
+			#timer.start()
+		#else:
+			#smoking.visible = true
+			#timer.start()
 	
 
 func _input(event):
@@ -55,9 +57,16 @@ func _on_options_pressed() -> void:
 
 
 func _on_new_game_pressed() -> void:
+	Fader.FadeUp("The Game Saves automatically at the start of each Day")
+	await Fader.fade_finished
+	black.visible = true
+	await get_tree().create_timer(1.0).timeout
+	Fader.FadeDown("The Game Saves automatically at the start of each Day")
+	await Fader.fade_finished
 	Fader.FadeUp("First Day")
 	await Fader.fade_finished
 	PermanentGlobal.reset_choices()
 	Dialogic.VAR.clear_game_state()
+	black.visible = false
 	get_tree().change_scene_to_file("res://Scenes/train.tscn")
 	Fader.FadeDown("First Day")

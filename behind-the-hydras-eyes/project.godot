@@ -24,6 +24,11 @@ Fader="*res://Scripts/fader.gd"
 AudioBrain="*res://Scenes/audio_brain.tscn"
 SaveLoad="*res://Scripts/SaveLoad.gd"
 GlobalCamera="*res://Scenes/global_camera.tscn"
+Achievements="*res://Scripts/achievements.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
 
 [dialogic]
 
@@ -265,6 +270,6 @@ renderer/rendering_method.mobile="gl_compatibility"
 
 [steam]
 
-initialization/app_id=0
-initialization/initialize_on_startup=false
+initialization/app_id=3554030
+initialization/initialize_on_startup=true
 initialization/embed_callbacks=false

@@ -478,7 +478,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main2" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_p8761")]
 scale = Vector2(2, 2)
@@ -807,6 +807,7 @@ offset_top = -49.2858
 offset_right = 557.902
 offset_bottom = 223.714
 scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Train turmoil: troubled transport torpedoes traveller timetables"
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
@@ -827,6 +828,12 @@ Our following investigation on the causes has revealed chronic underfunding on r
 text = "◦ Ticket price soaring
 ◦ SuperTrain Interview
 ◦ Unions to Blame"
+
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 theme_override_constants/separation = 24

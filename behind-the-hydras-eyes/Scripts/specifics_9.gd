@@ -14,7 +14,7 @@ extends Node2D
 @export var Nayeli_email:EmailBrain
 @export var computer_notif:Node2D
 @export var shutdown:Button
-var oncev1 = true
+var oncev1 = true	
 var oncev2 = true
 
 

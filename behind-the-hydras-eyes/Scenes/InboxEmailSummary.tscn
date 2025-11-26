@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://65dp2p2mc6u6"]
+[gd_scene load_steps=10 format=3 uid="uid://65dp2p2mc6u6"]
 
 [ext_resource type="Script" uid="uid://lwwp13uarql2" path="res://Scripts/emailInfo.gd" id="1_sk5pa"]
 [ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="1_ym083"]
@@ -16,9 +16,6 @@ texture = ExtResource("4_gg46f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_je6ki"]
 texture = ExtResource("5_gg46f")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg46f"]
-texture = ExtResource("3_w46nl")
 
 [node name="InboxSummary" type="VBoxContainer" node_paths=PackedStringArray("ownDel")]
 offset_right = 277.0
@@ -62,7 +59,6 @@ offset_bottom = 65.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_xa2x5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_l11mf")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_je6ki")
-theme_override_styles/focus = SubResource("StyleBoxTexture_gg46f")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

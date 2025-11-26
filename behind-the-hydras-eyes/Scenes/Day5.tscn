@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bwesthwpicym7"]
+[gd_scene load_steps=64 format=3 uid="uid://bwesthwpicym7"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_h2npb"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_meadn"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_e8b16"]
 [ext_resource type="Script" uid="uid://cvvd6kahm84nf" path="res://Scripts/specifics_5.gd" id="14_h2npb"]
 [ext_resource type="Script" uid="uid://dgrmbpgdv4o3n" path="res://Scripts/boss_screen2.gd" id="15_m7jpg"]
+[ext_resource type="Texture2D" uid="uid://ddyedx52b00te" path="res://Visual Assets/New Assets/Menus/Computer UIs/news patriot.png" id="15_t6dyq"]
 [ext_resource type="Texture2D" uid="uid://dcrnvpeardpnq" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Frown.png" id="16_ceivk"]
 [ext_resource type="Texture2D" uid="uid://ca5cf7gjkw5" path="res://Visual Assets/New Assets/Office Scene Assets/Character/Boss Contempt.png" id="17_ui2j1"]
 [ext_resource type="Texture2D" uid="uid://w15npmrlaekf" path="res://Visual Assets/New Assets/Full Screen Scenes/Boss screen new.png" id="18_5h2hh"]
@@ -606,7 +607,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main3" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_h2npb")]
 scale = Vector2(2, 2)
@@ -1117,13 +1118,17 @@ autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
 position = Vector2(184.96, 117.856)
-anim = "Update"
+animation = &"Smoking"
+anim = "Smoking"
 
 [node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
 offset_left = -4.76745
 offset_top = 231.784
 offset_right = 95.2325
 offset_bottom = 260.784
+
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+texture = ExtResource("15_t6dyq")
 
 [node name="Emails" parent="ScreenUI/BottomBar" index="0"]
 anchor_left = 0.0

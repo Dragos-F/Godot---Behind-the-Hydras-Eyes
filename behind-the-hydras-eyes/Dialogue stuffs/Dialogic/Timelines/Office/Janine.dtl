@@ -9,7 +9,8 @@ Janine: Can I help you?!
 [end_timeline]
 label Day06
 if {JanineReturn} == false:
-	Dave: You approach the new person in the office. They're clicking away at a keyboard with great speed, and don't look up as you approach.
+	Unknown: You approach the new person in the office. They're sifting through multiple boxes of letters and documents.
+	Unknown: They don't look up as you approach.
 	Unknown: Oh, hey. It's Dave right? Patrick's told me your CV highlights. This is is your first media storm, right? Don't slip up.
 	Dave: Err, thanks. Yeah, I'll do my best. Sorry, I didn't catch your name.
 	Unknown: That's because I didn't say it. It's Janine.
@@ -22,5 +23,14 @@ else:
 	Janine: I'm busy
 	[end_timeline]
 label Day08
-	Janine: I'm busy
+	Janine: This mountain of complaints isn't any getting smaller.
+	Janine: Not like anyone else seems to care...
+	- Can I help with anything?
+		Janine: No! 
+		Janine: I was told to do this, and if I fail then all of this is meaningless.
+		Dave: Right...
+		Janine: Don't even think about it.
+	- Well, best get to it then.
+		Janine: Yes.
+		Janine: I will. 
 [end_timeline]

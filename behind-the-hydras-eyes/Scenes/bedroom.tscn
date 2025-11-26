@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://b3s10rc1b4j32"]
+[gd_scene load_steps=50 format=3 uid="uid://b3s10rc1b4j32"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6o44b"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_7nhas"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="32_x75j5"]
 [ext_resource type="Texture2D" uid="uid://c83wraw4chwyh" path="res://Visual Assets/New Assets/Bedroom/Daves Monitor Screen2.png" id="33_x75j5"]
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="34_unbiq"]
+[ext_resource type="Texture2D" uid="uid://ddyedx52b00te" path="res://Visual Assets/New Assets/Menus/Computer UIs/news patriot.png" id="36_ek5ei"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="36_unbiq"]
 [ext_resource type="Script" uid="uid://bvu8l2hyb4g2j" path="res://Scripts/typing_brain.gd" id="37_scg7i"]
 [ext_resource type="Script" uid="uid://dl25svddpr1ps" path="res://Scripts/bedroom_specifics1.gd" id="38_ayyhf"]
@@ -603,7 +604,6 @@ offset_right = 577.933
 offset_bottom = 241.393
 scale = Vector2(0.8, 0.8)
 text = "Prime Minister on nationalist protests: \"Some of my best friends are flags\""
-autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
 offset_left = 15.8088
@@ -641,8 +641,11 @@ text = "Pigeon arrested under terror charge for standing on sign"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Cat"
+animation = &"Doc"
 anim = "Doc"
+
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+texture = ExtResource("36_ek5ei")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
@@ -689,6 +692,7 @@ position = Vector2(601, 257)
 [connection signal="interacted" from="Furniture/Balcony Door/InteractableElement" to="BedroomSpecifics" method="_on_balcony_interacted"]
 [connection signal="interacted" from="Furniture/Desk/DeskChair/InteractableElement" to="BedroomSpecifics" method="_on_computer_interacted"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
+[connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="ScreenUI" method="_on_save_button_pressed"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 
 [editable path="Furniture/Balcony Door/InteractableElement"]

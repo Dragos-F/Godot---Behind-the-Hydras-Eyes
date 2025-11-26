@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene load_steps=16 format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="10_7qvly"]
 [ext_resource type="Texture2D" uid="uid://bjlcxwuxm4soy" path="res://Visual Assets/New Assets/Menus/Title Only.png" id="11_rfqti"]
 [ext_resource type="Texture2D" uid="uid://1nbuvpgg5lwn" path="res://Visual Assets/New Assets/Full Screen Scenes/Dave smoking png-export.png" id="12_g8i7c"]
+[ext_resource type="Texture2D" uid="uid://mgxg5clyf7k6" path="res://Visual Assets/New Assets/Full Screen Scenes/Office Background.png" id="13_23t3j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3rjx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -19,11 +20,12 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu", "smoking", "timer")]
+[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu", "smoking", "timer", "black")]
 script = ExtResource("1_xhh6f")
 PauseMenu = NodePath("CanvasLayer/Pause")
 smoking = NodePath("DaveSmokingPngExport")
 timer = NodePath("Timer")
+black = NodePath("Black")
 
 [node name="MainMenuBack" type="Sprite2D" parent="."]
 z_index = -5
@@ -170,16 +172,10 @@ mouse_filter = 2
 theme_override_colors/default_color = Color(1, 0.701961, 0, 1)
 theme_override_fonts/normal_font = ExtResource("7_6swd7")
 theme_override_font_sizes/normal_font_size = 22
-text = "Wishlist Now!"
+text = "Visit 
+Mexico!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Button" type="Button" parent="Leaflet"]
-offset_left = -57.0
-offset_top = -107.0
-offset_right = 55.0
-offset_bottom = 110.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6swd7")
 
 [node name="Sticky" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -239,6 +235,15 @@ texture = ExtResource("12_g8i7c")
 wait_time = 0.5
 one_shot = true
 
+[node name="Black" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+z_index = 3
+position = Vector2(-4, 9)
+scale = Vector2(2, 2)
+texture = ExtResource("13_23t3j")
+
 [connection signal="mouse_entered" from="Drawer/Start" to="Drawer" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer/Start" to="Drawer" method="_on_start_mouse_exited"]
 [connection signal="pressed" from="Drawer/Start" to="." method="_on_start_pressed"]
@@ -248,5 +253,4 @@ one_shot = true
 [connection signal="mouse_entered" from="Drawer3/Options" to="Drawer3" method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="Drawer3/Options" to="Drawer3" method="_on_start_mouse_exited"]
 [connection signal="pressed" from="Drawer3/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Leaflet/Button" to="." method="_on_wishlist_pressed"]
 [connection signal="pressed" from="Sticky/Button" to="." method="_on_credits_pressed"]

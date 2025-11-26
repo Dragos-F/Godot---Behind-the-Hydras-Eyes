@@ -5,7 +5,8 @@ extends Node
 @onready var Lifestyle:String
 @onready var Plant:bool = false
 @onready var email_choices = {}
-var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse normal.png")
+#var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse normal.png")
+var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse branded 64.png")
 var finger = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse finger.png")
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(reset_focus)

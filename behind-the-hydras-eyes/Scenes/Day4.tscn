@@ -572,7 +572,7 @@ _data = {
 &"move_Richard": SubResource("Animation_uxrk3")
 }
 
-[node name="Main4" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_j7m46")]
 z_index = 15
@@ -708,8 +708,15 @@ texture = ExtResource("10_vl8em")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_sjsk0")]
 unique_name_in_owner = true
+visible = true
 texture_filter = 1
 emailsProgressionQuota = 4
+
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = false
+
+[node name="Inbox" parent="ScreenUI/EmailList" index="0"]
+visible = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -857,104 +864,263 @@ texture_filter = 1
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
 
+[node name="Budget" parent="ScreenUI" index="2"]
+visible = true
+
 [node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
 visible = true
 
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel2" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -11.5
+offset_right = 32.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 65.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -11.5
+offset_right = 32.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 65.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -11.5
+offset_right = 32.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -11.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -11.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -11.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -11.5
+offset_right = 66.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -11.5
+offset_right = 66.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 117.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -11.5
+offset_right = 66.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel2" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 148.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -15.5
+offset_right = 74.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
@@ -968,6 +1134,7 @@ offset_top = 1.7851949
 offset_right = 817.41003
 offset_bottom = 172.67668
 scale = Vector2(0.585, 0.585)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "“RainbowHope” defaces “unsightly” concrete wall in village of Hedgewater."
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
@@ -983,6 +1150,12 @@ text = "◦ Vandal among us
 ◦ Ominous art scares
 ◦ Who is this menace?"
 
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
 offset_bottom = 394.0
@@ -997,8 +1170,8 @@ text = "\"It was a shock\", says warden after electric fence accident"
 autowrap_mode = 2
 
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
-animation = &"Doc"
-anim = "Cat"
+animation = &"Love"
+anim = "Love"
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0

@@ -3063,10 +3063,9 @@ offset_right = 1313.0
 offset_bottom = 633.0
 scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
-current_tab = 1
+current_tab = 0
 
 [node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
-visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
@@ -3194,10 +3193,10 @@ text = "RELATED News 1"
 visible = false
 z_index = 1
 layout_mode = 0
-offset_left = 565.2195
-offset_top = 170.92676
-offset_right = 940.7599
-offset_bottom = 438.87134
+offset_left = 444.1691
+offset_top = 196.46227
+offset_right = 819.7095
+offset_bottom = 464.40686
 theme_override_styles/panel = SubResource("StyleBoxFlat_fxbix")
 
 [node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
@@ -3236,9 +3235,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -56.235992
+offset_left = -45.750458
 offset_top = -56.78557
-offset_right = 56.235992
+offset_right = 66.72153
 offset_bottom = -19.785568
 grow_horizontal = 2
 grow_vertical = 0
@@ -3299,6 +3298,7 @@ scale = Vector2(1.324882, 1.3651675)
 texture = ExtResource("37_yhhrm")
 
 [node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer", "timer2")]
+visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 script = ExtResource("6_fio65")

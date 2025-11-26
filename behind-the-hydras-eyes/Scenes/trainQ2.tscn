@@ -88,7 +88,7 @@ script = ExtResource("1_cavyt")
 BossTextAnchor = NodePath("TextAnchor")
 daveAnim = NodePath("Dave/AnimatedSprite2D")
 train_sound = NodePath("TrainAmbience")
-PauseMenu = NodePath("Pause")
+PauseMenu = NodePath("CanvasLayer/Pause")
 TimelineToStart = "Text From Mum"
 dayToChange = "Day3"
 
@@ -766,7 +766,9 @@ animation = &"phone_up"
 [node name="TextAnchor" type="Node2D" parent="."]
 position = Vector2(236, 34)
 
-[node name="Pause" parent="." instance=ExtResource("19_1w40t")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("19_1w40t")]
 visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

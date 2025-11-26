@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=67 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
@@ -28,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://c8uskqory2a0" path="res://Visual Assets/New Assets/Tea Minigame/Sugar cube.png" id="23_3evry"]
 [ext_resource type="Texture2D" uid="uid://dk0po71dfo6wx" path="res://Visual Assets/New Assets/Menus/Computer UIs/Grey tea button hover.png" id="23_84tlb"]
 [ext_resource type="Texture2D" uid="uid://c8ud71r73rk8k" path="res://Visual Assets/New Assets/Menus/Computer UIs/Grey tea button.png" id="24_m0gq4"]
+[ext_resource type="Texture2D" uid="uid://v4kwt84ma0k8" path="res://Visual Assets/New Assets/Menus/Computer UIs/Tea reset button.png" id="25_m0gq4"]
+[ext_resource type="Texture2D" uid="uid://dn6vcbjupdaf" path="res://Visual Assets/New Assets/Menus/Computer UIs/Tea reset button pressed.png" id="26_er7so"]
+[ext_resource type="Texture2D" uid="uid://cqoyqf1ivnbcv" path="res://Visual Assets/New Assets/Menus/Computer UIs/Tea reset button hover.png" id="27_2au2t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84tlb"]
 atlas = ExtResource("6_h81fs")
@@ -214,6 +217,18 @@ texture = ExtResource("23_84tlb")
 texture = ExtResource("22_vo0q6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er7so"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbh55"]
+texture = ExtResource("25_m0gq4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnqbj"]
+texture = ExtResource("26_er7so")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tddps"]
+texture = ExtResource("27_2au2t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6a3e"]
+texture = ExtResource("25_m0gq4")
 
 [node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("mugs")]
 z_index = 10
@@ -458,6 +473,19 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_22in3")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2au2t")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_er7so")
 
+[node name="Reset" type="Button" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = -224.00002
+offset_top = 379.0
+offset_right = 116.999985
+offset_bottom = 593.0
+scale = Vector2(0.75, 0.75)
+theme_override_styles/normal = SubResource("StyleBoxTexture_xbh55")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tnqbj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tddps")
+theme_override_styles/focus = SubResource("StyleBoxTexture_b6a3e")
+
 [node name="SugarBowl2" type="Sprite2D" parent="." node_paths=PackedStringArray("cubeParent", "minigame")]
 z_index = -2
 texture_filter = 1
@@ -553,6 +581,7 @@ texture = ExtResource("23_3evry")
 [connection signal="mouse_entered" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="KettleHeater/Base_area" to="KettleHeater/Base_area" method="_on_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="input_event" from="SugarBowl2/Area2D" to="SugarBowl2" method="_on_area_2d_input_event"]
 
 [editable path="Mug1"]

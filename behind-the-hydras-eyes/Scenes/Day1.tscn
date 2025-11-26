@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://d14m36b2xyscu"]
+[gd_scene load_steps=43 format=3 uid="uid://d14m36b2xyscu"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_fkw1m"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_l3qly"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="8_t5tpt"]
 [ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="11_l3qly"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="12_rakbq"]
+[ext_resource type="Texture2D" uid="uid://bukoaip1upf2q" path="res://Visual Assets/New Assets/Menus/Computer UIs/news ono.png" id="13_wf4m3"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="14_okst0"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="15_fuc61"]
 
@@ -815,6 +816,8 @@ offset_top = 8.66014
 offset_right = 486.387
 offset_bottom = 97.6601
 scale = Vector2(0.9, 0.9)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
 text = "Green is impossible, say Blue and Yellow"
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
@@ -837,6 +840,14 @@ text = "◦ Green agenda?
 ◦ Expert Panel Says No
 ◦ Reject Green Scam"
 
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
+
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.07058824, 0.039215688, 1)
+
 [node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
 offset_right = 336.0
 offset_bottom = 394.0
@@ -853,6 +864,9 @@ autowrap_mode = 2
 [node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
 animation = &"Doc"
 anim = "Cat"
+
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+texture = ExtResource("13_wf4m3")
 
 [node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
 offset_left = 0.0
