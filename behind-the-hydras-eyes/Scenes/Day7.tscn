@@ -1402,6 +1402,38 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="5" instance=ExtResource("12_3oh5d")]
+layout_mode = 2
+Sender_Name = "IT Service Desk"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Access Permission Removed"
+PreviewText = "Hi Dave! As per Patrick's request, "
+MainBody = "Hi Dave!
+
+As per Patrick's request, your IntraNet Login details have been disabled. 
+If you have any questions on this, please forward to your line manager first, and they can raise a ticket with us to change the system.
+
+If you think this was done in error, please submit a letter under the door of the IT office.
+
+				
+Best,	
+IT Service Desk"
+ReplyBody1 = "Hello,
+
+As you may notice on the system, or through our previous conversation, I never had access to the company portal.
+I don't understand why this was actioned, nor do I understand why a physical letter would be needed.
+
+All that to say that whatever happened to the IntraNet, I can survive without it.
+
+
+Dave Spritely,				
+UK Project Lead
+Forward Green"
+
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
+texture_filter = 1
+autowrap_mode = 0
+
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1427,7 +1459,6 @@ offset_right = 665.0052
 offset_bottom = 143.66014
 scale = Vector2(0.67, 0.67)
 text = "AI industry collapses, British economy follows"
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "For decades, the British economy has rested on a series of bubbles, which the government has tried desperately to fortify, pumping billions in taxpayer money on propping up extra-ordinarily wasteful private enterprises.
@@ -1564,5 +1595,6 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail3"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]
