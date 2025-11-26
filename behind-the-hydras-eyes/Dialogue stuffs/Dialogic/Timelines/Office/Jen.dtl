@@ -56,7 +56,7 @@ Jen: Whatcha think, captain?
 	Jen: Hm? I'm not sure, it was just at the top of the search results.
 	Dave: ...The AI overview?
 	Jen: I used AI?  The IT department could never!
-	Alex: ...And hopefully would never...
+	Alex: ...And hopefully [i]would[/i] never...
 Dave: Right...well, I better get back to work, have a lovely day.
 set {JenReturn} = true
 [end_timeline]
@@ -114,7 +114,7 @@ if {JenReturn} == true:
 Jen: The budget is IN! Exciting stuff, I'll send you the numbers for your crunching pleasure!
 Jen: Always nice to be able to do some good, and a relatively cheap boost for our brand representation.
 Jen: Have a jiggle around with the numbers to help you make your mind up, but I recommend the beautification project in particular!
-Jen: After all, what better way to make people associate ForwardGreen with clean energy than physically cleaning up their neighborhoods?
+Jen: After all, what better way to make people associate ForwardGreen with clean energy than physically cleaning up their neighbourhoods?
 - Thanks I've already approved it!
 	Jen: Oh gosh, you moved so quick! I'll take a look in a second.
 	Jen: I'm gonna email Diego from the printing company today and tell him we're one step closer!
@@ -140,7 +140,7 @@ Jen: Printing should take a few weeks! I hope by the end of the month we can sta
 Jen: I can already see the posts on socials coming in, tagging us and all that!
 - Are people actually excited?...
 	Jen: Oh, c'mon! This must be the most exciting thing happening for them!
-- Absolutely! Glad to hear you're passionate
+- Absolutely! Glad to hear you're passionate.
 	Jen: Thanks Dave! Good to have you on my side.
 [end_timeline]
 label Day04.2
@@ -148,7 +148,7 @@ Jen: No pressure! Have you had a look yet?
 Jen: At the budget, I mean.
 - Yeah, with you now!
 	Jen: Oh, you're just the best! Thanks so much. Diego will be so excited!
-- It'll be with you by the end of today
+- It'll be with you by the end of today.
 	Jen: Great! I'll keep an eye out for it.
 [end_timeline]
 
@@ -160,13 +160,13 @@ Jen: I got one of those Pear Bikes. Never tried them before, but they can really
 Jen: I bumped into an older lady crossing when I took off a bit too quickly from a traffic light.
 Dave: Wh—
 Jen: Did you get in okay?
-- Yeah, I got the Annabel line in
-	Dave: It was a bit cramped inside, but nothing too crazy.
+- Train was rammed!
+	Dave: I had to stand most of the way, but at least it was the Annabel line, so it's a bit roomier.
 	Jen: Oh, is that the one with air conditioning?
 	Jen: I haven't been on it, but I keep wanting to!
 	Jen: I'll post a story when I do.
-- I got the bus in
-	Dave: It wasn't too bad, but a burst pipe on the road delayed things a bit.
+- Road closures meant no bus.
+	Dave: A burst pipe on the road delayed things a bit, since I had to walk. Wasn't too bad though!
 	Jen: Oh, is that what's happening?
 	Jen: I've been seeing people gathered around and some works happening, but couldn't really tell.
 	Jen: What I can tell you is that one of the guys was digging shirtless the other week...I barely even noticed the exposed pipe!
@@ -196,7 +196,7 @@ Jen: I can't wait for you guys to see it!
 	- Isn't that...your job?
 		Jen: Don't think so. I'm here to make the designs and make everyone like us!
 	- That makes sense
-		Jen: So glad you think so
+		Jen: So glad you think so.
 	- Do you know anything about a "Big Daz"?
 		Jen: Hm...name sounds familiar.
 		Jen: I think we were at the networking event before you got hired. Me and Alex were with Patrick, representing the company.
@@ -207,14 +207,15 @@ Jen: I can't wait for you guys to see it!
 - Does the name "Nayeli" ring any bells? | [if {AlexNayeli} == true] [else="hide"]
 	Jen: Is that one of the influencers we paid to come and take selfies with the builders?
 	- No, she seems to be working for a local resistance group.
-	- She is complaining to me about the project.
+	- No, she's complaining to me about the project.
 		Dave: So if we did pay her, I don't think we should continue...
 	Jen: Oh. I'm so sorry to hear she doesn't like us!
 	Jen: I was hoping that this whole marketing campaign would win around some of those grouches.
 	Jen: I'm sure if we show her some of our promotional materials she'll get excited.
 	Dave: She sounds more, uh, passionate about it than that.
-	Jen: No such thing as unpersuadable! Everyone can be marketed to!
+	Jen: No such thing as unpersuadable! First rule of marketing\: everyone can be marketed to!
 	Jen: Even us!
+	Jen: ...or was that rule two? I always forget...
 - Great to hear it!
 [end_timeline]
 
