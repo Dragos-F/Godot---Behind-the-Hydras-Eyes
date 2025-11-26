@@ -960,6 +960,7 @@ texture = ExtResource("14_bd8n7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
 [node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -980,7 +981,6 @@ keyboardTarget = NodePath("KeyboardTarget")
 info = NodePath("Budget/HomeBudget/Chart")
 
 [node name="EmailList" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -1040,7 +1040,6 @@ boss = true
 autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -3021,6 +3020,7 @@ theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
 [node name="BrowserThing" type="Panel" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 5.0
@@ -3065,12 +3065,12 @@ scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
 current_tab = 0
 
-[node name="NOM—News Feeder" type="Control" parent="BrowserThing/TabContainer"]
+[node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
 
-[node name="Main Article" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Main Article" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
 offset_left = 395.0
 offset_top = 22.0
@@ -3078,7 +3078,7 @@ offset_right = 863.0
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="Title" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Main Article"]
+[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article"]
 layout_mode = 0
 offset_left = 75.8584
 offset_top = 42.0525
@@ -3092,7 +3092,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="BrowserThing/TabContainer/NOM—News Feeder/Main Article"]
+[node name="ScrollContainer" type="ScrollContainer" parent="BrowserThing/TabContainer/O-NO Alert/Main Article"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 100.0
@@ -3101,7 +3101,7 @@ offset_bottom = 525.0844
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 2
 
-[node name="Body" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Main Article/ScrollContainer"]
+[node name="Body" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
@@ -3113,7 +3113,7 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ma
 Duis imperdiet rhoncus risus, quis lobortis quam molestie in. Proin hendrerit eu dolor nec rutrum. Sed sed leo ac purus iaculis accumsan cursus eget dui. Integer egestas tincidunt quam. Aliquam faucibus tempor leo. Sed sed lacus lectus. Vivamus ornare massa arcu, posuere accumsan ipsum vulputate vel. Proin malesuada sem nec cursus ullamcorper. Vivamus eu lorem efficitur, faucibus lorem vel, pulvinar felis."
 autowrap_mode = 2
 
-[node name="Summary" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Summary" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
 offset_left = 15.250425
 offset_top = 318.24698
@@ -3121,7 +3121,7 @@ offset_right = 387.25043
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="BulletPoints?" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Summary"]
+[node name="BulletPoints?" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 77.0
@@ -3133,7 +3133,7 @@ text = "◦ Bullet 1
 ◦ Bullet 2
 ◦ Bullet 3 "
 
-[node name="Title" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Summary"]
+[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary"]
 layout_mode = 0
 offset_left = 45.283
 offset_top = 21.4277
@@ -3147,7 +3147,7 @@ text = "Summary"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Related News" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Related News" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
 offset_left = 870.23
 offset_top = 21.642
@@ -3155,7 +3155,7 @@ offset_right = 1245.7704
 offset_bottom = 289.58658
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="Title2" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Related News"]
+[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News"]
 layout_mode = 0
 offset_left = 53.3766
 offset_top = 32.4104
@@ -3169,7 +3169,7 @@ text = "Related News"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BrowserThing/TabContainer/NOM—News Feeder/Related News"]
+[node name="VBoxContainer" type="VBoxContainer" parent="BrowserThing/TabContainer/O-NO Alert/Related News"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 84.0
@@ -3177,19 +3177,19 @@ offset_right = 354.0
 offset_bottom = 240.0
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Related News/VBoxContainer"]
+[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_fxbix")
 theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
-[node name="Label2" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Related News/VBoxContainer"]
+[node name="Label2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_fxbix")
 theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
-[node name="GreenDefender" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="GreenDefender" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 visible = false
 z_index = 1
 layout_mode = 0
@@ -3199,7 +3199,7 @@ offset_right = 940.7599
 offset_bottom = 438.87134
 theme_override_styles/panel = SubResource("StyleBoxFlat_fxbix")
 
-[node name="Title2" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/GreenDefender"]
+[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
 layout_mode = 0
 offset_left = 40.985565
 offset_top = 24.55338
@@ -3213,7 +3213,7 @@ text = "GREEN DEFENDER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title3" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/GreenDefender"]
+[node name="Title3" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 19.063053
@@ -3228,7 +3228,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="BrowserThing/TabContainer/NOM—News Feeder/GreenDefender"]
+[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -3243,7 +3243,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Close"
 
-[node name="Panel5" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Panel5" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
 offset_left = 870.23
 offset_top = 294.854
@@ -3251,7 +3251,7 @@ offset_right = 1246.7183
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/NOM—News Feeder/Panel5" node_paths=PackedStringArray("PopUp")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/O-NO Alert/Panel5" node_paths=PackedStringArray("PopUp")]
 position = Vector2(185.865, 121.785)
 sprite_frames = SubResource("SpriteFrames_3hs7y")
 animation = &"Vacuum"
@@ -3259,7 +3259,7 @@ autoplay = "default"
 script = ExtResource("8_bq6wl")
 PopUp = NodePath("../../GreenDefender")
 
-[node name="Label" type="Label" parent="BrowserThing/TabContainer/NOM—News Feeder/Panel5"]
+[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
 layout_mode = 0
 offset_left = -0.953153
 offset_top = 225.891
@@ -3273,7 +3273,7 @@ text = "sponsored"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="BrowserThing/TabContainer/NOM—News Feeder/Panel5"]
+[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
 layout_mode = 0
 offset_left = 10.482986
 offset_top = 11.607376
@@ -3284,7 +3284,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_5p121")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0vdjt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_15dr1")
 
-[node name="Logo" type="Panel" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Logo" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
 layout_mode = 0
 offset_left = 16.20359
 offset_top = 22.624374
@@ -3292,7 +3292,7 @@ offset_right = 386.97992
 offset_bottom = 307.44348
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ujna0")
 
-[node name="Outlet Logo" type="Sprite2D" parent="BrowserThing/TabContainer/NOM—News Feeder"]
+[node name="Outlet Logo" type="Sprite2D" parent="BrowserThing/TabContainer/O-NO Alert"]
 position = Vector2(199.2089, 77.62393)
 scale = Vector2(1.324882, 1.3651675)
 texture = ExtResource("37_yhhrm")
@@ -3573,8 +3573,8 @@ position = Vector2(775, 951)
 [connection signal="newOption" from="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9/OptionButton" to="Budget/MarketingBudget/Investments" method="_on_option_button_new_option"]
 [connection signal="item_selected" from="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10/OptionButton" to="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10/OptionButton" method="_on_item_selected"]
 [connection signal="newOption" from="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10/OptionButton" to="Budget/MarketingBudget/Investments" method="_on_option_button_new_option"]
-[connection signal="pressed" from="BrowserThing/TabContainer/NOM—News Feeder/GreenDefender/Button" to="BrowserThing/TabContainer/NOM—News Feeder/Panel5/AnimatedSprite2D" method="_on_close_pressed"]
-[connection signal="pressed" from="BrowserThing/TabContainer/NOM—News Feeder/Panel5/Button" to="BrowserThing/TabContainer/NOM—News Feeder/Panel5/AnimatedSprite2D" method="_on_button_pressed"]
+[connection signal="pressed" from="BrowserThing/TabContainer/O-NO Alert/GreenDefender/Button" to="BrowserThing/TabContainer/O-NO Alert/Panel5/AnimatedSprite2D" method="_on_close_pressed"]
+[connection signal="pressed" from="BrowserThing/TabContainer/O-NO Alert/Panel5/Button" to="BrowserThing/TabContainer/O-NO Alert/Panel5/AnimatedSprite2D" method="_on_button_pressed"]
 [connection signal="pressed" from="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control/LogIn" to="BrowserThing/TabContainer/IntraNet Log-In" method="_on_log_in_pressed"]
 [connection signal="timeout" from="BrowserThing/TabContainer/IntraNet Log-In/Timer" to="BrowserThing/TabContainer/IntraNet Log-In" method="_on_timer_timeout"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
