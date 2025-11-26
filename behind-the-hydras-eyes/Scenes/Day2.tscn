@@ -660,6 +660,7 @@ ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Late System Induction"
 PreviewText = "Hi Dave! Just your friendly IT support here"
 MainBody = "Hi Dave!
+
 Just your friendly IT support here. We realised that Patrick never signed you up for a proper system induction, so you never got your IntraNet Logins. Don't fret, we're here to help. 
 
 You should be able to use your username (dspritely), but the password we originally assigned expired, so you'll need to generate a new one. There should be a link to do that coming in a separate email. 
@@ -669,8 +670,8 @@ Let us know if you encounter any other issues!
 
 P.S. Stay safe on the internet. You wouldn't believe the type of viruses we find on Jen's computer.
 
-				
-Best,	
+
+Best,
 IT Service Desk"
 ReplyBody1 = "Hello,
 

@@ -1095,28 +1095,35 @@ Dave Spritely, "
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_xuce3")]
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_xuce3")]
 layout_mode = 2
-Sender_Name = "Nayeli"
-ToAddress = "contactus@forwardgreen.co.uk"
-Subject = "Do you know your giants bleed?"
-PreviewText = "We are the voice of"
-MainBody = "To whom it concerns,
+Sender_Name = "IT Service Desk"
+ToAddress = "dspritely@forwardgreen.co.uk"
+Subject = "Access Permission Removed"
+PreviewText = "Hi Dave! As per Patrick's request, "
+MainBody = "Hi Dave!
 
-We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
+As per Patrick's request, your IntraNet Login details have been disabled. 
+If you have any questions on this, please forward to your line manager first, and they can raise a ticket with us to change the system.
 
-Do not turn your back on us,
-Nayeli, Spokesperson of Strike the Hydra's Heart"
-ReplyBody1 = "Dear Nayeli,
+If you think this was done in error, please submit a letter under the door of the IT office.
 
-I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of Forward Green. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
+				
+Best,	
+IT Service Desk"
+ReplyBody1 = "Hello,
 
-Kind Regards,
-Dave Spritely, 
+As you may notice on the system, or through our previous conversation, I never had access to the company portal.
+I don't understand why this was actioned, nor do I understand why a physical letter would be needed.
+
+All that to say that whatever happened to the IntraNet, I can survive without it.
+
+
+Dave Spritely,				
 UK Project Lead
 Forward Green"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
 
@@ -1145,7 +1152,6 @@ offset_right = 557.902
 offset_bottom = 223.714
 scale = Vector2(0.8, 0.8)
 text = "The way is Forward, the way is Green"
-autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
 offset_left = 25.3403
@@ -1303,6 +1309,6 @@ visible = false
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail2"]
+[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail3"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]

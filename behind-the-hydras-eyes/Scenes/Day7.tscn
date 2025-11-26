@@ -1300,7 +1300,6 @@ texture_filter = 1
 autowrap_mode = 0
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="1"]
-visible = false
 Sender_Name = "Miguel Lopez"
 Subject = "Lagoon Breeze EIA"
 PreviewText = "I hope you're well."
@@ -1325,32 +1324,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TestEmailSummary3" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
-layout_mode = 2
-Sender_Name = "Miguel Lopez"
-ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
-Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessme"
-PreviewText = "Thank you for taking"
-MainBody = "Good afternoon Dave.
-
-Thank you for taking the time to respond to my previous email. Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
-
-Regards,
-Miguel Lopez"
-ReplyBody1 = "Good afternoon Miguel,
-
-I am sorry that you are unsatisfied with my previous response, but I am the incorrect point of contact for this enquiry. I can only assure you that, as a requirement to begin construction, we must have completed the assessment. If you have any other questions, please do not hesitate to reach out.
-
-Kind regards,
-Dave Spritely, 
-UK Project Lead
-Forward Green"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
+[node name="TestEmailSummary4" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
 layout_mode = 2
 Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -1376,7 +1350,7 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_3oh5d")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
 visible = false
 layout_mode = 2
 Sender_Name = "Miracure"
@@ -1399,38 +1373,6 @@ UK Project Lead
 Forward Green"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="5" instance=ExtResource("12_3oh5d")]
-layout_mode = 2
-Sender_Name = "IT Service Desk"
-ToAddress = "dspritely@forwardgreen.co.uk"
-Subject = "Access Permission Removed"
-PreviewText = "Hi Dave! As per Patrick's request, "
-MainBody = "Hi Dave!
-
-As per Patrick's request, your IntraNet Login details have been disabled. 
-If you have any questions on this, please forward to your line manager first, and they can raise a ticket with us to change the system.
-
-If you think this was done in error, please submit a letter under the door of the IT office.
-
-				
-Best,	
-IT Service Desk"
-ReplyBody1 = "Hello,
-
-As you may notice on the system, or through our previous conversation, I never had access to the company portal.
-I don't understand why this was actioned, nor do I understand why a physical letter would be needed.
-
-All that to say that whatever happened to the IntraNet, I can survive without it.
-
-
-Dave Spritely,				
-UK Project Lead
-Forward Green"
-
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
 
@@ -1592,9 +1534,7 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 [editable path="ScreenUI"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss2"]
 [editable path="ScreenUI/EmailList/SummariesContainer/Boss"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4"]
 [editable path="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5"]
-[editable path="ScreenUI/EmailList/SummariesContainer/TemplateEmail3"]
 [editable path="ScreenUI/Budget/HomeBudget/Chart"]
 [editable path="Dave"]
