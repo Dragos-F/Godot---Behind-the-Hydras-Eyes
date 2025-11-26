@@ -481,14 +481,11 @@ Please advise how you would like to proceed.
 
 Regards,
 Lorena Kimball"
-ReplyBody1 = "Hi Lorena,				
-The contract does indeed mention that it is my responsibility if the damage is due to misuse. I am quite confident that the water damage, and ensuing mould all down the wall, is due to a leaky pipe somewhere in the ceiling.
+ReplyBody1 = "Hi Lorena,
 
-I haven't been able to fully use the bathroom for a couple of months now, and the wall is still saturated with water. I conclude that this is absolute evidence that it is not directly caused by my use of the bathroom.
+The contract does indeed mention that it is my responsibility if the damage is due to misuse. I am quite confident that the extent of water damage means a leaky pipe, which of course is not the fault of a tenant. I haven't been able to fully use the bathroom for a couple of months now, despite ringing you multiple times. 
 
-Additionally, the pricetag on your contractor seems outrageous, for what is essentially a consultation — I remind you that nobody has yet attended the property to even assess the possible causes.
-
-I urge you to send someone around to look at the issue, as I am confident that it is a wider, building specific issue.
+Additionally, the pricetag on your contractor seems outrageous, for what is essentially a consultation—I remind you that nobody has yet attended the property to even assess the possible causes. I urge you to send someone around as soon as possible to look at the issue and repair the bathroom, as I am legally entitled to a habitable environment.
 
 Best,
 Dave Spritely"
@@ -510,7 +507,6 @@ offset_right = 577.933
 offset_bottom = 241.393
 scale = Vector2(0.8, 0.8)
 text = "\"More tough choices!\", demand nation's youth"
-autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
 offset_left = 15.8088

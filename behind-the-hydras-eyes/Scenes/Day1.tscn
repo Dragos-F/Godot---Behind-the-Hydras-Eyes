@@ -568,7 +568,7 @@ I'm really glad to be here, thanks again for the opportunity. I've already met m
 Yours respectfully,
 Dave Spritely, 
 UK Project Lead
-Forward Green
+ForwardGreen
 
 "
 boss = false
@@ -595,7 +595,7 @@ Apologies, but this role has now been filled (to be clear, by me). I'm not sure 
 Kind regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
 texture_filter = 1
@@ -616,7 +616,7 @@ Hate lazy workers? Abolishing WFH failed to raise productivity? We have the only
 AI assistants will streamline every element of your job. Miracle bullets have never been so cheap! Simply allow our consultants access to every nook of your database. GDPR compliant? Plausibly! 
 
 Big Daz.
-CEO INFORMATION SOLUTIONS LIMITED "
+CEO, INFORMATION SOLUTIONS LIMITED "
 ReplyBody1 = "Good afternoon 'Big Daz',
 
 Thank you for your inquiry. We're not currently looking for such services.
@@ -624,7 +624,7 @@ Thank you for your inquiry. We're not currently looking for such services.
 Kind regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
 texture_filter = 1
@@ -638,7 +638,7 @@ Subject = "Calendar Invite - Location Presentation"
 PreviewText = "Internal invite address to all fo"
 MainBody = "Hello everybody,
 
-Seeing how we have a project manager now @Dave Spritely, we can now hold the greatest meeting ever to grace the calendar (well, your calendars anyway, mine is full of exciting stuff)! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and it's now time to choose.
+Seeing how we have a project manager now @DaveSpritely, we can now hold the greatest meeting ever to grace the calendar (well, your calendars anyway, mine is full of exciting stuff)! I've been preparing some materials on the possible locations for Project Lagoon Breeze, and it's now time to choose.
 
 See you in the collaborative space, down the hall from the fourth floor main office.
 
@@ -651,7 +651,7 @@ Thank you for this invite. I'll see you in the collaboration space!
 Kind Regards
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]
 texture_filter = 1
@@ -816,7 +816,6 @@ offset_right = 486.387
 offset_bottom = 97.6601
 scale = Vector2(0.9, 0.9)
 text = "Green is impossible, say Blue and Yellow"
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "In their latest party conferences, two of the largest and oldest British parties, vying desperately for the title of most irrelevant, have confirmed their commitment to undermine a green transition by denying first the need, then the methods, and then by singing the national anthem over all following questions. Read on to find out why this is actually a genius move, and how those who don't agree are part of a secretive globalist cabal, from our election specialist, Baron Toph Crasscock.							

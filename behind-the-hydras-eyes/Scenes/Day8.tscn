@@ -855,7 +855,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main4" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_555dt")]
 scale = Vector2(2, 2)
@@ -1059,14 +1059,22 @@ It's over. I've finally convinced the courts that your criminal negligence, envi
 
 Miguel Lopez
 								"
-ReplyBody1 = "Good afternoon Miguel,
+ReplyBody1 = "Good afternoon Mr Lopez.
+
+I'm sorry that you feel forced to pursue legal measures. Please address all correspondence from here on towards the ForwardGreen legal team, who may be able to reassure you that there is other means of resolution.
+
+Kind Regards,
+Dave Spritely, 
+UK Project Lead
+ForwardGreen"
+ReplyBody2 = "Good afternoon Miguel,
 
 It seems that every day I learn of more harm and damage that is done in the name of the company I work for, and though it is easy to ignore at first when you live in a completely different world—I'm beginning to see just how intentional that is. It does weigh on my conscience, as does the guilt of knowing that the chances of accountability is slim. All I can offer is my apologies; I don't have the power for anything more. 
 
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
@@ -1086,10 +1094,18 @@ Nayeli,
 Strike the Hydra's Heart"
 ReplyBody1 = "Hi Nayeli, 
 
-You are, of course, right. It is painful to admit, but I know more about the violence this project involves now. I must admit I still feel distant, but every discovery closes that gap against my will. I don't know what to do with this though. If I tell anyone at ForwardGreen they'll think I'm mad, and even my friends would think I'm weird for caring that much. And this is my job, it's not a luxary I can just throw away, if that makes sense? Still I'm rooting for your visibility.	
+Please be aware that continued harassment of ForwardGreen staff, and any threats however cryptically worded, will be passed on to the appropriate authorities.
 
 Kind Regards,
-Dave Spritely, "
+Dave Spritely, 
+UK Project Lead
+ForwardGreen"
+ReplyBody2 = "Hi Nayeli, 
+
+I've been thinking about your emails more recently, and I think  you're right. It is painful to admit, but I know more about the violence this project involves now. I must confess I still feel distant, but every discovery closes that gap against my will. I don't know what to do with this though. There seems no option to make amends through ForwardGreen if I raised concerns, and even my friends would think I'm weird for caring that much. And this is my job, it's not a luxary I can just throw away, if that makes sense? Still, I wish you the best protecting your loved ones.	
+
+Kind Regards,
+Dave Spritely."
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
@@ -1103,25 +1119,22 @@ Subject = "Access Permission Removed"
 PreviewText = "Hi Dave! As per Patrick's request, "
 MainBody = "Hi Dave!
 
-As per Patrick's request, your IntraNet Login details have been disabled. 
-If you have any questions on this, please forward to your line manager first, and they can raise a ticket with us to change the system.
+As per Patrick's request, your IntraNet Login details have been disabled. If you have any questions with regards to this, please forward to your line manager first, and they can raise a ticket with us to change the system.
 
 If you think this was done in error, please submit a letter under the door of the IT office.
-
 				
 Best,	
 IT Service Desk"
 ReplyBody1 = "Hello,
 
-As you may notice on the system, or through our previous conversation, I never had access to the company portal.
-I don't understand why this was actioned, nor do I understand why a physical letter would be needed.
+As you may notice on the system, I never had access to the company portal anyway.
+I don't understand why this revocation was actioned, nor do I understand why a physical letter would be needed to rectify this.
 
-All that to say that whatever happened to the IntraNet, I can survive without it.
-
+Please get back to me informing me of the reasoning.
 
 Dave Spritely,				
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
 texture_filter = 1

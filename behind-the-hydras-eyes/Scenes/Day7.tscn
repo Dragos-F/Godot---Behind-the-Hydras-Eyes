@@ -998,7 +998,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main4" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_3eksu")]
 z_index = 15
@@ -1274,26 +1274,28 @@ choiceDialog1 = "Make it professional..."
 choiceDialog2 = "Speak to her like a person"
 MainBody = "Good morning. 
 
-Do you know our history? What the greedy hydra has already eaten? My father and brother were murdered by the police for fighting against the mass seizure of land from regular people; for daring to challenge the injustice of theft and destruction. I have not escaped the state's cruelty. We will not accept your damage to our ecosystem, polluting of our water. We will not accept losing our livelihoods so you can produce energy for rich people far away and claim you're doing good. For speaking out, we will be brutalised by the police. You invite this upon us, and are you even aware of it? Do not worry, we will ensure the world will be.
+Do you know our history? What the greedy hydra has already eaten? My father and brother were murdered by the police for fighting against the mass seizure of land from regular people; for daring to challenge the injustice of theft and destruction. I have not escaped the state's cruelty. We will not accept your damage to our ecosystem, polluting of our water. We will not accept losing our livelihoods so you can produce energy for rich people far away while claiming you're doing good. For speaking out, we will be brutalised by the police. You invite this upon us, and are you even aware of it? Do not worry, we will ensure the world will be.
 
 Do not turn your back on your actions,
 Nayeli, 
 Strike the Hydra's Heart"
 ReplyBody1 = "Good afternoon Nayeli,
 
-I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability - Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
+I hope you're well. ForwardGreen is first and foremost a company that cares about sustainability—Green is in our name, and it's at the heart of our values. Once complete, our project will be able to power thousands of homes with renewable energy, while the construction phase brings jobs and money into local communities. Additionally, we've just approved a large new budget that will be a direct investment into the local community, and help to assuage the concerns of residents.
 
 Yours respectfully,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 ReplyBody2 = "Dear Nayeli,
 						
 I am truly sorry for the pain that the local issues of police repression and land expropriation have caused you and many others in the region. We are trying to hold ourselves to a higher standard than the companies you may have had previous negative experiences with. The land we build on was bought legally, we're building carefully with the local ecostyem in mind, and have developed a plan to invest in the local region. We don't want to commit, or invite, and wrongs upon you or your family. I hope you can come to see that we're no hydra.
 
 							
 Kindest Regard,								
-Dave Spritely, UK Project Lead								"
+Dave Spritely, 
+UK Project Lead
+ForwardGreen								"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss2/Button" index="0"]
 texture_filter = 1
@@ -1305,18 +1307,18 @@ Subject = "Lagoon Breeze EIA"
 PreviewText = "I hope you're well."
 MainBody = "Good afternoon Dave, 
 
-I hope you're well. I also hope you haven't forgotten our correspondence, as I haven't. In case you have, let me remind you: you dodged my question and handed me to an account that never responded. Anyway, I wanted to let you know that I've investigated Project Lagoon Breeze and can find no evidence whatsoever of an Environmental Impact Assessment ever being conducted. I suspect you already knew that. Shame on you. Anyway, I'm writing to ask: can you put it in writing for me that you have no plans to conduct an EIA?								
-								
+I hope you're well. I also hope you haven't forgotten my previous correspondence, as I haven't. In case you have, let me remind you: you dodged my question, refusing to engage with legitimate processes. Anyway, I wanted to let you know that I've investigated Project Lagoon Breeze and can find no evidence whatsoever of an Environmental Impact Assessment ever being conducted. I suspect you already knew that. Shame on you. Anyway, I'm writing to ask: can you save us some time now and put it in writing for me that you have no plans to conduct an EIA?
+
 Regards,
 Miguel Lopez"
 ReplyBody1 = "Hi Miguel, 
 
-As I told you previously, I am not in a position to comment of the EIA submitted as part of the approval process. Now that we have more past the approval process (which, as previously stated includes governmental oversight of an EIA), we are not planning to carry out another. I can assure you that we are a company that cares about the environment as much as you, which is why we are so commited to building real renewable energy solutions. We've also committed to a budget to uplift the local community. Hopefully you can see that it would be more beneficial for us to work together than be in opposition.
+As you should know, I am not in a position to comment of the EIA submitted as part of the approval process. Now that we have more past the approval process (which, as previously stated includes governmental oversight of an EIA), we are not planning to carry one out. I can assure you that we are a company that cares about the environment as much as you do, which is why we are so commited to building real renewable energy solutions. We've also committed to a budget to uplift the local community. Hopefully you can see that it would be more beneficial for us to work together than be in opposition.
 
 Yours respectfully,
 Dave Spritely, 
 UK Project Lead
-Forward Green
+ForwardGreen
 
 "
 boss = false
@@ -1344,7 +1346,7 @@ Thank you for expressing your support. We here at FutureGreen are glad to have t
 Kind regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
 texture_filter = 1
@@ -1370,7 +1372,7 @@ ReplyBody1 = "NO GOO.
 Kind Regards
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]
 texture_filter = 1

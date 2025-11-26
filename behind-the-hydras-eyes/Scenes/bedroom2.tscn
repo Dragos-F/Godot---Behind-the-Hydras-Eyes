@@ -464,20 +464,21 @@ Sender_Name = "RobSpritely@personmail.co.uk"
 ToAddress = "david199x@personmail.co.uk"
 Subject = "Weekend plans"
 PreviewText = "Hi Son, hope you're well..."
-MainBody = "Hi Son, hope you're well. 
+MainBody = "Hi son, hope you're well. 
 
-Mrs Colbridge next door has redone her front garden, and it's been contractors all up and down the street the whole week. I tell you, she could've gotten one of her kids to do all that for probably half the price. She must have the money to spend, the old hoot.
-Anyway, I know you've told your mum you might be coming to visit over the weekend. I wanted to make sure that you know there's delays and cancellation on the rail up to us. You probably need to plan in advance, and we can pick you up from a few towns over. Let me know how you get on.
+Mrs Colbridge next door has redone her front garden, and it's been contractors all up and down the street the whole week. I tell you, she could've gotten one of her kids to do all that for probably half the price. Or even me, I'd have done it. She must have the money to spend, the old hoot.
+
+Anyway, I know you've told your mum you might be coming to visit over the weekend. I wanted to make sure that you know there's delays and cancellation on the train up to us. You probably need to plan in advance, and we can pick you up from a few towns over. Let me know how you get on.
 
 Best, 
-Dad.
-Robert Spritely."
+Dad."
 ReplyBody1 = "Hi Dad,
 
-Yup, that's right. I'll be coming up Friday eve, and staying till around midday on Sunday. Thanks for letting me know about the trains, i'll let you know what i'm booking
-I'm happy to hear Mrs Colbridge is still doing well enough to be pottering around her garden.
-I'll see you Friday.
+Yup, that's right. I'll be coming up Friday eve, and staying till around midday on Sunday. Thanks for letting me know about the trains, I'll let you know if I need picking up from anywhere.
 
+I'm happy to hear Mrs Colbridge is still doing well enough to be pottering around her garden. You should be glad you're not asked to help, not grumbling about it!
+
+I'll see you Friday.
 Dave."
 boss = false
 
@@ -501,7 +502,6 @@ offset_right = 567.4458
 offset_bottom = 242.37514
 scale = Vector2(0.8, 0.8)
 text = "NEW: Which MPs will hit our screens next week?"
-autowrap_mode = 2
 
 [node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
 offset_left = 15.8088

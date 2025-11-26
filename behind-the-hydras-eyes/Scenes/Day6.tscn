@@ -992,7 +992,7 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main4" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_ddjcg")]
 z_index = 15
@@ -1254,7 +1254,9 @@ Thank you again for your support. Our partnership has been mutually beneficial a
 
 
 Kindest regards,								
-Dave Spritely, UK Project Lead"
+Dave Spritely, 
+UK Project Lead
+ForwardGreen"
 ReplyBody2 = "Good afternoon Mr Perez,	
 
 Thank you again for your support. However, for simplicities sake we would like to ask you to not intervene in our process of community outreach. We still appreciate our business relationship, and look forward to working together in future.
@@ -1273,7 +1275,7 @@ Subject = "Advice"
 PreviewText = "A word for the wise"
 MainBody = "Good morning Dave, 
 
-A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, but don't forget it.
+A word for the wise: please refrain from any extended engagament with emails that could fall victim to antagonistic PR spins should the media read them. Keep it short, be evasive if you have to be. I'm sure Patrick has already told you this, and I know I have, but don't forget it.
 
 Richard.
 "
@@ -1284,7 +1286,7 @@ Thank you for the advice. I'll keep it in mind, while being respectul and helpfu
 Best,
 Dave Spritely, 
 UK Project Lead
-Forward Green
+ForwardGreen
 
 "
 boss = false
@@ -1300,12 +1302,12 @@ Subject = "Check the news"
 PreviewText = "Just pinging this over"
 MainBody = "Hey Dave,
 
-Just pinging this over before you come in, in case I forget later - congrats! Seems you've made the news. Very neutral, Richard'll be proud. 
+Just pinging this over before you come in, in case I forget later—congrats! Seems you've made the news. Very neutral, Richard'll be proud. 
 
 Alex"
 ReplyBody1 = "Thanks, I think! 
 
-Dave. "
+Dave."
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary4/Button" index="0"]
 texture_filter = 1
@@ -1319,20 +1321,20 @@ Subject = " Our silence differs to yours"
 PreviewText = "You of course know how and why your reply served"
 MainBody = "Dear Dave,
 
-You of course know how and why your empty reply served to speak past us rather than to us. How empty PR is will not heal our wounds, how it ignored the fact that proper research into harmful side-effects has not been carried out simply because the harm is carried by a people easy to ignore. This is part of a wall of silence erected to allow you to refuse to engage with us, to spare your conscience from us. We are rendered silent by the crushing weight of a machinery of death you harness against us without understanding. You are rendered silence by your own lack of empathy. 
+You of course know how and why your delay tactics and PR serves to speak past us rather than to us. Empty rhetoric will not heal our wounds, nor will ignoring a lack of proper research into harmful side-effects, a lack stemming simply from the fact that harm is carried by a people easy to ignore. This is part of a wall of silence erected to allow you to refuse to engage with us, to spare your conscience from us. We are rendered silent by the crushing weight of a machinery of death you harness against us without understanding. You are rendered silence by your own lack of empathy.
 
 Our silence is not the same,
 Nayeli, spokesperson for Strike the Hydra's Heart"
 ReplyBody1 = "Dear Nayeli,
 
-I appreciate you takign the time to write your email. I assure you our aims are pure in wanting to develop renewable energy in the area, and I personally wish nobody any harm. 
+I appreciate you takign the time to write your email. I assure you our aims are pure in wanting to develop renewable energy in the area, and neither ForwardGreen or I wish harm upon anyone. 
 
 Let me know if I can help you with anything else.
 
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary6/Button" index="0"]
 texture_filter = 1

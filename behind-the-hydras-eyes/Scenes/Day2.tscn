@@ -478,7 +478,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_p8761")]
 scale = Vector2(2, 2)
@@ -647,7 +647,7 @@ I appreciate your email, but I don't think we'll be interested in any other inve
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
@@ -668,7 +668,7 @@ You should be able to use your username (dspritely), but the password we origina
 Let us know if you encounter any other issues!
 
 
-P.S. Stay safe on the internet. You wouldn't believe the type of viruses we find on Jen's computer.
+P.S. Use the internet responsibly. You wouldn't believe the type of viruses we find on Jen's computer.
 
 
 Best,
@@ -681,7 +681,7 @@ Noted on the viruses.
 
 Dave Spritely,                                
 UK Project Lead                                
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
 texture_filter = 1

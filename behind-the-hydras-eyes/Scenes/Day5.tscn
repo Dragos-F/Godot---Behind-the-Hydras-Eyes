@@ -606,7 +606,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main3" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_h2npb")]
 scale = Vector2(2, 2)
@@ -702,12 +702,8 @@ texture = ExtResource("10_53qxh")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 4
-
-[node name="EmailList" parent="ScreenUI" index="0"]
-visible = true
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -724,10 +720,11 @@ MainBody = "Hello Mr Spritely
 I don't know what your relationship with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
 
 Maria Cruz
-								"
+Translated by Bingle.
+Sent from emails for Wiwawi."
 ReplyBody1 = "Afternoon Maria,
 
-Thank you for your email. I don't recognise this Mr Gallardo, but from what you've told me he does not sound affiliated with us directly. I sincerely apologise that the forum about the site proposal has lead to this, but I cannot help with anything more. I would certainly contact your local police department as soon as possible. Please keep me updated about your situation.
+Thank you for your email. I don't recognise this Mr Gallardo, but from what you've told me he does not sound affiliated with us directly. I sincerely apologise that the forum about the site proposal has led to this, but I cannot help with anything more. I would certainly contact your local police department as soon as possible. Please keep me updated about your situation.
 
 Kind Regards,
 Dave Spritely, 
@@ -735,14 +732,14 @@ UK Project Lead
 ForwardGreen"
 ReplyBody2 = "Hi Maria,
 
-Thank you for your email. Mr Gallardo does not ring a bell. I wouldn't worry too much about him, as I'm sure things will blow over soon. In regards to your father, if he was violent in any way, he may have been detained by the police. I would imagine that the the first point of contact would be to ring your local station and enquire.
+Thank you for your email. Mr Gallardo does not ring a bell. All ForwardGreen representatives are vetted responsibly, however, so I am sure Mr Gallardo has conducted himself accordingly. If your father was violent in any way, he may have been detained by the police. I would imagine that the the first point of contact would be to ring your local station and enquire.
 
 Thanks again for your email.
 
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 boss = false
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
@@ -767,7 +764,7 @@ I hope you're well. ForwardGreen is first and foremost a company that cares abou
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
 texture_filter = 1
@@ -784,15 +781,15 @@ MainBody = "To whom it concerns,
 We are the voice of the land and people you ignore. Do you know your steel giants bleed? Our farmers watch with unease every day as oil drip, drip, drips like tar from their husks into our soil. Do you know how this affects an ecosystem? We do not, and none will answer us. We're forced to watch in fear as our crops grow, fearful that the inky black seeping into our soil will also arise from it; that our children will ingest oil-soaked maize, will give birth to grandchildren with stomachs already full of oil. Do our fears not deserve answers?
 
 Do not turn your back on us,
-Nayali, Spokesperson of Strike the Hydra's Heart"
-ReplyBody1 = "Dear Nayali,
+Nayeli, Spokesperson of Strike the Hydra's Heart"
+ReplyBody1 = "Dear Nayeli,
 
-I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of Forward Green. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
+I am sorry to hear your communities are having issue with wind turbines leaking. However, these pre-existing turbines are not the property or responsibility of ForwardGreen. We have assurances from our manufacturer that, once constructed, our turbines will not experience any serious problems with oil leakage.	
 
 Kind Regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
 texture_filter = 1
@@ -812,7 +809,7 @@ Hope you're managing okay. Just wanted to confirm that everything's funded appro
 Best, Olu.	"
 ReplyBody1 = "Morning Olu	
 						
-Thanks for the heads up. I did wonder what happened to the slightly increased cost, as I don't get direct oversight onto all the bills and everything, thanks to you and Alex computing all the numbers. This series of deals you mentioned, what exactly did we promise them? Asking since it might be worth me knowing. I've had a few people local to the site emailing about various concerns, so just want to make sure I get all my facts straight internally, rather than through some external outlet.
+Thanks for the heads up. I did wonder what happened to the slightly increased cost, as I don't get direct oversight onto all the bills and everything, thanks to you and Alex computing all the numbers. This series of deals you mentioned, what exactly did we promise them? Asking since it might be worth me knowing. I've had a few people local to the site emailing about various concerns, so just want to make sure I get all my facts straight.
 
 Best Regards,							
 Dave"
@@ -835,12 +832,12 @@ Richard from legal here. We expected a few possible setbacks with \"Sandbar Para
 Over and out, Richard.								"
 ReplyBody1 = "Hi Richard,
 
-I appreciate the news. I've been trying to keep an eye out on the headines and haven't heard anything yet on this, so glad it's all being handled quietly. Is there anything else I should know about these people? Are they organised in some way, or do you think they're acting alone?
+I appreciate the news. I've been trying to keep an eye out on the headines and haven't heard anything yet on this, so glad it's all being handled quietly. Is there anything else I should know about these people, such as how organised they are?
 
 Re:Structural issues, I don't believe we forecasted for that. According to the development schedule, our structural redressal is pencilled in for after all sites are complete, but that can't be right. If you hear of any more issues related to this, let me know and I can try getting in touch with the construction company for an update.
 
 Best Regards,							
-Dave				"
+Dave"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Flooding/Button" index="0"]
 texture_filter = 1
@@ -888,27 +885,21 @@ We've generated you a temporary password: k5@K;SA6@,Yg>_n$.
 
 Please make sure to log in before this expires, as it would then required another reset.
 
-Thanks!
-
-
-Best,	
+Best,
 IT Service Desk"
 ReplyBody1 = "Hi there,
 
 Thanks for your email.
-To be clear, how long do I have before this password expires?
+How long do I have before this password expires?
 
 
 Dave Spritely,
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
 texture_filter = 1
 autowrap_mode = 0
-
-[node name="MainEmail" parent="ScreenUI" index="1"]
-visible = true
 
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
@@ -1047,9 +1038,6 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
-
-[node name="BrowserThing" parent="ScreenUI" index="3"]
-visible = false
 
 [node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
 anchor_right = 0.0

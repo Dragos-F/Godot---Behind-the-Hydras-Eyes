@@ -572,7 +572,7 @@ _data = {
 &"move_Richard": SubResource("Animation_uxrk3")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main4" type="Node2D"]
 
 [node name="Fader" parent="." instance=ExtResource("1_j7m46")]
 z_index = 15
@@ -733,7 +733,7 @@ Thank you for the advice. I'll keep it in mind, while being respectul and helpfu
 Best,
 Dave Spritely, 
 UK Project Lead
-Forward Green
+ForwardGreen
 
 "
 
@@ -777,18 +777,18 @@ Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessme"
 PreviewText = "Thank you for taking"
 MainBody = "Good afternoon Dave.
 
-Unfortunately, you did not adequately answer by question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof as you recommended, and they said that it is your company's duty to provide it not theirs. I again ask you, can you send the survey? 
+Unfortunately, you did not adequately answer my question and failed to provide the Environmental Impact Assessment. I'm not sure why you are trying to delay me from reading it, but our region's history gives me reason to make a cynical guess. Luckily I had already asked the authorities for proof, and they said they were unable and that it is your company's duty to provide it, not theirs. I again ask you, can you send the survey?
 
 Regards,
 Miguel Lopez"
 ReplyBody1 = "Good afternoon Miguel,
 
-I am sorry that you are unsatisfied with my previous response, but I am the incorrect point of contact for this enquiry. I can only assure you that, as a requirement to begin construction, we must have completed the assessment. If you have any other questions, please do not hesitate to reach out.
+I am sorry that you are unsatisfied ForwardGreen's reassurance, but I am the incorrect point of contact for this enquiry. I can only assure you that, as a requirement to begin construction, we must have completed the assessment. If you have any other questions, please do not hesitate to reach out.
 
 Kind regards,
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary3/Button" index="0"]
 texture_filter = 1
@@ -839,7 +839,7 @@ ReplyBody1 = "NO GOO.
 Kind Regards
 Dave Spritely, 
 UK Project Lead
-Forward Green"
+ForwardGreen"
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TestEmailSummary5/Button" index="0"]
 texture_filter = 1
