@@ -266,7 +266,7 @@ Alex: What can I help you with?
 	Dave: And Patrick?
 	Alex: Is Patrick. He "says it like it is"—one of those sorts. Suck up to him if you like, he always likes that. Otherwise, just try not to annoy him.
 	jump Day01.2 Choice1
-- Not a the moment, thanks.
+- Nothing at the moment, thanks.
 [end_timeline]
 label Day02
 if {AlexReturn} == true:

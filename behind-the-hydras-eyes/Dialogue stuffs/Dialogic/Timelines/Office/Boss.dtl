@@ -25,9 +25,9 @@ Boss: You picked a location pretty sharpish. Which one are we going with again?
 		jump WrongChoice
 label WrongChoice
 Boss: Your boss rustles through some papers on his desk.
-Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another.
+Boss: Ah no, maybe that would have been an acceptable choice but we setteld with another. On YOUR recommendation.
 Boss: I'm sure it's an easy mistake to make...
-Boss: [i]He raises an eyebrow at you, eyes glinting in warning[/i]
+Boss: [i]He raises an eyebrow at you, eyes glinting in warning.[/i]
 Boss: ...for someone who's taken their eye off the ball, that is. And by ball, I mean sails or something. And by sails, I mean the bottom line. Do you understand?
 Dave: ...
 Boss: Anyway.

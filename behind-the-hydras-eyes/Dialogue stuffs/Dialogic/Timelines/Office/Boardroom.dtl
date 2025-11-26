@@ -21,13 +21,13 @@ Moz: Any questions?
 		Olu: And any repairs during the turbines' lifespans will mean periods of inactivity, and—
 		Moz: ANYWAY, it's a rounding thing. Finance should know all about rounding, and our partners are huge fans of it.
 		Boss: No, our turbines are huge fans!! [b]AHAHA![/b]
-		Moz: [i]He forces a laugh, glancing at you as you give him a look of pity[/i]
+		Moz: [i]He forces a laugh, glancing at you as you give him a look of pity.[/i]
 	- Right, sure.
 	jump Location 01
 - What do you mean by upskilling?
 	Moz: Simple\: we're bringing exciting engineering jobs to the area. Better pay and conditions than farming or whatever else they do, right?
 	- Who actually gets those jobs though?
-		Moz: [i]He blinks at you, as if not comprehending[/i]
+		Moz: [i]He blinks at you, as if not comprehending.[/i]
 		Richard: Europeans with degrees that we can coax over there by touting a low cost of living and wonderful climate.
 		Moz: Thanks Richard, super helpful.
 		Moz: NOT! I'm sure at least some of the jobs go to locals, and any jobs for them is a plus.
@@ -71,7 +71,7 @@ Olu: I'm not sure I'm comfortable referring to our government subsidies as—
 Moz: Bachelorette number two! Dubbed Sandbar Paradiso, this lovely lady has maximal wind potential and the local government is trying to heap benefits on us to make us bite.
 Moz: There's a few...possible setbacks—
 Richard: My team can handle any pitchforked mobs.
-Olu: And I believe the extra costs of deeper foundations will be easily met by the stronger winds.
+Olu: And I believe the extra costs of deeper foundations will be easily met by the even more reliable winds in that area.
 Moz: Sure, whatever. I'm just reading the slide guys.
 [signal arg="next_slide"]
 Moz: Sunrise Farm! Cheap and lots of land. I don't need to sell that to you, do I? Another bid's already been accepted, but we don't think that'll be TOO big a problem if we settle here.
