@@ -1,8 +1,8 @@
 jump {WatercoolerChar}
 label Empty
-WaterCooler: I'm empty. 
-WaterCooler: Dessicated and Dehydrated. 
-WaterCooler: Just like you without me. 
+WaterCooler: I'm empty.
+WaterCooler: Dessicated and Dehydrated.
+WaterCooler: Just like you without me.
 [end_timeline]
 label Alex01
 WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
@@ -164,52 +164,52 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Richard: I thought I'd come down and see how you're all getting along.
 	Richard: What with the project coming up on my desk more often.
 	- Oh, any trouble?
-		Richard: Enquiries more than anything, and people probing to see if I'm up for a fight
-		Richard: Nothing I can't handle, of course, just wanted to make sure you weren't going into any skirmishes unprepared
-		Dave: Don't think so, i've defused most emails coming my way
+		Richard: Enquiries more than anything, and people probing to see if I'm up for a fight.
+		Richard: Nothing I can't handle, of course, just wanted to make sure you weren't going into any skirmishes unprepared.
+		Dave: Don't think so, i've defused most emails coming my way.
 		Richard: I'd be lying saying I didn't want to pick up a quick squabble with some rural mexican wanna-be lawyer, but glad you're keeping level headed.
 	- It's all going smoothly yeah
-		Richard: Ah, that's what any opponent says in Round 1, before the proper punches start flying
+		Richard: Ah, that's what any opponent says in Round 1, before the proper punches start flying.
 		Richard: Drop me a line whenever things start looking heated. Wouldn't want you alone in the ring with the mexican hounds.
-		Dave: Really don't think that's necessary, things have been quite civil
-		Richard: They are until they aren't, but you'll see how things go
-		Richard: I've weathered a fair share of storms here in this company
+		Dave: Really don't think that's necessary, things have been quite civil.
+		Richard: They are until they aren't, but you'll see how things go.
+		Richard: I've weathered a fair share of storms here in this company.
 		Richard: It's always better to cut back before you actually hit the bottom.
-		Dave: Right, I'll keep that in mind
+		Dave: Right, I'll keep that in mind...
 	Richard: Anyway, did you catch the match last night?
 	- Sorry, I don't follow football anymore.
-		Richard: Football? Hah, that's not a proper sport
+		Richard: Football? Hah, that's not a proper sport!
 		Richard: It was a rousing cage fight! MMA, the ultimate expression of fitness and ruthlessness!
-		Dave: Oh, I'm not that into that.
+		Dave: Oh, I'm not that into stuff like that.
 		Richard: Not that into it? What else could you be watching? Badminton?
 		Richard: I used to do a bit of boxing when I was younger, but this MMA thing is proper stuff. They gotta give it all to survive!
 		Dave: Oh yeah, what was your biggest fight?
 		Richard: Me and my uncle Roger used to tussle in the backyard.
 		Richard: One day I come home from college and he set up a whole ring, ropes and all.
-		Dave: Wow, sounds like a core memory!
-		Richard: Well, it was my best fight. I still remember the heavy gloves on my hands, looking up at my uncle, a solid foot taller than me, and about two feet wider
+		Dave: Wow, sounds like a core memory.
+		Richard: Well, it was my best fight. I still remember the heavy gloves on my hands, looking up at my uncle, a solid foot taller than me, and about two feet wider.
 		Richard: It was my big day.
-		Richard: Until I knocked him out and they had to give him a new pacemaker.
+		Richard: Until I knocked him out and they had to give him a new pacemaker. Might have bit his ear too.
 	- Oh, who was playing?
-		Richard: Playing? Nonono. There was no playing in the ring last night
-		Richard: The Morocccan guy knocked him out by the 4th round, but by then they both had blood streaming down their face
-		Dave: Ew...
-		Richard: Yeah, when they declared him the winner and lifted his arm up
-		Richard: You could see the other guy's tooth in his knuckle. Proper good stuff
-		Dave: Right.... Well I'm glad you've got a hobby?
-		Richard: Oh, I wish I could've kept up the boxing. Shame about Uncle Roger
+		Richard: Playing? Nonono. There was no playing in the ring last night.
+		Richard: The Morocccan guy knocked him out by the 4th round, but by then they both had blood streaming down their faces.
+		Dave: Right...
+		Richard: Yeah, when they declared him the winner and lifted his arm up...
+		Richard: You could see the other guy's tooth in his knuckle. Proper good stuff.
+		Dave: Right.... Well I'm glad you've got a... hobby?
+		Richard: Oh, I wish I could've kept it up myself. Shame about Uncle Roger.
 		Dave: What?
 		Richard: Oh, we sparred when I was younger. God, that was a big funeral.
-		Dave: I'm—sorry, what!?
-		Richard: Oh, the funeral was unrelated.
+		Dave: I'm—sorry, what?
+		Richard: Oh, the funeral was unrelated. Years later.
 	Dave: Right....
 	Richard: ....
 	Dave: Well, I'm all hydrated now, so I'll head back to work...
 	Richard: Ah yeah, good shout.
-	Richard: I don't usually drink from the watercooler. Not enough electrolytes in the water
-	Richard: I've got my own filter upstairs, and I get special, 50L jugs delivered to my floor
-	Dave: Is anything wrong with the water?!
-	Richard: Well, if you're looking for peak performance from your brain at all times, then you should be drinking something else
+	Richard: I don't usually drink from the watercooler. Not enough electrolytes in the water.
+	Richard: I've got my own filter upstairs, and I get special, 50L jugs delivered to my floor.
+	Dave: Is anything wrong with the office water?
+	Richard: Well, if you're looking for peak performance from your brain at all times, then you should be drinking something else.
 	Richard: But I'm not sharing my TruNevis Naturally Purified Electrolyte Dense Reserve Solution with anyone.
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
@@ -254,9 +254,10 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Olu: Huh? No on my house. A little conservatory. Big windows so I can watch the birds. Turns out we have more foxes than birds though.
 		Olu: You can hear their screaming so loud in the conservatory. Bloodcurdling, like they're angry at the world they're forced to live in, scavenging in bins, fighting with rats.
 		Olu: ...or to ward off rivals, I guess. Maybe I'll try it with Moz.
+		Dave: ...
 		Olu: Sorry, that was weird. I'm not going to scream at Moz. He's not my rival or anything.
 		Olu: I mean, I don't have any rivals.
-		Dave: ...
+		Dave: Right...
 	- So, uh, how's the project?
 		Olu: Oh. Fine, I guess. Delays and suprises, but we knew there was going to be some bumps whatever the site you picked.
 		Olu: Worrying about those isn't really my job, I just make sure we have the money for whatever you or Richard or Patrick sign off, and everyone gets their wages.
@@ -291,25 +292,25 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Janine: ....
 	Dave: ....
 	WaterCooler: ....
-	WaterCooler: Well this is awkward
+	WaterCooler: Well this is awkward.
 	- How's it going?
-		Janine: Fine,
-		Janine: I wish I didn't have so much to do
-		Janine: But someone's gotta clear this mess
+		Janine: Fine.
+		Janine: I wish I didn't have so much to do.
+		Janine: But someone's gotta clear up this mess.
 		Dave: Listen, if I can help with anythi...
 		Janine: No.
-		Janine: Patrick entrusted me with this
-		Janine: And / I / don't plan to dissapoint him
+		Janine: Patrick entrusted me with this.
+		Janine: And unlike some, [i]I[/i] don't plan to disappoint him.
 		- Was that aimed at me?
-			Janine: Not unless you felt it necessary
-			Janine: I'm not here to make presumptions on your relationship with your boss
-			Janine: I'm here to sort through complaints
+			Janine: Do you think you have reason for it to have been?
+			Janine: I'm not here to make presumptions on your relationship with your boss.
+			Janine: I'm here to sort through complaints.
 			Dave: Right, nice to have you.
-		- I feel like we got off on the wrong foot
+		- I feel like we got off on the wrong foot.
 			Janine: Did we?
-			Janine: I'm not here to make friends
-			Janine: There's obviously work to do, and I need to refill my water bottle
-			Dave: Uhuh, well, don't let me stop you
+			Janine: I'm not here to make friends.
+			Janine: There's obviously work to do, and I need to refill my water bottle.
+			Dave: Uhuh, well, don't let me stop you.
 			Janine: You couldn't.
 			Dave: ...Right.
 	
@@ -321,7 +322,7 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Janine: ....
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
-	WaterCooler: Well she's quite something
+	WaterCooler: Well, she's quite something.
 	[end_timeline]
 
 - No
@@ -336,55 +337,56 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	[signal arg="watercooler_Alex"]
 	[wait time="2.0" hide_text="false"]
 	Jen: Oh, hi Boss!
-	Jen: Nice to see you here
+	Jen: Nice to see you here.
 	Dave: Yeah... I work here?
-	Jen: Haha, yeah, I guess we all do
-	Jen: You'll never believe what Xena did last night
+	Jen: Haha, yeah, I guess we all do.
+	Jen: You'll never believe what Xena did last night.
 	- Xena?
-		Jen: Oh, I can't imagine I haven't told you
-		Jen: Wait, lemme show you some more pictures to jog your memory
-		WaterCooler: Stop her
-		WaterCooler: You don't want that
-		- Oh...No, of course I remember Xena
-			Jen: Yeah, see, she's great
-		- She slipped my mind
-			Dave: I couldn't forget a cat like her
-			Dave: She's very beautiful
-			Jen: Of Course she is
-	- What's she done this time? 
-		Jen: This time?!
-		Jen: She's an absolute princess that has never stepped out of line
-		Dave: Oh, sorry, I just assumed there was like plenty of funny stories about her
-		Jen: She would never act unlike the royalty she is
-		Dave: No, yeah, right....
-	Jen: Anyway, we were watching Medium Meets 2\: The Ghosting Return
-	Jen: This season they're bringing people that ghosted eachother in Season 1 to commune with compatible partners that may have died
-	Dave: Uhuh...
-	Jen: They were just about to get to the Ouija board segment, when Xena started meowing everywhere
-	Jen: I thought she had formed a connection, or was being called by one of the mediums
+		Jen: Oh, I can't imagine I haven't told you.
+		Jen: Wait, lemme show you some more pictures to jog your memory.
+		WaterCooler: Stop her.
+		WaterCooler: You don't want to be here all day.
+		- Oh...No, of course I remember Xena.
+			Jen: Yeah, see, she's great.
+		- Ah right! She slipped my mind.
+			Dave: I couldn't forget a cat like her.
+			Dave: She's very beautiful.
+			Jen: Of course she is. She's groomed to the highest standards expected of a show cat.
+			Jen: ...even if the only thing she "shows" is her annoyance.
+	- What's she done this time?
+		Jen: Done?
+		Jen: She's an absolute princess that has never stepped out of line.
+		Dave: Oh, sorry, I just assumed you were about to tell a funny story or something.
+		Jen: She would never act "funny", since that's beneath the royalty she is.
+		Dave: No, yeah, right.
+	Jen: Anyway, we were watching Medium Meets Season 2\: The Ghosting Return.
+	Jen: This season they're bringing people that ghosted eachother in Season 1 to commune with compatible partners that may have died.
+	Dave: Of course.
+	Jen: They were just about to get to the Ouija board segment, when Xena started meowing everywhere.
+	Jen: I thought she had formed a connection, or was being called by one of the mediums.
 	Jen: But instead she went to the automatic feeder.
-	Dave: Right...
-	Jen: See, i thought the feeder was posessed by a spirit and she could sense it
-	Jen: But then I saw the clock, and realised that the clocks went back
-	Dave: Yeah, not bad for the extra hour of sleep
-	Jen: Try explaining that to Xena
-	Jen: I went to pick her up, and she just strached me all over my arm
-	Jen: *she pulls up her sleeve to reveal a nasty gash running down her forearm*
-	Watercooler: Looks like that's infected, pretty badly
-	- You should probably see a doctor
+	Dave: Okay. And then?
+	Jen: Well, I thought perhaps the feeder was posessed by a spirit and she could sense it
+	Jen: But then I saw the time, and realised that the clocks went back.
+	Dave: Yeah, not bad for the extra hour of sleep.
+	Jen: Try explaining that to Xena.
+	Jen: I went to pick her up, and she just strached me all over my arm.
+	Jen: [i]She pulls up her sleeve to reveal a nasty gash running down her forearm.[/i]
+	Watercooler: Does that seem infected to you?
+	- Maybe you should see a doctor?
 		Jen: Don't be silly. She's done this before.
-		Jen: It's my fault for not treating her with the respect she deserves
-		Jen: Of course she was hungry
+		Jen: It was my own fault, picking her up too fast when she's hungry.
+		Jen: Especially if she was spooked by some sort of ghost.
 	- Oh god, are you okay?
-		Jen: Ah, i've had worse
-		Jen: One time she almost clawed my eye out
-		Jen: It was cause I stopped licking her
-	Dave: What?!
-	Jen: Yeah, she just has a lot of personality
+		Jen: Ah, I've had worse.
+		Jen: One time she almost clawed my eye out.
+		Jen: It was cause I stopped licking her.
+	Dave: She sounds...uh...
+	Jen: Yeah, she has a lot of personality.
 	Jen: Anyhow, i'm running off early today to catch the new reboot of Orgy Sex Box!
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
-	Watercooler: Did you approve her leave?
+	Watercooler: Did you approve her leaving early?
 	[end_timeline]
 - No
 	Dave: I am adequately quenched as is, thanks.
@@ -401,16 +403,16 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Dave: Hey, how's it going?
 	Alex: Not bad, not bad...
 	Alex: ...How are things with you?
-	- Yeah, not bad you know
-	- Actually, things are a bit out of con...
+	- Yeah, not too bad.
+	- Actually, things are—
 	Alex: No, yeah, yeah, totally.
 	Alex: Can you help me with something?
 	Alex: Man to man.
-	- Eeerrrmm, sure, what's up?
-		Alex: Well...I've been on the apps and such lately.
+	- Ummm, sure, what's up?
+		Alex: Well...I've been on the apps and such lately. You know, [i]the apps.[/i]
 		Dave: Oh, I'm....glad to hear it?
-		Alex: Yeah, things are pretty rough out there.
-		Alex: But it's not a bad activity to and from the pond.
+		Alex: Yeah, things are pretty rough out there. Fishing for crumbs of attention.
+		Alex: But it's not a bad activity when things are a bit slow at the pond.
 		Dave: Well, good to hear you're keeping up with the swans.
 		Alex: Yeah, they're doing great.
 	- ...man to man?
@@ -420,36 +422,37 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Alex: Is that a problem?
 		Dave: Aaaah, no, I... I can help with whatever.
 		Alex: Right, I was hoping you'd say that.
-	Alex: Anyway, I've been on the apps.
-	Alex: and things have been getting pretty serious with this girl.
+	Alex: Anyway, so I've been on the apps.
+	Alex: And things have been getting pretty serious with this girl.
 	Alex: I even named one of the swans after her.
 	Dave: Oh hey, that sounds...
-	- Great! I'm happy for you
+	- Great! I'm happy for you.
 		Alex: Yeah, thanks.
-		Alex: Since my wife left me, I haven't really gone back out there.
+		Alex: Since my wife left me, I haven't really gone back out there, so this felt big.
 		Alex: Glad I still got it.
-	- A bit cringey, but fair
+	- A bit fast, but fair enough.
 		Alex: I know!
 		Alex: And that's the problem.
 	Alex: We've got a date tonight and I just feel like I don't know how to be a human anymore.
 	Alex: I thought you might have same inspirational advice.
-	Alex: Or would think that this whole thing is stupid and I should quit it.
+	Alex: Or would think that this whole thing is stupid and I should quit it. At least that'd be an answer too.
 	Alex: Maybe I should just stick to my swans.
 	Dave: Whoa, let's not get ahead of ourselves here.
-	- You should relax
+	- You should relax.
 		Dave: Things'll work out one way or another.
 		Dave: Just tell her about the swans and whatever else you like doing.
 		Dave: Worst comes to worst, you're back where you started.
 		Alex: Thanks for the kind words boss.
 	
-	- You should call it off
+	- You should call it off.
 		Dave: I just don't think it's worth that kinda stress.
-		Dave: You should wait for someone to come find you!
+		Dave: Abandon the apps, find someone the old fashioned way. Less soul-draining.
 		Alex: Maybe you're right...
 	
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
 	WaterCooler: He does know you're single, right?
+	Dave: Shut up.
 	[end_timeline]
 - No
 	Dave: I am adequately quenched as is, thanks.

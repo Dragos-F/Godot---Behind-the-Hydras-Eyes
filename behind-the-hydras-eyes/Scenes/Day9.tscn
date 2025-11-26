@@ -736,7 +736,6 @@ offset_right = 579.42017
 offset_bottom = 97.66014
 scale = Vector2(0.735, 0.735)
 text = "What is GOO? The craze that's swept London"
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "Ten days ago, adverts began to spring up all over the udnerground. No-one knows who puts them up, no-one knows what they mean, but they appear in clusters at night, spreading like a virus. Their message is simple: GOO.								

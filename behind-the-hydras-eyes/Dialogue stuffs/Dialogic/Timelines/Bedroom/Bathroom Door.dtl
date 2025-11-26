@@ -16,17 +16,18 @@ label Quarter2
 	Dave: Ignore it. Don't think, don't look, don't breathe it in. Your throat itches, imagining the spores.
 [end_timeline]
 label Quarter3
-"Bathroom Door": You peer in. It's your bathroom. A strong smell of mould assaults you. 
-"Bathroom Door": Its ferocity and undeniability doesn't spare your nostrils for a second. 
+"Bathroom Door": You peer in. It's your bathroom. A strong smell of mould assaults you.
+"Bathroom Door": Its ferocity and undeniability makes it practically alive, an evil force which sneaks under the door and into your lungs as you sleep.
 - Brave the bathroom
 	"Bathroom Door": As you stand inside this room, you feel like whatever curse has posessed the walls, making them weep dark spores, is reaching for you.
 	"Bathroom Door": And it finds something within.
-	"Bathroom Door": The lingering sadness of this flat, concentrated in the walls? 
+	"Bathroom Door": The lingering sadness of this flat, concentrated in the walls?
 	"Bathroom Door": A stain of leprosy, showing a festering wound in the fabric of your shelter?
-	"Bathroom Door": Anger. Anger and rage at the at the conditions and people, for this was no accident, that landed you in this room.
-	"Bathroom Door": Staring at these walls.
-	"Bathroom Door": Inhaling this mould.
+	"Bathroom Door": Anger. Anger and rage at the at the conditions and people, for this was no accident, that landed you in this room. Forced you to live with this.
+	"Bathroom Door": Staring at these walls. Inhaling this mould.
+	"Bathroom Door": Paying rent the whole time. 
+	"Bathroom Door": Governmental choices, local council negligence, and the unending greed of landlords. A metaphor for modern Britain painted in spores.
 - Close the door
-	"Bathroom Door": This temple of sanitation has been conquered.
+	"Bathroom Door": This temple of sanitation has been reclaimed. Long ago did it stop being fit for human habitation.
 	"Bathroom Door": Best retreat, and cede the land back to nature.
 [end_timeline]

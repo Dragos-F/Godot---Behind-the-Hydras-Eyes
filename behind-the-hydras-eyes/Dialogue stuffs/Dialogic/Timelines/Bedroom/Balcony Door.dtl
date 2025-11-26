@@ -1,5 +1,5 @@
-"Balcony Door": The sultry speckled darkness tempts you outside
+"Balcony Door": The darkness beckons, cool air gently swaying the trees that frame the shining skyline.
 - Step out...
 	[signal arg="smoking"]
-- Stay in
+- Stay in.
 	[end_timeline]

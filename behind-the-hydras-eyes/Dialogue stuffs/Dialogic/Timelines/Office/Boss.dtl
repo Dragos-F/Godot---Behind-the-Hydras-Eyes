@@ -56,35 +56,35 @@ Boss: [i]The expression Mr Moore fixes you with clearly suggests that the correc
 
 label Quarter2
 Boss: Dave, Dave, Dave. I thought when I hired you that you'd be my protégé, but at this rate you're more a stumbler than a skipper.
-Boss: Ha! 
+Boss: Ha!
 Boss: Anyway, what was I saying?
 Dave: ...
 Boss: Oh, that's right. You're falling behind on your targets. Expenditure is up, construction deadlines have been missed, and journalists are on my ass like flies on horseshit.
 Boss: And you're meant to be the one swatting them. Or zapping them, crushing them, drowning them. Whatever. Just deal with the flies, capiche?
 - Which flies specifically?
 	Boss: Does it matter? If they buzz, kill 'em. If they look like they might buzz in the future, bribe 'em.
-	Dave: I'm answering all emails I get, but I can't always see who's trying to escalate. 
+	Dave: I'm answering all emails I get, but I can't always see who's trying to escalate.
 	Boss: Escalate?
 	Dave: ...buzz.
 	Boss: Fine, fine. That loser Miguel for starters. You've seen him, right? Some do-gooder busybody trying to find loopholes to shut us down.
 	- Well, do we have an EIA?
-		Boss: Do we have an EIA? 
+		Boss: [wave amp=50.0 freq=5.0 connected=1]"Do we have an EIA?"[/wave]
 		Boss: Fuck off. What are you, a judge?
 		Dave: ...
-	- Okay, I'll handle him. 
+	- Okay, I'll handle him.
 		Boss: You should've already handled him! Your job should be simpler than Olu's or Richard's, so stop fucking it up, alright?
-		Boss: If the project goes under, then, well, it brings me no joy to say this, but it'll be YOUR fault that I'll have to lay a load of people off. 
+		Boss: If the project goes under, then, well, it brings me no joy to say this, but it'll be YOUR fault that I'll have to lay a load of people off.
 		- Is ForwardGreen struggling financially?
 			Boss: No.
 		- ...Yes, sir.
 			Boss: Good lad.
 - I get it.
-	Boss: I should hope you do. 
+	Boss: I should hope you do.
 	Boss: Look, you seem a good kid, but, and it really pains me to say this, if you keep fucking up, it'll be your fault I have to lay people off.
 	Boss: So you better hope Lagoon Breeze gets finished.
 	- I can't control the protests!
-		Boss: Life's unfair, kid. You were hired to push things over the line, and if you don't, or can't, than the buck stops with you. 
-		Boss: Not me. 
+		Boss: Life's unfair, kid. You were hired to push things over the line, and if you don't, or can't, than the buck stops with you.
+		Boss: Not me.
 	- Yes. Of course sir.
 		Boss: I knew you'd understand. Good lad, keep pulling yourself up on those bootstraps and you'll be like me some day, I'm sure.
 	- So if it finishes, there'll be no layoffs?
@@ -101,8 +101,8 @@ Boss: What's on your mind?
 	Dave: ...
 	jump Q2Questions
 - Is there anything else I can help with?
-	Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed. 
-	Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now. 
+	Boss: Well, I might have some announcements soon, but that's all hush hush until it's confirmed.
+	Boss: Just keep sending your emails, keep Alex and Jen busy, and keep your head above the water for now.
 	Dave: ...Right, okay.
 	jump Q2Questions
 - What's you're favourite type of dog?
@@ -111,38 +111,38 @@ Boss: What's on your mind?
 	jump Q2Questions
 - Alex mentioned something about a bonus?
 	Boss: Oh, did he? Well he's not getting one. A bonus is for real high fliers. Innovators. People who...well, people like Moz!
-	Dave: Moz? 
-	Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months! 
+	Dave: Moz?
+	Boss: Oh yes. He's always keeping busy, his head buried in his phone, making deals and finding solutions. He told me the other day that he's not send an email himself in four months!
 	Dave: ...And that's...good?
-	Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing. 
+	Boss: Well, it might not sound it at first, but it's because he just presses a button and this fancy chatbot does everything. Like that old film with the red eye thing.
 	Boss: But, uh, not evil.
 	jump Q2Questions
 
-- Get up and Leave		
+- Get up and Leave
 [end_timeline]
 
 label Quarter3
-Boss: Ah, there's my third favourite mid-level manager of the Lagoon Breeze team!		
-Boss: How're you liking my impositions? New AI integration AND a new team member. Try not to be too gratuitously profusive in your thanks, kiddo.		
-Boss: And what a new team member she is. You could learn a thing or two from Janine. A woman of no needless words. A true spartan spirit.		
-Boss: Respects people's time, unlike some people, who constantly ask questions.		
-Dave: ...		
-Boss: So, go on, thank me for saving the project and, by extension, your jobs.		
-- But, the riot...		
-	Boss: Riot? More like an argument. A little spat over some bodies that were probably nothing to do with us.	
-	- Probably?	
+Boss: Ah, there's my third favourite mid-level manager of the Lagoon Breeze team!
+Boss: How're you liking my impositions? New AI integration AND a new team member. Try not to be too gratuitously profusive in your thanks, kiddo.
+Boss: And what a new team member she is. You could learn a thing or two from Janine. A woman of no needless words. A true spartan spirit.
+Boss: Respects people's time, unlike some people, who constantly ask questions.
+Dave: ...
+Boss: So, go on, thank me for saving the project and, by extension, your jobs.
+- But, the riot...
+	Boss: Riot? More like an argument. A little spat over some bodies that were probably nothing to do with us.
+	- Probably?
 		Boss: The captain can't have eyes on every part of the ship at once. It's called plausible deniability. Makes the ship insurance cheaper.
 		Boss: Ha!
 		Boss: What was I saying? Oh yeah, those bodies. Depending on local realities, we sometimes hire paramilitary support when we need more active protection than the local police will give.
 		Boss: But we're not responsible for the actions of those groups, nor, technically speaking, the proxy groups that contracted them.
 		Boss: That's how the modern world works, Dave. Webs of shell companies and proxies and ghosts, all the way down.
-- But, the EIP...		
-	Boss: Courts are slow. Nothing is guranteed. A simple mistake, something innocently overlooked, shouldn't get in the way of progress.	
-	Boss: And that's all there is to it. Should we really believe newts, or whatever, get precedent over humanities enrichment?	
-- But, the recent disaster...		
-	Boss: Disaster, dis-shmaster. Momentary setbacks are exactly that, there's no reason to baulk now.	
-	Boss: The potential profits on it are still huge, even with the issues.	
-	Boss: And we prepared for these issues, so don't be a baby.	
+- But, the EIP...
+	Boss: Courts are slow. Nothing is guranteed. A simple mistake, something innocently overlooked, shouldn't get in the way of progress.
+	Boss: And that's all there is to it. Should we really believe newts, or whatever, get precedent over humanities enrichment?
+- But, the recent disaster...
+	Boss: Disaster, dis-shmaster. Momentary setbacks are exactly that, there's no reason to baulk now.
+	Boss: The potential profits on it are still huge, even with the issues.
+	Boss: And we prepared for these issues, so don't be a baby.
 [end_timeline]
 
 label Quarter4
@@ -152,22 +152,24 @@ Boss: Hey Dave, news of the issues you've been having has trickled back to me. H
 - We're at risk of losing control fast.
 	Boss: A prescient prediction. In fact, it's already come true.
 - I think there's fundamental issues we need to address.
-	Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too? 
-Boss:...
-Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.	
+	Boss: And yet, you've never voiced such issues before. It's one thing to be disloyal, but a coward too?
+Boss: ...
+Boss: There was a protest. A girl was killed by the cops. Freak accident, no-ones fault. But it makes us look bad, see? Rattles the sponsors.
 Boss: It's also forced the Mexican authorities hand somewhat. There's going to be an investigation, which could halt construction or, well, worse.
-Boss: Apparently, someone got word there was no EIA and has been trying to kick up a fuss, and that won't help the investigation. 
-Boss: *He pauses and eyes you up. He seems on the cusp of a decision*
+Boss: Apparently, someone got word there was no EIA and has been trying to kick up a fuss, and that won't help the investigation.
+Boss: [i]He pauses and eyes you up. He seems on the cusp of a decision.[/i]
 - How can I help?
-	Boss: Ah, how very kind of you to offer. Well, I accept your resignation. 
+	Boss: Ah, how very kind of you to offer. Well, I accept your resignation.
 - Stay silent
 	Boss: Well, it's not easy but I'm going to have to fire you. You know how it is.
 Boss: Believe me, I'm much sadder than you about the whole thing. Just downright unfortunate. And losing Alex and Jen too...
 - You fired Alex and Jen too?!
-	Boss: Well, I haven't told them yet, but yes. They're both off today. 
+	Boss: Well, I haven't told them yet, but yes.
 	Boss: I'll give them a ring once this over to let them know.
 - Stay silent
-	Boss: But hey, redundencies are a natural growing pain for a healthy company. 
+	Boss: But hey, redundencies are a natural growing pain for a healthy company.
+	Boss: Your departure will be the start of a new direction for ForwardGreen, and that's nice isn't it?
 Boss: That's all I wanted to say. I'll take your staff ID now, and you can go clean out your desk.
 Boss: Lovely working with you.
+Dave: ...
 [end_timeline]
