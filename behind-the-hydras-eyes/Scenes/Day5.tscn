@@ -702,8 +702,12 @@ texture = ExtResource("10_53qxh")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 emailsProgressionQuota = 4
+
+[node name="EmailList" parent="ScreenUI" index="0"]
+visible = true
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -903,6 +907,9 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
+[node name="MainEmail" parent="ScreenUI" index="1"]
+visible = true
+
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -1040,6 +1047,9 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
+
+[node name="BrowserThing" parent="ScreenUI" index="3"]
+visible = false
 
 [node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
 anchor_right = 0.0

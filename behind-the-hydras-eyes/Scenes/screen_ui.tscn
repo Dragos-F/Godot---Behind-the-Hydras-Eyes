@@ -960,6 +960,7 @@ texture = ExtResource("14_bd8n7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
 [node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -980,7 +981,6 @@ keyboardTarget = NodePath("KeyboardTarget")
 info = NodePath("Budget/HomeBudget/Chart")
 
 [node name="EmailList" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -1040,7 +1040,6 @@ boss = true
 autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -3021,6 +3020,7 @@ theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
 [node name="BrowserThing" type="Panel" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 5.0
