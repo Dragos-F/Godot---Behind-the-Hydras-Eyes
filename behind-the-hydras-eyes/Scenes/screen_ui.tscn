@@ -960,7 +960,6 @@ texture = ExtResource("14_bd8n7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
 [node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
-visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -981,6 +980,7 @@ keyboardTarget = NodePath("KeyboardTarget")
 info = NodePath("Budget/HomeBudget/Chart")
 
 [node name="EmailList" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -1040,6 +1040,7 @@ boss = true
 autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -3020,7 +3021,6 @@ theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
 [node name="BrowserThing" type="Panel" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 5.0
@@ -3063,9 +3063,10 @@ offset_right = 1313.0
 offset_bottom = 633.0
 scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
-current_tab = 0
+current_tab = 1
 
 [node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
@@ -3297,8 +3298,7 @@ position = Vector2(199.2089, 77.62393)
 scale = Vector2(1.324882, 1.3651675)
 texture = ExtResource("37_yhhrm")
 
-[node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer")]
-visible = false
+[node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer", "timer2")]
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 script = ExtResource("6_fio65")
@@ -3306,6 +3306,7 @@ error_message = NodePath("ErrorMessage")
 username = NodePath("Panel/Control/TextEdit")
 password = NodePath("Panel/Control/TextEdit2")
 timer = NodePath("Timer")
+timer2 = NodePath("Timer2")
 error_noise = ExtResource("7_0bmt1")
 metadata/_tab_index = 1
 
@@ -3379,19 +3380,31 @@ texture = ExtResource("10_tu6vg")
 
 [node name="ErrorMessage" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In"]
 visible = false
-layout_mode = 0
-offset_left = 294.525
-offset_top = 85.6594
-offset_right = 1037.52
-offset_bottom = 126.659
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.47675
+offset_top = -228.00089
+offset_right = 357.52325
+offset_bottom = -187.00089
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "INCORRECT USERNAME / PASSWORD"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In"]
 wait_time = 0.5
+
+[node name="Timer2" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+wait_time = 2.0
+one_shot = true
 
 [node name="BottomBar" type="Panel" parent="."]
 layout_mode = 0
@@ -3577,6 +3590,7 @@ position = Vector2(775, 951)
 [connection signal="pressed" from="BrowserThing/TabContainer/O-NO Alert/Panel5/Button" to="BrowserThing/TabContainer/O-NO Alert/Panel5/AnimatedSprite2D" method="_on_button_pressed"]
 [connection signal="pressed" from="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control/LogIn" to="BrowserThing/TabContainer/IntraNet Log-In" method="_on_log_in_pressed"]
 [connection signal="timeout" from="BrowserThing/TabContainer/IntraNet Log-In/Timer" to="BrowserThing/TabContainer/IntraNet Log-In" method="_on_timer_timeout"]
+[connection signal="timeout" from="BrowserThing/TabContainer/IntraNet Log-In/Timer2" to="BrowserThing/TabContainer/IntraNet Log-In" method="_on_timer_2_timeout"]
 [connection signal="pressed" from="BottomBar/Emails" to="." method="_on_emails_pressed"]
 [connection signal="pressed" from="BottomBar/Budget" to="." method="_on_budget_pressed"]
 [connection signal="pressed" from="BottomBar/Internet" to="." method="_on_internet_pressed"]
