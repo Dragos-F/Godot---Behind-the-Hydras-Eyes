@@ -11,6 +11,8 @@ func _save():
 	SaveFileData.location_choice = PermanentGlobal.LocationChoice
 	SaveFileData.Savings = PermanentGlobal.Savings
 	SaveFileData.Lifestyle = PermanentGlobal.Lifestyle
+	SaveFileData.deleted = PermanentGlobal.deleted
+	SaveFileData.watercoolers = PermanentGlobal.watercoolers
 	ResourceSaver.save(SaveFileData,save_location)
 
 func _load():

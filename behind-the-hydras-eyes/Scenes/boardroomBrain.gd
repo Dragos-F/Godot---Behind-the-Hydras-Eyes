@@ -42,6 +42,7 @@ func _input(event):
 
 
 func end_day_boardroom():
+	Achievements.set_achievement("achieve2")
 	Fader.FadeUp("Next week")
 	await Fader.fade_finished
 	Fader.FadeDown("Next week")

@@ -22,6 +22,8 @@ func _on_start_pressed() -> void:
 		PermanentGlobal.Lifestyle = SaveLoad.SaveFileData.Lifestyle
 		PermanentGlobal.Savings = SaveLoad.SaveFileData.Savings
 		PermanentGlobal.email_choices = SaveLoad.SaveFileData.email_choices.duplicate(true)
+		PermanentGlobal.deleted = SaveLoad.SaveFileData.deleted
+		PermanentGlobal.watercoolers = SaveLoad.SaveFileData.watercoolers
 	
 #func _process(delta: float) -> void:
 	#if Input.is_action_pressed("smoking")&&timer.is_stopped():

@@ -575,7 +575,7 @@ texture = ExtResource("6_k3jav")
 [node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
 texture_filter = 1
-emailsProgressionQuota = 3
+emailsProgressionQuota = 4
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1

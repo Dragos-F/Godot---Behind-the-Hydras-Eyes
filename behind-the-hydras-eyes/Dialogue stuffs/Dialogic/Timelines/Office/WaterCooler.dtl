@@ -89,13 +89,12 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		[signal arg="no_watercooler_Alex"]
 		[wait time="2.2"]
 		[end_timeline]
-	- No
-		Dave: I am adequately quenched as is, thanks.
-		[signal arg="no_watercooler_Alex"]
-		[wait time="2.2"]
-		[end_timeline]
+
 - No
 	Dave: I am adequately quenched as is, thanks.
+	[wait time="2.2"]
+	[end_timeline]
+
 label Moz
 WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders and "HYDRATE"?
 - Yes
@@ -372,7 +371,7 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Jen: Try explaining that to Xena.
 	Jen: I went to pick her up, and she just strached me all over my arm.
 	Jen: [i]She pulls up her sleeve to reveal a nasty gash running down her forearm.[/i]
-	Watercooler: Does that seem infected to you?
+	WaterCooler: Does that seem infected to you?
 	- Maybe you should see a doctor?
 		Jen: Don't be silly. She's done this before.
 		Jen: It was my own fault, picking her up too fast when she's hungry.
@@ -386,7 +385,7 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	Jen: Anyhow, i'm running off early today to catch the new reboot of Orgy Sex Box!
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
-	Watercooler: Did you approve her leaving early?
+	WaterCooler: Did you approve her leaving early?
 	[end_timeline]
 - No
 	Dave: I am adequately quenched as is, thanks.
@@ -457,3 +456,25 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 - No
 	Dave: I am adequately quenched as is, thanks.
 	[end_timeline]
+label No-one
+WaterCooler: ...
+WaterCooler: Any second now...
+WaterCooler: ...
+WaterCooler: Aaaany second, someone will interrupt us with some gossip, or banter, or awkward small talk.
+WaterCooler: Probably. 
+WaterCooler: Now? 
+WaterCooler: ...now?
+WaterCooler: Huh. You wonder what Alex and Jen are up to. Even Janine, you guess.
+WaterCooler: Something fun, hopefully,
+Dave: ...
+WaterCooler: It's so quiet that you can hear birds outside. Parakeets? Funny how something escaped from domestication could thrive.
+WaterCooler: Parakeets, pigeons. 
+WaterCooler: Those wallabies in the peak district.
+WaterCooler: Is this a metaphor? Maybe you should run away, escape into the wild. Drink your own piss like that survivalist guy.
+Dave: ...
+WaterCooler: No, probably not. Piss probably tastes bad. 
+WaterCooler: Have I said piss too much? Maybe I should stop saying piss while you're hydrating. Might make you want to...
+WaterCooler: Eh, nevermind. I've worn that thin already...
+WaterCooler: Whatever. Done? Get back to work I guess. God this day feels slow.
+set PermanentGlobal.watercoolers += 1 
+[end_timeline]

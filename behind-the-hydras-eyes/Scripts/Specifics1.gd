@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 		outsideDoor.readyToLeave = true
 		outsideDoor.Type = outsideDoor.InteractType.EntryDoor
 		DoorNotif.visible = true
-		print ("Should be ready to leave")
+		#print ("Should be ready to leave")
 	if Dialogic.VAR.teaNotif == true && !TeaNotif.visible && onceV1:
 		TeaNotif.visible = true
 		onceV1 = false

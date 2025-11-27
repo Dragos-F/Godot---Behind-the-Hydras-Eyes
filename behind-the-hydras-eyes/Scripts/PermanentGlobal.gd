@@ -5,6 +5,10 @@ extends Node
 @onready var Lifestyle:String
 @onready var Plant:bool = false
 @onready var email_choices = {}
+@onready var deleted:int
+@onready var watercoolers:int
+var oncev1:bool = true
+var oncev2:bool = true
 #var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse normal.png")
 var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse branded 64.png")
 var finger = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse finger.png")
@@ -24,6 +28,14 @@ func _input(event: InputEvent) -> void:
 				Dialogic.Save.save()
 				Dialogic.Save.load()
 				print ("Highlighted first choice")
+func _process(delta: float) -> void:
+	if deleted >=32 && oncev1:
+		Achievements.set_achievement("achieve4")
+		oncev1 = false
+	if watercoolers >= 9 &&oncev2:
+		Achievements.set_achievement("achieve5")
+		oncev2 = false
+	#print (watercoolers)
 
 func reset_focus():
 	var choice:DialogicSubsystem = Dialogic.get_subsystem("Choices")
@@ -37,6 +49,10 @@ func reset_choices():
 	Savings = 2400
 	Lifestyle = "Moderate"
 	Plant = false
+	deleted = 0
+	watercoolers = 0 
+	oncev1 = true
+	oncev2 = true
 	email_choices.clear()
 	
 	

@@ -3,7 +3,10 @@ extends Node
 var achievements: Dictionary[String, bool] = {
 	"achieve1": false,
 	"achieve2": false,
-	"achieve3": false
+	"achieve3": false,
+	"achieve4": false,
+	"achieve5": false,
+	"achieve6": false
 	}
 	
 	

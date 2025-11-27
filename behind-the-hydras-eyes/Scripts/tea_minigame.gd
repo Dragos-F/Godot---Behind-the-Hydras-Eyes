@@ -27,6 +27,7 @@ func _on_button_pressed() -> void:
 		var layout = Dialogic.start("GiveTea")
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",AlexAnchor)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",JenAnchor)
+	Achievements.set_achievement("achieve1")
 
 
 func _on_reset_pressed() -> void:

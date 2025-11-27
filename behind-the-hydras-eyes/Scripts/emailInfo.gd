@@ -61,4 +61,5 @@ func _on_delete_pressed() -> void:
 	screen_ui.reply.visible = false
 	screen_ui.reply.disabled = true
 	screen_ui.hint_text.visible = false
+	PermanentGlobal.deleted +=1
 	self.queue_free()

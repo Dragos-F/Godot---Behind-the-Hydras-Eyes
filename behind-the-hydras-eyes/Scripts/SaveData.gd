@@ -6,3 +6,5 @@ class_name SaveDataResource
 @export var Savings:float
 @export var Lifestyle:String
 @export var email_choices = {}
+@export var deleted:int 
+@export var watercoolers:int

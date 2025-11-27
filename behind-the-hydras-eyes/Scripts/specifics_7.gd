@@ -14,12 +14,13 @@ func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day07"
 	Dialogic.VAR.WatercoolerChar ="Janine"
 	Dialogic.VAR.JanineReturn = false
-	if PermanentGlobal.email_choices["Our Support"] == 1:
-		Perez3A.visible = true
-		Perez3B.visible = false
-	elif PermanentGlobal.email_choices["Our Support"] == 2:
-		Perez3A.visible = false
-		Perez3B.visible = true
+	if PermanentGlobal.email_choices.has("Our Support"):
+		if PermanentGlobal.email_choices["Our Support"] == 1:
+			Perez3A.visible = true
+			Perez3B.visible = false
+		elif PermanentGlobal.email_choices["Our Support"] == 2:
+			Perez3A.visible = false
+			Perez3B.visible = true
 	
 func _process(delta: float) -> void:
 	if emails.emailsDone >= emails.emailsProgressionQuota && onceV1:

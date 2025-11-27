@@ -68,4 +68,5 @@ func _on_desk_interactable_interacted() -> void:
 
 
 func _on_reply_pressed() -> void:
+	Achievements.set_achievement("achieve6")
 	brain.end_day("The End","res://Scenes/EndOfDemo.tscn")

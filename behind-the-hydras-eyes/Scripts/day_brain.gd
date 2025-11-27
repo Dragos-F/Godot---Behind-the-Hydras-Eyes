@@ -27,6 +27,7 @@ signal empty()
 @export var current_scene:String
 @export var SmokingScene:Node2D
 @export var smokingAnchor:Node2D
+@onready var oncev1:bool = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,6 +45,7 @@ func _ready() -> void:
 		TeaMinigame = get_node("/root/Main2/TeaMinigame")
 	SaveLoad.SaveFileData.lastScene = current_scene
 	SaveLoad._save()
+	oncev1 = true
 
 
 
@@ -272,6 +274,9 @@ func _on_dialogic_signal(argument:String):
 	if argument == "no_watercooler_Alex":
 		water_cooler_Alex(1)
 		empty.emit()
+		if oncev1:
+			PermanentGlobal.watercoolers+=1
+			oncev1 = false
 	if argument == "tea_minigame":
 		tea_minigame()
 	if argument == "take_plant":
@@ -293,6 +298,7 @@ func enter_smoking():
 	await Dialogic.timeline_ended
 	print ("AWAIT COMPLETE, LEAVING Balcony")
 	leave_balcony()
+	Achievements.set_achievement("achieve3")
 	
 func leave_balcony():
 	dave.move_time = false
