@@ -38,8 +38,9 @@ else:
 		[end_timeline]
 	else:
 	Dave: [i]As you walk up to Alex you see him typing out an email to an "Atlas Technologies". You watch for a moment before speaking.[/i]
-- Is there a history of police brutality in Oaxaca that I wasn't told of?
+- Is there a history of police brutality in Oaxaca?
 	Alex: Hm? Oh. Yeah.
+	Dave: Right. I wasn't made aware of that.
 	Alex: It's the same old story of every unequal place on earth\: poverty, cycles of violence, gangs, heavy-handed policing to protect property, etc etc.
 	Alex: Any intervention is bound to upset the uneasy peace of deprivation and I guess a wind farm is a big intervention.
 - Are you sure that's the whole story?
@@ -148,7 +149,7 @@ Alex: I didn't say it was dodgy; Mr Perez obtained the land, legally, and sold i
 	Alex: Don't let fixation on the perfect hinder the doing of good. More green energy can only be a positive, surely.
 - Couldn't we have done it in a fairer way?
 	Alex: The moral question is above my paygrade, but it seems better to me to good good than handwring about the risks.
-- Legal isn't the same as moral. We should have built elsewhere.
+- Legal isn't the same as moral. We could have built elsewhere.
 	Alex: Unfortunately for your newfound moral compass, we've already started now. Don't make the boss think you've got cold feet.
 set {AlexReturn} = true
 [end_timeline]
@@ -185,9 +186,9 @@ Alex: Mornin'! Did you see the update from Olu? Jen's been talking about it all 
 Alex: Anyway, I think Q2 is off to a good start!
 Alex: I haven't heard any complaints from senior management, and all my spreadsheets are mostly green, so that must be a good sign.
 Alex: Happy with how the projects moving along?
-- Yep, Construction should start soon, so add that to the green spreadsheet
+- Yep, Construction should start soon!
 	Alex: Glad to hear! There was some murmurings about local pressure to reopen negotiations, but it seems quashed now.
-- A few snags but we're marching on now
+- A few snags but we're marching on now.
 	Alex: Yeah, I did catch murmurings of some pressure on the government to renegotiate. But I'm glad we're moving ahead with approval now.
 - Wait, let's go back to the Olu news....
 	Alex: No need to worry. The marketing budget got approved, just another milestone in the development.
@@ -195,7 +196,7 @@ Alex: Just picture the turbines up and spinning, generating the renewable good s
 Alex: Or if not then, hey, maybe think of the potential summer bonus! Whatever works for you.
 - Summer bonus?
 	Alex: Investors like ground being broken without much fuss, so expect some grease for your wheels as thanks now building is set to begin.
-- I've never really spent too long thinking about a turbine.
+- I'm picturing the turbine. It's...tall.
 	Dave: The view from up there must be pretty nice.
 	Alex: Oh yeah. We did a site visit at spot in Spain, and got to climb to the maintenance platform.
 	Alex: A week earlier someone apparently got trapped at the top when the main rotor caught fire, but they cleaned the place up real well.
@@ -213,7 +214,7 @@ set {_2AlexReturn} = true
 [end_timeline]
 label Day03.2
 Alex: Anything else I can do for now?
-- Do we have anything on site impact to local populations?
+- Got anything on site impact to local populations?
 	Alex: Eh, there might be some stuff in the filing cabinet, but I really don't concern myself with that.
 	Alex: If the spreadsheet's groovy, I haven't a scoobie.
 - How's the swans been?

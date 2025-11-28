@@ -67,15 +67,15 @@ label Day03
 if {JenReturn} == true:
 	jump Day03.1
 Jen: Did you hear? We might be getting some new marketing budget!
-Jen: [i]Jen's eyes sparkle as she pauses and stares longingly into the distance[/i]
+Jen: [i]Jen's eyes sparkle as she pauses and stares longingly into the distance.[/i]
 Jen: Mostly to spend on the Mexican side. You know, to ease tensions and raise some goodwill.
 Jen: It should be fun to help allocate it, maybe I'll do some market research on brand loyalty. Do you reckon it's best to build brand awareness first?
 Jen: Like, posters and merch, or to jump straight into building brand loyalty? Maybe by, like, providing food or fixing someone's house.
-- I doubt many on the ground know about us, so maybe awareness?
+- Awareness seems an important first priority.
 	Jen: I'll have a million awareness-raising solutions on your desk shortly then!
-- Definitely loyalty, the resulting word of mouth will help awareness too.
+- Brand loyalty is most important here.
 	Jen: Great point, I'll get brainstorming! Maybe a tiktok video of us feeding the homeless to some viral music?
-- Don't you think that's quite a crass and unempathetic question?
+- Isn't that a crass and unempathetic question?
 	Jen: Huh? Oh, are you testing me? [i]Ahem.[/i] "By caring for the community we earn their trust in return, and that's what allows our projects and the communities they're in to prosper mutually."
 Jen: Anyway, I'll let you know when the total amount is finalised, since I assume you'll want to have final say.
 set {JenReturn} = true
@@ -189,16 +189,16 @@ Jen: I can't wait for you guys to see it!
 	- Oh, send me a link!
 		Jen: Absolutely! My fave his vid of his is when he visited some indigenous people.
 		Jen: And just gave them vapes and filmed them getting drunk! Can you believe they'd never tried Blueberry lightening?!
-- Could we have picked someone local for the production?
+- Could we have picked someone...local?
 	Jen: Well, maybe...but this guy was handpicked!
 	Jen: He's my favourite content creator, and when we saw the budget allocation, I knew I could convince him to take the job.
 	Jen: The whole project would've been delayed at least a month if we would've had to put an advert our and filter for candidates.
-	- Isn't that...your job?
-		Jen: Don't think so. I'm here to make the designs and make everyone like us!
+	- Isn't that your job?
+		Jen: Don't think so. I'm here to make the designs that make everyone like us!
 	- That makes sense
-		Jen: So glad you think so.
+		Jen: So glad you think so. We can talk about slimming the job description at our annual review, right?
 	- Do you know anything about a "Big Daz"?
-		Jen: Hm...name sounds familiar.
+		Jen: Hm...the name sounds familiar.
 		Jen: I think we were at the networking event before you got hired. Me and Alex were with Patrick, representing the company.
 		Jen: Some guy came around and was buying drinks for everyone all night!
 		Jen: I seem to remember him and Patrick chatting for ages during the rest of the event. I think he introduced himself as "Dazza"?
@@ -206,7 +206,7 @@ Jen: I can't wait for you guys to see it!
 		Jen: Not with me, but I'm sure Patrick would remember him better.
 - Does the name "Nayeli" ring any bells? | [if {AlexNayeli} == true] [else="hide"]
 	Jen: Is that one of the influencers we paid to come and take selfies with the builders?
-	- No, she seems to be working for a local resistance group.
+	- No, she seems to be in a local resistance group.
 	- No, she's complaining to me about the project.
 		Dave: So if we did pay her, I don't think we should continue...
 	Jen: Oh. I'm so sorry to hear she doesn't like us!

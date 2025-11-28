@@ -356,7 +356,7 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Jen: Done?
 		Jen: She's an absolute princess that has never stepped out of line.
 		Dave: Oh, sorry, I just assumed you were about to tell a funny story or something.
-		Jen: She would never act "funny", since that's beneath the royalty she is.
+		Jen: She would never act "funny", since that's unbecoming for royalty.
 		Dave: No, yeah, right.
 	Jen: Anyway, we were watching Medium Meets Season 2\: The Ghosting Return.
 	Jen: This season they're bringing people that ghosted eachother in Season 1 to commune with compatible partners that may have died.
@@ -434,19 +434,22 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Alex: And that's the problem.
 	Alex: We've got a date tonight and I just feel like I don't know how to be a human anymore.
 	Alex: I thought you might have same inspirational advice.
-	Alex: Or would think that this whole thing is stupid and I should quit it. At least that'd be an answer too.
+	Alex: Or maybe you'd think that this whole thing is stupid and I should quit it. At least that'd be an answer too.
 	Alex: Maybe I should just stick to my swans.
 	Dave: Whoa, let's not get ahead of ourselves here.
 	- You should relax.
 		Dave: Things'll work out one way or another.
-		Dave: Just tell her about the swans and whatever else you like doing.
+		Dave: Just tell her about the swans and, uh, whatever else you like doing.
 		Dave: Worst comes to worst, you're back where you started.
-		Alex: Thanks for the kind words boss.
+		Alex: Hm. You really think she'd want to hear about that?
+		Dave: Hopefully. If she's right for you she'll be charmed by it. A litmus test, to see if it's worth getting to know each other more.
+		Alex: Okay...yeah, sure, I'll try it. Thanks for the kind words boss.
 	
 	- You should call it off.
 		Dave: I just don't think it's worth that kinda stress.
 		Dave: Abandon the apps, find someone the old fashioned way. Less soul-draining.
 		Alex: Maybe you're right...
+		Alex: This was the only match I'd made after three months anyway. I was so desperate I swiped right on a profile that was just a single picture of a sock puppet last week.
 	
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
