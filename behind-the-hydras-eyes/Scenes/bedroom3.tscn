@@ -464,8 +464,9 @@ texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("34_wqj3e")
 
-[node name="ScreenUI" parent="." instance=ExtResource("35_gaqy7")]
+[node name="ScreenUI" parent="." node_paths=PackedStringArray("saved_text") instance=ExtResource("35_gaqy7")]
 emailsProgressionQuota = 1
+saved_text = NodePath("Budget/HomeBudget/SaveButton/Saved")
 
 [node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
 Sender_Name = "Lorena.k@markinsons.co.uk"

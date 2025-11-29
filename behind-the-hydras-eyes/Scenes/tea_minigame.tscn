@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://ltwvcinww1o3"]
+[gd_scene load_steps=68 format=3 uid="uid://ltwvcinww1o3"]
 
 [ext_resource type="Script" uid="uid://t5tqn176jcs5" path="res://Scripts/tea_minigame.gd" id="1_4jyn8"]
 [ext_resource type="Texture2D" uid="uid://vykka3ojo0p5" path="res://Visual Assets/New Assets/Tea Minigame/Tea Minigame Background.png" id="1_m83bi"]
@@ -227,8 +227,10 @@ texture = ExtResource("26_er7so")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tddps"]
 texture = ExtResource("27_2au2t")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6a3e"]
-texture = ExtResource("25_m0gq4")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0gq4"]
+texture = ExtResource("26_er7so")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2au2t"]
 
 [node name="TeaMinigame" type="Node2D" node_paths=PackedStringArray("mugs")]
 z_index = 10
@@ -464,9 +466,10 @@ limit_smoothed = true
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 offset_left = -943.0
-offset_top = 316.0
+offset_top = 380.0
 offset_right = -602.0
-offset_bottom = 530.0
+offset_bottom = 594.0
+scale = Vector2(0.75, 0.75)
 theme_override_styles/normal = SubResource("StyleBoxTexture_t8p5n")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uyaqv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_22in3")
@@ -476,15 +479,16 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_er7so")
 [node name="Reset" type="Button" parent="."]
 z_index = 2
 texture_filter = 1
-offset_left = -224.00002
-offset_top = 379.0
-offset_right = 116.999985
-offset_bottom = 593.0
+offset_left = -231.0
+offset_top = 380.0
+offset_right = 110.0
+offset_bottom = 594.0
 scale = Vector2(0.75, 0.75)
 theme_override_styles/normal = SubResource("StyleBoxTexture_xbh55")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_tnqbj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tddps")
-theme_override_styles/focus = SubResource("StyleBoxTexture_b6a3e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_m0gq4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2au2t")
 
 [node name="SugarBowl2" type="Sprite2D" parent="." node_paths=PackedStringArray("cubeParent", "minigame")]
 z_index = -2

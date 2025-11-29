@@ -224,7 +224,7 @@ offset_bottom = -153.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_wbdvm")
 theme_override_font_sizes/normal_font_size = 28
-text = "Version F1.2.8"
+text = "Version F1.10"
 
 [node name="DaveSmokingPngExport" type="Sprite2D" parent="."]
 visible = false

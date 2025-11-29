@@ -49,7 +49,10 @@ func _on_wishlist_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
+	Fader.FadeUp("Credits")
+	await Fader.fade_finished
 	get_tree().change_scene_to_file("res://Scenes/EndOfDemo.tscn")
+	Fader.FadeDown("Credits")
 
 
 

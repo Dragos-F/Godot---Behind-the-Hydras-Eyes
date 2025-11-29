@@ -1600,8 +1600,18 @@ offset_bottom = 530.44
 theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
-[node name="MarketingBudget" type="Control" parent="Budget"]
+[node name="Saved" type="Label" parent="Budget/HomeBudget/SaveButton"]
 visible = false
+layout_mode = 0
+offset_left = 88.0
+offset_top = 77.0
+offset_right = 169.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "SAVED"
+
+[node name="MarketingBudget" type="Control" parent="Budget"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -3018,6 +3028,17 @@ offset_right = 1348.8
 offset_bottom = 599.44
 theme_override_font_sizes/font_size = 45
 text = "Save Budget"
+
+[node name="Saved" type="Label" parent="Budget/MarketingBudget/SaveButton"]
+visible = false
+layout_mode = 0
+offset_left = -90.0
+offset_top = 31.0
+offset_right = -9.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "SAVED"
 
 [node name="BrowserThing" type="Panel" parent="."]
 visible = false

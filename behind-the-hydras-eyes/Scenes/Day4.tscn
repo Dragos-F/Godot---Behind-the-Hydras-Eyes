@@ -706,10 +706,11 @@ texture = ExtResource("9_5kyc3")
 texture_filter = 1
 texture = ExtResource("10_vl8em")
 
-[node name="ScreenUI" parent="." instance=ExtResource("11_sjsk0")]
+[node name="ScreenUI" parent="." node_paths=PackedStringArray("saved_text") instance=ExtResource("11_sjsk0")]
 unique_name_in_owner = true
 texture_filter = 1
 emailsProgressionQuota = 4
+saved_text = NodePath("Budget/MarketingBudget/SaveButton/Saved")
 
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
@@ -856,9 +857,6 @@ texture_filter = 1
 
 [node name="Hint" parent="ScreenUI/MainEmail" index="4"]
 texture_filter = 1
-
-[node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
-visible = true
 
 [node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel2" index="0"]
 layout_mode = 1

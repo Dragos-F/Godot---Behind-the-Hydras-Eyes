@@ -22,6 +22,8 @@ class_name Computer
 @export var emailNotif:Node2D
 @export var keyboardTarget:Node2D
 @export var info:BudgetData
+@export var saved_text:Control
+@export var saved_text2:Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,6 +34,8 @@ func _ready() -> void:
 	reply.visible = false
 	reply.disabled = true
 	info.startingSavings = PermanentGlobal.Savings
+	saved_text.visible = false
+	saved_text2.visible = false
 	
 	
 
@@ -163,6 +167,10 @@ func _on_save_button_pressed() -> void:
 	PermanentGlobal.Savings = info.savingsContribution+info.startingSavings
 	PermanentGlobal.Lifestyle = info.lifestyleTypes[info.lifestyleChoice]
 	SaveLoad._save()
+	if saved_text != null:
+		saved_text.visible = true
+	if saved_text2 != null:
+		saved_text2.visible = true
 
 func _on_internet_pressed() -> void:
 	if Budget.visible:

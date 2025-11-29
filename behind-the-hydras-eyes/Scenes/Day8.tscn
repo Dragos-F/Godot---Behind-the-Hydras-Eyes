@@ -1002,7 +1002,7 @@ texture = ExtResource("11_reana")
 position = Vector2(-318, 174.5)
 texture = ExtResource("11_reana")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "JanineAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_feprj")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -1014,6 +1014,7 @@ Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
 Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
+JanineAnchor = NodePath("../Background/Janine/JenInteractable/DialogueMarker")
 PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day8.tscn"

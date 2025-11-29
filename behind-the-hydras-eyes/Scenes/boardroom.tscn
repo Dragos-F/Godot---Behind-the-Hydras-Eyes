@@ -12,7 +12,7 @@ MozAnchor = NodePath("MozDialogAnchor")
 BossAnchor = NodePath("PMooreAnhcor")
 OluAnchor = NodePath("OluAnchor")
 RichardAnchor = NodePath("RichardAnchor")
-PauseMenu = NodePath("Pause")
+PauseMenu = NodePath("CanvasLayer/Pause")
 
 [node name="StaticBackground" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -45,5 +45,7 @@ position = Vector2(-287, 452)
 [node name="DaveAnchor" type="Node2D" parent="."]
 position = Vector2(591, 480)
 
-[node name="Pause" parent="." instance=ExtResource("4_ok08t")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("4_ok08t")]
 visible = false
