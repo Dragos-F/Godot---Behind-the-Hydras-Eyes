@@ -34,8 +34,10 @@ func _ready() -> void:
 	reply.visible = false
 	reply.disabled = true
 	info.startingSavings = PermanentGlobal.Savings
-	saved_text.visible = false
-	saved_text2.visible = false
+	if saved_text != null:
+		saved_text.visible = false
+	if saved_text2 != null:
+		saved_text2.visible = false
 	
 	
 
