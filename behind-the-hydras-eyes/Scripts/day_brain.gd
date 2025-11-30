@@ -257,9 +257,9 @@ func _on_dialogic_signal(argument:String):
 	if argument == "bed_sleep1":
 		screen_ui._on_save_button_pressed()
 		print ("SavedBudgetFromSleep")
-		end_day("A few months later...","res://Scenes/trainQ2.tscn") #For Non Demo
+		#end_day("A few months later...","res://Scenes/trainQ2.tscn") #For Non Demo
 		
-		#end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
+		end_day("Q2, 202X", "res://Scenes/EndOfDemo.tscn") #For Demo
 	if argument == "bed_sleep2":
 		screen_ui._on_save_button_pressed()
 		end_day("Even more months later...","res://Scenes/trainQ3.tscn") #For Non Demo
