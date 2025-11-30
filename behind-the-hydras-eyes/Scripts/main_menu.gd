@@ -72,6 +72,7 @@ func _on_new_game_pressed() -> void:
 	await Fader.fade_finished
 	PermanentGlobal.reset_choices()
 	Dialogic.VAR.clear_game_state()
+	Dialogic.VAR.CurrentQuarter = "Quarter1"
 	black.visible = false
 	get_tree().change_scene_to_file("res://Scenes/train.tscn")
 	Fader.FadeDown("First Day")
