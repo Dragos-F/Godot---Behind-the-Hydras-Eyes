@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpqjdqelptt3" path="res://Scenes/screen_ui.tscn" id="11_6qeij"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="12_4qhl5"]
 [ext_resource type="PackedScene" uid="uid://b4our54yywg7p" path="res://Scenes/dave.tscn" id="13_8fujy"]
-[ext_resource type="Script" uid="uid://dt5unoaqrf58q" path="res://Scripts/Specifics1.gd" id="14_jq06o"]
+[ext_resource type="Script" uid="uid://5g4rot4jdc3k" path="res://Scripts/specifics_test.gd" id="14_2ae21"]
 [ext_resource type="PackedScene" uid="uid://brp0wa3mmjqge" path="res://Scenes/notif.tscn" id="15_oahv6"]
 [ext_resource type="PackedScene" uid="uid://qp5c0ubam6af" path="res://Scenes/pause.tscn" id="16_bbj1p"]
 [ext_resource type="PackedScene" uid="uid://ltwvcinww1o3" path="res://Scenes/tea_minigame.tscn" id="17_gkuhn"]
@@ -579,7 +579,6 @@ texture = ExtResource("10_frqo2")
 
 [node name="ScreenUI" parent="." instance=ExtResource("11_6qeij")]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 emailsProgressionQuota = 3
 
@@ -693,10 +692,6 @@ Forward Green"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="MainEmailBody" parent="ScreenUI/MainEmail/EmailBody/ScrollContainer/Control" index="0"]
-texture_filter = 1
-fit_content = true
-
 [node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
 texture_filter = 1
 
@@ -722,7 +717,6 @@ offset_right = 486.387
 offset_bottom = 97.6601
 scale = Vector2(0.9, 0.9)
 text = "Green is impossible, say Blue and Yellow"
-autowrap_mode = 2
 
 [node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
 text = "In their latest party conferences, two of the largest and oldest British parties, vying desperately for the title of most irrelevant, have confirmed their commitment to undermine a green transition by denying first the need, then the methods, and then by singing the national anthem over all following questions. Read on to find out why this is actually a genius move, and how those who don't agree are part of a secretive globalist cabal, from our election specialist, Baron Toph Crasscock.							
@@ -774,19 +768,8 @@ unique_name_in_owner = true
 position = Vector2(-590, 314)
 walking_audio = null
 
-[node name="Specifics1" type="Node2D" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "brain", "BossTextAnchor", "BossDoor", "TeaNotif", "ClipNotif", "CompNotif")]
-script = ExtResource("14_jq06o")
-AlexNotif = NodePath("../Notifications/Alex")
-JenNotif = NodePath("../Notifications/Jen")
-emails = NodePath("../ScreenUI")
-outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
-DoorNotif = NodePath("../Notifications/Door")
-brain = NodePath("../DayBrain")
-BossTextAnchor = NodePath("../Dave/TextAnchor")
-BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
-TeaNotif = NodePath("../Notifications/Tea")
-ClipNotif = NodePath("../Notifications/Clipboard")
-CompNotif = NodePath("../Notifications/Computer")
+[node name="SpecificsTest" type="Node2D" parent="."]
+script = ExtResource("14_2ae21")
 
 [node name="Notifications" type="Node2D" parent="."]
 
@@ -826,12 +809,12 @@ JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarke
 unique_name_in_owner = true
 z_index = 12
 
-[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="Specifics1" method="_on_jen_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="Specifics1" method="_on_alex_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="SpecificsTest" method="_on_jen_interactable_interacted"]
+[connection signal="interacted" from="Background/Furniture/Alex/AlexInteractable" to="SpecificsTest" method="_on_alex_interactable_interacted"]
 [connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="DayBrain" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="Specifics1" method="_on_desk_interactable_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="Specifics1" method="_on_interactable_element_interacted"]
-[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="Specifics1" method="_on_clipboard_interacted"]
+[connection signal="interacted" from="Background/Furniture/DaveDesk/DeskChair/DeskInteractable" to="SpecificsTest" method="_on_desk_interactable_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Cabinets/Kettle/InteractableElement" to="SpecificsTest" method="_on_interactable_element_interacted"]
+[connection signal="interacted" from="Background/Kitchen/Clipboard/InteractableElement" to="SpecificsTest" method="_on_clipboard_interacted"]
 [connection signal="typing_finished" from="TypingBrain" to="ScreenUI" method="_on_typing_brain_typing_finished"]
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
 
