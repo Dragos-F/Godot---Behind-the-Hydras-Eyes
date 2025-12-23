@@ -550,7 +550,7 @@ Alex_walking_sprite = NodePath("../Background/StandingAlex/AlexStanding")
 Alex_anim = NodePath("../Background/StandingAlex/AnimationPlayer")
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable")
-PauseMenu = NodePath("../Pause")
+PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -805,8 +805,11 @@ visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="Pause" parent="." instance=ExtResource("16_bbj1p")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("16_bbj1p")]
 unique_name_in_owner = true
+visible = false
 z_index = 12
 
 [connection signal="interacted" from="Background/Furniture/Jen1/JenInteractable" to="SpecificsTest" method="_on_jen_interactable_interacted"]

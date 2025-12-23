@@ -7,6 +7,7 @@ extends Node
 @onready var email_choices = {}
 @onready var deleted:int
 @onready var watercoolers:int
+@export var click_pause:bool = true
 var oncev1:bool = true
 var oncev2:bool = true
 #var arrow = load("res://Visual Assets/New Assets/Menus/Computer UIs/Mouse normal.png")
@@ -20,6 +21,18 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if event.is_action("dialogic_default_action")&& click_pause && Dialogic.current_timeline != null:
+		Dialogic.handle_next_event()
+		print("start disabling input")
+		click_pause = false
+		Dialogic.process_mode = Node.PROCESS_MODE_DISABLED
+		print("dialogic disabled")
+		await get_tree().create_timer(0.8).timeout
+		Dialogic.process_mode = Node.PROCESS_MODE_INHERIT
+		print ("dialogic reenabled")
+		click_pause = true
+		
+		
 	if Dialogic.current_timeline!= null:
 		if event.is_action("ui_up") or event.is_action("ui_down"):
 			var choice:DialogicSubsystem = Dialogic.get_subsystem("Choices")
