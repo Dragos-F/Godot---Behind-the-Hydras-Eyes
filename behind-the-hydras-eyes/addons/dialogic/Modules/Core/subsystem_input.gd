@@ -65,6 +65,7 @@ func post_install() -> void:
 
 func handle_input() -> void:
 	if dialogic.paused or is_input_blocked():
+		#print("input blocked")
 		return
 
 	if not action_was_consumed:
@@ -90,6 +91,7 @@ func handle_input() -> void:
 
 	dialogic_action.emit()
 	input_was_mouse_input = false
+	block_input(0.2)
 
 
 ## Unhandled Input is used for all NON-Mouse based inputs.

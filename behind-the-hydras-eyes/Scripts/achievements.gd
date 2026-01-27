@@ -49,7 +49,7 @@ func set_achievement(this_achievement: String) -> void:
 		print("Failed to set achievement: %s" % this_achievement)
 		return
 
-	print("Set acheivement: %s" % this_achievement)
+	print("Set achievement: %s" % this_achievement)
 	store_steam_data()
 
 

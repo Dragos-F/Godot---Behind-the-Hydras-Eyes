@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dtf5vs15jiut0"]
+[gd_scene format=3 uid="uid://dtf5vs15jiut0"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_3eksu"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lt3sq"]
@@ -999,16 +999,16 @@ _data = {
 &"move_Jen": SubResource("Animation_u020q")
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1528763803]
 
-[node name="Fader" parent="." instance=ExtResource("1_3eksu")]
+[node name="Fader" parent="." unique_id=948508776 instance=ExtResource("1_3eksu")]
 z_index = 15
 scale = Vector2(2, 2)
 
 [node name="Label" parent="Fader" index="1"]
 z_index = 10
 
-[node name="Background" parent="." instance=ExtResource("2_lt3sq")]
+[node name="Background" parent="." unique_id=1814558340 instance=ExtResource("2_lt3sq")]
 
 [node name="Corkboard" parent="Background/Furniture" index="7"]
 position = Vector2(655, -273)
@@ -1047,7 +1047,7 @@ script = null
 [node name="DialogueMarker" parent="Background/Furniture/Jen1/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
 
-[node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14"]
+[node name="Janine" type="Sprite2D" parent="Background/Furniture" index="14" unique_id=728951706]
 z_index = -3
 texture_filter = 1
 position = Vector2(-719, 3)
@@ -1055,14 +1055,14 @@ scale = Vector2(2, 2)
 texture = ExtResource("3_a7utg")
 flip_h = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background/Furniture/Janine"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Background/Furniture/Janine" unique_id=1508870500]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Furniture/Janine/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Furniture/Janine/StaticBody2D" unique_id=1284552942]
 visible = false
 position = Vector2(3.5, 56.5)
 polygon = PackedVector2Array(-28, -58, -31.5, -17.5, -26.5, 13.5, 30, 11.5, 28.5, -9, 15.5, -79)
 
-[node name="JenInteractable" parent="Background/Furniture/Janine" instance=ExtResource("5_2y3md")]
+[node name="JenInteractable" parent="Background/Furniture/Janine" unique_id=644488065 instance=ExtResource("5_2y3md")]
 regular = ExtResource("3_a7utg")
 selected = ExtResource("5_gnihg")
 YarnNodeLink = "Janine"
@@ -1077,9 +1077,9 @@ shape = SubResource("CircleShape2D_r70fk")
 [node name="DialogueMarker" parent="Background/Furniture/Janine/JenInteractable" index="1"]
 position = Vector2(13, -39.5)
 
-[node name="Timer" type="Timer" parent="Background/Furniture/Janine"]
+[node name="Timer" type="Timer" parent="Background/Furniture/Janine" unique_id=113853644]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Furniture/Janine"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Furniture/Janine" unique_id=356522403]
 visible = false
 sprite_frames = SubResource("SpriteFrames_fcnck")
 animation = &"phone_check"
@@ -1103,51 +1103,51 @@ polygon = PackedVector2Array(-56.5, -38.5, -95.5, -30.5, -119, -3.5, -61.5, 33.5
 [node name="DeskInteractable" parent="Background/Furniture/DaveDesk/DeskChair" index="1"]
 Type = 1
 
-[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture" index="19"]
+[node name="ComplaintCorner" type="Node2D" parent="Background/Furniture" index="19" unique_id=555104697]
 texture_filter = 1
 position = Vector2(-148, -314)
 scale = Vector2(2, 2)
 
-[node name="DocBox" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="DocBox" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=1198717589]
 position = Vector2(-358, 156.5)
 texture = ExtResource("3_jc8h6")
 flip_h = true
 
-[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="DocBox2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=1747875202]
 position = Vector2(-381.5, 169)
 texture = ExtResource("3_jc8h6")
 flip_h = true
 
-[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="DocBox3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=210268309]
 position = Vector2(-371.5, 136)
 texture = ExtResource("3_jc8h6")
 flip_h = true
 
-[node name="Paper" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=213241186]
 position = Vector2(-355.5, 195)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper4" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper4" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=1412471309]
 position = Vector2(-355, 199.5)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper5" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper5" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=1640049896]
 position = Vector2(-353.5, 203.5)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper3" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=570977008]
 position = Vector2(-324, 191.5)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper6" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper6" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=647387149]
 position = Vector2(-323.5, 196)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper7" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper7" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=811480707]
 position = Vector2(-322, 200)
 texture = ExtResource("4_kurw2")
 
-[node name="Paper2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner"]
+[node name="Paper2" type="Sprite2D" parent="Background/Furniture/ComplaintCorner" unique_id=1653246831]
 position = Vector2(-318, 174.5)
 texture = ExtResource("4_kurw2")
 
@@ -1175,7 +1175,7 @@ YarnNodeLink = "Clipboard"
 [node name="DialogueMarker" parent="Background/Kitchen/Clipboard/InteractableElement" index="1"]
 position = Vector2(10.5, -3.5)
 
-[node name="Clipboard2" type="Sprite2D" parent="Background/Kitchen" index="7"]
+[node name="Clipboard2" type="Sprite2D" parent="Background/Kitchen" index="7" unique_id=144010287]
 z_index = -5
 texture_filter = 1
 position = Vector2(-464, -108)
@@ -1183,7 +1183,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("9_db5ya")
 flip_h = true
 
-[node name="InteractableElement" parent="Background/Kitchen/Clipboard2" instance=ExtResource("5_2y3md")]
+[node name="InteractableElement" parent="Background/Kitchen/Clipboard2" unique_id=121409885 instance=ExtResource("5_2y3md")]
 regular = ExtResource("9_db5ya")
 selected = ExtResource("10_gnihg")
 YarnNodeLink = "StickyNote"
@@ -1200,24 +1200,22 @@ shape = SubResource("CapsuleShape2D_fsano")
 [node name="DialogueMarker" parent="Background/Kitchen/Clipboard2/InteractableElement" index="1"]
 position = Vector2(10.5, -3.5)
 
-[node name="StandingAlex" type="Node2D" parent="Background"]
+[node name="StandingAlex" type="Node2D" parent="Background" unique_id=1854682787]
 visible = false
 position = Vector2(121, 12)
 scale = Vector2(2, 2)
 
-[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex"]
+[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex" unique_id=520294845]
 texture_filter = 1
 position = Vector2(-14.5, 47)
 sprite_frames = SubResource("SpriteFrames_gnihg")
 animation = &"idle_Alex"
 flip_h = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex"]
-libraries = {
-&"": SubResource("AnimationLibrary_3xk2j")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex" unique_id=2033301466]
+libraries/ = SubResource("AnimationLibrary_3xk2j")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "JanineAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." unique_id=2818439 node_paths=PackedStringArray("DaveAnchor", "TextAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "JanineAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_jc8h6")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 TextAnchor = NodePath("../Dave/TextAnchor")
@@ -1232,31 +1230,31 @@ PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day7.tscn"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2140379676]
 limit_left = -960
 limit_top = -541
 limit_right = 960
 limit_bottom = 541
 limit_smoothed = true
 
-[node name="TypingBrain" type="Node" parent="."]
+[node name="TypingBrain" type="Node" parent="." unique_id=1821709040]
 unique_name_in_owner = true
 script = ExtResource("8_kurw2")
 
-[node name="ComputerScreen" type="Node2D" parent="."]
+[node name="ComputerScreen" type="Node2D" parent="." unique_id=1500899385]
 visible = false
 z_index = 5
 texture_filter = 1
 
-[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+[node name="Black" type="Sprite2D" parent="ComputerScreen" unique_id=1594450654]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("9_2y3md")
 
-[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+[node name="Screen" type="Sprite2D" parent="ComputerScreen" unique_id=289303830]
 texture_filter = 1
 texture = ExtResource("10_db5ya")
 
-[node name="ScreenUI" parent="." instance=ExtResource("11_gnihg")]
+[node name="ScreenUI" parent="." unique_id=514505692 instance=ExtResource("11_gnihg")]
 unique_name_in_owner = true
 texture_filter = 1
 emailsProgressionQuota = 3
@@ -1264,7 +1262,7 @@ emailsProgressionQuota = 3
 [node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
 texture_filter = 1
 
-[node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" instance=ExtResource("12_3oh5d")]
+[node name="Boss2" parent="ScreenUI/EmailList/SummariesContainer" index="0" unique_id=2073286198 instance=ExtResource("12_3oh5d")]
 layout_mode = 2
 Sender_Name = "Nayeli"
 ToAddress = "dspritely@forwardgreen.co.uk"
@@ -1327,7 +1325,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="Perez3A" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_3oh5d")]
+[node name="Perez3A" parent="ScreenUI/EmailList/SummariesContainer" index="2" unique_id=2023543314 instance=ExtResource("12_3oh5d")]
 visible = false
 layout_mode = 2
 Sender_Name = "Mr Perez"
@@ -1353,7 +1351,7 @@ Dave Spritely, UK Project Lead"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="Perez3AB" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_3oh5d")]
+[node name="Perez3AB" parent="ScreenUI/EmailList/SummariesContainer" index="3" unique_id=884255277 instance=ExtResource("12_3oh5d")]
 layout_mode = 2
 Sender_Name = "Mr Perez"
 ToAddress = "contactus@forwardgreen.co.uk; dspritely@forwardgreen.co.uk"
@@ -1378,7 +1376,7 @@ Dave Spritely, UK Project Lead"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_3oh5d")]
+[node name="TestEmailSummary5" parent="ScreenUI/EmailList/SummariesContainer" index="4" unique_id=353798263 instance=ExtResource("12_3oh5d")]
 visible = false
 layout_mode = 2
 Sender_Name = "Miracure"
@@ -1481,11 +1479,11 @@ offset_bottom = 361.0
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
-[node name="Dave" parent="." instance=ExtResource("13_7uuwi")]
+[node name="Dave" parent="." unique_id=688924780 instance=ExtResource("13_7uuwi")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
-[node name="Specifics7" type="Node2D" parent="." node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain", "CompNotif", "Perez3A", "Perez3B")]
+[node name="Specifics7" type="Node2D" parent="." unique_id=464416221 node_paths=PackedStringArray("emails", "outsideDoor", "DoorNotif", "StickyNotif", "brain", "CompNotif", "Perez3A", "Perez3B")]
 script = ExtResource("19_jc8h6")
 emails = NodePath("../ScreenUI")
 outsideDoor = NodePath("../Background/Furniture/OfficeDoor enter/InteractableElement")
@@ -1496,48 +1494,48 @@ CompNotif = NodePath("../Notifications/Computer")
 Perez3A = NodePath("../ScreenUI/EmailList/SummariesContainer/Perez3A")
 Perez3B = NodePath("../ScreenUI/EmailList/SummariesContainer/Perez3AB")
 
-[node name="Timer" type="Timer" parent="Specifics7"]
+[node name="Timer" type="Timer" parent="Specifics7" unique_id=845665315]
 wait_time = 2.0
 one_shot = true
 autostart = true
 
-[node name="Notifications" type="Node2D" parent="."]
+[node name="Notifications" type="Node2D" parent="." unique_id=900784038]
 
-[node name="Alex" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Alex" parent="Notifications" unique_id=997034112 instance=ExtResource("14_uy7q1")]
 visible = false
 position = Vector2(-461, -202)
 frame_progress = 0.801034
 
-[node name="Jen" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Jen" parent="Notifications" unique_id=1781486293 instance=ExtResource("14_uy7q1")]
 visible = false
 position = Vector2(-138, -470)
 
-[node name="Door" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Door" parent="Notifications" unique_id=989259397 instance=ExtResource("14_uy7q1")]
 visible = false
 position = Vector2(-803, 161)
 
-[node name="Tea" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Tea" parent="Notifications" unique_id=80767118 instance=ExtResource("14_uy7q1")]
 visible = false
 position = Vector2(688, 231)
 autoplay = "Q"
 
-[node name="Clipboard" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Clipboard" parent="Notifications" unique_id=474739574 instance=ExtResource("14_uy7q1")]
 z_index = 4
 position = Vector2(-458, -178)
 autoplay = "Q"
 
-[node name="Computer" parent="Notifications" instance=ExtResource("14_uy7q1")]
+[node name="Computer" parent="Notifications" unique_id=620113095 instance=ExtResource("14_uy7q1")]
 z_index = 4
 position = Vector2(-306, 221)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1918315696]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource("15_4uukd")]
+[node name="Pause" parent="CanvasLayer" unique_id=2054033406 instance=ExtResource("15_4uukd")]
 unique_name_in_owner = true
 visible = false
 z_index = 12
 
-[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_klie1")]
+[node name="TeaMinigame" parent="." unique_id=1642632246 node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_klie1")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")

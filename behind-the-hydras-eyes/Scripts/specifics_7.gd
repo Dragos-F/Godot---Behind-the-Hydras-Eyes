@@ -13,6 +13,7 @@ extends Node2D
 func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day07"
 	Dialogic.VAR.WatercoolerChar ="Janine"
+	Dialogic.VAR.Conference = true
 	Dialogic.VAR.JanineReturn = false
 	if PermanentGlobal.email_choices.has("Our Support"):
 		if PermanentGlobal.email_choices["Our Support"] == 1:

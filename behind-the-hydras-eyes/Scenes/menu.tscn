@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://55jkptvrl5w2"]
+[gd_scene format=3 uid="uid://55jkptvrl5w2"]
 
 [ext_resource type="Script" uid="uid://b7uyvryemnnsa" path="res://Scripts/main_menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dqe5dh22lpfvc" path="res://Visual Assets/New Assets/Menus/Main Menu back.png" id="2_jsrd8"]
@@ -20,20 +20,20 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Menu" type="Node2D" node_paths=PackedStringArray("PauseMenu", "smoking", "timer", "black")]
+[node name="Menu" type="Node2D" unique_id=1655761550 node_paths=PackedStringArray("PauseMenu", "smoking", "timer", "black")]
 script = ExtResource("1_xhh6f")
 PauseMenu = NodePath("CanvasLayer/Pause")
 smoking = NodePath("DaveSmokingPngExport")
 timer = NodePath("Timer")
 black = NodePath("Black")
 
-[node name="MainMenuBack" type="Sprite2D" parent="."]
+[node name="MainMenuBack" type="Sprite2D" parent="." unique_id=182458643]
 z_index = -5
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("2_jsrd8")
 
-[node name="Drawer" type="Sprite2D" parent="." node_paths=PackedStringArray("folder")]
+[node name="Drawer" type="Sprite2D" parent="." unique_id=1777886925 node_paths=PackedStringArray("folder")]
 texture_filter = 1
 position = Vector2(-466, -145)
 scale = Vector2(2, 2)
@@ -41,7 +41,7 @@ texture = ExtResource("3_wbdvm")
 script = ExtResource("4_6swd7")
 folder = NodePath("ManillaFolder1")
 
-[node name="ManillaFolder1" type="Sprite2D" parent="Drawer"]
+[node name="ManillaFolder1" type="Sprite2D" parent="Drawer" unique_id=546497101]
 visible = false
 z_index = -1
 texture_filter = 1
@@ -49,7 +49,7 @@ position = Vector2(-10.5, 70.5)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("4_q3rjx")
 
-[node name="Start" type="Button" parent="Drawer"]
+[node name="Start" type="Button" parent="Drawer" unique_id=1335234033]
 texture_filter = 1
 offset_left = -49.5
 offset_top = -25.5
@@ -73,7 +73,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_q3rjx")
 theme_override_styles/focus = SubResource("StyleBoxFlat_q3rjx")
 text = "Continue"
 
-[node name="Drawer2" type="Sprite2D" parent="." node_paths=PackedStringArray("folder")]
+[node name="Drawer2" type="Sprite2D" parent="." unique_id=1941415524 node_paths=PackedStringArray("folder")]
 z_index = 1
 texture_filter = 1
 position = Vector2(-466, 110)
@@ -82,7 +82,7 @@ texture = ExtResource("3_wbdvm")
 script = ExtResource("4_6swd7")
 folder = NodePath("ManillaFolder1")
 
-[node name="ManillaFolder1" type="Sprite2D" parent="Drawer2"]
+[node name="ManillaFolder1" type="Sprite2D" parent="Drawer2" unique_id=213238523]
 visible = false
 z_index = -1
 texture_filter = 1
@@ -90,7 +90,7 @@ position = Vector2(-10.5, 70.5)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("4_q3rjx")
 
-[node name="NewGame" type="Button" parent="Drawer2"]
+[node name="NewGame" type="Button" parent="Drawer2" unique_id=260317111]
 texture_filter = 1
 offset_left = -49.5
 offset_top = -13.5
@@ -114,7 +114,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_q3rjx")
 theme_override_styles/focus = SubResource("StyleBoxFlat_q3rjx")
 text = "New Game"
 
-[node name="Drawer3" type="Sprite2D" parent="." node_paths=PackedStringArray("folder")]
+[node name="Drawer3" type="Sprite2D" parent="." unique_id=1903834200 node_paths=PackedStringArray("folder")]
 z_index = 3
 texture_filter = 1
 position = Vector2(-466, 363)
@@ -123,7 +123,7 @@ texture = ExtResource("3_wbdvm")
 script = ExtResource("4_6swd7")
 folder = NodePath("ManillaFolder1")
 
-[node name="ManillaFolder1" type="Sprite2D" parent="Drawer3"]
+[node name="ManillaFolder1" type="Sprite2D" parent="Drawer3" unique_id=1883897201]
 visible = false
 z_index = -1
 texture_filter = 1
@@ -131,7 +131,7 @@ position = Vector2(-10.5, 70.5)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("4_q3rjx")
 
-[node name="Options" type="Button" parent="Drawer3"]
+[node name="Options" type="Button" parent="Drawer3" unique_id=174924643]
 texture_filter = 1
 offset_left = -46.5
 offset_top = -16.5
@@ -155,14 +155,14 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_q3rjx")
 theme_override_styles/focus = SubResource("StyleBoxFlat_q3rjx")
 text = "Options"
 
-[node name="Leaflet" type="Sprite2D" parent="."]
+[node name="Leaflet" type="Sprite2D" parent="." unique_id=1345262517]
 texture_filter = 1
 position = Vector2(531, 206)
 rotation = -0.168761
 scale = Vector2(2, 2)
 texture = ExtResource("5_6swd7")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Leaflet"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Leaflet" unique_id=1002446294]
 offset_left = -55.9956
 offset_top = -108.953
 offset_right = 83.0043
@@ -177,21 +177,21 @@ Mexico!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sticky" type="Sprite2D" parent="."]
+[node name="Sticky" type="Sprite2D" parent="." unique_id=1720984652]
 texture_filter = 1
 position = Vector2(259, 230)
 rotation = 0.0796631
 scale = Vector2(2, 2)
 texture = ExtResource("6_7qvly")
 
-[node name="Button" type="Button" parent="Sticky"]
+[node name="Button" type="Button" parent="Sticky" unique_id=227203385]
 offset_left = -45.0
 offset_top = -39.0
 offset_right = 48.0
 offset_bottom = 41.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_6swd7")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Sticky"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Sticky" unique_id=1247945616]
 offset_left = -53.3827
 offset_top = -40.3799
 offset_right = 85.6173
@@ -205,18 +205,18 @@ text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=821555897]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource("10_7qvly")]
+[node name="Pause" parent="CanvasLayer" unique_id=1624546570 instance=ExtResource("10_7qvly")]
 visible = false
 
-[node name="TitleOnly" type="Sprite2D" parent="."]
+[node name="TitleOnly" type="Sprite2D" parent="." unique_id=1201651524]
 texture_filter = 1
 position = Vector2(363, -255)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("11_rfqti")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=288457976]
 offset_left = 680.0
 offset_top = -194.0
 offset_right = 971.0
@@ -224,18 +224,18 @@ offset_bottom = -153.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_wbdvm")
 theme_override_font_sizes/normal_font_size = 28
-text = "Version F1.12"
+text = "Version F1.17"
 
-[node name="DaveSmokingPngExport" type="Sprite2D" parent="."]
+[node name="DaveSmokingPngExport" type="Sprite2D" parent="." unique_id=1789190905]
 visible = false
 z_index = 4
 texture = ExtResource("12_g8i7c")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1316134665]
 wait_time = 0.5
 one_shot = true
 
-[node name="Black" type="Sprite2D" parent="."]
+[node name="Black" type="Sprite2D" parent="." unique_id=780703710]
 visible = false
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)

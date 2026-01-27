@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2uc62k4g5avl"]
-
-[ext_resource type="Script" uid="uid://dlintvrpux7xc" path="res://tests/optimize_arc_poly/optimize_arc_poly.gd" id="1_3jqw5"]
-
-[node name="OptimizeArcPoly" type="Node"]
-script = ExtResource("1_3jqw5")

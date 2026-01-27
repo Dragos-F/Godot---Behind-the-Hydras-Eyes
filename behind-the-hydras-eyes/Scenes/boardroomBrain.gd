@@ -6,6 +6,8 @@ extends Node2D
 @export var RichardAnchor:Node2D
 @export var DaveAnchor:Node2D
 @export var PauseMenu:pauseMenu
+@export var once:bool
+
 
 func _ready() -> void:
 	var layout = Dialogic.start("Boardroom")
@@ -15,9 +17,14 @@ func _ready() -> void:
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Richard.dch", RichardAnchor)
 	layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Dave.dch",DaveAnchor)
 	
-	
+
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.timeline_ended.connect(end_day_boardroom)
+	#Dialogic.timeline_ended.connect(end_day_boardroom)
+	
+#func _process(delta: float) -> void:
+	#if once && Dialogic.current_timeline !=null:
+		#end_day_boardroom()
+		#once = false
 
 #func _physics_process(delta: float) -> void:
 	#if Input.is_action_just_pressed("ui_accept"):
@@ -29,6 +36,8 @@ func scroll_along():
 	
 func _on_dialogic_signal(argument:String):
 	print ("inside signal function")
+	if argument == "end_boardroom":
+		end_day_boardroom()
 	if argument == "next_slide":
 		print ("inside argument")
 		scroll_along()

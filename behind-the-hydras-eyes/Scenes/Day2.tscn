@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://ts1by1fsvq0w"]
+[gd_scene format=3 uid="uid://ts1by1fsvq0w"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_p8761"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_lh2wi"]
@@ -478,12 +478,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1271386406]
 
-[node name="Fader" parent="." instance=ExtResource("1_p8761")]
+[node name="Fader" parent="." unique_id=632323045 instance=ExtResource("1_p8761")]
 scale = Vector2(2, 2)
 
-[node name="Background" parent="." instance=ExtResource("2_lh2wi")]
+[node name="Background" parent="." unique_id=1529691809 instance=ExtResource("2_lh2wi")]
 
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
@@ -523,24 +523,22 @@ YarnNodeLink = "WaterCooler"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="StandingAlex" type="Node2D" parent="Background"]
+[node name="StandingAlex" type="Node2D" parent="Background" unique_id=1657818977]
 visible = false
 position = Vector2(121, 12)
 scale = Vector2(2, 2)
 
-[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex"]
+[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex" unique_id=224820120]
 texture_filter = 1
 position = Vector2(-14.5, 47)
 sprite_frames = SubResource("SpriteFrames_gtf6l")
 animation = &"idle_Alex"
 flip_h = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex"]
-libraries = {
-&"": SubResource("AnimationLibrary_3xk2j")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex" unique_id=409789804]
+libraries/ = SubResource("AnimationLibrary_3xk2j")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." unique_id=1130271963 node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("3_j0ssp")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -556,23 +554,23 @@ PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day2.tscn"
 
-[node name="TypingBrain" type="Node" parent="."]
+[node name="TypingBrain" type="Node" parent="." unique_id=369662556]
 unique_name_in_owner = true
 script = ExtResource("4_kmxud")
 
-[node name="ComputerScreen" type="Node2D" parent="."]
+[node name="ComputerScreen" type="Node2D" parent="." unique_id=1664822229]
 visible = false
 z_index = 5
 
-[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+[node name="Black" type="Sprite2D" parent="ComputerScreen" unique_id=1566501341]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("5_slnaj")
 
-[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+[node name="Screen" type="Sprite2D" parent="ComputerScreen" unique_id=136115844]
 texture_filter = 1
 texture = ExtResource("6_k3jav")
 
-[node name="ScreenUI" parent="." instance=ExtResource("7_4qd7i")]
+[node name="ScreenUI" parent="." unique_id=1090033741 instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
 texture_filter = 1
 emailsProgressionQuota = 4
@@ -602,7 +600,7 @@ boss = false
 [node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
 texture_filter = 1
 
-[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" unique_id=996035044 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
 Sender_Name = "M Lopez"
 ToAddress = "contactus@forwardgreen.co.uk"
@@ -627,7 +625,7 @@ ForwardGreen"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" unique_id=1343666394 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
 Sender_Name = "R. Spiegel"
 ToAddress = "contactus@forwardgreen.co.uk"
@@ -653,7 +651,7 @@ ForwardGreen"
 texture_filter = 1
 autowrap_mode = 0
 
-[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="3" unique_id=1501109081 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
 Sender_Name = "IT Service Desk"
 ToAddress = "dspritely@forwardgreen.co.uk"
@@ -861,14 +859,14 @@ offset_bottom = 260.784
 [node name="Budget" parent="ScreenUI/BottomBar" index="1"]
 visible = false
 
-[node name="Dave" parent="." instance=ExtResource("8_r33wl")]
+[node name="Dave" parent="." unique_id=1171400798 instance=ExtResource("8_r33wl")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics2" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "CompNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
+[node name="Specifics2" type="Node" parent="." unique_id=1993507018 node_paths=PackedStringArray("AlexNotif", "CompNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain")]
 script = ExtResource("9_qarlu")
 AlexNotif = NodePath("../Notifications/Alex")
 CompNotif = NodePath("../Notifications/Computer")
@@ -880,7 +878,7 @@ BossNotif = NodePath("../Notifications/BossDoor")
 BossDoor = NodePath("../Background/Furniture/OfficeDoor boss/InteractableElement")
 brain = NodePath("../DayBrain")
 
-[node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="BossScreen" type="Node2D" parent="." unique_id=1853345157 node_paths=PackedStringArray("sprite")]
 visible = false
 z_index = 10
 script = ExtResource("15_gtf6l")
@@ -888,53 +886,53 @@ sprite = NodePath("Sprite2D")
 frown = ExtResource("16_4sxu1")
 contempt = ExtResource("17_0vxql")
 
-[node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+[node name="Sprite2D" type="Sprite2D" parent="BossScreen" unique_id=1060702406]
 texture_filter = 1
 texture = ExtResource("12_lh2wi")
 
-[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen"]
+[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen" unique_id=820192498]
 visible = false
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0vxql")
 frame_progress = 0.680305
 
-[node name="BossAnchor" type="Node2D" parent="BossScreen"]
+[node name="BossAnchor" type="Node2D" parent="BossScreen" unique_id=1444309755]
 position = Vector2(499, -250)
 
-[node name="Notifications" type="Node2D" parent="."]
+[node name="Notifications" type="Node2D" parent="." unique_id=66158768]
 
-[node name="Alex" parent="Notifications" instance=ExtResource("11_p8761")]
+[node name="Alex" parent="Notifications" unique_id=1835514927 instance=ExtResource("11_p8761")]
 position = Vector2(-552, -256)
 animation = &"Q"
 autoplay = "Q"
 
-[node name="Jen" parent="Notifications" instance=ExtResource("11_p8761")]
+[node name="Jen" parent="Notifications" unique_id=1722548355 instance=ExtResource("11_p8761")]
 position = Vector2(-138, -470)
 animation = &"Q"
 autoplay = "Q"
 
-[node name="Door" parent="Notifications" instance=ExtResource("11_p8761")]
+[node name="Door" parent="Notifications" unique_id=914569707 instance=ExtResource("11_p8761")]
 visible = false
 position = Vector2(-803, 161)
 
-[node name="BossDoor" parent="Notifications" instance=ExtResource("11_p8761")]
+[node name="BossDoor" parent="Notifications" unique_id=1961095369 instance=ExtResource("11_p8761")]
 visible = false
 position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
 
-[node name="Computer" parent="Notifications" instance=ExtResource("11_p8761")]
+[node name="Computer" parent="Notifications" unique_id=261060008 instance=ExtResource("11_p8761")]
 z_index = 4
 position = Vector2(-306, 221)
 
-[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_k3jav")]
+[node name="TeaMinigame" parent="." unique_id=1787801605 node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("16_k3jav")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1174360466]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource("14_kmxud")]
+[node name="Pause" parent="CanvasLayer" unique_id=1777434845 instance=ExtResource("14_kmxud")]
 visible = false
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics2" method="_on_boss_door_interacted"]

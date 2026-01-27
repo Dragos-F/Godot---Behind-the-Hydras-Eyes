@@ -60,9 +60,11 @@ Jen: Whatcha think, captain?
 Dave: Right...well, I better get back to work, have a lovely day.
 set {JenReturn} = true
 [end_timeline]
-label Jen02Return
+
+label Day02Return
 Jen: Maybe we could print a limited, glittery run of the posters?
 [end_timeline]
+
 label Day03
 if {JenReturn} == true:
 	jump Day03.1
@@ -248,6 +250,22 @@ Jen: I waddled out with tote bags overflowing with pens and notepads and bottles
 	Jen: Thanks!! I'll get you some merch too next time!
 	Jen: I'm already excited for next years, I loveeee a good conference!
 set {JenReturn} = true
+[end_timeline]
+
+label Day08
+if {JenReturn} == true:
+	jump Day08Return
+Jen: Hi Dave! I'm sorry to say you really missed out, the conference was great! Wow, where to begin?
+Jen: The atmosphere, the excitement, the mega companies there, the speakers, the merch—oh the merch!
+Jen: I waddled out with tote bags overflowing with pens and notepads and bottles and lanyards and—
+- Any important updates?
+	Jen: Important? Alex found some sponsor leads I think, which should help with any unexpected legal fees.
+	Jen: I've got a load of new marketing ideas—had a great brainstorming session with the woman who sends newsletters for that AI company.
+- Glad you enjoyed! I'll catch you around!
+	Jen: Thanks!! I'll get you some merch too next time!
+set {JenReturn} = true
+
+
 [end_timeline]
 label Day08Return
 Jen: My posts from the conference are honestly taking off.

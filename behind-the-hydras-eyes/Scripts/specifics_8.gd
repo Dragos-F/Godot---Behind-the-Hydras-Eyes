@@ -17,6 +17,7 @@ func _ready() -> void:
 	Dialogic.VAR.CurrentDay = "Day08"
 	Dialogic.VAR.CurrentQuarter = "Quarter3"
 	Dialogic.VAR.WatercoolerChar ="Alex02"
+	Dialogic.VAR.Conference = false
 	
 func _process(delta: float) -> void:
 	if emails.emailsDone>=emails.emailsProgressionQuota and oncev1:

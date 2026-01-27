@@ -17,6 +17,7 @@ class_name DayBrain
 @export var Alex_anim:AnimationPlayer
 @export var AlexAnchor:Node2D
 @export var JenAnchor:Node2D
+@onready var JenSprites:Node2D = get_node("/root/Main/Background/Furniture/Jen1")
 @export var JanineAnchor:Node2D
 @onready var TeaMinigame:Node2D = get_node("/root/Main/TeaMinigame")
 @export var PauseMenu:pauseMenu
@@ -146,6 +147,7 @@ func run_dialogue(nodeTitle:String,target:Node2D): #This starts dialogic from wh
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Kettle.dch",target)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Alex.dch",AlexAnchor)
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Jen.dch",JenAnchor)
+		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Janine.dch",JanineAnchor)
 	if (nodeTitle == "Text From Boss"):
 		layout.register_character("res://Dialogue stuffs/Dialogic/Characters/Office/Text from Boss.dch",target)
 	if (nodeTitle == "WaterCooler"):
@@ -219,6 +221,7 @@ func water_cooler_Alex(i:int):
 				Alex_anim.play("move_Alex")
 				Alex_walking_sprite.play("walking_Alex")
 			elif Dialogic.VAR.WatercoolerChar == "Jen01" or Dialogic.VAR.WatercoolerChar == "Jen02":
+				JenSprites.visible = false
 				Alex_anim.play("move_Jen")
 				Alex_walking_sprite.play("walking_Jen")
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
@@ -240,6 +243,8 @@ func water_cooler_Alex(i:int):
 			elif Dialogic.VAR.WatercoolerChar == "Jen01" or Dialogic.VAR.WatercoolerChar == "Jen02":
 				Alex_walking_sprite.play("walking_Jen")
 				Alex_anim.play("away_Jen")
+				await Alex_anim.animation_finished
+				JenSprites.visible = true
 			elif Dialogic.VAR.WatercoolerChar == "Moz":
 				Alex_walking_sprite.play("walking_Moz")
 				Alex_anim.play("away_Moz")

@@ -1,3 +1,7 @@
+if {Conference} == true:
+	jump ConferenceDay
+
+
 if {KettleReturn} == 0.0:
 	set {KettleReturn} += 1.0
 	jump First
@@ -79,3 +83,19 @@ Kettle: My warning came too late, I see. Behold the sticky note beside my body.
 Kettle: "Effective immediately\: staff must bring in their own teabags and milk. Sorry team, but sometimes we've all got to tighten our belts - P. MOORE"
 Kettle: Some belts get tightened more than others, obviously. Tough luck, pal.
 [end_timeline]
+
+label ConferenceDay
+Kettle: It's a lonely day here in the office.
+Kettle: Not much else to do...other than have a cuppa?
+- Yeah..you're right
+	Kettle: Interested in trying to befriend someone new?
+	- Hey Janine...
+		Janine: No.
+		Kettle: Right then.
+	- Best not to
+		Kettle: Understandable.
+	Kettle: Coming right up.
+	[signal arg="tea_minigame"]
+
+- I'm good
+	Kettle: Sitting with an empty mug won't make them come back quicker you know...

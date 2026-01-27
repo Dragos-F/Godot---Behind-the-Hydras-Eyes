@@ -19,19 +19,23 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(finger,Input.CURSOR_POINTING_HAND)
 	
 
+#func _unhandled_key_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("dialogic_default_action")&& click_pause && Dialogic.current_timeline != null:
+		#print("start disabling input")
+		#click_pause = false
+		#Dialogic.process_mode = Node.PROCESS_MODE_DISABLED
+		#print("dialogic disabled")
+		#await get_tree().create_timer(0.2).timeout
+		#Dialogic.process_mode = Node.PROCESS_MODE_INHERIT
+		#print ("dialogic reenabled")
+		#click_pause = true
+	#if event.is_action_pressed("dialogic_default_action")&& click_pause && Dialogic.current_timeline != null:
+		#click_pause = false
+		#Dialogic.Inputs.block_input(3)
+		#await Dialogic.Inputs.input_block_timer.timeout
+		#click_pause = true
 
-func _input(event: InputEvent) -> void:
-	if event.is_action("dialogic_default_action")&& click_pause && Dialogic.current_timeline != null:
-		Dialogic.handle_next_event()
-		print("start disabling input")
-		click_pause = false
-		Dialogic.process_mode = Node.PROCESS_MODE_DISABLED
-		print("dialogic disabled")
-		await get_tree().create_timer(0.8).timeout
-		Dialogic.process_mode = Node.PROCESS_MODE_INHERIT
-		print ("dialogic reenabled")
-		click_pause = true
-		
+func _input(event: InputEvent) -> void:		
 		
 	if Dialogic.current_timeline!= null:
 		if event.is_action("ui_up") or event.is_action("ui_down"):
@@ -41,6 +45,10 @@ func _input(event: InputEvent) -> void:
 				Dialogic.Save.save()
 				Dialogic.Save.load()
 				print ("Highlighted first choice")
+
+		
+
+
 func _process(delta: float) -> void:
 	if deleted >=32 && oncev1:
 		Achievements.set_achievement("achieve4")
@@ -49,6 +57,7 @@ func _process(delta: float) -> void:
 		Achievements.set_achievement("achieve5")
 		oncev2 = false
 	#print (watercoolers)
+	#print (Dialogic.Inputs.input_block_timer.time_left)
 
 func reset_focus():
 	var choice:DialogicSubsystem = Dialogic.get_subsystem("Choices")

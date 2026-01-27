@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://pphkrh6xsg3l"]
+[gd_scene format=3 uid="uid://pphkrh6xsg3l"]
 
 [ext_resource type="Texture2D" uid="uid://ccrftiuoaxu5q" path="res://Visual Assets/New Assets/Bedroom/Bedroom Background.png" id="1_6qi5j"]
 [ext_resource type="Texture2D" uid="uid://bxl8t4ro3j5g1" path="res://Visual Assets/New Assets/Bedroom/Balcony Door.png" id="2_k5jl3"]
@@ -68,24 +68,24 @@ points = PackedVector2Array(-120.509, 32.857, 348.76, -213.388, 494.773, -148.62
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7bxbb"]
 
-[node name="Bedroom" type="Node2D"]
+[node name="Bedroom" type="Node2D" unique_id=244134388]
 
-[node name="BedroomBackground" type="Sprite2D" parent="."]
+[node name="BedroomBackground" type="Sprite2D" parent="." unique_id=898639346]
 z_index = -5
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("1_6qi5j")
 
-[node name="Furniture" type="Node2D" parent="."]
+[node name="Furniture" type="Node2D" parent="." unique_id=2110453762]
 
-[node name="Balcony Door" type="Sprite2D" parent="Furniture"]
+[node name="Balcony Door" type="Sprite2D" parent="Furniture" unique_id=1550554401]
 z_index = -3
 texture_filter = 1
 position = Vector2(39, -292)
 scale = Vector2(2, 2)
 texture = ExtResource("2_k5jl3")
 
-[node name="InteractableElement" parent="Furniture/Balcony Door" instance=ExtResource("3_vcjit")]
+[node name="InteractableElement" parent="Furniture/Balcony Door" unique_id=1998142409 instance=ExtResource("3_vcjit")]
 position = Vector2(4, 60.5)
 regular = ExtResource("2_k5jl3")
 selected = ExtResource("4_hcmpi")
@@ -100,19 +100,19 @@ shape = SubResource("CapsuleShape2D_x75j5")
 [node name="DialogueMarker" parent="Furniture/Balcony Door/InteractableElement" index="1"]
 position = Vector2(20, -78)
 
-[node name="Bed" type="Sprite2D" parent="Furniture"]
+[node name="Bed" type="Sprite2D" parent="Furniture" unique_id=67007642]
 z_index = -2
 texture_filter = 1
 position = Vector2(251, -41)
 scale = Vector2(2, 2)
 texture = ExtResource("5_bwrlw")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bed"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bed" unique_id=1230888098]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bed/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bed/StaticBody2D" unique_id=744570627]
 polygon = PackedVector2Array(-108.5, 39, -14, 83.5, 114, 21.5, 24, -26.5)
 
-[node name="InteractableElement" parent="Furniture/Bed" instance=ExtResource("3_vcjit")]
+[node name="InteractableElement" parent="Furniture/Bed" unique_id=71580337 instance=ExtResource("3_vcjit")]
 regular = ExtResource("5_bwrlw")
 selected = ExtResource("6_1xdgy")
 YarnNodeLink = "Bed"
@@ -123,7 +123,7 @@ shape = SubResource("ConvexPolygonShape2D_1elqf")
 [node name="DialogueMarker" parent="Furniture/Bed/InteractableElement" index="1"]
 position = Vector2(78, -21)
 
-[node name="Kitchen" type="Sprite2D" parent="Furniture"]
+[node name="Kitchen" type="Sprite2D" parent="Furniture" unique_id=289814190]
 z_index = -2
 z_as_relative = false
 texture_filter = 1
@@ -131,66 +131,66 @@ position = Vector2(-409, -105)
 scale = Vector2(2, 2)
 texture = ExtResource("7_ag6xk")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Kitchen"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Kitchen" unique_id=1576335604]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Kitchen/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Kitchen/StaticBody2D" unique_id=115680064]
 polygon = PackedVector2Array(-99.5, 101.5, -57.5, 124, 114, 41.5, 68, 15.5)
 
-[node name="BedsideTable" type="Sprite2D" parent="Furniture"]
+[node name="BedsideTable" type="Sprite2D" parent="Furniture" unique_id=934726035]
 z_index = -4
 texture_filter = 1
 position = Vector2(218, -144)
 scale = Vector2(2, 2)
 texture = ExtResource("8_27xg7")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/BedsideTable"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/BedsideTable" unique_id=650354007]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/BedsideTable/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/BedsideTable/StaticBody2D" unique_id=67873654]
 polygon = PackedVector2Array(-26.5, 11.5, 21, 37, 42, 24.5, 0.5, -3)
 
-[node name="LampLit" type="Sprite2D" parent="Furniture/BedsideTable"]
+[node name="LampLit" type="Sprite2D" parent="Furniture/BedsideTable" unique_id=508299347]
 texture_filter = 1
 position = Vector2(0.5, -33)
 texture = ExtResource("9_sofmo")
 
-[node name="BedsideTable2" type="Sprite2D" parent="Furniture"]
+[node name="BedsideTable2" type="Sprite2D" parent="Furniture" unique_id=1783204712]
 z_index = -1
 texture_filter = 1
 position = Vector2(508, 7)
 scale = Vector2(2, 2)
 texture = ExtResource("8_27xg7")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/BedsideTable2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/BedsideTable2" unique_id=1055627661]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/BedsideTable2/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/BedsideTable2/StaticBody2D" unique_id=1043718380]
 position = Vector2(-8.5, -6)
 polygon = PackedVector2Array(-28, 16, 18.5, 38, 34, 27.5, -7.5, 6.5)
 
-[node name="Bin" type="Sprite2D" parent="Furniture"]
+[node name="Bin" type="Sprite2D" parent="Furniture" unique_id=1098978147]
 z_index = 2
 texture_filter = 1
 position = Vector2(288, 264)
 scale = Vector2(2, 2)
 texture = ExtResource("10_ehxgu")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bin"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bin" unique_id=74477393]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bin/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bin/StaticBody2D" unique_id=1686233199]
 polygon = PackedVector2Array(-10.5, 9, 3.5, 5.5, 11, 15.5, -7.5, 19)
 
-[node name="Bookshelf" type="Sprite2D" parent="Furniture"]
+[node name="Bookshelf" type="Sprite2D" parent="Furniture" unique_id=1407087206]
 z_index = -2
 texture_filter = 1
 position = Vector2(626, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("11_bwjf1")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bookshelf"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Bookshelf" unique_id=406212505]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bookshelf/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Bookshelf/StaticBody2D" unique_id=1209617646]
 polygon = PackedVector2Array(-31, 40, -14, 31, 25.5, 50.5, 9.5, 60.5)
 
-[node name="InteractableElement" parent="Furniture/Bookshelf" instance=ExtResource("3_vcjit")]
+[node name="InteractableElement" parent="Furniture/Bookshelf" unique_id=151507279 instance=ExtResource("3_vcjit")]
 regular = ExtResource("11_bwjf1")
 selected = ExtResource("12_yc1ju")
 YarnNodeLink = "Bookshelf"
@@ -200,61 +200,61 @@ position = Vector2(-9.5, 49.5)
 rotation = -1.18114
 shape = SubResource("CapsuleShape2D_unbiq")
 
-[node name="Cobweb" type="Sprite2D" parent="Furniture"]
+[node name="Cobweb" type="Sprite2D" parent="Furniture" unique_id=815212735]
 modulate = Color(1, 1, 1, 0.4)
 texture_filter = 1
 position = Vector2(-556, -263)
 scale = Vector2(2, 2)
 texture = ExtResource("13_4880h")
 
-[node name="Desk" type="Node2D" parent="Furniture"]
+[node name="Desk" type="Node2D" parent="Furniture" unique_id=1350853138]
 z_index = 3
 
-[node name="Computer" type="Sprite2D" parent="Furniture/Desk"]
+[node name="Computer" type="Sprite2D" parent="Furniture/Desk" unique_id=1223712353]
 z_index = 1
 texture_filter = 1
 position = Vector2(121, 282)
 scale = Vector2(2, 2)
 texture = ExtResource("14_cj5bf")
 
-[node name="Desk" type="Sprite2D" parent="Furniture/Desk"]
+[node name="Desk" type="Sprite2D" parent="Furniture/Desk" unique_id=47240998]
 texture_filter = 1
 position = Vector2(132, 288)
 scale = Vector2(2, 2)
 texture = ExtResource("15_mldux")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Desk/Desk"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Desk/Desk" unique_id=249631950]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Desk/Desk/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Desk/Desk/StaticBody2D" unique_id=392690493]
 polygon = PackedVector2Array(-86, 49.5, 40.5, -12.5, 82.5, 11, -40.5, 72.5)
 
-[node name="Figurine" type="Sprite2D" parent="Furniture/Desk"]
+[node name="Figurine" type="Sprite2D" parent="Furniture/Desk" unique_id=947786885]
 z_index = 1
 texture_filter = 1
 position = Vector2(91, 285)
 scale = Vector2(2, 2)
 texture = ExtResource("16_tv1ii")
 
-[node name="MugsDaves" type="Sprite2D" parent="Furniture/Desk"]
+[node name="MugsDaves" type="Sprite2D" parent="Furniture/Desk" unique_id=264913783]
 z_index = 1
 texture_filter = 1
 position = Vector2(218, 194)
 scale = Vector2(2, 2)
 texture = ExtResource("17_e207e")
 
-[node name="DeskChair" type="Sprite2D" parent="Furniture/Desk"]
+[node name="DeskChair" type="Sprite2D" parent="Furniture/Desk" unique_id=91424436]
 z_index = -1
 texture_filter = 1
 position = Vector2(88, 264)
 scale = Vector2(2, 2)
 texture = ExtResource("18_hlgvj")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Desk/DeskChair"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Desk/DeskChair" unique_id=626016292]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Desk/DeskChair/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Desk/DeskChair/StaticBody2D" unique_id=1526673793]
 polygon = PackedVector2Array(-10.5, 35.5, -26, -8.5, -5, -18.5, 24.5, 19)
 
-[node name="InteractableElement" parent="Furniture/Desk/DeskChair" instance=ExtResource("3_vcjit")]
+[node name="InteractableElement" parent="Furniture/Desk/DeskChair" unique_id=850294742 instance=ExtResource("3_vcjit")]
 regular = ExtResource("18_hlgvj")
 selected = ExtResource("19_maco7")
 Type = 1
@@ -262,13 +262,13 @@ Type = 1
 [node name="CollisionShape2D" parent="Furniture/Desk/DeskChair/InteractableElement/Area2D" index="0"]
 position = Vector2(-10.5, 0.5)
 
-[node name="DirtyDishes" type="Sprite2D" parent="Furniture"]
+[node name="DirtyDishes" type="Sprite2D" parent="Furniture" unique_id=1890687578]
 texture_filter = 1
 position = Vector2(-465, -36)
 scale = Vector2(2, 2)
 texture = ExtResource("20_qmqtu")
 
-[node name="InteractableElement" parent="Furniture/DirtyDishes" instance=ExtResource("3_vcjit")]
+[node name="InteractableElement" parent="Furniture/DirtyDishes" unique_id=441392318 instance=ExtResource("3_vcjit")]
 regular = ExtResource("20_qmqtu")
 selected = ExtResource("21_bui04")
 YarnNodeLink = "Dirty Dishes"
@@ -284,58 +284,58 @@ shape = SubResource("CapsuleShape2D_7nhas")
 [node name="DialogueMarker" parent="Furniture/DirtyDishes/InteractableElement" index="1"]
 position = Vector2(29, -14)
 
-[node name="LampUnlit" type="Sprite2D" parent="Furniture"]
+[node name="LampUnlit" type="Sprite2D" parent="Furniture" unique_id=424092287]
 texture_filter = 1
 position = Vector2(519, -52)
 scale = Vector2(2, 2)
 texture = ExtResource("22_xi7ar")
 
-[node name="PictureCar" type="Sprite2D" parent="Furniture"]
+[node name="PictureCar" type="Sprite2D" parent="Furniture" unique_id=1675024478]
 z_index = 1
 texture_filter = 1
 position = Vector2(493, -282)
 scale = Vector2(2, 2)
 texture = ExtResource("23_sew4o")
 
-[node name="PicturePaulChuckle" type="Sprite2D" parent="Furniture"]
+[node name="PicturePaulChuckle" type="Sprite2D" parent="Furniture" unique_id=1341203586]
 z_index = 1
 texture_filter = 1
 position = Vector2(447, -318)
 scale = Vector2(2, 2)
 texture = ExtResource("24_b6y7m")
 
-[node name="PosterDaves" type="Sprite2D" parent="Furniture"]
+[node name="PosterDaves" type="Sprite2D" parent="Furniture" unique_id=425433541]
 texture_filter = 1
 position = Vector2(230, -350)
 scale = Vector2(2, 2)
 texture = ExtResource("25_mv8yr")
 
-[node name="Shelf" type="Sprite2D" parent="Furniture"]
+[node name="Shelf" type="Sprite2D" parent="Furniture" unique_id=1917489436]
 texture_filter = 1
 position = Vector2(418, -293)
 scale = Vector2(2, 2)
 texture = ExtResource("26_brftn")
 
-[node name="Weights" type="Sprite2D" parent="Furniture"]
+[node name="Weights" type="Sprite2D" parent="Furniture" unique_id=1249690238]
 z_index = -3
 texture_filter = 1
 position = Vector2(-156, -85)
 scale = Vector2(2, 2)
 texture = ExtResource("27_wc2oy")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Weights"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Weights" unique_id=1015080342]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Weights/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Furniture/Weights/StaticBody2D" unique_id=851109179]
 polygon = PackedVector2Array(-16.5, 29, 30, 8.5, 29.5, 2, 25, -4, -3, -15, -48, 11)
 
-[node name="PlantDave" type="Sprite2D" parent="Furniture"]
+[node name="PlantDave" type="Sprite2D" parent="Furniture" unique_id=1292697881]
 z_index = 2
 texture_filter = 1
 position = Vector2(333, -352)
 scale = Vector2(2, 2)
 texture = ExtResource("28_kprpy")
 
-[node name="Door" parent="Furniture" instance=ExtResource("29_t7ppj")]
+[node name="Door" parent="Furniture" unique_id=793851266 instance=ExtResource("29_t7ppj")]
 z_index = 2
 position = Vector2(-372, 163)
 scale = Vector2(2, 2)
@@ -353,7 +353,7 @@ shape = SubResource("CapsuleShape2D_scg7i")
 [node name="DialogueMarker" parent="Furniture/Door/InteractableElement" index="1"]
 position = Vector2(64.5, -67.5)
 
-[node name="BathroomDoor" parent="Furniture" instance=ExtResource("29_t7ppj")]
+[node name="BathroomDoor" parent="Furniture" unique_id=849999839 instance=ExtResource("29_t7ppj")]
 z_index = 2
 position = Vector2(809, 135)
 scale = Vector2(2, 2)
@@ -368,7 +368,7 @@ position = Vector2(-47, 34)
 rotation = 1.12644
 shape = SubResource("CapsuleShape2D_ayyhf")
 
-[node name="DayBrain" type="Node2D" parent="." node_paths=PackedStringArray("DaveAnchor", "PauseMenu", "SmokingScene", "smokingAnchor")]
+[node name="DayBrain" type="Node2D" parent="." unique_id=1310594825 node_paths=PackedStringArray("DaveAnchor", "PauseMenu", "SmokingScene", "smokingAnchor")]
 script = ExtResource("30_eivt4")
 DaveAnchor = NodePath("../Dave/DialogueMarker")
 camera_zoom = Vector2(1.5, 1.5)
@@ -377,62 +377,62 @@ current_scene = "res://Scenes/bedroom2.tscn"
 SmokingScene = NodePath("../SmokingScene")
 smokingAnchor = NodePath("../SmokingScene/SmokingAnchor")
 
-[node name="Dave" parent="." instance=ExtResource("31_k61kq")]
+[node name="Dave" parent="." unique_id=1554918095 instance=ExtResource("31_k61kq")]
 unique_name_in_owner = true
 position = Vector2(-132, 100)
 
-[node name="Wall Barriers" type="Node2D" parent="."]
+[node name="Wall Barriers" type="Node2D" parent="." unique_id=458105596]
 
-[node name="Bottom" type="StaticBody2D" parent="Wall Barriers"]
+[node name="Bottom" type="StaticBody2D" parent="Wall Barriers" unique_id=1612385288]
 position = Vector2(-51, 621)
 rotation = 0.0153778
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Bottom"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Bottom" unique_id=1992417510]
 visible = false
 position = Vector2(213.761, -212.312)
 shape = SubResource("ConvexPolygonShape2D_gru6s")
 
-[node name="TopRight" type="StaticBody2D" parent="Wall Barriers"]
+[node name="TopRight" type="StaticBody2D" parent="Wall Barriers" unique_id=1051007294]
 modulate = Color(1, 0.0627451, 1, 1)
 position = Vector2(202, -138)
 rotation = 3.61935
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopRight"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopRight" unique_id=1766792365]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="TopLeft" type="StaticBody2D" parent="Wall Barriers"]
+[node name="TopLeft" type="StaticBody2D" parent="Wall Barriers" unique_id=1979744622]
 modulate = Color(1, 0.0627451, 1, 1)
 position = Vector2(-128, -131)
 rotation = 2.68177
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopLeft"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/TopLeft" unique_id=684701786]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="BottomLeft" type="StaticBody2D" parent="Wall Barriers"]
+[node name="BottomLeft" type="StaticBody2D" parent="Wall Barriers" unique_id=2114987878]
 modulate = Color(1, 0.0627451, 1, 1)
 position = Vector2(-264, 275)
 rotation = 0.466819
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomLeft"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomLeft" unique_id=671805133]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="BottomRight" type="StaticBody2D" parent="Wall Barriers"]
+[node name="BottomRight" type="StaticBody2D" parent="Wall Barriers" unique_id=823962567]
 modulate = Color(1, 0.0627451, 1, 1)
 position = Vector2(732, 224)
 rotation = -0.468701
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomRight"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/BottomRight" unique_id=182266393]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="Top" type="StaticBody2D" parent="Wall Barriers"]
+[node name="Top" type="StaticBody2D" parent="Wall Barriers" unique_id=461494192]
 modulate = Color(1, 0.0627451, 1, 1)
 position = Vector2(38, -165)
 rotation = -3.13625
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Top"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Barriers/Top" unique_id=669563710]
 shape = SubResource("WorldBoundaryShape2D_7bxbb")
 
-[node name="IndexChangeZone" parent="." node_paths=PackedStringArray("targetGroup") instance=ExtResource("32_5c67q")]
+[node name="IndexChangeZone" parent="." unique_id=632365753 node_paths=PackedStringArray("targetGroup") instance=ExtResource("32_5c67q")]
 visible = false
 collision_layer = 0
 collision_mask = 2
@@ -443,20 +443,20 @@ inValue = -3
 position = Vector2(51, -134)
 polygon = PackedVector2Array(5, 158, -214, 93, -214, 19, -105, -31, 92, -33, 265, 35, 168, 80)
 
-[node name="ComputerScreen" type="Node2D" parent="."]
+[node name="ComputerScreen" type="Node2D" parent="." unique_id=1093941776]
 visible = false
 z_index = 5
 
-[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+[node name="Black" type="Sprite2D" parent="ComputerScreen" unique_id=1233741242]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("33_cldak")
 
-[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+[node name="Screen" type="Sprite2D" parent="ComputerScreen" unique_id=384282667]
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("34_11ghq")
 
-[node name="ScreenUI" parent="." node_paths=PackedStringArray("saved_text") instance=ExtResource("35_yt013")]
+[node name="ScreenUI" parent="." unique_id=512046810 node_paths=PackedStringArray("saved_text") instance=ExtResource("35_yt013")]
 emailsProgressionQuota = 1
 saved_text = NodePath("Budget/HomeBudget/SaveButton/Saved")
 
@@ -489,6 +489,9 @@ visible = true
 [node name="Chart" parent="ScreenUI/Budget/HomeBudget" index="2"]
 totalRent = 4950.0
 totalBills = 1350.0
+
+[node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
+visible = false
 
 [node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
 offset_left = 0.0
@@ -551,7 +554,7 @@ custom_minimum_size = Vector2(5, 0)
 text = "DIY vaginoplasty, and other hot new trends"
 autowrap_mode = 2
 
-[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2"]
+[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2" unique_id=1722913979]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
@@ -567,28 +570,28 @@ offset_top = 0.0
 offset_right = 608.0
 offset_bottom = 361.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=800833366]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource("36_4bp7u")]
+[node name="Pause" parent="CanvasLayer" unique_id=1909574263 instance=ExtResource("36_4bp7u")]
 visible = false
 
-[node name="TypingBrain" type="Node" parent="."]
+[node name="TypingBrain" type="Node" parent="." unique_id=603028210]
 unique_name_in_owner = true
 script = ExtResource("37_1n7mf")
 
-[node name="bed_specifics2" type="Node" parent="." node_paths=PackedStringArray("computer_container")]
+[node name="bed_specifics2" type="Node" parent="." unique_id=232905387 node_paths=PackedStringArray("computer_container")]
 script = ExtResource("38_k5jl3")
 computer_container = NodePath("../ScreenUI/BrowserThing/TabContainer")
 
-[node name="SmokingScene" type="Node2D" parent="."]
+[node name="SmokingScene" type="Node2D" parent="." unique_id=1198847456]
 visible = false
 z_index = 5
 
-[node name="DaveSmokingPngExport" type="Sprite2D" parent="SmokingScene"]
+[node name="DaveSmokingPngExport" type="Sprite2D" parent="SmokingScene" unique_id=1470043637]
 texture_filter = 1
 texture = ExtResource("39_vcjit")
 
-[node name="SmokingAnchor" type="Node2D" parent="SmokingScene"]
+[node name="SmokingAnchor" type="Node2D" parent="SmokingScene" unique_id=1527914905]
 position = Vector2(601, 257)
 
 [connection signal="pressed" from="ScreenUI/BottomBar/ShutDown" to="DayBrain" method="_on_shut_down_pressed"]
