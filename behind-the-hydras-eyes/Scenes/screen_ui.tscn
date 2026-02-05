@@ -1,4 +1,4 @@
-[gd_scene load_steps=201 format=3 uid="uid://dtpqjdqelptt3"]
+[gd_scene format=3 uid="uid://dtpqjdqelptt3"]
 
 [ext_resource type="Script" uid="uid://ivmosolp6e50" path="res://Scripts/screen_ui.gd" id="1_3c83b"]
 [ext_resource type="PackedScene" uid="uid://65dp2p2mc6u6" path="res://Scenes/InboxEmailSummary.tscn" id="2_tvukg"]
@@ -959,8 +959,7 @@ texture = ExtResource("14_bd8n7")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
-[node name="ScreenUI" type="Control" node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
-visible = false
+[node name="ScreenUI" type="Control" unique_id=1080854413 node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -980,7 +979,7 @@ emailNotif = NodePath("BottomBar/Emails/AnimatedSprite2D")
 keyboardTarget = NodePath("KeyboardTarget")
 info = NodePath("Budget/HomeBudget/Chart")
 
-[node name="EmailList" type="Panel" parent="."]
+[node name="EmailList" type="Panel" parent="." unique_id=880366068]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00356125
@@ -990,7 +989,7 @@ anchor_bottom = 0.909836
 theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
 metadata/_edit_use_anchors_ = true
 
-[node name="Inbox" type="Panel" parent="EmailList"]
+[node name="Inbox" type="Panel" parent="EmailList" unique_id=1731298633]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 6.0
@@ -998,7 +997,7 @@ offset_right = 273.0
 offset_bottom = 44.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mfps5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="EmailList/Inbox"]
+[node name="RichTextLabel" type="RichTextLabel" parent="EmailList/Inbox" unique_id=1457740157]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
@@ -1009,19 +1008,24 @@ text = "INBOX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SummariesContainer" type="VBoxContainer" parent="EmailList"]
+[node name="SummariesContainer" type="VBoxContainer" parent="EmailList" unique_id=1680828421]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.133
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
-offset_top = 48.0
-offset_right = -6.99997
+offset_top = -13.981972
+offset_right = -6.9999695
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 39
 
-[node name="Boss" parent="EmailList/SummariesContainer" instance=ExtResource("2_tvukg")]
+[node name="Boss" parent="EmailList/SummariesContainer" unique_id=2087623211 instance=ExtResource("2_tvukg")]
 layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+stretch_mode = 0
 Sender_Name = "P. Moore"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "First Day - Project Manager"
@@ -1036,10 +1040,10 @@ Mr Moore.
 "
 boss = true
 
-[node name="RichTextLabel" parent="EmailList/SummariesContainer/Boss/Button" index="0"]
+[node name="RichTextLabel" parent="EmailList/SummariesContainer/Boss/Button" parent_id_path=PackedInt32Array(2087623211, 618685795) index="0" unique_id=360902618]
 autowrap_mode = 0
 
-[node name="MainEmail" type="Panel" parent="."]
+[node name="MainEmail" type="Panel" parent="." unique_id=318870999]
 layout_mode = 0
 anchor_left = 0.214387
 anchor_top = 0.0163934
@@ -1048,7 +1052,7 @@ anchor_bottom = 0.909836
 theme_override_styles/panel = SubResource("StyleBoxFlat_sbkap")
 metadata/_edit_use_anchors_ = true
 
-[node name="EmailBody" type="Panel" parent="MainEmail"]
+[node name="EmailBody" type="Panel" parent="MainEmail" unique_id=450192665]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 95.0
@@ -1056,7 +1060,7 @@ offset_right = 1096.0
 offset_bottom = 619.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
 
-[node name="Control" type="Control" parent="MainEmail/EmailBody"]
+[node name="Control" type="Control" parent="MainEmail/EmailBody" unique_id=1496557613]
 anchors_preset = 0
 offset_left = 10.0
 offset_top = 6.0
@@ -1065,7 +1069,7 @@ offset_bottom = 516.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainEmail/EmailBody/Control"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainEmail/EmailBody/Control" unique_id=752478714]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0040001
@@ -1073,7 +1077,7 @@ anchor_bottom = 1.0
 offset_right = -0.23144531
 offset_bottom = 3.0
 
-[node name="MainEmailBody" type="RichTextLabel" parent="MainEmail/EmailBody/Control/ScrollContainer"]
+[node name="MainEmailBody" type="RichTextLabel" parent="MainEmail/EmailBody/Control/ScrollContainer" unique_id=844492768]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1081,7 +1085,7 @@ theme_override_font_sizes/normal_font_size = 22
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
 
-[node name="Sender&Subj" type="Panel" parent="MainEmail"]
+[node name="Sender&Subj" type="Panel" parent="MainEmail" unique_id=1358829087]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 12.0
@@ -1089,7 +1093,7 @@ offset_right = 896.0
 offset_bottom = 87.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
 
-[node name="Panel" type="Panel" parent="MainEmail/Sender&Subj"]
+[node name="Panel" type="Panel" parent="MainEmail/Sender&Subj" unique_id=494407254]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 5.0
@@ -1097,14 +1101,14 @@ offset_right = 861.0
 offset_bottom = 35.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
 
-[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel"]
+[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel" unique_id=1261162588]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 2.0
 offset_right = 833.0
 offset_bottom = 29.0
 
-[node name="Sender" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel/BoxContainer"]
+[node name="Sender" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel/BoxContainer" unique_id=2044752606]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 18
@@ -1112,7 +1116,7 @@ theme_override_font_sizes/bold_font_size = 18
 text = "
 "
 
-[node name="Panel2" type="Panel" parent="MainEmail/Sender&Subj"]
+[node name="Panel2" type="Panel" parent="MainEmail/Sender&Subj" unique_id=2022559285]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 40.0
@@ -1120,18 +1124,18 @@ offset_right = 861.0
 offset_bottom = 70.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_23jyx")
 
-[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel2"]
+[node name="BoxContainer" type="BoxContainer" parent="MainEmail/Sender&Subj/Panel2" unique_id=988264085]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 2.0
 offset_right = 846.0
 offset_bottom = 28.0
 
-[node name="ToBox" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2/BoxContainer"]
+[node name="ToBox" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2/BoxContainer" unique_id=999585549]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainEmail/Sender&Subj/Panel2" unique_id=1291492421]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 3.0
@@ -1139,7 +1143,7 @@ offset_right = 37.0
 offset_bottom = 28.0
 text = "To:"
 
-[node name="Send" type="Button" parent="MainEmail"]
+[node name="Send" type="Button" parent="MainEmail" unique_id=1967688950]
 visible = false
 layout_mode = 0
 offset_left = 910.0
@@ -1153,7 +1157,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_fncch")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ujna0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qe5m2")
 
-[node name="Reply" type="Button" parent="MainEmail"]
+[node name="Reply" type="Button" parent="MainEmail" unique_id=426968468]
 visible = false
 layout_mode = 0
 offset_left = 910.0
@@ -1167,7 +1171,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_bjr3j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_sgq50")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yhhrm")
 
-[node name="Hint" type="RichTextLabel" parent="MainEmail"]
+[node name="Hint" type="RichTextLabel" parent="MainEmail" unique_id=1983430397]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -1187,7 +1191,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Budget" type="Panel" parent="."]
+[node name="Budget" type="Panel" parent="." unique_id=1118732847]
 visible = false
 layout_mode = 0
 offset_left = 5.0
@@ -1196,13 +1200,13 @@ offset_right = 1401.0
 offset_bottom = 666.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
 
-[node name="HomeBudget" type="Control" parent="Budget"]
+[node name="HomeBudget" type="Control" parent="Budget" unique_id=486464872]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel2" type="Panel" parent="Budget/HomeBudget"]
+[node name="Panel2" type="Panel" parent="Budget/HomeBudget" unique_id=800482872]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 17.0
@@ -1210,7 +1214,7 @@ offset_right = 1381.0
 offset_bottom = 644.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_m3eo7")
 
-[node name="Panel" type="Panel" parent="Budget/HomeBudget"]
+[node name="Panel" type="Panel" parent="Budget/HomeBudget" unique_id=623272654]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 22.0
@@ -1218,14 +1222,14 @@ offset_right = 1381.0
 offset_bottom = 56.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Panel" unique_id=1734691754]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
 offset_right = 1365.0
 offset_bottom = 38.0
 
-[node name="Chart" parent="Budget/HomeBudget" node_paths=PackedStringArray("savingsText", "LifeStyleText", "LifeStyleTextCost", "savingsContributionText") instance=ExtResource("3_vjvvu")]
+[node name="Chart" parent="Budget/HomeBudget" unique_id=809438502 node_paths=PackedStringArray("savingsText", "LifeStyleText", "LifeStyleTextCost", "savingsContributionText") instance=ExtResource("3_vjvvu")]
 layout_mode = 1
 mouse_filter = 1
 colors = Array[Color]([Color(1, 0.33175, 0.266073, 1), Color(0.928098, 0.559082, 3.85046e-07, 1), Color(0.476177, 0.836152, 0.407928, 1), Color(0.278431, 0.690196, 1, 1)])
@@ -1249,7 +1253,7 @@ offset_bottom = 599.0
 mouse_filter = 1
 chart_radius_multiplier = 1.85
 
-[node name="Additional Costs" type="Panel" parent="Budget/HomeBudget"]
+[node name="Additional Costs" type="Panel" parent="Budget/HomeBudget" unique_id=1885133112]
 layout_mode = 0
 offset_left = 37.0
 offset_top = 44.0
@@ -1257,7 +1261,7 @@ offset_right = 368.0
 offset_bottom = 349.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Panel" type="Panel" parent="Budget/HomeBudget/Additional Costs"]
+[node name="Panel" type="Panel" parent="Budget/HomeBudget/Additional Costs" unique_id=721133031]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 7.0
@@ -1265,56 +1269,56 @@ offset_right = 326.0
 offset_bottom = 47.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs/Panel" unique_id=1739588121]
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Budget/HomeBudget/Additional Costs/Panel/HBoxContainer"]
+[node name="Label" type="Label" parent="Budget/HomeBudget/Additional Costs/Panel/HBoxContainer" unique_id=2136737681]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 26
 text = "ADDITIONAL COSTS"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Budget/HomeBudget/Additional Costs"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Budget/HomeBudget/Additional Costs" unique_id=229186091]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 58.0
 offset_right = 317.0
 offset_bottom = 373.0
 
-[node name="CheckButton" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
+[node name="CheckButton" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer" unique_id=796853070]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "The Financier Monthly"
 
-[node name="CheckButton2" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
+[node name="CheckButton2" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer" unique_id=429750123]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "XxMonyxX  Sub"
 
-[node name="CheckButton3" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
+[node name="CheckButton3" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer" unique_id=1133468741]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "TV License"
 
-[node name="CheckButton4" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
+[node name="CheckButton4" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer" unique_id=903060184]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "DeliverNow Max"
 
-[node name="CheckButton5" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer"]
+[node name="CheckButton5" type="CheckButton" parent="Budget/HomeBudget/Additional Costs/VBoxContainer" unique_id=1094454657]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "NilePrime"
 
-[node name="Additional Costs2" type="Panel" parent="Budget/HomeBudget"]
+[node name="Additional Costs2" type="Panel" parent="Budget/HomeBudget" unique_id=377439029]
 layout_mode = 0
 offset_left = 878.0
 offset_top = 43.0
@@ -1322,7 +1326,7 @@ offset_right = 1378.0
 offset_bottom = 423.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Panel" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="Panel" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=834848862]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 4.0
@@ -1330,7 +1334,7 @@ offset_right = 490.0
 offset_bottom = 44.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="Label" type="Label" parent="Budget/HomeBudget/Additional Costs2/Panel"]
+[node name="Label" type="Label" parent="Budget/HomeBudget/Additional Costs2/Panel" unique_id=381482263]
 layout_mode = 0
 offset_left = 122.0
 offset_top = 1.0
@@ -1339,7 +1343,7 @@ offset_bottom = 40.0
 theme_override_font_sizes/font_size = 26
 text = "QUARTERLY INCOME"
 
-[node name="RENT" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="RENT" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=1600902552]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 58.0
@@ -1347,29 +1351,29 @@ offset_right = 491.0
 offset_bottom = 107.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/RENT"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/RENT" unique_id=651333620]
 layout_mode = 0
 offset_right = 360.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer" unique_id=1531552775]
 layout_mode = 2
 theme_override_constants/separation = 85
 
-[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer" unique_id=185381051]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.333333, 0.266667, 1)
 theme_override_font_sizes/font_size = 36
 text = "Rent"
 
-[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer"]
+[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/RENT/AspectRatioContainer/HBoxContainer" unique_id=763176910]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.333333, 0.266667, 1)
 theme_override_font_sizes/font_size = 36
 text = "£1650 *3 = £4950"
 
-[node name="BILLS" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="BILLS" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=153579416]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 116.0
@@ -1377,29 +1381,29 @@ offset_right = 491.0
 offset_bottom = 165.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/BILLS"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/BILLS" unique_id=1176421794]
 layout_mode = 0
 offset_right = 360.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer" unique_id=1730652204]
 layout_mode = 2
 theme_override_constants/separation = 85
 
-[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer" unique_id=1608641666]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.929412, 0.560784, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Bills"
 
-[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer"]
+[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/BILLS/AspectRatioContainer/HBoxContainer" unique_id=628871620]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.929412, 0.560784, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "£450 *3 = £1350"
 
-[node name="SavingsContrib" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="SavingsContrib" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=256005265]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 302.0
@@ -1407,28 +1411,28 @@ offset_right = 491.0
 offset_bottom = 351.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib" unique_id=1193701657]
 layout_mode = 0
 offset_right = 360.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer" unique_id=1439085678]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer" unique_id=1869366096]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.278259, 0.692049, 1, 1)
 theme_override_font_sizes/font_size = 32
 text = "Saving Contribution"
 
-[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer"]
+[node name="Label3" type="Label" parent="Budget/HomeBudget/Additional Costs2/SavingsContrib/AspectRatioContainer/HBoxContainer" unique_id=1900875430]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 36
 text = "£300"
 
-[node name="Lifestyle2" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="Lifestyle2" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=231415481]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 179.0
@@ -1436,18 +1440,18 @@ offset_right = 491.0
 offset_bottom = 228.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2" unique_id=720332485]
 layout_mode = 0
 offset_right = 477.0
 offset_bottom = 50.0
 
-[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2/AspectRatioContainer"]
+[node name="Label2" type="Label" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2/AspectRatioContainer" unique_id=309646209]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.47451, 0.835294, 0.407843, 1)
 theme_override_font_sizes/font_size = 36
 text = "Lifestyle"
 
-[node name="Decrease" type="Button" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2"]
+[node name="Decrease" type="Button" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2" unique_id=317527773]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 51.0
@@ -1458,7 +1462,7 @@ icon = ExtResource("4_ovuwh")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Increase" type="Button" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2"]
+[node name="Increase" type="Button" parent="Budget/HomeBudget/Additional Costs2/Lifestyle2" unique_id=574197201]
 layout_mode = 0
 offset_left = 415.0
 offset_top = -1.0
@@ -1468,7 +1472,7 @@ icon = ExtResource("4_ovuwh")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Type" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="Type" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=717081074]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 241.0
@@ -1476,18 +1480,18 @@ offset_right = 268.0
 offset_bottom = 290.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/Type"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/Type" unique_id=668618530]
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 50.0
 
-[node name="TYPE" type="Label" parent="Budget/HomeBudget/Additional Costs2/Type/AspectRatioContainer"]
+[node name="TYPE" type="Label" parent="Budget/HomeBudget/Additional Costs2/Type/AspectRatioContainer" unique_id=210033026]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.47451, 0.835294, 0.407843, 1)
 theme_override_font_sizes/font_size = 36
 text = "Lifestyle Cost"
 
-[node name="SUM" type="Panel" parent="Budget/HomeBudget/Additional Costs2"]
+[node name="SUM" type="Panel" parent="Budget/HomeBudget/Additional Costs2" unique_id=1620585230]
 layout_mode = 0
 offset_left = 300.0
 offset_top = 242.0
@@ -1495,17 +1499,17 @@ offset_right = 484.0
 offset_bottom = 291.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/SUM"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Budget/HomeBudget/Additional Costs2/SUM" unique_id=1993838658]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 50.0
 
-[node name="TYPE" type="Label" parent="Budget/HomeBudget/Additional Costs2/SUM/AspectRatioContainer"]
+[node name="TYPE" type="Label" parent="Budget/HomeBudget/Additional Costs2/SUM/AspectRatioContainer" unique_id=565990945]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "SUM"
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget" unique_id=1358941317]
 layout_mode = 0
 offset_left = 837.0
 offset_top = 449.0
@@ -1513,12 +1517,12 @@ offset_right = 1225.0
 offset_bottom = 620.0
 alignment = 1
 
-[node name="Additional Costs3" type="Panel" parent="Budget/HomeBudget/BoxContainer"]
+[node name="Additional Costs3" type="Panel" parent="Budget/HomeBudget/BoxContainer" unique_id=546062221]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="HBoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3"]
+[node name="HBoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3" unique_id=1114576123]
 layout_mode = 0
 anchor_right = 0.988
 anchor_bottom = 0.265
@@ -1528,18 +1532,18 @@ offset_right = -2.164
 offset_bottom = 1.07
 theme_override_constants/separation = 7
 
-[node name="Panel" type="Panel" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer" unique_id=1392909288]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel" unique_id=398818095]
 layout_mode = 0
 offset_right = 374.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+[node name="Label" type="Label" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer" unique_id=929106142]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
@@ -1547,14 +1551,14 @@ text = "TOTAL SAVINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/HomeBudget/BoxContainer/Additional Costs3" unique_id=747582517]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 59.0
 offset_right = 380.0
 offset_bottom = 154.0
 
-[node name="Label" type="Label" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/BoxContainer"]
+[node name="Label" type="Label" parent="Budget/HomeBudget/BoxContainer/Additional Costs3/BoxContainer" unique_id=1713435522]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -1562,7 +1566,7 @@ theme_override_font_sizes/font_size = 65
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/HomeBudget"]
+[node name="Panel3" type="Panel" parent="Budget/HomeBudget" unique_id=1695355356]
 layout_mode = 0
 offset_left = 420.0
 offset_top = 75.0
@@ -1570,23 +1574,23 @@ offset_right = 861.0
 offset_bottom = 115.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Panel3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/HomeBudget/Panel3" unique_id=1276321229]
 layout_mode = 0
 offset_right = 439.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Budget/HomeBudget/Panel3/HBoxContainer"]
+[node name="Label" type="Label" parent="Budget/HomeBudget/Panel3/HBoxContainer" unique_id=44585795]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "QUARTERLY NET INCOME:"
 
-[node name="Label2" type="Label" parent="Budget/HomeBudget/Panel3/HBoxContainer"]
+[node name="Label2" type="Label" parent="Budget/HomeBudget/Panel3/HBoxContainer" unique_id=1633724502]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "£7200"
 
-[node name="SaveButton" type="Button" parent="Budget/HomeBudget"]
+[node name="SaveButton" type="Button" parent="Budget/HomeBudget" unique_id=1897223179]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.107
@@ -1600,7 +1604,7 @@ offset_bottom = 530.44
 theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
-[node name="Saved" type="Label" parent="Budget/HomeBudget/SaveButton"]
+[node name="Saved" type="Label" parent="Budget/HomeBudget/SaveButton" unique_id=1324231517]
 visible = false
 layout_mode = 0
 offset_left = 88.0
@@ -1611,12 +1615,12 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "SAVED"
 
-[node name="MarketingBudget" type="Control" parent="Budget"]
+[node name="MarketingBudget" type="Control" parent="Budget" unique_id=33414512]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget" unique_id=1886561142]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 17.0
@@ -1624,7 +1628,7 @@ offset_right = 1381.0
 offset_bottom = 644.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_m3eo7")
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget" unique_id=1303276788]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 22.0
@@ -1632,14 +1636,14 @@ offset_right = 1381.0
 offset_bottom = 56.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/MarketingBudget/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/MarketingBudget/Panel" unique_id=89344552]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
 offset_right = 1365.0
 offset_bottom = 38.0
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget" unique_id=1639591390]
 layout_mode = 0
 offset_left = 986.0
 offset_top = 376.0
@@ -1647,12 +1651,12 @@ offset_right = 1368.0
 offset_bottom = 547.0
 alignment = 1
 
-[node name="Additional Costs3" type="Panel" parent="Budget/MarketingBudget/BoxContainer"]
+[node name="Additional Costs3" type="Panel" parent="Budget/MarketingBudget/BoxContainer" unique_id=1842491552]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3"]
+[node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3" unique_id=887770702]
 layout_mode = 0
 anchor_right = 0.988
 anchor_bottom = 0.265
@@ -1662,18 +1666,18 @@ offset_right = -2.164
 offset_bottom = 1.07
 theme_override_constants/separation = 7
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer" unique_id=1142557727]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel" unique_id=958179560]
 layout_mode = 0
 offset_right = 374.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/HBoxContainer/Panel/BoxContainer" unique_id=999026437]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
@@ -1681,14 +1685,14 @@ text = "REMAINING SPEND"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3" unique_id=1854690216]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 59.0
 offset_right = 380.0
 offset_bottom = 154.0
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/BoxContainer"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/BoxContainer" unique_id=341411040]
 modulate = Color(0.47451, 0.835294, 0.407843, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1698,14 +1702,14 @@ text = "1,000,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BoxContainer2" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3"]
+[node name="BoxContainer2" type="BoxContainer" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3" unique_id=24773160]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 59.0
 offset_right = 55.0
 offset_bottom = 154.0
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/BoxContainer2"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/BoxContainer/Additional Costs3/BoxContainer2" unique_id=1303397593]
 modulate = Color(0.47451, 0.835294, 0.407843, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1715,7 +1719,7 @@ text = "£"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Investments" type="BoxContainer" parent="Budget/MarketingBudget" node_paths=PackedStringArray("totals", "symbol", "remainingBudget")]
+[node name="Investments" type="BoxContainer" parent="Budget/MarketingBudget" unique_id=511274130 node_paths=PackedStringArray("totals", "symbol", "remainingBudget")]
 layout_mode = 0
 offset_left = 28.0
 offset_top = 73.0
@@ -1730,12 +1734,12 @@ green = Color(0.47451, 0.835294, 0.407843, 1)
 symbol = NodePath("../BoxContainer/Additional Costs3/BoxContainer2/Label")
 remainingBudget = NodePath("../BoxContainer/Additional Costs3/BoxContainer/Label")
 
-[node name="Additional Costs3" type="Panel" parent="Budget/MarketingBudget/Investments"]
+[node name="Additional Costs3" type="Panel" parent="Budget/MarketingBudget/Investments" unique_id=1262668520]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3"]
+[node name="HBoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3" unique_id=96476500]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1745,18 +1749,18 @@ offset_right = -10.0
 offset_bottom = -451.0
 theme_override_constants/separation = 7
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer" unique_id=1507540349]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_tvukg")
 
-[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer/Panel"]
+[node name="BoxContainer" type="BoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer/Panel" unique_id=1715380977]
 layout_mode = 0
 offset_right = 928.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer/Panel/BoxContainer"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer/Panel/BoxContainer" unique_id=572966126]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
@@ -1764,25 +1768,25 @@ text = "INVESTMENTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3" unique_id=1688230955]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 64.0
 offset_right = 934.0
 offset_bottom = 495.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2" unique_id=818922325]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=1348785900]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qe5m2")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel" unique_id=1513436129]
 layout_mode = 0
 offset_right = 176.0
 offset_bottom = 42.0
@@ -1790,13 +1794,13 @@ text = "Category"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=240132826]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel2"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel2" unique_id=1598773224]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1807,13 +1811,13 @@ text = "Brand"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=155477790]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" unique_id=1570164639]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1824,13 +1828,13 @@ text = "Brand"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=71691315]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" unique_id=94590248]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1841,13 +1845,13 @@ text = "Brand"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=2005524271]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" unique_id=1100830321]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1858,13 +1862,13 @@ text = "Public Appeal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=1319943222]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" unique_id=2137443741]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1875,13 +1879,13 @@ text = "Public Appeal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=1168762537]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" unique_id=764958437]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1892,13 +1896,13 @@ text = "Public Appeal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=1624386179]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" unique_id=1355548742]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1909,13 +1913,13 @@ text = "Dissuade Dissent"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=1533162767]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" unique_id=1402581906]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1926,13 +1930,13 @@ text = "Dissuade Dissent"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer"]
+[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer" unique_id=821180286]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" unique_id=881267550]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 11.0
@@ -1943,18 +1947,18 @@ text = "Dissuade Dissent"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2" unique_id=296017531]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1344825013]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qe5m2")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel" unique_id=62651041]
 layout_mode = 0
 offset_right = 176.0
 offset_bottom = 42.0
@@ -1962,13 +1966,13 @@ text = "Item"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=788440954]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel2"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel2" unique_id=679727450]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1985,13 +1989,13 @@ text = "Poster Campaign"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1044578820]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel3"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel3" unique_id=1531246070]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2008,13 +2012,13 @@ text = "Billboard Campaign"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=657202004]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel4"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel4" unique_id=1170051916]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2031,13 +2035,13 @@ text = "Local TV Campaign"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1934556833]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel5"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel5" unique_id=918199981]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2054,13 +2058,13 @@ text = "Food Donations"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1653496498]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel6"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel6" unique_id=383800687]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2077,13 +2081,13 @@ text = "Litter Clinic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1705284358]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel7"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel7" unique_id=144353016]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2100,13 +2104,13 @@ text = "Fund Vet Clinic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=1764984027]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel8"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel8" unique_id=1861534613]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2124,13 +2128,13 @@ text = "Hire Local Ambassador"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=74878567]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel9"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel9" unique_id=601141741]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2147,13 +2151,13 @@ text = "Anti-Union Campaign"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2"]
+[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2" unique_id=277312927]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel10"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer2/Panel10" unique_id=1997351758]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -2169,18 +2173,18 @@ text = "Backing Political Allies"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2" unique_id=850137848]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=203639417]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qe5m2")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel" unique_id=612589739]
 layout_mode = 0
 offset_right = 176.0
 offset_bottom = 42.0
@@ -2188,13 +2192,13 @@ text = "Cost per Unit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=408401915]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel2"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel2" unique_id=2118446240]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2211,13 +2215,13 @@ text = "£20,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=2076220314]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel3"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel3" unique_id=1158341193]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2234,13 +2238,13 @@ text = "£40,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=959164035]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel4"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel4" unique_id=1203376324]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2257,13 +2261,13 @@ text = "£100,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=56860881]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel5"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel5" unique_id=1818492506]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2280,13 +2284,13 @@ text = "£5,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=619058645]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel6"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel6" unique_id=847425323]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2303,13 +2307,13 @@ text = "£10,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=814932361]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel7"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel7" unique_id=1036109604]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2326,13 +2330,13 @@ text = "£50,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=308005624]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel8"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel8" unique_id=847314808]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2349,13 +2353,13 @@ text = "£20,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=94455867]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel9"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel9" unique_id=1708920373]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2372,13 +2376,13 @@ text = "£50,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3"]
+[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3" unique_id=1615863995]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel10"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer3/Panel10" unique_id=543562406]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2395,18 +2399,18 @@ text = "£200,000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2" unique_id=1852230209]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=1255374521]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qe5m2")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel" unique_id=893779421]
 layout_mode = 0
 offset_right = 176.0
 offset_bottom = 42.0
@@ -2414,13 +2418,13 @@ text = "Units to Order"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=1548912750]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel2"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel2" unique_id=1612307128]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2452,13 +2456,13 @@ popup/item_10/text = "10"
 popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=1727322034]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" unique_id=1947087089]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2491,13 +2495,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 1
 
-[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=1472795510]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" unique_id=1529412889]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2530,13 +2534,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 2
 
-[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=640330431]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" unique_id=879569243]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2569,13 +2573,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 3
 
-[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=1809542458]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" unique_id=1183566414]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2608,13 +2612,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 4
 
-[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=74284332]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" unique_id=624157706]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2647,13 +2651,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 5
 
-[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=361612238]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" unique_id=1593123759]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2686,13 +2690,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 6
 
-[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=2014926780]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" unique_id=153576825]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2725,13 +2729,13 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 7
 
-[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4"]
+[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4" unique_id=460580271]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10"]
+[node name="OptionButton" type="OptionButton" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" unique_id=1046673426]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 7.0
@@ -2764,18 +2768,18 @@ popup/item_10/id = 10
 script = ExtResource("12_fxbix")
 row = 8
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2" unique_id=769790950]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 20.0
 
-[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=835406064]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qe5m2")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel" unique_id=1774759075]
 layout_mode = 0
 offset_right = 176.0
 offset_bottom = 42.0
@@ -2783,13 +2787,13 @@ text = "Total Cost Per Unit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel2" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=486324621]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel2"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel2" unique_id=1750795293]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2806,13 +2810,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=157499373]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel3"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel3" unique_id=624930036]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2829,13 +2833,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel4" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=146846133]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel4"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel4" unique_id=2116473991]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2852,13 +2856,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel5" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=510393618]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel5"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel5" unique_id=555064931]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2875,13 +2879,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel6" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=360153934]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel6"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel6" unique_id=993896478]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2898,13 +2902,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel7" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=1645457372]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel7"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel7" unique_id=1559869570]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2921,13 +2925,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel8" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=1687487604]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel8"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel8" unique_id=1292074625]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2944,13 +2948,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel9" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=562481799]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel9"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel9" unique_id=1060840298]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2967,13 +2971,13 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5"]
+[node name="Panel10" type="Panel" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5" unique_id=747233203]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 20.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ovuwh")
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel10"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer5/Panel10" unique_id=893851856]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -2990,7 +2994,7 @@ text = "£0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel3" type="Panel" parent="Budget/MarketingBudget"]
+[node name="Panel3" type="Panel" parent="Budget/MarketingBudget" unique_id=1059865192]
 layout_mode = 0
 offset_left = 387.0
 offset_top = 18.0
@@ -2998,24 +3002,24 @@ offset_right = 1047.0
 offset_bottom = 61.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fxbix")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Budget/MarketingBudget/Panel3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Budget/MarketingBudget/Panel3" unique_id=2003630433]
 layout_mode = 0
 offset_right = 661.0
 offset_bottom = 40.0
 theme_override_constants/separation = 30
 
-[node name="Label" type="Label" parent="Budget/MarketingBudget/Panel3/HBoxContainer"]
+[node name="Label" type="Label" parent="Budget/MarketingBudget/Panel3/HBoxContainer" unique_id=1416438676]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "MARKETING BUDGET LAGOON BREEZE"
 
-[node name="Label2" type="Label" parent="Budget/MarketingBudget/Panel3/HBoxContainer"]
+[node name="Label2" type="Label" parent="Budget/MarketingBudget/Panel3/HBoxContainer" unique_id=604194984]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "£1,000,000"
 
-[node name="SaveButton" type="Button" parent="Budget/MarketingBudget"]
+[node name="SaveButton" type="Button" parent="Budget/MarketingBudget" unique_id=1012966885]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.107
@@ -3029,7 +3033,7 @@ offset_bottom = 599.44
 theme_override_font_sizes/font_size = 45
 text = "Save Budget"
 
-[node name="Saved" type="Label" parent="Budget/MarketingBudget/SaveButton"]
+[node name="Saved" type="Label" parent="Budget/MarketingBudget/SaveButton" unique_id=706860618]
 visible = false
 layout_mode = 0
 offset_left = -90.0
@@ -3040,7 +3044,7 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "SAVED"
 
-[node name="BrowserThing" type="Panel" parent="."]
+[node name="BrowserThing" type="Panel" parent="." unique_id=1687647037]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -3050,7 +3054,7 @@ offset_right = 1401.0
 offset_bottom = 666.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_c7lm7")
 
-[node name="Gambling" type="Control" parent="BrowserThing"]
+[node name="Gambling" type="Control" parent="BrowserThing" unique_id=291257079]
 visible = false
 anchors_preset = 0
 anchor_right = 1.0
@@ -3061,14 +3065,14 @@ offset_right = 14.0
 offset_bottom = 10.7822
 theme = ExtResource("5_tc0qj")
 
-[node name="Panel" type="Panel" parent="BrowserThing/Gambling"]
+[node name="Panel" type="Panel" parent="BrowserThing/Gambling" unique_id=2100729374]
 layout_mode = 0
 offset_left = 409.0
 offset_top = 179.0
 offset_right = 801.0
 offset_bottom = 320.0
 
-[node name="Label" type="Label" parent="BrowserThing/Gambling/Panel"]
+[node name="Label" type="Label" parent="BrowserThing/Gambling/Panel" unique_id=815135362]
 layout_mode = 0
 offset_left = 147.408
 offset_top = 48.1938
@@ -3076,7 +3080,7 @@ offset_right = 217.408
 offset_bottom = 77.1938
 text = "Shart"
 
-[node name="TabContainer" type="TabContainer" parent="BrowserThing"]
+[node name="TabContainer" type="TabContainer" parent="BrowserThing" unique_id=73791134]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 10.0
@@ -3086,12 +3090,12 @@ scale = Vector2(1.04915, 1.01819)
 theme = ExtResource("5_tc0qj")
 current_tab = 0
 
-[node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer"]
+[node name="O-NO Alert" type="Control" parent="BrowserThing/TabContainer" unique_id=204111388]
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
 metadata/_tab_index = 0
 
-[node name="Main Article" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Main Article" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=1306197732]
 layout_mode = 0
 offset_left = 395.0
 offset_top = 22.0
@@ -3099,7 +3103,7 @@ offset_right = 863.0
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article"]
+[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article" unique_id=561835078]
 layout_mode = 0
 offset_left = 75.8584
 offset_top = 42.0525
@@ -3113,7 +3117,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="BrowserThing/TabContainer/O-NO Alert/Main Article"]
+[node name="ScrollContainer" type="ScrollContainer" parent="BrowserThing/TabContainer/O-NO Alert/Main Article" unique_id=667495526]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 100.0
@@ -3122,7 +3126,7 @@ offset_bottom = 525.0844
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 2
 
-[node name="Body" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer"]
+[node name="Body" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" unique_id=1513119302]
 texture_filter = 1
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
@@ -3134,7 +3138,7 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ma
 Duis imperdiet rhoncus risus, quis lobortis quam molestie in. Proin hendrerit eu dolor nec rutrum. Sed sed leo ac purus iaculis accumsan cursus eget dui. Integer egestas tincidunt quam. Aliquam faucibus tempor leo. Sed sed lacus lectus. Vivamus ornare massa arcu, posuere accumsan ipsum vulputate vel. Proin malesuada sem nec cursus ullamcorper. Vivamus eu lorem efficitur, faucibus lorem vel, pulvinar felis."
 autowrap_mode = 2
 
-[node name="Summary" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Summary" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=1800338829]
 layout_mode = 0
 offset_left = 15.250425
 offset_top = 318.24698
@@ -3142,7 +3146,7 @@ offset_right = 387.25043
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="BulletPoints?" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary"]
+[node name="BulletPoints?" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary" unique_id=157912972]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 77.0
@@ -3154,7 +3158,7 @@ text = "◦ Bullet 1
 ◦ Bullet 2
 ◦ Bullet 3 "
 
-[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary"]
+[node name="Title" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Summary" unique_id=1348578548]
 layout_mode = 0
 offset_left = 45.283
 offset_top = 21.4277
@@ -3168,7 +3172,7 @@ text = "Summary"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Related News" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Related News" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=1059237879]
 layout_mode = 0
 offset_left = 870.23
 offset_top = 21.642
@@ -3176,7 +3180,7 @@ offset_right = 1245.7704
 offset_bottom = 289.58658
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News"]
+[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News" unique_id=794097213]
 layout_mode = 0
 offset_left = 53.3766
 offset_top = 32.4104
@@ -3190,7 +3194,7 @@ text = "Related News"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BrowserThing/TabContainer/O-NO Alert/Related News"]
+[node name="VBoxContainer" type="VBoxContainer" parent="BrowserThing/TabContainer/O-NO Alert/Related News" unique_id=1465272086]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 84.0
@@ -3198,19 +3202,19 @@ offset_right = 354.0
 offset_bottom = 240.0
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
+[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" unique_id=1856795181]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_fxbix")
 theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
-[node name="Label2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer"]
+[node name="Label2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" unique_id=1540200523]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("14_fxbix")
 theme_override_font_sizes/font_size = 18
 text = "RELATED News 1"
 
-[node name="GreenDefender" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="GreenDefender" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=356269122]
 visible = false
 z_index = 1
 layout_mode = 0
@@ -3220,7 +3224,7 @@ offset_right = 819.7095
 offset_bottom = 464.40686
 theme_override_styles/panel = SubResource("StyleBoxFlat_fxbix")
 
-[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
+[node name="Title2" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender" unique_id=441964534]
 layout_mode = 0
 offset_left = 40.985565
 offset_top = 24.55338
@@ -3234,7 +3238,7 @@ text = "GREEN DEFENDER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title3" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
+[node name="Title3" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender" unique_id=925239673]
 texture_filter = 1
 layout_mode = 0
 offset_left = 19.063053
@@ -3249,7 +3253,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender"]
+[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/GreenDefender" unique_id=1411561450]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -3264,7 +3268,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Close"
 
-[node name="Panel5" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Panel5" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=320432222]
 layout_mode = 0
 offset_left = 870.23
 offset_top = 294.854
@@ -3272,7 +3276,7 @@ offset_right = 1246.7183
 offset_bottom = 562.7986
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhhrm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/O-NO Alert/Panel5" node_paths=PackedStringArray("PopUp")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BrowserThing/TabContainer/O-NO Alert/Panel5" unique_id=1155684861 node_paths=PackedStringArray("PopUp")]
 position = Vector2(185.865, 121.785)
 sprite_frames = SubResource("SpriteFrames_3hs7y")
 animation = &"Vacuum"
@@ -3280,7 +3284,7 @@ autoplay = "default"
 script = ExtResource("8_bq6wl")
 PopUp = NodePath("../../GreenDefender")
 
-[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
+[node name="Label" type="Label" parent="BrowserThing/TabContainer/O-NO Alert/Panel5" unique_id=1222183052]
 layout_mode = 0
 offset_left = -0.953153
 offset_top = 225.891
@@ -3294,7 +3298,7 @@ text = "sponsored"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/Panel5"]
+[node name="Button" type="Button" parent="BrowserThing/TabContainer/O-NO Alert/Panel5" unique_id=2121514096]
 layout_mode = 0
 offset_left = 10.482986
 offset_top = 11.607376
@@ -3305,7 +3309,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_5p121")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0vdjt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_15dr1")
 
-[node name="Logo" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Logo" type="Panel" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=1112307614]
 layout_mode = 0
 offset_left = 16.20359
 offset_top = 22.624374
@@ -3313,12 +3317,12 @@ offset_right = 386.97992
 offset_bottom = 307.44348
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ujna0")
 
-[node name="Outlet Logo" type="Sprite2D" parent="BrowserThing/TabContainer/O-NO Alert"]
+[node name="Outlet Logo" type="Sprite2D" parent="BrowserThing/TabContainer/O-NO Alert" unique_id=137878253]
 position = Vector2(199.2089, 77.62393)
 scale = Vector2(1.324882, 1.3651675)
 texture = ExtResource("37_yhhrm")
 
-[node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" node_paths=PackedStringArray("error_message", "username", "password", "timer", "timer2")]
+[node name="IntraNet Log-In" type="Control" parent="BrowserThing/TabContainer" unique_id=1971902822 node_paths=PackedStringArray("error_message", "username", "password", "timer", "timer2")]
 visible = false
 layout_mode = 2
 theme = ExtResource("5_tc0qj")
@@ -3331,7 +3335,7 @@ timer2 = NodePath("Timer2")
 error_noise = ExtResource("7_0bmt1")
 metadata/_tab_index = 1
 
-[node name="Panel" type="Panel" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+[node name="Panel" type="Panel" parent="BrowserThing/TabContainer/IntraNet Log-In" unique_id=648477276]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.27
@@ -3346,14 +3350,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2yvqt")
 
-[node name="Control" type="Control" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel"]
+[node name="Control" type="Control" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel" unique_id=2092770483]
 anchors_preset = 0
 offset_left = -75.7094
 offset_top = -15.1446
 offset_right = -35.7094
 offset_bottom = 24.8554
 
-[node name="Label" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
+[node name="Label" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control" unique_id=665673393]
 layout_mode = 0
 offset_left = 131.535
 offset_top = 60.8923
@@ -3362,14 +3366,14 @@ offset_bottom = 121.892
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Username:"
 
-[node name="TextEdit" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
+[node name="TextEdit" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control" unique_id=1465049315]
 layout_mode = 0
 offset_left = 135.0
 offset_top = 96.0
 offset_right = 407.0
 offset_bottom = 145.0
 
-[node name="Label2" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
+[node name="Label2" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control" unique_id=2065269677]
 layout_mode = 0
 offset_left = 131.535
 offset_top = 151.249
@@ -3378,14 +3382,14 @@ offset_bottom = 212.249
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Password:"
 
-[node name="TextEdit2" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
+[node name="TextEdit2" type="TextEdit" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control" unique_id=257366132]
 layout_mode = 0
 offset_left = 135.0
 offset_top = 186.356
 offset_right = 407.0
 offset_bottom = 235.356
 
-[node name="LogIn" type="Button" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control"]
+[node name="LogIn" type="Button" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel/Control" unique_id=1099265991]
 layout_mode = 0
 offset_left = 276.415
 offset_top = 265.176
@@ -3394,12 +3398,12 @@ offset_bottom = 307.176
 text = "Log In
 "
 
-[node name="ForwardFamilyLogo" type="Sprite2D" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel"]
+[node name="ForwardFamilyLogo" type="Sprite2D" parent="BrowserThing/TabContainer/IntraNet Log-In/Panel" unique_id=1095451790]
 position = Vector2(476.167, 175.389)
 scale = Vector2(0.953155, 0.982133)
 texture = ExtResource("10_tu6vg")
 
-[node name="ErrorMessage" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+[node name="ErrorMessage" type="Label" parent="BrowserThing/TabContainer/IntraNet Log-In" unique_id=1247530478]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -3420,14 +3424,14 @@ text = "INCORRECT USERNAME / PASSWORD"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+[node name="Timer" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In" unique_id=1137683342]
 wait_time = 0.5
 
-[node name="Timer2" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In"]
+[node name="Timer2" type="Timer" parent="BrowserThing/TabContainer/IntraNet Log-In" unique_id=642126968]
 wait_time = 2.0
 one_shot = true
 
-[node name="BottomBar" type="Panel" parent="."]
+[node name="BottomBar" type="Panel" parent="." unique_id=1072439397]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 676.0
@@ -3435,7 +3439,7 @@ offset_right = 1401.0
 offset_bottom = 732.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0av00")
 
-[node name="Emails" type="Button" parent="BottomBar"]
+[node name="Emails" type="Button" parent="BottomBar" unique_id=1242998941]
 texture_filter = 1
 layout_mode = 0
 anchor_left = 0.179083
@@ -3468,7 +3472,7 @@ icon = ExtResource("6_rttsh")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BottomBar/Emails"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BottomBar/Emails" unique_id=24433734]
 position = Vector2(70.6668, 22.6667)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_b2x54")
@@ -3476,7 +3480,7 @@ animation = &"bounce"
 autoplay = "bounce"
 frame_progress = 0.89263
 
-[node name="Budget" type="Button" parent="BottomBar"]
+[node name="Budget" type="Button" parent="BottomBar" unique_id=1202525492]
 texture_filter = 1
 layout_mode = 0
 anchor_left = 0.449857
@@ -3510,7 +3514,7 @@ icon = ExtResource("6_ovuwh")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Internet" type="Button" parent="BottomBar"]
+[node name="Internet" type="Button" parent="BottomBar" unique_id=746511397]
 texture_filter = 1
 layout_mode = 0
 anchor_left = 0.315186
@@ -3543,7 +3547,7 @@ icon = ExtResource("8_q77rv")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="ShutDown" type="Button" parent="BottomBar"]
+[node name="ShutDown" type="Button" parent="BottomBar" unique_id=1206336908]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -3575,7 +3579,7 @@ icon = ExtResource("9_3ntsw")
 icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="KeyboardTarget" type="Node2D" parent="."]
+[node name="KeyboardTarget" type="Node2D" parent="." unique_id=1447338567]
 position = Vector2(775, 951)
 
 [connection signal="pressed" from="MainEmail/Send" to="." method="_on_send_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://65dp2p2mc6u6"]
+[gd_scene format=3 uid="uid://65dp2p2mc6u6"]
 
 [ext_resource type="Script" uid="uid://lwwp13uarql2" path="res://Scripts/emailInfo.gd" id="1_sk5pa"]
 [ext_resource type="Texture2D" uid="uid://b5vnpeii5yw83" path="res://Visual Assets/Tycoon_UI_Icons_v1/with_Background/74.png" id="1_ym083"]
@@ -17,17 +17,21 @@ texture = ExtResource("4_gg46f")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_je6ki"]
 texture = ExtResource("5_gg46f")
 
-[node name="InboxSummary" type="VBoxContainer" node_paths=PackedStringArray("ownDel")]
-offset_right = 277.0
-offset_bottom = 77.0
+[node name="InboxSummary" type="AspectRatioContainer" unique_id=277572632 node_paths=PackedStringArray("ownDel")]
+anchors_preset = -1
+anchor_right = 0.14500001
+anchor_bottom = 0.071
+offset_right = 0.5999756
+offset_bottom = 0.3199997
 size_flags_horizontal = 13
-size_flags_vertical = 4
 theme = SubResource("Theme_iwb83")
+ratio = 3.6
 script = ExtResource("1_sk5pa")
 ownDel = NodePath("Button/Delete")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=618685795]
 layout_mode = 2
+size_flags_vertical = 3
 text = "
 
 
@@ -35,8 +39,8 @@ text = "
 icon = ExtResource("1_ym083")
 autowrap_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
-layout_mode = 0
+[node name="RichTextLabel" type="RichTextLabel" parent="Button" unique_id=360902618]
+layout_mode = 1
 offset_left = 44.0
 offset_top = 4.0
 offset_right = 218.0
@@ -47,11 +51,12 @@ text = "[b]Sender[/b]
 Subject
 [i]First few lines
 "
+autowrap_mode = 0
 
-[node name="Delete" type="Button" parent="Button"]
+[node name="Delete" type="Button" parent="Button" unique_id=199917957]
 z_index = 1
 texture_filter = 1
-layout_mode = 0
+layout_mode = 1
 offset_left = 235.0
 offset_top = 11.0
 offset_right = 272.0
@@ -60,7 +65,5 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xa2x5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_l11mf")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_je6ki")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button/Delete" to="." method="_on_delete_pressed"]

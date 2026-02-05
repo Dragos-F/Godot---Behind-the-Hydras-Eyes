@@ -572,13 +572,14 @@ texture = ExtResource("6_k3jav")
 
 [node name="ScreenUI" parent="." unique_id=1090033741 instance=ExtResource("7_4qd7i")]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 emailsProgressionQuota = 4
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" parent_id_path=PackedInt32Array(1090033741, 1731298633) index="0" unique_id=1457740157]
 texture_filter = 1
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(1090033741, 1680828421) index="0" unique_id=2087623211]
 Sender_Name = "M. Ahmad"
 PreviewText = "Hey Dave, I just wanted to say good"
 MainBody = "Hey Dave, 
@@ -597,11 +598,12 @@ Best,
 Dave"
 boss = false
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" parent_id_path=PackedInt32Array(1090033741, 2087623211, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
 
-[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" unique_id=996035044 instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(1090033741, 1680828421) index="1" unique_id=996035044 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
+stretch_mode = 0
 Sender_Name = "M Lopez"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Subj: FW; Lagoon Breeze's Environmental Impact Assessment"
@@ -621,12 +623,12 @@ Dave Spritely,
 UK Project Lead
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" parent_id_path=PackedInt32Array(996035044, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" unique_id=1343666394 instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(1090033741, 1680828421) index="2" unique_id=1343666394 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
+stretch_mode = 0
 Sender_Name = "R. Spiegel"
 ToAddress = "contactus@forwardgreen.co.uk"
 Subject = "Subj: FW: Safer Investments"
@@ -647,12 +649,12 @@ Dave Spritely,
 UK Project Lead
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" parent_id_path=PackedInt32Array(1343666394, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="3" unique_id=1501109081 instance=ExtResource("9_j0ssp")]
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(1090033741, 1680828421) index="3" unique_id=1501109081 instance=ExtResource("9_j0ssp")]
 layout_mode = 2
+stretch_mode = 0
 Sender_Name = "IT Service Desk"
 ToAddress = "dspritely@forwardgreen.co.uk"
 Subject = "Late System Induction"
@@ -681,125 +683,124 @@ Dave Spritely,
 UK Project Lead                                
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" parent_id_path=PackedInt32Array(1501109081, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
 
-[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" index="0"]
+[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" parent_id_path=PackedInt32Array(1090033741, 1261162588) index="0" unique_id=2044752606]
 texture_filter = 1
 
-[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
+[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" parent_id_path=PackedInt32Array(1090033741, 988264085) index="0" unique_id=999585549]
 texture_filter = 1
 
-[node name="Hint" parent="ScreenUI/MainEmail" index="4"]
+[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" parent_id_path=PackedInt32Array(1090033741, 2022559285) index="1" unique_id=1291492421]
 texture_filter = 1
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+[node name="Hint" parent="ScreenUI/MainEmail" parent_id_path=PackedInt32Array(1090033741, 318870999) index="4" unique_id=1983430397]
+texture_filter = 1
+
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" parent_id_path=PackedInt32Array(1090033741, 155477790) index="0" unique_id=1570164639]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" parent_id_path=PackedInt32Array(1090033741, 71691315) index="0" unique_id=94590248]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" parent_id_path=PackedInt32Array(1090033741, 2005524271) index="0" unique_id=1100830321]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" parent_id_path=PackedInt32Array(1090033741, 1319943222) index="0" unique_id=2137443741]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" parent_id_path=PackedInt32Array(1090033741, 1168762537) index="0" unique_id=764958437]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" parent_id_path=PackedInt32Array(1090033741, 1624386179) index="0" unique_id=1355548742]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" parent_id_path=PackedInt32Array(1090033741, 1533162767) index="0" unique_id=1402581906]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" parent_id_path=PackedInt32Array(1090033741, 821180286) index="0" unique_id=881267550]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" parent_id_path=PackedInt32Array(1090033741, 1727322034) index="0" unique_id=1947087089]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" parent_id_path=PackedInt32Array(1090033741, 1472795510) index="0" unique_id=1529412889]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" parent_id_path=PackedInt32Array(1090033741, 640330431) index="0" unique_id=879569243]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" parent_id_path=PackedInt32Array(1090033741, 1809542458) index="0" unique_id=1183566414]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" parent_id_path=PackedInt32Array(1090033741, 74284332) index="0" unique_id=624157706]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" parent_id_path=PackedInt32Array(1090033741, 361612238) index="0" unique_id=1593123759]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" parent_id_path=PackedInt32Array(1090033741, 2014926780) index="0" unique_id=153576825]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" parent_id_path=PackedInt32Array(1090033741, 460580271) index="0" unique_id=1046673426]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" parent_id_path=PackedInt32Array(1090033741, 291257079) index="0" unique_id=2100729374]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(1090033741, 1306197732) index="0" unique_id=561835078]
 offset_left = 13.9025
 offset_top = -49.2858
 offset_right = 557.902
@@ -808,13 +809,13 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Train turmoil: troubled transport torpedoes traveller timetables"
 
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(1090033741, 1306197732) index="1" unique_id=667495526]
 offset_left = 25.3403
 offset_top = 124.552
 offset_right = 455.34
 offset_bottom = 531.552
 
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0" unique_id=1513119302]
 text = "For the third time this week, serious delays to all major transport routes have put a dampener on the spirits of hopeful commuters and tourists. This comes one week after ticket prices were hiked 20% in a move that cabinet members have described as \"the sort of tough choices that help to toughen up our long-pampered underclass\". 									
 
 We reached out via phone to our mate that runs SuperTrain, the largest affected rail company, and he said \"[inaudible grumbling]\". Our experts understand this to mean that the blame lies with unions selfishly resisting sixteen hour shifts.									
@@ -822,41 +823,41 @@ We reached out via phone to our mate that runs SuperTrain, the largest affected 
 Our following investigation on the causes has revealed chronic underfunding on repairs, maintainance, and expansion in line with demand; a workplace environment shaped by exhaustion and toxicity; and a constant failure to recruit adequate staff. We therefore conclude that SuperTrain were correct in their assement that the greedy staff is at the root cause of the issue									
 									"
 
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" parent_id_path=PackedInt32Array(1090033741, 1800338829) index="0" unique_id=157912972]
 text = "◦ Ticket price soaring
 ◦ SuperTrain Interview
 ◦ Unions to Blame"
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="1"]
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" parent_id_path=PackedInt32Array(1090033741, 1800338829) index="1" unique_id=1348578548]
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 
-[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(1090033741, 1059237879) index="0" unique_id=794097213]
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(1090033741, 1059237879) index="1" unique_id=1465272086]
 theme_override_constants/separation = 24
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0" unique_id=1856795181]
 custom_minimum_size = Vector2(5, 0)
 text = "And the little one says roll over: childrens hospitals declared full"
 autowrap_mode = 2
 
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1" unique_id=1540200523]
 custom_minimum_size = Vector2(5, 0)
 text = "Air has suprising nutrional value, minister explains to food banks"
 autowrap_mode = 2
 
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(1090033741, 320432222) index="0" unique_id=1155684861]
 position = Vector2(184.96, 117.856)
 anim = "Update"
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(1090033741, 320432222) index="1" unique_id=1222183052]
 offset_left = -4.76745
 offset_top = 231.784
 offset_right = 95.2325
 offset_bottom = 260.784
 
-[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
+[node name="Budget" parent="ScreenUI/BottomBar" parent_id_path=PackedInt32Array(1090033741, 1072439397) index="1" unique_id=1202525492]
 visible = false
 
 [node name="Dave" parent="." unique_id=1171400798 instance=ExtResource("8_r33wl")]

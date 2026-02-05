@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Control
 class_name EmailBrain
 @export var textLabel:RichTextLabel
 @export var Sender_Name:String
