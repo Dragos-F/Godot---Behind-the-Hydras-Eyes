@@ -960,6 +960,7 @@ texture = ExtResource("14_bd8n7")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tdew"]
 
 [node name="ScreenUI" type="Control" unique_id=1080854413 node_paths=PackedStringArray("MainEmailBody", "replyTarget", "Sender", "ToBox", "EmailList", "Budget", "BrowserThing", "emailNotif", "keyboardTarget", "info")]
+visible = false
 z_index = 5
 layout_mode = 3
 anchors_preset = 0
@@ -1039,9 +1040,6 @@ Mr Moore.
 
 "
 boss = true
-
-[node name="RichTextLabel" parent="EmailList/SummariesContainer/Boss/Button" parent_id_path=PackedInt32Array(2087623211, 618685795) index="0" unique_id=360902618]
-autowrap_mode = 0
 
 [node name="MainEmail" type="Panel" parent="." unique_id=318870999]
 layout_mode = 0

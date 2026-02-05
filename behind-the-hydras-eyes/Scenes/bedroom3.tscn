@@ -468,7 +468,7 @@ texture = ExtResource("34_wqj3e")
 emailsProgressionQuota = 1
 saved_text = NodePath("Budget/HomeBudget/SaveButton/Saved")
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(910659981, 1680828421) index="0" unique_id=2087623211]
 Sender_Name = "Lorena.k@markinsons.co.uk"
 ToAddress = "david199x@personmail.co.uk"
 Subject = "Bathroom condition"
@@ -493,19 +493,19 @@ Best,
 Dave Spritely"
 boss = false
 
-[node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
+[node name="HomeBudget" parent="ScreenUI/Budget" parent_id_path=PackedInt32Array(910659981, 1118732847) index="0" unique_id=486464872]
 visible = true
 
-[node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
+[node name="MarketingBudget" parent="ScreenUI/Budget" parent_id_path=PackedInt32Array(910659981, 1118732847) index="1" unique_id=33414512]
 visible = false
 
-[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" parent_id_path=PackedInt32Array(910659981, 291257079) index="0" unique_id=2100729374]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(910659981, 1306197732) index="0" unique_id=561835078]
 offset_left = -7.06689
 offset_top = -31.6074
 offset_right = 577.933
@@ -513,13 +513,13 @@ offset_bottom = 241.393
 scale = Vector2(0.8, 0.8)
 text = "\"More tough choices!\", demand nation's youth"
 
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(910659981, 1306197732) index="1" unique_id=667495526]
 offset_left = 15.8088
 offset_top = 155.98
 offset_right = 445.809
 offset_bottom = 516.98
 
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0" unique_id=1513119302]
 text = "One challenge that always besets our proud government is keeping a finger on the racing pulse of that ever-unpredictable under-25 demographic. What manner of \"meems\", wokeness and tomfoolery has entranced their soft brains this month, and what can be done about it?
 
 Luckily, we have a series of polling, corrected to remove the lefty bias that has infected society, and well-funded public events to inform more refined and mature world views. 
@@ -529,32 +529,32 @@ And the writing on the wall is clear: today's youth yearn for yet more difficult
 The fleas of that dreaded vampire bat, \"the left\", have indeed been shaken off, and now we must let loose the dogs of war (and privatisation, and deruglation, and free enterprise). Make Britain imperial again.							
 							"
 
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" parent_id_path=PackedInt32Array(910659981, 1800338829) index="0" unique_id=157912972]
 text = "◦ Youth still bad
 ◦ But maybe rightwing?
 ◦ Have cake, eat it"
 
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(910659981, 1059237879) index="1" unique_id=1465272086]
 theme_override_constants/separation = 24
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0" unique_id=1856795181]
 custom_minimum_size = Vector2(5, 0)
 text = "Tables have turned: Young DJs complain of \"middle-class poverty\""
 autowrap_mode = 2
 
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1" unique_id=1540200523]
 custom_minimum_size = Vector2(5, 0)
 text = "Too cool for school: boy, 13, trapped in fridge"
 autowrap_mode = 2
 
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(910659981, 320432222) index="0" unique_id=1155684861]
 animation = &"Cat"
 anim = "Cat"
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" parent_id_path=PackedInt32Array(910659981, 204111388) index="6" unique_id=137878253]
 texture = ExtResource("36_ng3rn")
 
-[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" parent_id_path=PackedInt32Array(910659981, 1971902822) index="0" unique_id=648477276]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 608.0

@@ -458,10 +458,11 @@ scale = Vector2(2, 2)
 texture = ExtResource("33_x75j5")
 
 [node name="ScreenUI" parent="." unique_id=604976368 node_paths=PackedStringArray("saved_text") instance=ExtResource("34_unbiq")]
+visible = false
 emailsProgressionQuota = 1
 saved_text = NodePath("Budget/HomeBudget/SaveButton/Saved")
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(604976368, 1680828421) index="0" unique_id=2087623211]
 Sender_Name = "RobSpritely@personmail.co.uk"
 ToAddress = "david199x@personmail.co.uk"
 Subject = "Budgeting in London"
@@ -489,119 +490,119 @@ Dave.
 "
 boss = false
 
-[node name="HomeBudget" parent="ScreenUI/Budget" index="0"]
+[node name="HomeBudget" parent="ScreenUI/Budget" parent_id_path=PackedInt32Array(604976368, 1118732847) index="0" unique_id=486464872]
 visible = true
 
-[node name="Chart" parent="ScreenUI/Budget/HomeBudget" index="2"]
+[node name="Chart" parent="ScreenUI/Budget/HomeBudget" index="2" unique_id=809438502]
 totalRent = 4950.0
 totalBills = 1350.0
 
-[node name="MarketingBudget" parent="ScreenUI/Budget" index="1"]
+[node name="MarketingBudget" parent="ScreenUI/Budget" parent_id_path=PackedInt32Array(604976368, 1118732847) index="1" unique_id=33414512]
 visible = false
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" parent_id_path=PackedInt32Array(604976368, 155477790) index="0" unique_id=1570164639]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" parent_id_path=PackedInt32Array(604976368, 71691315) index="0" unique_id=94590248]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" parent_id_path=PackedInt32Array(604976368, 2005524271) index="0" unique_id=1100830321]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" parent_id_path=PackedInt32Array(604976368, 1319943222) index="0" unique_id=2137443741]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" parent_id_path=PackedInt32Array(604976368, 1168762537) index="0" unique_id=764958437]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" parent_id_path=PackedInt32Array(604976368, 1624386179) index="0" unique_id=1355548742]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" parent_id_path=PackedInt32Array(604976368, 1533162767) index="0" unique_id=1402581906]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" parent_id_path=PackedInt32Array(604976368, 821180286) index="0" unique_id=881267550]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" parent_id_path=PackedInt32Array(604976368, 1727322034) index="0" unique_id=1947087089]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" parent_id_path=PackedInt32Array(604976368, 1472795510) index="0" unique_id=1529412889]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" parent_id_path=PackedInt32Array(604976368, 640330431) index="0" unique_id=879569243]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" parent_id_path=PackedInt32Array(604976368, 1809542458) index="0" unique_id=1183566414]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" parent_id_path=PackedInt32Array(604976368, 74284332) index="0" unique_id=624157706]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" parent_id_path=PackedInt32Array(604976368, 361612238) index="0" unique_id=1593123759]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" parent_id_path=PackedInt32Array(604976368, 2014926780) index="0" unique_id=153576825]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" parent_id_path=PackedInt32Array(604976368, 460580271) index="0" unique_id=1046673426]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" parent_id_path=PackedInt32Array(604976368, 291257079) index="0" unique_id=2100729374]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(604976368, 1306197732) index="0" unique_id=561835078]
 offset_left = -7.06689
 offset_top = -31.6074
 offset_right = 577.933
@@ -609,13 +610,13 @@ offset_bottom = 241.393
 scale = Vector2(0.8, 0.8)
 text = "Prime Minister on nationalist protests: \"Some of my best friends are flags\""
 
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(604976368, 1306197732) index="1" unique_id=667495526]
 offset_left = 15.8088
 offset_top = 155.98
 offset_right = 445.809
 offset_bottom = 516.98
 
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0" unique_id=1513119302]
 text = "\"Recent protests by nationalist groups have sparked outrage among phone-obsessed loony leftists. Is this reaction justified, or are the snowflakes being too sensitive?
 In a recent survey conducted on the streets of our capital, 3 out of 5 bald white men considered the protests \"\"necessary\"\" and a core part of representing \"\"Fundamental British Values\"\".
 
@@ -626,32 +627,32 @@ In an attempt to bring the nation together, the Prime Minister held a press conf
 Later this month, we are expecting another round of protests, and counterprotests, to occur in our streets. If you are concerned about this, we offer a wealth of discounted holiday locations. These include former British colonies, struggling economies and tax havens. 							
 							"
 
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" parent_id_path=PackedInt32Array(604976368, 1800338829) index="0" unique_id=157912972]
 text = "◦ Protest Good
 ◦ Snowflakes bad
 ◦ Flags are friends"
 
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(604976368, 1059237879) index="1" unique_id=1465272086]
 theme_override_constants/separation = 24
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0" unique_id=1856795181]
 custom_minimum_size = Vector2(5, 0)
 text = "The animal health benefits of battery farming"
 autowrap_mode = 2
 
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1" unique_id=1540200523]
 custom_minimum_size = Vector2(5, 0)
 text = "Pigeon arrested under terror charge for standing on sign"
 autowrap_mode = 2
 
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(604976368, 320432222) index="0" unique_id=1155684861]
 animation = &"Doc"
 anim = "Doc"
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" parent_id_path=PackedInt32Array(604976368, 204111388) index="6" unique_id=137878253]
 texture = ExtResource("36_ek5ei")
 
-[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/TabContainer/IntraNet Log-In" parent_id_path=PackedInt32Array(604976368, 1971902822) index="0" unique_id=648477276]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 608.0
