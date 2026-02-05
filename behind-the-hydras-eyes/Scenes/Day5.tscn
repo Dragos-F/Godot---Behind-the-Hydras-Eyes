@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bwesthwpicym7"]
+[gd_scene format=3 uid="uid://bwesthwpicym7"]
 
 [ext_resource type="PackedScene" uid="uid://clpiwenruvqub" path="res://Scenes/fader.tscn" id="1_h2npb"]
 [ext_resource type="PackedScene" uid="uid://c3o7xc4gc5h13" path="res://Scenes/backgroundOffice.tscn" id="2_meadn"]
@@ -607,12 +607,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1674482384]
 
-[node name="Fader" parent="." instance=ExtResource("1_h2npb")]
+[node name="Fader" parent="." unique_id=646502260 instance=ExtResource("1_h2npb")]
 scale = Vector2(2, 2)
 
-[node name="Background" parent="." instance=ExtResource("2_meadn")]
+[node name="Background" parent="." unique_id=1904989653 instance=ExtResource("2_meadn")]
 
 [node name="InteractableElement" parent="Background/Furniture/Corkboard" index="0"]
 YarnNodeLink = "Corkboard"
@@ -652,24 +652,22 @@ YarnNodeLink = "WaterCooler"
 [node name="InteractableElement" parent="Background/Kitchen/Clipboard" index="0"]
 YarnNodeLink = "Clipboard"
 
-[node name="StandingAlex" type="Node2D" parent="Background"]
+[node name="StandingAlex" type="Node2D" parent="Background" unique_id=1829351091]
 visible = false
 position = Vector2(121, 12)
 scale = Vector2(2, 2)
 
-[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex"]
+[node name="AlexStanding" type="AnimatedSprite2D" parent="Background/StandingAlex" unique_id=990585272]
 texture_filter = 1
 position = Vector2(-14.5, 47)
 sprite_frames = SubResource("SpriteFrames_gtf6l")
 animation = &"idle_Alex"
 flip_h = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex"]
-libraries = {
-&"": SubResource("AnimationLibrary_3xk2j")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/StandingAlex" unique_id=1322138307]
+libraries/ = SubResource("AnimationLibrary_3xk2j")
 
-[node name="DayBrain" type="Node" parent="." node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
+[node name="DayBrain" type="Node" parent="." unique_id=177289443 node_paths=PackedStringArray("BossScreen", "BossDialogue", "DaveAnchor", "BossAnchor", "standing_Alex", "Alex_walking_sprite", "Alex_anim", "AlexAnchor", "JenAnchor", "PauseMenu", "plants")]
 script = ExtResource("7_u6ljm")
 BossScreen = NodePath("../BossScreen")
 BossDialogue = NodePath("../BossScreen/BossAnchor")
@@ -685,37 +683,37 @@ PauseMenu = NodePath("../CanvasLayer/Pause")
 plants = [NodePath("../Background/Kitchen/TableRound/PlantFlowers2"), NodePath("../Background/Furniture/DaveDesk/PlantFlowers3")]
 current_scene = "res://Scenes/Day5.tscn"
 
-[node name="TypingBrain" type="Node" parent="."]
+[node name="TypingBrain" type="Node" parent="." unique_id=613724829]
 unique_name_in_owner = true
 script = ExtResource("8_tw3us")
 
-[node name="ComputerScreen" type="Node2D" parent="."]
+[node name="ComputerScreen" type="Node2D" parent="." unique_id=339362342]
 visible = false
 z_index = 5
 
-[node name="Black" type="Sprite2D" parent="ComputerScreen"]
+[node name="Black" type="Sprite2D" parent="ComputerScreen" unique_id=365568976]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("9_436ib")
 
-[node name="Screen" type="Sprite2D" parent="ComputerScreen"]
+[node name="Screen" type="Sprite2D" parent="ComputerScreen" unique_id=168316060]
 texture_filter = 1
 texture = ExtResource("10_53qxh")
 
-[node name="ScreenUI" parent="." instance=ExtResource("11_j53rr")]
+[node name="ScreenUI" parent="." unique_id=958882705 instance=ExtResource("11_j53rr")]
 unique_name_in_owner = true
 texture_filter = 1
 emailsProgressionQuota = 4
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/Inbox" parent_id_path=PackedInt32Array(958882705, 1731298633) index="0" unique_id=1457740157]
 texture_filter = 1
 
-[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" index="0"]
+[node name="Boss" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="0" unique_id=2087623211]
 Sender_Name = "Maria Cruz"
 Subject = "Compensation"
 PreviewText = "I don't know what"
 replyChoice = true
 choiceDialog1 = "Best show you care a bit...."
-choiceDialog2 = "Eh, i'm sure she'll be fine."
+choiceDialog2 = "Eh, I'm sure she'll be fine."
 MainBody = "Hello Mr Spritely
 
 I don't know what your relationship with Mr Gallardo is, but he is a violent man. Him and my father have continued to have disagreements over the past few weeks. Two days ago, papa went to talk to him again and he hasn't returned. I never would have thought your company would work with a comprador like him, but you must help me. We've tried going to his office compound, but men with guns guard the entrances. Please speak with him Mr Spritely. Please help my father return home. 
@@ -743,10 +741,10 @@ UK Project Lead
 ForwardGreen"
 boss = false
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Boss/Button" parent_id_path=PackedInt32Array(958882705, 2087623211, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
 
-[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" index="1" instance=ExtResource("12_lauko")]
+[node name="TemplateEmail" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="1" unique_id=1500394697 instance=ExtResource("12_lauko")]
 layout_mode = 2
 Sender_Name = "Ana Vásquez"
 ToAddress = "contactus@forwardgreen.co.uk"
@@ -767,11 +765,10 @@ Dave Spritely,
 UK Project Lead
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail/Button" parent_id_path=PackedInt32Array(1500394697, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" index="2" instance=ExtResource("12_lauko")]
+[node name="TemplateEmail2" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="2" unique_id=102707532 instance=ExtResource("12_lauko")]
 layout_mode = 2
 Sender_Name = "Nayeli"
 ToAddress = "contactus@forwardgreen.co.uk"
@@ -792,11 +789,10 @@ Dave Spritely,
 UK Project Lead
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail2/Button" parent_id_path=PackedInt32Array(102707532, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="TooExpensive" parent="ScreenUI/EmailList/SummariesContainer" index="3" instance=ExtResource("12_lauko")]
+[node name="TooExpensive" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="3" unique_id=1530412026 instance=ExtResource("12_lauko")]
 visible = false
 layout_mode = 2
 Sender_Name = "Olu - Finance"
@@ -815,11 +811,10 @@ Thanks for the heads up. I did wonder what happened to the slightly increased co
 Best Regards,							
 Dave"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TooExpensive/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TooExpensive/Button" parent_id_path=PackedInt32Array(1530412026, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="Flooding" parent="ScreenUI/EmailList/SummariesContainer" index="4" instance=ExtResource("12_lauko")]
+[node name="Flooding" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="4" unique_id=712870959 instance=ExtResource("12_lauko")]
 visible = false
 layout_mode = 2
 Sender_Name = "Richard"
@@ -840,11 +835,10 @@ Re:Structural issues, I don't believe we forecasted for that. According to the d
 Best Regards,							
 Dave"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Flooding/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Flooding/Button" parent_id_path=PackedInt32Array(712870959, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="Competition" parent="ScreenUI/EmailList/SummariesContainer" index="5" instance=ExtResource("12_lauko")]
+[node name="Competition" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="5" unique_id=1350314822 instance=ExtResource("12_lauko")]
 visible = false
 layout_mode = 2
 Sender_Name = "Richard"
@@ -868,11 +862,10 @@ Also, when you say \"carrot\", what exactly do we mean?
 Best,							
 Dave							"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Competition/Button" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/Competition/Button" parent_id_path=PackedInt32Array(1350314822, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
-autowrap_mode = 0
 
-[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" index="6" instance=ExtResource("12_lauko")]
+[node name="TemplateEmail3" parent="ScreenUI/EmailList/SummariesContainer" parent_id_path=PackedInt32Array(958882705, 1680828421) index="6" unique_id=1248885883 instance=ExtResource("12_lauko")]
 layout_mode = 2
 Sender_Name = "IT Service Desk"
 ToAddress = "dspritely@forwardgreen.co.uk"
@@ -898,29 +891,28 @@ Dave Spritely,
 UK Project Lead
 ForwardGreen"
 
-[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" index="0"]
-texture_filter = 1
-autowrap_mode = 0
-
-[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" index="0"]
+[node name="RichTextLabel" parent="ScreenUI/EmailList/SummariesContainer/TemplateEmail3/Button" parent_id_path=PackedInt32Array(1248885883, 618685795) index="0" unique_id=360902618]
 texture_filter = 1
 
-[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" index="0"]
+[node name="Sender" parent="ScreenUI/MainEmail/Sender&Subj/Panel/BoxContainer" parent_id_path=PackedInt32Array(958882705, 1261162588) index="0" unique_id=2044752606]
 texture_filter = 1
 
-[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" index="1"]
+[node name="ToBox" parent="ScreenUI/MainEmail/Sender&Subj/Panel2/BoxContainer" parent_id_path=PackedInt32Array(958882705, 988264085) index="0" unique_id=999585549]
 texture_filter = 1
 
-[node name="Hint" parent="ScreenUI/MainEmail" index="4"]
+[node name="RichTextLabel" parent="ScreenUI/MainEmail/Sender&Subj/Panel2" parent_id_path=PackedInt32Array(958882705, 2022559285) index="1" unique_id=1291492421]
 texture_filter = 1
 
-[node name="Panel" parent="ScreenUI/Budget/HomeBudget/Additional Costs2" index="0"]
+[node name="Hint" parent="ScreenUI/MainEmail" parent_id_path=PackedInt32Array(958882705, 318870999) index="4" unique_id=1983430397]
+texture_filter = 1
+
+[node name="Panel" parent="ScreenUI/Budget/HomeBudget/Additional Costs2" parent_id_path=PackedInt32Array(958882705, 377439029) index="0" unique_id=834848862]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 484.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" parent="ScreenUI/Budget/HomeBudget/BoxContainer/Additional Costs3" index="0"]
+[node name="HBoxContainer" parent="ScreenUI/Budget/HomeBudget/BoxContainer/Additional Costs3" parent_id_path=PackedInt32Array(958882705, 546062221) index="0" unique_id=1114576123]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 0.0
@@ -928,7 +920,7 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
-[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/BoxContainer/Additional Costs3" index="0"]
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/BoxContainer/Additional Costs3" parent_id_path=PackedInt32Array(958882705, 1842491552) index="0" unique_id=887770702]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 0.0
@@ -936,7 +928,7 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
-[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3" index="0"]
+[node name="HBoxContainer" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3" parent_id_path=PackedInt32Array(958882705, 1262668520) index="0" unique_id=96476500]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 0.0
@@ -944,103 +936,103 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel3" parent_id_path=PackedInt32Array(958882705, 155477790) index="0" unique_id=1570164639]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel4" parent_id_path=PackedInt32Array(958882705, 71691315) index="0" unique_id=94590248]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 65.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel5" parent_id_path=PackedInt32Array(958882705, 2005524271) index="0" unique_id=1100830321]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel6" parent_id_path=PackedInt32Array(958882705, 1319943222) index="0" unique_id=2137443741]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel7" parent_id_path=PackedInt32Array(958882705, 1168762537) index="0" unique_id=764958437]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel8" parent_id_path=PackedInt32Array(958882705, 1624386179) index="0" unique_id=1355548742]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel9" parent_id_path=PackedInt32Array(958882705, 1533162767) index="0" unique_id=1402581906]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" index="0"]
+[node name="Label" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer/Panel10" parent_id_path=PackedInt32Array(958882705, 821180286) index="0" unique_id=881267550]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 117.0
 offset_bottom = 23.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel3" parent_id_path=PackedInt32Array(958882705, 1727322034) index="0" unique_id=1947087089]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel4" parent_id_path=PackedInt32Array(958882705, 1472795510) index="0" unique_id=1529412889]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel5" parent_id_path=PackedInt32Array(958882705, 640330431) index="0" unique_id=879569243]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel6" parent_id_path=PackedInt32Array(958882705, 1809542458) index="0" unique_id=1183566414]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel7" parent_id_path=PackedInt32Array(958882705, 74284332) index="0" unique_id=624157706]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel8" parent_id_path=PackedInt32Array(958882705, 361612238) index="0" unique_id=1593123759]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel9" parent_id_path=PackedInt32Array(958882705, 2014926780) index="0" unique_id=153576825]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" index="0"]
+[node name="OptionButton" parent="ScreenUI/Budget/MarketingBudget/Investments/Additional Costs3/HBoxContainer2/VBoxContainer4/Panel10" parent_id_path=PackedInt32Array(958882705, 460580271) index="0" unique_id=1046673426]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 148.0
 offset_bottom = 31.0
 
-[node name="Gambling" parent="ScreenUI/BrowserThing" index="0"]
+[node name="Gambling" parent="ScreenUI/BrowserThing" parent_id_path=PackedInt32Array(958882705, 1687647037) index="0" unique_id=291257079]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 0.0
@@ -1048,26 +1040,26 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
-[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0"]
+[node name="Panel" parent="ScreenUI/BrowserThing/Gambling" index="0" unique_id=2100729374]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 392.0
 offset_bottom = 141.0
 
-[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="0"]
+[node name="Title" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(958882705, 1306197732) index="0" unique_id=561835078]
 offset_left = -8.973217
 offset_top = -69.91066
 offset_right = 466.6499
 offset_bottom = 203.08916
 text = "War? PISS says: about time! "
 
-[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" index="1"]
+[node name="ScrollContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article" parent_id_path=PackedInt32Array(958882705, 1306197732) index="1" unique_id=667495526]
 offset_left = 25.3403
 offset_top = 124.552
 offset_right = 455.34
 offset_bottom = 531.552
 
-[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0"]
+[node name="Body" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Main Article/ScrollContainer" index="0" unique_id=1513119302]
 text = "This week, a military parade descends on the city, joyously celebrating the hard work of our many service-men and -women who keep us all safe. I'm here with a campaigner for Protectors of Integrity, Servicemen and Society (PISS), who are currently lobbying for greater military spending.	
 
 Sir Wilbur Sàuságe, what do you think of this parade?	
@@ -1085,52 +1077,52 @@ I'd march myself into a barracks this instant, if not for my existing commitment
 Okay, okay. Well, thank you for speaking to us. We'll include Wilbur's latest petition below. Can you tell our viewers what it is?					
 Mandatory service for dogs."
 
-[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" index="0"]
+[node name="BulletPoints?" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Summary" parent_id_path=PackedInt32Array(958882705, 1800338829) index="0" unique_id=157912972]
 text = "◦ Parade inspires all
 ◦ 'Soldiers heroes'
 ◦ 'PISS not yellow' "
 
-[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="0"]
+[node name="Title2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(958882705, 1059237879) index="0" unique_id=794097213]
 offset_top = 18.66098
 offset_bottom = 78.847755
 
-[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" index="1"]
+[node name="VBoxContainer" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News" parent_id_path=PackedInt32Array(958882705, 1059237879) index="1" unique_id=1465272086]
 offset_top = 78.57121
 offset_bottom = 241.0
 theme_override_constants/separation = 17
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="0" unique_id=1856795181]
 custom_minimum_size = Vector2(5, 0)
 text = "No men like snowmen: strange viral sex trend"
 autowrap_mode = 2
 
-[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1"]
+[node name="Label2" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="1" unique_id=1540200523]
 custom_minimum_size = Vector2(5, 0)
 text = "Why you should choo-choo-choose to keep trains privatised"
 autowrap_mode = 2
 
-[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2"]
+[node name="Label3" type="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Related News/VBoxContainer" index="2" unique_id=1444685574]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Eating croissants unpatriotic, declare British farmers"
 autowrap_mode = 2
 
-[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="0"]
+[node name="AnimatedSprite2D" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(958882705, 320432222) index="0" unique_id=1155684861]
 position = Vector2(184.96, 117.856)
 animation = &"Smoking"
 anim = "Smoking"
 
-[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" index="1"]
+[node name="Label" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert/Panel5" parent_id_path=PackedInt32Array(958882705, 320432222) index="1" unique_id=1222183052]
 offset_left = -4.76745
 offset_top = 231.784
 offset_right = 95.2325
 offset_bottom = 260.784
 
-[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" index="6"]
+[node name="Outlet Logo" parent="ScreenUI/BrowserThing/TabContainer/O-NO Alert" parent_id_path=PackedInt32Array(958882705, 204111388) index="6" unique_id=137878253]
 texture = ExtResource("15_t6dyq")
 
-[node name="Emails" parent="ScreenUI/BottomBar" index="0"]
+[node name="Emails" parent="ScreenUI/BottomBar" parent_id_path=PackedInt32Array(958882705, 1072439397) index="0" unique_id=1242998941]
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1140,7 +1132,7 @@ offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Budget" parent="ScreenUI/BottomBar" index="1"]
+[node name="Budget" parent="ScreenUI/BottomBar" parent_id_path=PackedInt32Array(958882705, 1072439397) index="1" unique_id=1202525492]
 visible = false
 anchor_left = 0.0
 anchor_right = 0.0
@@ -1151,7 +1143,7 @@ offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Internet" parent="ScreenUI/BottomBar" index="2"]
+[node name="Internet" parent="ScreenUI/BottomBar" parent_id_path=PackedInt32Array(958882705, 1072439397) index="2" unique_id=746511397]
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1161,20 +1153,20 @@ offset_bottom = 74.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="ShutDown" parent="ScreenUI/BottomBar" index="3"]
+[node name="ShutDown" parent="ScreenUI/BottomBar" parent_id_path=PackedInt32Array(958882705, 1072439397) index="3" unique_id=1206336908]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="Dave" parent="." instance=ExtResource("13_e8b16")]
+[node name="Dave" parent="." unique_id=1657555797 instance=ExtResource("13_e8b16")]
 unique_name_in_owner = true
 position = Vector2(-590, 314)
 
 [node name="AnimatedSprite2D" parent="Dave" index="0"]
 animation = &"phone_up"
 
-[node name="Specifics5" type="Node" parent="." node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "specific_emails", "CompNotif")]
+[node name="Specifics5" type="Node" parent="." unique_id=1030852502 node_paths=PackedStringArray("AlexNotif", "JenNotif", "emails", "outsideDoor", "DoorNotif", "BossNotif", "BossDoor", "brain", "specific_emails", "CompNotif")]
 script = ExtResource("14_h2npb")
 AlexNotif = NodePath("../Notifications/Alex")
 JenNotif = NodePath("../Notifications/Jen")
@@ -1187,7 +1179,7 @@ brain = NodePath("../DayBrain")
 specific_emails = [NodePath("../ScreenUI/EmailList/SummariesContainer/TooExpensive"), NodePath("../ScreenUI/EmailList/SummariesContainer/Flooding"), NodePath("../ScreenUI/EmailList/SummariesContainer/Competition")]
 CompNotif = NodePath("../Notifications/Computer")
 
-[node name="BossScreen" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="BossScreen" type="Node2D" parent="." unique_id=812305429 node_paths=PackedStringArray("sprite")]
 visible = false
 z_index = 10
 script = ExtResource("15_m7jpg")
@@ -1195,53 +1187,53 @@ sprite = NodePath("Sprite2D")
 frown = ExtResource("16_ceivk")
 contempt = ExtResource("17_ui2j1")
 
-[node name="Sprite2D" type="Sprite2D" parent="BossScreen"]
+[node name="Sprite2D" type="Sprite2D" parent="BossScreen" unique_id=986949346]
 texture_filter = 1
 texture = ExtResource("18_5h2hh")
 
-[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen"]
+[node name="BossBlink" type="AnimatedSprite2D" parent="BossScreen" unique_id=56733863]
 visible = false
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0vxql")
 frame_progress = 0.680305
 
-[node name="BossAnchor" type="Node2D" parent="BossScreen"]
+[node name="BossAnchor" type="Node2D" parent="BossScreen" unique_id=295471063]
 position = Vector2(499, -250)
 
-[node name="Notifications" type="Node2D" parent="."]
+[node name="Notifications" type="Node2D" parent="." unique_id=197505111]
 
-[node name="Alex" parent="Notifications" instance=ExtResource("20_ld0to")]
+[node name="Alex" parent="Notifications" unique_id=737698357 instance=ExtResource("20_ld0to")]
 position = Vector2(-552, -256)
 animation = &"Q"
 autoplay = "Q"
 
-[node name="Jen" parent="Notifications" instance=ExtResource("20_ld0to")]
+[node name="Jen" parent="Notifications" unique_id=1996687817 instance=ExtResource("20_ld0to")]
 position = Vector2(-138, -470)
 animation = &"Q"
 autoplay = "Q"
 
-[node name="Door" parent="Notifications" instance=ExtResource("20_ld0to")]
+[node name="Door" parent="Notifications" unique_id=108003422 instance=ExtResource("20_ld0to")]
 visible = false
 position = Vector2(-803, 161)
 
-[node name="BossDoor" parent="Notifications" instance=ExtResource("20_ld0to")]
+[node name="BossDoor" parent="Notifications" unique_id=791127139 instance=ExtResource("20_ld0to")]
 visible = false
 position = Vector2(813, -338)
 frame = 6
 frame_progress = 0.719289
 
-[node name="Computer" parent="Notifications" instance=ExtResource("20_ld0to")]
+[node name="Computer" parent="Notifications" unique_id=1324329649 instance=ExtResource("20_ld0to")]
 z_index = 4
 position = Vector2(-306, 221)
 
-[node name="TeaMinigame" parent="." node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]
+[node name="TeaMinigame" parent="." unique_id=771209903 node_paths=PackedStringArray("AlexAnchor", "JenAnchor") instance=ExtResource("21_6l3lm")]
 visible = false
 AlexAnchor = NodePath("../Background/Furniture/Alex/AlexInteractable/DialogueMarker")
 JenAnchor = NodePath("../Background/Furniture/Jen1/JenInteractable/DialogueMarker")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1191243297]
 
-[node name="Pause" parent="CanvasLayer" instance=ExtResource("22_rshjd")]
+[node name="Pause" parent="CanvasLayer" unique_id=1698677865 instance=ExtResource("22_rshjd")]
 visible = false
 
 [connection signal="interacted" from="Background/Furniture/OfficeDoor boss/InteractableElement" to="Specifics5" method="_on_boss_door_interacted"]

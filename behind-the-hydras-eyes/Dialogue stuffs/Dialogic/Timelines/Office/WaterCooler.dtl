@@ -165,11 +165,11 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 	- Oh, any trouble?
 		Richard: Enquiries more than anything, and people probing to see if I'm up for a fight.
 		Richard: Nothing I can't handle, of course, just wanted to make sure you weren't going into any skirmishes unprepared.
-		Dave: Don't think so, i've defused most emails coming my way.
+		Dave: Don't think so, I've defused most emails coming my way.
 		Richard: I'd be lying saying I didn't want to pick up a quick squabble with some rural mexican wanna-be lawyer, but glad you're keeping level headed.
 	- It's all going smoothly yeah
 		Richard: Ah, that's what any opponent says in Round 1, before the proper punches start flying.
-		Richard: Drop me a line whenever things start looking heated. Wouldn't want you alone in the ring with the mexican hounds.
+		Richard: Drop me a line whenever things start looking heated. Wouldn't want you alone in the ring with the Mexican hounds.
 		Dave: Really don't think that's necessary, things have been quite civil.
 		Richard: They are until they aren't, but you'll see how things go.
 		Richard: I've weathered a fair share of storms here in this company.
@@ -382,7 +382,7 @@ WaterCooler: Water. Simple, healthy, clean. Care to follow the cooler's orders a
 		Jen: It was cause I stopped licking her.
 	Dave: She sounds...uh...
 	Jen: Yeah, she has a lot of personality.
-	Jen: Anyhow, i'm running off early today to catch the new reboot of Orgy Sex Box!
+	Jen: Anyhow, I'm running off early today to catch the new reboot of Orgy Sex Box!
 	[signal arg="no_watercooler_Alex"]
 	[wait time="2.2"]
 	WaterCooler: Did you approve her leaving early?
